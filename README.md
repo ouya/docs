@@ -1,4 +1,4 @@
-# Pre-Alpha ODK Preview
+# OUYA Development Kit Documentation (Pre-Alpha Preview)
 
 Welcome to the OUYA ODK - the software development kit used to create games and applications for the OUYA console. 
 
