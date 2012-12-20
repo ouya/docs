@@ -12,7 +12,7 @@ Welcome to the OUYA ODK - the software development kit used to create games and 
 
 - The OUYA launcher (the console's dashboard application) is only minimally usable. The game browser and store functions do not yet work. Game icons and related metadata are not displayed. Some actions still require a touchscreen. The Developers section of the launcher is partly functional, and can be used to view and downloaded applications that were previously uploaded at the OUYA Developer Portal web site.
 
-For help and support, visit the developer forums at http://developer.ouya.tv, or email devsupport@ouya.tv.
+For help and support, visit the developer forums at http://forums.ouya.tv, or email devsupport@ouya.tv.
 
 
 ### Familiarize Yourself With the Pieces of the OUYA ODK Distribution
