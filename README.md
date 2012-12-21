@@ -1,1 +1,1 @@
-# [OUYA Development Kit Documentation](docs.md)
+# [OUYA Development Kit Documentation](docs/docs.md)
