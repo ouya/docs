@@ -1,6 +1,8 @@
-# OUYA Development Kit Documentation (Pre-Alpha Preview)
+# ODK Documentation
 
-Welcome to the OUYA ODK - the software development kit used to create games and applications for the OUYA console. 
+*This is a pre-alpha preview. Please contribute at https://github.com/ouya/docs*
+
+Welcome to the OUYA Development Kit (ODK) - the software development kit used to create games and applications for the OUYA console. 
 
 **Important Note:** This preview version of the ODK is a work in progress, and is still under heavy development: 
 - The payments API security features are not yet implemented.
