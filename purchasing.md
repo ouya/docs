@@ -1,4 +1,4 @@
-### In-App Purchasing
+## In-App Purchasing
 
 In-App Purchasing (IAP) is how your app can make money.  The OUYA Developer Kit (ODK) is designed to be both easy-to-use and secure.
 
