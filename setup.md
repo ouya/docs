@@ -1,4 +1,4 @@
-### Setup Instructions for the OUYA ODK
+## Setup Instructions for the OUYA ODK
 
 ##### MacOS
 Download and install the Android SDK and tools to your Mac or PC, following the instructions at http://developer.android.com/sdk/index.html. When it comes to the part where you run android sdk, install the following:
