@@ -7,6 +7,6 @@ Welcome to the OUYA Development Kit (ODK) - the software used to create games an
 * [Roadmap](roadmap.md)
 * [Setup](setup.md)
 * [Controllers](controllers.md)
-* [In-App Purchasing](purchases.md)
+* [In-App Purchasing](purchasing.md)
 
 For help and support, visit the developer forums at http://forums.ouya.tv, or email devsupport@ouya.tv.
