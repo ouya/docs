@@ -1,4 +1,4 @@
-### Controllers
+## Controllers
 
 One of the huge advantages of the OUYA console is that gamers get to user a real controller!  The OUYA controller has:
 - four digital buttons (O, U, Y, and A), 
