@@ -1,3 +1,1 @@
-# OUYA Development Kit Documentation
-
-[Get Started](docs.md)
+# [OUYA Development Kit Documentation](docs.md)
