@@ -77,9 +77,9 @@ In order to begin developing software before having access to an OUYA console, y
 
 The OUYA console hardware already includes the OUYA launcher, but when using an emulator or Android tablet you will need to install the launcher manually. This file is included in the OUYA ODK package.
 
-Run
+To install the launcher run:
 ```bash
-adb install -r ouya-launcher.apk to install the launcher.
+adb install -r ouya-launcher.apk
 ```
 
 If the OUYA launcher is not installed, some ODK features will not work correctly.
