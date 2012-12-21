@@ -35,7 +35,7 @@ All IAP functionality goes through the OuyaFacade object.  One of these should b
 		OuyaFacade.init(this, DEVELOPER_ID);
 		super.onCreate(savedInstanceState);
 	}
-
+```
 Of course, when you're application is finished it's polite to inform the OuyaFacade as well:
 ```java
 	@Override
