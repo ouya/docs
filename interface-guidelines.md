@@ -1,7 +1,7 @@
 ## Interface Guidelines
 
 Games can use the OUYA controller buttons however they wish, but we recommend the following mappings for the O, U, Y, and A buttons. If you're running a stock Android application that's not OUYA-aware, this is also how the buttons will be mapped to the standard Android navigation buttons on a typical device's navigation bar.
-```
+```text
 OUYA    Color    Default Function
 O       green    select
 U       blue     options (Android's menu function)
@@ -10,7 +10,7 @@ A       red      back/cancel
 ```
 
 Please use the names below when referring to the controller buttons in your game's help screens:
-```
+```text
 O, U, Y, A
 System (the home button)
 D-Pad 
