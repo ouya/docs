@@ -1,4 +1,4 @@
-[Documentation](docs.md)
+[Documentation](index.md)
 * [Roadmap](roadmap.md)
 * [Setup](setup.md)
 * [Controllers](controllers.md)
