@@ -59,6 +59,7 @@ The OUYA console hardware already includes the OUYA launcher, but when using an 
 
 To install the launcher run:
 ```bash
+adb install -r ouya-framework.apk
 adb install -r ouya-launcher.apk
 ```
 
