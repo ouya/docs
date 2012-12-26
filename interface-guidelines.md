@@ -25,4 +25,4 @@ R3
 Touchpad (not "Trackpad")
 ```
 You may also incorporate the following button icons into your game's help screens if you wish.
-![OUYA_BUTTONS.png](OUYA_BUTTONS.png)
+![OUYA_BUTTONS.png](https://raw.github.com/neontv/docs/master/OUYA_BUTTONS.png)
