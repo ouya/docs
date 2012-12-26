@@ -63,4 +63,4 @@ float axisY = c.getAxisValue(OuyaController.AXIS_LSTICK_Y);
 boolean buttonPressed = c.getButton(OuyaController.BUTTON_O);
 ```
 
-With this, you can focus on making a great game and not with input handling.
+With this, you can focus on making a great game instead of on input handling.
