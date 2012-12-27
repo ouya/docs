@@ -5,4 +5,4 @@
 * Launcher: This is still in its earliest stages of development. For example, we are still implementing the display of game information like description, screenshots, etc. This will launch when we launch the gamer-facing discovery service.
 * Controllers: The method used to associate a player with a specific game controller is a work in progress. The controller LEDs do not yet indicate the player number.
 
-Please post your feedback on the private developer forums -- we know there is a lot to complete, and we want your help in shaping it.
+Please post your feedback on the developer forums http://forums.ouya.tv -- we know there is a lot to complete, and we want your help in shaping it.
