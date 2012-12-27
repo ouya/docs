@@ -2,12 +2,12 @@
 
 One of the huge advantages of the OUYA console is that gamers get to user a real controller!  The OUYA controller has:
 - four digital buttons (O, U, Y, and A), 
-- a four direction digital D-pad
-- two analog joysticks
-- two digital buttons that activate when the joysticks are pushed straight down
-- two digital bumper buttons
-- two analog triggers (these also act as digital buttons with a threshold of 0.5 for the analog value)
-- a touchpad, configured to behave as a mouse input
+- a four direction digital pad (D-Pad)
+- two analog joysticks (LS, RS)
+- two digital buttons that activate when the joysticks are pushed straight down (L3, R3)
+- two digital bumper buttons (L1, R1)
+- two analog triggers (L2, R2) Note: these also act as digital buttons with a threshold of 0.5 for the analog value
+- a touchpad, configured to behave as a mouse input (Touchpad)
 
 Since controller interfaces are so crucial, we've done some work to make your life easier.
 
