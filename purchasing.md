@@ -5,19 +5,21 @@ In-App Purchasing (IAP) is how your app can make money.  The OUYA Developer Kit 
 ##### Definitions
 
 Product -- this is what is purchased by the user.  It has three attributes:
-  Identifier -- a developer-facing identifier (unique per developer)
-	Price -- the cost of the product
-	Name -- the user-facing name
+* Identifier -- a developer-facing identifier (unique per developer)
+* Price -- the cost of the product
+* Name -- the user-facing name
 
 Purchasable -- identifies a product when making purchases
 
 Receipt -- information about a prior purchase
-	Product ID -- the product identifier
-	Price -- the amount that was paid
-	PurchaseDate -- when the purchase was made
+* Product ID -- the product identifier
+* Price -- the amount that was paid
+* PurchaseDate -- when the purchase was made
 
 Entitlements -- a product which can be purchased only once [not yet implemented].
+
 Consumable -- a product which can be purchased repeatedly.
+
 Subscription -- a product which will be purchased automatically on a set schedule [not yet implemented].
 
 #### Initializing the ODK
