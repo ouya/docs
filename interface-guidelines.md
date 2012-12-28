@@ -24,5 +24,3 @@ R2
 R3
 Touchpad (not "Trackpad")
 ```
-If you wish, you may also incorporate the button icons below into help screens for your game.
-![OUYA_BUTTONS.png](https://developer.ouya.tv/assets/OUYA_BUTTONS.png)
