@@ -15,7 +15,7 @@ Welcome to the OUYA Unity developers club. This document will provide an overvie
 ### Import Package
 Part of receiving this document, you received OuyaSDK.unitypackage which can be imported into the Unity IDE on Mac and Windows. Start with a New Project, and Choose Assets->Import Package->Custom Package from the menu bar.  Browse to the OuyaSDK.unitypackage and import all files.
 
-
+![Import Package](https://devs.ouya.tv/assets/unity/01_ImportPackage.jpg)
 
 ### Imported Files
 You will find the following structure imported into your Assets folder.
@@ -59,52 +59,81 @@ You will find the following structure imported into your Assets folder.
 
 Open the ./Ouya/Examples/Scenes/SceneShowProducts.unity example scene.
 
+![Products Scene](https://devs.ouya.tv/assets/unity/04_ProductsScene.jpg)
+
 All scenes start with a Main Camera. There’s a custom GameObject added for OuyaGameObject which handles taking messages from the OUYA SDK from Java to C#. The “ShowProduct” GameObject is a simple display script for displaying retrieved products and invoking purchases
 
 #### Scene ShowController
 
 Open the ./Ouya/Examples/Scenes/SceneShowController.unity example scene.
 
+![Scene Controller](https://devs.ouya.tv/assets/unity/13_SceneController.jpg)
+
 Both scenes needed to add the OuyaGameObject to interface with the OUYA SDK to receive display messages. The OuyaShowController script handles the display code necessary for mapping OUYA SDK input to the Unity GUI.
 
 ### Android Setup
 Some player settings must be customized to build on Android. Open the player settings by navigating the menu to the Edit->Project Settings->Player menu item. The PlayerSettings will appear in the inspector.
 
+![Player Settings](https://devs.ouya.tv/assets/unity/05_PlayerSettings.jpg)
+
 In the inspector, expand the Resolution and Presentation section. Be sure to set your product and company name. The OUYA will use a default orientation for landscape. Choose landscape left from the drop down. Unity calls drop downs, pop ups (intuitively opposite).
 
+![Android Presentation](https://devs.ouya.tv/assets/unity/07_AndroidPresentation.jpg)
+
 Before any Android application can build you must set the bundle identifier. Be careful that the Bundle Identifier matches what you’ve used in the Android manifest. Also set the Minimum API Level to 12 or better. The OUYA console will be version 15, but you may want to test on another Android device.
+
+![Android Other Settings](https://devs.ouya.tv/assets/unity/06_AndroidOtherSettings.jpg)
 
 ### Build Settings
 Make sure you change the target platform to Android. Select Android and then click the button “Switch Platform”. Add a default scene by clicking the “Add Current”. Make sure at least one scene is checked. At this point you can build and enter the file path for the Android APK build.
 Using the build settings, if you have more than one scene just by marking the toggles, you can switch between the loading scenes. You can use Unity script for switching between scenes.
 
+![Build Settings](https://devs.ouya.tv/assets/unity/11_BuildSettings.jpg)
+
+![Build Settings](https://devs.ouya.tv/assets/unity/12_BuildSettings.jpg)
+
 ### OUYA Panel
-Immediately after importing the OUYA SDK Unity Package, the OUYA Panel becomes available in the Menu. Use Window->Open Ouya Panel to open the OUYA Panel. The OUYA Panel will open which can be docked. The top of the panel has a unique identifier (MachineName_ProcessPID) to help identify the 
+Immediately after importing the OUYA SDK Unity Package, the OUYA Panel becomes available in the Menu. Use Window->Open Ouya Panel to open the OUYA Panel. The OUYA Panel will open which can be docked. The top of the panel has a unique identifier (MachineName_ProcessPID) to help identify the
+
+![OUYA Panel](https://devs.ouya.tv/assets/unity/02_OuyaMenu.jpg)
 
 Unity process which is useful for debugging or task killing.
 The OUYA panel has several tabs to show information for functional areas: “OUYA”, “Unity”, “Java JDK”, “Android SDK”, and “Android NDK”. Run through each tab to check for missing paths. Any missing path or file with grey out. You may need to browse to find JDK or SDK paths. There should be no greyed out tabs in order for the compile, build, and run automation to work.
 
 ### OUYA Tab
 The OUYA tab has a button section and then an info section below. The button “Build Application” will compile the Java Application and immediately build the Application APK for Android. The button “Build and Run Application” compiles the Java Application, builds the APK, and executes the APK on a connected device. The button “Compile” will compile the Java Application. The different buttons are available for your convenience.
+
+![OUYA Tab](https://devs.ouya.tv/assets/unity/03_OuyaTab.jpg)
+
 The information section has several meta references for quick navigation into the project. If any dependency, path, or file is missing it will be greyed out in the information panel. The bundle identifier that was set in player settings can be changed here. The bundle prefix is used when packaging the application jar and is based on the bundle identifier. The GameObject is a meta reference and clicking the object field will highlight that item in the scene view. New OUYA projects will need the OUYA GameObject added to the scene to accept communication from Java. There is an OUYA GameObject prefab in the project which can be dragged to the scene for easy setup. The OUYA SDK object field when clicked will navigate and highlight the Jar library. The same is true for both Guave and GSON jar libraries. The AndroidManifest is a custom manifest which is used in the Android build process. Make sure that the manifest matches the BundleIdentifier, if not your application will exit on start without detecting the main activity. R.java is autogenerated by the Android SDK when the compile button is pressed. The R.java uses the main layout for automatic generation. The Application.Java references the example OuyaUnityApplication.java which is an Activity which passes input to the OuyaPlugin.jar which can be subscribed to like in the example controller script. “Res” and “Src” folders are custom folders that can be customized during the APK building process. The custom icon is located in the “Res” folder. The Application java file is in the “Src” folder.
 
 ### Unity Tab
 The Unity Tab has useful path information. The Unity JAR “classes.jar” contains the library necessary for Java to instantiate the Unity Web Player and communicate with the Unity Web Player. The path is detected from Unity and depends on where the editor was installed. The Unity project folder is the base folder for the current project. The OUYA SDK Unity Package should support Unity 3.5.0 or greater.
 
+![Unity Tab](https://devs.ouya.tv/assets/unity/08_UnityTab.jpg)
+
 ### Java JDK Tab
 The Java JDK Tab lets the user specify their path to the Java JDK on Windows. On Mac, the JDK is part of the OS install. Some background, make sure you use a 32-bit install of the Java JDK. You’ll want to use 1.6 as your Java target for optimal compatibility. Only more recent Unity versions support JDK 1.7. The path information below shows the path to the “tools.jar” on Windows. On the Mac the tools jar is “classes.jar”. On Windows the path links to file executables for Jar packaging, Java compiler, and the Java disassembler for generating signatures. On Mac, the path links to file applications, similar to Windows. The button “Select SDK Path..” will open a folder browse dialog to find the JDK path. “Reset paths” will set to a Default. Any missing path will be grayed out.
+
+![Java JDK Tab](https://devs.ouya.tv/assets/unity/09_JavaJDKTab.jpg)
 
 ### Android Tab
 The Android Tab has info to point to the Android SDK download location. Windows has an installer for a more standard location; where Mac has an arbitrary unpacked zip. The info pane shows the Android min SDK version from the player settings. Android JAR is used in the classpath when compiling the Application jar. ADB path is the application file path for the ADB platform tool in the Android SDK. ADB is useful to get the list of connected devices, install, and launch APK on devices. APT is yet another Android SDK useful tool. And the SDK path is the path to the Android SDK. The “Select SDK Path…” button will open a folder browse dialog to find the Android SDK base folder. Reset path will use the default. Any missing links will grey out.
 
+![Android Tab](https://devs.ouya.tv/assets/unity/10_AndroidTab.jpg)
+
 ### NDK Tab
 The NDK Tab shows info for the Android NDK. The NDK can be downloaded from http://developer.android.com/tools/sdk/ndk/index.html the android site. Windows and Mac are just an archive, so you’ll need to point the tab to where you unpack. NDK allows compiling the C++ NDK example which potentially can also wrap JNI. You can wrap the JNI from both C++ and C# to pick the best approach for your application. The JNI.cpp example has an easy reference from within the Android plugins folder. On Mac, there is a patch that needs to be applied to NDK in order to fix a compile issue which is explained here: https://groups.google.com/forum/?fromgroups=#!topic/android-ndk/b4DSxE1NAS0 on Google groups.
+
+![NDK Tab](https://devs.ouya.tv/assets/unity/14_NDKTab.jpg)
 
 ### Example Scenes
 The package includes several example scenes. Each example scene has a custom script to illustrate the functional area. At a minimum, an OUYA application will need the OuyaGameObject added to the scene. There is an OuyaGameObject prefab that you can drag to the scene to create the game object. This object is responsible for letting the OUYA java interface send messages to Unity. Unity can communicate with Java and C++ via the OuyaSDK class.
 
 #### Scene Controller Example
 This example scene maps known controllers to a virtual OUYA controller. That said, you may have an unrecognized controller that you are testing while doing development. If your controller is not recognized, let us know by posting in the developer forums. In the example, as you press a controller button, the axis or button will highlight on the virtual control. As you move your physical controller axis, the virtual controller axis will move. The scene has 3 area lights, 3 camera positions, an instance of the controller model, and the example OuyaGameObject script. The 3 camera positions are used to transition the camera. The OuyaGameObject script randomly picks a new camera position every N seconds from the supplied camera transforms. The OuyaGameObject script has meta references to the specific controller parts to control the highlighting and movement. Each button and axis has a MeshRenderer component which is used to access the material and change the color. From the MeshRenderer component, the transform can be accessed to rotate the thumbsticks and triggers. The axis and button values are provided by the OUYA SDK. The text that displays is Unity GUI provided in the OnGUI event of the OuyaGameObject script.
+
+![Device Controller](https://devs.ouya.tv/assets/unity/15_DeviceController.png)
 
 ##### Script
 To be able to attach a script to a GameObject, the example must extend MonoBehaviour.
@@ -155,6 +184,8 @@ onFailure = (int errorCode, string errorMessage) =>
 #### Scene Products Example
 The products example shows how to get details about items that can be purchased in the OUYA store. For the example to run on your test device, make sure the OUYA Launcher is installed and running. The OUYA SDK provides methods for getting the details and invoking a purchase. When a purchase is invoked the OUYA Launcher will display a purchase layer above the Unity application. The result of the purchase is returned in the purchase success or failure event which you can handle in your Unity application. You can also get access to purchase receipts to verify the purchase. These methods allow you to create your own store presentation or in-app purchases while the transaction is happening in the OUYA Launcher. In the example, OuyaShowProducts script displays the UI using Unity GUI in the OnGUI event. The Get Products button will invoke getting the products, although this also happens in the Awake event. The purchase button will invoke a purchase event which will open layout above the Unity application in the OUYA Launcher.
 
+![Scene Products Example](https://devs.ouya.tv/assets/unity/16_ProductsExample.png)
+
 ##### Script
 To be able to attach a script to a GameObject, the example must extend MonoBehaviour.
 ```csharp
@@ -176,7 +207,7 @@ To receive product details, purchase details, and receipts, there are several ty
 OuyaSDK.registerProductListListener(new OuyaSDK.CancelIgnoringIapResponseListener<List<OuyaSDK.Product>>()
 ```
 
-The product listener has an onSuccess event which receives the product list. 
+The product listener has an onSuccess event which receives the product list.
 ```csharp
 onSuccess = (List<OuyaSDK.Product> products) =>
 ```
@@ -210,6 +241,8 @@ OuyaSDK.requestPurchase(purchasable.getIdentifier(), OuyaSDK.getRequestPurchaseL
 
 #### Scene NDK Example
 The NDK Example shows how to write C++ and interface that with Unity. The Unity GUI is simply buttons that are invoking C++ methods from Unity. The “Clear Results” button will set the local fields back to their defaults. “Invoke Android Hello World” will invoke the example method which will allocate a string in C++ and pass it back to Unity. Unity will then release the C++ memory string after it is received. The result is displayed in a GUI label. The button “Invoke Android ExampleFunction1” invokes the C++ example which passes a byte array an int parameter by out. These examples are useful when you want to pass something like PNG bytes from C# to C++ and/or get information back from the C++ side. This example uses C++ code which can also interface with the JNI and other C++ libraries. With C++ you can also write code to natively access custom hardware. The C++ is natively compiled in the OUYA panel.
+
+![Scene NDK Example](https://devs.ouya.tv/assets/unity/17_NDKExample.png)
 
 ##### Script
 First take a look at the native C++ code interface, which is being invoked from Unity. This source is located in a file called “jni.cpp” because that’s what the Android NDK build scripts look for. NDK compiles the C++ code and places into the target “Assets\Plugins\Android\libs\armeabi\lib-ouya-ndk.so” library.
