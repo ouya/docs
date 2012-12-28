@@ -1,19 +1,21 @@
 ## Controllers
 
-One of the huge advantages of the OUYA console is that gamers get to user a real controller!  The OUYA controller has:
-- four digital buttons (O, U, Y, and A), 
+One of the huge advantages of the OUYA console is that gamers get to use a *real* controller!  The OUYA controller has:
+- four digital buttons (O, U, Y, and A)
 - a four direction digital pad (D-Pad)
 - two analog joysticks (LS, RS)
 - two digital buttons that activate when the joysticks are pushed straight down (L3, R3)
 - two digital bumper buttons (L1, R1)
-- two analog triggers (L2, R2) Note: these also act as digital buttons with a threshold of 0.5 for the analog value
+- two analog triggers (L2, R2) 
 - a touchpad, configured to behave as a mouse input (Touchpad)
+
+**Note:** The analog triggers also act as digital buttons, with a threshold of 0.5 for the analog value.
 
 Since controller interfaces are so crucial, we've done some work to make your life easier.
 
 ##### Constants
 
-The OuyaController class contains OUYA-specific constants for buttons & axes (only a few are shown below).
+The **OuyaController** class contains OUYA-specific constants for buttons and axes. A small selection are shown below.
 ```java
 public static final int BUTTON_O;
 public static final int BUTTON_U;
@@ -21,12 +23,12 @@ public static final int BUTTON_Y;
 public static final int BUTTON_A;
 ```
 
-With these constants in hand, it's totally acceptable to handle input via the standard onKeyDown/onKeyUp/onGenericMotionEvent methods.
+With these constants in hand, it's totally acceptable to handle input via the standard **onKeyDown**, **onKeyUp**, or **onGenericMotionEvent** methods.
 
 ##### Anytime State Querying
 
-If you want the extra flexibility of querying the controller state at any time, you can use the rest of the OuyaController class.
-First off, this means your activity should forward the onKeyDown/onKeyUp/onGenericMotionEvent calls to OuyaController:
+If you want the extra flexibility of querying the controller state at any time, you can use the rest of the **OuyaController** class.
+First off, this means your activity should forward the **onKeyDown**, **onKeyUp**, or **onGenericMotionEvent** calls to **OuyaController**:
 
 ```java
 @Override
@@ -48,7 +50,7 @@ public boolean onGenericMotionEvent(MotionEvent event) {
 }
 ```
 
-Once the OuyaController is getting the events, you can then get an instance of the class by one of two ways -- by device id, or by player number:
+Once **OuyaController** is getting the events, you can then get an instance of the class in one of two ways: device id, or player number:
 
 ```java
 OuyaController c = OuyaController.getControllerByDeviceId(deviceId);
