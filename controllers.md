@@ -23,7 +23,46 @@ public static final int BUTTON_Y;
 public static final int BUTTON_A;
 ```
 
-With these constants in hand, it's totally acceptable to handle input via the standard **onKeyDown**, **onKeyUp**, or **onGenericMotionEvent** methods.
+With these constants in hand, it's totally acceptable to handle input via the standard **onKeyDown**, **onKeyUp**, or **onGenericMotionEvent** methods.  If handling input in this way, the controller ID can be queried through KeyEvent getDeviceId().
+
+An example of using onKeyDown while mapping the controller ID to a player number is shown below.
+
+```java
+//A hash map whose <Key, Value> pair is <Device ID, Player Number>
+private HashMap<Integer, Integer> mPlayerHash = new HashMap<Integer, Integer>(4);
+
+/**
+ * Finds a player based on the device ID. If the device ID doesn't exist, it adds
+ * it to the hashmap and returns the new player number.
+ * @param deviceID the device ID from onKeyDown or onKeyUp KeyEvent getDeviceId()
+ * @return The player number from 0-3
+ */
+private int findOrCreatePlayer(int deviceID){
+    Integer player = mPlayerHash.get(deviceID);
+    if(player != null){
+        return player;
+    }
+    else{
+        int size = mPlayerHash.size();
+        mPlayerHash.put(deviceID, size);
+        return size;
+    }
+}
+
+@Override
+public boolean onKeyDown(final int keyCode, KeyEvent event){
+    //Get the player #
+    int player = findOrCreatePlayer(event.getDeviceId());       
+    
+    //Handle the input
+    switch(keyCode){
+        case OuyaController.BUTTON_O:
+            //you have the key pressed and the player that pressed it
+            break;
+    }
+    return true;
+}
+```
 
 ##### Anytime State Querying
 
