@@ -1,20 +1,20 @@
-## Setup Instructions for the OUYA ODK
+## Instrucciones de instalación para el ODK de OUYA
 
 ##### MacOS
-Download and install the Android SDK and tools to your Mac or PC, following the instructions at http://developer.android.com/sdk/index.html. When it comes to the part where you run android sdk, install the following:
-- Tools, including both Android SDK Tools and Android SDK Platform - tools
+Descargue e instale el  Android SDK y sus herrmientas a su Mac o PC, siguiendo las instrucciones en http://developer.android.com/sdk/index.html. Cuando llegue a la parte donde ejecuta android sdk instale lo siguiente:
+- Herramientas, incluyendo ambas herramientas - Android SDK Tools y Android SDK Platform -
 - Android 4.1(API 16): SDK Platform
 - Android 4.0 (API 14): SDK Platform
 - Extras: Android Support Library
 
-Note that instead of android sdk, you may need to use the following command
+Note que en lugar del android sdk, puede que sea necesario utilizar el siguiente comando:
 ```bash
 ./android sdk
 ```
 
-After running the SDK Manager tool, install the Java runtime if you are prompted to do so.
+Luego de ejecutar la herramienta SDK Manager, instale el runtime de Java  si le es solicitado.
 
-You will need to add some paths to PATH. Assuming you have put the sdk folder in the location ~/android/android-sdk-macosx, open a terminal and add the following three lines to your .bashrc:
+Puede necesitar añadir algunas rutas al PATH. Asumiendo que ha colocado la carpeta del sdk  en la siguiente ubicación: ~/android/android-sdk-macosx, abra una terminal y agregue las tres líneas siguientes a su .bashrc:
 ```bash
 export PATH=$PATH:~/android/android-sdk-macosx/tools
 export PATH=$PATH:~/android/android-sdk-macosx/platform-tools
@@ -22,21 +22,21 @@ export ANDROID_HOME=~/android/android-sdk-macosx
 ```
 
 ##### Windows
-TBD
+A ser descrito
 
 ##### Eclipse
-TBD
+A ser descrito
 
-##### Developing with the ODK
-Use the Android API Level 16 (Android 4.1 "Jelly Bean") when Developing for the OUYA Console.
+##### Desarrollando con el ODK
+Utilice el API de Android nivel 16 (Android 4.1 "Jelly Bean") cuando desarrolle para la consola OUYA.
 
-In order to use the OUYA APIs you will need to include ouya-sdk.jar in your project libraries, as well as guava-r09.jar and commons-lang-2.6.jar. These can be found in the libs directory. 
+Para utilizar las APIs de OUYA necesita incluir ouyasdk.jar a las librerías de su proyecto, así como guava-r09.jar y commons-lang-2.6.jar. Estas se encuentran el directorio libs.
 
-For information on the APIs available please consult the API reference documentation.
+Para más información de las APIs disponibles por favor consulte la documentación de referencia de la API.
 
-To run the sample code, open up the project in iap-sample-app and follow the instructions in the README.txt file.
+Para ejecutar el código de ejemplo, abra el proyecto que se encuentra en iap-sample-app y siga las instrucciones del archivo README.txt.
 
-For your app or game to be recognized as made for OUYA, you will need to include an OUYA intent category on the manifest entry of your main activity. Use “ouya.intent.category.GAME” or “ouya.intent.category.APP”.
+Para que su aplicación o juego sea reconocido como hecho para OUYA, necesitará incluir una categoria intent de OUYA en la entrada de su actividad principal en el manifiesto. Utilice “ouya.intent.category.GAME” o “ouya.intent.category.APP”.
 ```xml
 <activity android:name=".GameActivity" android:label="@string/app_name">
   <intent-filter>
@@ -47,14 +47,16 @@ For your app or game to be recognized as made for OUYA, you will need to include
 </activity>
 ```
 
-The application image that is shown in the launcher is embedded inside of the APK itself.  The expected file is in res/drawable-xhdpi/ouya_icon.png and the image size must be 732x412 for games or 412x412 for apps.
+La imagen de la aplicación que es mostrada en el launcher esta embebida dentro del APK. El archivo esperado se encuentra en res/drawable-xhdpi/ouya_icon.png y la imagen debe ser 732x412 para juegos o 412x412 para aplicaciones.
 
-#### Hardware Substitutes
+#### Substitutos para el Hardware
 
-In order to begin developing software before having access to an OUYA console, you may use the Android emulator or a standard Android tablet.
+Para poder comenzar a desarrollar software antes de tener acceso a una consola OUYA, puede utilizar el emulador de Android o una tablet estándar con Android.
+
 
 ##### Software
 
+El harware de la consola OUYA tiene incluido el launcher de OUYA, pero cuando utilice un emulador o una tablet con Android necesitará instalar ........
 The OUYA console hardware already includes the OUYA launcher, but when using an emulator or Android tablet you will need to install the launcher manually. This file is included in the OUYA ODK package.
 
 To install the launcher run:
