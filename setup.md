@@ -56,27 +56,27 @@ Para poder comenzar a desarrollar software antes de tener acceso a una consola O
 
 ##### Software
 
-El harware de la consola OUYA tiene incluido el launcher de OUYA, pero cuando utilice un emulador o una tablet con Android necesitará instalar ........
-The OUYA console hardware already includes the OUYA launcher, but when using an emulator or Android tablet you will need to install the launcher manually. This file is included in the OUYA ODK package.
+El harware de la consola OUYA tiene incluido el launcher de OUYA, pero cuando utilice un emulador o una tablet con Android necesitará instalar el launcher manualmente. Ese archivo esta incluido en el paquete OUYA ODK.
 
-To install the launcher run:
+Para instalar el launcher ejecute:
 ```bash
 adb install -r ouya-framework.apk
 adb install -r ouya-launcher.apk
 ```
 
-If the OUYA launcher is not installed, some ODK features will not work correctly.
+Si el launcher de OUYA no ha sido instalado algunas características del ODK no funcionarán correctamente.
 
-##### Emulator
+##### Emulador
 
-If using the emulator, configure the Android virtual device as follows:
-- Resolution: 1920x1080 or 1280x720, as desired
-- Hardware Back/Home keys: yes (you will need to add this to the hardware parameters)
-- DPad support: yes (you will need to add this to the hardware parameters)
+Si está usando el emulador, configure el dispositivo virtual de Android de la siguiente manera:
+- Resolution: 1920x1080 o 1280x720, según sea necesario.
+- Hardware Back/Home keys: yes (necesitará agregar esto a los parámetros de hardware)
+- DPad support: yes (necesitará agregar esto a los parámetros de hardware)
 - Target: Android 4.1 - API Level 16
 - CPU/ABI: Intel Atom x86
 - Device ram size: 1024
 
+Recomendamos el uso de las extenciones Intel Atom x86 CPU/ABI e Intel's HAXM para asegurar que el desempeño del emulador sea el adecuado para desarrollo de juegos.....
 We recommend the use of the Intel Atom x86 CPU/ABI and Intel's HAXM extensions to ensure the emulator performance is adequate for game development. If you are developing low level code you should note that the device is ARM based and therefore you should develop for the ARM architecture and use an emulator AVD with the CPU/ABI set to an ARM architecture.
 
 The OUYA console does not have hardware buttons for back or menu, and games should not rely on the presence of these. Setting the hardware keys emulator property hides the Android navigation bar, enabling the emulator to fill the entire 1920x1080 or 1280x720 screen in the same way the OUYA console does.
