@@ -76,24 +76,22 @@ Si está usando el emulador, configure el dispositivo virtual de Android de la s
 - CPU/ABI: Intel Atom x86
 - Device ram size: 1024
 
-Recomendamos el uso de las extenciones Intel Atom x86 CPU/ABI e Intel's HAXM para asegurar que el desempeño del emulador sea el adecuado para desarrollo de juegos.....
-We recommend the use of the Intel Atom x86 CPU/ABI and Intel's HAXM extensions to ensure the emulator performance is adequate for game development. If you are developing low level code you should note that the device is ARM based and therefore you should develop for the ARM architecture and use an emulator AVD with the CPU/ABI set to an ARM architecture.
+Recomendamos el uso de las extenciones Intel Atom x86 CPU/ABI e Intel's HAXM para asegurar que el desempeño del emulador sea el adecuado para desarrollo de juegos. Si está desarrollando código de bajo nivel debe recordar que el dispositivo está basado en ARM y por lo tanto debe desarrollar para la arquitectura ARM y utilizar un emulador AVD con el CPU/ABI asignado a la arquitectura ARM.
 
-The OUYA console does not have hardware buttons for back or menu, and games should not rely on the presence of these. Setting the hardware keys emulator property hides the Android navigation bar, enabling the emulator to fill the entire 1920x1080 or 1280x720 screen in the same way the OUYA console does.
+La consola OUYA no tiene botones de hardware para "Atrás" o "menú", y los juegos no deben confiar en la presencia de estos. Asignando las teclas de hardware a las propiedades del emulador oculta la barra de navegacion de Android, permitiendo que el emulador ocupe completamente una pantalla de 1920x1080 o 1280x720 de la misma manera en que la consola OUYA lo hace.
 
-When developing with the emulator, it is not possible to fully emulate the OUYA controller buttons and features. 
+Cuando se desarrolla con el emulador, no es posible emular completamente los botones y capacidades del control de OUYA.
 
-##### Android Tablet
+##### Tablet Android
 
-If using a standard Android tablet, we recommend using a tablet with a usable display resolution as close as possible to 1920x1080 or 1280x720. Note that the Android navigation bar will consume some of the screen on standard tablets, which will not be the case for the OUYA console.
+Si está utilizando una tablet estándar de Android, recomendamos utilizar una que tenga una resolución tan cercana como sea posible a 1920x1080 o 1280x720. Note que la barra de navegacion de Android consumirá espacio de la pantalla del dispositivo, lo cual no ocurrirá en la consola OUYA.
 
-The OUYA game controller combines a standard controller (two joysticks, a D-Pad, four game buttons, two shoulder buttons, and two triggers) with a touchpad. For testing, we recommend using the Xbox 360 wired USB controller combined with a mouse or touchpad for testing joystick and game button interaction. 
+El control de OUYA combina un control estándar (dos joysticks, un D-Pad, cuatro botones, dos botones frontales y dos gatillos) con un touchpad. Para pruebas recomendamos utilizar el control de Xbox 360 con cable USB conbinado con un touchpad o ratón para probar la interacción de los joysticks y botones. 
 
-##### Screen Resolution Handing
+##### Manejo de Resolución de Pantalla.
 
-The OUYA console supports 720P or 1080P output only.
+La consola OUYA sólo soporta  salida de 720P o 1080P.
 
-For OpenGL-based games, we recommend creating a render buffer that's 1920x1080 if targeting 1080P or 1280x720 if targeting 720P. If this does not match the display resolution of your device, the game screen may be windowed or scaled depending on the behavior determined by the device manufacturer.
+Para juegos basados en OpenGL, recomendamos crear un buffer de renderizado de 1920x1080 si está dirigido a 1080P o 1280x720 para 720P. Si esto no encaja con la resolución de pantalla de su dispositivo, la ventana de juego puede aparecer dentro de una ventana o escalada dependiendo del comportamiento determinado por el creador.
 
-For games using the Android UI Framework, follow the Android best practices for developing applications for xhdpi-large and tvdpi-large displays. See [developer.android.com](http://developer.android.com) for more information.
-
+Para juegos utilizando Android UI Framework, siga las mejores prácticas de Android para desarrollo de aplicaciones orientadas a pantallas xhdpi-large y tvdpi-large. Para mayor informacion dirijase a [developer.android.com](http://developer.android.com).
