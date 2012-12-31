@@ -26,7 +26,6 @@ public static final int BUTTON_A;
 With these constants in hand, it's totally acceptable to handle input via the standard **onKeyDown**, **onKeyUp**, or **onGenericMotionEvent** methods.  If handling input in this way, the controller ID can be queried through **OuyaController.getPlayerNumByDeviceId()** as shown below.
 
 ```java
-
 @Override
 public boolean onKeyDown(final int keyCode, KeyEvent event){
     //Get the player #
@@ -42,6 +41,25 @@ public boolean onKeyDown(final int keyCode, KeyEvent event){
             break;
     }
     return handled || super.onKeyDown(keyCode, event);
+}
+
+@Override
+public boolean onGenericMotionEvent(final MotionEvent event) {
+    //Get the player #
+    int player = OuyaController.getPlayerNumByDeviceId(event.getDeviceId());    
+    
+    //Get all the axis for the event
+    float LS_X = event.getAxisValue(OuyaController.AXIS_LS_X);
+    float LS_Y = event.getAxisValue(OuyaController.AXIS_LS_Y);
+    float RS_X = event.getAxisValue(OuyaController.AXIS_RS_X);
+    float RS_Y = event.getAxisValue(OuyaController.AXIS_RS_Y);
+    float L2 = event.getAxisValue(OuyaController.AXIS_L2);
+    float R2 = event.getAxisValue(OuyaController.AXIS_R2);
+    
+    //Do something with the input
+    //updatePlayerInput(player, LS_X, LS_Y, RS_X, RS_Y, L2, R2);
+    
+    return true;
 }
 ```
 
@@ -80,8 +98,8 @@ OuyaController c = OuyaController.getControllerByPlayer(playerNum);
 Now it's simple to query the button or axis values:
 
 ```java
-float axisX = c.getAxisValue(OuyaController.AXIS_LSTICK_X);
-float axisY = c.getAxisValue(OuyaController.AXIS_LSTICK_Y);
+float axisX = c.getAxisValue(OuyaController.AXIS_LS_X);
+float axisY = c.getAxisValue(OuyaController.AXIS_LS_Y);
 boolean buttonPressed = c.getButton(OuyaController.BUTTON_O);
 ```
 
