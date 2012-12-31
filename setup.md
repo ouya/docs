@@ -6,7 +6,7 @@ Download and install the [Android SDK and tools](http://developer.android.com/sd
 When you reach the portion of the install process where you run Android SDK, install the following:
 
 - **Tools**: Including both Android SDK and Android SDK Platform tools
-- **Android 4.1(API 16)**: SDK Platform
+- **Android 4.1 (API 16)**: SDK Platform
 - **Android 4.0 (API 14)**: SDK Platform
 - **Extras**: Android Support Library
 
