@@ -24,17 +24,14 @@ In-App Purchasing (IAP) is how your app can make money.  The OUYA Developer Kit 
 
 #### Initializing the ODK
 
-All IAP functionality goes through the **OuyaFacade** object.  One of these objects should be created at the beginning of the application and used for all IAP requests.
+All IAP functionality goes through the **OuyaFacade** object.  The **OuyaFacade** singleton should be initialized at the beginning of the application and used for all IAP requests.
 ```java
 	// Your developer id can be found in the Developer Portal
 	public static final String DEVELOPER_ID = "00000000-0000-0000-0000-000000000000";
 
-	// Create an OuyaFacade
-	private OuyaFacade OuyaFacade = new OuyaFacade();
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		OuyaFacade.init(this, DEVELOPER_ID);
+		OuyaFacade.getInstance().init(this, DEVELOPER_ID);
 		super.onCreate(savedInstanceState);
 	}
 ```
@@ -42,7 +39,7 @@ Of course, when your application is finished, it is polite to inform the **OuyaF
 ```java
 	@Override
 	protected void onDestroy() {
-		OuyaFacade.shutdown();
+		OuyaFacade.getInstance().shutdown();
 		super.onDestroy();
 	}
 ```
@@ -79,14 +76,14 @@ Now we will create our own listener!  In this example, we are extending the **Ca
 			}
 
 			@Override
-			public void onFailure(int errorCode, String errorMessage) {
+			public void onFailure(int errorCode, String errorMessage, Bundle errorBundle) {
 				Log.d("Error", errorMessage);
 			}
 		};
 ```
 So, how do we actually get the data we want? By making a request via **OuyaFacade**:
 ```java
-	OuyaFacade.requestProductList(PRODUCT_ID_LIST, productListListener);
+	OuyaFacade.getInstance().requestProductList(PRODUCT_ID_LIST, productListListener);
 ```
 So easy!
 
@@ -102,7 +99,7 @@ Once users experience your application, they will become super addicted and eage
 			}
 
 			@Override
-			public void onFailure(int errorCode, String errorMessage) {
+			public void onFailure(int errorCode, String errorMessage, Bundle errorBundle) {
 				Log.d("Error", errorMessage);
 			}
 		};
@@ -110,7 +107,7 @@ Once users experience your application, they will become super addicted and eage
 With that listener defined, making the purchase is just one line:
 ```java
 	Purchasable productToBuy = PRODUCT_ID_LIST.get(0);
-	OuyaFacade.requestPurchase(productToBuy, purchaseListener);
+	OuyaFacade.getInstance().requestPurchase(productToBuy, purchaseListener);
 ```
 Now we wait for the money to start pouring in...
 
@@ -136,19 +133,19 @@ Let us take a look at our listener:
 					throw new RuntimeException(e);
 				}
 				for (Receipt r : receipts) {
-					Log.d("Receipt", "You have purchased: " + r.getIdentifier())
+					Log.d("Receipt", "You have purchased: " + r.getIdentifier());
 				}
 			}
 
 			@Override
-			public void onFailure(int errorCode, String errorMessage) {
+			public void onFailure(int errorCode, String errorMessage, Bundle errorBundle) {
 				Log.d("Error", errorMessage);
 			}
 		};
 ```
 As usual, making the actual request is quite simple:
 ```java
-	OuyaFacade.requestReceipts(receiptListListener);
+	OuyaFacade.getInstance().requestReceipts(receiptListListener);
 ```
 The receipt decryption happens inside the application to help prevent hacking.  By moving the decryption into each application there is no "one piece of code" a hacker can attack to break encryption for all applications.  In the future, we will encourage developers to avoid using the **decryptReceiptResponse** method. They will need to move the method into their application, and *perturb* what it does slightly (changing for-loops to while-loops, and so forth) to help make things even more secure.
 Currently, the ODK is under heavy development, so the helper method will assist in insulating you from our "under-the-hood" changes.
@@ -165,13 +162,13 @@ If your application talks to an external server, it is often necessary to get a 
 			}
 
 			@Override
-			public void onFailure(int errorCode, String errorMessage) {
+			public void onFailure(int errorCode, String errorMessage, Bundle errorBundle) {
 				Log.d("Error", errorMessage);
 			}
 		};
 ```
 Then making the request:
 ```java
-	OuyaFacade.requestGamerUuid(gamerUuidListener);
+	OuyaFacade.getInstance().requestGamerUuid(gamerUuidListener);
 ```
 **Note**: These game UUIDs are different across developers; two apps by different developers which query the UUID of the same user will get different results.
