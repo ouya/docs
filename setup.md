@@ -3,7 +3,7 @@
 ##### MacOS
 Download and install the [Android SDK and tools](http://developer.android.com/sdk/index.html) to your Mac or PC, following the included instructions. 
 
-When you reach the portion of the install process where you run Android SDK, install the following:
+When you reach the [portion](http://developer.android.com/sdk/installing/adding-packages.html) of the install process where you run Android SDK, install the following:
 
 - **Tools**: Including both Android SDK and Android SDK Platform tools
 - **Android 4.1 (API 16)**: SDK Platform
