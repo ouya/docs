@@ -32,6 +32,30 @@ You may need to adjust your `.bashrc` entries if you have used a custom SDK fold
 ##### Windows
 TBD
 
+##### Linux / Eclipse / ADT
+
+TBD (work in progress)
+
+Install latest ADT
+
+Start Eclipse
+Window -> Android SDK Manager
+
+Add
+ Ouya base API (API 16) components
+  SDK Platform
+  ARM EABI
+
+
+```bash
+# save in a file like ouya.sh
+# usage:
+#  source ouya.sh
+export PATH=$path_to_adt/sdk/tools:$PATH
+export PATH=$path_to_adt/sdk/platform-tools:$PATH
+export ANDROID_HOME=~/android/android-sdk-macosx
+```
+
 ##### Eclipse
 TBD
 
