@@ -54,6 +54,7 @@ Add
 export PATH=$path_to_adt/sdk/tools:$PATH
 export PATH=$path_to_adt/sdk/platform-tools:$PATH
 export ANDROID_HOME=~/android/android-sdk-macosx
+export LANG=C
 ```
 
 ##### Eclipse
