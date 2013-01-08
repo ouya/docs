@@ -42,10 +42,10 @@ Start Eclipse
 Window -> Android SDK Manager
 
 Add
- Ouya base API (API 16) components
-  SDK Platform
-  ARM EABI
-
+- Ouya base API (API 16) components
+--  SDK Platform
+--  ARM EABI
+--  Intel x86 Atom System Image (for emulation)
 
 ```bash
 # save in a file like ouya.sh
