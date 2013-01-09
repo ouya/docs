@@ -113,7 +113,7 @@ Device: select device from previous step (OUYA_720)
 Target: Android 4.1.2 - API Level 16
 CPU/ABI: Intel Atom (x86)
 Kayboard: Hardware keyboard present (?)
-Skin: - (?)
+Skin: Display a skin with hardware control (?)
 No cameras
 Memory Options: RAM: 1024 VM Heap: 32 (?)
 Internal Storage: 200 (?) MiB
