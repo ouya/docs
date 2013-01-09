@@ -32,9 +32,149 @@ You may need to adjust your `.bashrc` entries if you have used a custom SDK fold
 ##### Windows
 TBD
 
-##### Eclipse
-TBD
+##### Linux / Eclipse / ADT
 
+(work in progress)
+
+###### Install latest ADT
+Download and install the [Android ADT](http://developer.android.com/sdk/index.html)
+
+Start Eclipse
+
+In
+
+  'Window' -> 'Android SDK Manager'
+
+for the matching Android version 'Android 4.1.2 (API 16)' add
+- SDK Platform
+- ARM EABI
+- Intel x86 Atom System Image (for emulation)
+
+Note: I had to restart Eclipse once for the x86 option to show up
+
+Exit Eclipse (optional)
+
+```bash
+# save in a file like ouya.sh (paths are probably not needed when run in Eclipse)
+# usage:
+#  source ouya.sh
+export PATH=$path_to_installed_adt/sdk/tools:$PATH
+export PATH=$path_to_installed_adt/sdk/platform-tools:$PATH
+export ANDROID_HOME=$path_to_installed_adt
+# Avoid internationalization issues (JUnit tests)
+export LANG=C
+```
+```bash
+source ouya.sh
+```
+With this it should be possible to run the tests specified in
+OUYA-ODK/Samples/iap-sample-app/README.txt
+Note: I had to install system package 'ant-junit'
+
+continue with Eclipse description below
+
+##### Eclipse
+(work in progress)
+
+###### Create a emulator device
+
+Start Eclipse
+
+In
+  'Window' -> 'Android Virtual Device Manager'
+  tab 'Device Definitions'
+  button 'New device...'
+add
+```
+  Name: OUYA_720
+  Screen Size: 18 (I like it big but still fit on my monitor)
+  Resolution: 1280 x 720
+  Sensors: unselect all (or are they available in controller?)
+  Cameras: unselect all
+  Input: DPad (?)
+  RAM: 1024 MiB
+  Size: large (?)
+  Screen Ratio: long
+  Density: xhdpi (?)
+  Buttons: Hardware (?)
+  Device States:
+    Portrait: not enabled (auto enables for me...)
+    Landscape: Enabled
+  Override: (up to you)
+```
+Click 'Create Device'
+
+select the new device and 'Create AVD...' (will autofillin) or
+in tab 'Android Virtual Devices' (AVD)
+button 'New...'
+```
+Name: 'AVD_for_OUYA_720'
+Device: select device from previous step (OUYA_720)
+Target: Android 4.1.2 - API Level 16
+CPU/ABI: Intel Atom (x86)
+Kayboard: Hardware keyboard present (?)
+Skin: Display a skin with hardware control (?)
+No cameras
+Memory Options: RAM: 1024 VM Heap: 32 (?)
+Internal Storage: 200 (?) MiB
+SD Card: Size: _blank_ (?) MiB
+Emulation Options: Use Host GPU
+Override (up to you)
+```
+button 'OK'
+
+Select the 'AVD_for_OUYA_720'
+button 'Start...'
+```
+Scale Display to real size: no (I prefer speed!)
+Wipe user data (up to you)
+Launch from snapshot (unselectable)
+Save to snapshot (unselectable)
+```
+button 'Launch' (and wait...)
+
+###### Install OUYA launcher
+se below (quite easy with target running)
+
+if everything went well there should be an OUYA Launcher application and a restart of AVD_for_OUYA_720 should give the option to start with OUYA Launcher after unlocking.
+
+###### Run one of the samples
+'File' -> 'Import'
+
+'Android' -> Existing Android Code Into Workspace'
+
+button 'Next >'
+
+Browse to OUYA-ODK/Samples/ select sample to import.
+
+select 'Copy projects into workspace'
+
+button 'Finish'
+
+select imported package, right click and select
+'Run As' -> 'Android Application'
+
+Checking Run configurations...
+```
+Android tab
+Name: (should have a name, not blank!)
+Project: (should have a name, not blank!)
+Launch Action: Launch Default Activity
+```
+```
+Target tab
+Deployment Target Selection Mode
+(your choice)
+Emulator launch parameters:
+Network Speed: Full
+Network Latency: None
+Wipe User data (your choice)
+Disable Boot Animation (your choice)
+```
+```
+Common tab
+(your choices)
+```
 ##### Developing with the ODK
 Use the Android API Level 16 (Android 4.1 "Jelly Bean") when developing for the OUYA Console.
 
