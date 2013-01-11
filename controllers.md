@@ -23,7 +23,78 @@ public static final int BUTTON_Y;
 public static final int BUTTON_A;
 ```
 
-With these constants in hand, it's totally acceptable to handle input via the standard **onKeyDown**, **onKeyUp**, or **onGenericMotionEvent** methods.
+With these constants in hand, it's totally acceptable to handle input via the standard **onKeyDown**, **onKeyUp**, or **onGenericMotionEvent** methods.  If handling input in this way, the controller ID can be queried through **OuyaController.getPlayerNumByDeviceId()** as shown below.
+
+```java
+@Override
+public boolean onKeyDown(final int keyCode, KeyEvent event){
+    //Get the player #
+    int player = OuyaController.getPlayerNumByDeviceId(event.getDeviceId());       
+    boolean handled = false;
+    
+    //Handle the input
+    switch(keyCode){
+        case OuyaController.BUTTON_O:
+            //You now have the key pressed and the player # that pressed it
+            //doSomethingWithKey();
+            handled = true;
+            break;
+    }
+    return handled || super.onKeyDown(keyCode, event);
+}
+
+@Override
+public boolean onGenericMotionEvent(final MotionEvent event) {
+    //Get the player #
+    int player = OuyaController.getPlayerNumByDeviceId(event.getDeviceId());    
+    
+    //Get all the axis for the event
+    float LS_X = event.getAxisValue(OuyaController.AXIS_LS_X);
+    float LS_Y = event.getAxisValue(OuyaController.AXIS_LS_Y);
+    float RS_X = event.getAxisValue(OuyaController.AXIS_RS_X);
+    float RS_Y = event.getAxisValue(OuyaController.AXIS_RS_Y);
+    float L2 = event.getAxisValue(OuyaController.AXIS_L2);
+    float R2 = event.getAxisValue(OuyaController.AXIS_R2);
+    
+    //Do something with the input
+    //updatePlayerInput(player, LS_X, LS_Y, RS_X, RS_Y, L2, R2);
+    
+    return true;
+}
+```
+
+##### Distinguishing between Analog Joystick and Touchpad
+
+Both the analog joystick and the touchpad states are read using **onGenericMotionEvent**.  To distinguish between them you can query the **MotionEvent** action where:
+
+* Analog Joystick == MotionEvent.ACTION_MOVE
+* Touchpad == MotionEvent.ACTION_HOVER_MOVE
+
+Example:
+
+```java
+@Override
+public boolean onGenericMotionEvent(final MotionEvent event) {
+    //Get the player #
+    int player = OuyaController.getPlayerNumByDeviceId(event.getDeviceId());    
+    
+    switch(event.getActionMasked()){
+        //Joystick
+        case MotionEvent.ACTION_MOVE:
+            float LS_X = event.getAxisValue(OuyaController.AXIS_LS_X);            
+            //do other things with joystick
+            break;
+            
+        //Touchpad
+        case MotionEvent.ACTION_HOVER_MOVE:
+            //Print the pixel coordinates of the cursor
+            Log.i("Touchpad", "Cursor X: " + event.getX() + "Cursor Y: " + event.getY());
+            break;
+    }
+    
+    return true;
+}
+```
 
 ##### Anytime State Querying
 
@@ -60,8 +131,8 @@ OuyaController c = OuyaController.getControllerByPlayer(playerNum);
 Now it's simple to query the button or axis values:
 
 ```java
-float axisX = c.getAxisValue(OuyaController.AXIS_LSTICK_X);
-float axisY = c.getAxisValue(OuyaController.AXIS_LSTICK_Y);
+float axisX = c.getAxisValue(OuyaController.AXIS_LS_X);
+float axisY = c.getAxisValue(OuyaController.AXIS_LS_Y);
 boolean buttonPressed = c.getButton(OuyaController.BUTTON_O);
 ```
 
