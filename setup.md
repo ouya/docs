@@ -36,18 +36,18 @@ For information on the APIs available please consult the API reference documenta
 
 To run the sample code, open up the project in iap-sample-app and follow the instructions in the README.txt file.
 
-For your app or game to be recognized as made for OUYA, you will need to include an OUYA intent category on the manifest entry of your main activity. Use “ouya.intent.category.GAME” or “ouya.intent.category.APP”.
+For your app or game to be recognized as made for OUYA, you will need to include an OUYA intent category on the manifest entry of your main activity. Use “tv.ouya.intent.category.GAME” or “tv.ouya.intent.category.APP”.
 ```xml
 <activity android:name=".GameActivity" android:label="@string/app_name">
   <intent-filter>
     <action android:name="android.intent.action.MAIN"/>
     <category android:name="android.intent.category.LAUNCHER"/>
-    <category android:name="ouya.intent.category.GAME"/>
+    <category android:name="tv.ouya.intent.category.GAME"/>
   </intent-filter>
 </activity>
 ```
 
-The application image that is shown in the launcher is embedded inside of the APK itself.  The expected file is in res/drawable-xhdpi/ouya_icon.png and the image size must be 732x412 for games or 412x412 for apps.
+The application image that is shown in the launcher is embedded inside of the APK itself.  The expected file is in res/drawable-xhdpi/ouya_icon.png and the image size must be 732x412.
 
 #### Hardware Substitutes
 
