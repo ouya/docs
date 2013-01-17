@@ -30,11 +30,11 @@ All IAP functionality goes through the OuyaFacade object.  One of these should b
 	public static final String DEVELOPER_ID = "00000000-0000-0000-0000-000000000000";
 
 	// Create an OuyaFacade
-	private OuyaFacade OuyaFacade = new OuyaFacade();
+	private OuyaFacade ouyaFacade = OuyaFacade.getInstance();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		OuyaFacade.init(this, DEVELOPER_ID);
+		ouyaFacade.init(this, DEVELOPER_ID);
 		super.onCreate(savedInstanceState);
 	}
 ```
@@ -42,9 +42,13 @@ Of course, when you're application is finished it's polite to inform the OuyaFac
 ```java
 	@Override
 	protected void onDestroy() {
-		OuyaFacade.shutdown();
+		ouyaFacade.shutdown();
 		super.onDestroy();
 	}
+```
+The OuyaFacade also has a testing mode where you can buy products without spending actual money.  When testing mode is enabled, the purchase confirmation dialog will be red and have the word "[TEST]" in front of messages to make sure you know what mode you're in (don't want to ship games in test mode!).
+```java
+	ouyaFacade.setTestMode();
 ```
 Now we're ready for some real action! 
 
@@ -85,7 +89,7 @@ Now let's create our own listener!  In this example we're extending the CancelIg
 ```
 Ok, so how do we actually get the data we want?  By making a request via the OuyaFacade:
 ```java
-	OuyaFacade.requestProductList(PRODUCT_ID_LIST, productListListener);
+	ouyaFacade.requestProductList(PRODUCT_ID_LIST, productListListener);
 ```
 So easy!
 
@@ -109,7 +113,7 @@ Once users use your application they'll be super addicted and will eagerly buy a
 With that listener defined, making the purchase is just one line:
 ```java
 	Purchasable productToBuy = PRODUCT_ID_LIST.get(0);
-	OuyaFacade.requestPurchase(productToBuy, purchaseListener);
+	ouyaFacade.requestPurchase(productToBuy, purchaseListener);
 ```
 Now to wait for the money to start pouring in...
 
@@ -143,7 +147,7 @@ Let's take a look at our listener:
 ```
 As usual, making the actual request is quite simple:
 ```java
-	OuyaFacade.requestReceipts(receiptListListener);
+	ouyaFacade.requestReceipts(receiptListListener);
 ```
 The receipt decryption happens inside the app to help prevent hackers.  By moving it into each application there is no "one piece of code" they can attack to break encryption for all applications.  In the future we'll encourage developers to not even use the decryptReceiptResponse method and to move that into your application, and to perturb what it does slightly (changing for-loops to while-loops, etc) to help make things even more secure.
 Currently the ODK is under heavy development so the helper method will help insulate you from our under-the-hood changes.
@@ -167,6 +171,6 @@ If your application talks to an external server it's often necessary to get a un
 ```
 Then making the request:
 ```java
-	OuyaFacade.requestGamerUuid(gamerUuidListener);
+	ouyaFacade.requestGamerUuid(gamerUuidListener);
 ```
 Note that these game uuids are different across developers: two apps by different developers that query the uuid of the same user will get different results.
