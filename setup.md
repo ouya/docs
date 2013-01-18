@@ -33,7 +33,17 @@ You may need to adjust your `.bashrc` entries if you have used a custom SDK fold
 TBD
 
 ##### Eclipse
-TBD
+
+If you're using Eclipse as your development environment, you can create Eclipse projects from the samples included in the ODK, to get a working example running quickly.
+
+- Open Eclipse
+- From the menu, select File -> New -> Project
+- In the new project dialog, select Android -> Android Project from Existing Code. Click the Next button.
+- In the Import Projects dialog, click the Browse button.
+- From the file browser that appears, navigate to the root directory of the sample app you want to use. For example, OUYA-ODK/Samples/game-sample. Then click the Open button.
+- In the Import Projects dialog, click the Finish button. 
+
+This will create a working Eclipse project. If your OUYA console is connected, you can run the sample application from the Eclipse menu Run -> Run.
 
 ##### Developing with the ODK
 Use the Android API Level 16 (Android 4.1 "Jelly Bean") when developing for the OUYA Console.
