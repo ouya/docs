@@ -34,7 +34,7 @@ TBD
 
 ##### Eclipse
 
-If you're using Eclipse as your development environment, you can create Eclipse projects from the samples included in the ODK, to get a working example running quickly.
+If you're using Eclipse as your development environment, you can create Eclipse projects from the samples included in the ODK to get a working example running quickly.
 
 - Open Eclipse
 - From the menu, select File -> New -> Project
@@ -110,7 +110,7 @@ If using a standard Android tablet, we recommend using a tablet with a usable di
 
 The OUYA game controller combines a standard controller (two joysticks, a D-Pad, four game buttons, two shoulder buttons, and two triggers) with a touchpad. For testing, we recommend using the Xbox 360 wired USB controller combined with a mouse or touchpad for testing joystick and game button interaction. 
 
-##### Screen Resolution Handing
+##### Screen Resolution Handling
 
 The OUYA console supports 720p or 1080p output only.
 
