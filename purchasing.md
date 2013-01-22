@@ -46,7 +46,7 @@ Of course, when you're application is finished it's polite to inform the OuyaFac
 		super.onDestroy();
 	}
 ```
-Now we're ready for some real action! 
+Now we're ready for some real action!
 
 #### Creating Products
 
@@ -170,3 +170,16 @@ Then making the request:
 	OuyaFacade.requestGamerUuid(gamerUuidListener);
 ```
 Note that these game uuids are different across developers: two apps by different developers that query the uuid of the same user will get different results.
+
+#### Listeners And Obfuscators (e.g. ProGuard)
+
+If you pass your application through a system which may obfuscate your code you should ensure that your listeners
+are not obfuscated. If an obfuscator changes the name of the listener methods the framework will not be able to
+call your listener and so you will not be informed of the status of any requests you make.
+
+If you are using ProGuard doing this involves adding the following lines to your ProGuard configuration file;
+
+```-keep public class * extends tv.ouya.console.api.CancelIgnoringOuyaResponseListener
+-keep public class * implements tv.ouya.console.api.OuyaResponseListener
+````
+
