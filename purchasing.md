@@ -179,7 +179,8 @@ call your listener and so you will not be informed of the status of any requests
 
 If you are using ProGuard doing this involves adding the following lines to your ProGuard configuration file;
 
-```-keep public class * extends tv.ouya.console.api.CancelIgnoringOuyaResponseListener
+```
+-keep public class * extends tv.ouya.console.api.CancelIgnoringOuyaResponseListener
 -keep public class * implements tv.ouya.console.api.OuyaResponseListener
 ````
 
