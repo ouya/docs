@@ -122,7 +122,7 @@ Now we wait for the money to start pouring in...
 
 At this point, we can get information on products and purchase them, but what if the user purchased something in a previous play session?  The ODK provides a way to list purchase receipts. Yes, this will require another listener object!
 
-_Please not that only products that are entitlements are returned. This is to avoid re-awarding players consumable product purchases that have already been consumed._
+**Note**: Only products that are entitlements are returned. This is to avoid re-awarding players consumable product purchases that have already been consumed.
 
 For security reasons, the receipts are returned encrypted and must be decrypted within the application itself.  To assist with this, you can use the **OuyaEncryptionHelper**'s **decryptReceiptResponse** method.
 
