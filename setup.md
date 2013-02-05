@@ -55,14 +55,14 @@ For information on the API commands available, please consult the OUYA API refer
 To run the sample code, open up the project in `iap-sample-app` and follow the instructions in the `README.txt` file.
 
 For your application or game to be recognized as made for OUYA, you will need to include an OUYA intent category on the manifest entry of your main activity. 
-Use “ouya.intent.category.GAME” or “ouya.intent.category.APP”.
+Use “tv.ouya.intent.category.GAME” or “tv.ouya.intent.category.APP”.
 
 ```xml
 <activity android:name=".GameActivity" android:label="@string/app_name">
   <intent-filter>
     <action android:name="android.intent.action.MAIN"/>
     <category android:name="android.intent.category.LAUNCHER"/>
-    <category android:name="ouya.intent.category.GAME"/>
+    <category android:name="tv.ouya.intent.category.GAME"/>
   </intent-filter>
 </activity>
 ```
