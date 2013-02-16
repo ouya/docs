@@ -16,6 +16,7 @@ Since controller interfaces are so crucial, we've done some work to make your li
 ##### Constants
 
 The **OuyaController** class contains OUYA-specific constants for buttons and axes. A small selection are shown below.
+
 ```java
 public static final int BUTTON_O;
 public static final int BUTTON_U;
@@ -23,7 +24,17 @@ public static final int BUTTON_Y;
 public static final int BUTTON_A;
 ```
 
-With these constants in hand, it's totally acceptable to handle input via the standard **onKeyDown**, **onKeyUp**, or **onGenericMotionEvent** methods.  If handling input in this way, the controller ID can be queried through **OuyaController.getPlayerNumByDeviceId()** as shown below.
+The first thing that must be done is to initialize the OuyaController system, this should be done at the start of your application like so:
+
+```java
+@Override
+public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    OuyaController.init(this);
+}
+```
+
+Now we can proceed!  It's totally acceptable to handle input via the standard **onKeyDown**, **onKeyUp**, or **onGenericMotionEvent** methods.  If handling input in this way, the controller ID can be queried through **OuyaController.getPlayerNumByDeviceId()** as shown below.
 
 ```java
 @Override
