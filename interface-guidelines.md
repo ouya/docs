@@ -4,7 +4,7 @@ Games can use the OUYA controller buttons however they wish, but we recommend th
 ```text
 OUYA    Color    Default Function
 O       green    select
-U       blue     options (Android's menu function)
+U       blue     -
 Y       yellow   -
 A       red      back/cancel
 ```
