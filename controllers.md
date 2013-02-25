@@ -4,10 +4,11 @@ One of the huge advantages of the OUYA console is that gamers get to use a *real
 - four digital buttons (O, U, Y, and A)
 - a four direction digital pad (D-Pad)
 - two analog joysticks (LS, RS)
-- two digital buttons that activate when the joysticks are pushed straight down (L3, R3)
 - two digital bumper buttons (L1, R1)
 - two analog triggers (L2, R2) 
+- two digital buttons that activate when the joysticks are pushed straight down (L3, R3)
 - a touchpad, configured to behave as a mouse input (Touchpad)
+See the interface-guidelines for a link to button images.
 
 **Note:** The analog triggers also act as digital buttons, with a threshold of 0.5 for the analog value.
 
@@ -139,12 +140,33 @@ OuyaController c = OuyaController.getControllerByDeviceId(deviceId);
 OuyaController c = OuyaController.getControllerByPlayer(playerNum);
 ```
 
-Now it's simple to query the button or axis values:
+Now it's simple to query the button or axis values (for the analog joysticks, we recommend checking against the provided deadzone value):
 
 ```java
 float axisX = c.getAxisValue(OuyaController.AXIS_LS_X);
 float axisY = c.getAxisValue(OuyaController.AXIS_LS_Y);
+if (axisX * axisX + axisY * axisY < OuyaController.STICK_DEADZONE * OuyaController.STICK_DEADZONE) {
+  axisX = axisY = 0.0f;
+}
 boolean buttonPressed = c.getButton(OuyaController.BUTTON_O);
 ```
 
 With this, you can focus on making a great game instead of on input handling.
+
+##### Testing Button State Changes
+
+Another way the controller wrappers help to make game development easier are these optional methods to help you track per-frame button state changes.
+```java
+if (c.buttonChangedThisFrame(OuyaController.BUTTON_O)) {
+    if (c.getButton(OuyaController.BUTTON_O)) {
+        startShooting();
+    } else {
+        stopShooting();
+    }
+}
+```
+
+Of course the ODK needs some help from you to let it know when a new frame is started.  Thus you'll need to call this method at start of each frame (before doing any input handling):
+```java
+OuyaController.startOfFrame();
+```
