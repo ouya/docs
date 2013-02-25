@@ -1,6 +1,9 @@
 ## Interface Guidelines
 
 Games can use the OUYA controller buttons however they wish, but we recommend the mappings below for the **O**, **U**, **Y**, and **A** buttons. If you are running a stock Android application that is not OUYA-aware, this is also how the buttons will be mapped to the standard Android navigation buttons on the navigation bar for a typical device.
+
+We also provide a [zip file](https://d31pno3ktcq63f.cloudfront.net/assets/OUYA_Buttons.zip) with button images for use in your games.
+
 ```text
 OUYA    Color    Default Function
 O       green    select
