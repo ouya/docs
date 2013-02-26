@@ -96,25 +96,109 @@ So easy!
 
 #### Making a Purchase
 
-Once users experience your application, they will become super addicted and eagerly buy all the products you offer!  To make that happen, we must first create a new listener:
+The first thing you will need to do is ensure that your application key is included in your application. You can down load the DER representation of your application key from the games area of the developer portal. To create a Java representation of the key you should use the following code:
+
 ```java
-	CancelIgnoringOuyaResponseListener<Product> purchaseListener =
-		new CancelIgnoringOuyaResponseListener<Product>() {
+        // Create a PublicKey object from the key data downloaded from the developer portal.
+        try {
+            X509EncodedKeySpec keySpec = new X509EncodedKeySpec(APPLICATION_KEY);
+            KeyFactory keyFactory = KeyFactory.getInstance("RSA");
+            mPublicKey = keyFactory.generatePublic(keySpec);
+        } catch (Exception e) {
+            Log.e(LOG_TAG, "Unable to create encryption key", e);
+        }
+```
+
+Once you have your key embedded you will need to create a purchase listener which handles responses from the server. In this example we're using a Map of unique purchase IDs to the objects the purchase was for to identify what was purchased:
+
+```java
+	CancelIgnoringOuyaResponseListener<String> purchaseListener =
+		new CancelIgnoringOuyaResponseListener<String>() {
 			@Override
-			public void onSuccess(Product product) {
-				Log.d("Purchase", "Congrats you bought: " + product.getName());
+			public void onSuccess(String response) {
+				Product product;
+	            try {
+    	            OuyaEncryptionHelper helper = new OuyaEncryptionHelper();
+
+        	        JSONObject response = new JSONObject(result);
+            	    if(response.has("key") && response.has("iv")) {
+                	    id = helper.decryptPurchaseResponse(response, mPublicKey);
+                    	Product storedProduct;
+	                    synchronized (mOutstandingPurchaseRequests) {
+    	                    storedProduct = mOutstandingPurchaseRequests.remove(id);
+        	            }
+            	        if(storedProduct == null) {
+	                        onFailure(OuyaErrorCodes.THROW_DURING_ON_SUCCESS, "No purchase outstanding for the given purchase request", Bundle.EMPTY);
+    	                    return;
+        	            }
+        	            product = storedProduct;
+            	    } else {
+                	    product = new Product(new JSONObject(result));
+                    	if(!mProduct.getIdentifier().equals(product.getIdentifier())) {
+                        	onFailure(OuyaErrorCodes.THROW_DURING_ON_SUCCESS, "Purchased product is not the same as purchase request product", Bundle.EMPTY);
+	                        return;
+    	                }
+        	        }
+        	        
+					Log.d("Purchase", "Congrats you bought: " + product.getName());
+            	} catch (Exception e) {
+					Log.e("Purchase", "Your purchase failed.", e);
+				}
 			}
 
 			@Override
-			public void onFailure(int errorCode, String errorMessage) {
+			public void onFailure(int errorCode, String errorMessage, Bundle info) {
 				Log.d("Error", errorMessage);
 			}
 		};
 ```
-With that listener defined, making the purchase is just one line:
+
+Once we have defined the listener, we need to make the purchase. The following code provides a method which encrypts the purchase in the way the server expects;
 ```java
-	Purchasable productToBuy = PRODUCT_ID_LIST.get(0);
-	ouyaFacade.requestPurchase(productToBuy, purchaseListener);
+    public void requestPurchase(final Product product)
+        throws GeneralSecurityException, UnsupportedEncodingException, JSONException {
+        SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
+
+        // This is an ID that allows you to associate a successful purchase with
+        // it's original request. The server does nothing with this string except
+        // pass it back to you, so it only needs to be unique within this instance
+        // of your app to allow you to pair responses with requests.
+        String uniqueId = Long.toHexString(sr.nextLong());
+
+        JSONObject purchaseRequest = new JSONObject();
+        purchaseRequest.put("uuid", uniqueId);
+        purchaseRequest.put("identifier", product.getIdentifier());
+        purchaseRequest.put("testing", "true"); // This value is only needed for testing, not setting it results in a live purchase
+        String purchaseRequestJson = purchaseRequest.toString();
+
+        byte[] keyBytes = new byte[16];
+        sr.nextBytes(keyBytes);
+        SecretKey key = new SecretKeySpec(keyBytes, "AES");
+
+        byte[] ivBytes = new byte[16];
+        sr.nextBytes(ivBytes);
+        IvParameterSpec iv = new IvParameterSpec(ivBytes);
+
+        Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding", "BC");
+        cipher.init(Cipher.ENCRYPT_MODE, key, iv);
+        byte[] payload = cipher.doFinal(purchaseRequestJson.getBytes("UTF-8"));
+
+        cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding", "BC");
+        cipher.init(Cipher.ENCRYPT_MODE, mPublicKey);
+        byte[] encryptedKey = cipher.doFinal(keyBytes);
+
+        Purchasable purchasable =
+                new Purchasable(
+                        product.getIdentifier(),
+                        Base64.encodeToString(encryptedKey, Base64.NO_WRAP),
+                        Base64.encodeToString(ivBytes, Base64.NO_WRAP),
+                        Base64.encodeToString(payload, Base64.NO_WRAP) );
+
+        synchronized (mOutstandingPurchaseRequests) {
+            mOutstandingPurchaseRequests.put(uniqueId, product);
+        }
+        ouyaFacade.requestPurchase(purchasable, new PurchaseListener(product));
+    }
 ```
 Now we wait for the money to start pouring in...
 
