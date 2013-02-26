@@ -109,7 +109,7 @@ The first thing you will need to do is ensure that your application key is inclu
         }
 ```
 
-Once you have your key embedded you will need to create a purchase listener which handles responses from the server. In this example we're using a Map of unique purchase IDs to the objects the purchase was for to identify what was purchased:
+Once you have your key embedded you will need to create a purchase listener which handles responses from the server. Each purchase will have a unique purchase ID. In this example we use a Map of these IDs to the Product being purchased to allow us to determine what has been purchased :
 
 ```java
 	CancelIgnoringOuyaResponseListener<String> purchaseListener =
