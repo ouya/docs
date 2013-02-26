@@ -309,3 +309,8 @@ If you are using ProGuard doing this involves adding the following lines to your
 -keep public class * implements tv.ouya.console.api.OuyaResponseListener
 ````
 
+#### Remember to check receipts
+
+The internet is not a 100% reliable system. It is possible for a purchase to be made and the success response not reach your application (e.g. if the users broadband connection drops out while OUYAs servers are authorising the payment).
+
+In order to minimise the number of complaints from users in relation to this you should always check the list of receipts for a user in case there are purchases your application did not receive the successful result for. 
