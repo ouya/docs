@@ -226,8 +226,13 @@ Let us take a look at our listener:
 				OuyaEncryptionHelper helper = new OuyaEncryptionHelper();
 				List<Receipt> receipts = null;
 				try {
-					receipts = helper.decryptReceiptResponse(receiptResponse);
-				} catch (IOException e) {
+	                JSONObject response = new JSONObject(receiptResponse);
+    	            if(response.has("key") && response.has("iv")) {
+        	            receipts = helper.decryptReceiptResponse(response, mPublicKey);
+            	    } else {
+                	    receipts = helper.parseJSONReceiptResponse(receiptResponse);
+                	}
+				} catch (Exception e) {
 					throw new RuntimeException(e);
 				}
 				for (Receipt r : receipts) {
