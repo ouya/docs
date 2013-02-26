@@ -128,14 +128,20 @@ Once you have your key embedded you will need to create a purchase listener whic
     	                    storedProduct = mOutstandingPurchaseRequests.remove(id);
         	            }
             	        if(storedProduct == null) {
-	                        onFailure(OuyaErrorCodes.THROW_DURING_ON_SUCCESS, "No purchase outstanding for the given purchase request", Bundle.EMPTY);
+	                        onFailure(
+	                        	OuyaErrorCodes.THROW_DURING_ON_SUCCESS, 
+	                        	"No purchase outstanding for the given purchase request",
+	                        	Bundle.EMPTY);
     	                    return;
         	            }
         	            product = storedProduct;
             	    } else {
                 	    product = new Product(new JSONObject(result));
                     	if(!mProduct.getIdentifier().equals(product.getIdentifier())) {
-                        	onFailure(OuyaErrorCodes.THROW_DURING_ON_SUCCESS, "Purchased product is not the same as purchase request product", Bundle.EMPTY);
+                        	onFailure(
+                        		OuyaErrorCodes.THROW_DURING_ON_SUCCESS, 
+                        		"Purchased product is not the same as purchase request product", 
+                        		Bundle.EMPTY);
 	                        return;
     	                }
         	        }
@@ -168,7 +174,8 @@ Once we have defined the listener, we need to make the purchase. The following c
         JSONObject purchaseRequest = new JSONObject();
         purchaseRequest.put("uuid", uniqueId);
         purchaseRequest.put("identifier", product.getIdentifier());
-        purchaseRequest.put("testing", "true"); // This value is only needed for testing, not setting it results in a live purchase
+        // This value is only needed for testing, not setting it results in a live purchase
+        purchaseRequest.put("testing", "true"); 
         String purchaseRequestJson = purchaseRequest.toString();
 
         byte[] keyBytes = new byte[16];
