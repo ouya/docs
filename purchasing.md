@@ -276,6 +276,26 @@ Then making the request:
 ```
 **Note**: These game UUIDs are different across developers; two apps by different developers which query the UUID of the same user will get different results.
 
+#### Common onFailure errors
+
+We have provided a class which will handle some of the common errors which the 
+OUYA framework may report to your application. Using this helper class may cause your application to be forced into the background while the user enters their username and/or password.
+
+To use this in your onFailure methods you should use the following code:
+
+```java
+            boolean wasHandledByAuthHelper =
+                    OuyaAuthenticationHelper.
+                            handleError(
+                                    context, errorCode, errorMessage,
+                                    optionalData, AUTHENTICATION_ACTIVITY_ID,
+                                    listener );
+```
+
+Where context is the current Context, errorCode, errorMessage, and optionalData are the parameters passed to your onFailure method, AUTHENTICATION_ACTIVITY_ID is an ID which will be passed to your Activities onActivityResult method if the error handler needs to start the OUYA user authentication Activity, and listener is an OuyaResponseListener<Void> object which is called with the result of a request to add a user account if no accounts are already present on the system.
+
+If the helper can handle the error the method will return true, if it can not it will return false.
+
 #### Listeners And Obfuscators (e.g. ProGuard)
 
 If you pass your application through a system which may obfuscate your code you should ensure that your listeners
