@@ -66,7 +66,14 @@ Use “tv.ouya.intent.category.GAME” or “tv.ouya.intent.category.APP”.
 </activity>
 ```
 
-When the system overlay menu opens (e.g. when the system button is held or double tapped) the framework broadcasts a sticky intent with the action `tv.ouya.intent.action.OUYA_MENU_APPEARING` (also defined in OuyaIntent). You can set up a BroadcastReceiver for this either dynamically or statically.
+The application image that is shown in the launcher is embedded inside of the APK itself.  The expected file is in res/drawable-xhdpi/ouya_icon.png and the image size must be 732x412.
+
+##### Cleanly shutting down audio
+
+When you exit the app and/or open the system menu, any ongoing game audio should be paused or stopped. Your app is responsible for managing its own audio. Failing to do so may be grounds for review process failure.
+
+When the system overlay menu opens (e.g. when the system button is held or double tapped) the framework broadcasts a sticky intent with the action `tv.ouya.intent.action.OUYA_MENU_APPEARING` (also defined in OuyaIntent). 
+You can set up a BroadcastReceiver for this either dynamically or statically.
 
 Statically:
 ```xml
@@ -85,7 +92,7 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         if(intent.getAction().equals(OuyaIntent.ACTION_MENUAPPEARING)) {
-            //free up resources, etc.
+            //pause music, free up resources, etc.
         }
     }
 }
@@ -96,12 +103,10 @@ Or dynamically:
 mContext.registerReceiver(new BroadcastReceiver{
     @Override
     public void onReceive(Context context, Intent intent) {
-        //free up resources, etc.
+        //pause music, free up resources, etc.
     }
 }, new IntentFilter(OuyaIntent.ACTION_MENUAPPEARING));
 ```
-
-The application image that is shown in the launcher is embedded inside of the APK itself.  The expected file is in res/drawable-xhdpi/ouya_icon.png and the image size must be 732x412.
 
 #### Hardware Substitutes
 
