@@ -105,6 +105,29 @@ public boolean onGenericMotionEvent(final MotionEvent event) {
     return true;
 }
 ```
+##### The Left Joystick
+
+If you do not consume motion events from the left joystick, the system will send your app dpad KeyEvents.
+
+If you don't want your app to get these key events, return true from `onGenericMotionEvent`. Otherwise, you can differentiate these dpad events using the source field as such:
+```java
+public boolean onKeyDown(int keyCode, KeyEvent event) {
+    if(keycode >= KeyEvent.KEYCODE_DPAD_UP && keycode <= KeyEvent.KEYCODE_DPAD_RIGHT) {
+        if((event.getSource() & InputDevice.SOURCE_DPAD) != 0) {
+            //Event is from actual dpad
+        }
+        if((event.getSource() & InputDevice.SOURCE_JOYSTICK) != 0) {
+            //Event is from joystick
+        }
+    } else {
+        //keyCode is not a dpad keycode
+    }
+    ...
+}
+```
+
+One caveat to using the joystick as a dpad to keep in mind is that the triggering value for the dpad event is `0.5`, which causes diagonals and directionals to be inequal in size.
+If your games requires 8 equally spaced directions, you will have to do your own math from the axes' values.
 
 ##### Anytime State Querying
 
