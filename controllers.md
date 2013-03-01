@@ -77,10 +77,10 @@ public boolean onGenericMotionEvent(final MotionEvent event) {
 
 ##### Distinguishing between Analog Joystick and Touchpad
 
-Both the analog joystick and the touchpad states are read using **onGenericMotionEvent**.  To distinguish between them you can query the **MotionEvent** action where:
+Both the analog joystick and the touchpad states are read using **onGenericMotionEvent**.  To distinguish between them you can query the input source:
 
-* Analog Joystick == MotionEvent.ACTION_MOVE
-* Touchpad == MotionEvent.ACTION_HOVER_MOVE
+* Joystick == InputDevice.SOURCE_CLASS_JOYSTICK
+* Touchpad == InputDevice.SOURCE_CLASS_POINTER
 
 Example:
 
@@ -90,18 +90,16 @@ public boolean onGenericMotionEvent(final MotionEvent event) {
     //Get the player #
     int player = OuyaController.getPlayerNumByDeviceId(event.getDeviceId());    
     
-    switch(event.getActionMasked()){
-        //Joystick
-        case MotionEvent.ACTION_MOVE:
-            float LS_X = event.getAxisValue(OuyaController.AXIS_LS_X);            
-            //do other things with joystick
-            break;
+    //Joystick
+    if((event.getSource() & InputDevice.SOURCE_CLASS_JOYSTICK) != 0) {
+        float LS_X = event.getAxisValue(OuyaController.AXIS_LS_X);            
+        //do other things with joystick
+    }
             
-        //Touchpad
-        case MotionEvent.ACTION_HOVER_MOVE:
-            //Print the pixel coordinates of the cursor
-            Log.i("Touchpad", "Cursor X: " + event.getX() + "Cursor Y: " + event.getY());
-            break;
+    //Touchpad
+    if((event.getSource() & InputDevice.SOURCE_CLASS_POINTER) != 0) {
+        //Print the pixel coordinates of the cursor
+        Log.i("Touchpad", "Cursor X: " + event.getX() + "Cursor Y: " + event.getY());
     }
     
     return true;
