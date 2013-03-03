@@ -7,7 +7,7 @@ We also provide a [zip file](https://d31pno3ktcq63f.cloudfront.net/assets/OUYA_B
 ```text
 OUYA    Color    Default Function
 O       green    select
-U       blue     options (Android's menu function)
+U       blue     -
 Y       yellow   -
 A       red      back/cancel
 ```
@@ -27,3 +27,12 @@ R2
 R3
 Touchpad (not "Trackpad")
 ```
+
+
+###The safe area
+(Coped from: https://developers.google.com/tv/web/docs/optimization_guide#new-kind-of-screen)
+
+Televisions have a safe central display area surrounded by a small amount of screen space that can vary in size. If you place graphics or text outside the safe area, they may not be visible. to be sure that users can see all your interface elements lay out your pages with flexible layouts. At the very least, include at least a 10 percent margin at each resolution:
+
+ - 1280x720 resolution. Recommended size is 1152x648.
+ - 1920x1080 resolution. Recommended size is 1728x972.
