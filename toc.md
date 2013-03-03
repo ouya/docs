@@ -4,11 +4,11 @@
 
 **API**
 * [Controllers](controllers.md)
-* [In-App Purchasing](purchasing.md)
+* [Purchases](purchasing.md)
 * [Storage](storage.md)
 
 **Guidelines**
-* [Interface](interface-guidelines.md)
+* [User Interface](interface-guidelines.md)
 * [Content & Review](content-review-guidelines.md)
 
 **Game Engines**
