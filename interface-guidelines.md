@@ -28,11 +28,8 @@ R3
 Touchpad (not "Trackpad")
 ```
 
+### TV safe area
 
-###The safe area
-(Coped from: https://developers.google.com/tv/web/docs/optimization_guide#new-kind-of-screen)
+Leave at least a 10% margin between your UI elements and the edge of the screen. This will help ensure that your content is visible across a wide range of TVs and settings.
 
-Televisions have a safe central display area surrounded by a small amount of screen space that can vary in size. If you place graphics or text outside the safe area, they may not be visible. to be sure that users can see all your interface elements lay out your pages with flexible layouts. At the very least, include at least a 10 percent margin at each resolution:
-
- - 1280x720 resolution. Recommended size is 1152x648.
- - 1920x1080 resolution. Recommended size is 1728x972.
+For further tips and advice, read Google's [Designing for TV Guidelines](https://developers.google.com/tv/web/docs/optimization_guide).
