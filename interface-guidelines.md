@@ -32,4 +32,4 @@ Touchpad (not "Trackpad")
 
 Leave at least a 10% margin between your UI elements and the edge of the screen. This will help ensure that your content is visible across a wide range of TVs and settings.
 
-For further tips and advice, read Google's [Designing for TV Guidelines](https://developers.google.com/tv/web/docs/optimization_guide).
+For further tips and advice, read [Google's Designing for TV Guide](https://developers.google.com/tv/web/docs/optimization_guide).
