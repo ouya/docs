@@ -1,8 +1,4 @@
-## Helper classes methods
-
-We have provided a number of helper classes and methods in the ODK designed to make developing applications easier
-
-##### Storing game data
+## Storing game data
 
 The **OuyaFacade** class contains two methods which allow games to store and retrieve 
 small Strings which will be may be persisted even if the game is uninstalled and re-installed. 
