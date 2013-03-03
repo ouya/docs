@@ -1,4 +1,4 @@
-## Storing game data
+## Storing Game Data
 
 The **OuyaFacade** class contains two methods which allow games to store and retrieve 
 small Strings which will be may be persisted even if the game is uninstalled and re-installed. 
