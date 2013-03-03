@@ -28,7 +28,7 @@ R3
 Touchpad (not "Trackpad")
 ```
 
-### TV safe area
+### TV Safe Area
 
 Leave at least a 10% margin between your UI elements and the edge of the screen. This will help ensure that your content is visible across a wide range of TVs and settings.
 
