@@ -5,7 +5,7 @@
 **API**
 * [Controllers](controllers.md)
 * [In-App Purchasing](purchasing.md)
-* [Save Games](save-games.md)
+* [Storage](storage.md)
 
 **Guidelines**
 * [Interface](interface-guidelines.md)
