@@ -32,7 +32,7 @@ You may need to adjust your `.bashrc` entries if you have used a custom SDK fold
 
 `0x2836`
 
-the run the following commands;
+then run the following commands;
 
 ```
 adb kill-server
