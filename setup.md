@@ -38,9 +38,35 @@ then run the following commands;
 adb kill-server
 android update adb
 adb start-server
+adb devices
 ```
 
+Your console should be shown in the list of available devices.
+
 ##### Windows
+
+You will need to modify the file `usb_driver\android_winusb.inf` within the Android SDK for your OUYA console to be recognised.
+
+You should locate the section with the title `[Google.NTx86]` and add the following lines before connecting the console;
+
+```
+;OUYA Console
+%SingleAdbInterface% = USB_Install, USB\VID_2836&PID_0010
+%CompositeAdbInterface% = USB_Install, USB\VID_2836&PID_0010&MI_01
+```
+
+You should then connect your consoles micro USB port to the USB port of your computer using the appropriate cable. Once it has been connected you should run the following command;
+
+```
+adb kill-server
+echo 0x2836 >> "%USERPROFILE%\.android\adb_usb.ini"
+adb start-server
+adb devices
+```
+
+Your console should be shown in the list of available devices.
+
+
 TBD
 
 ##### Eclipse
