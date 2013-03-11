@@ -36,8 +36,6 @@ then run the following commands;
 
 ```
 adb kill-server
-android update adb
-adb start-server
 adb devices
 ```
 
