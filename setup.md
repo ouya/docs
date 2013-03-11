@@ -28,13 +28,13 @@ export ANDROID_HOME=~/android/android-sdk-macosx
 
 You may need to adjust your `.bashrc` entries if you have used a custom SDK folder location.
 
-**New** : You will need to add the following line to `~/.android/adb_usb.ini`;
+**New** : You will need to add the following line to `~/.android/adb_usb.ini` for your OUYA console to be recognised;
 
 `0x2836`
 
 the run the following commands;
 
-```bash
+```
 adb kill-server
 android update adb
 adb start-server
