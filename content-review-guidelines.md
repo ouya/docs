@@ -20,7 +20,7 @@ We want you to build imaginative, inventive games. To make sure OUYA has a great
 
 * **Hate Speech**: Do not promote hatred toward an individual or group of people based on their race or ethnic origin, religion, disability, gender, age, veteran status, or sexual orientation/gender identity in your game.  If you do, we’ll reject it.
 
-* **Violence**: Do not encourage real word violence, in any way.
+* **Violence**: Do not encourage real world violence, in any way.
 
 * **Sexually Explicit Content**: Don’t go overboard on nudity or obscene references… you know what we mean.
 
@@ -55,7 +55,7 @@ Games should follow the OUYA [Interface Guidelines](https://devs.ouya.tv/develop
 
 ##OUYA Content Ratings Guidelines
 
-To help expedite your game’s review, we ask that you assign a content rating to your game that reflects the appropriateness of its content for different audience. The rating scale is as follows:
+To help expedite your game’s review, we ask that you assign a content rating to your game that reflects the appropriateness of its content for different audiences. The rating scale is as follows:
 
 **Heavy**: Your game contains heavy use of simulated violence, adult language or situations, or your game allows access to that kind of  content via streaming video, audio or the open web.
 
