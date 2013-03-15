@@ -20,7 +20,7 @@ We want you to build imaginative, inventive games. To make sure OUYA has a great
 
 * **Hate Speech**: Do not promote hatred toward an individual or group of people based on their race or ethnic origin, religion, disability, gender, age, veteran status, or sexual orientation/gender identity in your game.  If you do, we’ll reject it.
 
-* **Violence**: Do not encourage real word violence, in any way.
+* **Violence**: Do not encourage real world violence, in any way.
 
 * **Sexually Explicit Content**: Don’t go overboard on nudity or obscene references… you know what we mean.
 
