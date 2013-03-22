@@ -40,7 +40,7 @@ You have to use OUYA’s In-App Payment API to take any payment. The In-App Paym
 
 You shouldn’t mislead users about any in-app services, goods, content or functionality.
 
-No nasty bugs please!  If your game regularly crashes or has awful bugs, or otherwise don’t perform as described, we’ll reject it.
+No nasty bugs please! We typically reject content that regularly crashes, has awful bugs, or does not perform as described.
 
 Your game should continue to work even if a network connection goes down (excluding any online functionality, of course).
 
