@@ -246,7 +246,7 @@ The NDK Example shows how to write C++ and interface that with Unity. The Unity 
 
 ##### Script
 First take a look at the native C++ code interface, which is being invoked from Unity. This source is located in a file called “jni.cpp” because that’s what the Android NDK build scripts look for. NDK compiles the C++ code and places into the target “Assets\Plugins\Android\libs\armeabi\lib-ouya-ndk.so” library.
-```cplusplsu
+```cplusplus
 extern "C"
 {
 	char* AndroidGetHelloWorld(long* size);
