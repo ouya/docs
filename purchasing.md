@@ -46,11 +46,18 @@ Of course, when your application is finished, it is polite to inform the **OuyaF
 		super.onDestroy();
 	}
 ```
-The OuyaFacade also has a testing mode where you can buy products without spending actual money.  When testing mode is enabled, the purchase confirmation dialog will be red and have the word "[TEST]" in front of messages to make sure you know what mode you're in (don't want to ship games in test mode!).
-```java
-	ouyaFacade.setTestMode();
-```
+
 Now we're ready for some real action! 
+
+#### Testing purchases
+
+The OuyaFacade also has a testing mode that was intended as a way to allow you to make free purchases. This has been deprecated for various reasons and will no longer work. There is no point in using the test mode anymore.
+
+Instead, all purchases made from the same account that created the game will be free. In other words, developers can make purchases in their own games for free, but everyone else will be charged.
+
+If you want to make double sure that this works as described, you can always sign up for another account using a spare email address.
+
+To enable testing with multiple accounts we plan to allow developers to add a limited number of "tester accounts" for a given game sometime in the near future.
 
 #### Creating Products
 
