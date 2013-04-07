@@ -55,6 +55,8 @@ The OuyaFacade also has a testing mode that was intended as a way to allow you t
 
 Instead, all purchases made from the same account that created the game will be free. In other words, developers can make purchases in their own games for free, but everyone else will be charged.
 
+To delete your test purchases, visit your [products page](https://devs.ouya.tv/developers/products) in the developer portal.
+
 If you want to make double sure that this works as described, you can always sign up for another account using a spare email address.
 
 To enable testing with multiple accounts we plan to allow developers to add a limited number of "tester accounts" for a given game sometime in the near future.
