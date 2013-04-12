@@ -64,9 +64,6 @@ adb devices
 
 Your console should be shown in the list of available devices.
 
-
-TBD
-
 ##### Eclipse
 
 If you're using Eclipse as your development environment, you can create Eclipse projects from the samples included in the ODK to get a working example running quickly.
