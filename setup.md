@@ -27,7 +27,7 @@ export ANDROID_HOME=~/android/android-sdk-macosx
 
 You may need to adjust your `.bashrc` entries if you have used a custom SDK folder location.
 
-Make sure to `source `~/.bashrc` once you've made these changes.
+Make sure to `source ~/.bashrc` once you've made these changes.
 
 **New** : You will need to add the following line to `~/.android/adb_usb.ini` for your OUYA console to be recognised:
 
