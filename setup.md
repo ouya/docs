@@ -19,11 +19,9 @@ Install the Java runtime if you are prompted to do so.
 
 You will need to add some paths to PATH. Assuming you have put the SDK folder in the location `~/android/android-sdk-macosx`, open a terminal and add the following three lines to your `.bashrc` (or `.zshrc`):
 
-```bash
-export PATH=$PATH:~/android/android-sdk-macosx/tools
-export PATH=$PATH:~/android/android-sdk-macosx/platform-tools
-export ANDROID_HOME=~/android/android-sdk-macosx
-```
+    export PATH=$PATH:~/android/android-sdk-macosx/tools
+    export PATH=$PATH:~/android/android-sdk-macosx/platform-tools
+    export ANDROID_HOME=~/android/android-sdk-macosx
 
 You may need to adjust your `.bashrc` entries if you have used a custom SDK folder location.
 
@@ -31,7 +29,7 @@ Make sure to `source ~/.bashrc` once you've made these changes.
 
 Add the following line to `~/.android/adb_usb.ini` for your OUYA console to be recognised:
 
-`0x2836`
+    0x2836
 
 Then, run the following commands:
 
@@ -46,16 +44,16 @@ You will need to modify the file `usb_driver\android_winusb.inf` within the Andr
 
 You should locate the section with the title `[Google.NTx86]` and add the following lines before connecting the console;
 
-  ;OUYA Console
-  %SingleAdbInterface% = USB_Install, USB\VID_2836&PID_0010
-  %CompositeAdbInterface% = USB_Install, USB\VID_2836&PID_0010&MI_01
+    ;OUYA Console
+    %SingleAdbInterface% = USB_Install, USB\VID_2836&PID_0010
+    %CompositeAdbInterface% = USB_Install, USB\VID_2836&PID_0010&MI_01
 
 You should then connect your consoles micro USB port to the USB port of your computer using the appropriate cable. Once it has been connected you should run the following command:
 
-  adb kill-server
-  echo 0x2836 >> "%USERPROFILE%\.android\adb_usb.ini"
-  adb start-server
-  adb devices
+    adb kill-server
+    echo 0x2836 >> "%USERPROFILE%\.android\adb_usb.ini"
+    adb start-server
+    adb devices
 
 Your console should be shown in the list of available devices.
 
