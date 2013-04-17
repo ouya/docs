@@ -200,3 +200,15 @@ Of course the ODK needs some help from you to let it know when a new frame is st
 ```java
 OuyaController.startOfFrame();
 ```
+
+#### Analog vs Digital Trigger Data
+
+We have deprecated the use of digital (key event) data to determine the state of the trigger buttons (L2 and R2). We now recommend using the analog axis data for more flexible use of the triggers.
+
+To mimic the digital state using the analog data is fairly simple:
+```java
+public boolean isL2Down(OuyaController c) {
+    return (c.getAxisValue(OuyaController.AXIS_L2) > 0.5f); //0.5 can be any threshold between 0.0 (completely released) - 1.0 (completely pressed)
+}
+```
+Just make sure that you have your **onGenericMotionEvent** function sending its events to the OuyaController class, as described at the top of this document.
