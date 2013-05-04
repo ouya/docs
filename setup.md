@@ -164,7 +164,7 @@ If using the emulator, configure the Android Virtual Device (AVD) as follows:
 - **CPU/ABI**: Intel Atom x86
 - **Device RAM size**: 1024
 
-**Note**: If the **OK** button is disabled, you may need to install a system image (such as the Intel x86 Atom System Image) for your AVD. You can install it via the Android SDK Manager.
+**Note**: If the **OK** button is disabled, you may need to install a system image for your AVD. The Intel x86 Atom System Image and the Intel x86 Emulator Accelerator (HAXM) are recommended. You can install it via the Android SDK Manager.
 
 We recommend the use of the Intel Atom x86 CPU/ABI and Intel's HAXM extensions to ensure the emulator performance is adequate for game development. If you are developing low-level code, you should note that the device is ARM based. Therefore, you should develop for the ARM architecture and use an emulator AVD with the CPU/ABI set to an ARM architecture.
 
