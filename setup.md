@@ -55,6 +55,20 @@ You should then connect your consoles micro USB port to the USB port of your com
     adb start-server
     adb devices
 
+Open the Device Manager (Right-click My Computer->Properties->Device Manager)
+
+In Device Manager find Portable Devices\OUYA Console, (Right-click and choose Update Driver Software...)
+
+Pick the option (Browse my computer for driver software)
+
+Pick the option (Let me pick from a list of device drivers on my computer)
+
+Click Have Disk... (Browse to Android SDK\extras\google\usb_driver)
+
+Choose ADB Composite Device
+
+The Google device driver is not signed which prevents automatic from finding it.
+
 Your console should be shown in the list of available devices.
 
 ##### Eclipse
