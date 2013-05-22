@@ -12,8 +12,11 @@ The OUYA SDK Unity Package supports publishing from Mac and Windows.
 ### Introduction
 Welcome to the OUYA Unity developers club. This document will provide an overview for setting up the example Unity application to publish on the OUYA platform.
 
+### Forums
+The forums are a great place for support and to get answers for common questions. There are several stickied posts in the [Unity section](http://forums.ouya.tv/categories/unity-on-ouya). Be sure to watch out for updates to the SDK in the [minor updates thread](http://forums.ouya.tv/discussion/197/sticky-ouya-unity-sdk-minor-updates#latest). You can [subscribe](https://hashbanggamesportal.ontimenow.com/) for email updates. There are [40 training videos](http://forums.ouya.tv/discussion/200/sticky-ouya-unity-package-videos/p1) and growing. There are also [weekly hangouts](http://forums.ouya.tv/discussion/710/g-hangout-scheduling) to field support questions.
+
 ### Import Package
-Part of receiving this document, you received OuyaSDK.unitypackage which can be imported into the Unity IDE on Mac and Windows. Start with a New Project, and Choose Assets->Import Package->Custom Package from the menu bar.  Browse to the OuyaSDK.unitypackage and import all files.
+Part of receiving this document, you received OuyaSDK.unitypackage which can be imported into the Unity IDE on Mac and Windows. Start with a New Project, and Choose Assets->Import Package->Custom Package from the menu bar.  Browse to the OuyaSDK.unitypackage and import all files. The original package has been split into Core and Examples. Core contains the OUYA panel and all the important code that you need for building on the OUYA. The examples utilize NGUI and have an optional NGUI distribution package that you can import if you don’t already have NGUI.
 
 ![Import Package](https://d31pno3ktcq63f.cloudfront.net/assets/unity/01_ImportPackage.jpg)
 
@@ -55,13 +58,15 @@ You will find the following structure imported into your Assets folder.
 - [Google-Guava](http://code.google.com/p/guava-libraries/): third party library for Google core.
 
 ### Example Scenes
+Note: Although some of the example scenes have OuyaGameObject, the preferred way is to put OuyaGameObject into an init scene; see the starter kit for details.
+
 #### Scene ShowProducts
 
 Open the ./Ouya/Examples/Scenes/SceneShowProducts.unity example scene.
 
 ![Products Scene](https://d31pno3ktcq63f.cloudfront.net/assets/unity/04_ProductsScene.jpg)
 
-All scenes start with a Main Camera. There’s a custom GameObject added for OuyaGameObject which handles taking messages from the OUYA SDK from Java to C#. The “ShowProduct” GameObject is a simple display script for displaying retrieved products and invoking purchases
+All scenes start with a Main Camera. There’s a custom GameObject added for OuyaGameObject which handles taking messages from the OUYA SDK from Java to C#. The “ShowProduct” GameObject is a simple display script for displaying retrieved products and invoking purchases. Since this example is a single scene that’s why it has the OuyaGameObject. Otherwise it would use the init scene setup.
 
 #### Scene ShowController
 
@@ -69,7 +74,7 @@ Open the ./Ouya/Examples/Scenes/SceneShowController.unity example scene.
 
 ![Scene Controller](https://d31pno3ktcq63f.cloudfront.net/assets/unity/13_SceneController.jpg)
 
-Both scenes needed to add the OuyaGameObject to interface with the OUYA SDK to receive display messages. The OuyaShowController script handles the display code necessary for mapping OUYA SDK input to the Unity GUI.
+Both scenes needed to add the OuyaGameObject to interface with the OUYA SDK to receive display messages. The OuyaShowController script handles the display code necessary for mapping OUYA SDK input to the Unity GUI. Again single scene examples can have the OuyaGameObject as long as the scene is not reloaded. Otherwise the OuyaGameObject would move to an init scene that loads your main menu or game scene.
 
 ### Android Setup
 Some player settings must be customized to build on Android. Open the player settings by navigating the menu to the Edit->Project Settings->Player menu item. The PlayerSettings will appear in the inspector.
@@ -80,12 +85,13 @@ In the inspector, expand the Resolution and Presentation section. Be sure to set
 
 ![Android Presentation](https://d31pno3ktcq63f.cloudfront.net/assets/unity/07_AndroidPresentation.jpg)
 
-Before any Android application can build you must set the bundle identifier. Be careful that the Bundle Identifier matches what you’ve used in the Android manifest. Also set the Minimum API Level to 12 or better. The OUYA console will be version 15, but you may want to test on another Android device.
+Before any Android application can build you must set the bundle identifier. Be careful that the Bundle Identifier matches what you’ve used in the Android manifest. Also set the Minimum API Level to 16 or better. The OUYA console will be version 16, and the SDK used Android API 16 calls in the application Java for detecting controller connect/disconnect events. The screenshots may show 14 but you want to use 16.
 
 ![Android Other Settings](https://d31pno3ktcq63f.cloudfront.net/assets/unity/06_AndroidOtherSettings.jpg)
 
 ### Build Settings
-Make sure you change the target platform to Android. Select Android and then click the button “Switch Platform”. Add a default scene by clicking the “Add Current”. Make sure at least one scene is checked. At this point you can build and enter the file path for the Android APK build.
+Make sure you change the target platform to Android. Select Android and then click the button “Switch Platform”. Add a default scene by clicking the “Add Current”. Make sure at least one scene is checked. At this point you can build and enter the file path for the Android APK build.  
+  
 Using the build settings, if you have more than one scene just by marking the toggles, you can switch between the loading scenes. You can use Unity script for switching between scenes.
 
 ![Build Settings](https://d31pno3ktcq63f.cloudfront.net/assets/unity/11_BuildSettings.jpg)
@@ -93,15 +99,14 @@ Using the build settings, if you have more than one scene just by marking the to
 ![Build Settings](https://d31pno3ktcq63f.cloudfront.net/assets/unity/12_BuildSettings.jpg)
 
 ### OUYA Panel
-Immediately after importing the OUYA SDK Unity Package, the OUYA Panel becomes available in the Menu. Use Window->Open Ouya Panel to open the OUYA Panel. The OUYA Panel will open which can be docked. The top of the panel has a unique identifier (MachineName_ProcessPID) to help identify the
+Immediately after importing the OUYA SDK Unity Package, the OUYA Panel becomes available in the Menu. Use Window->Open Ouya Panel to open the OUYA Panel. The OUYA Panel will open which can be docked. The top of the panel has a unique identifier (MachineName_ProcessPID) to help identify the Unity process which is useful for debugging or task killing.
 
 ![OUYA Panel](https://d31pno3ktcq63f.cloudfront.net/assets/unity/02_OuyaMenu.jpg)
 
-Unity process which is useful for debugging or task killing.
 The OUYA panel has several tabs to show information for functional areas: “OUYA”, “Unity”, “Java JDK”, “Android SDK”, and “Android NDK”. Run through each tab to check for missing paths. Any missing path or file with grey out. You may need to browse to find JDK or SDK paths. There should be no greyed out tabs in order for the compile, build, and run automation to work.
 
 ### OUYA Tab
-The OUYA tab has a button section and then an info section below. The button “Build Application” will compile the Java Application and immediately build the Application APK for Android. The button “Build and Run Application” compiles the Java Application, builds the APK, and executes the APK on a connected device. The button “Compile” will compile the Java Application. The different buttons are available for your convenience.
+The OUYA tab has a button section and then an info section below. The button “Build Application” will compile the Java Application and immediately build the Application APK for Android. The button “Build and Run Application” compiles the Java Application, builds the APK, and executes the APK on a connected device. The button “Compile” will compile the Java Application. The different compile buttons are available for your convenience which are helpful during customization. The post processor is off by default and will detect any Java/C++ change which will trigger a recompile. The “Sync Bundle ID” button will sync your Android manifest and Java Application package identifiers. The bundle identifier should be unique for every game. The APK name will change the name of the build output file. If you choose your Java Application name, you can specify an alternate name which is intended for hardcore tinkerers. The bundle prefix is just for debugging and is the first part of your bundle identifier. The App Java Pack is the package referenced by your Java Application. If the bundle identifier is mismatched and error will display here, in which case just click the sync button. The manifest pack refers to the bundle identifier specified in the Android manifest, and the sync button will fix a mismatch.
 
 ![OUYA Tab](https://d31pno3ktcq63f.cloudfront.net/assets/unity/03_OuyaTab.jpg)
 
@@ -123,120 +128,225 @@ The Android Tab has info to point to the Android SDK download location. Windows 
 ![Android Tab](https://d31pno3ktcq63f.cloudfront.net/assets/unity/10_AndroidTab.jpg)
 
 ### NDK Tab
-The NDK Tab shows info for the Android NDK. The NDK can be downloaded from http://developer.android.com/tools/sdk/ndk/index.html the android site. Windows and Mac are just an archive, so you’ll need to point the tab to where you unpack. NDK allows compiling the C++ NDK example which potentially can also wrap JNI. You can wrap the JNI from both C++ and C# to pick the best approach for your application. The JNI.cpp example has an easy reference from within the Android plugins folder. On Mac, there is a patch that needs to be applied to NDK in order to fix a compile issue which is explained here: https://groups.google.com/forum/?fromgroups=#!topic/android-ndk/b4DSxE1NAS0 on Google groups.
+The NDK Tab shows info for the Android NDK. Windows and Mac are just an archive, so you’ll need to point the tab to where you unpack. NDK allows compiling the C++ NDK example which potentially can also wrap JNI. You can wrap the JNI from both C++ and C# to pick the best approach for your application. The JNI.cpp example has an easy reference from within the Android plugins folder. On Windows and Mac, there is a patch that needs to be applied to NDK in order to fix a compile issue which is explained here: https://groups.google.com/forum/?fromgroups=#!topic/android-ndk/b4DSxE1NAS0 on Google groups. The NDK can be downloaded from http://developer.android.com/tools/sdk/ndk/index.html the android site.
 
 ![NDK Tab](https://d31pno3ktcq63f.cloudfront.net/assets/unity/14_NDKTab.jpg)
 
+### Scene Setup
+Since the initial writing of this document, controller input for games has been optimized. When examples are a single scene, they each include a single instance of the OuyaGameObject prefab. In other cases where multiple scenes are being used, you want to go with an init scene approach. Your game will usually want an initial scene, splash screen, a menu scene, and a game scene. The initial scene will contain an OuyaGameObject and is the only scene that will contain it. The initial scene will have a script that immediately loads your menu scene. And from your menu scene and game scene they will not contain a duplication OuyaGameObject. Everything other than the initial scene can load new scenes and switch between them freely. In your initial game scene, this is not the place where you enter your developer id that you’ll find on the OUYA developer portal. The OuyaGameObject also has other parameters for turning on debugging and raw debug logging. Debugging is useful for setting up an unrecognized controller.
+
+### Starter Kit
+The SDK now includes a starter kit to jump start users into a proper scene and project setup. The starter kit has 4 scenes, SceneInit, SceneSplash, SceneMain, and SceneGame. Be sure to add all 4 scenes to the build settings when using the starter kit.  
+  
+The starter kit begins with SceneInit which has the only OuyaGameObject instance. The OuyaGameObject has don’t destroy on load and should only be placed into the init scene. You should never have duplicate OuyaGameObjects in your scene. The OuyaSceneInit script powers the SceneInit scene. SceneInit immediately loads the next scene which transitions to the SceneSplash.  
+  
+SceneSplash displays a splash screen that fades in, holds, and then fades out. To display the splash screen a plane was used. The OuyaScreenSplash has a public material reference and the timers affect the alpha channel of the material. The material uses a shader that uses an alpha channel to fade in the splash texture.  
+  
+The directional light brightens the splash image. After the timers elapse, the SceneMain scene is loaded.  
+  
+SceneMain is a simple example of switching scenes powered by a GUI button. OuyaSceneMain drives the GUI event. The OuyaSceneMain has a scene parameter for “SceneMain” which tells it which scene to load next. The next scene after SceneMain changes to SceneGame when the button “Load the Game Scene” is clicked. The SceneMain is a placeholder for showing the main menu from your game.  
+  
+SceneGame is just like SceneMain as it has a button to switch back to the main menu SceneMain scene. The button is labelled “Back to Main Scene” and when clicked goes back to the SceneMain scene. OuyaSceneGame is the script that powers the SceneGame scene. This scene is a placeholder for your game scene.
+
 ### Example Scenes
-The package includes several example scenes. Each example scene has a custom script to illustrate the functional area. At a minimum, an OUYA application will need the OuyaGameObject added to the scene. There is an OuyaGameObject prefab that you can drag to the scene to create the game object. This object is responsible for letting the OUYA java interface send messages to Unity. Unity can communicate with Java and C++ via the OuyaSDK class.
+The package includes several example scenes. Each example scene has a custom script that highlights a functional area. Each OUYA example will need the OuyaGameObject added to only the initial scene. Refer to the starter kit for more info. There is an OuyaGameObject prefab that you can drag to the initial scene to create the game object. This object is responsible for letting the OUYA java interface send messages to Unity. Unity can communicate with Java and C++ via the OuyaSDK class. The OuyaGameObject is where you enter your developer id from the developer portal. OuyaGameObject is how Java talks to Unity C#. And the OuyaSDK is how Unity C# communicates with Java.
 
 #### Scene Controller Example
-This example scene maps known controllers to a virtual OUYA controller. That said, you may have an unrecognized controller that you are testing while doing development. If your controller is not recognized, let us know by posting in the developer forums. In the example, as you press a controller button, the axis or button will highlight on the virtual control. As you move your physical controller axis, the virtual controller axis will move. The scene has 3 area lights, 3 camera positions, an instance of the controller model, and the example OuyaGameObject script. The 3 camera positions are used to transition the camera. The OuyaGameObject script randomly picks a new camera position every N seconds from the supplied camera transforms. The OuyaGameObject script has meta references to the specific controller parts to control the highlighting and movement. Each button and axis has a MeshRenderer component which is used to access the material and change the color. From the MeshRenderer component, the transform can be accessed to rotate the thumbsticks and triggers. The axis and button values are provided by the OUYA SDK. The text that displays is Unity GUI provided in the OnGUI event of the OuyaGameObject script.
+This example scene maps known controllers to a virtual OUYA controller. That said, you may have an unrecognized controller that you are testing while doing development. If your controller is not recognized, let us know by posting in the developer forums. In the example, as you press a controller button, the axis or button will highlight on the virtual control. As you move your physical controller axis, the virtual controller axis will move. The scene has 3 area lights, 3 camera positions, an instance of the controller model, and the example OuyaGameObject script. The 3 camera positions are used to transition the camera. The OuyaGameObject script randomly picks a new camera position every N seconds from the supplied camera transforms. The OuyaGameObject script has meta references to the specific controller parts to control the highlighting and movement. Each button and axis has a MeshRenderer component which is used to access the material and change the color. From the MeshRenderer component, the transform can be accessed to rotate the thumbsticks and triggers. The axis and button values are provided by the OUYA SDK. The text that displays is Unity GUI provided in the OnGUI event of the OuyaGameObject script.  
+  
+The OUYA Bluetooth controller, PS2/3 controllers, and XBOX wired/wireless controllers all work while testing in the Unity3d Editor. The same controllers will also work connected to the OUYA console.  
+  
+The OUYA SDK provides controller input using state-based and event-based input. In state-based input, the OUYA input API is similar to the Unity input API which takes an additional player parameter. State input can be accessed via the OuyaInputManager with GetAxis, GetButton, GetButtonDown, and GetButtonUp. Event-based input is accessed by a handler and is documented in the script section.
 
 ![Device Controller](https://d31pno3ktcq63f.cloudfront.net/assets/unity/15_DeviceController.png)
 
 ##### Script
-To be able to attach a script to a GameObject, the example must extend MonoBehaviour.
+To be able to attach a script to a GameObject, the example must extend MonoBehaviour. The main logic script should implement the pause and resume interface to handle pause and resume events.
 ```csharp
-public class OuyaShowController : MonoBehaviour
+public class OuyaShowController : MonoBehaviour, OuyaSDK.IPauseListener, OuyaSDK.IResumeListener
 ```
 
-You need to assign the developer identifier which you can find in the OUYA dashboard.
+The developer identifier is now entered in the init scene in the inspector on the OuyaGameObject scene object. The developer id is found in the developer portal.  
+  
+Per the interface for pause and resume listeners, register in the Awake event.  
+  
+Conversely, unregister in the OnDestroy event.
 ```csharp
-private const string DEVELOPER_ID = "YOUR DEVELOPER ID";
+    void Awake()
+    {
+        OuyaSDK.registerPauseListener(this);
+        OuyaSDK.registerResumeListener(this);
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterPauseListener(this);
+        OuyaSDK.unregisterResumeListener(this);
+    }
 ```
 
-Attached GameObject scripts have an Awake() event that fires the first time the GameObject is activated. This is where we initialized the OUYA SDK by providing your developer identifier.
+With the pause/unpause listeners you need to need to implement OuyaOnPause and OuyaOnResume events. This is where you can shutdown your game, or reinitialize the game on resume, or potentially save your game state.
 ```csharp
-OuyaSDK.initialize(DEVELOPER_ID);
+    public void OuyaOnPause()
+    {
+    }
+
+    public void OuyaOnResume()
+    {
+    }
 ```
 
-To receive controller events, there are two types of events that are registered. Register an input button listener to receive button events.
+Register a handler for event-driven input in the Awake event.
 ```csharp
-OuyaSDK.registerInputButtonListener(new OuyaSDK.InputButtonListener<OuyaSDK.InputButtonEvent>()
+    void Awake()
+    {
+        OuyaInputManager.OuyaButtonEvent.addButtonEventListener(HandleButtonEvent);
+    }
 ```
 
-The input button listener has an onSuccess event which receives the InputButtonEvent.  The input button event has the controller details about the button that was pressed.
+Unregister the event-driven handler in the OnDestroy event. Clear the key states to avoid button presses getting stuck during a scene change.
 ```csharp
-onSuccess = (OuyaSDK.InputButtonEvent inputEvent) =>
+    void OnDestroy()
+    {
+        OuyaInputManager.OuyaButtonEvent.removeButtonEventListener(HandleButtonEvent);
+        OuyaInputManager.initKeyStates();
+    }
 ```
 
-The onFailure event reports errors like controller has been disconnected or has a low battery.
+You can get button notifications for multiple controllers in the event handler.
 ```csharp
-onFailure = (int errorCode, string errorMessage) =>
+    private void HandleButtonEvent(OuyaSDK.OuyaPlayer p, OuyaSDK.KeyEnum b, OuyaSDK.InputAction bs)
+    {
+    }
 ```
 
-Register an input axis listener to receive axis events.
+The handler receives an event so you can trap player, button, and button state combinations. For example, you can detect when the O button has a button down for controller 1 event. The potential states are in an enum list for easy access.
 ```csharp
-OuyaSDK.registerInputAxisListener(new OuyaSDK.InputAxisListener<OuyaSDK.InputAxisEvent>()
+if (b.Equals(OuyaSDK.KeyEnum.BUTTON_O) && bs.Equals(OuyaSDK.InputAction.KeyDown))
 ```
 
-The input axis listener has an onSuccess event which receives the InputAccessEvent. The input axis event has the controller details about the axis that was changed.
+The KeyEnum has all the OUYA controller buttons. InputActions map to KeyDown and KeyUp.  
+  
+State-based input can be accessed via the OuyaInputManager in Update or FixedUpdate events. Axis states can be accessed in GetAxis.
 ```csharp
-onSuccess = (OuyaSDK.InputAxisEvent inputEvent) =>
+float lx = OuyaInputManager.GetAxis("LX", OuyaSDK.OuyaPlayer.player1);
+float ly = OuyaInputManager.GetAxis("LY", OuyaSDK.OuyaPlayer.player1);
 ```
 
-The onFailure event reports errors similar to the button listener onFailure event.
+State-based input for buttons can be accessed via the OuyaInputManager in Update or FixedUpdate events.
 ```csharp
-onFailure = (int errorCode, string errorMessage) =>
+if (OuyaInputManager.GetButtonDown("RB", OuyaSDK.OuyaPlayer.player1))
+```
+
+State-based input for GetButtonUp can be used in Update or FixedUpdate.
+```csharp
+if (OuyaInputManager.GetButtonUp("LB", OuyaSDK.OuyaPlayer.player1))
+```
+
+#### Scene Multiple Controller Example
+The multiple controller example shows use of multiple controllers independently controlling characters.
+
+##### Script
+The OuyaInputHandlerExample script drives the skeleton characters and determines which controller corresponds to each character. In the inspector, OuyaInputHandlerExample has a Player field that determines the controller player that controls each skeleton. OuyaInputHandlerExample has the same setup as the previous example.
+```csharp
+public class OuyaInputHandlerExample : MonoBehaviour, OuyaSDK.IPauseListener, OuyaSDK.IResumeListener
+```
+
+The OuyaInputHandlerExample has a Player enum that is used in the input to control a specific player.
+```csharp
+public OuyaSDK.OuyaPlayer player;
+```
+
+The player field is used in the OuyaInputManager GetAxis so that the specific player controls the attached GameObject.
+```csharp
+Vector2 point = convertRawJoystickCoordinates(OuyaInputManager.GetAxis("LX", player), OuyaInputManager.GetAxis("LY", player), .25f);
+```
+
+The button handler has a player filter and any code after the filter condition is targeted at the correct GameObject.
+```csharp
+    void HandleButtonEvent(OuyaSDK.OuyaPlayer p, OuyaSDK.KeyEnum b, OuyaSDK.InputAction bs)
+    {
+        if (!player.Equals(p)) { return; }
+
+        if (b.Equals(OuyaSDK.KeyEnum.BUTTON_O) && bs.Equals(OuyaSDK.InputAction.KeyDown))
+        {
+            this.animation.Play("attack");
+        }
+    }
 ```
 
 #### Scene Products Example
-The products example shows how to get details about items that can be purchased in the OUYA store. For the example to run on your test device, make sure the OUYA Launcher is installed and running. The OUYA SDK provides methods for getting the details and invoking a purchase. When a purchase is invoked the OUYA Launcher will display a purchase layer above the Unity application. The result of the purchase is returned in the purchase success or failure event which you can handle in your Unity application. You can also get access to purchase receipts to verify the purchase. These methods allow you to create your own store presentation or in-app purchases while the transaction is happening in the OUYA Launcher. In the example, OuyaShowProducts script displays the UI using Unity GUI in the OnGUI event. The Get Products button will invoke getting the products, although this also happens in the Awake event. The purchase button will invoke a purchase event which will open layout above the Unity application in the OUYA Launcher.
+The products example shows how to get details about items that can be purchased in the OUYA store. The example comes with a list of example products. You will need to register your own products and product ids in the developer portal. For the example to run on your test device, make sure the OUYA Launcher is installed and running. The OUYA SDK provides methods for getting the details and invoking a purchase. When a purchase is invoked the OUYA Launcher will display a purchase layer above the Unity application. The result of the purchase is returned in the purchase success or failure event which you can handle in your Unity application. You can also get access to purchase receipts to verify the purchase. These methods allow you to create your own store presentation or in-app purchases while the transaction is happening in the OUYA Launcher. In the example, OuyaShowProducts script displays the UI using Unity GUI in the OnGUI event. The Get Products button will invoke getting the products, although this also happens in the Awake event. The purchase button will invoke a purchase event which will open layout above the Unity application in the OUYA Launcher.
 
 ![Scene Products Example](https://d31pno3ktcq63f.cloudfront.net/assets/unity/16_ProductsExample.png)
 
 ##### Script
-To be able to attach a script to a GameObject, the example must extend MonoBehaviour.
+Add listeners for the purchase-iap-system areas for GetProducts, Purchase, and GetReceipts.
 ```csharp
-public class OuyaShowProducts : MonoBehaviour
+public class OuyaShowProducts : MonoBehaviour, OuyaSDK.IPauseListener, OuyaSDK.IResumeListener, OuyaSDK.IGetProductsListener, OuyaSDK.IPurchaseListener, OuyaSDK.IGetReceiptsListener
 ```
 
-You need to assign the developer identifier which you can find in the OUYA dashboard.
+Enter your purchasables into the OuyaGameObject. The developer creates purchasables in the developer portal. And then the OuyaGameObject has a ProductKey list where you enter the product app ids from the developer portal.  
+  
+Register your GetProductsListener, PurchaseListener, and GetReceiptsLister in the Awake and clear in the OnDestroy events.
 ```csharp
-private const string DEVELOPER_ID = "YOUR DEVELOPER ID";
+    void Awake()
+    {
+        OuyaSDK.registerGetProductsListener(this);
+        OuyaSDK.registerPurchaseListener(this);
+        OuyaSDK.registerGetReceiptsListener(this);
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterGetProductsListener(this);
+        OuyaSDK.unregisterPurchaseListener(this);
+        OuyaSDK.unregisterGetReceiptsListener(this);
+    }
 ```
 
-Attached GameObject scripts have an Awake() event that fires the first time the GameObject is activated. This is where we initialized the OUYA SDK by providing your developer identifier.
+It’s recommended that you avoid switching scenes when events are pending. As in, don’t request receipts and immediately switch scenes before the callback happens. Also be sure to invoke a single request and wait for the response before invoking the iap service again.  
+  
+The listeners implement an OnSuccess, OnFailure, and OnCancel callback.
+
+###### Request product list
+To get a list of products (which includes the price information), invoke OuyaSDK.requestProductList and pass a list of purchasables. You likely want to obtain prices from the server to avoid hardcoding prices and showing an inaccurate price.
 ```csharp
-OuyaSDK.initialize(DEVELOPER_ID);
+    public void OuyaGetProductsOnSuccess(List<OuyaSDK.Product> products)
+    {
+    }
+    public void OuyaGetProductsOnFailure(int errorCode, string errorMessage)
+    {
+    }
+    public void OuyaGetProductsOnCancel()
+    {
+    }
 ```
 
-To receive product details, purchase details, and receipts, there are several types of event listeners that are registered. Register a product list listener to receive product events.
+###### Request purchase
+Start a purchase by invoking OuyaSDK.requestPurchase and pass the product identifier that you obtained from the list of purchasables. Be sure to wait for the callback result before invoking another purchase.
 ```csharp
-OuyaSDK.registerProductListListener(new OuyaSDK.CancelIgnoringIapResponseListener<List<OuyaSDK.Product>>()
+    public void OuyaPurchaseOnSuccess(OuyaSDK.Product product)
+    {
+    }
+    public void OuyaPurchaseOnFailure(int errorCode, string errorMessage)
+    {
+    }
+    public void OuyaPurchaseOnCancel()
+    {
+    }
 ```
 
-The product listener has an onSuccess event which receives the product list.
+###### Get receipts
+Games need to check whether the game has been unlocked or whether to show a BUY NOW button. Check the user’s receipt list for the purchasable identifier to see if the content has been unlocked. Call OuyaSDK.requestReceiptList to get the list of receipts and check the identifier.
 ```csharp
-onSuccess = (List<OuyaSDK.Product> products) =>
-```
-
-The onFailure event reports errors like the server couldn’t be contacted.
-```csharp
-onFailure = (int errorCode, string errorMessage) =>
-```
-
-Register a purchase listener to purchase events.
-```csharp
-OuyaSDK.registerRequestPurchaseListener(new OuyaSDK.CancelIgnoringIapResponseListener<OuyaSDK.Product>()
-```
-
-The onFailure event reports errors like if the user lacked funds or cancelled the purchase in the OUYA launcher.
-```csharp
-onFailure = (int errorCode, string errorMessage) =>
-```
-
-The receipt listener @todo
-
-After registering all the listeners, request the product details using a list of purchasables. Your application will already have identifiers for the products you are trying to sell. Invoking the request will asynchronously hit the callbacks.
-```csharp
-OuyaSDK.requestProductList(OuyaSDK.PRODUCT_IDENTIFIER_LIST, OuyaSDK.getProductListListener());
-```
-
-A purchase is requested by passing the purchasable identifier and the purchase listener.
-```csharp
-OuyaSDK.requestPurchase(purchasable.getIdentifier(), OuyaSDK.getRequestPurchaseListener());
+    public void OuyaGetReceiptsOnSuccess(List<OuyaSDK.Receipt> receipts)
+    {
+    }
+    public void OuyaGetReceiptsOnFailure(int errorCode, string errorMessage)
+    {
+    }
+    public void OuyaGetReceiptsOnCancel()
+    {
+    }
 ```
 
 #### Scene NDK Example
@@ -305,3 +415,6 @@ Given that you’ve integrated a Bluetooth headset with your application, verbal
 
 #### Deployment
 With multiple Android devices on the same machine, Unity natively runs your application on the first device it finds. To extend Unity for simultaneous build/deployment/execution on multiple devices on multiple targets check out “GoodDrop” in the Unity Asset Store. You can extend your deployment target to your local machine, remote machines, devices on your machine, devices on your network, and devices over the Internet all from the Unity IDE.
+
+#### Version Control
+If your project uses SVN for version control, check out “Good SVN” for integrated version control in Unity which works on Windows and Mac. https://www.assetstore.unity3d.com/#/content/7242
