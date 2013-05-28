@@ -201,4 +201,4 @@ For OpenGL-based games, we recommend creating a render buffer of 1920x1080 (i.e.
 
 Other Android devices may handle resolutions differently, but our store QA process will always test on an OUYA, so it is advisable to test any applications on an OUYA before submitting them to the OUYA store.
 
-For games using the Android UI Framework, the Android documentation from Google [developer.android.com](http://developer.android.com)  provides some useful tips when working with 1080p displays.
+For games using the Android UI Framework, the Android documentation from Google at [developer.android.com](http://developer.android.com)  provides some useful tips when working with 1080p displays.
