@@ -197,7 +197,7 @@ The OUYA game controller combines a standard controller (two joysticks, a D-Pad,
 
 All applications are provided with a 1080p virtual display for their output. This virtual display is then rendered to the screen in an appropriate manner. This may include downscaling the 1080p display to 720p where the screen does not support 1080p, or to 480p if a screen does not report it supports 720p or 1080p via an HDMI connection.
 
-For OpenGL-based games, we recommend creating a render buffer of 1920x1080 (i.e. 1080p) or 1280x720 (720p). If this does not match the display resolution of your device it will be up- or down-scaled accordingly by the OUYA. 
+For OpenGL-based games, we recommend creating a render buffer of 1920x1080 (i.e. 1080p) or 1280x720 (720p). If this does not match the display resolution of the display in use the render buffer will be up- or down-scaled accordingly by the OUYA. 
 
 Other Android devices may handle resolutions differently, but our store QA process will always test on an OUYA, so it is advisable to test any applications on an OUYA before submitting them to the OUYA store.
 
