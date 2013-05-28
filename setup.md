@@ -189,7 +189,7 @@ The OUYA console does not have hardware buttons for back or menu, so your games 
 
 If using a standard Android tablet, we recommend using a tablet with a usable display resolution as close as possible to 1920x1080.
 
-**Note**: The Android navigation bar will consume some of the screen on standard tablets, which will not be the case for the OUYA console. It is unlikely a tablet will give you a perfect replica of a running OUYA, but it will be enough to get most of your code running. You may still need to perform UI tweaks to use the 1920x1080 display buffer made available to apps by default.
+**Note**: The Android navigation bar will consume some of the screen on standard tablets, which will not be the case for the OUYA console. It is unlikely a tablet will give you a perfect replica of a running OUYA, but it will be enough to get most of your code running. You may still need to perform UI tweaks to use the 1920x1080 display buffer made available to apps by default on an OUYA.
 
 The OUYA game controller combines a standard controller (two joysticks, a D-Pad, four game buttons, two shoulder buttons, and two triggers) with a touchpad. For testing, we recommend using the Xbox 360 wired USB controller combined with a mouse or touchpad for testing joystick and game button interaction.
 
