@@ -11,8 +11,7 @@ Launch the Android SDK Manager by running ([detailed instructions](http://develo
 Install these packages:
 
 - **Tools**: Including both Android SDK and Android SDK Platform tools
-- **Android 4.1 (API 16)**: SDK Platform
-- **Android 4.0 (API 14)**: SDK Platform
+- **Android 4.1 (API 16)**: SDK Platform (without Google APIs)
 - **Extras**: Android Support Library
 
 Install the Java runtime if you are prompted to do so.
@@ -157,7 +156,7 @@ To install the launcher, run:
 
 If using the emulator, configure the Android Virtual Device (AVD) as follows:
 
-- **Resolution**: 1920x1080 or 1280x720, as desired
+- **Resolution**: 1920x1080
 - **Hardware Back/Home keys**: yes (you will need to add this to the hardware parameters)
 - **D-Pad support**: yes (you will need to add this to the hardware parameters)
 - **Target**: Android 4.1 - API Level 16
@@ -168,22 +167,24 @@ If using the emulator, configure the Android Virtual Device (AVD) as follows:
 
 We recommend the use of the Intel Atom x86 CPU/ABI and Intel's HAXM extensions to ensure the emulator performance is adequate for game development. If you are developing low-level code, you should note that the device is ARM based. Therefore, you should develop for the ARM architecture and use an emulator AVD with the CPU/ABI set to an ARM architecture.
 
-The OUYA console does not have hardware buttons for back or menu, so your games should not rely on the presence of these. Setting the hardware keys emulator property hides the Android navigation bar, enabling the emulator to fill the entire 1920x1080 or 1280x720 screen in the same way the OUYA console does.
+The OUYA console does not have hardware buttons for back or menu, so your games should not rely on the presence of these. Setting the hardware keys property of the emulator hides the Android navigation bar, enabling the emulator to fill a 1080p screen in the same way the OUYA console does.
 
 **Note**: When developing with the emulator, it is not possible to fully emulate the OUYA controller buttons and features.
 
 ##### Android Tablet
 
-If using a standard Android tablet, we recommend using a tablet with a usable display resolution as close as possible to 1920x1080 or 1280x720.
+If using a standard Android tablet, we recommend using a tablet with a usable display resolution as close as possible to 1920x1080.
 
-**Note**: The Android navigation bar will consume some of the screen on standard tablets, which will not be the case for the OUYA console.
+**Note**: The Android navigation bar will consume some of the screen on standard tablets, which will not be the case for the OUYA console. It is unlikely a tablet will give you a perfect replica of a running OUYA, but it will be enough to get most of your code running. You may still need to perform UI tweaks to use the 1920x1080 display buffer made available to apps by default.
 
 The OUYA game controller combines a standard controller (two joysticks, a D-Pad, four game buttons, two shoulder buttons, and two triggers) with a touchpad. For testing, we recommend using the Xbox 360 wired USB controller combined with a mouse or touchpad for testing joystick and game button interaction.
 
 ##### Screen Resolution Handling
 
-The OUYA console supports 720p or 1080p output only.
+All applications are provided with a 1080p virtual display for their output. This virtual display is then rendered to the screen in an appropriate manner. This may include downscaling the 1080p display to 720p where the screen does not support 1080p, or to 480p if a screen does not report it supports 720p or 1080p via an HDMI connection.
 
-For OpenGL-based games, we recommend creating a render buffer of 1920x1080 (if targeting 1080p) or 1280x720 (if targeting 720p). If this does not match the display resolution of your device, the game screen may be windowed or scaled depending on the behavior determined by the device manufacturer.
+For OpenGL-based games, we recommend creating a render buffer of 1920x1080 (i.e. 1080p) or 1280x720 (720p). If this does not match the display resolution of your device it will be up or downscaled accordingly by the OUYA. 
 
-For games using the Android UI Framework, follow the Android best practices for developing applications for xhdpi-large and tvdpi-large displays. See [developer.android.com](http://developer.android.com) for more information.
+Other Android devices may handle resolutions differently, but our store QA process will always test on an OUYA, so it is advisable to test any applications on an OUYA before submitting them to the OUYA store.
+
+For games using the Android UI Framework, the Android documentation from Google [developer.android.com](http://developer.android.com)  provides some useful tips when working with 1080p displays.
