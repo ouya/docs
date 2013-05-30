@@ -6,36 +6,36 @@
 
 2. You will need to add some paths to PATH. Assuming you have put the SDK folder in the location `~/android/android-sdk-macosx`, open a terminal and add the following three lines to your `~/.profile` (or `~/.bash_profile`):
 
-    export PATH=$PATH:~/android/android-sdk-macosx/tools
-    export PATH=$PATH:~/android/android-sdk-macosx/platform-tools
-    export ANDROID_HOME=~/android/android-sdk-macosx
+        export PATH=$PATH:~/android/android-sdk-macosx/tools
+        export PATH=$PATH:~/android/android-sdk-macosx/platform-tools
+        export ANDROID_HOME=~/android/android-sdk-macosx
 
-You may need to adjust your `.profile` entries if you have used a custom SDK folder location.
+    You may need to adjust your `.profile` entries if you have used a custom SDK folder location.
 
-Make sure to `source ~/.profile` once you've made these changes.
+    Make sure to `source ~/.profile` once you've made these changes.
 
 3. Launch the Android SDK Manager by running ([detailed instructions](http://developer.android.com/sdk/installing/adding-packages.html)):
 
     ./android sdk
 
-Install these packages:
+    Install these packages:
 
-- **Tools**: Including both Android SDK and Android SDK Platform tools
-- **Android 4.1 (API 16)**: SDK Platform (without Google APIs)
-- **Extras**: Android Support Library
+        - **Tools**: Including both Android SDK and Android SDK Platform tools
+        - **Android 4.1 (API 16)**: SDK Platform (without Google APIs)
+        - **Extras**: Android Support Library
 
-Install the Java runtime if you are prompted to do so.
+    Install the Java runtime if you are prompted to do so.
 
 4. Add the following line to `~/.android/adb_usb.ini` for your OUYA console to be recognised:
 
-    0x2836
+        0x2836
 
 5. Then, run the following commands:
 
-    adb kill-server
-    adb devices
+        adb kill-server
+        adb devices
 
-Your console should be shown in the list of available devices.
+    Your console should be shown in the list of available devices.
 
 ##### Windows
 
