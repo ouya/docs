@@ -1,16 +1,16 @@
 ## Setup Instructions for the OUYA ODK
 
-##### MacOS
+##### Mac OS X
 
-1. Download and install the [Android SDK and tools](http://developer.android.com/sdk/index.html) to your Mac or PC, following the included instructions.
+1. Download and install the [Android SDK and tools](http://developer.android.com/sdk/index.html) to your Mac following the included instructions.
 
-2. You will need to add some paths to PATH. Assuming you have put the SDK folder in the location `~/android/android-sdk-macosx`, open a terminal and add the following three lines to your `~/.bash_profile`:
+2. You will need to add some paths to PATH. Assuming you have put the SDK folder in the location `~/Development/adt-bundle-mac-x86_64`, open a terminal and add the following three lines to your `~/.bash_profile`:
 
-        export PATH=$PATH:~/android/android-sdk-macosx/tools
-        export PATH=$PATH:~/android/android-sdk-macosx/platform-tools
-        export ANDROID_HOME=~/android/android-sdk-macosx
+        export PATH=$PATH:~/Development/adt-bundle-mac-x86_64/sdk/tools
+        export PATH=$PATH:~/Development/adt-bundle-mac-x86_64/sdk/platform-tools
+        export ANDROID_HOME=~/Development/adt-bundle-mac-x86_64/sdk
 
-    You may need to adjust your `.bash_profile` entries if you have used a custom SDK folder location.
+    You will need to adjust the above paths to match the name of your bundle directory.
 
     Make sure to `source ~/.bash_profile` once you've made these changes.
 
@@ -18,15 +18,16 @@
 
         android sdk
 
-    Install these packages:
+    Install the following packages:
 
-    **Tools**: Including both Android SDK and Android SDK Platform tools  
-    **Android 4.1 (API 16)**: SDK Platform (without Google APIs)  
+    *Note: Some of these packages may be pre-installed with the Android SDK and tools bundle.*  
+    **Tools**: Android SDK and Android SDK Platform tools  
+    **Android 4.1.2 (API 16)**: SDK Platform (without Google APIs)  
     **Extras**: Android Support Library  
 
-    Install the Java runtime if you are prompted to do so.  
+    Install the Java runtime if prompted.  
 
-4. Add the following line to `~/.android/adb_usb.ini` for your OUYA console to be recognised:
+4. Add the following line to `~/.android/adb_usb.ini` (create it if it doesn't exist) for your OUYA console to be recognised:
 
         0x2836
 
