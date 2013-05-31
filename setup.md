@@ -51,7 +51,37 @@ Before continuing, make sure your Ouya is powered and **not connected to your co
 
 1. Download and install the [Android SDK and tools](http://developer.android.com/sdk/index.html) to your PC following the included instructions.
 
-2. Open the `Android SDK\extras\google\usb_driver\android_winusb.inf` file.
+2. Launch **SDK Manager.exe** in the ADT Bundle directory. ([detailed instructions](http://developer.android.com/sdk/installing/adding-packages.html)):
+
+    Install the following packages:
+
+    *Note: Some of these packages may be pre-installed with the Android SDK and tools bundle.*  
+    **Tools**: Android SDK and Android SDK Platform tools  
+    **Android 4.1.2 (API 16)**: SDK Platform (without Google APIs)  
+    **Extras**: Android Support Library  
+
+    Install the Java runtime if prompted.  
+    
+3. You will need to add some paths to PATH. Assuming you put the ADT bundle at `C:/Development/adt-bundle-windows-x86_64`,
+
+    Open **My Computer**.  
+    In the left panel, right-click on **Computer** and choose **Properties**.  
+    In the left panel of the new window, choose **Advanced system settings**.  
+    Click the button **Environment Variables...** in the new window.
+    In the first table (User variables), highlight the row for the **Path** variable.  
+    Click the **Edit...** button immediately below the User Variables table.  
+    Append the following to the end of the **Variable value** field:  
+
+        ;C:/Development/adt-bundle-windows-x86_64/sdk/tools;C:/Development/adt-bundle-windows-x86_64/sdk/platform-tools
+        
+    *Note #1: If the Path variable didn't already exist, remove the semi-colon at the beginning.*  
+    *Note #2: You will need to adjust the above paths to match the name of your bundle directory.*  
+    
+    Press OK to save your changes.  
+    Press OK to exit the Environment Variables window.  
+    Press OK to exit the Advanced System Settings window.
+
+2. Open the `ADT Bundle\sdk\extras\google\usb_driver\android_winusb.inf` file.
 
 3. Find the section titled `[Google.NTx86]` and add the following lines:  
 
@@ -59,7 +89,7 @@ Before continuing, make sure your Ouya is powered and **not connected to your co
         %SingleAdbInterface% = USB_Install, USB\VID_2836&PID_0010  
         %CompositeAdbInterface% = USB_Install, USB\VID_2836&PID_0010&MI_01  
 
-4. Connect your Ouya to your PC (Micro USB to USB) then run the following commands:  
+4. Connect your Ouya to your PC (Micro USB to USB), open Command Prompt (Win+R then type **cmd**), and run the following commands
 
         adb kill-server  
         echo 0x2836 >> "%USERPROFILE%\.android\adb_usb.ini"  
@@ -76,7 +106,7 @@ Before continuing, make sure your Ouya is powered and **not connected to your co
 
 9. Choose **Let me pick from a list of device drivers on my computer**
 
-10. Click **Have Disk** and browse to **Android SDK\extras\google\usb_driver**
+10. Click **Have Disk** and browse to **Android Bundle\sdk\extras\google\usb_driver**
 
 11. Choose ADB Composite Device
     *The Google device driver is not signed which prevents automatic from finding it.*
