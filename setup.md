@@ -1,5 +1,14 @@
 ## Setup Instructions for the OUYA ODK
 
+##### Preliminary Instructions
+
+To fully complete the setup, you will need:
+* an Ouya
+* a computer running Mac OS X or Windows
+* a Micro USB to USB cable  
+
+Before continuing, make sure your Ouya is powered and **not connected to your computer**.
+
 ##### Mac OS X
 
 1. Download and install the [Android SDK and tools](http://developer.android.com/sdk/index.html) to your Mac following the included instructions.
@@ -31,7 +40,7 @@
 
         0x2836
 
-5. Then, run the following commands:
+5. Connect your Ouya to your Mac (Micro USB to USB) then run the following commands:
 
         adb kill-server
         adb devices
@@ -40,36 +49,39 @@
 
 ##### Windows
 
-You will need to modify the file `usb_driver\android_winusb.inf` within the Android SDK for your OUYA console to be recognised.
+1. Download and install the [Android SDK and tools](http://developer.android.com/sdk/index.html) to your PC following the included instructions.
 
-You should locate the section with the title `[Google.NTx86]` and add the following lines before connecting the console;
+2. Open the `Android SDK\extras\google\usb_driver\android_winusb.inf` file.
 
-    ;OUYA Console
-    %SingleAdbInterface% = USB_Install, USB\VID_2836&PID_0010
-    %CompositeAdbInterface% = USB_Install, USB\VID_2836&PID_0010&MI_01
+3. Find the section titled `[Google.NTx86]` and add the following lines:  
 
-You should then connect your consoles micro USB port to the USB port of your computer using the appropriate cable. Once it has been connected you should run the following command:
+        ;OUYA Console  
+        %SingleAdbInterface% = USB_Install, USB\VID_2836&PID_0010  
+        %CompositeAdbInterface% = USB_Install, USB\VID_2836&PID_0010&MI_01  
 
-    adb kill-server
-    echo 0x2836 >> "%USERPROFILE%\.android\adb_usb.ini"
-    adb start-server
-    adb devices
+4. Connect your Ouya to your PC (Micro USB to USB) then run the following commands:  
 
-Open the Device Manager (Right-click My Computer->Properties->Device Manager)
+        adb kill-server  
+        echo 0x2836 >> "%USERPROFILE%\.android\adb_usb.ini"  
+        adb start-server  
+        adb devices  
 
-In Device Manager find Portable Devices\OUYA Console, (Right-click and choose Update Driver Software...)
+5. Open the Device Manager (Right-click My Computer->Properties->Device Manager)
 
-Pick the option (Browse my computer for driver software)
+6. In Device Manager, find **Portable Devices\OUYA Console**. 
 
-Pick the option (Let me pick from a list of device drivers on my computer)
+7. Right-click and choose **Update Driver Software...**
 
-Click Have Disk... (Browse to Android SDK\extras\google\usb_driver)
+8. Choose **Browse my computer for driver software** 
 
-Choose ADB Composite Device
+9. Choose **Let me pick from a list of device drivers on my computer**
 
-The Google device driver is not signed which prevents automatic from finding it.
+10. Click **Have Disk** and browse to **Android SDK\extras\google\usb_driver**
 
-Your console should be shown in the list of available devices.
+11. Choose ADB Composite Device
+    *The Google device driver is not signed which prevents automatic from finding it.*
+
+    Your console should be shown in the list of available devices.
 
 ##### Eclipse
 
