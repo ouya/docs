@@ -20,11 +20,11 @@
 
     Install these packages:
 
-        - **Tools**: Including both Android SDK and Android SDK Platform tools
-        - **Android 4.1 (API 16)**: SDK Platform (without Google APIs)
-        - **Extras**: Android Support Library
+    **Tools**: Including both Android SDK and Android SDK Platform tools  
+    **Android 4.1 (API 16)**: SDK Platform (without Google APIs)  
+    **Extras**: Android Support Library  
 
-    Install the Java runtime if you are prompted to do so.
+    Install the Java runtime if you are prompted to do so.  
 
 4. Add the following line to `~/.android/adb_usb.ini` for your OUYA console to be recognised:
 
