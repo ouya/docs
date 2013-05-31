@@ -4,19 +4,19 @@
 
 1. Download and install the [Android SDK and tools](http://developer.android.com/sdk/index.html) to your Mac or PC, following the included instructions.
 
-2. You will need to add some paths to PATH. Assuming you have put the SDK folder in the location `~/android/android-sdk-macosx`, open a terminal and add the following three lines to your `~/.profile` (or `~/.bash_profile`):
+2. You will need to add some paths to PATH. Assuming you have put the SDK folder in the location `~/android/android-sdk-macosx`, open a terminal and add the following three lines to your `~/.bash_profile`:
 
         export PATH=$PATH:~/android/android-sdk-macosx/tools
         export PATH=$PATH:~/android/android-sdk-macosx/platform-tools
         export ANDROID_HOME=~/android/android-sdk-macosx
 
-    You may need to adjust your `.profile` entries if you have used a custom SDK folder location.
+    You may need to adjust your `.bash_profile` entries if you have used a custom SDK folder location.
 
-    Make sure to `source ~/.profile` once you've made these changes.
+    Make sure to `source ~/.bash_profile` once you've made these changes.
 
 3. Launch the Android SDK Manager by running ([detailed instructions](http://developer.android.com/sdk/installing/adding-packages.html)):
 
-    ./android sdk
+        android sdk
 
     Install these packages:
 
