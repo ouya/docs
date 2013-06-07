@@ -1,74 +1,117 @@
 ## Setup Instructions for the OUYA ODK
 
-##### MacOS
+##### Preliminary Instructions
 
-Download and install the [Android SDK and tools](http://developer.android.com/sdk/index.html) to your Mac or PC, following the included instructions.
+To fully complete the setup, you will need:
+* an Ouya
+* a computer running Mac OS X or Windows
+* a Micro USB to USB cable  
 
-Launch the Android SDK Manager by running ([detailed instructions](http://developer.android.com/sdk/installing/adding-packages.html)):
+Before continuing, make sure your Ouya is powered and **not connected to your computer**.
 
-    ./android sdk
+##### Mac OS X
 
-Install these packages:
+1. Download and install the [Android SDK and tools](http://developer.android.com/sdk/index.html) to your Mac following the included instructions.
 
-- **Tools**: Including both Android SDK and Android SDK Platform tools
-- **Android 4.1 (API 16)**: SDK Platform (without Google APIs)
-- **Extras**: Android Support Library
+2. You will need to add some paths to PATH. Assuming you have put the SDK folder in the location `~/Development/adt-bundle-mac-x86_64`, open a terminal and add the following three lines to your `~/.bash_profile`:
 
-Install the Java runtime if you are prompted to do so.
+        export PATH=$PATH:~/Development/adt-bundle-mac-x86_64/sdk/tools
+        export PATH=$PATH:~/Development/adt-bundle-mac-x86_64/sdk/platform-tools
+        export ANDROID_HOME=~/Development/adt-bundle-mac-x86_64/sdk
 
-You will need to add some paths to PATH. Assuming you have put the SDK folder in the location `~/android/android-sdk-macosx`, open a terminal and add the following three lines to your `.bashrc` (or `.zshrc`):
+    You will need to adjust the above paths to match the name of your bundle directory.
 
-    export PATH=$PATH:~/android/android-sdk-macosx/tools
-    export PATH=$PATH:~/android/android-sdk-macosx/platform-tools
-    export ANDROID_HOME=~/android/android-sdk-macosx
+    Make sure to `source ~/.bash_profile` once you've made these changes.
 
-You may need to adjust your `.bashrc` entries if you have used a custom SDK folder location.
+3. Launch the Android SDK Manager by running ([detailed instructions](http://developer.android.com/sdk/installing/adding-packages.html)):
 
-Make sure to `source ~/.bashrc` once you've made these changes.
+        android sdk
 
-Add the following line to `~/.android/adb_usb.ini` for your OUYA console to be recognised:
+    Install the following packages:
 
-    0x2836
+    *Note: Some of these packages may be pre-installed with the Android SDK and tools bundle.*  
+    **Tools**: Android SDK and Android SDK Platform tools  
+    **Android 4.1.2 (API 16)**: SDK Platform (without Google APIs)  
+    **Extras**: Android Support Library  
 
-Then, run the following commands:
+    Install the Java runtime if prompted.  
 
-    adb kill-server
-    adb devices
+4. Add the following line to `~/.android/adb_usb.ini` (create it if it doesn't exist) for your OUYA console to be recognised:
 
-Your console should be shown in the list of available devices.
+        0x2836
+
+5. Connect your Ouya to your Mac (Micro USB to USB) then run the following commands:
+
+        adb kill-server
+        adb devices
+
+    Your console should be shown in the list of available devices.
 
 ##### Windows
 
-You will need to modify the file `usb_driver\android_winusb.inf` within the Android SDK for your OUYA console to be recognised.
+1. Download and install the [Android SDK and tools](http://developer.android.com/sdk/index.html) to your PC following the included instructions.
 
-You should locate the section with the title `[Google.NTx86]` and add the following lines before connecting the console;
+2. Launch **SDK Manager.exe** in the ADT Bundle directory. ([detailed instructions](http://developer.android.com/sdk/installing/adding-packages.html)):
 
-    ;OUYA Console
-    %SingleAdbInterface% = USB_Install, USB\VID_2836&PID_0010
-    %CompositeAdbInterface% = USB_Install, USB\VID_2836&PID_0010&MI_01
+    Install the following packages:
 
-You should then connect your consoles micro USB port to the USB port of your computer using the appropriate cable. Once it has been connected you should run the following command:
+    *Note: Some of these packages may be pre-installed with the Android SDK and tools bundle.*  
+    **Tools**: Android SDK and Android SDK Platform tools  
+    **Android 4.1.2 (API 16)**: SDK Platform (without Google APIs)  
+    **Extras**: Android Support Library  
 
-    adb kill-server
-    echo 0x2836 >> "%USERPROFILE%\.android\adb_usb.ini"
-    adb start-server
-    adb devices
+    Install the Java runtime if prompted.  
+    
+3. You will need to add some paths to PATH. Assuming you put the ADT bundle at `C:/Development/adt-bundle-windows-x86_64`,
 
-Open the Device Manager (Right-click My Computer->Properties->Device Manager)
+    Open **My Computer**.  
+    In the left panel, right-click on **Computer** and choose **Properties**.  
+    In the left panel of the new window, choose **Advanced system settings**.  
+    Click the button **Environment Variables...** in the new window.
+    In the first table (User variables), highlight the row for the **Path** variable.  
+    Click the **Edit...** button immediately below the User Variables table.  
+    Append the following to the end of the **Variable value** field:  
 
-In Device Manager find Portable Devices\OUYA Console, (Right-click and choose Update Driver Software...)
+        ;C:/Development/adt-bundle-windows-x86_64/sdk/tools;C:/Development/adt-bundle-windows-x86_64/sdk/platform-tools
+        
+    *Note #1: If the Path variable didn't already exist, remove the semi-colon at the beginning.*  
+    *Note #2: You will need to adjust the above paths to match the name of your bundle directory.*  
+    
+    Press OK to save your changes.  
+    Press OK to exit the Environment Variables window.  
+    Press OK to exit the Advanced System Settings window.
 
-Pick the option (Browse my computer for driver software)
+2. Open the `ADT Bundle\sdk\extras\google\usb_driver\android_winusb.inf` file.
 
-Pick the option (Let me pick from a list of device drivers on my computer)
+3. Find the section titled `[Google.NTx86]` and add the following lines:  
 
-Click Have Disk... (Browse to Android SDK\extras\google\usb_driver)
+        ;OUYA Console  
+        %SingleAdbInterface% = USB_Install, USB\VID_2836&PID_0010  
+        %CompositeAdbInterface% = USB_Install, USB\VID_2836&PID_0010&MI_01  
 
-Choose ADB Composite Device
+4. Connect your Ouya to your PC (Micro USB to USB), open Command Prompt (Win+R then type **cmd**), and run the following commands
 
-The Google device driver is not signed which prevents automatic from finding it.
+        adb kill-server  
+        echo 0x2836 >> "%USERPROFILE%\.android\adb_usb.ini"  
+        adb start-server  
+        adb devices  
 
-Your console should be shown in the list of available devices.
+5. Open the Device Manager (Right-click My Computer->Properties->Device Manager)
+
+6. In Device Manager, find **Portable Devices\OUYA Console**. 
+
+7. Right-click and choose **Update Driver Software...**
+
+8. Choose **Browse my computer for driver software** 
+
+9. Choose **Let me pick from a list of device drivers on my computer**
+
+10. Click **Have Disk** and browse to **Android Bundle\sdk\extras\google\usb_driver**
+
+11. Choose ADB Composite Device
+    *The Google device driver is not signed which prevents automatic from finding it.*
+
+    Your console should be shown in the list of available devices.
 
 ##### Eclipse
 
