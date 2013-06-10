@@ -12,6 +12,7 @@ Examples are included at the base GIT path.
 ### Resources
 
 Corona SDK - http://coronalabs.com/products/corona-sdk/<br/>
+Corona Video Tutorials - http://coronalabs.com/resources/videos/<br/>
 
 ### Building
 
