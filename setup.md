@@ -1,5 +1,63 @@
 ## Setup Instructions for the OUYA ODK
 
+### Guide
+
+<table border=1>
+
+ <tr>
+
+ <td>Windows Driver Setup<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=454JFvFTxww" target="_blank">
+<img src="http://img.youtube.com/vi/454JFvFTxww/0.jpg" alt="Windows Driver Setup" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td>Mac Driver Setup<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=5LSBiNfMq8A" target="_blank">
+<img src="http://img.youtube.com/vi/5LSBiNfMq8A/0.jpg" alt="Mac Driver Setup" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+
+ <td>ElGato Capture Setup<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=-Igb4IcpbDY" target="_blank">
+<img src="http://img.youtube.com/vi/-Igb4IcpbDY/0.jpg" alt="ElGato Capture Setup" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td>Mac Overscan Setup<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=fwd2a26LOys" target="_blank">
+<img src="http://img.youtube.com/vi/fwd2a26LOys/0.jpg" alt="Mac Overscan Setup" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+
+ <td>Video Editing in MS Movie<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=HI_ekZKfrd4" target="_blank">
+<img src="http://img.youtube.com/vi/HI_ekZKfrd4/0.jpg" alt="Video Editing in MS Movie" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td>Add Screenshots to Your Trailer<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=l8JRYvy-Gtc" target="_blank">
+<img src="http://img.youtube.com/vi/l8JRYvy-Gtc/0.jpg" alt="Add Screenshots to Your Trailer" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ </tr>
+ 
+</table>
+
+### Downloads
+
+Android SDK Rev 21 on Windows - http://dl.google.com/android/android-sdk_r21-windows.zip
+
+Android SDK Rev 21 on Mac - http://dl.google.com/android/android-sdk_r21-macosx.zip
+
+ElGato Capture Software - http://www.elgato.com/gaming/game-capture-hd/support/update
+
+### Document
+
 ##### Preliminary Instructions
 
 To fully complete the setup, you will need:
