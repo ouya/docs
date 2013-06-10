@@ -26,14 +26,14 @@ Several examples are included in the ouya-unity-plugin package.
 
 ### Resources
 
-MonoGame Download - http://monogame.codeplex.com/
-ODK Bindings for C# - https://github.com/slygamer/ouya-csharp
-Mono for Android - http://xamarin.com/monoforandroid
-Installation Instructions - http://docs.xamarin.com/guides/android/getting_started/installation
-MonoGame GIT for latest tools - https://github.com/mono/MonoGame
-MonoGame OUYA Examples - https://github.com/ouya/ouya-sdk-examples
-MonoGame Content Builder - https://github.com/mono/MonoGame/wiki/MonoGame-Content-Builder
-Docs and Tutorials - http://www.monogame.net/documentation
+MonoGame Download - http://monogame.codeplex.com/<br/>
+ODK Bindings for C# - https://github.com/slygamer/ouya-csharp<br/>
+Mono for Android - http://xamarin.com/monoforandroid<br/>
+Installation Instructions - http://docs.xamarin.com/guides/android/getting_started/installation<br/>
+MonoGame GIT for latest tools - https://github.com/mono/MonoGame<br/>
+MonoGame OUYA Examples - https://github.com/ouya/ouya-sdk-examples<br/>
+MonoGame Content Builder - https://github.com/mono/MonoGame/wiki/MonoGame-Content-Builder<br/>
+Docs and Tutorials - http://www.monogame.net/documentation<br/>
 
 ### Building
 
@@ -46,4 +46,4 @@ In the new project remove the DLL reference to Ouya.Console.Api.dll and
 
 Add a reference to the Ouya.Console.dll that was built in the previous steps.
 
-Ceate a content project with XNA and import into the MonoGame project to support loading content types like PNG files.
+Use the MonoGame Content Build MGCB to convert assets to .xnb content.
