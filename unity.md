@@ -18,10 +18,12 @@ Welcome to the OUYA Unity developers club. This document will provide an overvie
 ### Forums
 The forums are a great place for support and to get answers for common questions. There are several stickied posts in the [Unity section](http://forums.ouya.tv/categories/unity-on-ouya). Be sure to watch out for updates to the SDK in the [minor updates thread](http://forums.ouya.tv/discussion/197/sticky-ouya-unity-sdk-minor-updates#latest). You can [subscribe](https://hashbanggamesportal.ontimenow.com/) for email updates. There are [40 training videos](http://forums.ouya.tv/discussion/200/sticky-ouya-unity-package-videos/p1) and growing. There are also [weekly hangouts](http://forums.ouya.tv/discussion/710/g-hangout-scheduling) to field support questions.
 
-### Import Package
-Part of receiving this document, you received OuyaSDK.unitypackage which can be imported into the Unity IDE on Mac and Windows. Start with a New Project, and Choose Assets->Import Package->Custom Package from the menu bar.  Browse to the OuyaSDK.unitypackage and import all files. The original package has been split into Core and Examples. Core contains the OUYA panel and all the important code that you need for building on the OUYA. The examples utilize NGUI and have an optional NGUI distribution package that you can import if you don’t already have NGUI.
+### Packaging
+Open the checkout directory as the Unity base folder. From the Unity IDE menu use the OUYA menu to export the Core, Examples, and StarterKit individual packages. This makes it easier to update GIT and then bring in the Core changes directly into your game. The export package should open explorer/finder in the base folder where you'll find the exported package. And then import the desired package into your project.
 
 ![Import Package](https://d31pno3ktcq63f.cloudfront.net/assets/unity/01_ImportPackage.jpg)
+
+You can also import packages to the focused Unity window with a double-click on the unitypackage file.
 
 ### Imported Files
 You will find the following structure imported into your Assets folder.
