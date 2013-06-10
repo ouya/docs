@@ -114,6 +114,15 @@ Sticks - A tool to plot a graph of the left and right stick for all the connecte
 Unity Input - The newest input example which runs with less latency and uses the Unity Input API.<br/>
 Camera - Access supported-connected webcams<br/>
 
+###Recommended Tools
+MonoDevelop - The default code editor<br/>
+Eclipse - Useful to get intellisense when editing Java files<br/>
+Intellij - An alternative Java editor<br/>
+UnIDE - Unity extension allows in-editor script editing<br/>
+Visual Studio - Best editor for C#<br/>
+Resharper - Visual Studio extension for faster script editing and code refactoring<br/>
+Android SDK - Make sure you upgrade “Android SDK Tools” only to Rev 21 of the Android Tools per - <a target=_blank href="http://forum.unity3d.com/threads/176737-unknown-error-when-building-simple-scene/page2">[this post]</a>.<br/>
+
 ## Full Document
 
 ### Authors
