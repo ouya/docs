@@ -1,13 +1,105 @@
 ## Unity Game Engine
 
-### Audience
-The ouya-unity-plugin is targeted towards Unity developers intending to publish to the OUYA platform.
-
 ### Authors
 Tim Graupmann (tim@tagenigma.com)
 
 ### Downloads
 Open source, clone https://github.com/ouya/ouya-unity-plugin directly from public GIT.
+
+## Guide
+
+### ouya-unity-plugin Examples
+
+Several examples are included in the ouya-unity-plugin package.
+
+<table border=1>
+
+ <tr>
+
+ <td>Get the latest from GitHUB<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=plqEuuilv6k" target="_blank">
+<img src="http://img.youtube.com/vi/plqEuuilv6k/0.jpg" alt="OUYA Guitar Example" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td>Intro to OUYA Unity Package<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=c5c9tEqpHsw" target="_blank">
+<img src="http://img.youtube.com/vi/c5c9tEqpHsw/0.jpg" alt="OUYA Guitar Example" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+
+ <td>OUYA Unity SDK - Intro on dependencies<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=b-SiqzVhdFM" target="_blank">
+<img src="http://img.youtube.com/vi/b-SiqzVhdFM/0.jpg" alt="OUYA Guitar Example" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td>Key Store Setup<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=IVk7Cic2lpg" target="_blank">
+<img src="http://img.youtube.com/vi/IVk7Cic2lpg/0.jpg" alt="OUYA Guitar Example" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ </tr>
+ 
+  <tr>
+
+ <td>Subscribe to Menu Button and Menu Appearing<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=4ghKgKZqSG0" target="_blank">
+<img src="http://img.youtube.com/vi/4ghKgKZqSG0/0.jpg" alt="OUYA Guitar Example" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td>In-App-Purchase Setup - ShowProducts Example<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=lJjGH_KIE7o" target="_blank">
+<img src="http://img.youtube.com/vi/lJjGH_KIE7o/0.jpg" alt="OUYA Guitar Example" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ </tr>
+ 
+  <tr>
+
+ <td>ExampIe ShowUnityInput<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=YqsumqX4REU" target="_blank">
+<img src="http://img.youtube.com/vi/YqsumqX4REU/0.jpg" alt="OUYA Guitar Example" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td></td>
+ 
+ </tr>
+
+ <tr>
+
+ <td>Show Guitar<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=RNF34XIDwGY" target="_blank">
+<img src="http://img.youtube.com/vi/RNF34XIDwGY/0.jpg" alt="OUYA Guitar Example" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td>Show Drumkit<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=L4pO73cK22Y" target="_blank">
+<img src="http://img.youtube.com/vi/L4pO73cK22Y/0.jpg" alt="OUYA Guitar Example" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ </tr>
+
+</table>
+
+Starter Kit - A multiple scene project example, which has an initial setup scene, a splash scene, along with a main menu scene, and a game scene. The sample setup is everything you need to start developing a project for the OUYA.<br/>
+Ground Raycast - A simple example of raycasting to a ground plane using the camera projection.<br/>
+Multiple Controllers - Example shows controller scripts attached to individual players for simultaneous controller games.<br/>
+Set Resolution - Change the resolution, not only with the Unity API, but pass the call to Java to update the view dimensions.<br/>
+Controller - Legacy example uses a physical controller to manipulate a virtual controller.<br/>
+Mesh Performance - Compare frames per second speed when manipulating polygon count and overdraw.<br/>
+NDK - Native code can often run faster and then example shows example interfaces to have C# call into a C native plugin.<br/>
+Products - In-app-purchase example for getting products, requesting purchases, and getting receipts.<br/>
+Sounds - Play various imported sounds<br/>
+Sticks - A tool to plot a graph of the left and right stick for all the connected bluetooth controllers.<br/>
+Unity Input - The newest input example which runs with less latency and uses the Unity Input API.<br/>
+Camera - Access supported-connected webcams<br/>
+
+## Full Document
+
+### Audience
+The ouya-unity-plugin is targeted towards Unity developers intending to publish to the OUYA platform.
 
 ### Supported Platforms
 The OUYA SDK Unity Package supports publishing from Mac and Windows.
