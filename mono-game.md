@@ -7,7 +7,7 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/MonoGam
 
 ### Examples
 
-Several examples are included in the ouya-unity-plugin package.
+Examples are included at the base GIT path.
 
 <table border=1>
 
@@ -37,7 +37,7 @@ Docs and Tutorials - http://www.monogame.net/documentation<br/>
 
 ### Building
 
-Open and build ODK Bindings for C# in Xamarin (ouya-csharp/Ouya.Console.Api.csproj)
+Open and build ODK Bindings for C# in Xamarin (ouya-csharp/Ouya.Console.Api.csproj)<br/>
 Save the Ouya.Console.Api.dll from the release folder for the next step.
 
 After installing Mono for Android it adds templates to Visual Studio. So all you need to do is from Visual Studio create a New Project and pick the option MonoGame for OUYA.
