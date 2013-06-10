@@ -1,10 +1,13 @@
 ## Unity Game Engine
 
 ### Audience
-The OUYA SDK Unity Package is targeted towards Unity developers intending to publish to the OUYA platform and allows testing on Android devices.
+The ouya-unity-plugin is targeted towards Unity developers intending to publish to the OUYA platform.
 
 ### Authors
 Tim Graupmann (tim@tagenigma.com)
+
+### Downloads
+Open source, clone https://github.com/ouya/ouya-unity-plugin directly from public GIT.
 
 ### Supported Platforms
 The OUYA SDK Unity Package supports publishing from Mac and Windows.
