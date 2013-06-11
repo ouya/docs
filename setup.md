@@ -40,8 +40,8 @@
 
 ### Downloads
 
-Android SDK Rev 21 on Windows - http://dl.google.com/android/android-sdk_r21-windows.zip
-
+Some game engines <a target=_blank href="http://forum.unity3d.com/threads/176737-unknown-error-when-building-simple-scene">[post]</a> still depend on an old version of the Android SDK Tools, so here is a direct link to the older version. In most cases you can install the latest version of the Android SDK. These are convienence links.<br/>
+Android SDK Rev 21 on Windows - http://dl.google.com/android/android-sdk_r21-windows.zip<br/>
 Android SDK Rev 21 on Mac - http://dl.google.com/android/android-sdk_r21-macosx.zip
 
 ElGato Capture Software - http://www.elgato.com/gaming/game-capture-hd/support/update
