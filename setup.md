@@ -2,37 +2,31 @@
 
 ### Guide
 
-<table border=1>
+<table border="0">
 
  <tr>
 
  <td>Windows Driver Setup<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=454JFvFTxww" target="_blank">
-<img src="http://img.youtube.com/vi/454JFvFTxww/0.jpg" alt="Windows Driver Setup" width="240" height="180" border="10" /></a>
+<img src="https://img.youtube.com/vi/454JFvFTxww/0.jpg" alt="Windows Driver Setup" width="240" height="180" border="10" /></a>
  </td>
  
   <td>Mac Driver Setup<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=5LSBiNfMq8A" target="_blank">
-<img src="http://img.youtube.com/vi/5LSBiNfMq8A/0.jpg" alt="Mac Driver Setup" width="240" height="180" border="10" /></a>
+<img src="https://img.youtube.com/vi/5LSBiNfMq8A/0.jpg" alt="Mac Driver Setup" width="240" height="180" border="10" /></a>
  </td>
  
  </tr>
  
  <tr>
-
- <td>ElGato Capture Setup<br/>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=-Igb4IcpbDY" target="_blank">
-<img src="http://img.youtube.com/vi/-Igb4IcpbDY/0.jpg" alt="ElGato Capture Setup" width="240" height="180" border="10" /></a>
- </td>
  
   <td>Mac Overscan Setup<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=fwd2a26LOys" target="_blank">
-<img src="http://img.youtube.com/vi/fwd2a26LOys/0.jpg" alt="Mac Overscan Setup" width="240" height="180" border="10" /></a>
+<img src="https://img.youtube.com/vi/fwd2a26LOys/0.jpg" alt="Mac Overscan Setup" width="240" height="180" border="10" /></a>
  </td>
  
  </tr>
- 
- <tr>
+</table>
 
 - **Tools**: Including both Android SDK and Android SDK Platform tools
 - **Android 4.1 (API 16)**: SDK Platform (without Google APIs)
@@ -41,10 +35,10 @@
 ### Downloads
 
 Some game engines <a target=_blank href="http://forum.unity3d.com/threads/176737-unknown-error-when-building-simple-scene">[post]</a> still depend on an old version of the Android SDK Tools, so here is a direct link to the older version. In most cases you can install the latest version of the Android SDK. These are convienence links.<br/>
-Android SDK Rev 21 on Windows - http://dl.google.com/android/android-sdk_r21-windows.zip<br/>
-Android SDK Rev 21 on Mac - http://dl.google.com/android/android-sdk_r21-macosx.zip
 
-ElGato Capture Software - http://www.elgato.com/gaming/game-capture-hd/support/update
+**Android SDK Rev 21**
+[Windows](http://dl.google.com/android/android-sdk_r21-windows.zip)
+[Mac](http://dl.google.com/android/android-sdk_r21-macosx.zip)
 
 ### Document
 
@@ -293,3 +287,12 @@ For OpenGL-based games, we recommend creating a render buffer of 1920x1080 (i.e.
 Other Android devices may handle resolutions differently, but our store QA process will always test on an OUYA, so it is advisable to test any applications on an OUYA before submitting them to the OUYA store.
 
 For games using the Android UI Framework, the Android documentation from Google at [developer.android.com](http://developer.android.com)  provides some useful tips when working with 1080p displays.
+
+##### Video Capture
+
+For capturing video of your game, we recommend using [Elgato](http://www.elgato.com/gaming/game-capture-hd/support/update).
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=-Igb4IcpbDY" target="_blank">
+  <img src="https://img.youtube.com/vi/-Igb4IcpbDY/0.jpg" alt="ElGato Capture Setup" width="240" height="180" border="10" />
+</a>
+
