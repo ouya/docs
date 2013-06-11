@@ -1,60 +1,165 @@
 ## Setup Instructions for the OUYA ODK
 
-##### MacOS
+### Guide
 
-Download and install the [Android SDK and tools](http://developer.android.com/sdk/index.html) to your Mac or PC, following the included instructions.
+<table border=1>
 
-Launch the Android SDK Manager by running ([detailed instructions](http://developer.android.com/sdk/installing/adding-packages.html)):
+ <tr>
 
-    ./android sdk
+ <td>Windows Driver Setup<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=454JFvFTxww" target="_blank">
+<img src="http://img.youtube.com/vi/454JFvFTxww/0.jpg" alt="Windows Driver Setup" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td>Mac Driver Setup<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=5LSBiNfMq8A" target="_blank">
+<img src="http://img.youtube.com/vi/5LSBiNfMq8A/0.jpg" alt="Mac Driver Setup" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ </tr>
+ 
+ <tr>
 
-Install these packages:
+ <td>ElGato Capture Setup<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=-Igb4IcpbDY" target="_blank">
+<img src="http://img.youtube.com/vi/-Igb4IcpbDY/0.jpg" alt="ElGato Capture Setup" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td>Mac Overscan Setup<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=fwd2a26LOys" target="_blank">
+<img src="http://img.youtube.com/vi/fwd2a26LOys/0.jpg" alt="Mac Overscan Setup" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ </tr>
+ 
+ <tr>
 
 - **Tools**: Including both Android SDK and Android SDK Platform tools
 - **Android 4.1 (API 16)**: SDK Platform (without Google APIs)
 - **Extras**: Android Support Library
 
-Install the Java runtime if you are prompted to do so.
+### Downloads
 
-You will need to add some paths to PATH. Assuming you have put the SDK folder in the location `~/android/android-sdk-macosx`, open a terminal and add the following three lines to your `.bashrc` (or `.zshrc`):
+Android SDK Rev 21 on Windows - http://dl.google.com/android/android-sdk_r21-windows.zip
 
-    export PATH=$PATH:~/android/android-sdk-macosx/tools
-    export PATH=$PATH:~/android/android-sdk-macosx/platform-tools
-    export ANDROID_HOME=~/android/android-sdk-macosx
+Android SDK Rev 21 on Mac - http://dl.google.com/android/android-sdk_r21-macosx.zip
 
-You may need to adjust your `.bashrc` entries if you have used a custom SDK folder location.
+ElGato Capture Software - http://www.elgato.com/gaming/game-capture-hd/support/update
 
-Make sure to `source ~/.bashrc` once you've made these changes.
+### Document
 
-Add the following line to `~/.android/adb_usb.ini` for your OUYA console to be recognised:
+##### Preliminary Instructions
 
-    0x2836
+To fully complete the setup, you will need:
+* an Ouya
+* a computer running Mac OS X or Windows
+* a Micro USB to USB cable  
 
-Then, run the following commands:
+Before continuing, make sure your Ouya is powered and **not connected to your computer**.
 
-    adb kill-server
-    adb devices
+##### Mac OS X
 
-Your console should be shown in the list of available devices.
+1. Download and install the [Android SDK and tools](http://developer.android.com/sdk/index.html) to your Mac following the included instructions.
+
+2. You will need to add some paths to PATH. Assuming you have put the SDK folder in the location `~/Development/adt-bundle-mac-x86_64`, open a terminal and add the following three lines to your `~/.bash_profile`:
+
+        export PATH=$PATH:~/Development/adt-bundle-mac-x86_64/sdk/tools
+        export PATH=$PATH:~/Development/adt-bundle-mac-x86_64/sdk/platform-tools
+        export ANDROID_HOME=~/Development/adt-bundle-mac-x86_64/sdk
+
+    You will need to adjust the above paths to match the name of your bundle directory.
+
+    Make sure to `source ~/.bash_profile` once you've made these changes.
+
+3. Launch the Android SDK Manager by running ([detailed instructions](http://developer.android.com/sdk/installing/adding-packages.html)):
+
+        android sdk
+
+    Install the following packages:
+
+    *Note: Some of these packages may be pre-installed with the Android SDK and tools bundle.*  
+    **Tools**: Android SDK and Android SDK Platform tools  
+    **Android 4.1.2 (API 16)**: SDK Platform (without Google APIs)  
+    **Extras**: Android Support Library  
+
+    Install the Java runtime if prompted.  
+
+4. Add the following line to `~/.android/adb_usb.ini` (create it if it doesn't exist) for your OUYA console to be recognised:
+
+        0x2836
+
+5. Connect your Ouya to your Mac (Micro USB to USB) then run the following commands:
+
+        adb kill-server
+        adb devices
+
+    Your console should be shown in the list of available devices.
 
 ##### Windows
 
-You will need to modify the file `usb_driver\android_winusb.inf` within the Android SDK for your OUYA console to be recognised.
+1. Download and install the [Android SDK and tools](http://developer.android.com/sdk/index.html) to your PC following the included instructions.
 
-You should locate the section with the title `[Google.NTx86]` and add the following lines before connecting the console;
+2. Launch **SDK Manager.exe** in the ADT Bundle directory. ([detailed instructions](http://developer.android.com/sdk/installing/adding-packages.html)):
 
-    ;OUYA Console
-    %SingleAdbInterface% = USB_Install, USB\VID_2836&PID_0010
-    %CompositeAdbInterface% = USB_Install, USB\VID_2836&PID_0010&MI_01
+    Install the following packages:
 
-You should then connect your consoles micro USB port to the USB port of your computer using the appropriate cable. Once it has been connected you should run the following command:
+    *Note: Some of these packages may be pre-installed with the Android SDK and tools bundle.*  
+    **Tools**: Android SDK and Android SDK Platform tools  
+    **Android 4.1.2 (API 16)**: SDK Platform (without Google APIs)  
+    **Extras**: Android Support Library  
 
-    adb kill-server
-    echo 0x2836 >> "%USERPROFILE%\.android\adb_usb.ini"
-    adb start-server
-    adb devices
+    Install the Java runtime if prompted.  
+    
+3. You will need to add some paths to PATH. Assuming you put the ADT bundle at `C:/Development/adt-bundle-windows-x86_64`,
 
-Your console should be shown in the list of available devices.
+    Open **My Computer**.  
+    In the left panel, right-click on **Computer** and choose **Properties**.  
+    In the left panel of the new window, choose **Advanced system settings**.  
+    Click the button **Environment Variables...** in the new window.
+    In the first table (User variables), highlight the row for the **Path** variable.  
+    Click the **Edit...** button immediately below the User Variables table.  
+    Append the following to the end of the **Variable value** field:  
+
+        ;C:/Development/adt-bundle-windows-x86_64/sdk/tools;C:/Development/adt-bundle-windows-x86_64/sdk/platform-tools
+        
+    *Note #1: If the Path variable didn't already exist, remove the semi-colon at the beginning.*  
+    *Note #2: You will need to adjust the above paths to match the name of your bundle directory.*  
+    
+    Press OK to save your changes.  
+    Press OK to exit the Environment Variables window.  
+    Press OK to exit the Advanced System Settings window.
+
+2. Open the `ADT Bundle\sdk\extras\google\usb_driver\android_winusb.inf` file.
+
+3. Find the section titled `[Google.NTx86]` and add the following lines:  
+
+        ;OUYA Console  
+        %SingleAdbInterface% = USB_Install, USB\VID_2836&PID_0010  
+        %CompositeAdbInterface% = USB_Install, USB\VID_2836&PID_0010&MI_01  
+
+4. Connect your Ouya to your PC (Micro USB to USB), open Command Prompt (Win+R then type **cmd**), and run the following commands
+
+        adb kill-server  
+        echo 0x2836 >> "%USERPROFILE%\.android\adb_usb.ini"  
+        adb start-server  
+        adb devices  
+
+5. Open the Device Manager (Right-click My Computer->Properties->Device Manager)
+
+6. In Device Manager, find **Portable Devices\OUYA Console**. 
+
+7. Right-click and choose **Update Driver Software...**
+
+8. Choose **Browse my computer for driver software** 
+
+9. Choose **Let me pick from a list of device drivers on my computer**
+
+10. Click **Have Disk** and browse to **Android Bundle\sdk\extras\google\usb_driver**
+
+11. Choose ADB Composite Device
+    *The Google device driver is not signed which prevents automatic from finding it.*
+
+    Your console should be shown in the list of available devices.
 
 ##### Eclipse
 
@@ -163,7 +268,7 @@ If using the emulator, configure the Android Virtual Device (AVD) as follows:
 - **CPU/ABI**: Intel Atom x86
 - **Device RAM size**: 1024
 
-**Note**: If the **OK** button is disabled, you may need to install a system image (such as the Intel x86 Atom System Image) for your AVD. You can install it via the Android SDK Manager.
+**Note**: If the **OK** button is disabled, you may need to install a system image for your AVD. The Intel x86 Atom System Image and the Intel x86 Emulator Accelerator (HAXM) are recommended. You can install it via the Android SDK Manager.
 
 We recommend the use of the Intel Atom x86 CPU/ABI and Intel's HAXM extensions to ensure the emulator performance is adequate for game development. If you are developing low-level code, you should note that the device is ARM based. Therefore, you should develop for the ARM architecture and use an emulator AVD with the CPU/ABI set to an ARM architecture.
 
@@ -175,7 +280,7 @@ The OUYA console does not have hardware buttons for back or menu, so your games 
 
 If using a standard Android tablet, we recommend using a tablet with a usable display resolution as close as possible to 1920x1080.
 
-**Note**: The Android navigation bar will consume some of the screen on standard tablets, which will not be the case for the OUYA console. It is unlikely a tablet will give you a perfect replica of a running OUYA, but it will be enough to get most of your code running. You may still need to perform UI tweaks to use the 1920x1080 display buffer made available to apps by default.
+**Note**: The Android navigation bar will consume some of the screen on standard tablets. An OUYA does not show a navigation bar on screen, so it is unlikely a tablet will give you a perfect replica of a running OUYA, but it will be enough to get most of your code running. You may still need to perform UI tweaks to use the 1920x1080 display buffer made available to apps by default on an OUYA.
 
 The OUYA game controller combines a standard controller (two joysticks, a D-Pad, four game buttons, two shoulder buttons, and two triggers) with a touchpad. For testing, we recommend using the Xbox 360 wired USB controller combined with a mouse or touchpad for testing joystick and game button interaction.
 
@@ -187,4 +292,4 @@ For OpenGL-based games, we recommend creating a render buffer of 1920x1080 (i.e.
 
 Other Android devices may handle resolutions differently, but our store QA process will always test on an OUYA, so it is advisable to test any applications on an OUYA before submitting them to the OUYA store.
 
-For games using the Android UI Framework, the Android documentation from Google [developer.android.com](http://developer.android.com)  provides some useful tips when working with 1080p displays.
+For games using the Android UI Framework, the Android documentation from Google at [developer.android.com](http://developer.android.com)  provides some useful tips when working with 1080p displays.
