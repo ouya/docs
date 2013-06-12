@@ -248,4 +248,4 @@ For games using the Android UI Framework, the Android documentation from Google 
 
 ##### Video Capture
 
-For capturing video of your game, we recommend using [Elgato](http://www.elgato.com/gaming/game-capture-hd/support/update). Here is a [setup video](http://www.youtube.com/watch?v=-Igb4IcpbDY).
+For capturing video of your game, we recommend using [Elgato](http://www.elgato.com/gaming/game-capture-hd/support/update). Here is a setup and tutorial [video](http://www.youtube.com/watch?v=-Igb4IcpbDY).
