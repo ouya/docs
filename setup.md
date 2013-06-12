@@ -9,9 +9,7 @@ To fully complete the setup, you will need:
 
 Before continuing, make sure your OUYA is powered and **not connected to your computer**.
 
-##### Known Issues
-
-* Unity Game Engine requires Android SDK r21. There is [incompatibility bug](http://forum.unity3d.com/threads/176737-unknown-error-when-building-simple-scene) with using r22.
+**Known Issue**: Unity Game Engine requires Android SDK r21. There is [issue](http://forum.unity3d.com/threads/176737-unknown-error-when-building-simple-scene) with using r22.
 
 ##### Mac OS X
 
@@ -253,7 +251,3 @@ For games using the Android UI Framework, the Android documentation from Google 
 ##### Video Capture
 
 For capturing video of your game, we recommend using [Elgato](http://www.elgato.com/gaming/game-capture-hd/support/update). Here is a setup and tutorial [video](http://www.youtube.com/watch?v=-Igb4IcpbDY).
-
-##### Unity Game Engine Setup
-
-
