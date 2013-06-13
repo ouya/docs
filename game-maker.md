@@ -8,6 +8,10 @@ Game Maker - http://yoyogames.com/gamemaker/download
 
 ## Guide
 
+### Video Tutorials
+
+<b>GameMaker Studio Tutorials</b> - http://www.youtube.com/playlist?list=PLUYhFCYb2qeOBR9AVERSimlZEN-dXCoOW
+
 ### Examples
 
 Examples are included at the base GIT path.
