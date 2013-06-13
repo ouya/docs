@@ -16,6 +16,8 @@ Game Maker - http://yoyogames.com/gamemaker/download
 
 Examples are included at the base GIT path.
 
+<b>Virtual Controller</b> - Maps OUYA controllers to multiple virtual controllers
+
 ### Resources
 
 Game Maker Wiki - http://wiki.yoyogames.com/index.php
