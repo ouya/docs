@@ -16,7 +16,7 @@ Game Maker - http://yoyogames.com/gamemaker/download
 
 Examples are included at the base GIT path.
 
-<b>Virtual Controller</b> - Maps OUYA controllers to multiple virtual controllers
+<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/blob/master/GameMaker/VirtualController.gmz"><b>Virtual Controller</b></a> - Maps OUYA controllers to multiple virtual controllers
 
 ### Resources
 
