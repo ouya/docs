@@ -51,6 +51,8 @@ Before continuing, make sure your OUYA is powered and **not connected to your co
 
 ##### Windows
 
+*Windows 8 users:* You will need to disable driver signature verification to install the unsigned Android driver. This involves restarting your PC so do this before you start. See [here](windows8.md) for step-by-step instructions.
+
 1. Download and install the [Android SDK and tools](http://developer.android.com/sdk/index.html) to your PC following the included instructions.
 
 2. Launch **SDK Manager.exe** in the ADT Bundle directory. ([detailed instructions](http://developer.android.com/sdk/installing/adding-packages.html)):
@@ -83,35 +85,39 @@ Before continuing, make sure your OUYA is powered and **not connected to your co
     Press OK to exit the Environment Variables window.  
     Press OK to exit the Advanced System Settings window.
 
-2. Open the `ADT Bundle\sdk\extras\google\usb_driver\android_winusb.inf` file.
+4. Open the `ADT Bundle\sdk\extras\google\usb_driver\android_winusb.inf` file.
 
-3. Find the section titled `[Google.NTx86]` and add the following lines:  
+5. Add the following lines to the `[Google.NTx86]` and `[Google.NTamd64]` sections:  
 
         ;OUYA Console  
         %SingleAdbInterface% = USB_Install, USB\VID_2836&PID_0010  
         %CompositeAdbInterface% = USB_Install, USB\VID_2836&PID_0010&MI_01  
 
-4. Connect your Ouya to your PC (Micro USB to USB), open Command Prompt (Win+R then type **cmd**), and run the following commands
+6. Connect your Ouya to your PC (Micro USB to USB), open Command Prompt (Win+R then type **cmd**), and run the following commands
 
         adb kill-server  
         echo 0x2836 >> "%USERPROFILE%\.android\adb_usb.ini"  
         adb start-server  
         adb devices  
 
-5. Open the Device Manager (Right-click My Computer->Properties->Device Manager)
+7. Open the Device Manager (Right-click My Computer->Properties->Device Manager)
 
-6. In Device Manager, find **Portable Devices\OUYA Console**. 
+8. In Device Manager, find **Portable Devices\OUYA Console**. 
 
-7. Right-click and choose **Update Driver Software...**
+9. Right-click and choose **Update Driver Software...**
 
-8. Choose **Browse my computer for driver software** 
+10. Choose **Browse my computer for driver software** 
 
-9. Choose **Let me pick from a list of device drivers on my computer**
+11. Choose **Let me pick from a list of device drivers on my computer**
 
-10. Click **Have Disk** and browse to **Android Bundle\sdk\extras\google\usb_driver**
+12. On Windows 8, select **All devices** and click **Next**
 
-11. Choose ADB Composite Device
+13. Click **Have Disk** and browse to **Android Bundle\sdk\extras\google\usb_driver**
+
+14. Choose ADB Composite Device
     *The Google device driver is not signed which prevents automatic from finding it.*
+
+15. Accept the unsigned driver
 
     Your console should be shown in the list of available devices.
 
