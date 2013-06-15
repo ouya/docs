@@ -42,7 +42,7 @@ Before continuing, make sure your OUYA is powered and **not connected to your co
 
         0x2836
 
-5. Connect your Ouya to your Mac (Micro USB to USB) then run the following commands:
+5. Connect your OUYA to your Mac (Micro USB to USB) then run the following commands:
 
         adb kill-server
         adb devices
@@ -93,7 +93,7 @@ Before continuing, make sure your OUYA is powered and **not connected to your co
         %SingleAdbInterface% = USB_Install, USB\VID_2836&PID_0010  
         %CompositeAdbInterface% = USB_Install, USB\VID_2836&PID_0010&MI_01  
 
-6. Connect your Ouya to your PC (Micro USB to USB), open Command Prompt (Win+R then type **cmd**), and run the following commands
+6. Connect your OUYA to your PC (Micro USB to USB), open Command Prompt (Win+R then type **cmd**), and run the following commands
 
         adb kill-server  
         echo 0x2836 >> "%USERPROFILE%\.android\adb_usb.ini"  
