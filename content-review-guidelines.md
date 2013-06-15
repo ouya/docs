@@ -53,15 +53,27 @@ Games should run in full-screen mode (it is TV ya know).
 Games should follow the OUYA [Interface Guidelines](https://devs.ouya.tv/developers/docs/interface-guidelines), including the names of the controller buttons and related UI standards.
 
 
-##OUYA Content Ratings Guidelines
+##OUYA Content Ratings
 
 To help expedite your game’s review, we ask that you assign a content rating to your game that reflects the appropriateness of its content for different audiences. The rating scale is as follows:
 
-**Heavy**: Your game contains heavy use of simulated violence, adult language or situations, or your game allows access to that kind of  content via streaming video, audio or the open web.
+**Everyone**: Play on. This games for everyone.  Nothing in this category has objectionable material.
 
-**Moderate**: Your game contains moderate use of simulated violence and sparse use of adult language or situations.
+**9+**: Mild and infrequent as they may be, these games can contain occurrences of cartoon, fantasy, or realistic violence, as well as mature, suggestive, or horror-themed content. But your 9 year olds already watch the Local News, so odds are they're ready.
 
-**Light**: If your game contains any violence, it’s light and cartoonish. Your game does not contain any adult language or situations and does not allow access to such content via streaming video or audio. Your game does not allow access to the open web.
+**12+**: In 4 years, they'll be driving. Today, they're ready for infrequent mild language, simulated gambling, and mature and suggestive themes, as well as more frequent and intense cartoon, fantasy, or realistic violence.
+
+**17+**: This is the oldest rating, so you guessed it: It's got the most "stuff." And by "stuff," we mean frequent and intense offensive language, all forms of violence (cartoon, fantasy or realistic) and themes (mature, horror and suggestive), as well as sexual content, alcohol, tobacco, and drugs.
+
+##Content Guidelines
+
+* Alcohol, Tobacco and Drugs: Illegal content is illegal on OUYA. That said, games that reference drugs, alcohol, or tobacco products are always rated 12+. Games that focus on drugs, alcohol, or tobacco are 17+. 
+* Gambling: This ain't Vegas, so games or apps that facilitate real gambling aren't allowed in OUYA. Gambling themes and simulated gambling will always be rated 12+ or 17+.
+* Hate: We at OUYA hate on hate. Please keep your speech clean and respect your fellow gamer.
+* Profanity and Crude Humor: We can't control how hard you laugh, but we can promise that any crude or profane humor will always be labeled 12+ or 17+.
+* Sexual and Suggestive Content: We know OUYA's one sleek, sexy console, but no: Pornography is never allowed. If games or apps suggest or make sexual references, they'll be rated 12+ or 17+. Focusing on these elements will result in a 17+ rating.
+* User Generated Content and User to User Communication: To protect the community, games or apps rated "everyone" cannot host user generated content or enable communication between users. And should OUYA players want to find and communicate with one another, those games will be rated 12+ or 17+.
+* Violence: We play violence safe. Games or apps that contain mild cartoon or fantasy violence are 9+, realistic or intense fantasy violence is 12+ or 17+, and graphic violence is always rated high maturity.
 
 ##Communication
 
