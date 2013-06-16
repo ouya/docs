@@ -98,7 +98,6 @@ Before continuing, make sure your OUYA is powered and **not connected to your co
         adb kill-server  
         echo 0x2836 >> "%USERPROFILE%\.android\adb_usb.ini"  
         adb start-server  
-        adb devices  
 
 7. Open the Device Manager (Right-click My Computer->Properties->Device Manager)
 
@@ -138,7 +137,7 @@ This will create a working Eclipse project. If your OUYA console is connected, y
 
 Use the Android API Level 16 (Android 4.1 "Jelly Bean") when developing for the OUYA Console.
 
-In order to use the OUYA API you will need to include `ouya-sdk.jar` in your project libraries, as well as `guava-r09.jar` and `commons-lang-2.6.jar`. These can be found in the `libs` directory.
+In order to use the OUYA API you will need to include `ouya-sdk.jar` in your project libraries.  This can be found in the `libs` directory.
 
 For information on the API commands available, please consult the OUYA API reference documentation.
 
