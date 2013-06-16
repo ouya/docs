@@ -1,7 +1,18 @@
-[Documentation](index.md)
-* [Roadmap](roadmap.md)
-* [Setup](setup.md)
+[Welcome](index.md)
+[Setup](setup.md)
+
+**API**
 * [Controllers](controllers.md)
-* [Interface Guidelines](interface-guidelines.md)
-* [In-App Purchasing](purchasing.md)
-* [Unity Game Engine](unity.md)
+* [Purchases](purchasing.md)
+* [Storage](storage.md)
+
+**Guidelines**
+* [User Interface](interface-guidelines.md)
+* [Content & Review](content-review-guidelines.md)
+
+**Game Engines**
+* [Adobe Air](adobe-air.md)
+* [Corona](corona.md)
+* [Game Maker](game-maker.md)
+* [MonoGame](mono-game.md)
+* [Unity](unity.md)

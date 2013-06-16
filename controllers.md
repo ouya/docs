@@ -4,10 +4,11 @@ One of the huge advantages of the OUYA console is that gamers get to use a *real
 - four digital buttons (O, U, Y, and A)
 - a four direction digital pad (D-Pad)
 - two analog joysticks (LS, RS)
-- two digital buttons that activate when the joysticks are pushed straight down (L3, R3)
 - two digital bumper buttons (L1, R1)
 - two analog triggers (L2, R2) 
+- two digital buttons that activate when the joysticks are pushed straight down (L3, R3)
 - a touchpad, configured to behave as a mouse input (Touchpad)
+See the interface-guidelines for a link to button images.
 
 **Note:** The analog triggers also act as digital buttons, with a threshold of 0.5 for the analog value.
 
@@ -16,6 +17,7 @@ Since controller interfaces are so crucial, we've done some work to make your li
 ##### Constants
 
 The **OuyaController** class contains OUYA-specific constants for buttons and axes. A small selection are shown below.
+
 ```java
 public static final int BUTTON_O;
 public static final int BUTTON_U;
@@ -23,7 +25,17 @@ public static final int BUTTON_Y;
 public static final int BUTTON_A;
 ```
 
-With these constants in hand, it's totally acceptable to handle input via the standard **onKeyDown**, **onKeyUp**, or **onGenericMotionEvent** methods.  If handling input in this way, the controller ID can be queried through **OuyaController.getPlayerNumByDeviceId()** as shown below.
+The first thing that must be done is to initialize the OuyaController system, this should be done at the start of your application like so:
+
+```java
+@Override
+public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    OuyaController.init(this);
+}
+```
+
+Now we can proceed!  It's totally acceptable to handle input via the standard **onKeyDown**, **onKeyUp**, or **onGenericMotionEvent** methods.  If handling input in this way, the controller ID can be queried through **OuyaController.getPlayerNumByDeviceId()** as shown below.
 
 ```java
 @Override
@@ -63,6 +75,69 @@ public boolean onGenericMotionEvent(final MotionEvent event) {
 }
 ```
 
+##### The Menu/System Button
+
+A Menu/Pause function has been added to the OUYA button on the controller. Instead of bringing up the system menu when pressed once, a single press will now send an `OuyaController.BUTTON_MENU` (`KEYCODE_MENU`) keycode to the app, emulating a normal menu button.
+To bring up the system menu you may now double-tap the OUYA button, or long press the OUYA button on newer controllers (dev kit controllers do not have this second method).
+
+This new MENU function provides an easy and consistent way for games and apps to map a pause or context menu to a button on our controller.
+
+*NOTE:* Because the menu button press is emulated, the up and down events happen at once. This means you won't be able to detect it being pressed using the passive anytime state querying. It's much more reliable to detect the menu press in your onKeyUp/Down code.
+
+##### Distinguishing between Analog Joystick and Touchpad
+
+Both the analog joystick and the touchpad states are read using **onGenericMotionEvent**.  To distinguish between them you can query the input source:
+
+* Joystick == InputDevice.SOURCE_CLASS_JOYSTICK
+* Touchpad == InputDevice.SOURCE_CLASS_POINTER
+
+Example:
+
+```java
+@Override
+public boolean onGenericMotionEvent(final MotionEvent event) {
+    //Get the player #
+    int player = OuyaController.getPlayerNumByDeviceId(event.getDeviceId());    
+    
+    //Joystick
+    if((event.getSource() & InputDevice.SOURCE_CLASS_JOYSTICK) != 0) {
+        float LS_X = event.getAxisValue(OuyaController.AXIS_LS_X);            
+        //do other things with joystick
+    }
+            
+    //Touchpad
+    if((event.getSource() & InputDevice.SOURCE_CLASS_POINTER) != 0) {
+        //Print the pixel coordinates of the cursor
+        Log.i("Touchpad", "Cursor X: " + event.getX() + "Cursor Y: " + event.getY());
+    }
+    
+    return true;
+}
+```
+##### The Left Joystick
+
+If you do not consume motion events from the left joystick, the system will send your app dpad KeyEvents.
+
+If you don't want your app to get these key events, return true from `onGenericMotionEvent`. Otherwise, you can differentiate these dpad events using the source field as such:
+```java
+public boolean onKeyDown(int keyCode, KeyEvent event) {
+    if(keycode >= KeyEvent.KEYCODE_DPAD_UP && keycode <= KeyEvent.KEYCODE_DPAD_RIGHT) {
+        if((event.getSource() & InputDevice.SOURCE_DPAD) != 0) {
+            //Event is from actual dpad
+        }
+        if((event.getSource() & InputDevice.SOURCE_JOYSTICK) != 0) {
+            //Event is from joystick
+        }
+    } else {
+        //keyCode is not a dpad keycode
+    }
+    ...
+}
+```
+
+One caveat to using the joystick as a dpad to keep in mind is that the triggering value for the dpad event is `0.5`, which causes diagonals and directionals to be inequal in size.
+If your games requires 8 equally spaced directions, you will have to do your own math from the axes' values.
+
 ##### Anytime State Querying
 
 If you want the extra flexibility of querying the controller state at any time, you can use the rest of the **OuyaController** class.
@@ -95,12 +170,45 @@ OuyaController c = OuyaController.getControllerByDeviceId(deviceId);
 OuyaController c = OuyaController.getControllerByPlayer(playerNum);
 ```
 
-Now it's simple to query the button or axis values:
+Now it's simple to query the button or axis values (for the analog joysticks, we recommend checking against the provided deadzone value):
 
 ```java
 float axisX = c.getAxisValue(OuyaController.AXIS_LS_X);
 float axisY = c.getAxisValue(OuyaController.AXIS_LS_Y);
+if (axisX * axisX + axisY * axisY < OuyaController.STICK_DEADZONE * OuyaController.STICK_DEADZONE) {
+  axisX = axisY = 0.0f;
+}
 boolean buttonPressed = c.getButton(OuyaController.BUTTON_O);
 ```
 
 With this, you can focus on making a great game instead of on input handling.
+
+##### Testing Button State Changes
+
+Another way the controller wrappers help to make game development easier are these optional methods to help you track per-frame button state changes.
+```java
+if (c.buttonChangedThisFrame(OuyaController.BUTTON_O)) {
+    if (c.getButton(OuyaController.BUTTON_O)) {
+        startShooting();
+    } else {
+        stopShooting();
+    }
+}
+```
+
+Of course the ODK needs some help from you to let it know when a new frame is started.  Thus you'll need to call this method at start of each frame (before doing any input handling):
+```java
+OuyaController.startOfFrame();
+```
+
+#### Analog vs Digital Trigger Data
+
+We have deprecated the use of digital (key event) data to determine the state of the trigger buttons (L2 and R2). We now recommend using the analog axis data for more flexible use of the triggers.
+
+To mimic the digital state using the analog data is fairly simple:
+```java
+public boolean isL2Down(OuyaController c) {
+    return (c.getAxisValue(OuyaController.AXIS_L2) > 0.5f); //0.5 can be any threshold between 0.0 (completely released) - 1.0 (completely pressed)
+}
+```
+Just make sure that you have your **onGenericMotionEvent** function sending its events to the OuyaController class, as described at the top of this document.
