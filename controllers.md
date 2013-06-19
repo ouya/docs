@@ -14,6 +14,13 @@ See the interface-guidelines for a link to button images.
 
 Since controller interfaces are so crucial, we've done some work to make your life easier.
 
+### Controller Images
+
+- Games commonly need images to show controller graphics for pairing screens or showing controller schemes.
+- Image: [336x229 Pairing Controller](Images/controller_pair_graphic_lit.png)
+- Image: [6048x4032 Front of Controller](Images/OUYA-070.tif)
+- Image: [6048x4032 Back of Controller](Images/OUYA-070.tif)
+
 ##### Constants
 
 The **OuyaController** class contains OUYA-specific constants for buttons and axes. A small selection are shown below.
