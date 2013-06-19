@@ -9,7 +9,9 @@ To fully complete the setup, you will need:
 
 Before continuing, make sure your OUYA is powered and **not connected to your computer**.
 
-**Known Issue**: Unity Game Engine requires Android SDK r21. There is an [issue](http://forum.unity3d.com/threads/176737-unknown-error-when-building-simple-scene) with using r22.
+**Known Issue**: Some game engines (like Unity Game Engine) requires Android SDK r21. There is an [issue](http://forum.unity3d.com/threads/176737-unknown-error-when-building-simple-scene) with using r22.
+
+**Direct download links**: Android SDK [[r21 windows]] (http://dl.google.com/android/android-sdk_r21-windows.zip) [[r21 mac]] (http://dl.google.com/android/android-sdk_r21-macosx.zip)
 
 ##### Mac OS X
 
