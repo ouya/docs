@@ -44,7 +44,22 @@ Of course, when your application is finished, it is polite to inform the **OuyaF
 	}
 ```
 
-Now we're ready for some real action! 
+Now we're ready for some real action!
+
+### Running on OUYA###
+
+Before invoking in-app-purchase methods check if you are running OUYA hardware.
+
+```java
+if (ouyaFacade.isRunningOnOUYAHardware())
+{
+   //running on OUYA hardware
+}
+else
+{
+   //something else
+}
+```
 
 #### Testing purchases
 
