@@ -290,7 +290,9 @@ The OUYA SDK provides controller input using state-based and event-based input. 
 ##### Script
 To be able to attach a script to a GameObject, the example must extend MonoBehaviour. The main logic script should implement the pause and resume interface to handle pause and resume events.
 ```csharp
-public class OuyaShowController : MonoBehaviour, OuyaSDK.IPauseListener, OuyaSDK.IResumeListener
+public class OuyaShowController : MonoBehaviour,
+   OuyaSDK.IPauseListener,
+   OuyaSDK.IResumeListener
 ```
 
 The developer identifier is now entered in the init scene in the inspector on the OuyaGameObject scene object. The developer id is found in the developer portal.  
@@ -375,7 +377,9 @@ The multiple controller example shows use of multiple controllers independently 
 ##### Script
 The OuyaInputHandlerExample script drives the skeleton characters and determines which controller corresponds to each character. In the inspector, OuyaInputHandlerExample has a Player field that determines the controller player that controls each skeleton. OuyaInputHandlerExample has the same setup as the previous example.
 ```csharp
-public class OuyaInputHandlerExample : MonoBehaviour, OuyaSDK.IPauseListener, OuyaSDK.IResumeListener
+public class OuyaInputHandlerExample : MonoBehaviour,
+   OuyaSDK.IPauseListener,
+   OuyaSDK.IResumeListener
 ```
 
 The OuyaInputHandlerExample has a Player enum that is used in the input to control a specific player.
@@ -407,9 +411,15 @@ The products example shows how to get details about items that can be purchased 
 ![Scene Products Example](https://d31pno3ktcq63f.cloudfront.net/assets/unity/16_ProductsExample.png)
 
 ##### Script
-Add listeners for the purchase-iap-system areas for GetProducts, Purchase, and GetReceipts.
+Add listeners for the purchase-iap-system areas for FetchGamerUUID, GetProducts, Purchase, and GetReceipts.
 ```csharp
-public class OuyaShowProducts : MonoBehaviour, OuyaSDK.IPauseListener, OuyaSDK.IResumeListener, OuyaSDK.IGetProductsListener, OuyaSDK.IPurchaseListener, OuyaSDK.IGetReceiptsListener
+public class OuyaShowProducts : MonoBehaviour,
+   OuyaSDK.IPauseListener,
+   OuyaSDK.IResumeListener,
+   OuyaSDK.IFetchGamerUUIDListener,
+   OuyaSDK.IGetProductsListener,
+   OuyaSDK.IPurchaseListener,
+   OuyaSDK.IGetReceiptsListener
 ```
 
 Enter your purchasables into the OuyaGameObject. The developer creates purchasables in the developer portal. And then the OuyaGameObject has a ProductKey list where you enter the product app ids from the developer portal.  
@@ -418,12 +428,14 @@ Register your GetProductsListener, PurchaseListener, and GetReceiptsLister in th
 ```csharp
     void Awake()
     {
+        OuyaSDK.registerFetchGamerUUIDListener(this);
         OuyaSDK.registerGetProductsListener(this);
         OuyaSDK.registerPurchaseListener(this);
         OuyaSDK.registerGetReceiptsListener(this);
     }
     void OnDestroy()
     {
+        OuyaSDK.unregisterFetchGamerUUIDListener(this);
         OuyaSDK.unregisterGetProductsListener(this);
         OuyaSDK.unregisterPurchaseListener(this);
         OuyaSDK.unregisterGetReceiptsListener(this);
@@ -433,6 +445,20 @@ Register your GetProductsListener, PurchaseListener, and GetReceiptsLister in th
 It’s recommended that you avoid switching scenes when events are pending. As in, don’t request receipts and immediately switch scenes before the callback happens. Also be sure to invoke a single request and wait for the response before invoking the iap service again.  
   
 The listeners implement an OnSuccess, OnFailure, and OnCancel callback.
+
+###### Fetch Gamer UUID
+The gamer UUID is a unique identifier for the logged in user that is accessible while the console is connected to the Internet.
+```csharp
+    public void OuyaFetchGamerUUIDOnSuccess(string gamerUUID)
+    {
+    }
+    public void OuyaFetchGamerUUIDOnFailure(int errorCode, string errorMessage)
+    {
+    }
+    public void OuyaFetchGamerUUIDOnCancel()
+    {
+    }
+```
 
 ###### Request product list
 To get a list of products (which includes the price information), invoke OuyaSDK.requestProductList and pass a list of purchasables. You likely want to obtain prices from the server to avoid hardcoding prices and showing an inaccurate price.
