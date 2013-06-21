@@ -28,6 +28,28 @@ Examples are included at the base GIT path.
 
 <b><a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/MonoGame/InAppPurchases">InAppPurchases</a></b> - In-App-Purchase Example
 
+### Signing
+
+The auto update process requires that you use the same keystore in your app and every update.
+
+If you lose your keystore, it requires users to uninstall the game and redownload to get the next update.
+
+If you keep using the same keystore after that, the auto updating will continue as intended.
+
+In MonoGame, unload your project and edit the CSPROJ. Add the following settings to your valid keystore:
+
+```xml
+<AndroidKeyStore>True</AndroidKeyStore>   
+<AndroidSigningKeyStore>PathToYourKeyStoreFile\key.keystore</AndroidSigningKeyStore>
+<AndroidSigningStorePass>my_password_here</AndroidSigningStorePass>
+<AndroidSigningKeyAlias>Aranda</AndroidSigningKeyAlias>
+<AndroidSigningKeyPass>same_password_here</AndroidSigningKeyPass>
+```
+
+It's important that your key signing, your package name, bundle identifiers, developer id, and the account that submits the game all matches.
+
+The above has to true for the in-app-purchases to function, since decryption depends on using the right signing key.
+
 ### Resources
 
 MonoGame Download - http://monogame.codeplex.com/<br/>
