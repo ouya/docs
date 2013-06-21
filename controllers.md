@@ -16,10 +16,37 @@ Since controller interfaces are so crucial, we've done some work to make your li
 
 ### Controller Images
 
-- Games commonly need images to show controller graphics for pairing screens or showing controller schemes.
-- Image: [336x229 Pairing Controller](Images/controller_pair_graphic_lit.png)
-- Image: [6048x4032 Front of Controller](Images/OUYA-070.tif)
-- Image: [6048x4032 Back of Controller](Images/OUYA-070.tif)
+Games commonly need images to show controller graphics for pairing screens or showing controller schemes.
+
+Several common sized graphics are provided to be used in game.
+
+The largest image you would ever display in game is 1080p (1920x1080) or 720p (1280x720).
+
+High resolution images are intended to be used as a source image to be rescaled before using in-game.
+
+You'll find controller images in [[OUYA-Images.zip]] (https://s3.amazonaws.com/ouya-docs/OUYA-Images.zip)
+
+Pairing Controller:
+- Image: controller_pair_graphic_lit.png
+
+Side of Controller:
+- Image: OUYA-070_256x256.png
+- Image: OUYA-070_512x512.png
+- Image: OUYA-070_640x480.png
+- Image: OUYA-070_1024x1024.png
+- Image: OUYA-070_1280x720.png
+- Image: OUYA-070_1920x1080.png
+- Image: Hires\OUYA-070_6048x4032.png
+
+Back of Controller:
+- Image: OUYA-118_256x256.png
+- Image: OUYA-118_512x512.png
+- Image: OUYA-118_640x480.png
+- Image: OUYA-118_1024x1024.png
+- Image: OUYA-118_1280x720.png
+- Image: OUYA-118_1920x1080.png
+- Image: Hires\OUYA-118_6048x4032.png
+
 
 ##### Constants
 
