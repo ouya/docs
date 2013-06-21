@@ -422,9 +422,9 @@ public class OuyaShowProducts : MonoBehaviour,
    OuyaSDK.IGetReceiptsListener
 ```
 
-Enter your purchasables into the OuyaGameObject. The developer creates purchasables in the developer portal. And then the OuyaGameObject has a ProductKey list where you enter the product app ids from the developer portal.  
+Enter your purchasables into the OuyaGameObject. The developer creates purchasables in the developer portal. And then the OuyaGameObject has a ProductKey list where you enter the product app ids from the developer portal.
   
-Register your GetProductsListener, PurchaseListener, and GetReceiptsLister in the Awake and clear in the OnDestroy events.
+Register your FetchGamerUUIDListener, GetProductsListener, PurchaseListener, and GetReceiptsLister in the Awake and clear in the OnDestroy events.
 ```csharp
     void Awake()
     {
