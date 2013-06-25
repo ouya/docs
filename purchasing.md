@@ -137,37 +137,25 @@ Once you have your key embedded you will need to create a purchase listener whic
 		new CancelIgnoringOuyaResponseListener<String>() {
 			@Override
 			public void onSuccess(String response) {
-				Product product;
 	            try {
     	            OuyaEncryptionHelper helper = new OuyaEncryptionHelper();
 
         	        JSONObject response = new JSONObject(result);
-            	    if(response.has("key") && response.has("iv")) {
-                	    id = helper.decryptPurchaseResponse(response, mPublicKey);
-                    	Product storedProduct;
-	                    synchronized (mOutstandingPurchaseRequests) {
-    	                    storedProduct = mOutstandingPurchaseRequests.remove(id);
-        	            }
-            	        if(storedProduct == null) {
-	                        onFailure(
-	                        	OuyaErrorCodes.THROW_DURING_ON_SUCCESS, 
-	                        	"No purchase outstanding for the given purchase request",
-	                        	Bundle.EMPTY);
-    	                    return;
-        	            }
-        	            product = storedProduct;
-            	    } else {
-                	    product = new Product(new JSONObject(result));
-                    	if(!mProduct.getIdentifier().equals(product.getIdentifier())) {
-                        	onFailure(
-                        		OuyaErrorCodes.THROW_DURING_ON_SUCCESS, 
-                        		"Purchased product is not the same as purchase request product", 
-                        		Bundle.EMPTY);
-	                        return;
-    	                }
-        	        }
+
+               	    id = helper.decryptPurchaseResponse(response, mPublicKey);
+                   	Product storedProduct;
+                    synchronized (mOutstandingPurchaseRequests) {
+   	                    storedProduct = mOutstandingPurchaseRequests.remove(id);
+       	            }
+           	        if(storedProduct == null) {
+                        onFailure(
+                        	OuyaErrorCodes.THROW_DURING_ON_SUCCESS, 
+                        	"No purchase outstanding for the given purchase request",
+                        	Bundle.EMPTY);
+   	                    return;
+       	            }
         	        
-					Log.d("Purchase", "Congrats you bought: " + product.getName());
+					Log.d("Purchase", "Congrats you bought: " + storedProduct.getName());
             	} catch (Exception e) {
 					Log.e("Purchase", "Your purchase failed.", e);
 				}
@@ -248,11 +236,7 @@ Let us take a look at our listener:
 				List<Receipt> receipts = null;
 				try {
 	                JSONObject response = new JSONObject(receiptResponse);
-    	            if(response.has("key") && response.has("iv")) {
-        	            receipts = helper.decryptReceiptResponse(response, mPublicKey);
-            	    } else {
-                	    receipts = helper.parseJSONReceiptResponse(receiptResponse);
-                	}
+       	            receipts = helper.decryptReceiptResponse(response, mPublicKey);
 				} catch (Exception e) {
 					throw new RuntimeException(e);
 				}
