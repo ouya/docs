@@ -188,9 +188,10 @@ With this, you can focus on making a great game instead of on input handling.
 Another way the controller wrappers help to make game development easier are these optional methods to help you track per-frame button state changes.
 ```java
 if (c.buttonChangedThisFrame(OuyaController.BUTTON_O)) {
-    if (c.getButton(OuyaController.BUTTON_O)) {
+    if (c.buttonPressedThisFrame(OuyaController.BUTTON_O)) {
         startShooting();
-    } else {
+    }
+    if (c.buttonReleasedThisFrame(OuyaController.BUTTON_O) {
         stopShooting();
     }
 }
@@ -200,6 +201,7 @@ Of course the ODK needs some help from you to let it know when a new frame is st
 ```java
 OuyaController.startOfFrame();
 ```
+Note that it's possible for a button to be both pressed and released within a single frame.
 
 #### Analog vs Digital Trigger Data
 
