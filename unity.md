@@ -151,7 +151,6 @@ You can also import packages to the focused Unity window with a double-click on 
 You will find the following structure imported into your Assets folder.
 ```text
 ./LitJson – 3rd party JSON parsing library
-./Ouya/Docs/Readme.doc – You are reading this doc
 ./Ouya/Examples/Scenes/SceneShowProducts.unity – Example Products Scene
 ./Ouya/Examples/Scenes/SceneShowController.unity – Example Controller Scene
 ./Ouya/Examples/Scenes/SceneShowNDK.unity – Example NDK Scene
@@ -162,7 +161,9 @@ You will find the following structure imported into your Assets folder.
 ./Ouya/SDK/Editor/OuyaPanel.cs – Custom editor extension for OUYA
 ./Ouya/SDK/Prefabs/OuyaGameObject.prefab – OUYA SDK setup prefab
 ./Ouya/SDK/Scripts/OuyaGameObject.cs – OUYA SDK java interface
-./Ouya/SDK/Scripts/OuyaSDK.cs – OUYA SDK Unity API
+./Plugins/OuyaExampleCommon.cs – Common methods for examples like input
+./Plugins/OuyaKeyCodes.cs – Enums for the key codes
+./Plugins/OuyaSDK.cs – OUYA SDK Unity API
 ./Plugins/Android – Special folder for customizing Android platform publishing
 ./Plugins/Android/AndroidManifest.xml – Custom manifest, overrides the default
 ./Plugins/Android/libs – Jar libraries
@@ -171,12 +172,17 @@ You will find the following structure imported into your Assets folder.
 ./Plugins/Android/libs/ouya-sdk.jar – OUYA SDK jar for Java API
 ./Plugins/Android/OuyaUnityApplication.jar – Example application Jar
 ./Plugins/Android/OuyaUnityPlugin.jar – OUYA SDK interface Jar
+./Plugins/Android/jni/Android.mk – Make file for building JNI
 ./Plugins/Android/jni/jni.cpp – C++ JNI interface
 ./Plugins/Android/res/drawable/app_icon.png – Custom application icon
+./Plugins/Android/res/drawable-xhdpi/ouya_icon.png – Custom icon for the store
+./Plugins/Android/res/raw/key.der – Signing key from the developer portal
 ./Plugins/Android/res/layout/main.xml – Custom android layout
 ./Plugins/Android/res/values/strings.xml – Custom android strings
 ./Plugins/Android/src/OuyaUnityApplication.java – Example Android Application Activity
-./Plugins/Android/src/tv/ouya/demo/OuyaUnityApplication/R.java – Auto generated from custom layout
+
+// Auto generated, this location will vary depending on your bundle identifier
+./Plugins/Android/src/tv/ouya/demo/OuyaUnityApplication/R.java
 ```
 
 ### References
