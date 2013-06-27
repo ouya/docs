@@ -1,5 +1,62 @@
 ## Setup Instructions for the OUYA ODK
 
+### Videos
+
+<table border=1>
+
+ <tr>
+
+ <td>Windows Driver Setup (10:48)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=454JFvFTxww" target="_blank">
+<img src="http://img.youtube.com/vi/454JFvFTxww/0.jpg" alt="Windows Driver Setup" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td>Mac Driver Setup (5:57)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=5LSBiNfMq8A" target="_blank">
+<img src="http://img.youtube.com/vi/5LSBiNfMq8A/0.jpg" alt="Mac Driver Setup" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+
+ <td>ElGato Capture Setup (4:03)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=-Igb4IcpbDY" target="_blank">
+<img src="http://img.youtube.com/vi/-Igb4IcpbDY/0.jpg" alt="ElGato Capture Setup" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td>Mac Overscan Setup (1:07)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=fwd2a26LOys" target="_blank">
+<img src="http://img.youtube.com/vi/fwd2a26LOys/0.jpg" alt="Mac Overscan Setup" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+
+ <td>Video Editing in MS Movie (3:45)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=HI_ekZKfrd4" target="_blank">
+<img src="http://img.youtube.com/vi/HI_ekZKfrd4/0.jpg" alt="Video Editing in MS Movie" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td>Adding Video Screenshots (3:09)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=l8JRYvy-Gtc" target="_blank">
+<img src="http://img.youtube.com/vi/l8JRYvy-Gtc/0.jpg" alt="Add Screenshots to Your Trailer" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ </tr>
+ 
+</table>
+
+**Direct download links**:
+
+**Known Issue**: Some game engines <a target=_blank href="http://forum.unity3d.com/threads/176737-unknown-error-when-building-simple-scene">[post]</a> still depend on an old version of the Android SDK Tools, so here is a direct link to the older version. In most cases you can install the latest version of the Android SDK. These are convienence links.<br/>
+Android SDK Latest - http://developer.android.com/sdk/index.html<br/>
+Android SDK Archived Rev 21 on Windows - http://dl.google.com/android/android-sdk_r21-windows.zip<br/>
+Android SDK Archived Rev 21 on Mac - http://dl.google.com/android/android-sdk_r21-macosx.zip<br/>
+
+ElGato Capture Software - http://www.elgato.com/gaming/game-capture-hd/support/update
+
 ##### Preliminary Instructions
 
 To fully complete the setup, you will need:
@@ -8,10 +65,6 @@ To fully complete the setup, you will need:
 * a Micro USB to USB cable
 
 Before continuing, make sure your OUYA is powered and **not connected to your computer**.
-
-**Known Issue**: Some game engines (like Unity Game Engine) requires Android SDK r21. There is an [issue](http://forum.unity3d.com/threads/176737-unknown-error-when-building-simple-scene) with using r22.
-
-**Direct download links**: Android SDK [[r21 windows]] (http://dl.google.com/android/android-sdk_r21-windows.zip) [[r21 mac]] (http://dl.google.com/android/android-sdk_r21-macosx.zip)
 
 ##### Mac OS X
 
