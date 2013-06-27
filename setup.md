@@ -93,7 +93,7 @@ Before continuing, make sure your OUYA is powered and **not connected to your co
 
     Install the Java runtime if prompted.  
 
-4. **Important**: There should be no carriage return after the hex value.
+4. **Important**: There should be no carriage return after the hex value. Any blank lines in this file will result in an error.
 Add the following line to `~/.android/adb_usb.ini` (create it if it doesn't exist) for your OUYA console to be recognised:
 
         0x2836
@@ -150,7 +150,7 @@ Add the following line to `~/.android/adb_usb.ini` (create it if it doesn't exis
         %SingleAdbInterface% = USB_Install, USB\VID_2836&PID_0010  
         %CompositeAdbInterface% = USB_Install, USB\VID_2836&PID_0010&MI_01  
 
-6. **Important**: There should be no carriage return after the hex value.
+6. **Important**: There should be no carriage return after the hex value. Any blank lines in this file will result in an error.
 Connect your OUYA to your PC (Micro USB to USB), open Command Prompt (Win+R then type **cmd**), and run the following commands
 
         adb kill-server  
