@@ -26,6 +26,7 @@ High resolution images are intended to be used as a source image to be rescaled 
 
 You'll find controller images in [[OUYA-Images.zip]] (https://s3.amazonaws.com/ouya-docs/OUYA-Images.zip)
 
+```
 Pairing Controller:
 - Image: controller_pair_graphic_lit.png
 
@@ -46,7 +47,7 @@ Back of Controller:
 - Image: OUYA-118_1280x720.png
 - Image: OUYA-118_1920x1080.png
 - Image: Hires\OUYA-118_6048x4032.png
-
+```
 
 ##### Constants
 
