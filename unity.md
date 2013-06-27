@@ -6,22 +6,22 @@ Open source, clone https://github.com/ouya/ouya-unity-plugin directly from publi
 ### Developer Support Hangouts
 
 2013:
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=2pHtay8fF-w" target="_blank">Feb 11</a>]
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=cgZ8dbHgi00" target="_blank">Feb 18</a>]
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=qGeUaxXCrAs" target="_blank">Mar 4A</a>]
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=hE4FbM3Gpp8" target="_blank">Mar 4B</a>]
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=4VdF5NelOWk" target="_blank">Mar 4C</a>]
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=DEeu6L7UFSY" target="_blank">Mar 11</a>]
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=Mp0qiOfyQt0" target="_blank">Mar 18</a>]
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=yz0OR6Sqyhc" target="_blank">Mar 25</a>]
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=rUF7c0OrA_Q" target="_blank">Mar 27</a>]
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=q8mY40VWBxo" target="_blank">Apr 1</a>]
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=Ctw44DXqnzc" target="_blank">Apr 8</a>]
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=vfb66JxdzKk" target="_blank">Apr 15</a>]
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=bA39KnsG-kA" target="_blank">Apr 22</a>]
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=Y9tRNVSEEbo" target="_blank">Apr 29</a>]
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=SugaCc5OpoQ" target="_blank">May 6</a>]
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=85vkB2rGGhU" target="_blank">May 13</a>]
+[<a href="http://www.youtube.com/watch?feature=player_embedded&v=2pHtay8fF-w" target="_blank">Feb 11</a>]&nbsp;
+[<a href="http://www.youtube.com/watch?feature=player_embedded&v=cgZ8dbHgi00" target="_blank">Feb 18</a>]&nbsp;
+[<a href="http://www.youtube.com/watch?feature=player_embedded&v=qGeUaxXCrAs" target="_blank">Mar 4A</a>]&nbsp;
+[<a href="http://www.youtube.com/watch?feature=player_embedded&v=hE4FbM3Gpp8" target="_blank">Mar 4B</a>]&nbsp;
+[<a href="http://www.youtube.com/watch?feature=player_embedded&v=4VdF5NelOWk" target="_blank">Mar 4C</a>]&nbsp;
+[<a href="http://www.youtube.com/watch?feature=player_embedded&v=DEeu6L7UFSY" target="_blank">Mar 11</a>]&nbsp;
+[<a href="http://www.youtube.com/watch?feature=player_embedded&v=Mp0qiOfyQt0" target="_blank">Mar 18</a>]&nbsp;
+[<a href="http://www.youtube.com/watch?feature=player_embedded&v=yz0OR6Sqyhc" target="_blank">Mar 25</a>]&nbsp;
+[<a href="http://www.youtube.com/watch?feature=player_embedded&v=rUF7c0OrA_Q" target="_blank">Mar 27</a>]&nbsp;
+[<a href="http://www.youtube.com/watch?feature=player_embedded&v=q8mY40VWBxo" target="_blank">Apr 1</a>]&nbsp;
+[<a href="http://www.youtube.com/watch?feature=player_embedded&v=Ctw44DXqnzc" target="_blank">Apr 8</a>]&nbsp;
+[<a href="http://www.youtube.com/watch?feature=player_embedded&v=vfb66JxdzKk" target="_blank">Apr 15</a>]&nbsp;
+[<a href="http://www.youtube.com/watch?feature=player_embedded&v=bA39KnsG-kA" target="_blank">Apr 22</a>]&nbsp;
+[<a href="http://www.youtube.com/watch?feature=player_embedded&v=Y9tRNVSEEbo" target="_blank">Apr 29</a>]&nbsp;
+[<a href="http://www.youtube.com/watch?feature=player_embedded&v=SugaCc5OpoQ" target="_blank">May 6</a>]&nbsp;
+[<a href="http://www.youtube.com/watch?feature=player_embedded&v=85vkB2rGGhU" target="_blank">May 13</a>]&nbsp;
 [<a href="http://www.youtube.com/watch?feature=player_embedded&v=c86lI_BnuHA" target="_blank">May 23</a>]
 
 ## Guide
@@ -34,12 +34,12 @@ Several examples are included in the ouya-unity-plugin package.
 
  <tr>
 
- <td>Get the latest from GitHUB<br/>
+ <td>Get the latest from GitHUB (3:59)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=plqEuuilv6k" target="_blank">
 <img src="http://img.youtube.com/vi/plqEuuilv6k/0.jpg" alt="Get the latest from GitHUB" width="240" height="180" border="10" /></a>
  </td>
  
-  <td>Intro to OUYA Unity Package<br/>
+  <td>Intro to OUYA Unity Package (11:48)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=c5c9tEqpHsw" target="_blank">
 <img src="http://img.youtube.com/vi/c5c9tEqpHsw/0.jpg" alt="Intro to OUYA Unity Package" width="240" height="180" border="10" /></a>
  </td>
@@ -48,12 +48,12 @@ Several examples are included in the ouya-unity-plugin package.
  
  <tr>
 
- <td>OUYA Unity SDK - Intro on dependencies<br/>
+ <td>OUYA Unity SDK - Intro on dependencies (2:41)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=b-SiqzVhdFM" target="_blank">
 <img src="http://img.youtube.com/vi/b-SiqzVhdFM/0.jpg" alt="OUYA Unity SDK - Intro on dependencies" width="240" height="180" border="10" /></a>
  </td>
  
-  <td>Key Store Setup<br/>
+  <td>Key Store Setup (1:27)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=IVk7Cic2lpg" target="_blank">
 <img src="http://img.youtube.com/vi/IVk7Cic2lpg/0.jpg" alt="Key Store Setup" width="240" height="180" border="10" /></a>
  </td>
@@ -62,12 +62,12 @@ Several examples are included in the ouya-unity-plugin package.
  
   <tr>
 
- <td>Subscribe to Menu Button and Menu Appearing<br/>
+ <td>Subscribe to Menu Button and Menu Appearing (5:18)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=4ghKgKZqSG0" target="_blank">
 <img src="http://img.youtube.com/vi/4ghKgKZqSG0/0.jpg" alt="Subscribe to Menu Button and Menu Appearing" width="240" height="180" border="10" /></a>
  </td>
  
-  <td>In-App-Purchase Setup - ShowProducts Example<br/>
+  <td>In-App-Purchase Setup - ShowProducts Example (11:46)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=lJjGH_KIE7o" target="_blank">
 <img src="http://img.youtube.com/vi/lJjGH_KIE7o/0.jpg" alt="In-App-Purchase Setup - ShowProducts Example" width="240" height="180" border="10" /></a>
  </td>
@@ -76,7 +76,7 @@ Several examples are included in the ouya-unity-plugin package.
  
   <tr>
 
- <td>Example ShowUnityInput<br/>
+ <td>Example ShowUnityInput (21:59)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=YqsumqX4REU" target="_blank">
 <img src="http://img.youtube.com/vi/YqsumqX4REU/0.jpg" alt="Example ShowUnityInput" width="240" height="180" border="10" /></a>
  </td>
@@ -87,12 +87,12 @@ Several examples are included in the ouya-unity-plugin package.
 
  <tr>
 
- <td>Show Guitar<br/>
+ <td>Show Guitar (1:06)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=RNF34XIDwGY" target="_blank">
 <img src="http://img.youtube.com/vi/RNF34XIDwGY/0.jpg" alt="Show Guitar" width="240" height="180" border="10" /></a>
  </td>
  
-  <td>Show Drumkit<br/>
+  <td>Show Drumkit (0:35)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=L4pO73cK22Y" target="_blank">
 <img src="http://img.youtube.com/vi/L4pO73cK22Y/0.jpg" alt="Show Drumkit" width="240" height="180" border="10" /></a>
  </td>
