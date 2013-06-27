@@ -13,7 +13,7 @@ Examples are included at the base GIT path.
 
  <tr>
 
- <td>Virtual Controller Example<br/>
+ <td>Virtual Controller Example (41:37)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=ultZwdGizqM" target="_blank">
 <img src="http://img.youtube.com/vi/ultZwdGizqM/0.jpg" alt="Virtual Controller Example" width="240" height="180" border="10" /></a>
  </td>
