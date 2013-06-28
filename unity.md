@@ -201,13 +201,11 @@ Open the ./Ouya/Examples/Scenes/SceneShowProducts.unity example scene.
 
 All scenes start with a Main Camera. There’s a custom GameObject added for OuyaGameObject which handles taking messages from the OUYA SDK from Java to C#. The “ShowProduct” GameObject is a simple display script for displaying retrieved products and invoking purchases. Since this example is a single scene that’s why it has the OuyaGameObject. Otherwise it would use the init scene setup.
 
-#### Scene ShowController
+#### Scene ShowUnityInput
 
-Open the ./Ouya/Examples/Scenes/SceneShowController.unity example scene.
+Open the ./Ouya/Examples/Scenes/SceneShowUnityInput.unity example scene.
 
-![Scene Controller](https://d31pno3ktcq63f.cloudfront.net/assets/unity/13_SceneController.jpg)
-
-Both scenes needed to add the OuyaGameObject to interface with the OUYA SDK to receive display messages. The OuyaShowController script handles the display code necessary for mapping OUYA SDK input to the Unity GUI. Again single scene examples can have the OuyaGameObject as long as the scene is not reloaded. Otherwise the OuyaGameObject would move to an init scene that loads your main menu or game scene.
+Make sure OuyaGameObject has "Use Legacy Input" to OFF. This allows you to use straight Unity API Input to access input. The "Core" package also includes "ProjectSettings/InputManager.asset" which has 122 axises already defined. OuyaExampleCommon.cs has example mappings to handle the OUYA controller mappings along with other controllers.
 
 ### Android Setup
 Some player settings must be customized to build on Android. Open the player settings by navigating the menu to the Edit->Project Settings->Player menu item. The PlayerSettings will appear in the inspector.
