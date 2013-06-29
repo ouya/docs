@@ -497,6 +497,83 @@ public class OuyaShowUnityInput
 }
 ```
 
+And here's a base player script that you can attach to a gameObject to achieve multiple controller support.
+```csharp
+using UnityEngine;
+
+public class Player : MonoBehaviour,
+    OuyaSDK.IMenuButtonUpListener,
+    OuyaSDK.IMenuAppearingListener,
+    OuyaSDK.IPauseListener,
+    OuyaSDK.IResumeListener
+{
+    private const float INNER_DEADZONE = 0.3f;
+
+    private const float MOVE_SPEED = 5f;
+
+    public OuyaSDK.OuyaPlayer Index;
+
+    void Awake()
+    {
+        OuyaSDK.registerMenuButtonUpListener(this);
+        OuyaSDK.registerMenuAppearingListener(this);
+        OuyaSDK.registerPauseListener(this);
+        OuyaSDK.registerResumeListener(this);
+        Input.ResetInputAxes();
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterMenuButtonUpListener(this);
+        OuyaSDK.unregisterMenuAppearingListener(this);
+        OuyaSDK.unregisterPauseListener(this);
+        OuyaSDK.unregisterResumeListener(this);
+        Input.ResetInputAxes();
+    }
+
+    public void OuyaMenuButtonUp()
+    {
+    }
+
+    public void OuyaMenuAppearing()
+    {
+    }
+
+    public void OuyaOnPause()
+    {
+    }
+
+    public void OuyaOnResume()
+    {
+    }
+
+    void FixedUpdate()
+    {
+        OuyaExampleCommon.UpdateJoysticks();
+    }
+
+    void Update()
+    {
+        Vector3 pos = transform.position;
+
+        Vector2 input;
+        input.x = OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.AXIS_LSTICK_X, Index);
+        input.y = OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.AXIS_LSTICK_Y, Index);
+
+        if (Mathf.Abs(input.x) > INNER_DEADZONE)
+        {
+            pos.x += input.x*MOVE_SPEED*Time.deltaTime;
+        }
+
+        if (Mathf.Abs(input.y) > INNER_DEADZONE)
+        {
+            pos.y -= input.y*MOVE_SPEED*Time.deltaTime;
+        }
+
+        transform.position = pos;
+    }
+}
+```
+
 #### Scene Products Example
 The products example shows how to get details about items that can be purchased in the OUYA store. The example comes with a list of example products. You will need to register your own products and product ids in the developer portal. For the example to run on your test device, make sure the OUYA Launcher is installed and running. The OUYA SDK provides methods for getting the details and invoking a purchase. When a purchase is invoked the OUYA Launcher will display a purchase layer above the Unity application. The result of the purchase is returned in the purchase success or failure event which you can handle in your Unity application. You can also get access to purchase receipts to verify the purchase. These methods allow you to create your own store presentation or in-app purchases while the transaction is happening in the OUYA Launcher. In the example, OuyaShowProducts script displays the UI using Unity GUI in the OnGUI event. The Get Products button will invoke getting the products, although this also happens in the Awake event. The purchase button will invoke a purchase event which will open layout above the Unity application in the OUYA Launcher.
 
