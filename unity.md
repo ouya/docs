@@ -283,9 +283,89 @@ SceneGame is just like SceneMain as it has a button to switch back to the main m
 The package includes several example scenes. Each example scene has a custom script that highlights a functional area. Each OUYA example will need the OuyaGameObject added to only the initial scene. Refer to the starter kit for more info. There is an OuyaGameObject prefab that you can drag to the initial scene to create the game object. This object is responsible for letting the OUYA java interface send messages to Unity. Unity can communicate with Java and C++ via the OuyaSDK class. The OuyaGameObject is where you enter your developer id from the developer portal. OuyaGameObject is how Java talks to Unity C#. And the OuyaSDK is how Unity C# communicates with Java.
 
 #### Show Unity Input Example
-This example scene maps known controllers to a virtual 3d controller. That said, you may have an unrecognized controller that you are testing while doing development. If your controller is not recognized, let us know by posting in the developer forums.
+This example scene maps known controllers to a virtual 3d controller. That said, you may have an unrecognized controller that you are testing while doing development. If your controller is not recognized, let us know by posting in the developer forums. In the example, as you press a controller button, the axis or button will highlight on the virtual control. As you move your physical controller axis, the virtual controller axis will move. The scene has an instance of the controller model, and the example OuyaShowUnityInput script. The attached script has meta references to the specific controller parts to control the highlighting and movement. Each button and axis has a MeshRenderer component which is used to access the material and change the color. From the MeshRenderer component, the transform can be accessed to rotate the thumbsticks and triggers. The axis and button values are provided from the Unity Input API, where the OUYA SDK obtains the proper mappings for the controller.
 
+The OUYA Bluetooth controller, PS2/3 controllers, and XBOX wired/wireless controllers all work while testing in the Unity3d Editor. The same controllers will also work connected to the OUYA console.  
+  
 ![Device Controller](http://d3j5vwomefv46c.cloudfront.net/photos/large/785592989.png?1372462788)
+
+##### Script
+To be able to attach a script to a GameObject, the example must extend MonoBehaviour. The input logic script should implement the OUYA SDK input listeners.
+
+The MenuButtonUp listener is invoked when the system button sends a onKeyUp KeyEvent.
+
+The MenuAppearing listener is invoked when the system button is double tapped, or is held longer than a second.
+
+The the pause and resume interface to handle pause and resume events.
+
+```csharp
+public class OuyaShowController : MonoBehaviour,
+    OuyaSDK.IMenuButtonUpListener,
+    OuyaSDK.IMenuAppearingListener,
+    OuyaSDK.IPauseListener,
+    OuyaSDK.IResumeListener
+```
+
+The developer identifier is now entered in the init scene in the inspector on the OuyaGameObject scene object. The developer id is found in the developer portal.  
+  
+Per the interface for the listeners, register in the Awake event.  
+  
+Conversely, unregister in the OnDestroy event.
+
+```csharp
+    void Awake()
+    {
+        OuyaSDK.registerMenuButtonUpListener(this);
+        OuyaSDK.registerMenuAppearingListener(this);
+        OuyaSDK.registerPauseListener(this);
+        OuyaSDK.registerResumeListener(this);
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterMenuButtonUpListener(this);
+        OuyaSDK.unregisterMenuAppearingListener(this);
+        OuyaSDK.unregisterPauseListener(this);
+        OuyaSDK.unregisterResumeListener(this);
+    }
+```
+
+It's a good idea to clear the input state when the scene loads and when the scene is destroyed.
+
+```csharp
+    void Awake()
+    {
+        Input.ResetInputAxes();
+    }
+    void OnDestroy()
+    {
+        Input.ResetInputAxes();
+    }
+```
+
+When the system button is pressed, show your pause menu.
+
+```csharp
+    public void OuyaMenuButtonUp()
+    {
+    }
+    
+When your game is about to close, prepare to exit.
+
+    public void OuyaMenuAppearing()
+    {
+    }
+```
+
+With the pause/unpause listeners you need to need to implement OuyaOnPause and OuyaOnResume events. This is where you can shutdown your game, or reinitialize the game on resume, or potentially save your game state.
+```csharp
+    public void OuyaOnPause()
+    {
+    }
+
+    public void OuyaOnResume()
+    {
+    }
+```
 
 
 #### Scene Products Example
