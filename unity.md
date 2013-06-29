@@ -369,6 +369,133 @@ With the pause/unpause listeners you need to need to implement OuyaOnPause and O
     }
 ```
 
+####OUYA Example Common code
+
+Examples share common code which is found in the OuyaExampleCommon.cs script.
+
+Some examples need to select a single controller at a time. The controller index is the current selected controller for the example. Especially with the OuyaShowUnityInput example where input is only shown for the selected controller.
+
+```csharp
+public class OuyaExampleCommon
+{
+	public static OuyaSDK.OuyaPlayer Player = OuyaSDK.OuyaPlayer.player1;
+}
+```
+
+It would be inefficent to get the list of joystick names 100 times a second, so I have an example timer which gets the array every 3 seconds no matter how many times the names are requested.
+
+```csharp
+public class OuyaExampleCommon
+{
+    public static string[] Joysticks = null;
+}
+```
+
+The OuyaShowUnityInput just needs to call UpdateJoysticks in the Update or better yet FixedUpdate loop. This keeps the list of Joystick names updated which is used to select the proper axis mappings.
+
+```csharp
+public class OuyaShowUnityInput
+{
+    void FixedUpdate()
+    {
+        OuyaExampleCommon.UpdateJoysticks();
+    }
+}
+```
+
+When dealing with controllers and getting the Axis values keep deadzones in mind. You may need to tweak the values. Generally an inner deadzone value of 0.3 is cautious enough. Using the common input code, getting an axis allows you to pass an enum value to specify the axis, and a player controller enum for the controller. The common code uses the joystick name, finds the intended axis and returns the Input.RawAxis value from the Unity API. RawAxis values are uninterpolated values without any smoothing applied. Conversely, Input.GetAxis applies Unity smoothing. And Mathf.Abs is used to check for the inner deadzone whether the axis value is positive or negative.
+
+```csharp
+public class OuyaShowUnityInput
+{
+    void Update()
+    {
+    	if (Mathf.Abs(OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.AXIS_LSTICK_X, OuyaExampleCommon.Player)) < 0.3)
+    	{
+    		//in the deadzone, ignore input
+    	}
+    	else
+    	{
+    		//handle input and do something
+    	}
+    }
+}
+```
+
+The OuyaSDK has a list of common enums for axises and buttons that map to the supported controllers. The KeyEnum also includes some controller specific values. Oh yeah and there's some Rockband (TM) controller mappings in there too.
+
+```csharp
+public static class OuyaSDK
+{
+    public enum KeyEnum
+    {
+        NONE = -1,
+        BUTTON_O = OuyaSDK.BUTTON_O,
+        BUTTON_U = OuyaSDK.BUTTON_U,
+        BUTTON_Y = OuyaSDK.KEYCODE_BUTTON_Y,
+        BUTTON_A = OuyaSDK.BUTTON_A,
+        BUTTON_LB = OuyaSDK.BUTTON_LB,
+        BUTTON_LT = OuyaSDK.KEYCODE_BUTTON_L2,
+        BUTTON_RB = OuyaSDK.BUTTON_RB,
+        BUTTON_RT = OuyaSDK.BUTTON_RT,
+        BUTTON_L3 = OuyaSDK.BUTTON_L3,
+        BUTTON_R3 = OuyaSDK.BUTTON_R3,
+        BUTTON_SYSTEM = OuyaSDK.BUTTON_SYSTEM,
+        BUTTON_START = OuyaSDK.BUTTON_START,
+        BUTTON_SELECT = OuyaSDK.BUTTON_SELECT,
+        BUTTON_ESCAPE = OuyaSDK.BUTTON_ESCAPE,
+        AXIS_LSTICK_X = OuyaSDK.AXIS_LSTICK_X,
+        AXIS_LSTICK_Y = OuyaSDK.AXIS_LSTICK_Y,
+        AXIS_RSTICK_X = OuyaSDK.AXIS_RSTICK_X,
+        AXIS_RSTICK_Y = OuyaSDK.AXIS_RSTICK_Y,
+        BUTTON_DPAD_UP = OuyaSDK.BUTTON_DPAD_UP,
+        BUTTON_DPAD_RIGHT = OuyaSDK.BUTTON_DPAD_RIGHT,
+        BUTTON_DPAD_DOWN = OuyaSDK.BUTTON_DPAD_DOWN,
+        BUTTON_DPAD_LEFT = OuyaSDK.BUTTON_DPAD_LEFT,
+        BUTTON_DPAD_CENTER = OuyaSDK.BUTTON_DPAD_CENTER,
+        
+        BUTTON_BACK,
+
+        HARMONIX_ROCK_BAND_GUITAR_GREEN,
+        HARMONIX_ROCK_BAND_GUITAR_RED,
+        HARMONIX_ROCK_BAND_GUITAR_YELLOW,
+        HARMONIX_ROCK_BAND_GUITAR_BLUE,
+        HARMONIX_ROCK_BAND_GUITAR_ORANGE,
+        HARMONIX_ROCK_BAND_GUITAR_LOWER,
+        HARMONIX_ROCK_BAND_GUITAR_WHAMMI,
+        HARMONIX_ROCK_BAND_GUITAR_PICKUP,
+        HARMONIX_ROCK_BAND_GUITAR_STRUM,
+
+        HARMONIX_ROCK_BAND_DRUMKIT_GREEN,
+        HARMONIX_ROCK_BAND_DRUMKIT_RED,
+        HARMONIX_ROCK_BAND_DRUMKIT_YELLOW,
+        HARMONIX_ROCK_BAND_DRUMKIT_BLUE,
+        HARMONIX_ROCK_BAND_DRUMKIT_ORANGE,
+        HARMONIX_ROCK_BAND_DRUMKIT_A,
+        HARMONIX_ROCK_BAND_DRUMKIT_B,
+        HARMONIX_ROCK_BAND_DRUMKIT_X,
+        HARMONIX_ROCK_BAND_DRUMKIT_Y,
+	}
+}
+```
+OuyaShowUnityInput also uses OuyaExampleCommon to get button state. The method takes an enum button and an enum controller for the player number. OuyaExampleCommon.GetButton finds the button mapping based on the controller name and then invokes the Input.GetKey method. This finds the current state of the button. This doesn't find whether the button was just pressed. If you rely on the Unity Input API to check if the button was just pressed, there's always a chance that you might have missed the event. I personally like to keep track of such things in my own code. That said this framework allows you to call the Unity Input API, so if you highly desire calling Input.GetButtonDown and Input.GetButtonUp you can.
+
+```csharp
+public class OuyaShowUnityInput
+{
+    void Update()
+    {
+		if (OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_L3, OuyaExampleCommon.Player))
+    	{
+    		//button is pressed
+    	}
+    	else
+    	{
+    		//button is not pressed
+    	}
+    }
+}
+```
 
 #### Scene Products Example
 The products example shows how to get details about items that can be purchased in the OUYA store. The example comes with a list of example products. You will need to register your own products and product ids in the developer portal. For the example to run on your test device, make sure the OUYA Launcher is installed and running. The OUYA SDK provides methods for getting the details and invoking a purchase. When a purchase is invoked the OUYA Launcher will display a purchase layer above the Unity application. The result of the purchase is returned in the purchase success or failure event which you can handle in your Unity application. You can also get access to purchase receipts to verify the purchase. These methods allow you to create your own store presentation or in-app purchases while the transaction is happening in the OUYA Launcher. In the example, OuyaShowProducts script displays the UI using Unity GUI in the OnGUI event. The Get Products button will invoke getting the products, although this also happens in the Awake event. The purchase button will invoke a purchase event which will open layout above the Unity application in the OUYA Launcher.
