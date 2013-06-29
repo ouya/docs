@@ -348,9 +348,11 @@ When the system button is pressed, show your pause menu.
     public void OuyaMenuButtonUp()
     {
     }
-    
+```
+
 When your game is about to close, prepare to exit.
 
+```csharp
     public void OuyaMenuAppearing()
     {
     }
