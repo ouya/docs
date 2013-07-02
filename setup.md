@@ -55,8 +55,6 @@ Android SDK Latest - http://developer.android.com/sdk/index.html<br/>
 Android SDK Archived Rev 21 on Windows - http://dl.google.com/android/android-sdk_r21-windows.zip<br/>
 Android SDK Archived Rev 21 on Mac - http://dl.google.com/android/android-sdk_r21-macosx.zip<br/>
 
-ElGato Capture Software - http://www.elgato.com/gaming/game-capture-hd/support/update
-
 ##### Preliminary Instructions
 
 To fully complete the setup, you will need:
@@ -313,4 +311,4 @@ For games using the Android UI Framework, the Android documentation from Google 
 
 ##### Video Capture
 
-For capturing video of your game, we recommend using [Elgato](http://www.elgato.com/gaming/game-capture-hd/support/update). Here is a setup and tutorial [video](http://www.youtube.com/watch?v=-Igb4IcpbDY).
+For capturing video of your game, we recommend using [Elgato](http://www.elgato.com/) and the [capture software](http://www.elgato.com/gaming/game-capture-hd/support/update). Here is a setup and tutorial [video](http://www.youtube.com/watch?v=-Igb4IcpbDY).
