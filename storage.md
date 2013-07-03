@@ -11,12 +11,19 @@ To store some data use the method :
 	putGameData(String name, String value)
 ```
 
-To retrieve the data use the method :
+To retrieve the data for a particular name, use the method :
 
 ```java
 	String getGameData(String name)
 ```
 
+To retrieve all the stored data use the method :
+
+```java
+	Map<String, String> getAllGameData()
+```
+
 If no data is available a null will be returned.
+
 
 The data saved will be tied to an Android package name. It will not be possible for two games downloaded from the OUYA store to access the data from each other (because package names have to be unique for each game in the store), but it will be possible for side-loaded applications to use the same package name as your game and so could potentially manipulate it. Because of this you should not use this method for critical data without adding some form of check to the data to ensure the data has not been tampered with by a side-loaded application.
