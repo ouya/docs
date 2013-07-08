@@ -736,7 +736,7 @@ The OUYA SDK is a mixture of XML, C#, C++, Java, and XML which doesn’t nativel
 Given that you’ve integrated a Bluetooth headset with your application, verbal commands can add a new dimension into your gameplay. http://u3d.as/3pP
 
 #### Deployment
-With multiple Android devices on the same machine, Unity natively runs your application on the first device it finds. To extend Unity for simultaneous build/deployment/execution on multiple devices on multiple targets check out “GoodDrop” in the Unity Asset Store. You can extend your deployment target to your local machine, remote machines, devices on your machine, devices on your network, and devices over the Internet all from the Unity IDE.
+With multiple Android devices on the same machine, Unity natively runs your application on the first device it finds. To extend Unity for simultaneous build/deployment/execution on multiple devices on multiple targets check out [“GoodDrop”](https://github.com/JustGoodDesign/Docs/blob/master/GoodDrop.md) in the Unity Asset Store. You can extend your deployment target to your local machine, remote machines, devices on your machine, devices on your network, and devices over the Internet all from the Unity IDE.
 
 #### Version Control
 If your project uses SVN for version control, check out “Good SVN” for integrated version control in Unity which works on Windows and Mac. https://www.assetstore.unity3d.com/#/content/7242
