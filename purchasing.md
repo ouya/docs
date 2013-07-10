@@ -122,7 +122,13 @@ The first thing you will need to do is ensure that your application key is inclu
 ```java
         // Create a PublicKey object from the key data downloaded from the developer portal.
         try {
-            X509EncodedKeySpec keySpec = new X509EncodedKeySpec(APPLICATION_KEY);
+            // Read in the key.der file (downloaded from the developer portal)
+            InputStream inputStream = getResources().openRawResource(R.raw.key);
+            byte[] applicationKey = new byte[inputStream.available()];
+            inputStream.read(applicationKey);
+            inputStream.close();
+            // Create a public key
+            X509EncodedKeySpec keySpec = new X509EncodedKeySpec(applicationKey);
             KeyFactory keyFactory = KeyFactory.getInstance("RSA");
             mPublicKey = keyFactory.generatePublic(keySpec);
         } catch (Exception e) {
