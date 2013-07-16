@@ -1,7 +1,7 @@
 ## UDK Engine
 
 ### Downloads
-Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Unreal
+Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/UDK
 
 ## Guide
 
