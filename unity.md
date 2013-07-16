@@ -48,9 +48,9 @@ If you are new to Unity, this crash course should bring you up to speed on the U
  
 <tr>
   
- <td>Paint Series 001 02 Project (12:06)<br/>
+ <td>Paint Series 001 - 02 Project (12:06)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Oxq7k_l76_o" target="_blank">
-<img src="http://img.youtube.com/vi/Oxq7k_l76_o/0.jpg" alt="Paint Series 001 02 Project" width="240" height="180" border="10" /></a>
+<img src="http://img.youtube.com/vi/Oxq7k_l76_o/0.jpg" alt="Paint Series 001 - 02 Project" width="240" height="180" border="10" /></a>
  </td>
  
  <td>Paint Series 001 - 03 Camera (0:59)<br/>
