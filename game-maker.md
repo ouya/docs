@@ -6,6 +6,11 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/GameMak
 
 Game Maker - http://yoyogames.com/gamemaker/download
 
+### Developer Support Hangouts
+
+2013:
+[<a href="http://www.youtube.com/watch?v=zWYVYmk6luc" target="_blank">Jul 15</a>]&nbsp;
+
 ## Guide
 
 ### Video Tutorials
