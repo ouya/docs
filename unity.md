@@ -82,8 +82,8 @@ If you are new to Unity, this crash course should bring you up to speed on the U
   </td>
   
   <td>Paint Series 001 - 07 Input (12:12)<br/>
- <a href="http://www.youtube.com/watch?feature=player_embedded&v=QRX5XanQjd4" target="_blank">
- <img src="http://img.youtube.com/vi/QRX5XanQjd4/0.jpg" alt="Paint Series 001 - 07 Input" width="240" height="180" border="10" /></a>
+ <a href="http://www.youtube.com/watch?feature=player_embedded&v=5rysqDc1rIY" target="_blank">
+ <img src="http://img.youtube.com/vi/5rysqDc1rIY/0.jpg" alt="Paint Series 001 - 07 Input" width="240" height="180" border="10" /></a>
   </td>
   
  </tr>
