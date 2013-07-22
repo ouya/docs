@@ -9,17 +9,17 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Android
 
 The Tegra Toolkit is a large toolset which includes the following:
 
--<b>Visual Studio Templates</b> - Adds compiling and debugging Android Java and Android Native Applications
+<b>Visual Studio Templates</b> - Adds compiling and debugging Android Java and Android Native Applications
 
--<b>Android NDK</b> - Development kit for compiling "C" native applications
+<b>Android NDK</b> - Development kit for compiling "C" native applications
 
--<b>Android SDK</b> - Software development kid for compiling Android applications
+<b>Android SDK</b> - Software development kid for compiling Android applications
 
--<b>NVidia NDK modules</b> - for hardware accelerated development
+<b>NVidia NDK modules</b> - for hardware accelerated development
 
--<b>Eclipse</b> - A common IDE for integrated Java development
+<b>Eclipse</b> - A common IDE for integrated Java development
 
--<b>NVidia Samples</b> - A large set of hardware accelerated examples in Java and Native Applications
+<b>NVidia Samples</b> - A large set of hardware accelerated examples in Java and Native Applications
 
 ### Examples
 
