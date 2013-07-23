@@ -25,7 +25,7 @@ The Tegra Toolkit is a large toolset which includes the following:
 
 Examples are included at the base GIT path.
 
-Multiple Activities - https://github.com/ouya/ouya-sdk-examples/tree/master/Android/MultipleActivities
+<b>Multiple Activities</b> - https://github.com/ouya/ouya-sdk-examples/tree/master/Android/MultipleActivities
 
 ### Resources
 
