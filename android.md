@@ -29,6 +29,8 @@ Examples are included at the base GIT path.
 
 <b>Multiple Activities Native</b> - Switch between Java activities and a native activity in the same application - https://github.com/ouya/ouya-sdk-examples/tree/master/Android/MultipleActivitiesNative
 
+<b>Multiple Activities WebView</b> - Switch between Java activities with a browser in the same application - https://github.com/ouya/ouya-sdk-examples/tree/master/Android/MultipleActivitiesWebView
+
 ### Resources
 
 <b>Android NDK</b> - http://developer.android.com/tools/sdk/ndk/index.html
