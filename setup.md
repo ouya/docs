@@ -48,15 +48,12 @@
  
  <tr>
 
- <td>Use ADB to Adjust Volume (0:38)<br/>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=ztOxomuEsUw" target="_blank">
-<img src="http://img.youtube.com/vi/ztOxomuEsUw/0.jpg" alt="Use ADB to Adjust Volume" width="240" height="180" border="10" /></a>
- </td>
- 
  <td>Check Your Safe Area (3:36)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Dz7ZRjN3KlE" target="_blank">
 <img src="http://img.youtube.com/vi/Dz7ZRjN3KlE/0.jpg" alt="Put Important Content in the Safe Area to Pass Submission" width="240" height="180" border="10" /></a>
  </td>
+ 
+ <td></td>
  
  </tr> 
  
