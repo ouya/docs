@@ -31,6 +31,8 @@ Examples are included at the base GIT path.
 
 <b>Multiple Activities WebView</b> - Switch between Java activities with a browser in the same application - https://github.com/ouya/ouya-sdk-examples/tree/master/Android/MultipleActivitiesWebView
 
+<b>Set Resolutions</b> - Switch between view size resolutions - https://github.com/ouya/ouya-sdk-examples/tree/master/Android/SetResolutions
+
 ### Resources
 
 <b>Android NDK</b> - http://developer.android.com/tools/sdk/ndk/index.html
