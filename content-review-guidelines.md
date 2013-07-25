@@ -1,4 +1,4 @@
-Version 1.0, February 15, 2013
+Version 1.1, July 25, 2013
 
 ##Introduction
 
@@ -36,9 +36,7 @@ The green overlay denotes the safe area which can be toggled while a game is run
 <hr>
 
 
-But don’t fret, this is easy to fix:
-
-In the Terminal or Command Prompt:
+Safe zone issues are is easy to check. In the Terminal or Command Prompt:
 
 1. Type adb shell, press Enter<br/> (this opens the shell prompt connected to the device)
 ```
