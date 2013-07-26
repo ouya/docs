@@ -49,3 +49,5 @@ Examples are included at the base GIT path.
 <i>*Be sure to register to get access to the Tegra Developer Pack downloads.</i><br/>
 <b>Tegra Registered Developer Program</b> - https://developer.nvidia.com/registered-developer-programs<br/>
 </td></tr></table>
+
+<b>Android:Drawables</b> - A list of the built-in Android drawables - http://androiddrawableexplorer.appspot.com/
