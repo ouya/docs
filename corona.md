@@ -3,6 +3,16 @@
 ### Downloads
 Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Corona
 
+### Developer Support Hangouts
+
+2013:
+
+<table border=1>
+<tr><td>OUYA Hangout July 15th (1:00:00)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=zWYVYmk6luc" target="_blank">
+<img src="http://img.youtube.com/vi/zWYVYmk6luc/0.jpg" alt="OUYA Hangout July 15th," width="240" height="180" border="10" /></a></td> 
+<td></td></tr></table>
+
 ## Guide
 
 ### Examples

@@ -26,6 +26,84 @@ Open source, clone https://github.com/ouya/ouya-unity-plugin directly from publi
 
 ## Guide
 
+### Learn Unity
+
+If you are new to Unity, this crash course should bring you up to speed on the Unity interface while you make a PhotoShop clone from scratch.
+
+<table border=1>
+
+<tr>
+
+ <td>Paint Series 001 - 00 Introduction (1:27)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=uQ6redu1B3Q" target="_blank">
+<img src="http://img.youtube.com/vi/uQ6redu1B3Q/0.jpg" alt="Paint Series 001 - 00 Introduction" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td>Paint Series 001 - 01 Asset (6:27)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=fXPTSJS0i30" target="_blank">
+<img src="http://img.youtube.com/vi/fXPTSJS0i30/0.jpg" alt="Paint Series 001 - 01 Asset" width="240" height="180" border="10" /></a>
+ </td>
+ 
+</tr>
+ 
+<tr>
+  
+ <td>Paint Series 001 - 02 Project (12:06)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Oxq7k_l76_o" target="_blank">
+<img src="http://img.youtube.com/vi/Oxq7k_l76_o/0.jpg" alt="Paint Series 001 - 02 Project" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ <td>Paint Series 001 - 03 Camera (0:59)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=E6BNJLPP-xE" target="_blank">
+<img src="http://img.youtube.com/vi/E6BNJLPP-xE/0.jpg" alt="Paint Series 001 - 00 Introduction" width="240" height="180" border="10" /></a>
+ </td>
+ 
+</tr>
+ 
+<tr>
+  
+ <td>Paint Series 001 - 04 Canvas (3:45)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=d8hYx0Q4k5o" target="_blank">
+<img src="http://img.youtube.com/vi/d8hYx0Q4k5o/0.jpg" alt="Paint Series 001 - 04 Canvas" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ <td>Paint Series 001 - 05 Material (0:59)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=QRX5XanQjd4" target="_blank">
+<img src="http://img.youtube.com/vi/QRX5XanQjd4/0.jpg" alt="Paint Series 001 - 05 Material" width="240" height="180" border="10" /></a>
+ </td>
+ 
+</tr>
+ 
+<tr>
+   
+  <td>Paint Series 001 - 06 Scripting (10:21)<br/>
+ <a href="http://www.youtube.com/watch?feature=player_embedded&v=d8hYx0Q4k5o" target="_blank">
+ <img src="http://img.youtube.com/vi/d8hYx0Q4k5o/0.jpg" alt="Paint Series 001 - 06 Scripting" width="240" height="180" border="10" /></a>
+  </td>
+  
+  <td>Paint Series 001 - 07 Input (12:12)<br/>
+ <a href="http://www.youtube.com/watch?feature=player_embedded&v=5rysqDc1rIY" target="_blank">
+ <img src="http://img.youtube.com/vi/5rysqDc1rIY/0.jpg" alt="Paint Series 001 - 07 Input" width="240" height="180" border="10" /></a>
+  </td>
+  
+ </tr>
+ 
+ <tr>
+   
+  <td>Paint Series 001 - 08 Resolution (16:39)<br/>
+ <a href="http://www.youtube.com/watch?feature=player_embedded&v=W8dg1G6-t8I" target="_blank">
+ <img src="http://img.youtube.com/vi/W8dg1G6-t8I/0.jpg" alt="Paint Series 001 - 08 Resolution" width="240" height="180" border="10" /></a>
+  </td>
+  
+  <td>Paint Series 001 - 09 Conclusion (0:25)<br/>
+ <a href="http://www.youtube.com/watch?feature=player_embedded&v=BydzD6MaSEU" target="_blank">
+ <img src="http://img.youtube.com/vi/BydzD6MaSEU/0.jpg" alt="Paint Series 001 - 09 Conclusion" width="240" height="180" border="10" /></a>
+  </td>
+  
+ </tr>
+ 
+</table>
+
 ### ouya-unity-plugin Examples
 
 Several examples are included in the ouya-unity-plugin package.
@@ -736,7 +814,7 @@ The OUYA SDK is a mixture of XML, C#, C++, Java, and XML which doesn’t nativel
 Given that you’ve integrated a Bluetooth headset with your application, verbal commands can add a new dimension into your gameplay. http://u3d.as/3pP
 
 #### Deployment
-With multiple Android devices on the same machine, Unity natively runs your application on the first device it finds. To extend Unity for simultaneous build/deployment/execution on multiple devices on multiple targets check out “GoodDrop” in the Unity Asset Store. You can extend your deployment target to your local machine, remote machines, devices on your machine, devices on your network, and devices over the Internet all from the Unity IDE.
+With multiple Android devices on the same machine, Unity natively runs your application on the first device it finds. To extend Unity for simultaneous build/deployment/execution on multiple devices on multiple targets check out [“GoodDrop”](https://github.com/JustGoodDesign/Docs/blob/master/GoodDrop.md) in the Unity Asset Store. You can extend your deployment target to your local machine, remote machines, devices on your machine, devices on your network, and devices over the Internet all from the Unity IDE.
 
 #### Version Control
 If your project uses SVN for version control, check out “Good SVN” for integrated version control in Unity which works on Windows and Mac. https://www.assetstore.unity3d.com/#/content/7242

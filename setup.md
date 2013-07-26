@@ -46,16 +46,25 @@
  
  </tr>
  
+ <tr>
+
+ <td>Check Your Safe Area (3:36)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Dz7ZRjN3KlE" target="_blank">
+<img src="http://img.youtube.com/vi/Dz7ZRjN3KlE/0.jpg" alt="Put Important Content in the Safe Area to Pass Submission" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ <td></td>
+ 
+ </tr> 
+ 
 </table>
 
-**Direct download links**:
-
+<table border="1"><tr><td>
 **Known Issue**: Some game engines <a target=_blank href="http://forum.unity3d.com/threads/176737-unknown-error-when-building-simple-scene">[post]</a> still depend on an old version of the Android SDK Tools, so here is a direct link to the older version. In most cases you can install the latest version of the Android SDK. These are convienence links.<br/>
 Android SDK Latest - http://developer.android.com/sdk/index.html<br/>
 Android SDK Archived Rev 21 on Windows - http://dl.google.com/android/android-sdk_r21-windows.zip<br/>
 Android SDK Archived Rev 21 on Mac - http://dl.google.com/android/android-sdk_r21-macosx.zip<br/>
-
-ElGato Capture Software - http://www.elgato.com/gaming/game-capture-hd/support/update
+</td></tr></table>
 
 ##### Preliminary Instructions
 
@@ -313,4 +322,4 @@ For games using the Android UI Framework, the Android documentation from Google 
 
 ##### Video Capture
 
-For capturing video of your game, we recommend using [Elgato](http://www.elgato.com/gaming/game-capture-hd/support/update). Here is a setup and tutorial [video](http://www.youtube.com/watch?v=-Igb4IcpbDY).
+For capturing video of your game, we recommend using [Elgato](http://www.elgato.com/) and the [capture software](http://www.elgato.com/gaming/game-capture-hd/support/update). Here is a setup and tutorial [video](http://www.youtube.com/watch?v=-Igb4IcpbDY).

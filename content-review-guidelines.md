@@ -1,4 +1,4 @@
-Version 1.0, February 15, 2013
+Version 1.1, July 25, 2013
 
 ##Introduction
 
@@ -13,6 +13,70 @@ By following the guidelines below, young grasshopper, you’ll be live on OUYA b
 We understand your need to get feedback quickly and we are committed to making this happen as it benefits you, our developers, as well as OUYA’s gamers.
 
 Last week, it took us three days to review an average Game.  We’ll update this weekly for you.
+
+## Technical Guidelines
+### Safe Zone
+We want to provide a great experience for gamers with any type of TV. Some TVs have a substantial amount of overscan -- so much so that you can’t see the outside edge of the game at all. 
+
+For example:
+
+<a target=_blank href="https://s3.amazonaws.com/ouya-docs/SafeAreaTVMaxOverScanText2.png"><img width=600 src="https://s3.amazonaws.com/ouya-docs/SafeAreaTVMaxOverScanText2.png"/></a><br/>
+(Above) Notice how the outer UI elements for title and buttons are being clipped because they fall outside the safe zone.
+<hr>
+
+
+<a target=_blank href="https://s3.amazonaws.com/ouya-docs/SafeAreaTVNoOverScanText2.png"><img width=600 src="https://s3.amazonaws.com/ouya-docs/SafeAreaTVNoOverScanText2.png"/></a><br/>
+(Above) Here without the severe overscan you can see the important content that went missing along the outer edge.
+<hr>
+
+
+<a target=_blank href="https://s3.amazonaws.com/ouya-docs/InsideSafeArea.png"><img width=600 src="https://s3.amazonaws.com/ouya-docs/InsideSafeArea.png"/></a><br/>
+(Above) You have the option to stylize content outside the safe zone by including non-essential game art or generic padding.
+The green overlay denotes the safe area which can be toggled while a game is running with the commands in the following section.
+<hr>
+
+
+Safe zone issues are is easy to check. In the Terminal or Command Prompt:
+
+1. Type adb shell, press Enter<br/> (this opens the shell prompt connected to the device)
+```
+adb shell
+```
+
+2. Type su, press Enter (grant super-user access to the activity manager)
+```
+su
+```
+
+3. Type am start -n tv.ouya.console/tv.ouya.console.launcher.ToggleSafeZoneActivity, press Enter to toggle (toggles a green visual overlay showing the safe zone)
+```
+am start -n tv.ouya.console/tv.ouya.console.launcher.ToggleSafeZoneActivity
+```
+
+4. Type am display-size 1280x720, press Enter to switch to 720p (changes the TV display to the target resolution, if the resolution is not available emulates with a black area)
+```
+am display-size 1280x720
+```
+
+5. Type am display-size 1920x1080, press Enter to switch to 1080p (changes the resolution back to 1080p)
+```
+am display-size 1920x1080
+```
+
+Here is TimG with a video tip on handling the safe area.
+
+<table border=1>
+
+<tr>
+
+ <td>Check Your Safe Area (3:36)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Dz7ZRjN3KlE" target="_blank">
+<img src="http://img.youtube.com/vi/Dz7ZRjN3KlE/0.jpg" alt="Check Your Safe Area" width="240" height="180" border="10" /></a>
+ </td>
+ 
+</tr>
+
+</table>
 
 ##Content No-No’s
 
