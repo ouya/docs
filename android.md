@@ -33,6 +33,8 @@ Examples are included at the base GIT path.
 
 <b>Set Resolutions</b> - Switch between view size resolutions - https://github.com/ouya/ouya-sdk-examples/tree/master/Android/SetResolutions
 
+<b>Sound Mixer</b> - Detect volume changes - https://github.com/ouya/ouya-sdk-examples/tree/master/Android/SoundMixer
+
 ### Resources
 
 <b>Android NDK</b> - http://developer.android.com/tools/sdk/ndk/index.html
