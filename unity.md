@@ -460,27 +460,6 @@ public class OuyaExampleCommon
 }
 ```
 
-It would be inefficent to get the list of joystick names 100 times a second, so I have an example timer which gets the array every 3 seconds no matter how many times the names are requested.
-
-```csharp
-public class OuyaExampleCommon
-{
-    public static string[] Joysticks = null;
-}
-```
-
-The OuyaShowUnityInput just needs to call UpdateJoysticks in the Update or better yet FixedUpdate loop. This keeps the list of Joystick names updated which is used to select the proper axis mappings.
-
-```csharp
-public class OuyaShowUnityInput
-{
-    void FixedUpdate()
-    {
-        OuyaExampleCommon.UpdateJoysticks();
-    }
-}
-```
-
 When dealing with controllers and getting the Axis values keep deadzones in mind. You may need to tweak the values. Generally an inner deadzone value of 0.3 is cautious enough. Using the common input code, getting an axis allows you to pass an enum value to specify the axis, and a player controller enum for the controller. The common code uses the joystick name, finds the intended axis and returns the Input.RawAxis value from the Unity API. RawAxis values are uninterpolated values without any smoothing applied. Conversely, Input.GetAxis applies Unity smoothing. And Mathf.Abs is used to check for the inner deadzone whether the axis value is positive or negative.
 
 ```csharp
