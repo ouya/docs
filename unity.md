@@ -603,11 +603,6 @@ public class Player : MonoBehaviour,
     {
     }
 
-    void FixedUpdate()
-    {
-        OuyaExampleCommon.UpdateJoysticks();
-    }
-
     void Update()
     {
         Vector3 pos = transform.position;
