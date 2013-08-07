@@ -378,6 +378,7 @@ The the pause and resume interface to handle pause and resume events.
 
 ```csharp
 public class OuyaShowController : MonoBehaviour,
+    OuyaSDK.IJoystickCalibrationListener,
     OuyaSDK.IMenuButtonUpListener,
     OuyaSDK.IMenuAppearingListener,
     OuyaSDK.IPauseListener,
@@ -393,6 +394,7 @@ Conversely, unregister in the OnDestroy event.
 ```csharp
     void Awake()
     {
+        OuyaSDK.registerJoystickCalibrationListener(this);
         OuyaSDK.registerMenuButtonUpListener(this);
         OuyaSDK.registerMenuAppearingListener(this);
         OuyaSDK.registerPauseListener(this);
@@ -400,6 +402,7 @@ Conversely, unregister in the OnDestroy event.
     }
     void OnDestroy()
     {
+        OuyaSDK.unregisterJoystickCalibrationListener(this);
         OuyaSDK.unregisterMenuButtonUpListener(this);
         OuyaSDK.unregisterMenuAppearingListener(this);
         OuyaSDK.unregisterPauseListener(this);
@@ -417,6 +420,14 @@ It's a good idea to clear the input state when the scene loads and when the scen
     void OnDestroy()
     {
         Input.ResetInputAxes();
+    }
+```
+
+When a controller connects or disconnects, a calibration event will fire.
+
+```csharp
+    public void OuyaOnJoystickCalibration()
+    {
     }
 ```
 
