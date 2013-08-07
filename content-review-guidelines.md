@@ -80,7 +80,7 @@ Here is TimG with a video tip on handling the safe area.
 
 ##Content No-No’s
 
-We want you to build imaginative, inventive games. To make sure OUYA has a great environment for gamers, there are a few things we don’t want to see on OUYA. First, make sure to rate your game according to OUYA’s Content Rating Guidelines below (be honest).  Then, let’s avoid these:
+We want you to build imaginative, inventive games. To make sure OUYA has a great environment for gamers, there are a few things we don’t want to see on OUYA. First, make sure to rate your game according to OUYA’s Content Rating Guidelines below (be honest).  Then ensure your submitted screen-shots and Game Details text contains no explicit content. And finally, let’s avoid these:
 
 * **Hate Speech**: Do not promote hatred toward an individual or group of people based on their race or ethnic origin, religion, disability, gender, age, veteran status, or sexual orientation/gender identity in your game.  If you do, we’ll reject it.
 
