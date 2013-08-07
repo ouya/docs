@@ -112,7 +112,7 @@ All games must function on a retail OUYA device, without modifications to hardwa
 
 The size of the initial Game’s download (the .apk file) should be 750MB or less. If a Game requires additional files or assets, they should be delivered via your own servers.
 
-Games should run in full-screen mode (it is TV ya know).
+Games should run in full-screen mode and be playable in 720p and 1080p (it is TV ya know).
 
 Games should follow the OUYA [Interface Guidelines](https://devs.ouya.tv/developers/docs/interface-guidelines), including the names of the controller buttons and related UI standards.
 
