@@ -28,6 +28,8 @@ Examples are included at the base GIT path.
 
 <a target=_blank href="https://github.com/ouya/ouya-sdk-examples/blob/master/GameMaker/VirtualController.gmz"><b>Virtual Controller</b></a> - Maps OUYA controllers to multiple virtual controllers
 
+<a target=_blank href="http://gmc.yoyogames.com/index.php?showtopic=570978&page=1"><b>In-App-Purchases</b></a> - Follow the post by Manuel777 of the GMS Community, which adds purchase support to GMS
+
 ### Resources
 
 Game Maker Wiki - http://wiki.yoyogames.com/index.php
