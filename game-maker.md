@@ -35,5 +35,3 @@ Examples are included at the base GIT path.
 Game Maker Wiki - http://wiki.yoyogames.com/index.php
 
 Game Maker Studio Setup for Android - http://wiki.yoyogames.com/index.php/GameMaker:Studio_Settings_for_Android
-
-Setting up the ODK - http://gmc.yoyogames.com/index.php?showtopic=570978
