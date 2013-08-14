@@ -181,9 +181,7 @@ Several examples are included in the ouya-unity-plugin package.
 
 Starter Kit - A multiple scene project example, which has an initial setup scene, a splash scene, along with a main menu scene, and a game scene. The sample setup is everything you need to start developing a project for the OUYA.<br/>
 Ground Raycast - A simple example of raycasting to a ground plane using the camera projection.<br/>
-Multiple Controllers - Example shows controller scripts attached to individual players for simultaneous controller games.<br/>
 Set Resolution - Change the resolution, not only with the Unity API, but pass the call to Java to update the view dimensions.<br/>
-Controller - Legacy example uses a physical controller to manipulate a virtual controller.<br/>
 Mesh Performance - Compare frames per second speed when manipulating polygon count and overdraw.<br/>
 NDK - Native code can often run faster and then example shows example interfaces to have C# call into a C native plugin.<br/>
 Products - In-app-purchase example for getting products, requesting purchases, and getting receipts.<br/>
