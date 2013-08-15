@@ -112,7 +112,7 @@ Your game should continue to work even if a network connection goes down (exclud
 
 All games must function on a retail OUYA device, without modifications to hardware or software.
 
-The size of the initial Game’s download (the .apk file) should be 750MB or less. If a Game requires additional files or assets, they should be delivered via your own servers.
+The size of the initial Game’s download (the .apk file) should be 1.2 GB or less. If a Game requires additional files or assets, they should be delivered via your own servers.
 
 Games should run in full-screen mode and be playable in 720p and 1080p (it is TV ya know).
 
