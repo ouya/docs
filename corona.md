@@ -21,6 +21,10 @@ Examples are included at the base GIT path.
 
 <a target=_blank href="https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/VirtualController"><b>Virtual Controller</b></a> - Maps OUYA controllers to multiple virtual controllers
 
+####Corona Enterprise Examples
+
+<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Corona/InAppPurchases"><b>InAppPurchases</b></a> - Adds Java/LUA hooks for in-app-purchases in Corona Enterprise
+
 ### Resources
 
 Corona SDK - http://coronalabs.com/products/corona-sdk/<br/>
