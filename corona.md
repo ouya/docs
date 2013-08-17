@@ -356,3 +356,39 @@ The Corona Ouya Plugin wraps invoking methods on the OuyaFacade. The CoronaOuyaP
 #### src/.../IOuyaActivity.java
 
 This is an interface that holds static references and accessors for easy access between the SDK classes.
+
+#### Corona/callbacks*.lua
+
+When the CoronaOuyaFacade listener hits the onSuccess, onFailure, or onCancel callback the corresponding Lua callback is called.
+```
+Corona/callbacksFetchGamerUUID.lua
+Corona/callbacksRequestProducts.lua
+Corona/callbacksRequestPurchase.lua
+Corona/callbacksRequestReceipts.lua
+```
+
+#### Corona/globals.lua
+
+Store all the Lua script globals in one place.
+
+#### Corona/helpers.lua
+
+These are some helper lua scripts for creating buttons and fading sprites.
+
+#### Corona/inputs.lua
+
+This lua script provides the input handlers and navigation through the main menu. When the main buttons are clicked this script invokes the Java interfaces and supplies the Lua callbacks for the onSuccess, onFailure, and onCancel callbacks.
+
+#### Corona/main.lua
+
+Be sure to set your developer id from the developer portal.
+
+```
+local DEVELOPER_ID = "310a8f51-4d6e-4ae5-bda0-b93878e5f5d0";
+```
+
+The main script sets up the basic button and text layout of the application. The key input listener is also registered here.
+
+#### Corona/ui.lua
+
+The UI script handles displaying the products and receipts using the response data from the in-app-purchase service.
