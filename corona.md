@@ -312,3 +312,23 @@ Contained within CoronaRuntimeEventHandler defines Lua fuction interfaces that a
 #### src/.../CoronaOuyaActivity.java
 
 The activity is used to load the signing key resource and initialize the CoronaOuyaPlugin for in-app-purchases.
+
+#### src/.../AsyncLuaOuyaFetchGamerUUID.java
+
+This provides the Lua interface to Java to fetch the gamer uuid. 
+
+#### src/.../AsyncLuaOuyaRequestProducts.java
+
+This provides the Lua interface to Java to request the product details. 
+
+#### src/.../AsyncLuaOuyaRequestPurchase.java
+
+This provides the Lua interface to Java to request a purchase. 
+
+#### src/.../AsyncLuaOuyaRequestReceipts.java
+
+This provides the Lua interface to Java to request receipts. 
+
+#### src/.../AsyncLuaOuyaSetDeveloperId.java
+
+This provides the Lua interface to Java to set the developer id used by in-app-purchases. 
