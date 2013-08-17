@@ -344,3 +344,15 @@ CallbacksRequestPurchase.java
 CallbacksRequestPurchase.java
 CallbacksRequestReceipts.java
 ```
+
+#### src/.../CoronaOuyaFacade.java
+
+The Corona Ouya Facade is an interface between the callbacks above and the OuyaFacade which directly interacts with the in-app-purchase service. The "Async" methods pass the LuaState to the "Callbacks" and then invoke the "CoronaOuyaPlugin" which invokes the "OuyaFacade". The "CoronaOuyaFacade" services complete and invoke the "Callbacks" and the results are returned to Lua.
+
+#### src/.../CoronaOuyaPlugin.java
+
+The Corona Ouya Plugin wraps invoking methods on the OuyaFacade. The CoronaOuyaPlugin provides the Java listeners for the OuyaFacade callbacks.
+
+#### src/.../IOuyaActivity.java
+
+This is an interface that holds static references and accessors for easy access between the SDK classes.
