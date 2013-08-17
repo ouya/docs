@@ -94,6 +94,55 @@ Build for Android/OUYA with Command+Shift+B which will produce an APK that you c
 adb install -r /path/to/Example.apk
 ```
 
+Corona scripts are Lua scripts.
+
+#### build.settings
+
+The Corona Simulator doesn't have direct access to the Android.manifest, where build.settings gives you access to modify settings indirectly.
+
+Add the intent filter so that your game appears in the OUYA Play Category.
+
+```
+settings =
+{
+   android =
+   {
+      mainIntentFilter =
+      {
+         categories = { "tv.ouya.intent.category.GAME" },
+      }
+   },
+}
+```
+
+Set the orientation to landscape left.
+
+```
+settings =
+{
+	orientation = {
+		default = "landscapeLeft", 
+		supported = { "landscapeLeft", },
+	},
+}
+```
+
+#### Config.lua
+
+Corona is designed to scale up, not down. So you want to specify 720p which will scale up to 1080p.
+
+```
+application =
+{
+	content =
+	{
+		width = 1280,
+		height = 720,
+		scale = "letterbox", 
+	},
+} 
+```
+
 #### Virtual Controller
 
 Open the Corona Simulator at the path - ouya-sdk-examples/Corona/VirtualController/
