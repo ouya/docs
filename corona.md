@@ -287,7 +287,7 @@ Final builds should use a custom keystore. The debug keystore can be used for te
 
 #### local.properties
 
-Local properties define the keystore settings for the build.
+Local properties defines the Android SDK path and the keystore settings for the build.
 
 ```
 sdk.dir=~/android/android-sdk-macosx
@@ -296,3 +296,4 @@ key.store=debug.keystore
 key.store.password=android
 key.alias.password=android
 ```
+
