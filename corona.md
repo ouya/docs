@@ -332,3 +332,15 @@ This provides the Lua interface to Java to request receipts.
 #### src/.../AsyncLuaOuyaSetDeveloperId.java
 
 This provides the Lua interface to Java to set the developer id used by in-app-purchases. 
+
+#### src/.../Callbacks*.java
+
+The callback methods extract the arguments from the Lua calling method and returning the results to Lua after the service is invoked. Each callback implements onSuccess, onFailure, and onCancel methods.
+
+```
+CallbacksFetchGamerUUID.java
+CallbacksRequestProducts.java
+CallbacksRequestPurchase.java
+CallbacksRequestPurchase.java
+CallbacksRequestReceipts.java
+```
