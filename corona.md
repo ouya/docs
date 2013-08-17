@@ -165,6 +165,62 @@ Runtime:addEventListener( "key", onKeyEvent )
 
 Open the Corona Simulator at the path - ouya-sdk-examples/Corona/VirtualController/
 
+The key event callback gives you access to the event.
+
+```
+-- Called when a key event has been received.
+local function onKeyEvent( event )
+
+end
+```
+
+The event device descriptor tells you which controller the input came from.
+
+```
+if (tostring(event.device.descriptor) == "Joystick 1") then
+```
+
+The system button can be detected by the key name. The phase indicates whether the button is up or down.
+```
+    --System Button / Pause Menu
+    if (event.keyName == "menu" and event.phase == "up") then
+        print ("menu button detected")
+    end
+```
+
+For the OUYA controller, the dpads can be detected by their key names. "up", "down", "left", "right.
+```
+    --DPADS
+    if (event.keyName == "down") then
+```
+
+For the OUYA controller, the left stick and right stick buttons can be detected by key names.
+```
+if (event.keyName == "leftJoystickButton") then
+ if (event.keyName == "rightJoystickButton") then
+```
+
+For the OUYA controler, the "O", "U", "Y", "A" butons can be detected by key names, also.
+
+```
+ if (event.keyName == "buttonA") then -- O button
+ if (event.keyName == "buttonX") then -- U button
+ if (event.keyName == "buttonY") then -- Y button
+ if (event.keyName == "buttonB") then -- A button
+```
+
+For the OUYA controller, the left and right bumpers are detected by key names.
+```
+if (event.keyName == "leftShoulderButton1") then -- Left bumper
+if (event.keyName == "rightShoulderButton1") then -- right bumper
+```
+
+For the OUYA controller, the left and right triggers are detected by key name.
+```
+if (event.keyName == "leftShoulderButton2") then -- left trigger
+if (event.keyName == "rightShoulderButton2") then -- right trigger
+```
+
 ### Corona Enterprise
 
 The following examples apply to the Corona Enterprise version.
