@@ -297,3 +297,18 @@ key.store.password=android
 key.alias.password=android
 ```
 
+#### libs/ouya-sdk.jar
+
+The OUYA ODK library used by Corona.
+
+#### libs/gson-2.2.2.jar
+
+The Google JSON encoding library.
+
+#### src/.../CoronaApplication.java
+
+Contained within CoronaRuntimeEventHandler defines Lua fuction interfaces that allow Corona Lua scripts to invoke Java methods.
+
+#### src/.../CoronaOuyaActivity.java
+
+The activity is used to load the signing key resource and initialize the CoronaOuyaPlugin for in-app-purchases.
