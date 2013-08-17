@@ -84,3 +84,20 @@ The Corona examples were created using the Mac platform.
 ### Introduction
 Welcome to the Corona Enterprise development club. These examples provide a quick way to add OUYA controller and in-app-purchase support to your game.
 
+### Corona Simulator
+
+The following examples apply to the Corona Simulator version.
+
+Build for Android/OUYA with Command+Shift+B which will produce an APK that you can install with adb commands.
+
+```
+adb install -r /path/to/Example.apk
+```
+
+#### Virtual Controller
+
+Open the Corona Simulator at the path - ouya-sdk-examples/Corona/VirtualController/
+
+### Corona Enterprise
+
+The following examples apply to the Corona Enterprise version.
