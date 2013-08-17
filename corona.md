@@ -223,6 +223,38 @@ if (event.keyName == "leftShoulderButton2") then -- left trigger
 if (event.keyName == "rightShoulderButton2") then -- right trigger
 ```
 
+The axis event callback gives you access to the event.
+
+```
+-- Called when an axis event has been received.
+local function onAxisEvent( event )
+
+end
+```
+
+The event device descriptor tells you which controller the input came from.
+
+```
+if (tostring(event.device.descriptor) == "Joystick 1") then
+```
+
+Access values can be accessed via the normalizeValue field.
+
+```
+local valAxis = event.normalizedValue;
+```
+
+The corresponding axis can be determined by number for the OUYA Controller.
+
+```
+if (event.axis.number == 1) then -- LX
+if (event.axis.number == 2) then -- LY
+if (event.axis.number == 4) then -- RX
+if (event.axis.number == 5) then -- RY
+if (event.axis.number == 3) then -- Left Trigger
+if (event.axis.number == 6) then -- Right Trigger
+```
+
 ### Corona Enterprise
 
 The following examples apply to the Corona Enterprise version.
