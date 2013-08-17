@@ -258,3 +258,17 @@ if (event.axis.number == 6) then -- Right Trigger
 ### Corona Enterprise
 
 The following examples apply to the Corona Enterprise version.
+
+As with Corona Simulator projects the Corona subfolder can be opened and tested in Corona Simulator to validate the Lua script part of the project.
+```
+ouya-sdk-examples/Corona/InAppPurchases/Corona/
+```
+
+The android portion of the project cannot be compiled in the Corona Simulator and is compiled in the terminal or command line.
+```
+ouya-sdk-examples/Corona/InAppPurchases/android/
+```
+
+#### build_easy.sh
+
+This is a convienence shell script that clears the generated and binary files. The script invokes the build script and installs the build to the connected android device.
