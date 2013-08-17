@@ -269,6 +269,30 @@ The android portion of the project cannot be compiled in the Corona Simulator an
 ouya-sdk-examples/Corona/InAppPurchases/android/
 ```
 
+#### AndroidManifest.xml
+
+The standard Android configuration that can be customized for Corona. Here you can customize the CoronaApplication, CoronaActivity, and intent filters.
+
 #### build_easy.sh
 
-This is a convienence shell script that clears the generated and binary files. The script invokes the build script and installs the build to the connected android device.
+This is a convenience shell script that clears the generated and binary files. The script invokes the build script and installs the build to the connected android device.
+
+#### install_easy.sh
+
+This is a convenience shell script that installs the build android package.
+
+#### debug.keystore
+
+Final builds should use a custom keystore. The debug keystore can be used for testing builds.
+
+#### local.properties
+
+Local properties define the keystore settings for the build.
+
+```
+sdk.dir=~/android/android-sdk-macosx
+key.alias=androiddebugkey
+key.store=debug.keystore
+key.store.password=android
+key.alias.password=android
+```
