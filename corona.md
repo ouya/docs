@@ -69,3 +69,18 @@ install the sample:<br/>
 ###Recommended Tools
 
 Outlaw IDE - http://outlawgametools.com/outlaw-code-editor-and-project-manager/
+
+#Full Document
+
+### Authors
+Tim Graupmann (tim@tagenigma.com)
+
+### Audience
+The ouya-sdk-examples are targeted towards Corona Enterprise users intending to publish to the OUYA platform.
+
+### Supported Platforms
+The Corona examples were created using the Mac platform.
+
+### Introduction
+Welcome to the Corona Enterprise development club. These examples provide a quick way to add OUYA controller and in-app-purchase support to your game.
+
