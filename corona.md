@@ -127,7 +127,7 @@ settings =
 }
 ```
 
-#### Config.lua
+#### config.lua
 
 Corona is designed to scale up, not down. So you want to specify 720p which will scale up to 1080p.
 
@@ -141,6 +141,24 @@ application =
 		scale = "letterbox", 
 	},
 } 
+```
+
+#### main.lua
+
+The starting point for your Corona game.
+
+Subscribe to axis events with a callback to receive axis input events.
+
+```
+-- Add the axis event listener.
+Runtime:addEventListener( "axis", onAxisEvent )
+```
+
+Subscribe to key events with a callback to receive key input events.
+
+```
+-- Add the key event listener.
+Runtime:addEventListener( "key", onKeyEvent )
 ```
 
 #### Virtual Controller
