@@ -188,15 +188,17 @@ The system button can be detected by the key name. The phase indicates whether t
     end
 ```
 
-For the OUYA controller, the dpads can be detected by their key names. "up", "down", "left", "right.
+For the OUYA controller, the dpads can be detected by their key names. "down", "left", "right", "up".
 ```
-    --DPADS
     if (event.keyName == "down") then
+    if (event.keyName == "left") then
+    if (event.keyName == "right") then
+    if (event.keyName == "up") then
 ```
 
 For the OUYA controller, the left stick and right stick buttons can be detected by key names.
 ```
-if (event.keyName == "leftJoystickButton") then
+ if (event.keyName == "leftJoystickButton") then
  if (event.keyName == "rightJoystickButton") then
 ```
 
