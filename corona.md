@@ -241,6 +241,44 @@ if (event.axis.number == 3) then -- Left Trigger
 if (event.axis.number == 6) then -- Right Trigger
 ```
 
+#### main.lua
+
+Main creates the virtual controller sprites.
+```
+globals.controllers =
+{
+	ui.createController(1, 150, 500, 2, 2),
+	ui.createController(2, 150, 1200, 2, 2),
+	ui.createController(3, 850, 500, 2, 2),
+	ui.createController(4, 850, 1200, 2, 2)
+};
+```
+
+And the axis and button events are registered and handled by the inputs.lua script.
+```
+-- Add the key event listener.
+Runtime:addEventListener( "key", inputs.onKeyEvent )
+
+-- Add the axis event listener.
+Runtime:addEventListener( "axis", inputs.onAxisEvent )
+```
+
+#### globals.lua
+
+Globals defines the set of global controller objects handles in other scripts.
+
+#### helpers.lua
+
+These are some helper lua scripts for creating and fading sprites.
+
+#### inputs.lua
+
+The axis and button events pass through to the controller sprites to highlight button presses and move the virtual axises.
+
+#### ui.lua
+
+This script handles creation of the virtual controller sprites and loads the texture sprite objects.
+
 ### Corona Enterprise
 
 The following examples apply to the Corona Enterprise version.
