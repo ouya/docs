@@ -31,6 +31,7 @@ Corona SDK - http://coronalabs.com/products/corona-sdk/<br/>
 Corona SDK Daily Builds - http://developer.coronalabs.com/downloads/daily-builds<br/>
 Corona Enterpise Daily Builds - http://developer.coronalabs.com/downloads/enterprise-daily-builds<br/>
 Corona Resources - http://coronalabs.com/resources/<br/>
+Mastering Corona SDK - http://masteringcoronasdk.com/<br/>
 
 ### Building
 
