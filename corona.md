@@ -149,6 +149,8 @@ Runtime:addEventListener( "key", onKeyEvent )
 
 #### Virtual Controller
 
+<img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/801589767.png?1376936189"/>
+
 Open the Corona Simulator at the path - ouya-sdk-examples/Corona/VirtualController/
 
 The key event callback gives you access to the event.
