@@ -328,6 +328,10 @@ If you update the Android SDK path and generate local.properties be sure to read
 android update project --path .
 ```
 
+### In-App-Purchases
+
+<img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/801590366.png?1376936440"/>
+
 #### libs/ouya-sdk.jar
 
 The OUYA ODK library used by Corona.
