@@ -28,6 +28,8 @@ Examples are included at the base GIT path.
 ### Resources
 
 Corona SDK - http://coronalabs.com/products/corona-sdk/<br/>
+Corona SDK Daily Builds - http://developer.coronalabs.com/downloads/daily-builds<br/>
+Corona Enterpise Daily Builds - http://developer.coronalabs.com/downloads/enterprise-daily-builds<br/>
 Corona Video Tutorials - http://coronalabs.com/resources/videos/<br/>
 
 ### Building
