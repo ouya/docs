@@ -15,19 +15,12 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Corona
 
 ## Guide
 
+<table border=1>
 <tr>
-
  <td>Corona SDK on OUYA Intro (5:01)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=_Jd8lG-A4-U" target="_blank">
-<img src="http://img.youtube.com/vi/_Jd8lG-A4-U/0.jpg" alt="Corona SDK on OUYA Intro" width="240" height="180" border="10" /></a>
- </td>
- 
-  <td>
- </td>
- 
-</tr>
-
-</table>
+<img src="http://img.youtube.com/vi/_Jd8lG-A4-U/0.jpg" alt="Corona SDK on OUYA Intro" width="240" height="180" border="10" /></a></td>
+<td></td></tr></table>
 
 ### Examples
 
