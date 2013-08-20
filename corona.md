@@ -23,7 +23,12 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Corona
  <td>Corona Script Editors (6:05)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=iIg_c1qCPs4" target="_blank">
 <img src="http://img.youtube.com/vi/iIg_c1qCPs4/0.jpg" alt="Corona Script Editors" width="240" height="180" border="10" /></a></td>
-</tr></table>
+</tr>
+<tr>
+ <td>Corona SDK Virtual Controller (19:11)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=DmlL9dGNebc" target="_blank">
+<img src="http://img.youtube.com/vi/DmlL9dGNebc/0.jpg" alt="Corona SDK Virtual Controller" width="240" height="180" border="10" /></a></td>
+<td></td></tr></table>
 
 ### Examples
 
