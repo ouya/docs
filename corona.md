@@ -20,7 +20,10 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Corona
  <td>Corona SDK on OUYA Intro (5:01)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=_Jd8lG-A4-U" target="_blank">
 <img src="http://img.youtube.com/vi/_Jd8lG-A4-U/0.jpg" alt="Corona SDK on OUYA Intro" width="240" height="180" border="10" /></a></td>
-<td></td></tr></table>
+ <td>Corona Script Editors (6:05)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=iIg_c1qCPs4" target="_blank">
+<img src="http://img.youtube.com/vi/iIg_c1qCPs4/0.jpg" alt="Corona Script Editors" width="240" height="180" border="10" /></a></td>
+</tr></table>
 
 ### Examples
 
