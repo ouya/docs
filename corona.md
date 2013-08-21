@@ -31,7 +31,12 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Corona
  <td>Corona Simulator Builds (3:05)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=hGPdeoPcirU" target="_blank">
 <img src="http://img.youtube.com/vi/hGPdeoPcirU/0.jpg" alt="Corona Simulator Builds" width="240" height="180" border="10" /></a></td>
-</tr></table>
+</tr>
+<tr>
+ <td>Quick Corona Input Setup (3:00)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=qk5sS25ebxI" target="_blank">
+<img src="http://img.youtube.com/vi/qk5sS25ebxI/0.jpg" alt="Quick Corona Input Setup" width="240" height="180" border="10" /></a></td>
+<td></td></tr></table>
 
 ### Examples
 
