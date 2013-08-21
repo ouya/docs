@@ -58,6 +58,8 @@ Corona SDK Daily Builds - http://developer.coronalabs.com/downloads/daily-builds
 Corona Enterpise Daily Builds - http://developer.coronalabs.com/downloads/enterprise-daily-builds<br/>
 Corona Resources - http://coronalabs.com/resources/<br/>
 Mastering Corona SDK - http://masteringcoronasdk.com/<br/>
+Corona Forums - http://forums.coronalabs.com/<br/>
+(Corona on OUYA Forums)- http://forums.ouya.tv/categories/corona-on-ouya<br/>
 
 ### Building
 
