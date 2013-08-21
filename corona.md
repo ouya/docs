@@ -36,7 +36,10 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Corona
  <td>Quick Corona Input Setup (3:00)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=qk5sS25ebxI" target="_blank">
 <img src="http://img.youtube.com/vi/qk5sS25ebxI/0.jpg" alt="Quick Corona Input Setup" width="240" height="180" border="10" /></a></td>
-<td></td></tr></table>
+ <td>Corona Enterprise Quick IAP Setup (4:29)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=mrgYvagw1EE" target="_blank">
+<img src="http://img.youtube.com/vi/mrgYvagw1EE/0.jpg" alt="Corona Enterprise Quick IAP Setup" width="240" height="180" border="10" /></a></td>
+</tr></table>
 
 ### Examples
 
