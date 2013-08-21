@@ -28,7 +28,10 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Corona
  <td>Corona SDK Virtual Controller (19:11)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=DmlL9dGNebc" target="_blank">
 <img src="http://img.youtube.com/vi/DmlL9dGNebc/0.jpg" alt="Corona SDK Virtual Controller" width="240" height="180" border="10" /></a></td>
-<td></td></tr></table>
+ <td>Corona Simulator Builds (3:05)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=hGPdeoPcirU" target="_blank">
+<img src="http://img.youtube.com/vi/hGPdeoPcirU/0.jpg" alt="Corona Simulator Builds" width="240" height="180" border="10" /></a></td>
+</tr></table>
 
 ### Examples
 
