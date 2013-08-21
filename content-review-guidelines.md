@@ -140,6 +140,7 @@ To help expedite your game’s review, we ask that you assign a content rating t
 * Sexual and Suggestive Content: We know OUYA's one sleek, sexy console, but no: Pornography is never allowed. If games or apps suggest or make sexual references, they'll be rated 12+ or 17+. Focusing on these elements will result in a 17+ rating.
 * User Generated Content and User to User Communication: To protect the community, games or apps rated "everyone" cannot host user generated content or enable communication between users. And should OUYA players want to find and communicate with one another, those games will be rated 12+ or 17+.
 * Violence: We play violence safe. Games or apps that contain mild cartoon or fantasy violence are 9+, realistic or intense fantasy violence is 12+ or 17+, and graphic violence is always rated high maturity.
+* The OUYA name must be fully capitalized both in-game and on the game details page.
 
 ##Communication
 
