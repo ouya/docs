@@ -228,6 +228,8 @@ Now we wait for the money to start pouring in...
 
 At this point, we can get information on products and purchase them, but what if the user purchased something in a previous play session?  The ODK provides a way to list purchase receipts. Yes, this will require another listener object!
 
+Be sure to always query receipts for previous purchases and not just store your own "they bought the game" flag along with your saved-game data.  That method won't work if the user changes consoles (among many other edge cases).
+
 **Note**: Only products that are entitlements are returned. This is to avoid re-awarding players consumable product purchases that have already been consumed.
 
 For security reasons, the receipts are returned encrypted and must be decrypted within the application itself.  To assist with this, you can use the **OuyaEncryptionHelper**'s **decryptReceiptResponse** method.
