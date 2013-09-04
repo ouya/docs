@@ -14,6 +14,7 @@ In-App Purchasing (IAP) is how your app can make money.  The OUYA Developer Kit 
 **Receipt** -- information about a prior purchase. it has three attributes:
 * *Product ID* -- the product identifier
 * *Price* -- the amount that was paid
+* *Currency* -- the currency that the product was purchased in
 * *PurchaseDate* -- when the purchase was made
 
 **Entitlements** --  a product which can be purchased only once and remains available to the game upon reinstallation
@@ -99,7 +100,7 @@ Now we will create our own listener!  In this example, we are extending the **Ca
 			@Override
 			public void onSuccess(ArrayList<Product> products) {
 				for(Product p : products) {
-					Log.d("Product", p.getName() + " costs " + p.getPriceInCents());
+					Log.d("Product", p.getName() + " costs " + p.getFormattedPrice());
 				}
 			}
 
@@ -249,7 +250,7 @@ Let us take a look at our listener:
 					throw new RuntimeException(e);
 				}
 				for (Receipt r : receipts) {
-					Log.d("Receipt", "You have purchased: " + r.getIdentifier());
+					Log.d("Receipt", "You have purchased: " + r.getIdentifier() + " for " + r.getFormattedPrice());
 				}
 			}
 
