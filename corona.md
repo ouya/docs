@@ -5,7 +5,8 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Corona
 
 ### Forums
 
-* <a target=_blank href="http://forums.ouya.tv/categories/corona-on-ouya">corona-on-ouya</a>
+@OUYA - (Corona on OUYA Forums)- http://forums.ouya.tv/categories/corona-on-ouya<br/>
+@Corona - (Corona Forums) - http://forums.coronalabs.com/forum/627-ouya/<br/>
 
 ### Developer Support Hangouts
 
@@ -72,8 +73,6 @@ Corona SDK Daily Builds - http://developer.coronalabs.com/downloads/daily-builds
 Corona Enterpise Daily Builds - http://developer.coronalabs.com/downloads/enterprise-daily-builds<br/>
 Corona Resources - http://coronalabs.com/resources/<br/>
 Mastering Corona SDK - http://masteringcoronasdk.com/<br/>
-@OUYA - (Corona on OUYA Forums)- http://forums.ouya.tv/categories/corona-on-ouya<br/>
-@Corona - (Corona Forums) - http://forums.coronalabs.com/forum/627-ouya/<br/>
 
 ### Building
 
