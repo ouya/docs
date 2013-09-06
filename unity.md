@@ -640,6 +640,26 @@ The products example shows how to get details about items that can be purchased 
 
 ![Scene Products Example](https://d31pno3ktcq63f.cloudfront.net/assets/unity/16_ProductsExample.png)
 
+
+##### General Steps
+
+The general steps for in-app-purchases are:
+
+1. Check player prefs to see if the full game has been unlocked.
+
+2. If the game hasn't been unlocked, check receipts for the purchase.
+
+3. If the purchase is found, set the player prefs that the game is unlocked.
+
+4. If the purchase is not found, show the store/buy button.
+
+5. When the buy button is pressed, request a purchase.
+
+6. Upon successful purchase set the player prefs for full game unlocked.
+
+7. If the player prefs has full game unlocked, show a visual change that the game is unlocked.
+
+
 ##### Script
 Add listeners for the purchase-iap-system areas for FetchGamerUUID, GetProducts, Purchase, and GetReceipts.
 ```csharp
