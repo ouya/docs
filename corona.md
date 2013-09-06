@@ -39,6 +39,12 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Corona
  <td>Quick Corona IAP Setup (4:29)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=mrgYvagw1EE" target="_blank">
 <img src="http://img.youtube.com/vi/mrgYvagw1EE/0.jpg" alt="Quick Corona Enterprise IAP Setup" width="240" height="180" border="10" /></a></td>
+</tr>
+<tr>
+ <td>Corona SDK Install - Windows (1:30)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=ab-IhPCdkY8" target="_blank">
+<img src="http://img.youtube.com/vi/ab-IhPCdkY8/0.jpg" alt="Corona SDK Installation - Windows" width="240" height="180" border="10" /></a></td>
+ <td></td>
 </tr></table>
 
 ### Examples
