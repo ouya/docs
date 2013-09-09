@@ -12,3 +12,5 @@ Marmalade - https://www.madewithmarmalade.com/downloads
 
 
 ### Resources
+
+Learn Marmalade - http://developer.madewithmarmalade.com/learn
