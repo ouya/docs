@@ -800,24 +800,3 @@ private static extern void AndroidExampleFunction1(byte[] a, int b, out int c);
 ```
 
 You can find other marshalling examples and supported types by visiting the http://pinvoke.net site.
-
-### Asset Store Resources
-There are many packages available in the Unity Asset Store to improve the functionality of your game or even extend the functionality of the Unity editor like this package.
-
-#### New to Unity
-If your team is new to Unity and they need to ramp up quickly, the “Paint Video Series 1” is an hour of video tutorials on how to build an application in Unity from start to finish. http://u3d.as/1Dw
-
-#### NDK
-Creating matching C#/C++ interfaces that work in Unity for NDK and native plugins can be tedious where the “Standalone Plugin Maker” can assist with auto generating matching signatures at runtime directly in the Editor. http://u3d.as/3kL
-
-#### Single Development IDE
-The OUYA SDK is a mixture of XML, C#, C++, Java, and XML which doesn’t natively export to a single MonoDevelop or Visual Studio project natively. The “Toolbox” allows you to work with all the aspects OUYA SDK in the same Visual Studio project. http://u3d.as/2gR
-
-#### Verbal Commands
-Given that you’ve integrated a Bluetooth headset with your application, verbal commands can add a new dimension into your gameplay. http://u3d.as/3pP
-
-#### Deployment
-With multiple Android devices on the same machine, Unity natively runs your application on the first device it finds. To extend Unity for simultaneous build/deployment/execution on multiple devices on multiple targets check out [“GoodDrop”](https://github.com/JustGoodDesign/Docs/blob/master/GoodDrop.md) in the Unity Asset Store. You can extend your deployment target to your local machine, remote machines, devices on your machine, devices on your network, and devices over the Internet all from the Unity IDE.
-
-#### Version Control
-If your project uses SVN for version control, check out “Good SVN” for integrated version control in Unity which works on Windows and Mac. https://www.assetstore.unity3d.com/#/content/7242
