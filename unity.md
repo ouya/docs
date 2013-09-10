@@ -645,13 +645,13 @@ The products example shows how to get details about items that can be purchased 
 
 The general steps for in-app-purchases are:
 
-1. Check player prefs to see if the full game has been unlocked.
+1. If network connection isn't present then check player prefs to see if the full game has been unlocked.
 
-2. If the game hasn't been unlocked, check receipts for the purchase.
+2. If network connection is available, check receipts for the purchase.
 
-3. If the purchase is found, set the player prefs that the game is unlocked.
+3. If the purchase is found in receipts, set the player prefs that the game is unlocked.
 
-4. If the purchase is not found, show the store/buy button.
+4. If the purchase is not found in receipts, show the store/buy button and remove full game unlocked from player prefs.
 
 5. When the buy button is pressed, request a purchase.
 
