@@ -9,7 +9,7 @@ Marmalade - https://www.madewithmarmalade.com/downloads
 
 ### Examples
 
-
+BlocSlot 2D Puzzle Game Example - http://docs.madewithmarmalade.com/native/examplesandtutorials/gameexamples/blocslot.html
 
 ### Resources
 
