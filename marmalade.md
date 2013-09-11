@@ -9,6 +9,8 @@ Marmalade - https://www.madewithmarmalade.com/downloads
 
 ### Examples
 
+<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/VirtualController"><b>Virtual Controller</b></a> - Maps OUYA controllers to multiple virtual controllers
+
 BlocSlot 2D Puzzle Game Example - http://docs.madewithmarmalade.com/native/examplesandtutorials/gameexamples/blocslot.html
 
 ### Resources
