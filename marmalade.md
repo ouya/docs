@@ -18,3 +18,5 @@ BlocSlot 2D Puzzle Game Example - http://docs.madewithmarmalade.com/native/examp
 Learn Marmalade - http://developer.madewithmarmalade.com/learn
 
 Marmalade Docs - http://docs.madewithmarmalade.com/
+
+Using Jars on Marmalade - http://docs.madewithmarmalade.com/native/extensions/edktutorials/androidlibtutorial.html
