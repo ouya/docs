@@ -3,7 +3,9 @@
 ### Downloads
 Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade
 
-Marmalade - https://www.madewithmarmalade.com/downloads
+### Forums
+
+@OUYA - (Marmalade on OUYA Forums) - http://forums.ouya.tv/categories/marmalade-on-ouya<br/>
 
 ## Guide
 
@@ -14,6 +16,8 @@ Marmalade - https://www.madewithmarmalade.com/downloads
 BlocSlot 2D Puzzle Game Example - http://docs.madewithmarmalade.com/native/examplesandtutorials/gameexamples/blocslot.html
 
 ### Resources
+
+Marmalade - https://www.madewithmarmalade.com/downloads
 
 Learn Marmalade - http://developer.madewithmarmalade.com/learn
 
