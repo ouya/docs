@@ -3,6 +3,11 @@
 ### Downloads
 Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/MonoGame
 
+### Forums
+
+@OUYA - (MonoGame on OUYA Forums)- http://forums.ouya.tv/categories/monogame-on-ouya<br/>
+@MonoGame - (MonoGame Forums) - https://monogame.codeplex.com/discussions/topics/5559/ouya<br/>
+
 ### Developer Support Hangouts
 
 2013:
