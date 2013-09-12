@@ -3,6 +3,10 @@
 ### Downloads
 Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir
 
+### Forums
+
+@OUYA - (Adobe Air on OUYA Forums)- http://forums.ouya.tv/categories/adobe-air-on-ouya<br/>
+
 ## Guide
 
 ### Examples
