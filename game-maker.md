@@ -4,7 +4,9 @@
 
 Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/GameMaker
 
-Game Maker - http://yoyogames.com/gamemaker/download
+### Forums
+
+@OUYA - (Game Maker on OUYA Forums) - http://forums.ouya.tv/categories/gamemaker-on-ouya<br/>
 
 ### Developer Support Hangouts
 
@@ -31,6 +33,8 @@ Examples are included at the base GIT path.
 <a target=_blank href="http://gmc.yoyogames.com/index.php?showtopic=570978&page=1"><b>In-App-Purchases</b></a> - Follow the post by Manuel777 of the GMS Community, which adds purchase support to GMS
 
 ### Resources
+
+Game Maker - http://yoyogames.com/gamemaker/download
 
 Game Maker Wiki - http://wiki.yoyogames.com/index.php
 
