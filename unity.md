@@ -285,7 +285,7 @@ All scenes start with a Main Camera. There’s a custom GameObject added for Ouy
 
 Open the ./Ouya/Examples/Scenes/SceneShowUnityInput.unity example scene.
 
-Make sure OuyaGameObject has "Use Legacy Input" to OFF. This allows you to use straight Unity API Input to access input. The "Core" package also includes "ProjectSettings/InputManager.asset" which has 122 axises already defined. OuyaExampleCommon.cs has example mappings to handle the OUYA controller mappings along with other controllers.
+This example uses the Unity API Input to access input. The "Core" package also includes "ProjectSettings/InputManager.asset" which has 122 axises already defined. OuyaExampleCommon.cs has example mappings to handle the OUYA controller mappings along with other controllers.
 
 ### Android Setup
 Some player settings must be customized to build on Android. Open the player settings by navigating the menu to the Edit->Project Settings->Player menu item. The PlayerSettings will appear in the inspector.
