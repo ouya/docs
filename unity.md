@@ -464,6 +464,8 @@ With the pause/unpause listeners you need to need to implement OuyaOnPause and O
 
 Examples share common code which is found in the OuyaExampleCommon.cs script.
 
+Make sure your init scene includes the OuyaGameObject GameObject with the OuyaGameObject script attached.
+
 Some examples need to select a single controller at a time. The controller index is the current selected controller for the example. Especially with the OuyaShowUnityInput example where input is only shown for the selected controller.
 
 ```csharp
