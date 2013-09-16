@@ -25,6 +25,7 @@ The largest image you would ever display in game is 1080p (1920x1080) or 720p (1
 High resolution images are intended to be used as a source image to be rescaled before using in-game.
 
 You'll find controller images in [[OUYA-Images.zip]] (https://s3.amazonaws.com/ouya-docs/OUYA-Images.zip)
+and [[OUYA_Buttons.zip]] (https://d31pno3ktcq63f.cloudfront.net/assets/OUYA_Buttons.zip)
 
 ```
 Pairing Controller:
