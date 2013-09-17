@@ -57,3 +57,15 @@ Examples are included at the base GIT path.
 </td></tr></table>
 
 <b>Android:Drawables</b> - A list of the built-in Android drawables - http://androiddrawableexplorer.appspot.com/
+
+### Environment Variables:
+
+####Windows
+
+SdkRootPath=C:\NVPACK\android-sdk-windows
+
+NdkRootPath=C:\NVPACK\NVNDK\android-ndk-r8d
+
+JdkRootPath=C:\NVPACK\jdk1.6.0_24
+
+AntRootPath=C:\NVPACK\apache-ant-1.8.2
