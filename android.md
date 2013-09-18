@@ -64,7 +64,7 @@ Examples are included at the base GIT path.
 
 SdkRootPath=C:\NVPACK\android-sdk-windows
 
-NdkRootPath=C:\NVPACK\NVNDK\android-ndk-r8d
+NdkRootPath=C:\NVPACK\android-ndk-r8e
 
 JdkRootPath=C:\NVPACK\jdk1.6.0_24
 
