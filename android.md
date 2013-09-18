@@ -76,8 +76,12 @@ NVSamplesPath=C:\NVPACK\TDK_Samples\tegra_android_native_samples_v10p12
 
 The NVidia samples have an additional include directory.
 
-```$(NVSamplesPath)/libs/jni```
+```
+$(NVSamplesPath)/libs/jni
+```
 
 The NVidia samples have an additional library directory.
 
-```$(NVSamplesPath)/libs/jni/nv_obj/$(Configuration)```
+```
+$(NVSamplesPath)/libs/jni/nv_obj/$(Configuration)
+```
