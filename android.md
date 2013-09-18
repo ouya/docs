@@ -69,3 +69,5 @@ NdkRootPath=C:\NVPACK\android-ndk-r8e
 JdkRootPath=C:\NVPACK\jdk1.6.0_24
 
 AntRootPath=C:\NVPACK\apache-ant-1.8.2
+
+NVSamplesPath=C:\NVPACK\TDK_Samples\tegra_android_native_samples_v10p12
