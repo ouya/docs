@@ -71,3 +71,13 @@ JdkRootPath=C:\NVPACK\jdk1.6.0_24
 AntRootPath=C:\NVPACK\apache-ant-1.8.2
 
 NVSamplesPath=C:\NVPACK\TDK_Samples\tegra_android_native_samples_v10p12
+
+####NVidia Samples
+
+The NVidia samples have an additional include directory.
+
+```$(NVSamplesPath)/libs/jni```
+
+The NVidia samples have an additional library directory.
+
+```$(NVSamplesPath)/libs/jni/nv_obj/$(Configuration)```
