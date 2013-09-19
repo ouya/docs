@@ -250,3 +250,11 @@ public boolean isL2Down(OuyaController c) {
 }
 ```
 Just make sure that you have your **onGenericMotionEvent** function sending its events to the OuyaController class, as described at the top of this document.
+
+##### Cursor visibility
+
+Find the touchpad cursor gets in the way?  Cursor visibility can be controlled by your app!
+```java
+OuyaController.showCursor(false); // hide the mouse cursor
+OuyaController.showCursor(true);  // show the mouse cursor
+```
