@@ -58,6 +58,10 @@ Examples are included at the base GIT path.
 
 <b>Android:Drawables</b> - A list of the built-in Android drawables - http://androiddrawableexplorer.appspot.com/
 
+#### Docs
+
+FAQ: Why didn't FindClass find my class? - http://developer.android.com/training/articles/perf-jni.html#faq_FindClass
+
 ### Environment Variables:
 
 ####Windows
