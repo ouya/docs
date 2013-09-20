@@ -64,6 +64,8 @@ FAQ: Why didn't FindClass find my class? - http://developer.android.com/training
 
 JNI Local Reference Changes in ICS - http://android-developers.blogspot.com/2011/11/jni-local-reference-changes-in-ics.html
 
+Java Programming Tutorial Java Native Interface (JNI) - http://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html
+
 ### Environment Variables:
 
 ####Windows
