@@ -66,6 +66,24 @@ JNI Local Reference Changes in ICS - http://android-developers.blogspot.com/2011
 
 Java Programming Tutorial Java Native Interface (JNI) - http://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html
 
+Visual Studio Project Properties - http://docs.nvidia.com/tegra/index.html#Nsight_Tegra_Projects.html%3FTocPath%3DTegra%20Android%20Documentation%7CHow%20to%20Develop%20Tegra%20Android%20NDK%20Applications%20Using...%7CNsight%20Tegra%2C%20Visual%20Studio%20Edition%7C_____2
+
+#### Including JARS
+
+Within the Visual Studio project settings you'll find Configuration Properties->Ant Build->Additional Dependencies.
+
+Here you can add:
+
+```
+JAR Directories: libs
+```
+
+and
+
+```
+JAR Dependencies: gson-2.2.2.jar;ouya-sdk.jar
+```
+
 ### Environment Variables:
 
 ####Windows
