@@ -62,6 +62,8 @@ Examples are included at the base GIT path.
 
 FAQ: Why didn't FindClass find my class? - http://developer.android.com/training/articles/perf-jni.html#faq_FindClass
 
+JNI Local Reference Changes in ICS - http://android-developers.blogspot.com/2011/11/jni-local-reference-changes-in-ics.html
+
 ### Environment Variables:
 
 ####Windows
