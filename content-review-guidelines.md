@@ -133,6 +133,8 @@ To help expedite your game’s review, we ask that you assign a content rating t
 
 ##Content Guidelines
 
+Please see the [content submission checklist](https://s3.amazonaws.com/ouya-docs/OUYA_Dev_ReviewChecklist.pdf) for the full list. Here are some important points to keep in mind:
+
 * Alcohol, Tobacco and Drugs: Illegal content is illegal on OUYA. That said, games that reference drugs, alcohol, or tobacco products are always rated 12+. Games that focus on drugs, alcohol, or tobacco are 17+. 
 * Gambling: This ain't Vegas, so games or apps that facilitate real gambling aren't allowed in OUYA. Gambling themes and simulated gambling will always be rated 12+ or 17+.
 * Hate: We at OUYA hate on hate. Please keep your speech clean and respect your fellow gamer.
