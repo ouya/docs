@@ -251,10 +251,21 @@ public boolean isL2Down(OuyaController c) {
 ```
 Just make sure that you have your **onGenericMotionEvent** function sending its events to the OuyaController class, as described at the top of this document.
 
-##### Cursor visibility
+#### Cursor visibility
 
 Find the touchpad cursor gets in the way?  Cursor visibility can be controlled by your app!
 ```java
 OuyaController.showCursor(false); // hide the mouse cursor
 OuyaController.showCursor(true);  // show the mouse cursor
+```
+
+Want a different touchpad cursor?  The cursor image can be controlled by your app!
+Pass in the custom bitmap to use, along with the co-ordinates of the hotspot.  The hotspot values must be between 0 and the size of the bitmap.
+To restore the cursor to the system default, pass in null as the bitmap.
+```java
+// set to a custom icon
+Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.custom_cursor);
+OuyaController.setCursorBitmap(bitmap, 1, 1);
+
+OuyaController.setCursorBitmap(null, 0, 0); // reset to the default cursor icon
 ```
