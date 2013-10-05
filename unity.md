@@ -180,6 +180,17 @@ Several examples are included in the ouya-unity-plugin package.
  </td>
  
  </tr>
+ 
+  <tr>
+
+ <td>Blending Animations with Mechanim (18:52)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=iIbSE8DCYNE" target="_blank">
+<img src="http://img.youtube.com/vi/iIbSE8DCYNE/0.jpg" alt="Blending Animations with Mechanim" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td></td>
+ 
+ </tr>
 
 </table>
 
