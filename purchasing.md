@@ -229,7 +229,7 @@ Now we wait for the money to start pouring in...
 
 At this point, we can get information on products and purchase them, but what if the user purchased something in a previous play session?  The ODK provides a way to list purchase receipts. Yes, this will require another listener object!
 
-Be sure to always query receipts for previous purchases and not just store your own "they bought the game" flag along with your saved-game data.  That method won't work if the user changes consoles (among many other edge cases).
+Be sure to always query receipts for previous purchases and not just store your own "they bought the game" flag along with your saved-game data.  That method won't work if the user changes consoles (among many other edge cases).  See the "Remember to check receipts" section for more details.
 
 **Note**: Only products that are entitlements are returned. This is to avoid re-awarding players consumable product purchases that have already been consumed.
 
@@ -325,6 +325,12 @@ If you are using ProGuard doing this involves adding the following lines to your
 
 #### Remember to check receipts
 
-The internet is not a 100% reliable system. It is possible for a purchase to be made and the success response not reach your application (e.g. if the users broadband connection drops out while OUYAs servers are authorising the payment).
+We've noticed a bunch of games not properly checking receipts: games should _always_ query the server for the most up-to-date receipt status.
 
-In order to minimise the number of complaints from users in relation to this you should always check the list of receipts for a user in case there are purchases your application did not receive the successful result for. 
+Some of the many reasons to do so are:
+
+- A voucher may have been redeemed while the game wasn't running.
+- An entitlement may have been revoked by a customer service representative.
+- A success response may not have reached your application (e.g. if the users broadband connection drops out while OUYA's servers are authorising the payment).
+
+An important thing to note is that a gamer's set of entitlements can change without the game running, thus doing things like saving off a "game has been purchased" flag and using that as the authoratative truth doesn't work correctly.  Be sure to query the servers to ensure users are presented with the correct set of options (eg: "buy now" or "play full game").
