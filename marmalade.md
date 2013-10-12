@@ -17,6 +17,8 @@ BlocSlot 2D Puzzle Game Example - http://docs.madewithmarmalade.com/native/examp
 
 ### Resources
 
+@Marmalade - (Forums) - https://developer.madewithmarmalade.com/develop/announce-and-discuss
+
 Marmalade - https://www.madewithmarmalade.com/downloads
 
 Learn Marmalade - http://developer.madewithmarmalade.com/learn
