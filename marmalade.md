@@ -30,3 +30,7 @@ Marmalade Docs - http://docs.madewithmarmalade.com/
 Using Jars on Marmalade - http://docs.madewithmarmalade.com/native/extensions/edktutorials/androidlibtutorial.html
 
 BlocSlot 2D Puzzle Game Example - http://docs.madewithmarmalade.com/native/examplesandtutorials/gameexamples/blocslot.html
+
+### Setup
+
+Install <a target=_blank href="https://www.madewithmarmalade.com/free-trial">[Marmalade]</a>. The examples can be compiled in Visual Studio.
