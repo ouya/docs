@@ -100,7 +100,41 @@ subprojects
 {
 	../MarmaladeODK/ODK
 }
+```
 
+#### Initialization
+
+Before calling the Marmalade ODK extension, an application should check if the extension is available.
+
+```
+	if (!ODKAvailable())
+	{
+		IwTrace(DEFAULT, ("Not running on OUYA, exit!"));
+		return 0;
+	}
+```
+
+If the Marmalade ODK extension is available, initialize it with the developer id found in the OUYA developer portal.
+
+```
+OuyaPlugin_asyncSetDeveloperId("310a8f51-4d6e-4ae5-bda0-b93878e5f5d0");
+```
+
+Since the application will be polling the Marmalade ODK extension for input, make sure your main loop is not yielding infinitely.
+
+```
+	// loop while application has not quit
+	while (!s3eDeviceCheckQuitRequest())
+	{
+		// handle polling the extension for controller input
+		handleInput();
+		
+		// handle drawing the ui and invoking in-app-purchases
+		render();
+
+		// yield in the main loop to avoid killing the processor
+		s3eDeviceYield(0);
+	}
 ```
 
 ### In App Purchase Example
