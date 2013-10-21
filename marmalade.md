@@ -45,11 +45,9 @@ Switch to your preferred Marmalade SDK version by running 's3eConfig.exe' found 
 
 Be sure to set the 'NDK_ROOT' in the My Computer->Properties->Advanced System Settings->Environment Variables.
 
-```
 Create a system variable to your NDK path:
 
-i.e.
-
+```
 NDK_ROOT=C:\NVPACK\android-ndk-r8e
 ```
 
