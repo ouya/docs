@@ -87,6 +87,22 @@ Double-click 'ODK_android_java.mkb' to build the Java source.
 
 Double-click 'ODK_android.mkb' to build the Native source.
 
+### Using the Marmalade ODK Extension in an Application
+
+Files with the MKB extension define the build and deploy behaviour for Marmalade applications.
+
+Within your Marmalade application's MKB file, add a subproject for the Marmalade ODK extension.
+
+To reference your local build of the application, specify the relative path the to the extension.
+
+```
+subprojects
+{
+	../MarmaladeODK/ODK
+}
+
+```
+
 ### In App Purchase Example
 
 To build the example switch to the folder 'Marmalade\InAppPurchases' in the Marmalade examples.
