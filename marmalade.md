@@ -53,7 +53,7 @@ The Marmalade ODK Extension is a native wrapper around the ODK which makes the J
 
 Eventually the Marmalade Extension will be part of the Marmalade SDK and building will not be necessary.
 
-To build the extension from source switch to the extension folder Marmalade\MarmaladeODK in the Marmalade examples.
+To build the extension from source switch to the extension folder 'Marmalade\MarmaladeODK' in the Marmalade examples.
 
 ##### Windows
 
@@ -62,3 +62,15 @@ In Windows explorer, right-click 'ODK.s4e' and click 'Build Android Extension' i
 Double-click 'ODK_android_java.mkb' to build the Java source.
 
 Double-click 'ODK_android.mkb' to build the Native source.
+
+### In App Purchase Example
+
+To build the example switch to the folder 'Marmalade\InAppPurchases' in the Marmalade examples.
+
+#### Windows
+
+Double-click 'InAppPurchases.mkb' which will open the project in Visual Studio.
+
+In Visual Studio, set the build target to ARM and build the project.
+
+In Visual Studio, set the build target to x86 and build and run which will launch the deploy tool.
