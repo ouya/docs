@@ -33,4 +33,13 @@ BlocSlot 2D Puzzle Game Example - http://docs.madewithmarmalade.com/native/examp
 
 ### Setup
 
-Install <a target=_blank href="https://www.madewithmarmalade.com/free-trial">[Marmalade]</a>. The examples can be compiled in Visual Studio.
+Install <a target=_blank href="https://www.madewithmarmalade.com/free-trial">[Marmalade]</a>.
+
+Be sure to checkout the <a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade">[Marmalade ouya-sdk-examples]</a> from github.
+
+#### Windows
+
+The examples can be compiled in Visual Studio.
+
+### Marmalade ODK Extension
+
