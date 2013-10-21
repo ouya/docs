@@ -173,3 +173,30 @@ If you want to manually deploy the Android package with adb commands you'll be a
 adb install -r the.apk
 ```
 
+#### Project Files
+
+InAppPurchases.mkb - The build and deployment configuration
+
+app.icf - Override the default memory limits
+
+Application.h/cpp - Holds an instance of the UI, meant to hold application variables
+
+ApplicationCallbacksFetchGamerUUID.h/cpp - Handles callbacks coming from extension to the application with the result of FetchGamerUUID
+
+ApplicationCallbacksRequestProducts.h/cpp - Handles callbacks coming from extension to the application with the result of RequestProducts
+
+ApplicationCallbacksRequestPurchase.h/cpp - Handles callbacks coming from extension to the application with the result of RequestPurchase
+
+ApplicationCallbacksRequestReceipts.h/cpp - Handles callbacks coming from extension to the application with the result of RequestReceipts
+
+ApplicationProduct.h/cpp - A container to hold the ODK products that's safe to access in the Application
+
+ApplicationReceipt.h/cpp - A container to hold the ODK receipts that's safe to access in the Application
+
+Main.cpp - The Application main loop
+
+TextButton.h/cpp - A UI control for displaying text that pressing the 'O' button will fire an event
+
+TextLabel.h/cpp - A UI control for displaying text
+
+UI.h/cpp - Displays the user interface and handles invoking the IAP events here
