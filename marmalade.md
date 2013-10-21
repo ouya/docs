@@ -49,6 +49,20 @@ The examples can be compiled in Visual Studio.
 
 To support compiling in Visual Studio, install the <a target=_blank href="https://developer.nvidia.com/tegra-resources">[Tegra Android Development Pack]</a> and join the <a target=_blank href="https://developer.nvidia.com/registered-developer-programs">[Tegra Registered Developer Program]</a> to get access to the download.
 
+* Note:
+
+In Marmalade projects if you ever see the compile error 'The builds tools for "v110_wp80" cannot be found', set the 'Platform Toolset' to 'Visual Studio 2012 (v110)'.
+
+```
+Open the project properties for the configurations
+
+ GCC ARM Release/Debug and change under
+ 
+ Configuration Properties->General->Platform Toolset
+ 
+ to "Visual Studio 2012 (v110)"
+```
+
 ### Marmalade ODK Extension
 
 The Marmalade ODK Extension is a native wrapper around the ODK which makes the Java library accessible to Marmalade application code.
@@ -71,7 +85,7 @@ Double-click 'ODK_android.mkb' to build the Native source.
 
 To build the example switch to the folder 'Marmalade\InAppPurchases' in the Marmalade examples.
 
-#### Windows
+##### Windows
 
 Double-click 'InAppPurchases.mkb' which will open the project in Visual Studio.
 
