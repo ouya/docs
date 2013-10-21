@@ -102,6 +102,12 @@ subprojects
 }
 ```
 
+Your application needs to include the Marmalade ODK header to interface with the extension.
+
+```
+#include "ODK.h"
+```
+
 #### Initialization
 
 Before calling the Marmalade ODK extension, an application should check if the extension is available.
