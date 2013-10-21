@@ -43,6 +43,8 @@ Be sure to checkout the <a target=_blank href="https://github.com/ouya/ouya-sdk-
 
 Switch to your preferred Marmalade SDK version by running 's3eConfig.exe' found in the desired version 'C:\Marmalade\7.0\s3e\bin' folder.
 
+You may need to reboot for the environment changes to take effect.
+
 The examples can be compiled in Visual Studio.
 
 ### Marmalade ODK Extension
