@@ -175,7 +175,7 @@ adb install -r the.apk
 
 #### Project Files
 
-InAppPurchases.mkb - The build and deployment configuration
+InAppPurchases.mkb - The build and deployment configuration, double-click to open Visual Studio
 
 app.icf - Override the default memory limits
 
