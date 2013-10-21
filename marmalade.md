@@ -43,11 +43,19 @@ Be sure to checkout the <a target=_blank href="https://github.com/ouya/ouya-sdk-
 
 Switch to your preferred Marmalade SDK version by running 's3eConfig.exe' found in the desired version 'C:\Marmalade\7.0\s3e\bin' folder.
 
-You may need to reboot for the environment changes to take effect.
+Be sure to set the 'NDK_ROOT' in the My Computer->Properties->Advanced System Settings->Environment Variables.
 
-The examples can be compiled in Visual Studio.
+```
+Create a system variable to your NDK path:
+
+i.e.
+
+NDK_ROOT=C:\NVPACK\android-ndk-r8e
+```
 
 To support compiling in Visual Studio, install the <a target=_blank href="https://developer.nvidia.com/tegra-resources">[Tegra Android Development Pack]</a> and join the <a target=_blank href="https://developer.nvidia.com/registered-developer-programs">[Tegra Registered Developer Program]</a> to get access to the download.
+
+You may need to reboot for the environment changes to take effect.
 
 * Note: In Marmalade projects if you ever see the compile error 'The builds tools for "v110_wp80" cannot be found', set the 'Platform Toolset' to 'Visual Studio 2012 (v110)'.
 
@@ -60,6 +68,8 @@ Open the project properties for the configurations
  
  to "Visual Studio 2012 (v110)"
 ```
+
+The examples can be compiled in Visual Studio.
 
 ### Marmalade ODK Extension
 
