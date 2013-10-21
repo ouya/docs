@@ -91,7 +91,19 @@ In Visual Studio, set the build target to 'GCC ARM Debug' and build the project.
 
 In Visual Studio, set the build target to 'GCC X86 ANDROID Release' and build and run which will launch the deploy tool.
 
-The deploy tool will generate an Android package, and using adb commands you'll be able to install on the OUYA.
+The the debug dialog select build to deploy 'ARM GCC Debug' or 'ARM GCC Release' and hit 'Next Stage &gt;'.
+
+The 'Default' configuration should be selected and hit 'Next Stage &gt;'.
+
+Select the 'Android' platform and hit 'Next Stage &gt;'.
+
+For the 'Do Action' pick 'Package, Install, and Run'.
+
+Hit 'Deploy All' to build the Android package.
+
+The deploy tool will generate an Android package.
+
+If you want to manually deploy the Android package with adb commands you'll be able to install on the OUYA.
 
 ```
 adb install -r the.apk
