@@ -75,9 +75,9 @@ To build the example switch to the folder 'Marmalade\InAppPurchases' in the Marm
 
 Double-click 'InAppPurchases.mkb' which will open the project in Visual Studio.
 
-In Visual Studio, set the build target to ARM and build the project.
+In Visual Studio, set the build target to 'GCC ARM Debug' and build the project.
 
-In Visual Studio, set the build target to x86 and build and run which will launch the deploy tool.
+In Visual Studio, set the build target to 'GCC X86 ANDROID Release' and build and run which will launch the deploy tool.
 
 The deploy tool will generate an Android package, and using adb commands you'll be able to install on the OUYA.
 
