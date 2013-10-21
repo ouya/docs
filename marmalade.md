@@ -35,6 +35,8 @@ BlocSlot 2D Puzzle Game Example - http://docs.madewithmarmalade.com/native/examp
 
 Install <a target=_blank href="https://www.madewithmarmalade.com/free-trial">[Marmalade]</a>.
 
+Activate the Marmalade HUB by entering your license data, which also sets up your development/build environment.
+
 Be sure to checkout the <a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade">[Marmalade ouya-sdk-examples]</a> from github.
 
 #### Windows
