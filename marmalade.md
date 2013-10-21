@@ -13,7 +13,9 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Marmala
 
 <a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/VirtualController"><b>Virtual Controller</b></a> - Maps OUYA controllers to multiple virtual controllers
 
-BlocSlot 2D Puzzle Game Example - http://docs.madewithmarmalade.com/native/examplesandtutorials/gameexamples/blocslot.html
+<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/MarmaladeODK"><b>Marmalade ODK Extension</b></a> - OUYA Controller and In-App-Purchase extension for Marmalade
+
+<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/InAppPurchases"><b>InAppPurchases</b></a> - In-App-Purchase uses the ODK extension
 
 ### Resources
 
@@ -26,3 +28,5 @@ Learn Marmalade - http://developer.madewithmarmalade.com/learn
 Marmalade Docs - http://docs.madewithmarmalade.com/
 
 Using Jars on Marmalade - http://docs.madewithmarmalade.com/native/extensions/edktutorials/androidlibtutorial.html
+
+BlocSlot 2D Puzzle Game Example - http://docs.madewithmarmalade.com/native/examplesandtutorials/gameexamples/blocslot.html
