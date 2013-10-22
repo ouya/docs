@@ -220,7 +220,7 @@ The fields on the event contain data passed from the extension.
 
 Special detail needs to be paid to the fields on the event.
 
-The event field memory is allocated in the extension space, so be especially careful with the data being sent.
+The event field memory is allocated in the extension space, so be especially careful with any pointer data being sent.
 
 The best practice is to copy the event data immediately after receiving the event.
 
