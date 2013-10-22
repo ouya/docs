@@ -241,6 +241,14 @@ OuyaPlugin_asyncOuyaFetchGamerUUID(
 	Application::m_ui.m_callbacksFetchGamerUUID->GetCancelEvent());
 ```
 
+When the event completes the Application callback is invoked which copies the event data.
+
+The next step is to invoke the UI callback method to the render in the UI.
+
+```
+void ApplicationCallbacksFetchGamerUUID::OnSuccess(const std::string& gamerUUID)
+```
+
 #### Request Products
 
 Pass an array of JSON to the Marmalade ODK Extension to get the details of the product list and invoke the callbacks upon completion.
