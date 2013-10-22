@@ -271,6 +271,28 @@ When the gamerUUID string is received, it's then passed to the UI to display.
 
 The UI also has a message field which displays the callback details.
 
+```
+Application::m_ui.SetMessage("ApplicationCallbacksFetchGamerUUID::OnCancel");
+```
+
+The success callback passes the retrieved gamerUUID, which is passed to the UI.
+
+```
+void ApplicationCallbacksFetchGamerUUID::OnSuccess(const std::string& gamerUUID)
+```
+
+The failure callback passes an error code and string message about the failure, which is passed to the UI.
+
+```
+void ApplicationCallbacksFetchGamerUUID::OnFailure(int errorCode, const std::string& errorMessage)
+```
+
+The error callback indicates the user aborted the operation and the event name is passed to the UI.
+
+```
+void ApplicationCallbacksFetchGamerUUID::OnCancel()
+```
+
 #### Request Products
 
 Pass an array of JSON to the Marmalade ODK Extension to get the details of the product list and invoke the callbacks upon completion.
@@ -280,6 +302,24 @@ OuyaPlugin_asyncOuyaRequestProducts(productsJson.c_str(),
 	Application::m_ui.m_callbacksRequestProducts->GetSuccessEvent(),
 	Application::m_ui.m_callbacksRequestProducts->GetFailureEvent(),
 	Application::m_ui.m_callbacksRequestProducts->GetCancelEvent());
+```
+
+The success callback passes the retrieved product list, which is passed to the UI.
+
+```
+void ApplicationCallbacksRequestProducts::OnSuccess(const std::vector<ApplicationProduct>& products)
+```
+
+The failure callback passes an error code and string message about the failure, which is passed to the UI.
+
+```
+void ApplicationCallbacksRequestProducts::OnFailure(int errorCode, const std::string& errorMessage)
+```
+
+The error callback indicates the user aborted the operation and the event name is passed to the UI.
+
+```
+void ApplicationCallbacksRequestProducts::OnCancel()
 ```
 
 #### Request Purchase
@@ -293,6 +333,24 @@ OuyaPlugin_asyncOuyaRequestPurchase(product->Identifier.c_str(),
 	Application::m_ui.m_callbacksRequestPurchase->GetCancelEvent());
 ```
 
+The success callback passes the purchased product details, which is passed to the UI.
+
+```
+void ApplicationCallbacksRequestPurchase::OnSuccess(const ApplicationProduct& product)
+```
+
+The failure callback passes an error code and string message about the failure, which is passed to the UI.
+
+```
+void ApplicationCallbacksRequestPurchase::OnFailure(int errorCode, const std::string& errorMessage)
+```
+
+The error callback indicates the user aborted the operation and the event name is passed to the UI.
+
+```
+void ApplicationCallbacksRequestPurchase::OnCancel()
+```
+
 #### Request Receipts
 
 Invoke the Marmalade ODK Extension to request receipts and invoke the callbacks upon completion.
@@ -302,4 +360,22 @@ OuyaPlugin_asyncOuyaRequestReceipts(
 	Application::m_ui.m_callbacksRequestReceipts->GetSuccessEvent(),
 	Application::m_ui.m_callbacksRequestReceipts->GetFailureEvent(),
 	Application::m_ui.m_callbacksRequestReceipts->GetCancelEvent());
+```
+
+The success callback passes the retrieved receipts list, which is passed to the UI.
+
+```
+void ApplicationCallbacksRequestReceipts::OnSuccess(const std::vector<ApplicationReceipt>& receipts)
+```
+
+The failure callback passes an error code and string message about the failure, which is passed to the UI.
+
+```
+void ApplicationCallbacksRequestReceipts::OnFailure(int errorCode, const std::string& errorMessage)
+```
+
+The error callback indicates the user aborted the operation and the event name is passed to the UI.
+
+```
+void ApplicationCallbacksRequestReceipts::OnCancel()
 ```
