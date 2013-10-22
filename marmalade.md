@@ -21,15 +21,11 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Marmala
 
 @Marmalade - (Forums) - https://developer.madewithmarmalade.com/develop/announce-and-discuss
 
-Marmalade - https://www.madewithmarmalade.com/downloads
+Marmalade - https://www.madewithmarmalade.com
 
 Learn Marmalade - http://developer.madewithmarmalade.com/learn
 
 Marmalade Docs - http://docs.madewithmarmalade.com/
-
-Using Jars on Marmalade - http://docs.madewithmarmalade.com/native/extensions/edktutorials/androidlibtutorial.html
-
-BlocSlot 2D Puzzle Game Example - http://docs.madewithmarmalade.com/native/examplesandtutorials/gameexamples/blocslot.html
 
 ### Setup
 
