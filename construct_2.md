@@ -24,6 +24,6 @@ Publishing to the OUYA requires that you package the generated HTML into PhoneGA
 
 #### PhoneGap
 
-PhoneGap has a <A target=_blank href="http://docs.phonegap.com/en/edge/guide_platforms_android_plugin.md.html#Android%20Plugins">[plugin API] that allows adding custom HTML tags with callbacks to interface HTML5 with Java for two-way communication.
+PhoneGap has a <A target=_blank href="http://docs.phonegap.com/en/edge/guide_platforms_android_plugin.md.html#Android%20Plugins">[plugin API]</a> that allows adding custom HTML tags with callbacks to interface HTML5 with Java for two-way communication.
 
 With PhoneGap, you can customize your Android.manifest and embed your custom plugins to work with your HTML5 from Construct 2.
