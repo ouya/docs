@@ -230,7 +230,7 @@ void MethodOnFailure(dataForFailureEvent* event)
 void MethodOnCancel(cancelEvent* event)
 ```
 
-#### Fetch Gamer UUID
+#### Callback Process
 
 Invokes the Marmalade ODK Extension to get the Gamer UUID and invokes the respective callback on completion.
 
@@ -273,6 +273,17 @@ The UI also has a message field which displays the callback details.
 
 ```
 Application::m_ui.SetMessage("ApplicationCallbacksFetchGamerUUID::OnCancel");
+```
+
+#### Fetch Gamer UUID
+
+Invokes the Marmalade ODK Extension to get the Gamer UUID and invokes the respective callback on completion.
+
+```
+OuyaPlugin_asyncOuyaFetchGamerUUID(
+	Application::m_ui.m_callbacksFetchGamerUUID->GetSuccessEvent(),
+	Application::m_ui.m_callbacksFetchGamerUUID->GetFailureEvent(),
+	Application::m_ui.m_callbacksFetchGamerUUID->GetCancelEvent());
 ```
 
 The success callback passes the retrieved gamerUUID, which is passed to the UI.
