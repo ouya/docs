@@ -67,6 +67,8 @@ Open the project properties for the configurations
  to "Visual Studio 2012 (v110)"
 ```
 
+* Note: If you find your binary resources not being compiled, set the target platform to 'GCC ARM Debug' and start the debugger. The 'data-ram/data-gles1' binary resources will be generated during the debug session.
+
 The examples can be compiled in Visual Studio.
 
 ### Marmalade ODK Extension
