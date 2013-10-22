@@ -13,6 +13,7 @@
 **Game Engines**
 * [Adobe Air](adobe-air.md)
 * [Android](android.md)
+* [Construct 2](construct_2.md)
 * [Corona](corona.md)
 * [Game Maker](game-maker.md)
 * [Marmalade](marmalade.md)
