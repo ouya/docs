@@ -200,3 +200,47 @@ TextButton.h/cpp - A UI control for displaying text that pressing the 'O' button
 TextLabel.h/cpp - A UI control for displaying text
 
 UI.h/cpp - Displays the user interface and handles invoking the IAP events here
+
+#### Fetch Gamer UUID
+
+Invokes the Marmalade ODK Extension to get the Gamer UUID and invokes the respective callback on completion.
+
+```
+OuyaPlugin_asyncOuyaFetchGamerUUID(
+	Application::m_ui.m_callbacksFetchGamerUUID->GetSuccessEvent(),
+	Application::m_ui.m_callbacksFetchGamerUUID->GetFailureEvent(),
+	Application::m_ui.m_callbacksFetchGamerUUID->GetCancelEvent());
+```
+
+#### Request Products
+
+Pass an array of JSON to the Marmalade ODK Extension to get the details of the product list and invoke the callbacks upon completion.
+
+```
+OuyaPlugin_asyncOuyaRequestProducts(productsJson.c_str(),
+	Application::m_ui.m_callbacksRequestProducts->GetSuccessEvent(),
+	Application::m_ui.m_callbacksRequestProducts->GetFailureEvent(),
+	Application::m_ui.m_callbacksRequestProducts->GetCancelEvent());
+```
+
+#### Request Purchase
+
+Invoke the Marmalade ODK Extension to request purchase for the identifier and invoke the callbacks upon completion.
+
+```
+OuyaPlugin_asyncOuyaRequestPurchase(product->Identifier.c_str(),
+	Application::m_ui.m_callbacksRequestPurchase->GetSuccessEvent(),
+	Application::m_ui.m_callbacksRequestPurchase->GetFailureEvent(),
+	Application::m_ui.m_callbacksRequestPurchase->GetCancelEvent());
+```
+
+#### Request Receipts
+
+Invoke the Marmalade ODK Extension to request receipts and invoke the callbacks upon completion.
+
+```
+OuyaPlugin_asyncOuyaRequestReceipts(
+	Application::m_ui.m_callbacksRequestReceipts->GetSuccessEvent(),
+	Application::m_ui.m_callbacksRequestReceipts->GetFailureEvent(),
+	Application::m_ui.m_callbacksRequestReceipts->GetCancelEvent());
+```
