@@ -241,9 +241,15 @@ OuyaPlugin_asyncOuyaFetchGamerUUID(
 	Application::m_ui.m_callbacksFetchGamerUUID->GetCancelEvent());
 ```
 
-When the event completes the Application callback is invoked which copies the event data.
+When the Marmalade ODK has completed FetchGamerUUID, it invokes the Application callback for onSuccess, onFailure, or onCancel.
 
-The next step is to invoke the UI callback method to the render in the UI.
+The callback method receives an event which holds data that needs to be copied to application memory.
+
+```
+void FetchGamerUuidOnSuccess(s3eFetchGamerUuidSuccessEvent* event)
+```
+
+The original call to Invoke Fetch GamerUUID passed 3 potential callbacks. The resulting callback is invoked after the data is copied.
 
 ```
 void ApplicationCallbacksFetchGamerUUID::OnSuccess(const std::string& gamerUUID)
