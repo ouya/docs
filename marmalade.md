@@ -201,6 +201,35 @@ TextLabel.h/cpp - A UI control for displaying text
 
 UI.h/cpp - Displays the user interface and handles invoking the IAP events here
 
+#### Callbacks
+
+The in-app-purchase methods use callbacks to get data back from the Marmalade ODK extension which are compatible with the s3eCallback delegate.
+
+The callbacks use an accessor to get the s3eCallback to make the design more obvious.
+
+```
+s3eCallback ClassName::GetAssessorEvent()
+{
+	return theDelegate;
+}
+```
+
+The s3eCallback method has a specific interface that gets event data from the Marmalade ODK extension. 
+
+The fields on the event contain data passed from the extension.
+
+Special detail needs to be paid to the fields on the event.
+
+The event field memory is allocated in the extension space, so be especially careful with the data being sent.
+
+The best practice is to copy the event data immediately after receiving the event.
+
+```
+void MethodOnSuccess(dataForSuccessEvent* event)
+void MethodOnFailure(dataForFailureEvent* event)
+void MethodOnCancel(cancelEvent* event)
+```
+
 #### Fetch Gamer UUID
 
 Invokes the Marmalade ODK Extension to get the Gamer UUID and invokes the respective callback on completion.
