@@ -27,6 +27,10 @@ Learn Marmalade - http://developer.madewithmarmalade.com/learn
 
 Marmalade Docs - http://docs.madewithmarmalade.com/
 
+Project Options - http://docs.madewithmarmalade.com/display/MD/MKB+build+and+project+options
+
+Resource Management System - http://www.drmop.com/index.php/2011/10/01/marmalade-sdk-tutorial-marmalades-resource-management-system/
+
 ### Setup
 
 Install <a target=_blank href="https://www.madewithmarmalade.com/free-trial">[Marmalade]</a>.
