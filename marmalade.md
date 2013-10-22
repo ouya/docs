@@ -232,7 +232,19 @@ void MethodOnCancel(cancelEvent* event)
 
 #### Callback Process
 
-Invokes the Marmalade ODK Extension to get the Gamer UUID and invokes the respective callback on completion.
+The callback process begins by first invoking methods in the Marmalade ODK extension.
+
+Methods that retrieve information asyncronously need callbacks to return the data.
+
+The supplied callbacks are invoked upon completion of the extension operation.
+
+The success callback will be receiving the data being requested.
+
+The failure callback will return if an error was detected.
+
+The cancel callback will invoke if the user cancelled the operation.
+
+'OuyaPlugin_asyncOuyaFetchGamerUUID' invokes in the extension in a separate memory space.
 
 ```
 OuyaPlugin_asyncOuyaFetchGamerUUID(
