@@ -147,6 +147,24 @@ Since the application will be polling the Marmalade ODK extension for input, mak
 	}
 ```
 
+To detect pressed and released events, make sure the input frame is started and the top of the frame in the main loop.
+
+```
+OuyaController_startOfFrame();
+```
+
+To check for input from a controller, select the controller by index.
+
+```
+if (OuyaController_selectControllerByPlayer(index))
+```
+
+Axis values are returned -256 to 256 and divide by 256.0f to normalize the range -1 to 1.
+
+```
+OuyaController_getAxisValue(axis) / 256.0f
+```
+
 ### Virtual Controller Example
 
 Input comes from the Marmalade ODK Extension. Include the ODK header to get access to the extension.
