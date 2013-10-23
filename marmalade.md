@@ -130,6 +130,14 @@ If the Marmalade ODK extension is available, initialize it with the developer id
 OuyaPlugin_asyncSetDeveloperId("310a8f51-4d6e-4ae5-bda0-b93878e5f5d0");
 ```
 
+### Virtual Controller Example
+
+Input comes from the Marmalade ODK Extension. Include the ODK header to get access to the extension.
+
+```
+#include "ODK.h"
+```
+
 Since the application will be polling the Marmalade ODK extension for input, make sure your main loop is not yielding infinitely.
 
 ```
@@ -145,28 +153,6 @@ Since the application will be polling the Marmalade ODK extension for input, mak
 		// yield in the main loop to avoid killing the processor
 		s3eDeviceYield(0);
 	}
-```
-
-### Virtual Controller Example
-
-Input comes from the Marmalade ODK Extension. Include the ODK header to get access to the extension.
-
-```
-#include "ODK.h"
-```
-
-Poll the Marmalade ODK Extension to handle input and make sure you don't yield for long periods to avoid lag.
-
-```
-    // loop while application has not quit
-    while (!s3eDeviceCheckQuitRequest())
-    {
-        // handle polling the extension for controller input
-        handleInput();
-
-        // yield in the main loop to avoid killing the processor
-        s3eDeviceYield(0);
-    }
 ```
 
 To detect pressed and released events, make sure the input frame is started and the top of the frame in the main loop.
