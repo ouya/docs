@@ -69,6 +69,8 @@ Open the project properties for the configurations
 
 * Note: If you find your binary resources not being compiled, set the target platform to 'GCC ARM Debug' and start the debugger. The 'data-ram/data-gles1' binary resources will be generated during the debug session.
 
+* Note: If you have Visual Studio set to launch 'As Administrator', Marmalade won't be able to auto-launch Visual Studio.
+
 The examples can be compiled in Visual Studio.
 
 ### Marmalade ODK Extension
