@@ -165,6 +165,12 @@ Axis values are returned -256 to 256 and divide by 256.0f to normalize the range
 OuyaController_getAxisValue(axis) / 256.0f
 ```
 
+Check the button state by using the button constants.
+
+```
+if (OuyaController_getButton(button))
+```
+
 ### Virtual Controller Example
 
 Input comes from the Marmalade ODK Extension. Include the ODK header to get access to the extension.
