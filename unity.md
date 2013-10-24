@@ -81,8 +81,8 @@ If you are new to Unity, this crash course should bring you up to speed on the U
 <tr>
    
   <td>Paint Series 001 - 06 Scripting (10:21)<br/>
- <a href="http://www.youtube.com/watch?feature=player_embedded&v=d8hYx0Q4k5o" target="_blank">
- <img src="http://img.youtube.com/vi/d8hYx0Q4k5o/0.jpg" alt="Paint Series 001 - 06 Scripting" width="240" height="180" border="10" /></a>
+ <a href="http://www.youtube.com/watch?feature=player_embedded&v=ZPhP7KYi5lk" target="_blank">
+ <img src="http://img.youtube.com/vi/ZPhP7KYi5lk/0.jpg" alt="Paint Series 001 - 06 Scripting" width="240" height="180" border="10" /></a>
   </td>
   
   <td>Paint Series 001 - 07 Input (12:12)<br/>
