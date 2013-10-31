@@ -9,6 +9,10 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Constru
 
 ## Guide
 
+### Examples
+
+<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Construct2/VirtualController">[VirtualControllers]</a> - Maps OUYA controllers to virtual controllers.
+
 ### Resources
 
 Construct 2 - https://www.scirra.com/construct2
