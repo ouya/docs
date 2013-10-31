@@ -1,5 +1,8 @@
 ## Construct 2 Engine
 
+### Downloads
+Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Construct2
+
 ### Forums
 
 @OUYA - (Construct 2 on OUYA Forums) - http://forums.ouya.tv/categories/construct2-on-ouya<br/>
