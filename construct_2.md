@@ -34,3 +34,7 @@ Publishing to the OUYA requires that you package the generated HTML into PhoneGA
 PhoneGap has a <A target=_blank href="http://docs.phonegap.com/en/edge/guide_platforms_android_plugin.md.html#Android%20Plugins">[plugin API]</a> that allows adding custom HTML tags with callbacks to interface HTML5 with Java for two-way communication.
 
 With PhoneGap, you can customize your Android.manifest and embed your custom plugins to work with your HTML5 from Construct 2.
+
+#### Android-Chromium-View
+
+<a target=_blank href="https://github.com/davisford/android-chromium-view">[android-chromium-view]</a> - To achieve hardware acceleration on HTML5 you'll want an accelerated webview.
