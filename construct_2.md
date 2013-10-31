@@ -38,3 +38,21 @@ With PhoneGap, you can customize your Android.manifest and embed your custom plu
 #### Android-Chromium-View
 
 <a target=_blank href="https://github.com/davisford/android-chromium-view">[android-chromium-view]</a> - To achieve hardware acceleration on HTML5 you'll want an accelerated webview.
+
+You can check hardware acceleration with <a target=_blank href="chrome://gpu">[chrome://gpu]</a>.
+
+```
+Graphics Feature Status
+Canvas: Hardware accelerated
+Compositing: Hardware accelerated on all pages and threaded
+3D CSS: Hardware accelerated
+CSS Animation: Accelerated and threaded
+WebGL: Hardware accelerated
+WebGL multisampling: Hardware accelerated
+Flash 3D: Hardware accelerated
+Flash Stage3D: Hardware accelerated
+Flash Stage3D Baseline profile: Hardware accelerated
+Texture Sharing: Hardware accelerated
+Video Decode: 
+Video: 
+```
