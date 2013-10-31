@@ -29,6 +29,8 @@ Construct 2 is an visually programable engine that publishes HTML5.
 
 Publishing to the OUYA requires that you package the generated HTML into PhoneGAP or CocoonJS.
 
+Make your own <a target=_blank href="https://www.scirra.com/tutorials/352/plugins-roll-your-own-with-the-javascript-sdk">[JavaScript plugins]</a> with the JavaScript SDK.
+
 #### PhoneGap
 
 PhoneGap has a <A target=_blank href="http://docs.phonegap.com/en/edge/guide_platforms_android_plugin.md.html#Android%20Plugins">[plugin API]</a> that allows adding custom HTML tags with callbacks to interface HTML5 with Java for two-way communication.
