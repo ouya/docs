@@ -189,6 +189,12 @@ Connect your OUYA to your PC (Micro USB to USB), open Command Prompt (Win+R then
 
 ##### Eclipse
 
+First step, turn on line numbers:
+
+```
+Window -> Preferences -> General -> Editors -> Text Editors -> Show line numbers.
+```
+
 If you're using Eclipse as your development environment, you can create Eclipse projects from the samples included in the ODK to get a working example running quickly.
 
 - Open Eclipse
