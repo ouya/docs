@@ -29,6 +29,16 @@ The Tegra Toolkit is a large toolset which includes the following:
 
 Examples are included at the base GIT path.
 
+#### External Storage
+
+* Note: In the game details, be sure to move to external storage so the app can access the external storage drive.
+
+<b>External Storage</b> - Using external storage example as a Java Activity. https://github.com/ouya/ouya-sdk-examples/tree/master/Android/ExternalStorageExample
+
+<b>External Storage Native</b> - Using external storage example as a C++ Native Activity. External storage is accessed via JNI calls. https://github.com/ouya/ouya-sdk-examples/tree/master/Android/ExternalStorageExampleNative
+
+#### General
+
 <b>Native In-App-Purchases</b> - https://github.com/ouya/ouya-sdk-examples/tree/master/Android/InAppPurchasesNative
 
 <b>Multiple Activities</b> - Switch between Java activities within the same application - https://github.com/ouya/ouya-sdk-examples/tree/master/Android/MultipleActivities
