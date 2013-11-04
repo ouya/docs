@@ -8,6 +8,8 @@
 
 ### Examples
 
+Setting up In-App-Purchases - http://forums.ouya.tv/discussion/2867/sticky-in-app-purchase-tutorial
+
 
 ### Resources
 
