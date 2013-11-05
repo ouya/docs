@@ -17,6 +17,7 @@
 * [Corona](corona.md)
 * [Game Maker](game-maker.md)
 * [Marmalade](marmalade.md)
+* [Multimedia Fusion 2](multimedia_fusion_2.md)
 * [libGDX](libGDX.md)
 * [MonoGame](mono-game.md)
 * [Unreal](unreal.md)
