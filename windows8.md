@@ -19,3 +19,14 @@ Windows 8 will only install signed drivers by default.  This driver signature ve
 8. Windows will now restart.
 
 Now proceed with the driver install procedure as described in [setup](setup.md).  Once the driver is installed, you can re-enable driver signature verification by repeating these same steps.
+
+
+**Windows 8.1**
+
+Installing the Windows 8.1 update will remove the unsigned driver.  You must repeat the process to disable driver signature verification and update the driver again.  The process to disable driver signature verification has also changed slightly in Windows 8.1
+
+1. Open the Settings Charm and select **Change PC Settings**.
+
+2. Select the **Update and recovery** category.  Select **Recovery**, and in the **Advanced startup** section select **Restart now**.
+
+3. Continue with step 3 above in the Windows 8 section.
