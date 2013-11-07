@@ -75,6 +75,7 @@ MonoGame GIT for latest tools - https://github.com/mono/MonoGame<br/>
 MonoGame OUYA Examples - https://github.com/ouya/ouya-sdk-examples<br/>
 MonoGame Content Builder - https://github.com/mono/MonoGame/wiki/MonoGame-Content-Builder<br/>
 Docs and Tutorials - http://www.monogame.net/documentation<br/>
+Binding JARs - http://docs.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_(.jar)/<br/>
 
 ### Building
 
