@@ -20,4 +20,4 @@ Project converter publishes your Wave project to the Android platform - http://b
 
 ### WaveSampleBrowser
 
-A sample browser created in the Wave Engine - http://wave.blob.core.windows.net/$root/WaveSampleBrowser.zip
+The Wave Engine has a browser to see all the demo samples - http://wave.blob.core.windows.net/$root/WaveSampleBrowser.zip
