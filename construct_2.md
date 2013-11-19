@@ -63,6 +63,15 @@ Video:
 
 <a target=_blank href="https://github.com/davisford/android-chromium">[android-chromium]</a> - An even faster HTML5 accelerated WebView fork of Chromium.
 
+##### Ubuntu
+
+```
+git clone https://github.com/davisford/android-chromium
+android update project --path .
+cd android-chromium
+./gradlew
+```
+
 #### Crosswalk Project
 
 https://crosswalk-project.org/
