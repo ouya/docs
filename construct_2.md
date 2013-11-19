@@ -67,8 +67,18 @@ Video:
 
 ```
 git clone https://github.com/davisford/android-chromium
-android update project --path .
 cd android-chromium
+```
+
+Create local.properties file with a path to the Android SDK.
+
+```
+sdk.dir=../../Downloads/adt-bundle-linux-x86_64-20130917/sdk/
+```
+
+Build the APK.
+
+```
 ./gradlew
 ```
 
