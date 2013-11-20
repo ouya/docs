@@ -76,10 +76,19 @@ Create local.properties file with a path to the Android SDK.
 sdk.dir=../../Downloads/adt-bundle-linux-x86_64-20130917/sdk/
 ```
 
+Be sure to check the github readme page and make sure you have the dependencies installed.
+
+```
+Tools\*
+Extras\Android Support Repository
+Extras\Android Support Library
+Extras\Google Respository
+```
+
 Build the APK.
 
 ```
-./gradlew
+./gradlew build
 ```
 
 #### Crosswalk Project
