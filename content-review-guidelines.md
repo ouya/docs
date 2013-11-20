@@ -151,3 +151,9 @@ In the event we reject your Game -- including for reasons that may not be captur
 So go make some great games...
 
 For any questions or clarifications, please contact us at devsupport@ouya.tv
+
+##Icons
+
+* The application image that is shown in the launcher is embedded inside of the APK itself. The expected file is in res/drawable-xhdpi/ouya_icon.png and the image size must be 732x412.
+ 
+* The icon that is shown in the app settings is embedded inside of the APK itself. The expected file is in res/drawable/app_icon.png and the image size must be 96x96.
