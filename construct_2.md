@@ -73,7 +73,7 @@ cd android-chromium
 Create local.properties file with a path to the Android SDK.
 
 ```
-sdk.dir=../../Downloads/adt-bundle-linux-x86_64-20130917/sdk/
+sdk.dir=../../Downloads/android-studio/sdk/
 ```
 
 Be sure to check the github readme page and make sure you have the dependencies installed.
