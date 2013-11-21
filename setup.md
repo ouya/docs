@@ -75,11 +75,13 @@ To fully complete the setup, you will need:
 
 ##### ADB Connection method
 
-1. You have the option of connecting with adb using a micro USB cable.
+1. You have the option of connecting with ADB using a micro USB cable.
 
-2. You have the option fo connecting with adb using tcpip.
+2. You have the option fo connecting with ADB using tcpip.
 
 * Note: Developer settings allow switching between connection methods in Manage->System->Development->ADB Over Network.
+
+###### ADB Connection TCP/IP
 
 * If connected over the network, you can connect adb with the following command. Where IP:Port come from the settings page.
 
@@ -87,6 +89,7 @@ To fully complete the setup, you will need:
 adb connect IP:port
 ```
 
+###### ADB Connection USB
 
 Before continuing, make sure your OUYA is powered and **not connected to your computer**.
 
