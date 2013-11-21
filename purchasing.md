@@ -288,7 +288,7 @@ This is done in the normal pattern of creating a listener:
 ```
 Then making the request:
 ```java
-	OuyaFacade.getInstance().requestGamerUuid(gamerUuidListener);
+	OuyaFacade.getInstance().requestGamerInfo(gamerInfoListener);
 ```
 **Note**: These game UUIDs are different across developers; two apps by different developers which query the UUID of the same user will get different results.
 
