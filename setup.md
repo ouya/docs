@@ -71,7 +71,22 @@ Android SDK Archived Rev 21 on Mac - http://dl.google.com/android/android-sdk_r2
 To fully complete the setup, you will need:
 * an OUYA
 * a computer running Mac OS X or Windows
-* a Micro USB to USB cable
+* a Micro USB to USB cable (or Wifi/Ethernet Connection)
+
+##### ADB Connection method
+
+1. You have the option of connecting with adb using a micro USB cable.
+
+2. You have the option fo connecting with adb using tcpip.
+
+* Note: Developer settings allow switching between connection methods in Manage->System->Development->ADB Over Network.
+
+* If connected over the network, you can connect adb with the following command. Where IP:Port come from the settings page.
+
+```
+adb connect IP:port
+```
+
 
 Before continuing, make sure your OUYA is powered and **not connected to your computer**.
 
