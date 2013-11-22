@@ -14,4 +14,4 @@ Goo Engine - http://www.gootechnologies.com/products/engine/
 
 #### Android-Chromium
 
-<a target=_blank href="https://github.com/davisford/android-chromium">[android-chromium]</a> - An fast HTML5 accelerated fork of Chromium for Android.
+<a target=_blank href="https://github.com/davisford/android-chromium">[android-chromium]</a> - A fast HTML5 accelerated fork of Chromium for Android.
