@@ -269,13 +269,15 @@ Currently, the ODK is under heavy development, so the helper method will assist 
 
 #### Identifying the User
 
-If your application talks to an external server, it is often necessary to get a unique identifier for the current user (for example, to store high scores on a website).  This is done in the normal pattern of creating a listener:
+If your application talks to an external server, it is often necessary to get a unique identifier for the current user (for example, to store high scores on a website).  Games are able to access a gamer's unique id and username.
+This is done in the normal pattern of creating a listener:
 ```java
-	CancelIgnoringOuyaResponseListener<String> gamerUuidListener =
-		new CancelIgnoringOuyaResponseListener<String>() {
+	CancelIgnoringOuyaResponseListener<GamerInfo> gamerInfoListener =
+		new CancelIgnoringOuyaResponseListener<GamerInfo>() {
 			@Override
-			public void onSuccess(String result) {
-				Log.d("UUID", "UUID is: " + result);
+			public void onSuccess(GamerInfo result) {
+				Log.d("UUID", "UUID is: " + result.getUuid());
+				Log.d("Username", "Username is: " + result.getUsername());
 			}
 
 			@Override
@@ -286,7 +288,7 @@ If your application talks to an external server, it is often necessary to get a 
 ```
 Then making the request:
 ```java
-	OuyaFacade.getInstance().requestGamerUuid(gamerUuidListener);
+	OuyaFacade.getInstance().requestGamerInfo(gamerInfoListener);
 ```
 **Note**: These game UUIDs are different across developers; two apps by different developers which query the UUID of the same user will get different results.
 
