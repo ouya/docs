@@ -214,6 +214,108 @@ Visual Studio - Best editor for C#<br/>
 Resharper - Visual Studio extension for faster script editing and code refactoring<br/>
 Android SDK - Make sure you upgrade “Android SDK Tools” only to Rev 21 of the Android Tools per - <a target=_blank href="http://forum.unity3d.com/threads/176737-unknown-error-when-building-simple-scene/page2">[this post]</a>.<br/>
 
+## Quick Guide
+
+```
+Documentation - https://devs.ouya.tv/developers/docs/unity
+
+Download the source to a new folder - https://github.com/ouya/ouya-unity-plugin
+
+Open that folder as a Unity project.
+
+Use the OUYA->Export Core to export the core package for your game.
+
+Backup your game project.
+
+Open your game project and import core.
+
+Log into the developer portal and create a game.
+
+https://devs.ouya.tv/developers/games
+
+Assign a bundle id: com.yourcompany.title
+
+Download the signing key and save into Assets\Plugins\Android\res\raw\key.der
+
+In Unity open the OUYA Panel (Window->Open OUYA Panel)
+
+Switch to the Java Panel and point to your JDK. It must be JDK6 1.6 32-bit. (Yes 32-bit.)
+
+On Mac, install XCode and the development tools to get Java.
+
+If nothing is grayed out switch to the Android tab.
+
+Make sure Android rev 21 is installed. You'll find a link in the setup docs.
+
+https://devs.ouya.tv/developers/docs/setup
+
+Run the Android SDK, and make sure the platform-tools are installed (don't upgrade to Rev 22)
+
+Install the Platform-16 SDK.
+
+Install the Extras/Android Support Libary.
+
+Install the Google USB drivers.
+
+Install and exit Android SDK.
+
+You may need to re-add the (Home folder) ~/.android/adb_usb,ini 0x2836.
+
+Make sure adb is in your path. (android-sdk/tools and android-sdk/platform-tools)
+
+You should see your OUYA in adb devices with:
+
+adb devices
+
+Sometimes kill adb and rerun the above step to see devices.
+
+adb kill-server
+
+If nothing is grayed out in the OUYA Panel Android tab, switch to the OUYA tab.
+
+If you are on Unity 4.X change the Java App Class to: OuyaNativeActivity
+
+Enter your bundle id to match the developer portal.
+
+Hit the sync button and the bundle id will be made to match.
+
+In your initial scene add the OuyaGameObject prefab.
+
+Be sure to also enter your developer UUID from the developer portal in the inspector on the OuyaGameObject in your initial scene.
+
+https://devs.ouya.tv/developers
+
+Review the Unity docs for setting up controller input.
+
+For button input the examples use:
+
+OuyaExampleCommon.GetButton (GetButton, GetButtonDown, GetButtonUp are available)
+
+For axis input the examples use:
+
+OuyaExampleCommon.GetAxis (GetAxis, GetAxisRaw are available)
+
+Review the Unity docs for setting up in-app-purchases
+
+Edit your build settings. File->Build Settings.
+
+Set the platform to Android.
+
+Click Player Settings.
+
+Click the Android tab.
+
+Under resolution Default Orientation should be Landscape Left.
+
+Under other settings your bundle id should be set.
+
+Under other settings set the Minimum API Level to 16.
+
+If you have the free version of Unity, use the menu File->Build and Run.
+
+If you have the Pro version, just hit Build and Run on the panel.
+```
+
 ## Full Document
 
 ### Authors
