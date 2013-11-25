@@ -311,9 +311,43 @@ Under other settings your bundle id should be set.
 
 Under other settings set the Minimum API Level to 16.
 
+On the OUYA Panel click the Compile Plugin button.
+
+On the OUYA Panel click the Compile Java button.
+
 If you have the free version of Unity, use the menu File->Build and Run.
 
 If you have the Pro version, just hit Build and Run on the panel.
+```
+
+## Quick Update
+
+```
+
+Be sure to git updates from github checkout or update the clean checkout folder.
+
+Use the OUYA->Export Core to export the core package for your game.
+
+Backup your game project.
+
+Open your game project and import core.
+
+When you import careful not to replace your signing key or custom icons.
+
+Again you may need to resync to make the bundle id and package match.
+
+Recompile the plugin.
+
+Recompile the Java application.
+
+Build and Run.
+
+Always back your keystore.
+
+The keystore is used by the auto updater.
+
+If you lose your keystore, users have to manually uninstall to update.
+
 ```
 
 ## Full Document
