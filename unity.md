@@ -819,8 +819,21 @@ The general steps for in-app-purchases are:
 
 ##### Script
 Add listeners for the purchase-iap-system areas for FetchGamerUUID, GetProducts, Purchase, and GetReceipts.
+
+C#
 ```csharp
 public class OuyaShowProducts : MonoBehaviour,
+   OuyaSDK.IPauseListener,
+   OuyaSDK.IResumeListener,
+   OuyaSDK.IFetchGamerUUIDListener,
+   OuyaSDK.IGetProductsListener,
+   OuyaSDK.IPurchaseListener,
+   OuyaSDK.IGetReceiptsListener
+```
+
+JavaScript
+```javascript
+public class OuyaShowProducts extends MonoBehaviour implements
    OuyaSDK.IPauseListener,
    OuyaSDK.IResumeListener,
    OuyaSDK.IFetchGamerUUIDListener,
@@ -832,6 +845,8 @@ public class OuyaShowProducts : MonoBehaviour,
 Enter your purchasables into the OuyaGameObject. The developer creates purchasables in the developer portal. And then the OuyaGameObject has a ProductKey list where you enter the product app ids from the developer portal.
   
 Register your FetchGamerUUIDListener, GetProductsListener, PurchaseListener, and GetReceiptsLister in the Awake and clear in the OnDestroy events.
+
+C#
 ```csharp
     void Awake()
     {
@@ -849,26 +864,61 @@ Register your FetchGamerUUIDListener, GetProductsListener, PurchaseListener, and
     }
 ```
 
+JavaScript
+```
+    function Awake()
+    {
+        OuyaSDK.registerFetchGamerUUIDListener(this);
+        OuyaSDK.registerGetProductsListener(this);
+        OuyaSDK.registerPurchaseListener(this);
+        OuyaSDK.registerGetReceiptsListener(this);
+    }
+    function OnDestroy()
+    {
+        OuyaSDK.unregisterFetchGamerUUIDListener(this);
+        OuyaSDK.unregisterGetProductsListener(this);
+        OuyaSDK.unregisterPurchaseListener(this);
+        OuyaSDK.unregisterGetReceiptsListener(this);
+    }
+```
+
 It’s recommended that you avoid switching scenes when events are pending. As in, don’t request receipts and immediately switch scenes before the callback happens. Also be sure to invoke a single request and wait for the response before invoking the iap service again.  
   
 The listeners implement an OnSuccess, OnFailure, and OnCancel callback.
 
-###### Fetch Gamer UUID
-The gamer UUID is a unique identifier for the logged in user that is accessible while the console is connected to the Internet.
+###### Fetch Gamer Info
+The gamer uuid and username for the logged in user is accessible while the console is connected to the Internet.
+
+C#
 ```csharp
-    public void OuyaFetchGamerUUIDOnSuccess(string gamerUUID)
+    public void OuyaFetchGamerInfoOnSuccess(string uuid, string username)
     {
     }
-    public void OuyaFetchGamerUUIDOnFailure(int errorCode, string errorMessage)
+    public void OuyaFetchGamerInfoOnFailure(int errorCode, string errorMessage)
     {
     }
-    public void OuyaFetchGamerUUIDOnCancel()
+    public void OuyaFetchGamerInfoOnCancel()
+    {
+    }
+```
+
+JavaScript
+```
+    public function OuyaFetchGamerInfoOnSuccess(uuid : String, username : String)
+    {
+    }
+    public function OuyaFetchGamerInfoOnFailure(errorCode : int, errorMessage : String)
+    {
+    }
+    public function OuyaFetchGamerInfoOnCancel()
     {
     }
 ```
 
 ###### Request product list
 To get a list of products (which includes the price information), invoke OuyaSDK.requestProductList and pass a list of purchasables. You likely want to obtain prices from the server to avoid hardcoding prices and showing an inaccurate price.
+
+C#
 ```csharp
     public void OuyaGetProductsOnSuccess(List<OuyaSDK.Product> products)
     {
@@ -881,8 +931,23 @@ To get a list of products (which includes the price information), invoke OuyaSDK
     }
 ```
 
+JavaScript
+```
+    public function OuyaGetProductsOnSuccess(products : List.<OuyaSDK.Product>)
+    {
+    }
+    public function OuyaGetProductsOnFailure(errorCode : int, errorMessage : String)
+    {
+    }
+    public function OuyaGetProductsOnCancel()
+    {
+    }
+```
+
 ###### Request purchase
 Start a purchase by invoking OuyaSDK.requestPurchase and pass the product identifier that you obtained from the list of purchasables. Be sure to wait for the callback result before invoking another purchase.
+
+C#
 ```csharp
     public void OuyaPurchaseOnSuccess(OuyaSDK.Product product)
     {
@@ -895,8 +960,23 @@ Start a purchase by invoking OuyaSDK.requestPurchase and pass the product identi
     }
 ```
 
+JavaScript
+```
+    public function OuyaPurchaseOnSuccess(product : OuyaSDK.Product)
+    {
+    }
+    public function OuyaPurchaseOnFailure(errorCode : int, errorMessage : String)
+    {
+    }
+    public function OuyaPurchaseOnCancel()
+    {
+    }
+```
+
 ###### Get receipts
 Games need to check whether the game has been unlocked or whether to show a BUY NOW button. Check the user’s receipt list for the purchasable identifier to see if the content has been unlocked. Call OuyaSDK.requestReceiptList to get the list of receipts and check the identifier.
+
+C#
 ```csharp
     public void OuyaGetReceiptsOnSuccess(List<OuyaSDK.Receipt> receipts)
     {
@@ -905,6 +985,19 @@ Games need to check whether the game has been unlocked or whether to show a BUY 
     {
     }
     public void OuyaGetReceiptsOnCancel()
+    {
+    }
+```
+
+JavaScript
+```
+    public function OuyaGetReceiptsOnSuccess(receipts : List.<OuyaSDK.Receipt>)
+    {
+    }
+    public function OuyaGetReceiptsOnFailure(errorCode : int, errorMessage : String)
+    {
+    }
+    public function OuyaGetReceiptsOnCancel()
     {
     }
 ```
