@@ -951,7 +951,7 @@ To get a list of products (which includes the price information), invoke OuyaSDK
 // JavaScript
     public function OuyaGetProductsOnSuccess(products : List.<OuyaSDK.Product>)
     {
-        for (product : OuyaSDK.Product in products)
+        for (var product : OuyaSDK.Product in products)
         {
         }
     }
