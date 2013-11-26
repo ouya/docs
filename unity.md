@@ -922,6 +922,9 @@ To get a list of products (which includes the price information), invoke OuyaSDK
 // C#
     public void OuyaGetProductsOnSuccess(List<OuyaSDK.Product> products)
     {
+        foreach (OuyaSDK.Product product in products)
+        {
+        }
     }
     public void OuyaGetProductsOnFailure(int errorCode, string errorMessage)
     {
@@ -935,6 +938,9 @@ To get a list of products (which includes the price information), invoke OuyaSDK
 // JavaScript
     public function OuyaGetProductsOnSuccess(products : List.<OuyaSDK.Product>)
     {
+        for (product : OuyaSDK.Product in products)
+        {
+        }
     }
     public function OuyaGetProductsOnFailure(errorCode : int, errorMessage : String)
     {
@@ -980,6 +986,13 @@ Games need to check whether the game has been unlocked or whether to show a BUY 
 // C#
     public void OuyaGetReceiptsOnSuccess(List<OuyaSDK.Receipt> receipts)
     {
+        foreach (OuyaSDK.Receipt receipt in receipts)
+        {
+                if (receipt.identifier == "__MY_ID__")
+                {
+                    //detected purchase
+                }
+        }
     }
     public void OuyaGetReceiptsOnFailure(int errorCode, string errorMessage)
     {
@@ -993,6 +1006,13 @@ Games need to check whether the game has been unlocked or whether to show a BUY 
 // JavaScript
     public function OuyaGetReceiptsOnSuccess(receipts : List.<OuyaSDK.Receipt>)
     {
+        for (receipt : OuyaSDK.Receipt in receipts)
+        {
+                if (receipt.identifier == "__MY_ID__")
+                {
+                    //detected purchase
+                }
+        }
     }
     public function OuyaGetReceiptsOnFailure(errorCode : int, errorMessage : String)
     {
