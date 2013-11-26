@@ -818,14 +818,27 @@ The general steps for in-app-purchases are:
 
 
 ##### Script
-Add listeners for the purchase-iap-system areas for FetchGamerUUID, GetProducts, Purchase, and GetReceipts.
+
+To give access to generic lists, import the required namespace.
+
+```csharp
+// C#
+using System.Collections.Generic;
+```
+
+```
+// JavaScript
+import System.Collections.Generic;
+```
+
+Add listeners for the purchase-iap-system areas for FetchGamerInfo, GetProducts, Purchase, and GetReceipts.
 
 ```csharp
 // C#
 public class OuyaShowProducts : MonoBehaviour,
    OuyaSDK.IPauseListener,
    OuyaSDK.IResumeListener,
-   OuyaSDK.IFetchGamerUUIDListener,
+   OuyaSDK.IFetchGamerInfoListener,
    OuyaSDK.IGetProductsListener,
    OuyaSDK.IPurchaseListener,
    OuyaSDK.IGetReceiptsListener
@@ -836,7 +849,7 @@ public class OuyaShowProducts : MonoBehaviour,
 public class OuyaShowProducts extends MonoBehaviour implements
    OuyaSDK.IPauseListener,
    OuyaSDK.IResumeListener,
-   OuyaSDK.IFetchGamerUUIDListener,
+   OuyaSDK.IFetchGamerInfoListener,
    OuyaSDK.IGetProductsListener,
    OuyaSDK.IPurchaseListener,
    OuyaSDK.IGetReceiptsListener
@@ -844,20 +857,20 @@ public class OuyaShowProducts extends MonoBehaviour implements
 
 Enter your purchasables into the OuyaGameObject. The developer creates purchasables in the developer portal. And then the OuyaGameObject has a ProductKey list where you enter the product app ids from the developer portal.
   
-Register your FetchGamerUUIDListener, GetProductsListener, PurchaseListener, and GetReceiptsLister in the Awake and clear in the OnDestroy events.
+Register your FetchGamerInfoListener, GetProductsListener, PurchaseListener, and GetReceiptsLister in the Awake and clear in the OnDestroy events.
 
 ```csharp
 // C#
     void Awake()
     {
-        OuyaSDK.registerFetchGamerUUIDListener(this);
+        OuyaSDK.registerFetchGamerInfoListener(this);
         OuyaSDK.registerGetProductsListener(this);
         OuyaSDK.registerPurchaseListener(this);
         OuyaSDK.registerGetReceiptsListener(this);
     }
     void OnDestroy()
     {
-        OuyaSDK.unregisterFetchGamerUUIDListener(this);
+        OuyaSDK.unregisterFetchGamerInfoListener(this);
         OuyaSDK.unregisterGetProductsListener(this);
         OuyaSDK.unregisterPurchaseListener(this);
         OuyaSDK.unregisterGetReceiptsListener(this);
@@ -868,14 +881,14 @@ Register your FetchGamerUUIDListener, GetProductsListener, PurchaseListener, and
 // JavaScript
     function Awake()
     {
-        OuyaSDK.registerFetchGamerUUIDListener(this);
+        OuyaSDK.registerFetchGamerInfoListener(this);
         OuyaSDK.registerGetProductsListener(this);
         OuyaSDK.registerPurchaseListener(this);
         OuyaSDK.registerGetReceiptsListener(this);
     }
     function OnDestroy()
     {
-        OuyaSDK.unregisterFetchGamerUUIDListener(this);
+        OuyaSDK.unregisterFetchGamerInfoListener(this);
         OuyaSDK.unregisterGetProductsListener(this);
         OuyaSDK.unregisterPurchaseListener(this);
         OuyaSDK.unregisterGetReceiptsListener(this);
