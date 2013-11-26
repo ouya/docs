@@ -1019,7 +1019,7 @@ Games need to check whether the game has been unlocked or whether to show a BUY 
 // JavaScript
     public function OuyaGetReceiptsOnSuccess(receipts : List.<OuyaSDK.Receipt>)
     {
-        for (receipt : OuyaSDK.Receipt in receipts)
+        for (var receipt : OuyaSDK.Receipt in receipts)
         {
                 if (receipt.identifier == "__MY_ID__")
                 {
