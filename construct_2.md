@@ -94,8 +94,12 @@ Build the APK.
 Get the compiled APKS.
 
 ```
-cp chromium/android-webview/build/apk/android-webview-debug-unaligned.apk . && cp chromium/content-shell/build/apk/content-shell-debug-unaligned.apk . && cp chromium/test-shell/build/apk/testshell-debug-unaligned.apk .
+cp chromium/android-webview/build/apk/android-webview-debug-unaligned.apk .
+cp chromium/content-shell/build/apk/content-shell-debug-unaligned.apk . 
+cp chromium/test-shell/build/apk/testshell-debug-unaligned.apk .
 ```
+
+cp chromium/android-webview/build/apk/android-webview-debug-unaligned.apk . && cp chromium/content-shell/build/apk/content-shell-debug-unaligned.apk . && cp chromium/test-shell/build/apk/testshell-debug-unaligned.apk .
 
 #### Crosswalk Project
 
