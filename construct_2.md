@@ -88,9 +88,7 @@ Extras\Google Respository
 Build the APK.
 
 ```
-./gradlew clean
-./gradlew build
-./gradlew build
+./gradlew clean && ./gradlew build && ./gradlew build
 ```
 
 #### Crosswalk Project
