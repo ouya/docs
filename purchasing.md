@@ -5,10 +5,10 @@ In-App Purchasing (IAP) is how your app can make money.  The OUYA Developer Kit 
 #### Definitions
 
 **Gamer Info** -- this is information about the user.  It has two attributes:
-* *Identifier* -- a developer-facing identifier
+* *UUID* -- a developer-facing identifier
 * *Username* -- the user's public username
 
-**Product** -- this is what is purchased by the user.  It has three attributes:
+**Product** -- this is what is purchased by the user.  It has nine attributes:
 * *Identifier* -- a developer-facing identifier (unique per developer)
 * *Name* -- the user-facing name
 * *Description* -- the general description of the product
@@ -22,11 +22,16 @@ In-App Purchasing (IAP) is how your app can make money.  The OUYA Developer Kit 
 
 **Purchasable** -- identifies a product when making purchases
 
-**Receipt** -- information about a prior purchase. it has three attributes:
+**Receipt** -- information about a prior purchase. it has eight attributes:
 * *Product ID* -- the product identifier
-* *Price* -- the amount that was paid
 * *Currency* -- the currency that the product was purchased in
+* *Local Price* -- the cost of the product given the type of currency
+* *Price In Cents* -- the product price in US cents
 * *PurchaseDate* -- when the purchase was made
+* *GeneratedDate* -- when the receipt was created
+* *Gamer* -- the gamer that purchased the product
+* *UUID* -- the identifier of the gamer that purchased the product
+
 
 **Entitlements** --  a product which can be purchased only once and remains available to the game upon reinstallation
 
