@@ -285,9 +285,13 @@ Hit the sync button and the bundle id will be made to match.
 
 In your initial scene add the OuyaGameObject prefab.
 
-If you have multiple scenes, make sure in the inital launch scene that you use Application.LoadLevel in Start() so the Controller Awake() method has a chance to run.
+If you have multiple scenes, make sure in the inital launch scene that Application.LoadLevel is in Start()
 
-Be sure to also enter your developer UUID from the developer portal in the inspector on the OuyaGameObject in your initial scene.
+so the Controller Awake() method has a chance to run.
+
+Be sure to also enter your developer UUID from the developer portal in the inspector on the OuyaGameObject
+
+in your initial scene.
 
 https://devs.ouya.tv/developers
 
