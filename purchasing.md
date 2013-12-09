@@ -159,7 +159,7 @@ Once you have your key embedded you will need to create a purchase listener whic
 	CancelIgnoringOuyaResponseListener<String> purchaseListener =
 		new CancelIgnoringOuyaResponseListener<String>() {
 			@Override
-			public void onSuccess(String response) {
+			public void onSuccess(String result) {
 	            try {
     	            OuyaEncryptionHelper helper = new OuyaEncryptionHelper();
 
@@ -236,7 +236,7 @@ Once we have defined the listener, we need to make the purchase. The following c
         synchronized (mOutstandingPurchaseRequests) {
             mOutstandingPurchaseRequests.put(uniqueId, product);
         }
-        OuyaFacade.getInstance().requestPurchase(purchasable, new PurchaseListener(product));
+        OuyaFacade.getInstance().requestPurchase(purchasable, purchaseListener);
     }
 ```
 Now we wait for the money to start pouring in...
