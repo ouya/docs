@@ -109,3 +109,43 @@ cp chromium/android-webview/build/apk/android-webview-debug-unaligned.apk apks &
 #### Crosswalk Project
 
 https://crosswalk-project.org/
+
+#### CocoonJS
+
+##### Install CocoonJS Launcher on OUYA
+
+[Install](https://play.google.com/store/apps/details?id=com.ideateca.cocoonjslauncher) on a regular rooted Android device, extract an APK and side load it on OUYA.
+
+##### Hello World
+
+1. Create an empty project directory
+
+2. Make index.html:
+```html
+<html>
+<body>
+ <canvas/>
+ <script>
+   var canvas = document.getElementsByTagName('canvas')[0];
+   var ctx = canvas.getContext('2d');
+   ctx.fillStyle = 'white';
+   ctx.font = '6px Arial';
+   ctx.fillText('Hello World', 10, 10);
+ </script>
+ </body>
+</html>
+```
+
+3. Zip it: `zip -r hello_world.zip *`
+
+4. Copy it to OUYA: `adb push hello_world.zip /mnt/sdcard/`
+
+5. Now go to OUYA / MAKE / SOFTWARE and open CocoonJS Launcher
+
+> Pro tip: Use real mouse to work in CocoonJS Launcher as it does not listen to gamepad and using OUYA's touch pad is a real pain.
+
+6. If this is your first time, you'll need to log in to your free https://ludei.com/ account. Also, click cogwheel at the top right and make sure DEBUG option is checked and ORIENTATION is Landscape.
+
+7. Click 'YOUR APP', you should see hello_world.zip in 'ZIPS IN SD CARD'. Run it. You'll see 'Hello World' in a really blurry font.
+
+> Pro tip: To quickly reload an app after you've made changes click 'fps:NN' box at the top left, click 'Actions' and 'Reload'.
