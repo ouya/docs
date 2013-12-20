@@ -112,9 +112,11 @@ https://crosswalk-project.org/
 
 #### CocoonJS
 
-##### Install CocoonJS Launcher on OUYA
+##### Setup
 
-[Install](https://play.google.com/store/apps/details?id=com.ideateca.cocoonjslauncher) on a regular rooted Android device, extract an APK and side load it on OUYA.
+1. Create yourself a free developer account on https://ludei.com
+2. Install CocoonJS Launcher on OUYA. Go to dev portal (create a project) and click 'Compile Launcher' under COMPILATION. You'll get an email in a few mins with zip. Unzip it and `adb install` debug apk of CocoonJS Launcher.
+
 
 ##### Hello World
 
@@ -149,3 +151,26 @@ https://crosswalk-project.org/
 7. Click 'YOUR APP', you should see hello_world.zip in 'ZIPS IN SD CARD'. Run it. You'll see 'Hello World' in a really blurry font.
 
 > Pro tip: To quickly reload an app after you've made changes click 'fps:NN' box at the top left, click 'Actions' and 'Reload'.
+
+##### Development cycle
+
+1. Edit your html/js/css files locally and test them in browser
+2. `zip -r <project-name>.zip *`
+3. `adb push <project-name>zip /mnt/sdcard/`
+On OUYA first time:
+1. Open Launcher
+2. Go to 'YOUR APP'
+3. Open <project-name>.zip
+On OUYA when your app is already open:
+1. Click 'FPS:nn' in the top-left corner, 'ACTIONS', 'RELOAD'.
+
+##### APK compilation
+1. `zip -r <project-name>.zip *`
+2. Go to dev portal and 'Compile Project'
+3. Upload your zip
+4. Select 'Ouya' in 'Compile project for'
+5. Agree to their 'Upload Conditions'
+6. Submit
+
+You'll get email in a few minutes with zip. Two apks inside.
+
