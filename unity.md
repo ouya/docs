@@ -364,80 +364,80 @@ If you lose your keystore, users have to manually uninstall to update.
 
 <pre>
 
-+---LitJson
-|       COPYING
-|       IJsonWrapper.cs
-|       JsonData.cs
-|       JsonException.cs
-|       JsonMapper.cs
-|       JsonReader.cs
-|       JsonWriter.cs
-|       Lexer.cs
-|       license.txt
-|       ParserToken.cs
++---LitJson - JSON Encoding/Decoding Library
+|       COPYING - License
+|       IJsonWrapper.cs - Library implementation
+|       JsonData.cs - Library implementation
+|       JsonException.cs - Library implementation
+|       JsonMapper.cs - Library implementation
+|       JsonReader.cs - Library implementation
+|       JsonWriter.cs - Library implementation
+|       Lexer.cs - Library implementation
+|       license.txt - License
+|       ParserToken.cs - Library implementation
 |
 +---Ouya
 |   \---SDK
 |       +---Editor
-|       |       OuyaMenuAdmin.cs
-|       |       OuyaPanel.cs
-|       |       OuyaPostProcessor.cs
+|       |       OuyaMenuAdmin.cs - Provides menu item to export Core package
+|       |       OuyaPanel.cs - The interactive OUYA Panel
+|       |       OuyaPostProcessor.cs - Optional post processor for compiling Java
 |       |
 |       +---Prefabs
-|       |       OuyaGameObject.prefab
+|       |       OuyaGameObject.prefab - Prefab with the OuyaGameObject
 |       |
 |       \---Scripts
-|               OuyaGameObject.cs
+|               OuyaGameObject.cs - Handles communication from Java to C#
 |
 \---Plugins
-    |   IOuyaController.cs
-    |   OuyaController.cs
-    |   OuyaControllerCommon.cs
-    |   OuyaExampleCommon.cs
-    |   OuyaKeyCodes.cs
-    |   OuyaSDK.cs
-    |   PS2Controller.cs
-    |   XBox360Controller.cs
+    |   IOuyaController.cs - Interface for supported controllers (WIP)
+    |   OuyaController.cs - Mappings for supported controller (WIP)
+    |   OuyaControllerCommon.cs - Common mapping logic (WIP)
+    |   OuyaExampleCommon.cs - Common mappings for all controllers (recommended)
+    |   OuyaKeyCodes.cs - Enum mappings for Unity API Keycodes
+    |   OuyaSDK.cs - Logic for in-app-purchases
+    |   PS2Controller.cs - Mappings for supported controller (WIP)
+    |   XBox360Controller.cs - Mappings for supported controller (WIP)
     |
     \---Android
-        |   AndroidManifest.xml
-        |   OuyaUnityApplication.jar
-        |   OuyaUnityPlugin.jar
+        |   AndroidManifest.xml - Defines the Android project and starting activity
+        |   OuyaUnityApplication.jar - Compiled Java Application library
+        |   OuyaUnityPlugin.jar - Java Compiled Plugin library
         |
-        +---jni
-        |       Android.mk
-        |       jni.cpp
+        +---jni - C++ on Android
+        |       Android.mk - Make file for compiling C++
+        |       jni.cpp - JNI C++ implementation
         |
         +---libs
-        |   |   gson-2.2.2.jar
-        |   |   guava-r09.jar
-        |   |   ouya-sdk.jar
+        |   |   gson-2.2.2.jar - Java JSON encoding
+        |   |   guava-r09.jar - Google core library
+        |   |   ouya-sdk.jar - The ODK
         |   |
         |   \---armeabi
-        |           lib-ouya-ndk.so
+        |           lib-ouya-ndk.so - Compiled C++ library
         |
         +---res
         |   +---drawable
-        |   |       app_icon.png
+        |   |       app_icon.png - Example icon
         |   |
         |   +---drawable-xhdpi
-        |   |       ouya_icon.png
+        |   |       ouya_icon.png - Example icon
         |   |
         |   +---layout
-        |   |       main.xml
+        |   |       main.xml - Android layout
         |   |
         |   +---raw
-        |   |       key.der
+        |   |       key.der - signing key
         |   |
         |   \---values
-        |           strings.xml
+        |           strings.xml - resource strings
         |
         \---src
-                IOuyaActivity.java
-                OuyaNativeActivity.java
-                OuyaUnityApplication.java
-                OuyaUnityPlugin.java
-                UnityOuyaFacade.java
+                IOuyaActivity.java - Common static references
+                OuyaNativeActivity.java - Start activity for Unity 4.X
+                OuyaUnityApplication.java - Start activity for Unity 3.X
+                OuyaUnityPlugin.java - Plugin interface for invoking Java from C#
+                UnityOuyaFacade.java - In-app-purchase wrapper
                 
 </pre>
 
