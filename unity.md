@@ -360,6 +360,87 @@ If you lose your keystore, users have to manually uninstall to update.
 
 ```
 
+### Core Package
+
+<pre>
+
++---LitJson
+|       COPYING
+|       IJsonWrapper.cs
+|       JsonData.cs
+|       JsonException.cs
+|       JsonMapper.cs
+|       JsonReader.cs
+|       JsonWriter.cs
+|       Lexer.cs
+|       license.txt
+|       ParserToken.cs
+|
++---Ouya
+|   \---SDK
+|       +---Editor
+|       |       OuyaMenuAdmin.cs
+|       |       OuyaPanel.cs
+|       |       OuyaPostProcessor.cs
+|       |
+|       +---Prefabs
+|       |       OuyaGameObject.prefab
+|       |
+|       \---Scripts
+|               OuyaGameObject.cs
+|
+\---Plugins
+    |   IOuyaController.cs
+    |   OuyaController.cs
+    |   OuyaControllerCommon.cs
+    |   OuyaExampleCommon.cs
+    |   OuyaKeyCodes.cs
+    |   OuyaSDK.cs
+    |   PS2Controller.cs
+    |   XBox360Controller.cs
+    |
+    \---Android
+        |   AndroidManifest.xml
+        |   OuyaUnityApplication.jar
+        |   OuyaUnityPlugin.jar
+        |
+        +---jni
+        |       Android.mk
+        |       jni.cpp
+        |
+        +---libs
+        |   |   gson-2.2.2.jar
+        |   |   guava-r09.jar
+        |   |   ouya-sdk.jar
+        |   |
+        |   \---armeabi
+        |           lib-ouya-ndk.so
+        |
+        +---res
+        |   +---drawable
+        |   |       app_icon.png
+        |   |
+        |   +---drawable-xhdpi
+        |   |       ouya_icon.png
+        |   |
+        |   +---layout
+        |   |       main.xml
+        |   |
+        |   +---raw
+        |   |       key.der
+        |   |
+        |   \---values
+        |           strings.xml
+        |
+        \---src
+                IOuyaActivity.java
+                OuyaNativeActivity.java
+                OuyaUnityApplication.java
+                OuyaUnityPlugin.java
+                UnityOuyaFacade.java
+                
+</pre>
+
 ## Full Document
 
 ### Authors
