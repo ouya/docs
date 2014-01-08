@@ -157,3 +157,13 @@ For any questions or clarifications, please contact us at devsupport@ouya.tv
 * The application image that is shown in the launcher is embedded inside of the APK itself. The expected file is in res/drawable-xhdpi/ouya_icon.png and the image size must be 732x412.
  
 * The icon that is shown in the app settings is embedded inside of the APK itself. The expected file is in res/drawable/app_icon.png and the image size must be 96x96.
+
+##Video
+
+* In the developer portal after you've created the game entry and edit link will appear. You can use this edit link to alter the description, add screenshots, submit new builds, and add video for your title.
+ 
+<table border="1"><tr><td><img src="http://ouya-docs.s3.amazonaws.com/images/OuyaEditGame.jpg"/></td></tr></table>
+
+* When editing game details in the video URL field, enter a video for your title using a Vimeo URL.
+ 
+<table border="1"><tr><td><img src="http://ouya-docs.s3.amazonaws.com/images/OuyaVideoUrl.jpg"/></td></tr></table>
