@@ -160,7 +160,7 @@ For any questions or clarifications, please contact us at devsupport@ouya.tv
 
 ##Video
 
-* In the developer portal after you've created the game entry and edit link will appear. You can use this edit link to alter the description, add screenshots, submit new builds, and add video for your title.
+* In the developer portal after you've created the game entry, an edit link will appear. You can use this edit link to alter the description, add screenshots, submit new builds, and add video for your title. Your list of games can be found <a target=_blank href="https://gamers.ouya.tv/developers/games">[here]</a>.
  
 <table border="1"><tr><td><img src="http://ouya-docs.s3.amazonaws.com/images/OuyaEditGame.jpg"/></td></tr></table>
 
