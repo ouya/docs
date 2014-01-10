@@ -48,6 +48,14 @@ Displays the OUYA Manage menu, allows users to change account/system settings.
 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("ouya://launcher/manage")));
 ```
 
+# Network Setup
+
+Open the Network screen directly (this is also one of the options within the Manage menu).
+
+```
+startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("ouya://launcher/manage/network")));
+```
+
 # Discover
 
 Displays the OUYA Discover screen, allows users to browse/download new games.
