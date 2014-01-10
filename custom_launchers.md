@@ -37,7 +37,7 @@ To help make them more usable, we've exposed the ability for them to open up cer
 To be opened when no input devices are present, allows users to pair new controllers.
 
 ```
-startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("ouya://launcher/pair_controllers")));
+startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("ouya://launcher/manage/controllers/pairing")));
 ```
 
 # Manage
