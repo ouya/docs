@@ -879,6 +879,62 @@ public class Player : MonoBehaviour,
 }
 ```
 
+It's common for projects to have used input mappings in Edit->Project Settings->Input to use friendly names like "Horizontal/Vertical/Fire/Jump" etc. The problem is those friendly names map to a specific controller axis number and button number. And the trouble is you might use the same controller on multiple platforms, but the axis and button number will not stay the same. A dpad button on the OUYA may map to the left trigger in the Windows editor and something entirely different on Mac. Again the mappings are different on Linux. So it's best to configure your input manager settings as a straight pass-through. Let the code manage the mappings on each platform. And then with a mapping class like below you can continue to use the friendly names, but in this way it will always map to the right axis and button no matter which platform you use.
+
+```
+using System;
+using UnityEngine;
+
+public static class InputManager
+{
+    public static float GetAxis(string inputName, OuyaSDK.OuyaPlayer player)
+    {
+        switch (inputName)
+        {
+            case "FirePrimary":
+                return OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.BUTTON_RT, player);
+            case "FireSecondary":
+                return OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.BUTTON_LT, player);
+            case "Roll":
+                return OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.AXIS_LSTICK_X, player);
+            case "Throttle":
+                return OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.AXIS_LSTICK_Y, player);
+            case "Pitch":
+                return OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.AXIS_RSTICK_Y, player);
+            case "Yaw":
+                return OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.AXIS_RSTICK_X, player);
+            default:
+                return 0;
+        }
+    }
+
+    public static bool GetButton(string inputName, OuyaSDK.OuyaPlayer player)
+    {
+        switch (inputName)
+        {
+            case "Afterburner":
+                return OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_O, player);
+            case "FirePrimary":
+                return OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_RT, player);
+            case "FireSecondary":
+                return OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_LT, player);
+            case "LinkPrimary":
+                return OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_RB, player);
+            case "LinkSecondary":
+                return OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_LB, player);
+            case "CycleTarget":
+                return OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_U, player);
+            case "CycleViewMode":
+                return OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_Y, player);
+            case "SpecialManeuver":
+                return OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_O, player);
+            default:
+                return false;
+        }
+    }
+}
+```
+
 #### Scene Products Example
 The products example shows how to get details about items that can be purchased in the OUYA store. The example comes with a list of example products. You will need to register your own products and product ids in the developer portal. For the example to run on your test device, make sure the OUYA Launcher is installed and running. The OUYA SDK provides methods for getting the details and invoking a purchase. When a purchase is invoked the OUYA Launcher will display a purchase layer above the Unity application. The result of the purchase is returned in the purchase success or failure event which you can handle in your Unity application. You can also get access to purchase receipts to verify the purchase. These methods allow you to create your own store presentation or in-app purchases while the transaction is happening in the OUYA Launcher. In the example, OuyaShowProducts script displays the UI using Unity GUI in the OnGUI event. The Get Products button will invoke getting the products, although this also happens in the Awake event. The purchase button will invoke a purchase event which will open layout above the Unity application in the OUYA Launcher.
 
