@@ -879,6 +879,8 @@ public class Player : MonoBehaviour,
 }
 ```
 
+###### Axis/Button Consistentcy
+
 It's common for projects to have used input mappings in Edit->Project Settings->Input to use friendly names like "Horizontal/Vertical/Fire/Jump" etc. The problem is those friendly names map to a specific controller axis number and button number. And the trouble is you might use the same controller on multiple platforms, but the axis and button number will not stay the same. A dpad button on the OUYA may map to the left trigger in the Windows editor and something entirely different on Mac. Again the mappings are different on Linux. So it's best to configure your input manager settings as a straight pass-through. Let the code manage the mappings on each platform. And then with a mapping class like below you can continue to use the friendly names, but in this way it will always map to the right axis and button no matter which platform you use.
 
 ```
