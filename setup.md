@@ -66,6 +66,14 @@ Android SDK Archived Rev 21 on Windows - http://dl.google.com/android/android-sd
 Android SDK Archived Rev 21 on Mac - http://dl.google.com/android/android-sdk_r21-macosx.zip<br/>
 </td></tr></table>
 
+<img src="http://ouya-docs.s3.amazonaws.com/images/AndroidSDKRev21.jpg"/>
+
+The Android SDK Tools Revision 21 shouldn't be updated, if you want to remain on revision 21.
+
+The other marqueed items in red are suggested installs.
+
+On Mac/Linux, you can skip installing the usb driver.
+
 ##### Preliminary Instructions
 
 To fully complete the setup, you will need:
