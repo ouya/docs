@@ -364,7 +364,7 @@ If you lose your keystore, users have to manually uninstall to update.
 
 <pre>
 
-ProjectSettings\InputManager.asset - Axis setup for all joysticks
++ProjectSettings\InputManager.asset - Axis mappings for all controllers
 +---LitJson - JSON Encoding/Decoding Library
 |       COPYING - License
 |       IJsonWrapper.cs - Library implementation
@@ -588,4 +588,644 @@ Since the initial writing of this document, controller input for games has been 
 ### Starter Kit
 The SDK now includes a starter kit to jump start users into a proper scene and project setup. The starter kit has 4 scenes, SceneInit, SceneSplash, SceneMain, and SceneGame. Be sure to add all 4 scenes to the build settings when using the starter kit.  
   
-The starter kit begins with SceneInit which has the only OuyaGameObject instance. The OuyaGameObject has don’t destroy on load and should only be placed into the init scene. You should never have duplicate OuyaGameObjects in your scene. The OuyaSceneInit script powers the SceneInit scene. SceneInit immediately loads the next scene which transitions to the SceneSplash
+The starter kit begins with SceneInit which has the only OuyaGameObject instance. The OuyaGameObject has don’t destroy on load and should only be placed into the init scene. You should never have duplicate OuyaGameObjects in your scene. The OuyaSceneInit script powers the SceneInit scene. SceneInit immediately loads the next scene which transitions to the SceneSplash.  
+  
+SceneSplash displays a splash screen that fades in, holds, and then fades out. To display the splash screen a plane was used. The OuyaScreenSplash has a public material reference and the timers affect the alpha channel of the material. The material uses a shader that uses an alpha channel to fade in the splash texture.  
+  
+The directional light brightens the splash image. After the timers elapse, the SceneMain scene is loaded.  
+  
+SceneMain is a simple example of switching scenes powered by a GUI button. OuyaSceneMain drives the GUI event. The OuyaSceneMain has a scene parameter for “SceneMain” which tells it which scene to load next. The next scene after SceneMain changes to SceneGame when the button “Load the Game Scene” is clicked. The SceneMain is a placeholder for showing the main menu from your game.  
+  
+SceneGame is just like SceneMain as it has a button to switch back to the main menu SceneMain scene. The button is labelled “Back to Main Scene” and when clicked goes back to the SceneMain scene. OuyaSceneGame is the script that powers the SceneGame scene. This scene is a placeholder for your game scene.
+
+### Example Scenes
+The package includes several example scenes. Each example scene has a custom script that highlights a functional area. Each OUYA example will need the OuyaGameObject added to only the initial scene. Refer to the starter kit for more info. There is an OuyaGameObject prefab that you can drag to the initial scene to create the game object. This object is responsible for letting the OUYA java interface send messages to Unity. Unity can communicate with Java and C++ via the OuyaSDK class. The OuyaGameObject is where you enter your developer id from the developer portal. OuyaGameObject is how Java talks to Unity C#. And the OuyaSDK is how Unity C# communicates with Java.
+
+#### Show Unity Input Example
+This example scene maps known controllers to a virtual 3d controller. That said, you may have an unrecognized controller that you are testing while doing development. If your controller is not recognized, let us know by posting in the developer forums. In the example, as you press a controller button, the axis or button will highlight on the virtual control. As you move your physical controller axis, the virtual controller axis will move. The scene has an instance of the controller model, and the example OuyaShowUnityInput script. The attached script has meta references to the specific controller parts to control the highlighting and movement. Each button and axis has a MeshRenderer component which is used to access the material and change the color. From the MeshRenderer component, the transform can be accessed to rotate the thumbsticks and triggers. The axis and button values are provided from the Unity Input API, where the OUYA SDK obtains the proper mappings for the controller.
+
+The OUYA Bluetooth controller, PS2/3 controllers, and XBOX wired/wireless controllers all work while testing in the Unity3d Editor. The same controllers will also work connected to the OUYA console.  
+  
+![Device Controller](http://d3j5vwomefv46c.cloudfront.net/photos/large/785592989.png?1372462788)
+
+##### Script
+To be able to attach a script to a GameObject, the example must extend MonoBehaviour. The input logic script should implement the OUYA SDK input listeners.
+
+The MenuButtonUp listener is invoked when the system button sends a onKeyUp KeyEvent.
+
+The MenuAppearing listener is invoked when the system button is double tapped, or is held longer than a second.
+
+The the pause and resume interface to handle pause and resume events.
+
+```csharp
+public class OuyaShowController : MonoBehaviour,
+    OuyaSDK.IJoystickCalibrationListener,
+    OuyaSDK.IMenuButtonUpListener,
+    OuyaSDK.IMenuAppearingListener,
+    OuyaSDK.IPauseListener,
+    OuyaSDK.IResumeListener
+```
+
+The developer identifier is now entered in the init scene in the inspector on the OuyaGameObject scene object. The developer id is found in the developer portal.  
+  
+Per the interface for the listeners, register in the Awake event.  
+  
+Conversely, unregister in the OnDestroy event.
+
+```csharp
+    void Awake()
+    {
+        OuyaSDK.registerJoystickCalibrationListener(this);
+        OuyaSDK.registerMenuButtonUpListener(this);
+        OuyaSDK.registerMenuAppearingListener(this);
+        OuyaSDK.registerPauseListener(this);
+        OuyaSDK.registerResumeListener(this);
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterJoystickCalibrationListener(this);
+        OuyaSDK.unregisterMenuButtonUpListener(this);
+        OuyaSDK.unregisterMenuAppearingListener(this);
+        OuyaSDK.unregisterPauseListener(this);
+        OuyaSDK.unregisterResumeListener(this);
+    }
+```
+
+It's a good idea to clear the input state when the scene loads and when the scene is destroyed.
+
+```csharp
+    void Awake()
+    {
+        Input.ResetInputAxes();
+    }
+    void OnDestroy()
+    {
+        Input.ResetInputAxes();
+    }
+```
+
+When a controller connects or disconnects, a calibration event will fire.
+
+```csharp
+    public void OuyaOnJoystickCalibration()
+    {
+    }
+```
+
+When the system button is pressed, show your pause menu.
+
+```csharp
+    public void OuyaMenuButtonUp()
+    {
+    }
+```
+
+When your game is about to close, prepare to exit.
+
+```csharp
+    public void OuyaMenuAppearing()
+    {
+    }
+```
+
+With the pause/unpause listeners you need to need to implement OuyaOnPause and OuyaOnResume events. This is where you can shutdown your game, or reinitialize the game on resume, or potentially save your game state.
+```csharp
+    public void OuyaOnPause()
+    {
+    }
+
+    public void OuyaOnResume()
+    {
+    }
+```
+
+####OUYA Example Common code
+
+Examples share common code which is found in the OuyaExampleCommon.cs script.
+
+Make sure your init scene includes the OuyaGameObject GameObject with the OuyaGameObject script attached.
+
+Some examples need to select a single controller at a time. The controller index is the current selected controller for the example. Especially with the OuyaShowUnityInput example where input is only shown for the selected controller.
+
+```csharp
+public class OuyaExampleCommon
+{
+	public static OuyaSDK.OuyaPlayer Player = OuyaSDK.OuyaPlayer.player1;
+}
+```
+
+When dealing with controllers and getting the Axis values keep deadzones in mind. You may need to tweak the values. Generally an inner deadzone value of 0.3 is cautious enough. Using the common input code, getting an axis allows you to pass an enum value to specify the axis, and a player controller enum for the controller. The common code uses the joystick name, finds the intended axis and returns the Input.RawAxis value from the Unity API. RawAxis values are uninterpolated values without any smoothing applied. Conversely, Input.GetAxis applies Unity smoothing. And Mathf.Abs is used to check for the inner deadzone whether the axis value is positive or negative.
+
+```csharp
+public class OuyaShowUnityInput
+{
+    void Update()
+    {
+    	if (Mathf.Abs(OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.AXIS_LSTICK_X, OuyaExampleCommon.Player)) < 0.3)
+    	{
+    		//in the deadzone, ignore input
+    	}
+    	else
+    	{
+    		//handle input and do something
+    	}
+    }
+}
+```
+
+The OuyaSDK has a list of common enums for axises and buttons that map to the supported controllers. The KeyEnum also includes some controller specific values. Oh yeah and there's some Rockband (TM) controller mappings in there too.
+
+```csharp
+public static class OuyaSDK
+{
+    public enum KeyEnum
+    {
+        NONE = -1,
+        BUTTON_O = OuyaSDK.BUTTON_O,
+        BUTTON_U = OuyaSDK.BUTTON_U,
+        BUTTON_Y = OuyaSDK.KEYCODE_BUTTON_Y,
+        BUTTON_A = OuyaSDK.BUTTON_A,
+        BUTTON_LB = OuyaSDK.BUTTON_LB,
+        BUTTON_LT = OuyaSDK.KEYCODE_BUTTON_L2,
+        BUTTON_RB = OuyaSDK.BUTTON_RB,
+        BUTTON_RT = OuyaSDK.BUTTON_RT,
+        BUTTON_L3 = OuyaSDK.BUTTON_L3,
+        BUTTON_R3 = OuyaSDK.BUTTON_R3,
+        BUTTON_SYSTEM = OuyaSDK.BUTTON_SYSTEM,
+        BUTTON_START = OuyaSDK.BUTTON_START,
+        BUTTON_SELECT = OuyaSDK.BUTTON_SELECT,
+        BUTTON_ESCAPE = OuyaSDK.BUTTON_ESCAPE,
+        AXIS_LSTICK_X = OuyaSDK.AXIS_LSTICK_X,
+        AXIS_LSTICK_Y = OuyaSDK.AXIS_LSTICK_Y,
+        AXIS_RSTICK_X = OuyaSDK.AXIS_RSTICK_X,
+        AXIS_RSTICK_Y = OuyaSDK.AXIS_RSTICK_Y,
+        BUTTON_DPAD_UP = OuyaSDK.BUTTON_DPAD_UP,
+        BUTTON_DPAD_RIGHT = OuyaSDK.BUTTON_DPAD_RIGHT,
+        BUTTON_DPAD_DOWN = OuyaSDK.BUTTON_DPAD_DOWN,
+        BUTTON_DPAD_LEFT = OuyaSDK.BUTTON_DPAD_LEFT,
+        BUTTON_DPAD_CENTER = OuyaSDK.BUTTON_DPAD_CENTER,
+        
+        BUTTON_BACK,
+
+        HARMONIX_ROCK_BAND_GUITAR_GREEN,
+        HARMONIX_ROCK_BAND_GUITAR_RED,
+        HARMONIX_ROCK_BAND_GUITAR_YELLOW,
+        HARMONIX_ROCK_BAND_GUITAR_BLUE,
+        HARMONIX_ROCK_BAND_GUITAR_ORANGE,
+        HARMONIX_ROCK_BAND_GUITAR_LOWER,
+        HARMONIX_ROCK_BAND_GUITAR_WHAMMI,
+        HARMONIX_ROCK_BAND_GUITAR_PICKUP,
+        HARMONIX_ROCK_BAND_GUITAR_STRUM,
+
+        HARMONIX_ROCK_BAND_DRUMKIT_GREEN,
+        HARMONIX_ROCK_BAND_DRUMKIT_RED,
+        HARMONIX_ROCK_BAND_DRUMKIT_YELLOW,
+        HARMONIX_ROCK_BAND_DRUMKIT_BLUE,
+        HARMONIX_ROCK_BAND_DRUMKIT_ORANGE,
+        HARMONIX_ROCK_BAND_DRUMKIT_A,
+        HARMONIX_ROCK_BAND_DRUMKIT_B,
+        HARMONIX_ROCK_BAND_DRUMKIT_X,
+        HARMONIX_ROCK_BAND_DRUMKIT_Y,
+	}
+}
+```
+OuyaShowUnityInput also uses OuyaExampleCommon to get button state. The method takes an enum button and an enum controller for the player number. OuyaExampleCommon.GetButton finds the button mapping based on the controller name and then invokes the Input.GetKey method. This finds the current state of the button. This doesn't find whether the button was just pressed. If you rely on the Unity Input API to check if the button was just pressed, there's always a chance that you might have missed the event. I personally like to keep track of such things in my own code. That said this framework allows you to call the Unity Input API, so if you highly desire calling Input.GetButtonDown and Input.GetButtonUp you can.
+
+```csharp
+public class OuyaShowUnityInput
+{
+    void Update()
+    {
+		if (OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_L3, OuyaExampleCommon.Player))
+    	{
+    		//button is pressed
+    	}
+    	else
+    	{
+    		//button is not pressed
+    	}
+    }
+}
+```
+
+And here's a base player script that you can attach to a gameObject to achieve multiple controller support.
+```csharp
+using UnityEngine;
+
+public class Player : MonoBehaviour,
+    OuyaSDK.IMenuButtonUpListener,
+    OuyaSDK.IMenuAppearingListener,
+    OuyaSDK.IPauseListener,
+    OuyaSDK.IResumeListener
+{
+    private const float INNER_DEADZONE = 0.3f;
+
+    private const float MOVE_SPEED = 5f;
+
+    public OuyaSDK.OuyaPlayer Index;
+
+    void Awake()
+    {
+        OuyaSDK.registerMenuButtonUpListener(this);
+        OuyaSDK.registerMenuAppearingListener(this);
+        OuyaSDK.registerPauseListener(this);
+        OuyaSDK.registerResumeListener(this);
+        Input.ResetInputAxes();
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterMenuButtonUpListener(this);
+        OuyaSDK.unregisterMenuAppearingListener(this);
+        OuyaSDK.unregisterPauseListener(this);
+        OuyaSDK.unregisterResumeListener(this);
+        Input.ResetInputAxes();
+    }
+
+    public void OuyaMenuButtonUp()
+    {
+    }
+
+    public void OuyaMenuAppearing()
+    {
+    }
+
+    public void OuyaOnPause()
+    {
+    }
+
+    public void OuyaOnResume()
+    {
+    }
+
+    void Update()
+    {
+        Vector3 pos = transform.position;
+
+        Vector2 input;
+        input.x = OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.AXIS_LSTICK_X, Index);
+        input.y = OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.AXIS_LSTICK_Y, Index);
+
+        if (Mathf.Abs(input.x) > INNER_DEADZONE)
+        {
+            pos.x += input.x*MOVE_SPEED*Time.deltaTime;
+        }
+
+        if (Mathf.Abs(input.y) > INNER_DEADZONE)
+        {
+            pos.y -= input.y*MOVE_SPEED*Time.deltaTime;
+        }
+
+        transform.position = pos;
+    }
+}
+```
+
+###### Axis/Button Consistency
+
+It's common for projects to have used input mappings in Edit->Project Settings->Input to use friendly names like "Horizontal/Vertical/Fire/Jump" etc. The problem is those friendly names map to a specific controller axis number and button number. And the trouble is you might use the same controller on multiple platforms, but the axis and button number will not stay the same. A dpad button on the OUYA may map to the left trigger in the Windows editor and something entirely different on Mac. Again the mappings are different on Linux. So it's best to configure your input manager settings as a straight pass-through. Let the code manage the mappings on each platform. And then with a mapping class like below you can continue to use the friendly names, but in this way it will always map to the right axis and button no matter which platform you use.
+
+```
+using System;
+using UnityEngine;
+
+public static class InputManager
+{
+    public static float GetAxis(string inputName, OuyaSDK.OuyaPlayer player)
+    {
+        switch (inputName)
+        {
+            case "FirePrimary":
+                return OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.BUTTON_RT, player);
+            case "FireSecondary":
+                return OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.BUTTON_LT, player);
+            case "Roll":
+                return OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.AXIS_LSTICK_X, player);
+            case "Throttle":
+                return OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.AXIS_LSTICK_Y, player);
+            case "Pitch":
+                return OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.AXIS_RSTICK_Y, player);
+            case "Yaw":
+                return OuyaExampleCommon.GetAxis(OuyaSDK.KeyEnum.AXIS_RSTICK_X, player);
+            default:
+                return 0;
+        }
+    }
+
+    public static bool GetButton(string inputName, OuyaSDK.OuyaPlayer player)
+    {
+        switch (inputName)
+        {
+            case "Afterburner":
+                return OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_O, player);
+            case "FirePrimary":
+                return OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_RT, player);
+            case "FireSecondary":
+                return OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_LT, player);
+            case "LinkPrimary":
+                return OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_RB, player);
+            case "LinkSecondary":
+                return OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_LB, player);
+            case "CycleTarget":
+                return OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_U, player);
+            case "CycleViewMode":
+                return OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_Y, player);
+            case "SpecialManeuver":
+                return OuyaExampleCommon.GetButton(OuyaSDK.KeyEnum.BUTTON_O, player);
+            default:
+                return false;
+        }
+    }
+}
+```
+
+#### Scene Products Example
+The products example shows how to get details about items that can be purchased in the OUYA store. The example comes with a list of example products. You will need to register your own products and product ids in the developer portal. For the example to run on your test device, make sure the OUYA Launcher is installed and running. The OUYA SDK provides methods for getting the details and invoking a purchase. When a purchase is invoked the OUYA Launcher will display a purchase layer above the Unity application. The result of the purchase is returned in the purchase success or failure event which you can handle in your Unity application. You can also get access to purchase receipts to verify the purchase. These methods allow you to create your own store presentation or in-app purchases while the transaction is happening in the OUYA Launcher. In the example, OuyaShowProducts script displays the UI using Unity GUI in the OnGUI event. The Get Products button will invoke getting the products, although this also happens in the Awake event. The purchase button will invoke a purchase event which will open layout above the Unity application in the OUYA Launcher.
+
+![Scene Products Example](https://d31pno3ktcq63f.cloudfront.net/assets/unity/16_ProductsExample.png)
+
+
+##### General Steps
+
+The general steps for in-app-purchases are:
+
+1. If network connection isn't present then check player prefs to see if the full game has been unlocked.
+
+2. If network connection is available, check receipts for the purchase.
+
+3. If the purchase is found in receipts, set the player prefs that the game is unlocked.
+
+4. If the purchase is not found in receipts, show the store/buy button and remove full game unlocked from player prefs.
+
+5. When the buy button is pressed, request a purchase.
+
+6. Upon successful purchase set the player prefs for full game unlocked.
+
+7. If the player prefs has full game unlocked, show a visual change that the game is unlocked.
+
+
+##### Script
+
+To give access to generic lists, import the required namespace.
+
+```csharp
+// C#
+using System.Collections.Generic;
+```
+
+```
+// JavaScript
+import System.Collections.Generic;
+```
+
+Add listeners for the purchase-iap-system areas for FetchGamerInfo, GetProducts, Purchase, and GetReceipts.
+
+```csharp
+// C#
+public class OuyaShowProducts : MonoBehaviour,
+   OuyaSDK.IPauseListener,
+   OuyaSDK.IResumeListener,
+   OuyaSDK.IFetchGamerInfoListener,
+   OuyaSDK.IGetProductsListener,
+   OuyaSDK.IPurchaseListener,
+   OuyaSDK.IGetReceiptsListener
+```
+
+```
+// JavaScript
+public class OuyaShowProducts extends MonoBehaviour implements
+   OuyaSDK.IPauseListener,
+   OuyaSDK.IResumeListener,
+   OuyaSDK.IFetchGamerInfoListener,
+   OuyaSDK.IGetProductsListener,
+   OuyaSDK.IPurchaseListener,
+   OuyaSDK.IGetReceiptsListener
+```
+
+Enter your purchasables into the OuyaGameObject. The developer creates purchasables in the developer portal. And then the OuyaGameObject has a ProductKey list where you enter the product app ids from the developer portal.
+  
+Register your FetchGamerInfoListener, GetProductsListener, PurchaseListener, and GetReceiptsLister in the Awake and clear in the OnDestroy events.
+
+```csharp
+// C#
+    void Awake()
+    {
+        OuyaSDK.registerFetchGamerInfoListener(this);
+        OuyaSDK.registerGetProductsListener(this);
+        OuyaSDK.registerPurchaseListener(this);
+        OuyaSDK.registerGetReceiptsListener(this);
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterFetchGamerInfoListener(this);
+        OuyaSDK.unregisterGetProductsListener(this);
+        OuyaSDK.unregisterPurchaseListener(this);
+        OuyaSDK.unregisterGetReceiptsListener(this);
+    }
+```
+
+```
+// JavaScript
+    function Awake()
+    {
+        OuyaSDK.registerFetchGamerInfoListener(this);
+        OuyaSDK.registerGetProductsListener(this);
+        OuyaSDK.registerPurchaseListener(this);
+        OuyaSDK.registerGetReceiptsListener(this);
+    }
+    function OnDestroy()
+    {
+        OuyaSDK.unregisterFetchGamerInfoListener(this);
+        OuyaSDK.unregisterGetProductsListener(this);
+        OuyaSDK.unregisterPurchaseListener(this);
+        OuyaSDK.unregisterGetReceiptsListener(this);
+    }
+```
+
+It’s recommended that you avoid switching scenes when events are pending. As in, don’t request receipts and immediately switch scenes before the callback happens. Also be sure to invoke a single request and wait for the response before invoking the iap service again.  
+  
+The listeners implement an OnSuccess, OnFailure, and OnCancel callback.
+
+###### Fetch Gamer Info
+The gamer uuid and username for the logged in user is accessible while the console is connected to the Internet.
+
+```csharp
+// C#
+    public void OuyaFetchGamerInfoOnSuccess(string uuid, string username)
+    {
+    }
+    public void OuyaFetchGamerInfoOnFailure(int errorCode, string errorMessage)
+    {
+    }
+    public void OuyaFetchGamerInfoOnCancel()
+    {
+    }
+```
+
+```
+// JavaScript
+    public function OuyaFetchGamerInfoOnSuccess(uuid : String, username : String)
+    {
+    }
+    public function OuyaFetchGamerInfoOnFailure(errorCode : int, errorMessage : String)
+    {
+    }
+    public function OuyaFetchGamerInfoOnCancel()
+    {
+    }
+```
+
+###### Request product list
+To get a list of products (which includes the price information), invoke OuyaSDK.requestProductList and pass a list of purchasables. You likely want to obtain prices from the server to avoid hardcoding prices and showing an inaccurate price.
+
+```csharp
+// C#
+    public void OuyaGetProductsOnSuccess(List<OuyaSDK.Product> products)
+    {
+        foreach (OuyaSDK.Product product in products)
+        {
+        }
+    }
+    public void OuyaGetProductsOnFailure(int errorCode, string errorMessage)
+    {
+    }
+    public void OuyaGetProductsOnCancel()
+    {
+    }
+```
+
+```
+// JavaScript
+    public function OuyaGetProductsOnSuccess(products : List.<OuyaSDK.Product>)
+    {
+        for (var product : OuyaSDK.Product in products)
+        {
+        }
+    }
+    public function OuyaGetProductsOnFailure(errorCode : int, errorMessage : String)
+    {
+    }
+    public function OuyaGetProductsOnCancel()
+    {
+    }
+```
+
+###### Request purchase
+Start a purchase by invoking OuyaSDK.requestPurchase and pass the product identifier that you obtained from the list of purchasables. Be sure to wait for the callback result before invoking another purchase.
+
+```csharp
+// C#
+    public void OuyaPurchaseOnSuccess(OuyaSDK.Product product)
+    {
+    }
+    public void OuyaPurchaseOnFailure(int errorCode, string errorMessage)
+    {
+    }
+    public void OuyaPurchaseOnCancel()
+    {
+    }
+```
+
+```
+// JavaScript
+    public function OuyaPurchaseOnSuccess(product : OuyaSDK.Product)
+    {
+    }
+    public function OuyaPurchaseOnFailure(errorCode : int, errorMessage : String)
+    {
+    }
+    public function OuyaPurchaseOnCancel()
+    {
+    }
+```
+
+###### Get receipts
+Games need to check whether the game has been unlocked or whether to show a BUY NOW button. Check the user’s receipt list for the purchasable identifier to see if the content has been unlocked. Call OuyaSDK.requestReceiptList to get the list of receipts and check the identifier.
+
+```csharp
+// C#
+    public void OuyaGetReceiptsOnSuccess(List<OuyaSDK.Receipt> receipts)
+    {
+        foreach (OuyaSDK.Receipt receipt in receipts)
+        {
+                if (receipt.identifier == "__MY_ID__")
+                {
+                    //detected purchase
+                }
+        }
+    }
+    public void OuyaGetReceiptsOnFailure(int errorCode, string errorMessage)
+    {
+    }
+    public void OuyaGetReceiptsOnCancel()
+    {
+    }
+```
+
+```
+// JavaScript
+    public function OuyaGetReceiptsOnSuccess(receipts : List.<OuyaSDK.Receipt>)
+    {
+        for (var receipt : OuyaSDK.Receipt in receipts)
+        {
+                if (receipt.identifier == "__MY_ID__")
+                {
+                    //detected purchase
+                }
+        }
+    }
+    public function OuyaGetReceiptsOnFailure(errorCode : int, errorMessage : String)
+    {
+    }
+    public function OuyaGetReceiptsOnCancel()
+    {
+    }
+```
+
+#### Scene NDK Example
+The NDK Example shows how to write C++ and interface that with Unity. The Unity GUI is simply buttons that are invoking C++ methods from Unity. The “Clear Results” button will set the local fields back to their defaults. “Invoke Android Hello World” will invoke the example method which will allocate a string in C++ and pass it back to Unity. Unity will then release the C++ memory string after it is received. The result is displayed in a GUI label. The button “Invoke Android ExampleFunction1” invokes the C++ example which passes a byte array an int parameter by out. These examples are useful when you want to pass something like PNG bytes from C# to C++ and/or get information back from the C++ side. This example uses C++ code which can also interface with the JNI and other C++ libraries. With C++ you can also write code to natively access custom hardware. The C++ is natively compiled in the OUYA panel.
+
+![Scene NDK Example](https://d31pno3ktcq63f.cloudfront.net/assets/unity/17_NDKExample.png)
+
+##### Script
+First take a look at the native C++ code interface, which is being invoked from Unity. This source is located in a file called “jni.cpp” because that’s what the Android NDK build scripts look for. NDK compiles the C++ code and places into the target “Assets\Plugins\Android\libs\armeabi\lib-ouya-ndk.so” library.
+```cpp
+extern "C"
+{
+	char* AndroidGetHelloWorld(long* size);
+	void AndroidReleaseMemory(char* buffer);
+	void AndroidExampleFunction1(unsigned char* a, int b, int* c);
+}
+```
+
+Now back to the C# Unity side. To be able to attach a script to a GameObject, the example must extend MonoBehaviour.
+```csharp
+public class OuyaShowNDK : MonoBehaviour
+```
+
+For organization, the C++ interface was placed into an AndroidPlugin structure, although this is not required.
+```csharp
+private struct AndroidPlugin
+```
+
+To import the method from C++ first you need to name the C++ library.
+```csharp
+[DllImport("lib-ouya-ndk")]
+```
+
+Next, the C# matching signature is added to correspond with the C++ interface.
+```csharp
+private static extern IntPtr AndroidGetHelloWorld(out long size);
+```
+
+When you invoke AndroidGetHelloWorld if the DLL is missing, the call with throw an exception and likely kill the application on the target device. This method allocates a “Hello World” string in C++ and returns the pointer back to C# while setting the string length using the size out parameter. The memory is released by calling the AndroidReleaseMemory method.
+```csharp
+private static extern void AndroidReleaseMemory(IntPtr buffer);
+```
+
+The AndroidExampleFunction1 is an example of passing various argument types. To be able to pass the byte array, a calling convention is specified.
+```csharp
+[DllImport("lib-ouya-ndk", CallingConvention = CallingConvention.Cdecl)]
+private static extern void AndroidExampleFunction1(byte[] a, int b, out int c);
+```
+
+You can find other marshalling examples and supported types by visiting the http://pinvoke.net site.
