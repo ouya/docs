@@ -159,7 +159,8 @@ adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUN
 * The guest needs a minimum of 2GB of RAM to compile, 4GB is recommended.<br/>
 <br/>
 
-* I typically turn off the power settings and lock screen for guests, since the host can handle the lock screen. Open All Settings-&gt;Brightness and Lock. Set inactive screen to "Never". Turn off the "Lock". Turn off "Require my password when waking up from suspend". That way your VM is always responsive and you don't miss anything while compiling.
+* I typically turn off the power settings and lock screen for guests, since the host can handle the lock screen. Open All Settings-&gt;Brightness and Lock. Set inactive screen to "Never". Turn off the "Lock". Turn off "Require my password when waking up from suspend". That way your VM is always responsive and you don't miss anything while compiling.<br/>
+<br/>
 
 <b>(After you've created a VM and installed Ubuntu):</b><br/>
 <br/>
