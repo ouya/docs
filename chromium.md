@@ -145,6 +145,10 @@ adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUN
 adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -n org.chromium.content_shell_apk/org.chromium.content_shell_apk.ContentShellActivity -d chrome://gpu
 </td></tr><table>
 
+<h1>Setting up the build environment</h1>
+
+* Create a Virtual Machine in (VMWare Fusion or Virtual Box) with <a target=_blank href="http://www.ubuntu.com/download/desktop">Ubuntu 12.04 LTS Desktop 64-bit</a> as your guest image.
+
 <h1>Getting chromium from trunk</h1>
 
 Guide: <a target=_blank href="https://sites.google.com/a/chromium.org/dev/developers/how-tos/get-the-code">[how-to-get-the-code]</a>.
