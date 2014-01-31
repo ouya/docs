@@ -149,9 +149,10 @@ adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUN
 
 
 * Create a Virtual Machine in (VMWare Fusion or Virtual Box) with <a target=_blank href="http://www.ubuntu.com/download/desktop">[Ubuntu 12.04 LTS Desktop 64-bit]</a> as your guest image.<br/>
-<br/>
 
-* For the guest, you want about 80GB of disk space to handle compiling Chromium. You'll want 160GB if you need the space to duplicate the compiled source or to archive the folder for backup.
+* For the guest, you want about 80GB of disk space to handle compiling Chromium. You'll want 160GB if you need the space to duplicate the compiled source or to archive the folder for backup.<br/>
+
+* The guest needs a minimum of 2GB of RAM to compile, 4GB is recommended.<br/>
 
 <h1>Getting chromium from trunk</h1>
 
