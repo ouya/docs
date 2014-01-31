@@ -147,7 +147,15 @@ adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUN
 
 <h1>Setting up the build environment</h1>
 
-* Install <a target=_blank href="https://developer.android.com/sdk/installing/studio.html">[Android Studio]</a>. This is the easiest way to get the Android Build Tools and SDK needed for the build. Launch the SDK Manager from inside Android Studio (Tools -> Android -> SDK Manager) and configure it so it matches at least the following:<br/>
+* Install <a target=_blank href="https://developer.android.com/sdk/installing/studio.html">[Android Studio]</a>. This is the easiest way to get the Android Build Tools and SDK needed for the build.<br/>
+<br/>
+
+<table border="1"><tr><td><pre>
+cd ~/Downloads
+tar zxvf android-studio-bundle-133.970939-linux.tgz
+</pre></td></tr></table>
+
+* Launch the SDK Manager from inside Android Studio (Tools -> Android -> SDK Manager) and configure it so it matches at least the following:<br/>
 <br/>
 
 <table border="1"><tr><td><pre>
