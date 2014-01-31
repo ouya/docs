@@ -277,3 +277,7 @@ ui/events/keycodes/keyboard_codes_posix.h
 <table border="1"><tr><td>
 ui/events/keycodes/keyboard_code_conversion_android.cc
 </td></tr><table>
+
+<h1>IDE</h1>
+
+* <a target=_blank href="http://www.chromium.org/developers/sublime-text">Sublime Text</a> makes a good editor for working with the Chromium source.
