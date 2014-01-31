@@ -165,7 +165,7 @@ adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUN
 * Install the build dependencies, which are listed at <a target=_blank href="http://code.google.com/p/chromium/wiki/LinuxBuildInstructionsPrerequisites">[LinuxBuildInstructionsPrerequisites]</a>.<br/>
 <br/>
 
-* Install the depot\_tools utilities, a process that is documented at <a target=_blank href="http://dev.chromium.org/developers/how-tos/install-depot-tools"><[install-depot-tools]</a>.<br/>
+* Install the depot_tools utilities, a process that is documented at <a target=_blank href="http://dev.chromium.org/developers/how-tos/install-depot-tools">[install-depot-tools]</a>.<br/>
 <br/>
 
 <h1>Getting chromium from trunk</h1>
