@@ -147,6 +147,18 @@ adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUN
 
 <h1>Setting up the build environment</h1>
 
+* Install <a target=_blank href="https://developer.android.com/sdk/installing/studio.html">[Android Studio]</a>. This is the easiest way to get the Android Build Tools and SDK needed for the build. Launch the SDK Manager from inside Android Studio (Tools -> Android -> SDK Manager) and configure it so it matches at least the following:<br/>
+<br/>
+
+<table border="1"><tr><td><pre>
+* Android SDK Tools 22.3
+* Android SDK Platform-Tools 19
+* Android 4.3 (API 18) SDK Platform
+* Extras Android Support Repository
+* Extras Android Support Library
+* Extras Google Repository
+</pre></td></tr></table>
+
 * <a target=_blank href="https://code.google.com/p/chromium/wiki/LinuxBuildInstructions">[Instructions]</a> for setting up the Chromium Build Environment.<br/>
 <br/>
 
