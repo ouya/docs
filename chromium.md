@@ -147,6 +147,8 @@ adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUN
 
 <h1>Setting up the build environment</h1>
 
+* <a target=_blank href="https://code.google.com/p/chromium/wiki/LinuxBuildInstructions">[Instructions]</a> for setting up the Chromium Build Environment.</br>
+<br/>
 
 * Create a Virtual Machine in (VMWare Workstation/Fusion or Virtual Box) with <a target=_blank href="http://www.ubuntu.com/download/desktop">[Ubuntu 12.04 LTS Desktop 64-bit]</a> as your guest image. VMWare is recommended as you don't need to export/import to backup/restore the virtual machine image.<br/>
 <br/>
