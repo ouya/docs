@@ -147,7 +147,7 @@ adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUN
 
 <h1>Setting up the build environment</h1>
 
-* <a target=_blank href="https://code.google.com/p/chromium/wiki/LinuxBuildInstructions">[Instructions]</a> for setting up the Chromium Build Environment.</br>
+* <a target=_blank href="https://code.google.com/p/chromium/wiki/LinuxBuildInstructions">[Instructions]</a> for setting up the Chromium Build Environment.<br/>
 <br/>
 
 * Create a Virtual Machine in (VMWare Workstation/Fusion or Virtual Box) with <a target=_blank href="http://www.ubuntu.com/download/desktop">[Ubuntu 12.04 LTS Desktop 64-bit]</a> as your guest image. VMWare is recommended as you don't need to export/import to backup/restore the virtual machine image.<br/>
@@ -159,9 +159,18 @@ adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUN
 * The guest needs a minimum of 2GB of RAM to compile, 4GB is recommended.<br/>
 <br/>
 
+<b>(After you've created a VM and installed Ubuntu):</b>
+
+* Install the build dependencies, which are listed at <a target=_blank href="http://code.google.com/p/chromium/wiki/LinuxBuildInstructionsPrerequisites">[LinuxBuildInstructionsPrerequisites]</a>.<br/>
+<br/>
+
+Install the depot_tools utilities, a process that is documented at <a target=_blank href="http://dev.chromium.org/developers/how-tos/install-depot-tools"><[install-depot-tools]</a>.<br/>
+<br/>
+
 <h1>Getting chromium from trunk</h1>
 
-Guide: <a target=_blank href="https://sites.google.com/a/chromium.org/dev/developers/how-tos/get-the-code">[how-to-get-the-code]</a>.
+Guide: <a target=_blank href="https://sites.google.com/a/chromium.org/dev/developers/how-tos/get-the-code">[how-to-get-the-code]</a>.<br/>
+<br/>
 
 These are the quick steps that I use. Open a terminal.
 
