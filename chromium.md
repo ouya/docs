@@ -281,3 +281,7 @@ ui/events/keycodes/keyboard_code_conversion_android.cc
 <h1>IDE</h1>
 
 * <a target=_blank href="http://www.chromium.org/developers/sublime-text">Sublime Text</a> makes a good editor for working with the Chromium source.
+
+<h1>Debugging</h1>
+
+* <a target=_blank href="http://www.chromium.org/developers/how-tos/debugging-on-android">Debugging Chromium</a> on Android involves debugging C++ and Java components.
