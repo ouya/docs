@@ -171,6 +171,11 @@ adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUN
 * Install the depot_tools utilities, a process that is documented at <a target=_blank href="http://dev.chromium.org/developers/how-tos/install-depot-tools">[install-depot-tools]</a>.<br/>
 <br/>
 
+<table border="1"><tr><td>
+cd ~/Downloads
+git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+</td></tr></table>
+
 <h1>Getting chromium from trunk</h1>
 
 Guide: <a target=_blank href="https://sites.google.com/a/chromium.org/dev/developers/how-tos/get-the-code">[how-to-get-the-code]</a>.<br/>
