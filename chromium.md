@@ -172,6 +172,7 @@ adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUN
 
 <table border="1"><tr><td><pre>
 cd ~/Downloads
+sudo apt-get install git
 git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
 </pre></td></tr></table>
 
