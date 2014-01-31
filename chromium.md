@@ -153,6 +153,8 @@ adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUN
 <table border="1"><tr><td><pre>
 cd ~/Downloads
 tar zxvf android-studio-bundle-133.970939-linux.tgz
+cd ~/Downloads/android-studio/bin
+./studio.sh
 </pre></td></tr></table>
 
 * Launch the SDK Manager from inside Android Studio (Tools -> Android -> SDK Manager) and configure it so it matches at least the following:<br/>
