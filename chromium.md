@@ -150,6 +150,12 @@ adb shell am start -a android.intent.action.MAIN -c android.intent.category.LAUN
 * Install the <a target=_blank href="http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html#jdk-6u45-oth-JPR">[JDK6 1.6]</a> from the Oracle archives.<br/>
 <br/>
 
+<table border="1"><tr><td><pre>
+cd ~/Downloads
+chmod +x ./jdk-6u45-linux-x64.bin
+./jdk-6u45-linux-x64.bin
+</pre></td></tr></table>
+
 * Install <a target=_blank href="https://developer.android.com/sdk/installing/studio.html">[Android Studio]</a>. This is the easiest way to get the Android Build Tools and SDK needed for the build.<br/>
 <br/>
 
