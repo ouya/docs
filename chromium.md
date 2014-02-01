@@ -156,6 +156,16 @@ chmod +x ./jdk-6u45-linux-x64.bin
 ./jdk-6u45-linux-x64.bin
 </pre></td></tr></table>
 
+* Add Java to your environment.<br/>
+
+<table border="1"><tr><td>
+Add this to the end of the ~/.bashrc file.
+</td></tr>
+<tr><td><pre>
+export JAVA_HOME=~/Downloads/jdk1.6.0_45
+export PATH=$PATH:~/Downloads/jdk1.6.0_45/bin
+</pre></td></tr></table>
+
 * Install <a target=_blank href="https://developer.android.com/sdk/installing/studio.html">[Android Studio]</a>. This is the easiest way to get the Android Build Tools and SDK needed for the build.<br/>
 <br/>
 
