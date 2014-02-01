@@ -364,5 +364,5 @@ adb shell ps | grep your.bundle.id
 And then use the PID with process logging turned on to find log messages just for your application.
 </td></tr>
 <tr><td>
-adb logcat -v process | grep <id>
+adb logcat -v process | grep THE_PROCESS_ID
 </td></tr><table>
