@@ -348,3 +348,21 @@ ui/events/keycodes/keyboard_code_conversion_android.cc
 <h1>Debugging</h1>
 
 * <a target=_blank href="http://www.chromium.org/developers/how-tos/debugging-on-android">Debugging Chromium</a> on Android involves debugging C++ and Java components.
+
+<h1>Logging</h1>
+
+You can filter logs by your specific process id when looking for issues.
+
+<table border="1"><tr><td>
+Find your process id - PID. Replace your.bundle.id with your package identifier to find the process.
+</td></tr>
+<tr><td>
+adb shell ps | grep your.bundle.id
+</td></tr><table>
+
+<table border="1"><tr><td>
+And then use the PID with process logging turned on to find log messages just for your application.
+</td></tr>
+<tr><td>
+adb logcat -v process | grep <id>
+</td></tr><table>
