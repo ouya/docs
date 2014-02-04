@@ -3,6 +3,15 @@ Chromium
 
 OUYA fork of Chromium
 
+The purpose of Chromium on Android is to achieve a hardware accelerated WebView capable of playing HTML5 games, rendering browser content, and streaming accelerated video. HTML5 game engines like Twine (text adventure games), Construct 2 (visual-scripting-engine), Gootechnologies (WebGL acceleration), and HTML5 browser games all need to make use of an HTML5 rendering engine that supports hardware accelerations. The previously mentioned engines will have their own documentation that extends this base Chromium documentation.
+
+The steps below is an extension that begins from the Chromium trunk and make customizations to support the OUYA controller and in-app-purchases. You will need to build a Ubuntu 12.04 Linux guest in order to build Chromium from the trunk. There are a set of dependencies that need installed before you can obtain the Chromium source. Some customization to the build files and tweaks to the source code are necessary to add controller and ODK functionality.
+
+The Chromium apps also have flags that enable or change the default behaviour. These options are configurable from a file and the flags can be hardcoded in the settings once you find the optimal flag settings. One example of Chromium flags the spatial navigation feature.
+
+More
+====
+
 
 First thing, the Chromium code-base is very large. Rather than fork multiple repros, this assumes you've already cloned the chromium trunk.
 
