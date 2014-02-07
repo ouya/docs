@@ -368,6 +368,9 @@ ui/events/keycodes/keyboard_code_conversion_android.cc
 
 * <a target=_blank href="http://www.chromium.org/developers/how-tos/debugging-on-android">Debugging Chromium</a> on Android involves debugging C++ and Java components.
 
+* <a target=_blank href="https://developers.google.com/chrome-developer-tools/docs/remote-debugging">Remote Debugging</a> is a great way to debug JavaScript on the Android device.
+
+
 <h1>Logging</h1>
 
 You can filter logs by your specific process id when looking for issues.
