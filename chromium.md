@@ -368,7 +368,11 @@ ui/events/keycodes/keyboard_code_conversion_android.cc
 
 * <a target=_blank href="http://www.chromium.org/developers/how-tos/debugging-on-android">Debugging Chromium</a> on Android involves debugging C++ and Java components.
 
+<h1>Remote Debugging</h1>
+
 * <a target=_blank href="https://developers.google.com/chrome-developer-tools/docs/remote-debugging">Remote Debugging</a> is a great way to debug JavaScript on the Android device.
+
+* <a target=_blank href="https://www.google.com/intl/en/chrome/browser/canary.html">Chrome Canary</a> is needed to do remote debugging against the trunk. You want your desktop browser to be at or a better version of Chrome than the version you are debugging.
 
 
 <h1>Logging</h1>
