@@ -70,6 +70,8 @@ Examples are included at the base GIT path.
 
 <b>Android:Drawables</b> - A list of the built-in Android drawables - http://androiddrawableexplorer.appspot.com/
 
+<b>Unity-VS</b> - http://code.google.com/p/vs-android/
+
 #### Docs
 
 FAQ: Why didn't FindClass find my class? - http://developer.android.com/training/articles/perf-jni.html#faq_FindClass
