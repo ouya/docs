@@ -393,4 +393,4 @@ And then use the PID with process logging turned on to find log messages just fo
 adb logcat -v process | grep THE_PROCESS_ID
 </td></tr><table>
 
-Enable logging - http://www.chromium.org/for-testers/enable-logging
+Enable logging - http://www.chromium.org/developers/how-tos/debugging-on-android#TOC-Log-output
