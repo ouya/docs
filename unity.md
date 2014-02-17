@@ -137,9 +137,6 @@ Visual Studio - Best editor for C#<br/>
 Resharper - Visual Studio extension for faster script editing and code refactoring<br/>
 Android SDK - Make sure you upgrade “Android SDK Tools” only to Rev 21 of the Android Tools per - <a target=_blank href="http://forum.unity3d.com/threads/176737-unknown-error-when-building-simple-scene/page2">[this post]</a>.<br/>
 
-## Live Unity Training Videos
-
-Live Training Archive - http://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/editor-basics
 
 ## Quick Guide
 
@@ -364,6 +361,12 @@ If you lose your keystore, users have to manually uninstall to update.
                 UnityOuyaFacade.java - In-app-purchase wrapper
                 
 </pre>
+
+
+## Live Unity Training Videos
+
+Live Training Archive - http://unity3d.com/learn/tutorials/modules/beginner/live-training-archive/editor-basics
+
 
 ### Learn Unity
 
