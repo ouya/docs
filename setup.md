@@ -20,9 +20,9 @@
  
  <tr>
 
- <td>ElGato Capture Setup (4:03)<br/>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=-Igb4IcpbDY" target="_blank">
-<img src="http://img.youtube.com/vi/-Igb4IcpbDY/0.jpg" alt="ElGato Capture Setup" width="240" height="180" border="10" /></a>
+ <td>ADB Over Network (1:27)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=-ZAHXESgvkEA" target="_blank">
+<img src="http://img.youtube.com/vi/-ZAHXESgvkEA/0.jpg" alt="ADB Over Network" width="240" height="180" border="10" /></a>
  </td>
  
   <td>Mac Overscan Setup (1:07)<br/>
@@ -53,7 +53,10 @@
 <img src="http://img.youtube.com/vi/Dz7ZRjN3KlE/0.jpg" alt="Put Important Content in the Safe Area to Pass Submission" width="240" height="180" border="10" /></a>
  </td>
  
- <td></td>
+ <td>ElGato Capture Setup (4:03)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=-Igb4IcpbDY" target="_blank">
+<img src="http://img.youtube.com/vi/-Igb4IcpbDY/0.jpg" alt="ElGato Capture Setup" width="240" height="180" border="10" /></a>
+ </td>
  
  </tr> 
  
