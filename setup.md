@@ -21,8 +21,8 @@
  <tr>
 
  <td>ADB Over Network (1:27)<br/>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=-ZAHXESgvkEA" target="_blank">
-<img src="http://img.youtube.com/vi/-ZAHXESgvkEA/0.jpg" alt="ADB Over Network" width="240" height="180" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=ZAHXESgvkEA" target="_blank">
+<img src="http://img.youtube.com/vi/ZAHXESgvkEA/0.jpg" alt="ADB Over Network" width="240" height="180" border="10" /></a>
  </td>
  
   <td>Mac Overscan Setup (1:07)<br/>
