@@ -27,6 +27,8 @@ Q: What are the best practices following the UK guidance related to in-app-purch
 
 Q: What is the best way to monetize your game? ([7:44](http://www.youtube.com/watch?v=CsqFC1Y_aX8&t=7m44s)) [[MonetizingYourOUYAGame.pdf](http://ouya-docs.s3.amazonaws.com/MonetizingYourOUYAGame.pdf)]
 
+Q: What is the best way to get your game through submission? [[Submission Guidelines](https://devs.ouya.tv/developers/docs/content-review-guidelines)]
+
 Q: I am planning on developing a game on OUYA. My only worry is that with developing for any kind of console there will be graphical limitations. My game is no (AAA) graphics but I plan on having quite a few of things on screen at once. (Open sandbox game)? ([9:34](http://www.youtube.com/watch?v=CsqFC1Y_aX8&t=9m34s))
 
 Q: Have we seen a recent document about best-practices industry-wide related to in-app-purchases? ([12:15](http://www.youtube.com/watch?v=CsqFC1Y_aX8&t=12m15s))
