@@ -260,7 +260,14 @@ gclient sync
 </pre>
 </td></tr><table>
 
-<b>Get the dependencies</b>
+<b>GIT is needed to get the source.</b>
+<table border="1"><tr><td>
+<pre>
+sudo apt-get install git-core gitk git-gui subversion curl
+</pre>
+</td></tr><table>
+
+<b>Get the dependencies, you may need to run several times if 'gclient sync' returns errors.</b>
 <table border="1"><tr><td>
 ./build/install-build-deps.sh
 </td></tr><table>
