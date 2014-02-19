@@ -1,6 +1,6 @@
-[Welcome](index.md)
-[Setup](setup.md)
-[Support](developer_support.md)
+* [Welcome](index.md)
+* [Setup](setup.md)
+* [Support](developer_support.md)
 
 **API**
 * [Controllers](controllers.md)
