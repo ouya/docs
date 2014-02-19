@@ -290,6 +290,11 @@ gclient sync
 </pre>
 </td></tr><table>
 
+<b>Make sure adb is in your path. Add the Android SDK paths for your location to the end of your ~/.bashrc file.</b>
+<table border="1"><tr><td>
+export PATH=$PATH:~/Downloads/android-studio/sdk/platform-tools/:~/Downloads/android-studio/sdk/tools/
+</td></tr><table>
+
 <b>Make sure device is connected to adb</b>
 <table border="1"><tr><td>
 adb connect IP:port
