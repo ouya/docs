@@ -267,7 +267,7 @@ sudo apt-get install git-core gitk git-gui subversion curl
 </pre>
 </td></tr><table>
 
-<b>Get the dependencies, you may need to run several times if 'gclient sync' returns errors.</b>
+<b>Get the dependencies, you may need to run several times if 'gclient sync' returns errors. You should see an agreement if you've run it enough times.</b>
 <table border="1"><tr><td>
 ./build/install-build-deps.sh
 </td></tr><table>
