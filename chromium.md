@@ -263,7 +263,7 @@ gclient sync
 <b>GIT is needed to get the source.</b>
 <table border="1"><tr><td>
 <pre>
-sudo apt-get install git-core gitk git-gui subversion curl lib32z1
+sudo apt-get install git-core gitk git-gui subversion curl lib32z1 ant
 </pre>
 </td></tr><table>
 
