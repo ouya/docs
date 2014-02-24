@@ -10,6 +10,23 @@ Link to the event - https://plus.google.com/u/1/events/crfjag7mabu650ol5r7ar5q96
 ----------
 
 
+### Feb 24, 2014 ###
+
+<table border=1>
+
+ <tr>
+
+ <td>OUYA DEV SUPPORT (1:02:55)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=pn__fny3wD8" target="_blank">
+<img src="http://img.youtube.com/vi/pn__fny3wD8/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 2/24" width="240" height="180" border="10" /></a>
+ </td>
+
+</table>
+
+
+----------
+
+
 ### Feb 17, 2014 ###
 
 <table border=1>
@@ -18,7 +35,7 @@ Link to the event - https://plus.google.com/u/1/events/crfjag7mabu650ol5r7ar5q96
 
  <td>OUYA DEV SUPPORT (1:02:40)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=CsqFC1Y_aX8" target="_blank">
-<img src="http://img.youtube.com/vi/CsqFC1Y_aX8/0.jpg" alt="Get the latest from GitHUB" width="240" height="180" border="10" /></a>
+<img src="http://img.youtube.com/vi/CsqFC1Y_aX8/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 2/17" width="240" height="180" border="10" /></a>
  </td>
 
 </table>
