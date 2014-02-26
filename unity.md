@@ -135,7 +135,7 @@ Intellij - An alternative Java editor<br/>
 UnIDE - Unity extension allows in-editor script editing<br/>
 Visual Studio - Best editor for C#<br/>
 Resharper - Visual Studio extension for faster script editing and code refactoring<br/>
-Android SDK - Make sure you upgrade “Android SDK Tools” only to Rev 21 of the Android Tools per - <a target=_blank href="http://forum.unity3d.com/threads/176737-unknown-error-when-building-simple-scene/page2">[this post]</a>.<br/>
+Android SDK - http://developer.android.com/sdk/index.html<br/>
 
 
 ## Quick Guide
@@ -169,11 +169,11 @@ On Mac, install XCode and the development tools to get Java.
 
 If nothing is grayed out switch to the Android tab.
 
-Make sure Android rev 21 is installed. You'll find a link in the setup docs.
+Make sure the Android SDK is installed and updated.
 
 https://devs.ouya.tv/developers/docs/setup
 
-Run the Android SDK, and make sure the platform-tools are installed (don't upgrade to Rev 22)
+Run the Android SDK, and make sure the platform-tools are installed
 
 Install the Platform-16 SDK.
 
