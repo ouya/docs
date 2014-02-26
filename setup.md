@@ -63,17 +63,13 @@
 </table>
 
 <table border="1"><tr><td>
-**Known Issue**: Some game engines <a target=_blank href="http://forum.unity3d.com/threads/176737-unknown-error-when-building-simple-scene">[post]</a> still depend on an old version of the Android SDK Tools, so here is a direct link to the older version. In most cases you can install the latest version of the Android SDK. These are convienence links.<br/>
+In most cases you can install the latest version of the Android SDK.<br/>
 Android SDK Latest - http://developer.android.com/sdk/index.html<br/>
-Android SDK Archived Rev 21 on Windows - http://dl.google.com/android/android-sdk_r21-windows.zip<br/>
-Android SDK Archived Rev 21 on Mac - http://dl.google.com/android/android-sdk_r21-macosx.zip<br/>
 </td></tr></table>
 
 <img src="http://ouya-docs.s3.amazonaws.com/images/AndroidSDKRev21.jpg"/>
 
-The Android SDK Tools Revision 21 shouldn't be updated, if you want to remain on revision 21.
-
-The other marqueed items in red are suggested installs.
+The marqueed items in red are suggested installs.
 
 On Mac/Linux, you can skip installing the usb driver.
 
