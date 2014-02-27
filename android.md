@@ -51,6 +51,8 @@ Examples are included at the base GIT path.
 
 <b>Sound Mixer</b> - Detect volume changes - https://github.com/ouya/ouya-sdk-examples/tree/master/Android/SoundMixer
 
+<b>Safe Area</b> - Adjust the safe area with a slider - https://github.com/ouya/ouya-sdk-examples/tree/master/Android/SafeAreaExample
+
 ### Resources
 
 <b>Android NDK</b> - http://developer.android.com/tools/sdk/ndk/index.html
