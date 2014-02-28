@@ -10,6 +10,7 @@
 **Guidelines**
 * [User Interface](interface-guidelines.md)
 * [Content & Review](content-review-guidelines.md)
+* [Stand Out on OUYA](stand_out_on_ouya.md)
 
 **Game Engines**
 * [Adobe Air](adobe-air.md)
