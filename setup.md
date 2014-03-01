@@ -25,9 +25,9 @@
 <img src="http://img.youtube.com/vi/ZAHXESgvkEA/0.jpg" alt="ADB Over Network" width="240" height="180" border="10" /></a>
  </td>
  
-  <td>Mac Overscan Setup (1:07)<br/>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=fwd2a26LOys" target="_blank">
-<img src="http://img.youtube.com/vi/fwd2a26LOys/0.jpg" alt="Mac Overscan Setup" width="240" height="180" border="10" /></a>
+  <td>Check Controller Version (1:01)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=XTBSXpXnVWg" target="_blank">
+<img src="http://img.youtube.com/vi/XTBSXpXnVWg/0.jpg" alt="Mac Overscan Setup" width="240" height="180" border="10" /></a>
  </td>
  
  </tr>
@@ -53,9 +53,20 @@
 <img src="http://img.youtube.com/vi/Dz7ZRjN3KlE/0.jpg" alt="Put Important Content in the Safe Area to Pass Submission" width="240" height="180" border="10" /></a>
  </td>
  
+ <td></td>
+ 
+ </tr>
+ 
+ <tr>
+
  <td>ElGato Capture Setup (4:03)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=-Igb4IcpbDY" target="_blank">
 <img src="http://img.youtube.com/vi/-Igb4IcpbDY/0.jpg" alt="ElGato Capture Setup" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td>Mac Overscan Setup (1:07)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=fwd2a26LOys" target="_blank">
+<img src="http://img.youtube.com/vi/fwd2a26LOys/0.jpg" alt="Mac Overscan Setup" width="240" height="180" border="10" /></a>
  </td>
  
  </tr> 
