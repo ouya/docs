@@ -1,8 +1,5 @@
 ## Unreal Engine
 
-### Downloads
-Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Unreal
-
 ## Guide
 
 Note: Android support is only available to full UE3 source licensees. Please contact the sales team at Epic to discuss licensing options.
