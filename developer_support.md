@@ -4,9 +4,6 @@
 
 Once a week, OUYA participates in a live broadcast with developers to answer questions in a Q & A format.
 
-Link to the event - https://plus.google.com/u/1/events/crfjag7mabu650ol5r7ar5q96p4
-
-
 ----------
 
 
@@ -64,7 +61,7 @@ Q: What is your favorite OUYA game that you've been playing? ([55:40](http://www
 ----------
 
 
-### Feb 17, 2014 ###
+### <a target=_blank href="https://plus.google.com/u/1/events/crfjag7mabu650ol5r7ar5q96p4">Feb 17, 2014</a> ###
 
 <table border=1>
 
