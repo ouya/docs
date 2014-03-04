@@ -378,7 +378,9 @@ ui/events/keycodes/keyboard_code_conversion_android.cc
 
 <h1>Debugging</h1>
 
-* <a target=_blank href="http://www.chromium.org/developers/how-tos/debugging-on-android">Debugging Chromium</a> on Android involves debugging C++ and Java components.
+* <a target=_blank href="https://developers.google.com/chrome-developer-tools/docs/remote-debugging">Debugging Chromium</a> with the Chrome extension.
+
+* <a target=_blank href="http://www.chromium.org/developers/how-tos/debugging-on-android">Debugging on Android</a> on Android involves debugging C++ and Java components.
 
 <h1>Remote Debugging</h1>
 
