@@ -7,7 +7,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ----------
 
 
-### Mar 03, 2014 ###
+### <a target=_blank href="https://plus.google.com/u/1/events/c3sljgo7b452c215r5e83fv00l4">Mar 03, 2014</a> ###
 
 <table border=1>
 
