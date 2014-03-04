@@ -35,6 +35,8 @@ Link to the event - https://plus.google.com/u/1/events/crfjag7mabu650ol5r7ar5q96
 
 <a target="_blank" href="http://www.youtube.com/watch?v=FLDp9Mi31BQ&t=50m57s">(50:57)</a> -- What's the optimal hardware/software to test your game if you don't have an OUYA?
 
+<a target="_blank" href="http://www.youtube.com/watch?v=FLDp9Mi31BQ&t=51m48s">(51:48)</a> -- Are you going to make a new OUYA like the Tegra K-1?
+
 ----------
 
 
