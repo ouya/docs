@@ -41,7 +41,7 @@ Link to the event - https://plus.google.com/u/1/events/crfjag7mabu650ol5r7ar5q96
 
 <a target="_blank" href="http://www.youtube.com/watch?v=FLDp9Mi31BQ&t=55m5s">(55:05)</a> -- Flappy talk?
 
-<a target="_blank" href="http://www.youtube.com/watch?v=FLDp9Mi31BQ&t=60m0s">(60:00)</a> -- Should I buy an OUYA right now?
+<a target="_blank" href="http://www.youtube.com/watch?v=FLDp9Mi31BQ&t=60m10s">(60:10)</a> -- Should I buy an OUYA right now?
 
 ----------
 
