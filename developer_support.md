@@ -23,6 +23,15 @@ Link to the event - https://plus.google.com/u/1/events/crfjag7mabu650ol5r7ar5q96
 
 </table>
 
+<a target="_blank" href="http://www.youtube.com/watch?FLDp9Mi31BQ&t=4m10s">(4:10)</a> -- Derp w/ Doherty
+
+<a target="_blank" href="http://www.youtube.com/watch?FLDp9Mi31BQ&t=15m15s">(15:15)</a> -- Sales work...
+
+<a target="_blank" href="http://www.youtube.com/watch?FLDp9Mi31BQ&t=19m0s">(19:00)</a> -- What games you playing this week?
+
+<a target="_blank" href="http://www.youtube.com/watch?FLDp9Mi31BQ&t=28m30s">(28:30)</a> -- Social, betas and the platform roadmap questions
+
+<a target="_blank" href="http://www.youtube.com/watch?FLDp9Mi31BQ&t=37m45s">(37:45)</a> -- more questions about social
 
 ----------
 
