@@ -13,7 +13,7 @@ More
 ====
 
 
-First thing, the Chromium code-base is very large. <a target=_blank href="https://code.google.com/p/chromium/codesearch#chromium/src/&q=src/net/ssl&sq=package:chromium">[Searching]</a> the code will help reveal the size of the source. Rather than fork multiple repros, this assumes you've already cloned the chromium trunk.
+First thing, the Chromium code-base is very large. <a target=_blank href="https://code.google.com/p/chromium/codesearch#chromium/src/&q=&sq=package:chromium">[Searching]</a> the code will help reveal the size of the source. Rather than fork multiple repros, this assumes you've already cloned the chromium trunk.
 
 These files are intended to supplement the trunk.
 
