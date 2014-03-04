@@ -33,6 +33,8 @@ Link to the event - https://plus.google.com/u/1/events/crfjag7mabu650ol5r7ar5q96
 
 <a target="_blank" href="http://www.youtube.com/watch?v=FLDp9Mi31BQ&t=37m45s">(37:45)</a> -- more questions about social
 
+<a target="_blank" href="http://www.youtube.com/watch?v=FLDp9Mi31BQ&t=50m57s">(50:57)</a> -- What's the optimal hardware/software to test your game if you don't have an OUYA?
+
 ----------
 
 
