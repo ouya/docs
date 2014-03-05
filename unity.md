@@ -517,6 +517,8 @@ You will find the following structure imported into your Assets folder.
 ### Example Scenes
 Note: Although some of the example scenes have OuyaGameObject, the preferred way is to put OuyaGameObject into an init scene; see the starter kit for details.
 
+Some of the example scenes used the free distribution of <a target=_blank href="http://www.tasharen.com/?page_id=140">[NGUI]</a>. NGUI is not required by the Core package.
+
 #### Scene ShowProducts
 
 Open the ./Ouya/Examples/Scenes/SceneShowProducts.unity example scene.
