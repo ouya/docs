@@ -39,9 +39,9 @@
 <img src="http://img.youtube.com/vi/Dz7ZRjN3KlE/0.jpg" alt="Put Important Content in the Safe Area to Pass Submission" width="240" height="180" border="10" /></a>
  </td>
  
- <td>Remote Installs (0:55)<br/>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=RZ3BVE2E_0o" target="_blank">
-<img src="http://img.youtube.com/vi/RZ3BVE2E_0o/0.jpg" alt="Remotely Install Games on OUYA " width="240" height="180" border="10" /></a>
+ <td>Install Games Remotely (0:55)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=J5umZxt_KeI" target="_blank">
+<img src="http://img.youtube.com/vi/J5umZxt_KeI/0.jpg" alt="Remotely Install Games on OUYA " width="240" height="180" border="10" /></a>
  </td>
  
  </tr>
