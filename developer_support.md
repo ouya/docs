@@ -24,6 +24,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 <a target="_blank" href="http://www.youtube.com/watch?v=8d9wEHF8No4&t=16m8s">(16:08)</a> -- When Sky Arena (online) comes out, what did you use for the server?
 
+<a target="_blank" href="http://www.youtube.com/watch?v=8d9wEHF8No4&t=24m25s">(24:25)</a> -- What is more important, polygons or draw calls?
+
 
 ### Mar 03, 2014 ###
 
