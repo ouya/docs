@@ -22,6 +22,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 </table>
 
+<a target="_blank" href="http://www.youtube.com/watch?v=8d9wEHF8No4&t=4m10s">(16:08)</a> -- When Sky Arena (online) comes out, what did you use for the server?
 
 
 ### Mar 03, 2014 ###
