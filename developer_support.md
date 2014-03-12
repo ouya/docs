@@ -26,7 +26,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 <a target="_blank" href="http://www.youtube.com/watch?v=8d9wEHF8No4&t=4m59s">(4:59)</a> -- What is the secret cheat code to clear the icon cache? (7 Easter Eggs)
 
-<a target="_blank" href="http://www.youtube.com/watch?v=8d9wEHF8No4&t=13m05s">(13:05) – How FEATURES work
+<a target="_blank" href="http://www.youtube.com/watch?v=8d9wEHF8No4&t=13m05s">(13:05)</a> – How FEATURES work
 
 <a target="_blank" href="http://www.youtube.com/watch?v=8d9wEHF8No4&t=16m8s">(16:08)</a> -- When Sky Arena (online) comes out, what did you use for the server?
 
@@ -34,9 +34,9 @@ Olivier uses PHOTON CLOUD for online multiplayer and you can too! <a target=_bla
 
 <a target="_blank" href="http://www.youtube.com/watch?v=8d9wEHF8No4&t=24m25s">(24:25)</a> -- What is more important, polygons or draw calls?
 
-<a target="_blank" href="http://www.youtube.com/watch?v=8d9wEHF8No4&t=28m25s">(28:25) – How many polygons?
+<a target="_blank" href="http://www.youtube.com/watch?v=8d9wEHF8No4&t=28m25s">(28:25)</a> – How many polygons?
 
-<a target="_blank" href="http://www.youtube.com/watch?v=8d9wEHF8No4&t=30m32s">(30:32) – How many draw calls?
+<a target="_blank" href="http://www.youtube.com/watch?v=8d9wEHF8No4&t=30m32s">(30:32)</a> – How many draw calls?
 
 
 ### Mar 03, 2014 ###
