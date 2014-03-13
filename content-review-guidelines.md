@@ -158,6 +158,18 @@ For any questions or clarifications, please contact us at devsupport@ouya.tv
  
 * The icon that is shown in the app settings is embedded inside of the APK itself. The expected file is in res/drawable/app_icon.png and the image size must be 96x96.
 
+The 732x412 icon displays in the Play section of the OUYA Launcher.
+
+<img src="https://s3.amazonaws.com/ouya-docs/images/PlayStore_732x412.png"/>
+
+The 732x412 icon displays in the Discover section of the OUYA Launcher.
+
+<img src="https://s3.amazonaws.com/ouya-docs/images/Discover_732x412.png"/>
+
+The 96x96 icon displays on some legacy Android settings pages.
+
+<img src="https://www.dropbox.com/s/v8z4bxdcqqspcen/Settings_96x96.png"/>
+
 ##Video
 
 * In the developer portal after you've created the game entry, an edit link will appear. You can use this edit link to alter the description, add screenshots, submit new builds, and add video for your title. Your list of games can be found <a target=_blank href="https://gamers.ouya.tv/developers/games">[here]</a>.
