@@ -168,7 +168,7 @@ The 732x412 icon displays in the Discover section of the OUYA Launcher.
 
 The 96x96 icon displays on some legacy Android settings pages.
 
-<img src="https://www.dropbox.com/s/v8z4bxdcqqspcen/Settings_96x96.png"/>
+<img src="https://s3.amazonaws.com/ouya-docs/images/Settings_96x96.png"/>
 
 ##Video
 
