@@ -8,7 +8,7 @@ Open source, clone https://github.com/ouya/ouya-unity-plugin directly from publi
 @OUYA - (Unity on OUYA Forums) - http://forums.ouya.tv/categories/unity-on-ouya<br/>
 
 ### Developer Support Hangouts
-
+J
 2013:
 [<a href="http://www.youtube.com/watch?feature=player_embedded&v=2pHtay8fF-w" target="_blank">Feb 11</a>]&nbsp;
 [<a href="http://www.youtube.com/watch?feature=player_embedded&v=cgZ8dbHgi00" target="_blank">Feb 18</a>]&nbsp;
@@ -197,7 +197,7 @@ adb kill-server
 
 If nothing is grayed out in the OUYA Panel Android tab, switch to the OUYA tab.
 
-If you are on Unity 4.X change the Java App Class to: OuyaNativeActivity
+If you are on Unity 4.X change the "Main Activity" to: OuyaNativeActivity
 
 Enter your bundle id to match the developer portal.
 
@@ -279,6 +279,14 @@ The keystore is used by the auto updater.
 If you lose your keystore, users have to manually uninstall to update.
 
 ```
+
+## Note: Main Activity
+
+On Unity 3.X, your main activity should be "OuyaUnityApplication".
+
+On Unity 4.X, your main activity should be "OuyaNativeActivity".
+
+<img src="http://ouya-docs.s3.amazonaws.com/images/OuyaUnityNativeActivity.jpg"/>
 
 ### Core Package
 
