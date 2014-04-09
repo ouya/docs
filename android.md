@@ -63,6 +63,8 @@ Examples are included at the base GIT path.
 
 <b>Java JDK 6</b> - http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-javase6-419409.html
 
+<b>NVIDIA Nsight Visual Studio Edition</b> - https://developer.nvidia.com/nvidia-nsight-visual-studio-edition
+
 <b>Tegra Toolkit</b> - https://developer.nvidia.com/tegra-resources
 
 <table border="1"><tr><td>
