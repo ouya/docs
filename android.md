@@ -72,6 +72,28 @@ Examples are included at the base GIT path.
 <b>Tegra Registered Developer Program</b> - https://developer.nvidia.com/registered-developer-programs<br/>
 </td></tr></table>
 
+Note:
+
+There is also an issue with nSight and the default install of the NVIDIA Toolkit, which can be fixed by the following two options. This fixes a compile error for ANT related to Java/NDK projects.
+
+```
+First/easiest option to try:
+     1. Edit NVPACK\android-sdk-windows\build-tools\<each version>\dx.bat
+     2. Change "set defaultMx=-Xmx1024M" to "set defaultMx=-Xmx512M"
+     3. Save and exit
+     4. Restart Visual Studio
+     5. Rebuild
+Second option:
+      1. Run NVPACK\android-sdk-windows\SDKManager.exe
+      2. Click "deselect all"
+      3. If Tools : "Android SDK Build Tools Rev 19.0.1" is installed, check it for deletion
+      4. If Tools : "Android SDK Build Tools Rev 19" is installed, check it for deletion
+      5. Click "delete packages"
+      6. Click Tools : "Android SDK Build Tools Rev 18.1.1"
+      7. Click "Install packages"
+      8. Follow the steps to take the license and install the package
+```
+
 <b>Android:Drawables</b> - A list of the built-in Android drawables - http://androiddrawableexplorer.appspot.com/
 
 <b>Unity-VS</b> - http://code.google.com/p/vs-android/
