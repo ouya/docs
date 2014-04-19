@@ -452,6 +452,18 @@ If you are new to Unity, this crash course should bring you up to speed on the U
   
  </tr>
  
+ <tr>
+   
+  <td>Combine Materials to 1 draw call (12:01)<br/>
+ <a href="http://www.youtube.com/watch?feature=player_embedded&v=O3dbE2t8lPQ" target="_blank">
+ <img src="http://img.youtube.com/vi/O3dbE2t8lPQ/0.jpg" alt="Quick Tip: Combining multiple materials into a single draw call " width="240" height="180" border="10" /></a>
+  </td>
+  
+  <td>
+  </td>
+  
+ </tr>
+ 
 </table>
 
 
