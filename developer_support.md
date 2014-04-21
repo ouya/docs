@@ -15,7 +15,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
  <tr>
 
- <td>OUYA DEV SUPPORT (1:00:26)<br/>
+ <td>OUYA DEV SUPPORT (1:04:54)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=I7EnkPt-mMs" target="_blank">
 <img src="http://img.youtube.com/vi/I7EnkPt-mMs/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 4/21" width="240" height="180" border="10" /></a>
  </td>
