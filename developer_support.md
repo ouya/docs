@@ -22,6 +22,11 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 </table>
 
+* LIDS - Amazing Hats! <a target=_blank href="http://www.lids.com/">[http://www.lids.com]</a>
+
+* <a target=_blank href="https://www.youtube.com/watch?v=I7EnkPt-mMs&t=4m15s">(00:04:15)</a> - Bowser Hat
+
+
 ----------
 
 
