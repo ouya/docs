@@ -26,6 +26,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * <a target=_blank href="https://www.youtube.com/watch?v=I7EnkPt-mMs&t=4m15s">(00:04:15)</a> - Bowser Hat
 
+* Game: <a target=_blank href="https://www.kickstarter.com/projects/gaymercon/read-only-memories-a-tribute-to-90s-adventure-game">[Read Only Memories]</a>
 
 ----------
 
