@@ -28,6 +28,15 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * Game: <a target=_blank href="https://www.kickstarter.com/projects/gaymercon/read-only-memories-a-tribute-to-90s-adventure-game">[Read Only Memories]</a>
 
+* Speaker submissions for GaymerX end this month - <a target=_blank href="http://gaymerx.com/panels">[GaymerX.com/panels]</a>
+
+(GaymerX is July 11-13, OUYA is a sponsor)
+
+* <a target=_blank href="http://www.gamingincolor.com/">[Gaming In Color]</a>, the first film looking at LGBTQs in gaming, just came out - and its pay-what-you-feeeeels
+
+* The ROM soundtrack is done by lead audio engineer on the game, Matthew "2 Mello" Hopkins!
+
+
 ----------
 
 
