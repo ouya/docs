@@ -10,9 +10,20 @@
 
 ## Guide
 
-Tutorial video showing how to rework a simple ZGE Windows application to
-OUYA is here:
-https://www.youtube.com/watch?v=99y2JBYSbD0
+<table border=1>
+
+ <tr>
+
+ <td>Convert ZGE for OUYA (3:59)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=99y2JBYSbD0" target="_blank">
+<img src="http://img.youtube.com/vi/99y2JBYSbD0/0.jpg" alt="Convert ZGE for OUYA" width="240" height="180" border="10" /></a>
+ </td>
+ 
+  <td></td>
+ 
+ </tr>
+ 
+</table>
 
 More ZGE video tutorials are available here:
 https://www.youtube.com/user/ZGameEditor
