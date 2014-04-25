@@ -14,9 +14,9 @@
 
  <tr>
 
- <td>Convert ZGE for OUYA (5:25)<br/>
+ <td>Convert ZGE project for OUYA (5:25)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=99y2JBYSbD0" target="_blank">
-<img src="http://img.youtube.com/vi/99y2JBYSbD0/0.jpg" alt="Convert ZGE for OUYA" width="240" height="180" border="10" /></a>
+<img src="http://img.youtube.com/vi/99y2JBYSbD0/0.jpg" alt="Convert ZGE project for OUYA" width="240" height="180" border="10" /></a>
  </td>
  
   <td></td>
@@ -37,9 +37,6 @@ https://code.google.com/p/zgeouya/
 
 A detailed howto description can be found here:
 https://code.google.com/p/zgeouya/wiki/HowTo
-
-ZGE forum topics related to OUYA support:
-http://www.emix8.org/forum/viewtopic.php?t=1097
 
 ## Downloads
 
