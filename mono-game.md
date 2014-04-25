@@ -65,6 +65,20 @@ It's important that your key signing, your package name, bundle identifiers, dev
 
 The above has to true for the in-app-purchases to function, since decryption depends on using the right signing key.
 
+### Build environment setup
+
+MonoGame has an environmental build settings for advanced users to configure.
+```
+ouya/Resources/environment.txt
+```
+
+These settings aren't for everygame, but the following environmental tweaks reduce the amount of garbage collection thrashing.
+
+```
+MONO_GC_PARAMS=soft-heap-limit=512m,nursery-size=64m,evacuation-threshold=66,major=marksweep,concurrent-sweep
+```
+
+
 ### Resources
 
 MonoGame Download - http://monogame.codeplex.com/<br/>
