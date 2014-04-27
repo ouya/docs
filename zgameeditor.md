@@ -28,15 +28,15 @@
 More ZGE video tutorials are available here:
 https://www.youtube.com/user/ZGameEditor
 
+Follow the detailed guide for adding controller support and in-app-purchases to your ZGE project:
+https://code.google.com/p/zgeouya/wiki/HowTo
+
 ## Resources
 
 [ZGE homepage](http://www.zgameeditor.org/)
 
 The project for ZGE OUYA extension is located at Google Code:
 https://code.google.com/p/zgeouya/
-
-A detailed howto description can be found here:
-https://code.google.com/p/zgeouya/wiki/HowTo
 
 ## Downloads
 
