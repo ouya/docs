@@ -27,4 +27,4 @@
 * [Unreal](unreal.md)
 * [Unity](unity.md)
 * [Wave](wave.md)
-* [ZGameEditor](z-game-editor.md)
+* [ZGameEditor](zgameeditor.md)
