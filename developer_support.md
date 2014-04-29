@@ -19,10 +19,6 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <img src="http://img.youtube.com/vi/lAiZwVGciPg/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 4/28" width="240" height="180" border="10" /></a>
  </td>
  
- </tr>
- 
- <tr>
-
  <td>Rubble N Strafe<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=84P3soAhMnU" target="_blank">
 <img src="http://img.youtube.com/vi/84P3soAhMnU/0.jpg" alt="Rubble N Strafe" width="240" height="180" border="10" /></a>
@@ -37,10 +33,6 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <img src="http://img.youtube.com/vi/aLI3K3BZZ7U/0.jpg" alt="Cave Runner" width="240" height="180" border="10" /></a>
  </td>
  
- </tr>
- 
- <tr>
-
  <td>Platdudein Space<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=qJEOjSGfrI8" target="_blank">
 <img src="http://img.youtube.com/vi/qJEOjSGfrI8/0.jpg" alt="Platdude in Space" width="240" height="180" border="10" /></a>
