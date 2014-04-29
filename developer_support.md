@@ -33,7 +33,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <img src="http://img.youtube.com/vi/aLI3K3BZZ7U/0.jpg" alt="Cave Runner" width="240" height="180" border="10" /></a>
  </td>
  
- <td>Platdudein Space<br/>
+ <td>Platdude in Space<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=qJEOjSGfrI8" target="_blank">
 <img src="http://img.youtube.com/vi/qJEOjSGfrI8/0.jpg" alt="Platdude in Space" width="240" height="180" border="10" /></a>
  </td>
