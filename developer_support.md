@@ -12,14 +12,41 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ----------
 
 <table border=1>
-
  <tr>
 
  <td>OUYA DEV SUPPORT (1:08:15)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=lAiZwVGciPg" target="_blank">
 <img src="http://img.youtube.com/vi/lAiZwVGciPg/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 4/28" width="240" height="180" border="10" /></a>
  </td>
+ 
+ </tr>
+ 
+ <tr>
 
+ <td>Rubble N Strafe<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=84P3soAhMnU" target="_blank">
+<img src="http://img.youtube.com/vi/84P3soAhMnU/0.jpg" alt="Rubble N Strafe" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+
+ <td>Cave Runner<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=aLI3K3BZZ7U" target="_blank">
+<img src="http://img.youtube.com/vi/aLI3K3BZZ7U/0.jpg" alt="Cave Runner" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+
+ <td>Platdudein Space<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=qJEOjSGfrI8" target="_blank">
+<img src="http://img.youtube.com/vi/qJEOjSGfrI8/0.jpg" alt="Platdude in Space" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ </tr>
 </table>
 
 
@@ -28,7 +55,6 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ----------
 
 <table border=1>
-
  <tr>
 
  <td>OUYA DEV SUPPORT (1:04:54)<br/>
@@ -36,6 +62,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <img src="http://img.youtube.com/vi/I7EnkPt-mMs/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 4/21" width="240" height="180" border="10" /></a>
  </td>
 
+ </tr>
 </table>
 
 * LIDS - Amazing Hats! <a target=_blank href="http://www.lids.com/">[http://www.lids.com]</a>
@@ -69,6 +96,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <img src="http://img.youtube.com/vi/0Ft4NRPC3DE/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 4/7" width="240" height="180" border="10" /></a>
  </td>
 
+ </tr>
 </table>
 
 (0:00) - <a target=_blank href="https://www.youtube.com/watch?v=YkxTuS8lNIQ">[Yo yo yo Aflak!]</a>
@@ -87,6 +115,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <img src="http://img.youtube.com/vi/8Z55EhKnorU/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 3/31" width="240" height="180" border="10" /></a>
  </td>
 
+ </tr>
 </table>
 
 
@@ -106,6 +135,7 @@ Get source access to Unreal <a target=_blank href="https://www.unrealengine.com/
 <img src="http://img.youtube.com/vi/8d9wEHF8No4/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 3/10" width="240" height="180" border="10" /></a>
  </td>
 
+ </tr>
 </table>
 
 <a target="_blank" href="http://www.youtube.com/watch?v=8d9wEHF8No4&t=1m58s">(1:58)</a> Derp with Doherty - Label your products
@@ -136,6 +166,7 @@ Olivier uses PHOTON CLOUD for online multiplayer and you can too! <a target=_bla
 <img src="http://img.youtube.com/vi/FLDp9Mi31BQ/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 3/3" width="240" height="180" border="10" /></a>
  </td>
 
+ </tr>
 </table>
 
 <a target="_blank" href="http://www.youtube.com/watch?v=FLDp9Mi31BQ&t=4m10s">(4:10)</a> -- Derp w/ Doherty
@@ -166,6 +197,7 @@ Olivier uses PHOTON CLOUD for online multiplayer and you can too! <a target=_bla
 <img src="http://img.youtube.com/vi/pn__fny3wD8/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 2/24" width="240" height="180" border="10" /></a>
  </td>
 
+ </tr>
 </table>
 
 Q: What is your favorite OUYA game that you've been playing? ([55:40](http://www.youtube.com/watch?feature=player_embedded&v=pn__fny3wD8&t=55m40s))
@@ -184,6 +216,7 @@ Q: What is your favorite OUYA game that you've been playing? ([55:40](http://www
 <img src="http://img.youtube.com/vi/CsqFC1Y_aX8/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 2/17" width="240" height="180" border="10" /></a>
  </td>
 
+ </tr>
 </table>
 
 Q: What are the best practices following the UK guidance related to in-app-purchases? ([4:08](http://www.youtube.com/watch?v=CsqFC1Y_aX8&t=4m08s))
