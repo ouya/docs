@@ -40,19 +40,19 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  </tr>
 </table>
 
-<a href="http://www.youtube.com/watch?v=qJEOjSGfrI8&t=1m" target="_blank">(1:00)</a> Derp with Doherty – Check for screen safezones. There’s documentation in the Content Review Guidelines at dev.ouya.tv 
+<a href="http://www.youtube.com/watch?v=lAiZwVGciPg&t=1m" target="_blank">(1:00)</a> Derp with Doherty – Check for screen safezones. There’s documentation in the Content Review Guidelines at dev.ouya.tv 
 
-<a href="http://www.youtube.com/watch?v=qJEOjSGfrI8&t=3m26s" target="_blank">(3:26)</a> Technical Tips with Tim - Use the User Façade to Save Data
+<a href="http://www.youtube.com/watch?v=lAiZwVGciPg&t=3m26s" target="_blank">(3:26)</a> Technical Tips with Tim - Use the User Façade to Save Data
 
-<a href="http://www.youtube.com/watch?v=qJEOjSGfrI8&t=4m10s" target="_blank">(4:10)</a> – “Authentification”
+<a href="http://www.youtube.com/watch?v=lAiZwVGciPg&t=4m10s" target="_blank">(4:10)</a> – “Authentification”
 
-<a href="http://www.youtube.com/watch?v=qJEOjSGfrI8&t=4m33s" target="_blank">(4:33)</a> -- ?? [Tim to add description]
+<a href="http://www.youtube.com/watch?v=lAiZwVGciPg&t=4m33s" target="_blank">(4:33)</a> -- ?? [Tim to add description]
 
-<a href="http://www.youtube.com/watch?v=qJEOjSGfrI8&t=5m25s" target="_blank">(5:25)</a> – Your Dev ID is pretty dang secure. ☺
+<a href="http://www.youtube.com/watch?v=lAiZwVGciPg&t=5m25s" target="_blank">(5:25)</a> – Your Dev ID is pretty dang secure. ☺
 
-<a href="http://www.youtube.com/watch?v=qJEOjSGfrI8&t=6m20s" target="_blank">(6:20)</a> – IndieCade Early Submissions until May 16
+<a href="http://www.youtube.com/watch?v=lAiZwVGciPg&t=6m20s" target="_blank">(6:20)</a> – IndieCade Early Submissions until May 16
 
-<a href="http://www.youtube.com/watch?v=qJEOjSGfrI8&t=7m35s" target="_blank">(7:35)</a> – Kellee talks at IndieGames Panel at LA Games Conference
+<a href="http://www.youtube.com/watch?v=lAiZwVGciPg&t=7m35s" target="_blank">(7:35)</a> – Kellee talks at IndieGames Panel at LA Games Conference
 
 
 ### Apr 21, 2014 ###
