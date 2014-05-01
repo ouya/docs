@@ -42,11 +42,11 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 <a href="http://www.youtube.com/watch?v=lAiZwVGciPg&t=1m" target="_blank">(1:00)</a> Derp with Doherty – Check for screen safezones. There’s documentation in the Content Review Guidelines at dev.ouya.tv 
 
-<a href="http://www.youtube.com/watch?v=lAiZwVGciPg&t=3m26s" target="_blank">(3:26)</a> Technical Tips with Tim - Use the User Façade to Save Data
+<a href="http://www.youtube.com/watch?v=lAiZwVGciPg&t=3m26s" target="_blank">(3:26)</a> Technical Tips with Tim - Use the OuyaFacade to Save Data
 
 <a href="http://www.youtube.com/watch?v=lAiZwVGciPg&t=4m10s" target="_blank">(4:10)</a> – “Authentification”
 
-<a href="http://www.youtube.com/watch?v=lAiZwVGciPg&t=4m33s" target="_blank">(4:33)</a> -- ?? [Tim to add description]
+<a href="http://www.youtube.com/watch?v=lAiZwVGciPg&t=4m33s" target="_blank">(4:33)</a> -- User gamer uuid or username as primary key in 3rd party server
 
 <a href="http://www.youtube.com/watch?v=lAiZwVGciPg&t=5m25s" target="_blank">(5:25)</a> – Your Dev ID is pretty dang secure. ☺
 
