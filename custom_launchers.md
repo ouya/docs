@@ -63,3 +63,11 @@ Displays the OUYA Discover screen, allows users to browse/download new games.
 ```
 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("ouya://launcher/discover")));
 ```
+
+# App Details
+
+Displays the OUYA Details screen for the given package.
+
+```
+startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("ouya://launcher/details?app=com.example.app")));
+```
