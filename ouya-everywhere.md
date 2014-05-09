@@ -137,10 +137,8 @@ using Android.Views;
 
 namespace OuyaSdk
 {
-    public class OuyaActivity : Microsoft.Xna.Framework.AndroidGameActivity
+    public class CustomActivity : Microsoft.Xna.Framework.AndroidGameActivity
     {
-        private const string TAG = "OuyaActivity";
-
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -155,12 +153,16 @@ namespace OuyaSdk
 
         public override bool DispatchGenericMotionEvent(MotionEvent motionEvent)
         {
-            return OuyaInputMapper.DispatchGenericMotionEvent(this.Handle, motionEvent);
+            bool handled = OuyaInputMapper.DispatchGenericMotionEvent(this.Handle, motionEvent);
+            ...
+            return handled;
         }
 
         public override bool DispatchKeyEvent(KeyEvent keyEvent)
         {
-            return OuyaInputMapper.DispatchKeyEvent(this.Handle, keyEvent);
+            bool handled = OuyaInputMapper.DispatchKeyEvent(this.Handle, keyEvent);
+            ...
+            return handled;
         }
     }
 }
