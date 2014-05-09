@@ -99,6 +99,32 @@ This is achieved by:
 
 Of course, if you happen to override onCreate/onDestroy/dispatchKeyEvent/dispatchGenericMotionEvent, then be sure to call OuyaActivity's base methods.
 
+With this in place, you can now handle events in onKeyDown/Up/onGenericMotionEvent and not need to worry about what controller hardware the gamer may be using:
+
+```java
+  @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        boolean handled = false;
+
+        // Check the keycode itself
+        if (keyCode == OuyaController.BUTTON_O)) {
+          doFunThing();
+          handled = true;
+        }
+
+        // Check state via the OuyaController methods -- the OuyaActivity
+        // class automatically updates OuyaController for you as well!
+        OuyaController c = OuyaController.getControllerByDeviceId(event.getDeviceId());
+        if (c != null) {
+          processLeftStick(
+            c.getAxisValue(OuyaController.AXIS_LS_X),
+            c.getAxisValue(OuyaController.AXIS_LS_Y));
+        }
+
+        return handled || super.onKeyDown(keyCode, event);
+    }
+```
+
 If you are unable to extend the OuyaActivity (eg: the game engine you are using requires you to extend their activity class), you can still leverage the input remapping, but will need to call the methods manually.  They are:
 
 ```java
