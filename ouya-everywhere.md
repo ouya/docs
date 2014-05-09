@@ -128,3 +128,40 @@ If you are unable to extend the OuyaActivity (eg: the game engine you are using 
       return handled;
     }
 ```
+
+MonoGame is very similar to the Java version. The easy option is to extend OuyaActivity. Or call the static methods on OuyaInputMapper in a custom Activity.
+
+```C#
+using Android.OS;
+using Android.Views;
+
+namespace OuyaSdk
+{
+    public class OuyaActivity : Microsoft.Xna.Framework.AndroidGameActivity
+    {
+        private const string TAG = "OuyaActivity";
+
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+            OuyaInputMapper.init(this.Handle);
+        }
+
+        protected override void OnDestroy()
+        {
+            OuyaInputMapper.shutdown(this.Handle);
+            base.OnDestroy();
+        }
+
+        public override bool DispatchGenericMotionEvent(MotionEvent motionEvent)
+        {
+            return OuyaInputMapper.DispatchGenericMotionEvent(this.Handle, motionEvent);
+        }
+
+        public override bool DispatchKeyEvent(KeyEvent keyEvent)
+        {
+            return OuyaInputMapper.DispatchKeyEvent(this.Handle, keyEvent);
+        }
+    }
+}
+```
