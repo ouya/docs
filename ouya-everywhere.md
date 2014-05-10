@@ -78,7 +78,7 @@ All current OuyaController.BUTTON_* contants have valid button data (including o
 Using this API will keep your game looking correct as new console hardware support is added -- without any recompilations!
 
 
-####Mono Game####
+####MonoGame####
 
 MonoGame has an interface to retrieve button names.
 
@@ -116,6 +116,60 @@ C#
                 ms.Position = 0;
                 buttonTexture = Texture2D.FromStream(GraphicsDevice, ms);
             }
+```
+
+####Unity####
+
+Unity has an interface to retrieve button names.
+
+C#
+```
+        OuyaController.ButtonData buttonData;
+        buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
+        if (null == buttonData)
+        {
+            return;
+        }
+        string buttonName = buttonData.buttonName;
+```
+
+Unity has an interface to retrieve button images as Texture2D images.
+
+C#
+```
+        Texture2D buttonTexture = null;
+        OuyaController.ButtonData buttonData;
+        buttonData = OuyaController.getButtonData(keyCode);
+        if (null == buttonData)
+        {
+            return;
+        }
+
+        if (null == buttonData.buttonDrawable)
+        {
+            return;
+        }
+
+        BitmapDrawable drawable = (BitmapDrawable)buttonData.buttonDrawable;
+        if (null == drawable)
+        {
+            return;
+        }
+
+        Bitmap bitmap = drawable.getBitmap();
+        if (null == bitmap)
+        {
+            return;
+        }
+
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        if (stream.size() > 0)
+        {
+            buttonTexture = new Texture2D(0, 0);
+            buttonTexture.LoadImage(stream.toByteArray());
+        }
+        stream.close();
 ```
 
 <h3 id="controller_input">Controller Input</h3>
