@@ -287,3 +287,52 @@ namespace OuyaSdk
     }
 }
 ```
+
+#### Unity Input ####
+
+The Unity input API uses strings which are defined in the Input manager to assign the mappings for axis and buttons. Developers tend to use names in the input settings that couple their game logic with the input settings. And a drawback is that the axis and button numbers change on each platform. The result is Input.GetButton("FriendlyName") can map to a different button on each platform.
+
+Instead the new logic is a direct mapping to the OuyaController axis and button codes.
+
+C#
+```
+// PlayerNm is zero based and must be less than OuyaController.MAX_CONTROLLERS.
+
+// GetAxis, GetAxisRaw expects the following axis values:
+OuyaController.AXIS_LS_X
+OuyaController.AXIS_LS_Y
+OuyaController.AXIS_RS_X
+OuyaController.AXIS_RS_Y
+OuyaController.AXIS_L2
+OuyaController.AXIS_R2)
+
+// Returns the value of the axis with smoothing
+OuyaSDK.OuyaInput.GetAxis(int playerNum, int axis);
+
+// Returns the value of the axis without smoothing
+OuyaSDK.OuyaInput.GetAxisRaw(int playerNum, int axis);
+
+// GetButton, GetButtonDown, GetButtonUp expect the following button values:
+// OuyaController.BUTTON_O
+// OuyaController.BUTTON_U
+// OuyaController.BUTTON_Y
+// OuyaController.BUTTON_A
+// OuyaController.BUTTON_L1
+// OuyaController.BUTTON_R1
+// OuyaController.BUTTON_L3
+// OuyaController.BUTTON_R3
+// OuyaController.BUTTON_DPAD_UP
+// OuyaController.BUTTON_DPAD_DOWN
+// OuyaController.BUTTON_DPAD_RIGHT
+// OuyaController.BUTTON_DPAD_LEFT
+
+// @result - true when the button is in the DOWN position
+// @result - false when the button is in the UP position
+OuyaSDK.OuyaInput.GetButton(int playerNum, int keyCode);
+
+// @result - true if the button was in the DOWN position in the last frame
+OuyaSDK.OuyaInput.GetButtonDown(int playerNum, int button);
+
+// @result - true if the button was in the UP position in the last frame
+OuyaSDK.OuyaInput.GetButtonUp(int playerNum, int button);
+```
