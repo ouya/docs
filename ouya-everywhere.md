@@ -139,7 +139,7 @@ C#
 ```
         Texture2D buttonTexture = null;
         OuyaController.ButtonData buttonData;
-        buttonData = OuyaController.getButtonData(keyCode);
+        buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
         if (null == buttonData)
         {
             return;
