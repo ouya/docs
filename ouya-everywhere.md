@@ -80,14 +80,30 @@ Using this API will keep your game looking correct as new console hardware suppo
 
 ####Mono Game####
 
-MonoGame has a similar interface to retreive button images as Texture2D images.
+MonoGame has an interface to retrieve button names.
+
+C#
+```
+            OuyaController.ButtonData buttonData;
+            buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
+            if (null == buttonData)
+            {
+                return;
+            }
+            string buttonName = buttonData.buttonName;
+```
+
+MonoGame has an interface to retrieve button images as Texture2D images.
 
 C#
 ```
             Texture2D buttonTexture;
             OuyaController.ButtonData buttonData;
             buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
-
+            if (null == buttonData)
+            {
+                return;
+            }
             BitmapDrawable drawable = (BitmapDrawable)buttonData.buttonDrawable;
             if (null == drawable)
             {
