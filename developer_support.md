@@ -25,6 +25,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 (0:00) - <a target=_blank href="http://twitch.tv/tinypixxels">[tinypixxels]</a> twitch stream
 
+<a target=_blank href="https://www.youtube.com/watch?v=tLBuhvvwL8k&t=4m45s">(4:45)</a> - Duck Game - Hypeeeee!
+
 
 ### May 5, 2014 ###
 
