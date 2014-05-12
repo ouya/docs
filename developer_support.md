@@ -29,6 +29,13 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 </table>
 
 * <a target=_blank href="http://twitch.tv/tinypixxels">[tinypixxels]</a> twitch stream
+ 
+* C++ Example used the <a target=_blank href="https://developer.nvidia.com/tegra-resources">[Tegra Developer Pack]</a>
+
+<table border="1"><tr><td>
+<i>*Be sure to register to get access to the Tegra Developer Pack downloads.</i><br/>
+<a target=_blank href="https://developer.nvidia.com/registered-developer-programs">[Tegra Registered Developer Program]</a><br/>
+</td></tr></table>
 
 <a target=_blank href="https://www.youtube.com/watch?v=tLBuhvvwL8k&t=4m45s">(4:45)</a> - Duck Game - Hypeeeee!
 
