@@ -32,14 +32,14 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  
 * C++ Example used the <a target=_blank href="https://developer.nvidia.com/tegra-resources">[Tegra Developer Pack]</a>
 
-<table border="1"><tr><td>
-<i>*Be sure to register for "NVIDIA GameWorks™ Registered Developer Program" to get access to the Tegra Developer Pack downloads.</i><br/>
-<a target=_blank href="https://developer.nvidia.com/registered-developer-programs">[Tegra Registered Developer Program]</a><br/>
-</td></tr></table>
+* Be sure to register for "NVIDIA GameWorks™ Registered Developer Program" to get access to the Tegra Developer Pack downloads.
+<a target=_blank href="https://developer.nvidia.com/registered-developer-programs">[Tegra Registered Developer Program]</a>
 
 <a target=_blank href="https://www.youtube.com/watch?v=tLBuhvvwL8k&t=4m45s">(4:45)</a> - Duck Game - Hypeeeee!
 
 <a target=_blank href="https://www.youtube.com/watch?v=tLBuhvvwL8k&t=8m20s">(8:20)</a> - @Jared developer news
+
+----------
 
 
 ### May 5, 2014 ###
