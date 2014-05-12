@@ -26,16 +26,17 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  </tr>
 </table>
 
+<a target=_blank href="https://twitter.com/bawbmills/">@bawbmills</a>
 <a target=_blank href="https://twitter.com/superjoebob/">@superjoebob</a>
-<a target=_blank href="https://twitter.com/wearemidboss/">@wearemidboss</a>
 <a target=_blank href="https://twitter.com/tgraupmann/">@tgraupmann</a>
+<a target=_blank href="https://twitter.com/wearemidboss/">@wearemidboss</a>
 
 * <a target=_blank href="http://twitch.tv/tinypixxels">[tinypixxels]</a> twitch stream
  
 * C++ Example used the <a target=_blank href="https://developer.nvidia.com/tegra-resources">[Tegra Android Developer Pack]</a> <a target=_blank href="http://docs.nvidia.com/gameworks/index.html#developertools/mobile/tegra_android_developer_pack_v2_0r7.htm">[docs]</a>
 
 * Be sure to register for "NVIDIA GameWorks™ Registered Developer Program" to get access to the Tegra Developer Pack downloads.
-<a target=_blank href="https://developer.nvidia.com/registered-developer-programs">[Tegra Registered Developer Program]</a>
+<a target=_blank href="https://developer.nvidia.com/registered-developer-programs">[Tegra Android Registered Developer Program]</a>
 
 <a target=_blank href="https://www.youtube.com/watch?v=tLBuhvvwL8k&t=4m45s">(4:45)</a> - Duck Game - Hypeeeee!
 
