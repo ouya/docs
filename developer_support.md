@@ -7,6 +7,25 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ----------
 
 
+### May 12, 2014 ###
+
+----------
+
+<table border=1>
+
+ <tr>
+
+ <td>OUYA DEV SUPPORT (0:51:35)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=tLBuhvvwL8k" target="_blank">
+<img src="http://img.youtube.com/vi/tLBuhvvwL8k/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 5/12" width="240" height="180" border="10" /></a>
+ </td>
+
+ </tr>
+</table>
+
+(0:00) - <a target=_blank href="http://twitch.tv/tinypixxels">[tinypixxels]</a> twitch stream
+
+
 ### May 5, 2014 ###
 
 ----------
