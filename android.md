@@ -65,7 +65,7 @@ Examples are included at the base GIT path.
 
 <b>NVIDIA Nsight Visual Studio Edition</b> - https://developer.nvidia.com/nvidia-nsight-visual-studio-edition
 
-<b>Tegra Toolkit</b> - https://developer.nvidia.com/tegra-resources
+<b>Tegra Developer Pack</b> - https://developer.nvidia.com/tegra-resources
 
 <table border="1"><tr><td>
 <i>*Be sure to register to get access to the Tegra Developer Pack downloads.</i><br/>
