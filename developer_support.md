@@ -9,8 +9,6 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 ### May 12, 2014 ###
 
-----------
-
 <table border=1>
 
  <tr>
@@ -44,8 +42,6 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 ### May 5, 2014 ###
 
-----------
-
 <table border=1>
  <tr>
  
@@ -72,10 +68,10 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  </tr>
 </table>
 
+----------
+
 
 ### Apr 28, 2014 ###
-
-----------
 
 <table border=1>
  <tr>
@@ -120,10 +116,10 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 <a href="http://www.youtube.com/watch?v=lAiZwVGciPg&t=7m35s" target="_blank">(7:35)</a> – Kellee talks at IndieGames Panel at LA Games Conference
 
+----------
+
 
 ### Apr 21, 2014 ###
-
-----------
 
 <table border=1>
  <tr>
@@ -150,13 +146,10 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * The ROM soundtrack is done by lead audio engineer on the game, Matthew "2 Mello" Hopkins!
 
-
 ----------
 
 
 ### Apr 7, 2014 ###
-
-----------
 
 <table border=1>
 
@@ -172,10 +165,10 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 (0:00) - <a target=_blank href="https://www.youtube.com/watch?v=YkxTuS8lNIQ">[Yo yo yo Aflak!]</a>
 
+----------
+
 
 ### Mar 31, 2014 ###
-
-----------
 
 <table border=1>
 
@@ -192,10 +185,10 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 Get source access to Unreal <a target=_blank href="https://www.unrealengine.com/ue4-on-github">[UE4]</a> and easily publish to the OUYA!
 
+----------
+
 
 ### <a target=_blank href="https://plus.google.com/u/2/events/cb55985rss5ijuk29j40qs9ftdg">Mar 10, 2014</a> ###
-
-----------
 
 <table border=1>
 
@@ -224,6 +217,8 @@ Olivier uses PHOTON CLOUD for online multiplayer and you can too! <a target=_bla
 <a target="_blank" href="http://www.youtube.com/watch?v=8d9wEHF8No4&t=28m25s">(28:25)</a> – How many polygons?
 
 <a target="_blank" href="http://www.youtube.com/watch?v=8d9wEHF8No4&t=30m32s">(30:32)</a> – How many draw calls?
+
+----------
 
 
 ### Mar 03, 2014 ###
