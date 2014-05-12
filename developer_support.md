@@ -27,6 +27,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 <a target=_blank href="https://www.youtube.com/watch?v=tLBuhvvwL8k&t=4m45s">(4:45)</a> - Duck Game - Hypeeeee!
 
+<a target=_blank href="https://www.youtube.com/watch?v=tLBuhvvwL8k&t=8m20s">(8:20)</a> - @Jared developer news
+
 
 ### May 5, 2014 ###
 
