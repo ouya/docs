@@ -19,11 +19,16 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=tLBuhvvwL8k" target="_blank">
 <img src="http://img.youtube.com/vi/tLBuhvvwL8k/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 5/12" width="240" height="180" border="10" /></a>
  </td>
+ 
+ <td>Duck Game<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=71X1pl_524Q" target="_blank">
+<img src="http://img.youtube.com/vi/71X1pl_524Q/0.jpg" alt="Duck Game" width="240" height="180" border="10" /></a>
+ </td>
 
  </tr>
 </table>
 
-(0:00) - <a target=_blank href="http://twitch.tv/tinypixxels">[tinypixxels]</a> twitch stream
+* <a target=_blank href="http://twitch.tv/tinypixxels">[tinypixxels]</a> twitch stream
 
 <a target=_blank href="https://www.youtube.com/watch?v=tLBuhvvwL8k&t=4m45s">(4:45)</a> - Duck Game - Hypeeeee!
 
