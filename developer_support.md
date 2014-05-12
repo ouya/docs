@@ -33,7 +33,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 * C++ Example used the <a target=_blank href="https://developer.nvidia.com/tegra-resources">[Tegra Developer Pack]</a>
 
 <table border="1"><tr><td>
-<i>*Be sure to register to get access to the Tegra Developer Pack downloads.</i><br/>
+<i>*Be sure to register for "NVIDIA GameWorks™ Registered Developer Program" to get access to the Tegra Developer Pack downloads.</i><br/>
 <a target=_blank href="https://developer.nvidia.com/registered-developer-programs">[Tegra Registered Developer Program]</a><br/>
 </td></tr></table>
 
