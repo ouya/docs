@@ -296,6 +296,8 @@ Instead the new logic is a direct mapping to the OuyaController axis and button 
 
 OuyaSDK.OuyaInput should be specified on the Android platform to maximize performance.
 
+The new Input requires compiling the plugin and NDK.
+
 C#
 ```
 // PlayerNm is zero based and must be less than OuyaController.MAX_CONTROLLERS.
