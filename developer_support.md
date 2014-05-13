@@ -27,8 +27,10 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 </table>
 
 <a target=_blank href="https://twitter.com/bawbmills/">@bawbmills</a>
+<a target=_blank href="https://twitter.com/jaredtyeager/">@jaredtyeager</a>
 <a target=_blank href="https://twitter.com/superjoebob/">@superjoebob</a>
 <a target=_blank href="https://twitter.com/tgraupmann/">@tgraupmann</a>
+<a target=_blank href="https://twitter.com/unclearconcept/">@unclearconcept</a>
 <a target=_blank href="https://twitter.com/wearemidboss/">@wearemidboss</a>
 
 * <a target=_blank href="http://twitch.tv/tinypixxels">[tinypixxels]</a> twitch stream
