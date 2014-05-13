@@ -33,8 +33,10 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <a target=_blank href="https://twitter.com/unclearconcept/">@unclearconcept</a>
 <a target=_blank href="https://twitter.com/wearemidboss/">@wearemidboss</a>
 
+* <a target=_blank href="http://twitch.tv/playouya">[playouya]</a> twitch stream
+
 * <a target=_blank href="http://twitch.tv/tinypixxels">[tinypixxels]</a> twitch stream
- 
+
 * C++ Example used the <a target=_blank href="https://developer.nvidia.com/tegra-resources">[Tegra Android Developer Pack]</a> <a target=_blank href="http://docs.nvidia.com/gameworks/index.html#developertools/mobile/tegra_android_developer_pack_v2_0r7.htm">[docs]</a>
 
 * Be sure to register for "NVIDIA GameWorks™ Registered Developer Program" to get access to the Tegra Android Developer Pack downloads.
