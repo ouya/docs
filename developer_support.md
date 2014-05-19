@@ -4,6 +4,34 @@
 
 Once a week, OUYA participates in a live broadcast with developers to answer questions in a Q & A format.
 
+
+----------
+
+
+### May 19, 2014 ###
+
+<table border=1>
+
+ <tr>
+
+ <td>OUYA DEV SUPPORT (1:08:41)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=6L_k_IFOy5I" target="_blank">
+<img src="http://img.youtube.com/vi/6L_k_IFOy5I/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 5/19" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ <td>Make Levels in Duck Game<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=FWrvja9BBC4" target="_blank">
+<img src="http://img.youtube.com/vi/FWrvja9BBC4/0.jpg" alt="Duck Game" width="240" height="180" border="10" /></a>
+ </td>
+
+ </tr>
+</table>
+
+<a target=_blank href="https://twitter.com/bawbmills/">@bawbmills</a>
+<a target=_blank href="https://twitter.com/tgraupmann/">@tgraupmann</a>
+<a target=_blank href="https://twitter.com/unclearconcept/">@unclearconcept</a>
+
+
 ----------
 
 
