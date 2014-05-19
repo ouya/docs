@@ -31,6 +31,10 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <a target=_blank href="https://twitter.com/tgraupmann/">@tgraupmann</a>
 <a target=_blank href="https://twitter.com/unclearconcept/">@unclearconcept</a>
 
+<a href="http://www.youtube.com/watch?v=6L_k_IFOy5I&t=26m55s" target="_blank">(26:55)</a> – Art of Sector13
+
+<a href="http://www.youtube.com/watch?v=6L_k_IFOy5I&t=35m" target="_blank">(35:00)</a> – Developer showcase of Pixalo
+
 
 ----------
 
