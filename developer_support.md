@@ -28,6 +28,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 </table>
 
 <a target=_blank href="https://twitter.com/bawbmills/">@bawbmills</a>
+<a target=_blank href="https://twitter.com/littletinman/">@littletinman</a>
 <a target=_blank href="https://twitter.com/tgraupmann/">@tgraupmann</a>
 <a target=_blank href="https://twitter.com/unclearconcept/">@unclearconcept</a>
 
