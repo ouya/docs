@@ -25,6 +25,16 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  </td>
 
  </tr>
+ <tr>
+
+ <td>Pixalo Trailer<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=_FSbRQvbAdA" target="_blank">
+<img src="http://img.youtube.com/vi/_FSbRQvbAdA/0.jpg" alt="Pixalo Trailer" width="240" height="180" border="10" /></a>
+ </td>
+ 
+ <td></td>
+
+ </tr>
 </table>
 
 <a target=_blank href="https://twitter.com/bawbmills/">@bawbmills</a>
