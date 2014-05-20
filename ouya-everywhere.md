@@ -4,12 +4,12 @@ The OUYA Everywhere initiative delivers OUYA to gamers wherever they play - whet
 
 In order to help games be as portable as possible there are a set of new APIs available:
 
-- [Device Identification](#device_identification)
-- [Controller Images](#controller_images)
-- [Controller Input](#controller_input)
+- [Device Identification](#device-identification)
+- [Controller Images](#controller-images)
+- [Controller Input](#controller-input)
 
 
-<h3 id="device_identification">Device Identification</h3>
+<h3 id="device-identification">Device Identification</h3>
 
 While most games will work smoothly across all different devices, sometimes it may be necessary to specifically identify what hardware the game is running on.
 The simplest way to tell if the game is running on an OUYA-supported device is:
@@ -49,7 +49,7 @@ been added, yet this game has been compiled against an older ODK which doesn't
 have an enum entry for the new hardware.
 
 
-<h3 id="controller_images">Controller Images</h3>
+<h3 id="controller-images">Controller Images</h3>
 
 As new console systems are added, it can become cumbersome for each game to manage the images for the varied controller buttons.  To alleviate this issue, there is the following API:
 
@@ -172,7 +172,7 @@ C#
         stream.close();
 ```
 
-<h3 id="controller_input">Controller Input</h3>
+<h3 id="controller-input">Controller Input</h3>
 
 One common issue with Android games is supporting different controller hardare.  We've created a new API which will remap input from various controller manufacturers to the standard OUYA button layout.  The remapping logic is provided by the OUYA Framework, and will be constantly updated to add support for more and more controllers.
 
