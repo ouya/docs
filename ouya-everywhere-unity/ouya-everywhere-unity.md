@@ -17,6 +17,10 @@ The ouya-core.unitypackage contains a static access class for accessing input an
 
 This input API is targeted at the OUYA Android Console and associated devices and is not maintained as a cross-platform input system.
 
+# Source #
+
+The source code for OUYA-Everywhere with Unity can be found within the [ouya-sdk-examples for Unity](https://github.com/ouya/ouya-sdk-examples/tree/master/Unity/OuyaSDK).
+
 # Setup #
 
 Open your game or a new project.
