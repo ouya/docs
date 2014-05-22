@@ -70,7 +70,8 @@ As new console systems are added, it can become cumbersome for each game to mana
     }
 ```
 
-Simply pass in the button to query (eg: OuyaController.BUTTON\_O or OuyaController.BUTTON\_MENU) and a ButtonData class will be returned (or null if there was no data for the requested button).  The returned Drawable will be a 160px-tall button image (which you can rescale if you like) that you can show in your UI.  The buttonName string will be the localized name of the button (eg: the name for OuyaController.BUTTON\_O will be "O" on the OUYA and "A" on the M.O.J.O.).
+Simply pass in the button to query (eg: OuyaController.BUTTON\_O or OuyaController.BUTTON\_MENU) and a ButtonData class will be returned.  The returned Drawable will be a 160x160px image (which you can rescale if you like) that you can show in your UI.  The buttonName string will be the localized name of the button (eg: the name for OuyaController.BUTTON\_O will be "O" on the OUYA and "A" on the M.O.J.O.).
+If you pass in a button value for which there is no data, buttonName and buttonDrawable will be null.
 
 ```java
     String buttonName = "O";
