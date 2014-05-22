@@ -15,6 +15,10 @@ This document covers OUYA-Everywhere input, getting the console button names and
 
 The MonoGame API is very similar to the Java version with the JNI bindings most of the class names and methods are the same.
 
+# Source #
+
+The source code for OUYA-Everywhere for MonoGame can be found within the [ouya-sdk-examples for MonoGame](https://github.com/ouya/ouya-sdk-examples/tree/master/MonoGame/VirtualController).
+
 # Accessing Button Names #
 
 MonoGame has an interface to retrieve button names.
