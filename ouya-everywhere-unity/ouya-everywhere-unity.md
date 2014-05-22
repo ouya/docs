@@ -1,20 +1,20 @@
 OUYA-Everywhere INPUT Documentation for the Unity Game Engine
 
-AUDIENCE
+# Audience #
 
 This document is for Unity developers that want to import the OUYA SDK to access API functions and publish to the OUYA Android Console.
 
-OVERVIEW
+# Overview #
 
 This document covers importing the core package, installing dependencies, building, and publishing your game to the OUYA.
 
-INTRO
+# Intro #
 
 The ouya-core.unitypackage contains a static access class for accessing input and the OUYA SDK API for the Unity game engine. The input API makes it possible to build your game and without needing to rebuild will automatically add future support for new controllers and devices while still correctly mapping for your game. The input API also adds new features like being able to consistently know which controller maps to a player number. And if a controller disconnects and reconnects it will maintain the same player number. The input API makes it possible to detect if a controller has been disconnected.
 
 This input API is targeted at the OUYA Android Console and associated devices and is not maintained as a cross-platform input system.
 
-SETUP
+# Setup #
 
 Open your game or a new project.
 
@@ -112,11 +112,11 @@ Click the Compile Plugin button and that will compile the Java plugin. If succes
 
 ![image alt text](image_16.png)
 
-TEMPORARY:
+# TEMPORARY: #
 
 In the current version I haven’t got around to making the package command part of compile plugin. I plan on getting rid of the compile Java button. This package command generates the R.Java. So temporarily you have to hit Compile Java and then Compile Plugin. After that completes, manually remove the OuyaUnityApplication.jar file that is created. If you forget this step, you’ll get an DEX error when building the game.
 
-CONTINUED:
+# CONTINUED: #
 
 Unity Free or Unity Pro
 
@@ -128,20 +128,23 @@ FAQ: If you have the Android free version you won’t be able to use pro feature
 
 The Run Application and Stop Application are convenient for relaunching or exiting your application while it’s running on the OUYA.
 
-OUYA Everywhere API
+# OUYA Everywhere API #
 
 Be sure to be on the Android platform before invoking the OUYA Everywhere API.
 
+```
 #if UNITY_ANDROID && !UNITY_EDITOR
 
 	… make OUYA Everywhere API calls ...
 
 #endif
+```
 
-Accessing Button Names
+# Accessing Button Names #
 
 Unity has an interface to retrieve button names.
 
+```
     	OuyaController.ButtonData buttonData;
 
     	buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
@@ -155,11 +158,13 @@ return;
     	}
 
     	string buttonName = buttonData.buttonName;
+```
 
-Accessing Button Images
+# Accessing Button Images #
 
 Unity has an interface to retrieve button images as Texture2D images.
 
+```
     	Texture2D buttonTexture = null;
 
     	OuyaController.ButtonData buttonData;
@@ -217,8 +222,11 @@ buttonTexture.LoadImage(stream.toByteArray());
     	}
 
     	stream.close();
+```
 
-Accessing Axis Values
+# Accessing Axis Values #
+
+```
 
 // PlayerNm is zero based and must be less than OuyaController.MAX_CONTROLLERS.
 
@@ -244,8 +252,11 @@ float OuyaSDK.OuyaInput.GetAxis(int playerNum, int axis);
 
 float OuyaSDK.OuyaInput.GetAxisRaw(int playerNum, int axis);
 
-Accessing Button States
+```
 
+# Accessing Button States #
+
+```
 // GetButton, GetButtonDown, GetButtonUp expect the following button values:
 
 // OuyaController.BUTTON_O
@@ -285,12 +296,13 @@ bool OuyaSDK.OuyaInput.GetButtonDown(int playerNum, int button);
 // @result - true if the button was in the UP position in the last frame
 
 bool OuyaSDK.OuyaInput.GetButtonUp(int playerNum, int button);
+```
 
 FAQ: How can I tell if a controller is connected?
 
 	The OuyaSDK.Joysticks static string array will have a null entry for the index of the player number if that player’s controller is disconnect.
 
-EXAMPLES
+# Examples #
 
 Download the Examples package from github releases…
 
