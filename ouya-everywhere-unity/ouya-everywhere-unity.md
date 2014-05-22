@@ -112,11 +112,11 @@ Click the Compile Plugin button and that will compile the Java plugin. If succes
 
 ![image alt text](image_16.png)
 
-# Temporary: #
+# Legacy #
 
-In the current version I haven’t got around to making the package command part of compile plugin. I plan on getting rid of the compile Java button. This package command generates the R.Java. So temporarily you have to hit Compile Java and then Compile Plugin. After that completes, manually remove the OuyaUnityApplication.jar file that is created. If you forget this step, you’ll get an DEX error when building the game.
+If you have the legacy OuyaUnityApplication.jar file make sure that it’s removed. If you forget this step, you’ll get an DEX error when building the game.
 
-# Continued: #
+# OUYA Panel #
 
 Unity Free or Unity Pro
 
