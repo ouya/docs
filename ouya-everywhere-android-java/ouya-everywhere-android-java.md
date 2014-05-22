@@ -57,6 +57,14 @@ The drawable resources hold the icons and controller images used in the example.
 
 # Example Code #
 
+## MainActivity ##
+
+The MainActivity extends the OuyaActivity from the ouya-sdk.jar for the easiest way to add OUYA-Everywhere input.
+
+``
+public class MainActivity extends OuyaActivity {
+```
+
 ## setDrawable ##
 
 Accepts the ImageView that will display the button image and the keyCode id for the corresponding button image.
