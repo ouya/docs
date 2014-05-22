@@ -26,7 +26,7 @@ Import the Core package. From the menu item Assets->Import Package->Custom Packa
 
 ![image alt text](image_1.png)
 
-DEPENDENCIES
+# Dependencies #
 
 The OUYA Plugin has dependencies on the Android SDK, Android NDK, and Java JDK.
 
