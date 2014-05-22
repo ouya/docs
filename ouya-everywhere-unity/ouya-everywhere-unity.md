@@ -112,11 +112,11 @@ Click the Compile Plugin button and that will compile the Java plugin. If succes
 
 ![image alt text](image_16.png)
 
-# TEMPORARY: #
+# Temporary: #
 
 In the current version I haven’t got around to making the package command part of compile plugin. I plan on getting rid of the compile Java button. This package command generates the R.Java. So temporarily you have to hit Compile Java and then Compile Plugin. After that completes, manually remove the OuyaUnityApplication.jar file that is created. If you forget this step, you’ll get an DEX error when building the game.
 
-# CONTINUED: #
+# Continued: #
 
 Unity Free or Unity Pro
 
@@ -146,17 +146,11 @@ Unity has an interface to retrieve button names.
 
 ```
     	OuyaController.ButtonData buttonData;
-
     	buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
-
     	if (null == buttonData)
-
     	{
-
-return;
-
+		return;
     	}
-
     	string buttonName = buttonData.buttonName;
 ```
 
@@ -166,141 +160,86 @@ Unity has an interface to retrieve button images as Texture2D images.
 
 ```
     	Texture2D buttonTexture = null;
-
     	OuyaController.ButtonData buttonData;
-
     	buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
-
     	if (null == buttonData)
-
     	{
-
-return;
-
+		return;
     	}
-
     	if (null == buttonData.buttonDrawable)
-
     	{
-
-return;
-
+		return;
     	}
-
     	BitmapDrawable drawable = (BitmapDrawable)buttonData.buttonDrawable;
-
     	if (null == drawable)
-
     	{
-
-return;
-
+		return;
     	}
-
     	Bitmap bitmap = drawable.getBitmap();
-
     	if (null == bitmap)
-
     	{
-
-return;
-
+		return;
     	}
-
     	ByteArrayOutputStream stream = new ByteArrayOutputStream();
-
     	bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-
     	if (stream.size() > 0)
-
     	{
-
-buttonTexture = new Texture2D(0, 0);
-
-buttonTexture.LoadImage(stream.toByteArray());
-
+		buttonTexture = new Texture2D(0, 0);
+		buttonTexture.LoadImage(stream.toByteArray());
     	}
-
     	stream.close();
 ```
 
 # Accessing Axis Values #
 
 ```
-
 // PlayerNm is zero based and must be less than OuyaController.MAX_CONTROLLERS.
-
 // GetAxis, GetAxisRaw expects the following axis values:
-
 OuyaController.AXIS_LS_X
-
 OuyaController.AXIS_LS_Y
-
 OuyaController.AXIS_RS_X
-
 OuyaController.AXIS_RS_Y
-
 OuyaController.AXIS_L2
-
 OuyaController.AXIS_R2
 
 // @result - Returns the value of the axis with smoothing
-
 float OuyaSDK.OuyaInput.GetAxis(int playerNum, int axis);
 
 // @result - Returns the value of the axis without smoothing
-
 float OuyaSDK.OuyaInput.GetAxisRaw(int playerNum, int axis);
-
 ```
 
 # Accessing Button States #
 
 ```
 // GetButton, GetButtonDown, GetButtonUp expect the following button values:
-
 // OuyaController.BUTTON_O
-
 // OuyaController.BUTTON_U
-
 // OuyaController.BUTTON_Y
-
 // OuyaController.BUTTON_A
-
 // OuyaController.BUTTON_L1
-
 // OuyaController.BUTTON_R1
-
 // OuyaController.BUTTON_L3
-
 // OuyaController.BUTTON_R3
-
 // OuyaController.BUTTON_DPAD_UP
-
 // OuyaController.BUTTON_DPAD_DOWN
-
 // OuyaController.BUTTON_DPAD_RIGHT
-
 // OuyaController.BUTTON_DPAD_LEFT
 
 // @result - true when the button is in the DOWN position
-
 // @result - false when the button is in the UP position
-
 bool OuyaSDK.OuyaInput.GetButton(int playerNum, int keyCode);
 
 // @result - true if the button was in the DOWN position in the last frame
-
 bool OuyaSDK.OuyaInput.GetButtonDown(int playerNum, int button);
 
 // @result - true if the button was in the UP position in the last frame
-
 bool OuyaSDK.OuyaInput.GetButtonUp(int playerNum, int button);
 ```
 
 FAQ: How can I tell if a controller is connected?
 
-	The OuyaSDK.Joysticks static string array will have a null entry for the index of the player number if that player’s controller is disconnect.
+The OuyaSDK.Joysticks static string array will have a null entry for the index of the player number if that player’s controller is disconnect.
 
 # Examples #
 
