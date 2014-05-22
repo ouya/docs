@@ -86,47 +86,6 @@ All current OuyaController.BUTTON_* contants have valid button data (including o
 
 Using this API will keep your game looking correct as new console hardware support is added -- without any recompilations!
 
-
-####MonoGame####
-
-MonoGame has an interface to retrieve button names.
-
-C#
-```
-            OuyaController.ButtonData buttonData;
-            buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
-            if (null == buttonData)
-            {
-                return;
-            }
-            string buttonName = buttonData.buttonName;
-```
-
-MonoGame has an interface to retrieve button images as Texture2D images.
-
-C#
-```
-            Texture2D buttonTexture;
-            OuyaController.ButtonData buttonData;
-            buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
-            if (null == buttonData)
-            {
-                return;
-            }
-            BitmapDrawable drawable = (BitmapDrawable)buttonData.buttonDrawable;
-            if (null == drawable)
-            {
-                return;
-            }
-            Bitmap bitmap = drawable.Bitmap;
-            using (MemoryStream ms = new MemoryStream())
-            {
-                bitmap.Compress(Bitmap.CompressFormat.Png, 100, ms);
-                ms.Position = 0;
-                buttonTexture = Texture2D.FromStream(GraphicsDevice, ms);
-            }
-```
-
 <h3 id="controller-input">Controller Input</h3>
 
 One common issue with Android games is supporting different controller hardare.  We've created a new API which will remap input from various controller manufacturers to the standard OUYA button layout.  The remapping logic is provided by the OUYA Framework, and will be constantly updated to add support for more and more controllers.
@@ -204,41 +163,4 @@ If you are unable to extend the OuyaActivity (eg: the game engine you are using 
     }
 ```
 
-MonoGame is very similar to the Java version. The easy option is to extend OuyaActivity. Or call the static methods on OuyaInputMapper in a custom Activity.
 
-```C#
-using Android.OS;
-using Android.Views;
-
-namespace OuyaSdk
-{
-    public class CustomActivity : Microsoft.Xna.Framework.AndroidGameActivity
-    {
-        protected override void OnCreate(Bundle bundle)
-        {
-            base.OnCreate(bundle);
-            OuyaInputMapper.init(this.Handle);
-        }
-
-        protected override void OnDestroy()
-        {
-            OuyaInputMapper.shutdown(this.Handle);
-            base.OnDestroy();
-        }
-
-        public override bool DispatchGenericMotionEvent(MotionEvent motionEvent)
-        {
-            bool handled = OuyaInputMapper.DispatchGenericMotionEvent(this.Handle, motionEvent);
-            ...
-            return handled;
-        }
-
-        public override bool DispatchKeyEvent(KeyEvent keyEvent)
-        {
-            bool handled = OuyaInputMapper.DispatchKeyEvent(this.Handle, keyEvent);
-            ...
-            return handled;
-        }
-    }
-}
-```
