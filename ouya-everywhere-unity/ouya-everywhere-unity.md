@@ -239,7 +239,7 @@ bool OuyaSDK.OuyaInput.GetButtonUp(int playerNum, int button);
 
 FAQ: How can I tell if a controller is connected?
 
-The OuyaSDK.Joysticks static string array will have a null entry for the index of the player number if that player’s controller is disconnect.
+The OuyaSDK.Joysticks static string array will have a null entry for the index of the player number if that player’s controller has disconnected.
 
 # Examples #
 
