@@ -145,13 +145,13 @@ Be sure to be on the Android platform before invoking the OUYA Everywhere API.
 Unity has an interface to retrieve button names.
 
 ```
-    	OuyaController.ButtonData buttonData;
-    	buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
-    	if (null == buttonData)
-    	{
-		return;
-    	}
-    	string buttonName = buttonData.buttonName;
+OuyaController.ButtonData buttonData;
+buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
+if (null == buttonData)
+{
+	return;
+}
+string buttonName = buttonData.buttonName;
 ```
 
 # Accessing Button Images #
@@ -159,35 +159,35 @@ Unity has an interface to retrieve button names.
 Unity has an interface to retrieve button images as Texture2D images.
 
 ```
-    	Texture2D buttonTexture = null;
-    	OuyaController.ButtonData buttonData;
-    	buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
-    	if (null == buttonData)
-    	{
-		return;
-    	}
-    	if (null == buttonData.buttonDrawable)
-    	{
-		return;
-    	}
-    	BitmapDrawable drawable = (BitmapDrawable)buttonData.buttonDrawable;
-    	if (null == drawable)
-    	{
-		return;
-    	}
-    	Bitmap bitmap = drawable.getBitmap();
-    	if (null == bitmap)
-    	{
-		return;
-    	}
-    	ByteArrayOutputStream stream = new ByteArrayOutputStream();
-    	bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
-    	if (stream.size() > 0)
-    	{
-		buttonTexture = new Texture2D(0, 0);
-		buttonTexture.LoadImage(stream.toByteArray());
-    	}
-    	stream.close();
+Texture2D buttonTexture = null;
+OuyaController.ButtonData buttonData;
+buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
+if (null == buttonData)
+{
+	return;
+}
+if (null == buttonData.buttonDrawable)
+{
+	return;
+}
+BitmapDrawable drawable = (BitmapDrawable)buttonData.buttonDrawable;
+if (null == drawable)
+{
+	return;
+}
+Bitmap bitmap = drawable.getBitmap();
+if (null == bitmap)
+{
+	return;
+}
+ByteArrayOutputStream stream = new ByteArrayOutputStream();
+bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+if (stream.size() > 0)
+{
+	buttonTexture = new Texture2D(0, 0);
+	buttonTexture.LoadImage(stream.toByteArray());
+}
+stream.close();
 ```
 
 # Accessing Axis Values #
