@@ -76,7 +76,93 @@ Accepts the ImageView that will display the button image and the keyCode id for 
 			imageView.setImageDrawable(data.buttonDrawable);
 		}
 	}
-``` 
+```
+
+## onCreate ##
+
+Loads the layout and gets the references to the ImageView controls that will handle toggling button visibility when toggled.
+
+```
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		
+		setContentView(R.layout.activity_main);
+		super.onCreate(savedInstanceState);
+		
+		txtSystem = (TextView)findViewById(R.id.txtSystem);
+		txtController = (TextView)findViewById(R.id.txtController);
+		imgButtonMenu = (ImageView)findViewById(R.id.imgButtonMenu);
+		txtKeyCode = (TextView)findViewById(R.id.txtKeyCode);
+		imgControllerO = (ImageView)findViewById(R.id.imgControllerO);
+		imgControllerU = (ImageView)findViewById(R.id.imgControllerU);
+		imgControllerY = (ImageView)findViewById(R.id.imgControllerY);
+		imgControllerA = (ImageView)findViewById(R.id.imgControllerA);
+		imgControllerL1 = (ImageView)findViewById(R.id.imgControllerL1);
+		imgControllerL2 = (ImageView)findViewById(R.id.imgControllerL2);
+		imgControllerL3 = (ImageView)findViewById(R.id.imgControllerl3);
+		imgControllerR1 = (ImageView)findViewById(R.id.imgControllerR1);
+		imgControllerR2 = (ImageView)findViewById(R.id.imgControllerR2);
+		imgControllerR3 = (ImageView)findViewById(R.id.imgControllerR3);
+		imgControllerDpadDown = (ImageView)findViewById(R.id.imgControllerDpadDown);
+		imgControllerDpadLeft = (ImageView)findViewById(R.id.imgControllerDpadLeft);
+		imgControllerDpadRight = (ImageView)findViewById(R.id.imgControllerDpadRight);
+		imgControllerDpadUp = (ImageView)findViewById(R.id.imgControllerDpadUp);
+		imgControllerMenu = (ImageView)findViewById(R.id.imgControllerMenu);
+		imgButtonA = (ImageView)findViewById(R.id.imgButtonA);
+		imgDpadDown = (ImageView)findViewById(R.id.imgDpadDown);
+		imgDpadLeft = (ImageView)findViewById(R.id.imgDpadLeft);
+		imgDpadRight = (ImageView)findViewById(R.id.imgDpadRight);
+		imgDpadUp = (ImageView)findViewById(R.id.imgDpadUp);
+		imgLeftStick = (ImageView)findViewById(R.id.imgLeftStick);
+		imgLeftBumper = (ImageView)findViewById(R.id.imgLeftBumper);
+		imgLeftTrigger = (ImageView)findViewById(R.id.imgLeftTrigger);
+		imgButtonO = (ImageView)findViewById(R.id.imgButtonO);
+		imgRightStick = (ImageView)findViewById(R.id.imgRightStick);
+		imgRightBumper = (ImageView)findViewById(R.id.imgRightBumper);
+		imgRightTrigger = (ImageView)findViewById(R.id.imgRightTrigger);
+		imgLeftThumb = (ImageView)findViewById(R.id.imgLeftThumb);
+		imgRightThumb = (ImageView)findViewById(R.id.imgRightThumb);
+		imgButtonU = (ImageView)findViewById(R.id.imgButtonU);
+		imgButtonY = (ImageView)findViewById(R.id.imgButtonY);
+```
+
+Input can be event based, or spawn a thread to set visibility on an interval. The menu button is pressed and the visibility needs to be cleared after an interval rather than waiting for an event to clear it.
+
+```
+    	// spawn thread to toggle menu button
+        Thread timer = new Thread()
+        {
+	        public void run()
+	        {
+	        	while (mWaitToExit)
+	        	{
+	        		if (mMenuDetected != 0 &&
+	        			mMenuDetected < System.nanoTime())
+	        		{
+	        			mMenuDetected = 0;
+	        			Runnable runnable = new Runnable()
+	        			{
+		        			public void run()
+		        			{
+		        				imgButtonMenu.setVisibility(View.INVISIBLE);
+		        			}
+	        			};
+	        			runOnUiThread(runnable);
+	        			
+	        		}
+	        		try
+	        		{
+	        			Thread.sleep(50);
+	        		}
+	        		catch (InterruptedException e)
+	        		{
+	        		}
+		        }
+			}
+        };
+		timer.start();
+```
+ 
 
 ## onStart ##
 
