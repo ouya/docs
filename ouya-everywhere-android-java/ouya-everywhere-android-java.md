@@ -61,7 +61,7 @@ The drawable resources hold the icons and controller images used in the example.
 
 The MainActivity extends the OuyaActivity from the ouya-sdk.jar for the easiest way to add OUYA-Everywhere input.
 
-``
+```
 public class MainActivity extends OuyaActivity {
 ```
 
