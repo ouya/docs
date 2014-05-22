@@ -150,3 +150,35 @@ namespace OuyaSdk
     }
 }
 ```
+
+# Virtual Controller Example #
+
+The virtual controller example exercises the new OUYA-Everywhere input. The button names and images are now accessible from the API. And the virtual controller buttons highlight for multiple controllers for supported controllers.
+
+![image alt text](image_6.png)
+
+# OuyaSDK #
+
+The Virtual Controller example has several projects within the solution.
+
+![image alt text](image_2.png)
+
+The OuyaSdk project embeds the ouya-sdk.jar and exposes methods to be called from C#.
+
+![image alt text](image_3.png)
+
+The OuyaSdk project specifies API level 16.
+
+![image alt text](image_1.png)
+
+The Virtual Controller project defines the activity and game logic.
+
+![image alt text](image_4.png)
+
+The Virtual Controller example project specifies API level 16. You should only need to support the ARM-v7 architecture.
+
+![image alt text](image_0.png)
+
+The content project and content project's content are created together with the new project template. Content projects are useful in order to convert the PNG images of the controller into the XNB images that MonoGame uses for resources. These XNB files are copied into the Virtual Controller project's assets.
+
+![image alt text](image_5.png)
