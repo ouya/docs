@@ -15,7 +15,7 @@ This document covers OUYA-Everywhere input, getting the console button names and
 
 The MonoGame API is very similar to the Java version with the JNI bindings most of the class names and methods are the same.
 
-Accessing Button Names
+# Accessing Button Names #
 
 MonoGame has an interface to retrieve button names.
 
@@ -33,7 +33,7 @@ if (null == buttonData.buttonName)
 string buttonName = buttonData.buttonName;
 ```
 
-Accessing Button Images
+# Accessing Button Images #
 
 MonoGame has an interface to retrieve button images as Texture2D images.
 
@@ -59,7 +59,7 @@ using (MemoryStream ms = new MemoryStream())
 }
 ```
 
-Activity Setup
+# Activity Setup #
 
 MonoGame is very similar to the Java version. The easy option is to extend OuyaActivity. Or call the static methods on OuyaInputMapper in a custom Activity.
 
