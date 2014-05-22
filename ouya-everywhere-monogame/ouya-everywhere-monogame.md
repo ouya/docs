@@ -63,6 +63,36 @@ using (MemoryStream ms = new MemoryStream())
 
 MonoGame is very similar to the Java version. The easy option is to extend OuyaActivity. Or call the static methods on OuyaInputMapper in a custom Activity.
 
+## Extending OuyaActivity ##
+
+The easiest way to add OUYA-Everywhere input is extending the OuyaActivity.
+
+```
+using OuyaSdk;
+
+namespace VirtualController
+{
+    public class Activity1 : OuyaActivity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+
+            Game1.Activity = this;
+            m_game = new Game1();
+            SetContentView(m_game.Window);
+            m_game.Run();
+        }
+    }
+}
+
+
+```
+
+## Using Static OuyaInputMapper ##
+
+If you aren't able to extend from OuyaActivity, invoke the static OuyaInputMapper methods.
+
 ```
 using Android.OS;
 using Android.Views;
@@ -85,16 +115,37 @@ namespace OuyaSdk
 
         public override bool DispatchGenericMotionEvent(MotionEvent motionEvent)
         {
-            bool handled = OuyaInputMapper.DispatchGenericMotionEvent(this.Handle, motionEvent);
-            ...
-            return handled;
+            if (OuyaInputMapper.shouldHandleInputEvent(motionEvent.Handle))
+            {
+                return OuyaInputMapper.DispatchGenericMotionEvent(this.Handle, motionEvent);
+            }
+            else
+            {
+                return base.DispatchGenericMotionEvent(motionEvent);
+            }
         }
 
         public override bool DispatchKeyEvent(KeyEvent keyEvent)
         {
-            bool handled = OuyaInputMapper.DispatchKeyEvent(this.Handle, keyEvent);
-            ...
-            return handled;
+            if (OuyaInputMapper.shouldHandleInputEvent(keyEvent.Handle))
+            {
+                return OuyaInputMapper.DispatchKeyEvent(this.Handle, keyEvent);
+            }
+            else
+            {
+                if (keyEvent.Action == KeyEventActions.Down)
+                {
+                    return OnKeyDown(keyEvent.KeyCode, keyEvent);
+                }
+                else if (keyEvent.Action == KeyEventActions.Up)
+                {
+                    return OnKeyUp(keyEvent.KeyCode, keyEvent);
+                }
+                else
+                {
+                    return base.DispatchKeyEvent(keyEvent);
+                }
+            }
         }
     }
 }
