@@ -1,4 +1,4 @@
-[Back to OUYA-Everywhere overview](https://github.com/ouya/docs/blob/1.0.12/ouya-everywhere.md)
+[Back to OUYA-Everywhere overview](../ouya-everywhere.md)
 
 
 OUYA-Everywhere INPUT Documentation on Android Java
