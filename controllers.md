@@ -16,7 +16,7 @@ Since controller interfaces are so crucial, we've done some work to make your li
 
 ### Controller Images
 
-Games commonly need images to show controller graphics for pairing screens or showing controller schemes.
+Games commonly need images to show controller graphics for pairing screens or showing controller schemes.  Individual button images/names can be queried at runtime to provide maximal support for different devices (see the [OUYA Everywhere](ouya-everywhere.md) documention for more info).
 
 Several common sized graphics are provided to be used in game.
 

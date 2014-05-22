@@ -4,6 +4,7 @@
 
 **API**
 * [Controllers](controllers.md)
+* [OUYA Everywhere](ouya-everywhere.md)
 * [Purchases](purchasing.md)
 * [Storage](storage.md)
 

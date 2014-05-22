@@ -68,7 +68,7 @@ Now we're ready for some real action!
 Before invoking in-app-purchase methods check if you are running OUYA hardware.
 
 ```java
-if (ouyaFacade.isRunningOnOUYAHardware())
+if (ouyaFacade.isRunningOnOUYASupportedHardware())
 {
    //running on OUYA hardware
 }
@@ -77,6 +77,8 @@ else
    //something else
 }
 ```
+
+See the [OUYA Everywhere](ouya-everywhere.md) document for more details.
 
 #### Testing purchases
 
