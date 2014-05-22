@@ -142,7 +142,7 @@ Be sure to be on the Android platform before invoking the OUYA Everywhere API.
 
 # Accessing Button Names #
 
-Unity has an interface to retrieve button names.
+Unity has an interface to retrieve button names. A null button name means the button was not found.  
 
 ```
 OuyaController.ButtonData buttonData;
@@ -151,12 +151,15 @@ if (null == buttonData)
 {
 	return;
 }
+if (null == buttonData.buttonName)
+{
+}
 string buttonName = buttonData.buttonName;
 ```
 
 # Accessing Button Images #
 
-Unity has an interface to retrieve button images as Texture2D images.
+Unity has an interface to retrieve button images as Texture2D images. A null Texture2D image means the button was not found.
 
 ```
 Texture2D buttonTexture = null;
