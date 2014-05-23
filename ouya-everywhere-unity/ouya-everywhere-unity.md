@@ -27,7 +27,7 @@ Open your game or a new project.
 
 ![image alt text](image_0.png)
 
-Download the OUYA Core package from from the [ouya-sdk-examples Unity releases](https://github.com/ouya/ouya-sdk-examples/releases/tag/1.0.12.1).
+Download the OUYA Core package from from the [ouya-sdk-examples Unity releases](https://github.com/ouya/ouya-sdk-examples/releases/tag/1.0.12.2).
 
 ```
 Note: Before importing ALWAYS make a backup of your game!
