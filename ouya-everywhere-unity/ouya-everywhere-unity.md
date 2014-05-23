@@ -144,7 +144,31 @@ Click the Compile Plugin button and that will compile the Java plugin. If succes
 
 # Legacy #
 
+Some legacy files are not required to be imported or can be removed.
+
+## OuyaUnityApplication.jar ##
+
 If you have the legacy OuyaUnityApplication.jar file make sure that it’s removed. If you forget this step, you’ll get an DEX error when building the game.
+
+```
+Assets\Plugins\Android\OuyaUnityApplication.jar
+```
+
+## OuyaUnityApplication.java ##
+
+If you have the legacy OuyaUnityApplication.java file make sure that it’s removed. If you forget this step, you’ll get a Java compile error.
+
+```
+Assets\Plugins\Android\src\OuyaUnityApplication.java
+```
+
+## OuyaNativeActivity.java ##
+
+If you have the legacy OuyaNativeActivity.java file make sure that it’s removed. If you forget this step, you’ll get a Java compile error.
+
+```
+Assets\Plugins\Android\src\OuyaNativeActivity.java
+```
 
 # OUYA Panel #
 
