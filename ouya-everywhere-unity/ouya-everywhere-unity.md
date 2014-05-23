@@ -29,9 +29,32 @@ Open your game or a new project.
 
 Download the OUYA Core package from from the [ouya-sdk-examples Unity releases](https://github.com/ouya/ouya-sdk-examples/releases/tag/1.0.12.1).
 
+```
+Note: Before importing ALWAYS make a backup of your game!
+``` 
+
 Import the Core package. From the menu item Assets->Import Package->Custom Package… and browse to the "ouya-core.unitypackage".
 
 ![image alt text](image_1.png)
+
+## Icons ##
+
+On the first import you'll get the sample icons.
+```
+Assets/Plugins/Android/res/drawable-xhdpi/ouya_icon.png (732x412).
+Assets/Plugins/Android/res/drawable/app_icon.png (96x96).
+```
+
+If the icons have already been customized, there's no need to import the icons and replace with the sample icons.
+
+## InputManager.asset ##
+
+The InputManager.asset is no longer needed to work on OUYA and supported devices. Importing this file is optional and will replace existing input mappings. InputManager.asset contains 20 axises and 20 buttons for the 4 supported controllers on Linux, Mac, and Windows.
+
+```
+ProjectSettings/InputManager.asset
+```
+
 
 # Dependencies #
 
