@@ -21,6 +21,10 @@ This input API is targeted at the OUYA Android Console and associated devices an
 
 The source code for OUYA-Everywhere with Unity can be found within the [ouya-sdk-examples for Unity](https://github.com/ouya/ouya-sdk-examples/tree/master/Unity/OuyaSDK).
 
+# Download #
+
+The Unity core package can be downloaded from the [ouya-sdk-examples Unity releases](https://github.com/ouya/ouya-sdk-examples/releases/tag/1.0.12.1).
+
 # Setup #
 
 Open your game or a new project.
