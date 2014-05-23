@@ -175,6 +175,8 @@ Be sure to be on the Android platform before invoking the OUYA Everywhere API.
 OuyaController has a static method to retrieve button names. A null button name means the button was not found.  
 
 ```
+#if UNITY_ANDROID && !UNITY_EDITOR
+
 OuyaController.ButtonData buttonData;
 buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
 if (null == buttonData)
@@ -185,6 +187,8 @@ if (null == buttonData.buttonName)
 {
 }
 string buttonName = buttonData.buttonName;
+
+#endif
 ```
 
 # Accessing Button Images #
@@ -192,6 +196,8 @@ string buttonName = buttonData.buttonName;
 OuyaController has a static method to retrieve button images as Texture2D images. A null Texture2D image means the button was not found.
 
 ```
+#if UNITY_ANDROID && !UNITY_EDITOR
+
 Texture2D buttonTexture = null;
 OuyaController.ButtonData buttonData;
 buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
@@ -221,6 +227,8 @@ if (stream.size() > 0)
 	buttonTexture.LoadImage(stream.toByteArray());
 }
 stream.close();
+
+#endif
 ```
 
 # Accessing Axis Values #
