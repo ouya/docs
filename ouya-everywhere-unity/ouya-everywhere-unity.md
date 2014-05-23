@@ -174,6 +174,7 @@ Be sure to be on the Android platform before invoking the OUYA Everywhere API.
 
 OuyaController has a static method to retrieve button names. A null button name means the button was not found.  
 
+C#
 ```
 #if UNITY_ANDROID && !UNITY_EDITOR
 
@@ -195,6 +196,7 @@ string buttonName = buttonData.buttonName;
 
 OuyaController has a static method to retrieve button images as Texture2D images. A null Texture2D image means the button was not found.
 
+C#
 ```
 #if UNITY_ANDROID && !UNITY_EDITOR
 
@@ -233,6 +235,7 @@ stream.close();
 
 # Accessing Axis Values #
 
+C#
 ```
 // PlayerNm is zero based and must be less than OuyaController.MAX_CONTROLLERS.
 // GetAxis, GetAxisRaw expects the following axis values:
@@ -243,15 +246,32 @@ OuyaController.AXIS_RS_Y
 OuyaController.AXIS_L2
 OuyaController.AXIS_R2
 
+int playerNum = 0; //zero based
+
 // @result - Returns the value of the axis with smoothing
 float OuyaSDK.OuyaInput.GetAxis(int playerNum, int axis);
 
+OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_LS_X);
+OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_LS_Y);
+OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_RS_X);
+OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_RS_Y);
+OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_L2);
+OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_R2);
+
 // @result - Returns the value of the axis without smoothing
 float OuyaSDK.OuyaInput.GetAxisRaw(int playerNum, int axis);
+
+OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_LS_X);
+OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_LS_Y);
+OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_RS_X);
+OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_RS_Y);
+OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_L2);
+OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_R2);
 ```
 
 # Accessing Button States #
 
+C#
 ```
 // GetButton, GetButtonDown, GetButtonUp expect the following button values:
 // OuyaController.BUTTON_O
@@ -271,11 +291,50 @@ float OuyaSDK.OuyaInput.GetAxisRaw(int playerNum, int axis);
 // @result - false when the button is in the UP position
 bool OuyaSDK.OuyaInput.GetButton(int playerNum, int keyCode);
 
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_O);
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_U);
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_Y);
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_A);
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_L1);
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_R1);
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_L3);
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_R3);
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_DPAD_UP);
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_DPAD_DOWN);
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_DPAD_RIGHT);
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_DPAD_LEFT);
+
 // @result - true if the button was in the DOWN position in the last frame
 bool OuyaSDK.OuyaInput.GetButtonDown(int playerNum, int button);
 
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_O);
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_U);
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_Y);
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_A);
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_L1);
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_R1);
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_L3);
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_R3);
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_UP);
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_DOWN);
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_RIGHT);
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_LEFT);
+
 // @result - true if the button was in the UP position in the last frame
 bool OuyaSDK.OuyaInput.GetButtonUp(int playerNum, int button);
+
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_O);
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_U);
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_Y);
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_A);
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_L1);
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_R1);
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_L3);
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_R3);
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_UP);
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_DOWN);
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_RIGHT);
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_LEFT);
 ```
 
 FAQ: How can I tell if a controller is connected?
