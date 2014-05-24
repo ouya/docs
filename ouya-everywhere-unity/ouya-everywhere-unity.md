@@ -396,14 +396,19 @@ OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_LEFT);
 #endif
 ```
 
-FAQ: How can I tell if a controller is connected?
+# Check if controller is connected #
 
 OuyaInput exposes a static method to check if the controller is connected.
 
+C#
 ```
+#if UNITY_ANDROID && !UNITY_EDITOR
+
 //@returns true if the player number is connected
 //@returns false if the player number is disconnected
 //bool OuyaSDK.OuyaInput.IsControllerConnected(int playerNum);
+
+#endif
 ```
 
 # Examples #
