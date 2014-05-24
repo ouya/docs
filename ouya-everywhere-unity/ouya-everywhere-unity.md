@@ -33,9 +33,13 @@ Download the OUYA Core package from from the [ouya-sdk-examples Unity releases](
 Note: Before importing ALWAYS make a backup of your game!
 ``` 
 
-Import the Core package. From the menu item Assets->Import Package->Custom Package… and browse to the "ouya-core.unitypackage".
+Import the Core package. From the menu item Assets->Import Package->Custom Package.
 
 ![image alt text](image_1.png)
+
+Import the OuyaSDK-Core.unitypackage.
+
+![image alt text](image_21.png)
 
 ## Icons ##
 
