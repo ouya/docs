@@ -63,6 +63,12 @@ Importing the signing key is a placeholder for where to place the signing key do
 Assets/Plugins/Android/res/raw/key.der
 ```
 
+## Orientation ##
+
+Within the Player Settings, Android Tab, set the default orientation to Landscape Left.
+
+![image alt text](image_19.png)
+
 # Dependencies #
 
 The OUYA Plugin has dependencies on the Android SDK, Android NDK, and Java JDK.
@@ -333,6 +339,7 @@ C#
 // OuyaController.BUTTON_DPAD_DOWN
 // OuyaController.BUTTON_DPAD_RIGHT
 // OuyaController.BUTTON_DPAD_LEFT
+// OuyaController.BUTTON_MENU
 
 // @result - true when the button is in the DOWN position
 // @result - false when the button is in the UP position
@@ -372,6 +379,7 @@ OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_UP);
 OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_DOWN);
 OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_RIGHT);
 OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_LEFT);
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_MENU);
 
 #endif
 
@@ -392,9 +400,14 @@ OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_UP);
 OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_DOWN);
 OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_RIGHT);
 OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_LEFT);
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_MENU);
 
 #endif
 ```
+
+## OuyaController.BUTTON_MENU ##
+
+Note: Be sure to check for button states with GetButtonDown and GetButtonUp. Just checking for the GetButton state will never catch the event in time because the down and up event fire within the same frame.
 
 # Check if controller is connected #
 
