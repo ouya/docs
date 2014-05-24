@@ -398,7 +398,13 @@ OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_LEFT);
 
 FAQ: How can I tell if a controller is connected?
 
-The OuyaSDK.Joysticks static string array will have a null entry for the index of the player number if that player’s controller has disconnected.
+OuyaInput exposes a static method to check if the controller is connected.
+
+```
+//@returns true if the player number is connected
+//@returns false if the player number is disconnected
+//bool OuyaSDK.OuyaInput.IsControllerConnected(int playerNum);
+```
 
 # Examples #
 
