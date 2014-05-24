@@ -224,7 +224,11 @@ Be sure to be on the Android platform before invoking the OUYA Everywhere API.
 ```
 #if UNITY_ANDROID && !UNITY_EDITOR
 
-	… make OUYA Everywhere API calls ...
+	... make OUYA Everywhere API calls ...
+
+#else
+
+	... make calls to your preferred non-Android input system... (Linux/Mac/Windows/etc) 
 
 #endif
 ```
