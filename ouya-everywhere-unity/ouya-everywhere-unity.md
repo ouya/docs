@@ -341,19 +341,19 @@ OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_R2);
 C#
 ```
 // GetButton, GetButtonDown, GetButtonUp expect the following button values:
-// OuyaController.BUTTON_O
-// OuyaController.BUTTON_U
-// OuyaController.BUTTON_Y
-// OuyaController.BUTTON_A
-// OuyaController.BUTTON_L1
-// OuyaController.BUTTON_R1
-// OuyaController.BUTTON_L3
-// OuyaController.BUTTON_R3
-// OuyaController.BUTTON_DPAD_UP
-// OuyaController.BUTTON_DPAD_DOWN
-// OuyaController.BUTTON_DPAD_RIGHT
-// OuyaController.BUTTON_DPAD_LEFT
-// OuyaController.BUTTON_MENU
+OuyaController.BUTTON_O
+OuyaController.BUTTON_U
+OuyaController.BUTTON_Y
+OuyaController.BUTTON_A
+OuyaController.BUTTON_L1
+OuyaController.BUTTON_R1
+OuyaController.BUTTON_L3
+OuyaController.BUTTON_R3
+OuyaController.BUTTON_DPAD_UP
+OuyaController.BUTTON_DPAD_DOWN
+OuyaController.BUTTON_DPAD_RIGHT
+OuyaController.BUTTON_DPAD_LEFT
+OuyaController.BUTTON_MENU
 
 // @result - true when the button is in the DOWN position
 // @result - false when the button is in the UP position
