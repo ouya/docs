@@ -27,7 +27,7 @@ Open your game or a new project.
 
 ![image alt text](image_0.png)
 
-Download the OUYA Core package from from the [ouya-sdk-examples Unity releases](https://github.com/ouya/ouya-sdk-examples/releases/tag/1.0.12.2).
+Download the OUYA Core package from from the [ouya-sdk-examples Unity releases](https://github.com/ouya/ouya-sdk-examples/releases/tag/1.0.12.4).
 
 ```
 Note: Before importing ALWAYS make a backup of your game!
@@ -175,6 +175,14 @@ If you have the legacy OuyaNativeActivity.java file make sure that it’s remove
 
 ```
 Assets\Plugins\Android\src\OuyaNativeActivity.java
+```
+
+## R.java ##
+
+The Core Unity Package may include example R.java files that should not be imported into your game. You may want to delete these extra files if they were imported. 
+
+```
+Assets\Plugins\Android\src\tv\...\R.java
 ```
 
 # OUYA Panel #
