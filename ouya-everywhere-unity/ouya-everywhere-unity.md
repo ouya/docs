@@ -55,6 +55,13 @@ The InputManager.asset is no longer needed to work on OUYA and supported devices
 ProjectSettings/InputManager.asset
 ```
 
+## Signing key ##
+
+Importing the signing key is a placeholder for where to place the signing key downloaded from the developer portal. The signing key is used in in-app-purchase encryption and decryption. The in-app-purchase API will not work until you create a game in the developer portal to download the game's signing key. Be cautious when importing updates to not replace this file.
+
+```
+Assets/Plugins/Android/res/raw/key.der
+```
 
 # Dependencies #
 
