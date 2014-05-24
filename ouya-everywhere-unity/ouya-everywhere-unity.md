@@ -69,6 +69,16 @@ Within the Player Settings, Android Tab, set the default orientation to Landscap
 
 ![image alt text](image_19.png)
 
+## OuyaGameObject ##
+
+Add the OuyaGameObject to your initial loading scene. It uses DontDestroyOnLoad so you only want one instance of the OuyaGameObject. It handles communication between Java to C#. Using the inspector set your developer id.
+
+![image alt text](image_20.png)
+
+## OuyaExampleCommon ##
+
+The legacy OuyaExampleCommon.cs script is now optional and can be removed or replaced with another input system.
+
 # Dependencies #
 
 The OUYA Plugin has dependencies on the Android SDK, Android NDK, and Java JDK.
