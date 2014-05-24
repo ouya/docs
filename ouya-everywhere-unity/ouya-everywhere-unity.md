@@ -249,6 +249,7 @@ if (null == buttonData)
 }
 if (null == buttonData.buttonName)
 {
+	return;
 }
 string buttonName = buttonData.buttonName;
 
