@@ -233,6 +233,13 @@ Be sure to be on the Android platform before invoking the OUYA Everywhere API.
 #endif
 ```
 
+## Initialization ##
+
+Make sure that before invoking other OuyaSDK methods than isIAPInitComplete returns true. This gives time for the Java to initialize before accessing the controller, button names, button images, products, purchase, receipts, and toggling cursor visibility.
+
+// returns true when the Java in-app-purchase system has initialized.
+bool OuyaSDK.isIAPInitComplete();
+
 # Accessing Button Names #
 
 OuyaController has a static method to retrieve button names. A null button name means the button was not found.  
