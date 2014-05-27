@@ -237,11 +237,13 @@ Be sure to be on the Android platform before invoking the OUYA Everywhere API.
 
 Make sure that before invoking other OuyaSDK methods than isIAPInitComplete returns true. This gives time for the Java to initialize before accessing the controller, button names, button images, products, purchase, receipts, and toggling cursor visibility.
 
+// returns true when the Java in-app-purchase system has initialized.
+// return false when in-app-purchase calls should not be invoked 
+bool OuyaSDK.isIAPInitComplete();
+
+
 ```
 #if UNITY_ANDROID && !UNITY_EDITOR
-
-// returns true when the Java in-app-purchase system has initialized.
-bool OuyaSDK.isIAPInitComplete();
 
 void Start()
 {
