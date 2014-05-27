@@ -443,6 +443,23 @@ C#
 #endif
 ```
 
+# Hide the mouse cursor #
+
+In some cases you may want to hide or show the mouse cursor. The showCursor static method on OuyaController toggles cursor visibility.
+
+C#
+```
+#if UNITY_ANDROID && !UNITY_EDITOR
+
+// Hide the mouse cursor
+OuyaController.showCursor(false);
+
+// Show the mouse cursor
+OuyaController.showCursor(true);
+
+#endif
+```
+
 # Examples #
 
 Download the Examples package from github releases…
