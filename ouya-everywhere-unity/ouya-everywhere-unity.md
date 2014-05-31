@@ -7,6 +7,18 @@ OUYA-Everywhere INPUT Documentation for the Unity Game Engine
 
 This document is for Unity developers that want to import the OUYA SDK to access API functions and publish to the OUYA Android Console.
 
+# Releases #
+
+Download the OUYA Core package from from the [ouya-sdk-examples Unity releases](https://github.com/ouya/ouya-sdk-examples/releases/).
+
+```
+Note: Before importing ALWAYS make a backup of your game!
+``` 
+
+# Source #
+
+The source code for OUYA-Everywhere with Unity can be found within the [ouya-sdk-examples for Unity](https://github.com/ouya/ouya-sdk-examples/tree/master/Unity/OuyaSDK).
+
 # Overview #
 
 This document covers importing the core package, installing dependencies, building, and publishing your game to the OUYA.
@@ -17,21 +29,11 @@ The ouya-core.unitypackage contains a static access class for accessing input an
 
 This input API is targeted at the OUYA Android Console and associated devices and is not maintained as a cross-platform input system.
 
-# Source #
-
-The source code for OUYA-Everywhere with Unity can be found within the [ouya-sdk-examples for Unity](https://github.com/ouya/ouya-sdk-examples/tree/master/Unity/OuyaSDK).
-
 # Setup #
 
 Open your game or a new project.
 
 ![image alt text](image_0.png)
-
-Download the OUYA Core package from from the [ouya-sdk-examples Unity releases](https://github.com/ouya/ouya-sdk-examples/releases/).
-
-```
-Note: Before importing ALWAYS make a backup of your game!
-``` 
 
 Import the Core package. From the menu item Assets->Import Package->Custom Package.
 
