@@ -44,7 +44,10 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <img src="http://img.youtube.com/vi/rMa6py1-v2I/0.jpg" alt="Acorn Assault" width="240" height="180" border="10" /></a>
  </td>
 
- <td></td>
+ <td>Shadow Light<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=ZB4ja71E9ZE" target="_blank">
+<img src="http://img.youtube.com/vi/ZB4ja71E9ZE/0.jpg" alt="Shadow Light" width="240" height="180" border="10" /></a>
+ </td>
 
  </tr>
  
