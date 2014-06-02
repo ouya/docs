@@ -24,8 +24,6 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <img src="http://img.youtube.com/vi/zg_FYMcPc04/0.jpg" alt="Adventures of Chris" width="240" height="180" border="10" /></a>
  </td>
  
- <td></td>
-
  </tr>
  <tr>
 
