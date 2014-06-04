@@ -55,12 +55,12 @@ am start -n tv.ouya.console/tv.ouya.console.launcher.ToggleSafeZoneActivity
 
 4. Type am display-size 1280x720, press Enter to switch to 720p (changes the TV display to the target resolution, if the resolution is not available emulates with a black area)
 ```
-am display-size 1280x720
+setprop persist.tegra.hdmi.resolution 720p
 ```
 
 5. Type am display-size 1920x1080, press Enter to switch to 1080p (changes the resolution back to 1080p)
 ```
-am display-size 1920x1080
+setprop persist.tegra.hdmi.resolution 1080p
 ```
 
 Here is TimG with a video tip on handling the safe area.
