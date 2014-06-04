@@ -155,7 +155,11 @@ Okay back on the OUYA-Everywhere input.
 
 ## Compile NDK ##
 
-First you want to click the Compile NDK button. If everything is working okay your console output in the editor should look like this.
+First you want to click the Compile NDK button.
+
+* Note: Avoid spaces in the project path as it can cause issues with building NDK.
+
+If everything is working okay your console output in the editor should look like this.
 
 ![image alt text](image_13.png)
 
