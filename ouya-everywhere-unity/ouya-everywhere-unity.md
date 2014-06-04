@@ -176,9 +176,13 @@ OuyaPanel:Update() (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:883)
 UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
 ```
 
+## Main Activity ##
+
 The next key things are in the OUYA Tab, make sure you’ve set a unique bundle identifier. And your main activity should be "MainActivity".
 
 ![image alt text](image_14.png)
+
+## Sync Bundle ID ##
 
 When you change the bundle identifier, you’ll see a popup. Where you just hit the "Sync Bundle Id" to make the android manifest and package name match. Keep in mind this is case sensitive and needs to match the bundle id that you will use in the developer portal when submitting your game. Case matters.
 
@@ -186,9 +190,55 @@ When you change the bundle identifier, you’ll see a popup. Where you just hit 
 
 After syncing the bundle id, now the error warning should disappear.
 
+## Compile Plugin ##
+
 Click the Compile Plugin button and that will compile the Java plugin. If successful you should see the editor console log print signatures for the compiled Java classes.
 
 ![image alt text](image_16.png)
+
+The expected output in the console log should show the main activity signature:
+
+```
+MainActivity
+[Results] elapsedTime: 0.1450083 errors: 
+output: Compiled from "MainActivity.java"
+public class tv.ouya.demo.SceneShowUnityInput.MainActivity extends tv.ouya.sdk.OuyaUnityActivity{
+public tv.ouya.demo.SceneShowUnityInput.MainActivity();
+  Signature: ()V
+protected void onCreate(android.os.Bundle);
+  Signature: (Landroid/os/Bundle;)V
+public void onStart();
+  Signature: ()V
+public void onStop();
+  Signature: ()V
+protected void onActivityResult(int, int, android.content.Intent);
+  Signature: (IILandroid/content/Intent;)V
+protected void onSaveInstanceState(android.os.Bundle);
+  Signature: (Landroid/os/Bundle;)V
+protected void onDestroy();
+  Signature: ()V
+public void onResume();
+  Signature: ()V
+public void onPause();
+  Signature: ()V
+public void onConfigurationChanged(android.content.res.Configuration);
+  Signature: (Landroid/content/res/Configuration;)V
+public void onWindowFocusChanged(boolean);
+  Signature: (Z)V
+static java.lang.Boolean access$000(tv.ouya.demo.SceneShowUnityInput.MainActivity);
+  Signature: (Ltv/ouya/demo/SceneShowUnityInput/MainActivity;)Ljava/lang/Boolean;
+}
+
+
+UnityEngine.Debug:Log(Object)
+OuyaPanel:RunProcess(List`1, String, String, String, String&, String&, String) (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:2807)
+OuyaPanel:RunProcess(List`1, String, String, String, String) (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:2749)
+OuyaPanel:RunProcess(String, String, String, String) (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:2742)
+OuyaMenuAdmin:BuildApplicationJar() (at Assets/Ouya/SDK/Editor/OuyaMenuAdmin.cs:338)
+OuyaMenuAdmin:MenuGeneratePluginJar() (at Assets/Ouya/SDK/Editor/OuyaMenuAdmin.cs:127)
+OuyaPanel:Update() (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:894)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+```
 
 # Legacy #
 
