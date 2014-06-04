@@ -257,6 +257,15 @@ void Start()
 #endif
 ```
 
+# Accessing OuyaController #
+
+The namespace has to be added to find the OuyaController.
+
+C#
+```
+using tv.ouya.console.api;
+```
+
 # Accessing Button Names #
 
 OuyaController has a static method to retrieve button names. A null button name means the button was not found.  
