@@ -153,9 +153,28 @@ FAQ: Is there more info on non-OUYA platforms? Talking about Mac, Windows, Linux
 
 Okay back on the OUYA-Everywhere input.
 
+## Compile NDK ##
+
 First you want to click the Compile NDK button. If everything is working okay your console output in the editor should look like this.
 
 ![image alt text](image_13.png)
+
+The expected output in the console log should read:
+
+```
+[Results] elapsedTime: 1.995114 errors: 
+output: [armeabi-v7a] Compile++ arm  : -ouya-ndk <= jni.cpp
+[armeabi-v7a] SharedLibrary  : lib-ouya-ndk.so
+[armeabi-v7a] Install        : lib-ouya-ndk.so => libs/armeabi-v7a/lib-ouya-ndk.so
+
+UnityEngine.Debug:Log(Object)
+OuyaPanel:RunProcess(List`1, String, String, String, String&, String&, String) (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:2801)
+OuyaPanel:RunProcess(List`1, String, String, String, String&, String&) (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:2760)
+OuyaPanel:RunProcess(List`1, String, String) (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:2723)
+OuyaPanel:CompileNDK() (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:507)
+OuyaPanel:Update() (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:883)
+UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
+```
 
 The next key things are in the OUYA Tab, make sure you’ve set a unique bundle identifier. And your main activity should be "MainActivity".
 
