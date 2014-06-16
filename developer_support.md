@@ -8,6 +8,31 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ----------
 
 
+### June 16, 2014 ###
+
+<table border=1>
+
+ <tr>
+
+ <td>OUYA DEV SUPPORT (1:09:06)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=55jopHq0VOo" target="_blank">
+<img src="http://img.youtube.com/vi/55jopHq0VOo/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 6/16" width="240" height="180" border="10" /></a>
+ </td>
+ <td></td>
+ </tr>
+</table>
+
+* <a target=_blank href="http://community.thefoundry.co.uk/store/kits/acs/">Animation Character Studio</a>
+
+* <a target=_blank href="http://community.thefoundry.co.uk/store/modo/">The Foundry Modo</a>
+
+* <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/18466">Mixamo Fuse</a> 
+
+<a target=_blank href="https://www.youtube.com/watch?v=55jopHq0VOo&t=18m19s">(18:19)</a> - Is there a way to do your own custom animations?
+
+----------
+
+
 ### June 2, 2014 ###
 
 <table border=1>
