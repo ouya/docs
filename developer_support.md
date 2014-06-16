@@ -28,7 +28,13 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/18466">Mixamo Fuse</a> 
 
-<a target=_blank href="https://www.youtube.com/watch?v=55jopHq0VOo&t=18m19s">(18:19)</a> - Is there a way to do your own custom animations?
+<a target=_blank href="https://www.youtube.com/watch?v=55jopHq0VOo&t=3m38s">(3:38)</a> - Intro to Aucadity (Making Sound Effects).
+
+<a target=_blank href="https://www.youtube.com/watch?v=55jopHq0VOo&t=5m52s">(5:52)</a> - Intro to Mixamo Fuse. (Making Character Models)
+
+<a target=_blank href="https://www.youtube.com/watch?v=55jopHq0VOo&t=13m57s">(13:57)</a> - Where can I get fuse? Using the Mixamo Auto-Rigger. (Rigging for Animation)
+
+<a target=_blank href="https://www.youtube.com/watch?v=55jopHq0VOo&t=18m19s">(18:19)</a> - Is there a way to do your own custom animations? Intro to Modo Animation Character Studio. (Animating Characters)
 
 ----------
 
