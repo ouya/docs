@@ -38,6 +38,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 <a target=_blank href="https://www.youtube.com/watch?v=55jopHq0VOo&t=18m19s">(18:19)</a> - Is there a way to do your own custom animations? Intro to Modo Animation Character Studio. (Animating Characters)
 
+<a target=_blank href="https://www.youtube.com/watch?v=55jopHq0VOo&t=27m17s">(27:17)</a> - Meet Developer: James "r0x (Extended Play)"
+
 ----------
 
 
