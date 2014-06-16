@@ -22,6 +22,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  </tr>
 </table>
 
+* <a target=_blank href="http://audacity.sourceforge.net/">Audacity</a>
+
 * <a target=_blank href="http://community.thefoundry.co.uk/store/kits/acs/">Animation Character Studio</a>
 
 * <a target=_blank href="http://community.thefoundry.co.uk/store/modo/">The Foundry Modo</a>
