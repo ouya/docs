@@ -39,54 +39,15 @@ Several examples are included in the ouya-unity-plugin package.
 
  <tr>
 
- <td>Get the latest from GitHUB (3:59)<br/>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=plqEuuilv6k" target="_blank">
-<img src="http://img.youtube.com/vi/plqEuuilv6k/0.jpg" alt="Get the latest from GitHUB" width="240" height="180" border="10" /></a>
- </td>
- 
-  <td>Intro to OUYA Unity Package (11:48)<br/>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=c5c9tEqpHsw" target="_blank">
-<img src="http://img.youtube.com/vi/c5c9tEqpHsw/0.jpg" alt="Intro to OUYA Unity Package" width="240" height="180" border="10" /></a>
- </td>
- 
- </tr>
- 
- <tr>
-
- <td>OUYA Unity SDK - Intro on dependencies (2:41)<br/>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=b-SiqzVhdFM" target="_blank">
-<img src="http://img.youtube.com/vi/b-SiqzVhdFM/0.jpg" alt="OUYA Unity SDK - Intro on dependencies" width="240" height="180" border="10" /></a>
- </td>
- 
   <td>Key Store Setup (1:27)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=IVk7Cic2lpg" target="_blank">
 <img src="http://img.youtube.com/vi/IVk7Cic2lpg/0.jpg" alt="Key Store Setup" width="240" height="180" border="10" /></a>
  </td>
  
- </tr>
- 
-  <tr>
-
- <td>Subscribe to Menu Button and Menu Appearing (5:18)<br/>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=4ghKgKZqSG0" target="_blank">
-<img src="http://img.youtube.com/vi/4ghKgKZqSG0/0.jpg" alt="Subscribe to Menu Button and Menu Appearing" width="240" height="180" border="10" /></a>
- </td>
- 
-  <td>In-App-Purchase Setup - ShowProducts Example (11:46)<br/>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=lJjGH_KIE7o" target="_blank">
-<img src="http://img.youtube.com/vi/lJjGH_KIE7o/0.jpg" alt="In-App-Purchase Setup - ShowProducts Example" width="240" height="180" border="10" /></a>
- </td>
- 
- </tr>
- 
-  <tr>
-
  <td>Example ShowUnityInput (21:59)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=YqsumqX4REU" target="_blank">
 <img src="http://img.youtube.com/vi/YqsumqX4REU/0.jpg" alt="Example ShowUnityInput" width="240" height="180" border="10" /></a>
  </td>
- 
-  <td></td>
  
  </tr>
 
