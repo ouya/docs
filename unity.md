@@ -1,7 +1,7 @@
 ## Unity Game Engine
 
 ### Downloads
-Open source, clone https://github.com/ouya/ouya-unity-plugin directly from public GIT.
+***OLD*** Open source, clone https://github.com/ouya/ouya-unity-plugin directly from public GIT.
 
 ### Forums
 
@@ -30,7 +30,16 @@ J
 
 # Legacy #
 
-The ouya-unity-plugin is now the OLD legacy plugin. If you want the latest plugin head on over to the OUYA-Everywhere Unity documentation. <a href="ouya-everywhere.md">[docs]</a>
+Thid ouya-unity-plugin is now the OLD legacy plugin. If you want the latest plugin head on over to the OUYA-Everywhere Unity documentation. <a href="ouya-everywhere.md">[docs]</a>
+
+The old legacy source is located in github at:
+https://github.com/ouya/ouya-unity-plugin
+
+The new latest plugin for OUYA-Everywhere and Unity can be found in:
+https://github.com/ouya/ouya-sdk-examples/tree/master/Unity/OuyaSDK
+
+And then there's a brand new set of docs with tons of screenshots along with a step by step guide.
+<a href="ouya-everywhere.md">[docs]</a>
 
 <hr>
 
