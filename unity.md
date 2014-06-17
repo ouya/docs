@@ -28,7 +28,7 @@ J
 [<a href="http://www.youtube.com/watch?feature=player_embedded&v=85vkB2rGGhU" target="_blank">May 13</a>]&nbsp;
 [<a href="http://www.youtube.com/watch?feature=player_embedded&v=c86lI_BnuHA" target="_blank">May 23</a>]
 
-# Legacy #
+# Legacy ***THIS DOCUMENT IS SUPER OLD*** #
 
 Thid ouya-unity-plugin is now the OLD legacy plugin. If you want the latest plugin head on over to the OUYA-Everywhere Unity documentation. <a href="ouya-everywhere.md">[docs]</a>
 
