@@ -24,6 +24,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * <a target=_blank href="http://community.thefoundry.co.uk/store/modo/">The Foundry Modo</a>
 
+* <a target=_blank href="http://community.thefoundry.co.uk/tv/training/view.aspx?id=775">Modo Shatter Example</a>
+
 <a target=_blank href="https://www.youtube.com/watch?v=T74_bCFnugc&t=3m53s">(3:53)</a> - Using boolean modeling in Modo to make cuts into solid objects with Modo.
 
 
