@@ -25,14 +25,40 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 </table>
 
 * <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/18466">Mixamo Fuse</a> 
+
+* <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/6444">Mixamo Animation Store</a> 
  
 * <a target=_blank href="http://mixamo.com">Mixamo Character Collection</a> 
+
+* <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/17771">FT ExplosionMaster Volume01</a> <a target=_blank href="https://dl.dropboxusercontent.com/u/2427824/Asset/FT_ExploisonMaster_Vol01/FT_ExploisonMaster_Vol01.html">[demo]</a>
+
+* <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/7907">FT Blood Effects Volume01</a> <a target=_blank href="https://dl.dropboxusercontent.com/u/2427824/Asset/WebBuild_BloodFX_Vol01/WebPlayer.html">[demo]</a> 
+
+* <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/4518">Facial Expressions</a> 
 
 <a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=9m23s">(9:23)</a> - Creating an animation project and exporting to OUYA (the process)
 
 <a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=11m50s">(11:50)</a> - Creating the Unity Project
 
 <a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=17m29s">(17:29)</a> - Picking a character to animate
+
+<a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=17m29s">(23:39)</a> - Position the camera easily
+
+<a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=25m12s">(25:12)</a> - It's animation time!
+
+<a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=36m55s">(36:55)</a> - Publishing from Unity to OUYA
+
+<a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=38m00s">(38:00)</a> - Animation Prototype
+
+<a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=41m25s">(41:25)</a> - Zombie Piano Idea!
+
+<a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=42m35s">(42:35)</a> - Zombie animations and particle systems
+
+<a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=44m25s">(44:25)</a> - Explosions
+
+<a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=47m10s">(47:10)</a> - Bunny Adventures
+
+<a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=54m35s">(54:35)</a> - Facial Expressions
 
 <a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=58m30s">(58:30)</a> - Jared splits out his orange juice!
 
