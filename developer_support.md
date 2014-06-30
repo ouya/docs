@@ -34,7 +34,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/7907">FT Blood Effects Volume01</a> <a target=_blank href="https://dl.dropboxusercontent.com/u/2427824/Asset/WebBuild_BloodFX_Vol01/WebPlayer.html">[demo]</a> 
 
-* <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/4518">Word Detection</a> <a target=_blank href="http://theylovegames.com/WordDetection_1_7.html">[demo1]</a> <a target=_blank href="http://theylovegames.com/WordDetection_1_8.html>[demo2]</a>
+* <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/4518">Word Detection</a> <a target=_blank href="http://theylovegames.com/WordDetection_1_7.html">[demo1]</a> <a target=_blank href="http://theylovegames.com/WordDetection_1_8.html">[demo2]</a>
 
 <a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=9m23s">(9:23)</a> - Creating an animation project and exporting to OUYA (the process)
 
