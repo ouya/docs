@@ -18,7 +18,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=xpHmSwbWV5c" target="_blank">
 <img src="http://img.youtube.com/vi/xpHmSwbWV5c/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 6/30" width="240" height="180" border="10" /></a>
  </td>
-  <td>Face Gestures<br/>
+  <td>Facial Expression<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=XD6CPUeuIIA" target="_blank">
 <img src="http://img.youtube.com/vi/XD6CPUeuIIA/0.jpg" alt="Intro to Face Gestures" width="240" height="180" border="10" /></a>
  </tr>
