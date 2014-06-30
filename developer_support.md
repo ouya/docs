@@ -8,6 +8,38 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ----------
 
 
+### June 30, 2014 ###
+
+<table border=1>
+
+ <tr>
+
+ <td>OUYA DEV SUPPORT (1:05:24)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=xpHmSwbWV5c" target="_blank">
+<img src="http://img.youtube.com/vi/xpHmSwbWV5c/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 6/30" width="240" height="180" border="10" /></a>
+ </td>
+  <td>Face Gestures<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=XD6CPUeuIIA" target="_blank">
+<img src="http://img.youtube.com/vi/XD6CPUeuIIA/0.jpg" alt="Intro to Face Gestures" width="240" height="180" border="10" /></a>
+ </tr>
+</table>
+
+* <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/18466">Mixamo Fuse</a> 
+ 
+* <a target=_blank href="http://mixamo.com">Mixamo Character Collection</a> 
+
+<a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=9m23s">(9:23)</a> - Creating an animation project and exporting to OUYA (the process)
+
+<a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=11m50s">(11:50)</a> - Creating the Unity Project
+
+<a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=17m29s">(17:29)</a> - Picking a character to animate
+
+<a target=_blank href="https://www.youtube.com/watch?v=xpHmSwbWV5c&t=58m30s">(58:30)</a> - Jared splits out his orange juice!
+
+
+----------
+
+
 ### June 23, 2014 ###
 
 <table border=1>
