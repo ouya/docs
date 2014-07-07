@@ -8,6 +8,36 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ----------
 
 
+### July 7, 2014 ###
+
+<table border=1>
+
+ <tr>
+
+ <td>OUYA DEV SUPPORT (0:55:10)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=e7grB61Qks4" target="_blank">
+<img src="http://img.youtube.com/vi/e7grB61Qks4/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 7/7" width="240" height="180" border="10" /></a>
+ </td>
+  <td>Animated Facial Expressions<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=7UWqXpIf-JI" target="_blank">
+<img src="http://img.youtube.com/vi/7UWqXpIf-JI/0.jpg" alt="Animated Face Expressions" width="240" height="180" border="10" /></a>
+ </tr>
+</table>
+
+* <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/18466">Mixamo Fuse</a> 
+
+* <a target=_blank href="http://luxology.com">Modo</a> 
+ 
+* <a target=_blank href="http://unity3d.com">Unity3d</a> 
+
+<a target=_blank href="https://www.youtube.com/watch?v=e7grB61Qks4&t=3m30s">(3:40)</a> - Overview of the development portal and submitting games to the OUYA store
+
+<a target=_blank href="https://www.youtube.com/watch?v=e7grB61Qks4&t=41m39s">(41:39)</a> - Blend Shapes / Morph Maps in Fuse, Modo, and Unity
+
+
+----------
+
+
 ### June 30, 2014 ###
 
 <table border=1>
