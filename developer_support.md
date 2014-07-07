@@ -24,6 +24,13 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  </tr>
 </table>
 
+<a target=_blank href="https://twitter.com/bawbmills/">@bawbmills</a>
+<a target=_blank href="https://twitter.com/jaredtyeager/">@jaredtyeager</a>
+<a target=_blank href="https://twitter.com/tgraupmann/">@tgraupmann</a>
+<a target=_blank href="https://twitter.com/unclearconcept/">@unclearconcept</a>
+
+* <a target=_blank href="https://devs.ouya.tv/developers">OUYA Developer Portal</a>
+
 * <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/18466">Mixamo Fuse</a> 
 
 * <a target=_blank href="http://luxology.com">Modo</a> 
