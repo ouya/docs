@@ -270,6 +270,8 @@ Use “tv.ouya.intent.category.GAME” or “tv.ouya.intent.category.APP”.
 
 The application image that is shown in the launcher is embedded inside of the APK itself.  The expected file is in res/drawable-xhdpi/ouya_icon.png and the image size must be 732x412.
 
+<img src="https://s3.amazonaws.com/ouya-docs/images/ouya_icon.png" />
+
 ##### Cleanly shutting down audio
 
 When you exit the app and/or open the system menu, any ongoing game audio should be paused or stopped. Your app is responsible for managing its own audio. Failing to do so may be grounds for review process failure.
