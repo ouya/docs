@@ -8,6 +8,26 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ----------
 
 
+### July 14, 2014 ###
+
+<table border=1>
+
+ <tr>
+
+ <td>OUYA DEV SUPPORT (0:51:37)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Ji-YEx9_eeM" target="_blank">
+<img src="http://img.youtube.com/vi/Ji-YEx9_eeM/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 7/14" width="240" height="180" border="10" /></a>
+ </td>
+  <td>Custom VS Exporter<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=2UPABgGhY60" target="_blank">
+<img src="http://img.youtube.com/vi/2UPABgGhY60/0.jpg" alt="Custom VS Exporter" width="240" height="180" border="10" /></a>
+ </tr>
+</table>
+
+
+----------
+
+
 ### July 7, 2014 ###
 
 <table border=1>
