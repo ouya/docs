@@ -176,6 +176,6 @@ The 96x96 icon displays on some legacy Android settings pages.
  
 <table border="1"><tr><td><img src="http://ouya-docs.s3.amazonaws.com/images/OuyaEditGame.jpg"/></td></tr></table>
 
-* When editing game details in the video URL field, enter a video for your title using a Vimeo URL.
+* When editing game details, add one or more videos into the Video urls field. Add one vimeo url per line.
  
-<table border="1"><tr><td><img src="http://ouya-docs.s3.amazonaws.com/images/OuyaVideoUrl.jpg"/></td></tr></table>
+<table border="1"><tr><td><img src="http://ouya-docs.s3.amazonaws.com/images/VideosURLbox.png"/></td></tr></table>
