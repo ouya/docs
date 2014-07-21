@@ -17,9 +17,9 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=qEC3_MjHljg" target="_blank">
 <img src="http://img.youtube.com/vi/qEC3_MjHljg/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 7/21" width="240" height="180" border="10" /></a>
  </td>
-  <td>Shadow Light DLC<br/>
+  <td>Shadow Light - Titan Temple DLC<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Mvh7AnbrJR0" target="_blank">
-<img src="http://img.youtube.com/vi/Mvh7AnbrJR0/0.jpg" alt="Shadow Light DLC" width="240" height="180" border="10" /></a>
+<img src="http://img.youtube.com/vi/Mvh7AnbrJR0/0.jpg" alt="Shadow Light - Titan Temple DLC" width="240" height="180" border="10" /></a>
  </tr>
 </table>
 
