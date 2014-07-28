@@ -7,6 +7,33 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ----------
 
 
+### July 28, 2014 ###
+
+<table border=1>
+
+ <tr>
+
+ <td>OUYA DEV SUPPORT (1:03:50)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=O4YtOBJ5-yI" target="_blank">
+<img src="http://img.youtube.com/vi/O4YtOBJ5-yI/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 7/28" width="240" height="180" border="10" /></a>
+ </td>
+  <td>Zombie Hearts Chicken<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=qFE4HrCdCCc" target="_blank">
+<img src="http://img.youtube.com/vi/qFE4HrCdCCc/0.jpg" alt="Zombie Hearts Chicken" width="240" height="180" border="10" /></a></td>
+ </tr>
+ 
+  <tr>
+  <td>Tiamat X<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=GMYxRZYF6XY" target="_blank">
+<img src="http://img.youtube.com/vi/GMYxRZYF6XY/0.jpg" alt="Tiamat X" width="240" height="180" border="10" /></a></td>
+<td></td>
+ </tr>
+</table>
+
+
+----------
+
+
 ### July 21, 2014 ###
 
 <table border=1>
@@ -19,7 +46,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  </td>
   <td>Shadow Light - Titan Temple DLC<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Mvh7AnbrJR0" target="_blank">
-<img src="http://img.youtube.com/vi/Mvh7AnbrJR0/0.jpg" alt="Shadow Light - Titan Temple DLC" width="240" height="180" border="10" /></a>
+<img src="http://img.youtube.com/vi/Mvh7AnbrJR0/0.jpg" alt="Shadow Light - Titan Temple DLC" width="240" height="180" border="10" /></a></td>
  </tr>
 </table>
 
@@ -40,7 +67,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  </td>
   <td>Custom VS Exporter<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=2UPABgGhY60" target="_blank">
-<img src="http://img.youtube.com/vi/2UPABgGhY60/0.jpg" alt="Custom VS Exporter" width="240" height="180" border="10" /></a>
+<img src="http://img.youtube.com/vi/2UPABgGhY60/0.jpg" alt="Custom VS Exporter" width="240" height="180" border="10" /></a></td>
  </tr>
 </table>
 
@@ -67,7 +94,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  </td>
   <td>Animated Facial Expressions<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=7UWqXpIf-JI" target="_blank">
-<img src="http://img.youtube.com/vi/7UWqXpIf-JI/0.jpg" alt="Animated Face Expressions" width="240" height="180" border="10" /></a>
+<img src="http://img.youtube.com/vi/7UWqXpIf-JI/0.jpg" alt="Animated Face Expressions" width="240" height="180" border="10" /></a></td>
  </tr>
 </table>
 
@@ -104,7 +131,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  </td>
   <td>Facial Expression Setup<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=vFW5URKjgFo" target="_blank">
-<img src="http://img.youtube.com/vi/vFW5URKjgFo/0.jpg" alt="Face Expression Setup" width="240" height="180" border="10" /></a>
+<img src="http://img.youtube.com/vi/vFW5URKjgFo/0.jpg" alt="Face Expression Setup" width="240" height="180" border="10" /></a></td>
  </tr>
 </table>
 
