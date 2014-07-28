@@ -30,6 +30,9 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  </tr>
 </table>
 
+* <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/18466">Mixamo Fuse</a> 
+
+<a target=_blank href="https://www.youtube.com/watch?v=O4YtOBJ5-yI&t=5m40s">(5:40)</a> - Adding clothing variations to zombies with Fuse.
 
 ----------
 
