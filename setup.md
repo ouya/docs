@@ -315,47 +315,11 @@ mContext.registerReceiver(new BroadcastReceiver{
 }, new IntentFilter(OuyaIntent.ACTION_MENUAPPEARING));
 ```
 
-#### Hardware Substitutes
+#### Hardware
 
-In order to begin developing software before having access to an OUYA console, you may use the Android emulator or a standard Android tablet.
+Developing for OUYA requires having an OUYA-supported device: an OUYA console, or a M.O.J.O.
 
-##### Software
-
-The OUYA console hardware already includes the OUYA launcher, but when using an emulator or Android tablet, you will need to install the launcher manually. This file is included in the OUYA ODK package.
-
-To install the launcher, run:
-
-    adb install -r ouya-framework.apk
-    adb install -r ouya-launcher.apk
-
-**Note**: If the OUYA launcher is not installed, some ODK features will not work correctly.
-
-##### Emulator
-
-If using the emulator, configure the Android Virtual Device (AVD) as follows:
-
-- **Resolution**: 1920x1080
-- **Hardware Back/Home keys**: yes (you will need to add this to the hardware parameters)
-- **D-Pad support**: yes (you will need to add this to the hardware parameters)
-- **Target**: Android 4.1 - API Level 16
-- **CPU/ABI**: Intel Atom x86
-- **Device RAM size**: 1024
-
-**Note**: If the **OK** button is disabled, you may need to install a system image for your AVD. The Intel x86 Atom System Image and the Intel x86 Emulator Accelerator (HAXM) are recommended. You can install it via the Android SDK Manager.
-
-We recommend the use of the Intel Atom x86 CPU/ABI and Intel's HAXM extensions to ensure the emulator performance is adequate for game development. If you are developing low-level code, you should note that the device is ARM based. Therefore, you should develop for the ARM architecture and use an emulator AVD with the CPU/ABI set to an ARM architecture.
-
-The OUYA console does not have hardware buttons for back or menu, so your games should not rely on the presence of these. Setting the hardware keys property of the emulator hides the Android navigation bar, enabling the emulator to fill a 1080p screen in the same way the OUYA console does.
-
-**Note**: When developing with the emulator, it is not possible to fully emulate the OUYA controller buttons and features.
-
-##### Android Tablet
-
-If using a standard Android tablet, we recommend using a tablet with a usable display resolution as close as possible to 1920x1080.
-
-**Note**: The Android navigation bar will consume some of the screen on standard tablets. An OUYA does not show a navigation bar on screen, so it is unlikely a tablet will give you a perfect replica of a running OUYA, but it will be enough to get most of your code running. You may still need to perform UI tweaks to use the 1920x1080 display buffer made available to apps by default on an OUYA.
-
-The OUYA game controller combines a standard controller (two joysticks, a D-Pad, four game buttons, two shoulder buttons, and two triggers) with a touchpad. For testing, we recommend using the Xbox 360 wired USB controller combined with a mouse or touchpad for testing joystick and game button interaction.
+You can develop your game on another device, but you will be unable to use the extra functionality included int he ODK without a supported device.  If you need to, you can <a href="http://shop.ouya.tv/">buy one here</a>!
 
 ##### Screen Resolution Handling
 
