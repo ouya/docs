@@ -321,6 +321,8 @@ In order to begin developing software before having access to an OUYA console, y
 
 ##### Software
 
+**Note**: You need to use ODK 1.0.5, since all following OUYA launcher versions require an OOBE package that is not available for download.
+
 The OUYA console hardware already includes the OUYA launcher, but when using an emulator or Android tablet, you will need to install the launcher manually. This file is included in the OUYA ODK package.
 
 To install the launcher, run:
