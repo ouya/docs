@@ -17,9 +17,9 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=g8KQgLAa1yA" target="_blank">
 <img src="http://img.youtube.com/vi/g8KQgLAa1yA/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 8/4" width="240" height="180" border="10" /></a>
  </td>
-  <td>Zombie Hearts Chicken<br/>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=qFE4HrCdCCc" target="_blank">
-<img src="http://img.youtube.com/vi/qFE4HrCdCCc/0.jpg" alt="Zombie Hearts Chicken" width="240" height="180" border="10" /></a></td>
+  <td>Zombie Sock (30:01)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=kv-qJohAcrs" target="_blank">
+<img src="http://img.youtube.com/vi/kv-qJohAcrs/0.jpg" alt="Zombie Sock" width="240" height="180" border="10" /></a></td>
  </tr>
 
 </table>
