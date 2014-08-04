@@ -26,6 +26,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/18466">Mixamo Fuse</a> 
 
+* <a target=_blank href="http://vimeo.com/67501143">The Secret of Animation</a>
+
 <a target=_blank href="https://www.youtube.com/watch?v=g8KQgLAa1yA&t=1m7s">(1:07)</a> - Derp with Doherty
 
 <a target=_blank href="https://www.youtube.com/watch?v=g8KQgLAa1yA&t=6m1s">(6:01)</a> - Importing clothing into Mixamo Fuse
