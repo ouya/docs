@@ -28,7 +28,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 <a target=_blank href="https://www.youtube.com/watch?v=g8KQgLAa1yA&t=1m7s">(1:07)</a> - Derp with Doherty
 
-<a target=_blank href="https://www.youtube.com/watch?v=g8KQgLAa1yA&t=6m1s">(6:01)</a> - Importing clothing into Mixamo
+<a target=_blank href="https://www.youtube.com/watch?v=g8KQgLAa1yA&t=6m1s">(6:01)</a> - Importing clothing into Mixamo Fuse
 
 <a target=_blank href="https://www.youtube.com/watch?v=g8KQgLAa1yA&t=35m11s">(35:11)</a> - Jared News
 
