@@ -32,6 +32,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 <a target=_blank href="https://www.youtube.com/watch?v=g8KQgLAa1yA&t=35m11s">(35:11)</a> - Jared News
 
+<a target=_blank href="https://www.youtube.com/watch?v=g8KQgLAa1yA&t=51m40s">(51:40)</a> - Kickstarter Tips
+
 ----------
 
 
