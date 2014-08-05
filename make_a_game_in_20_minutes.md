@@ -1,4 +1,6 @@
-##**Thing You’ll Need Before You Start:**
+##MAKE A GAME IN 20 MINUTES
+
+###**Thing You’ll Need Before You Start:**
 1. OUYA Console
 2. Windows 7 PC
 3. Micro USB Cable
