@@ -38,7 +38,7 @@ In-App Purchasing (IAP) is how your app can make money.  The OUYA Developer Kit 
 
 **Consumable** -- a product which can be purchased repeatedly
 
-**Subscription** -- a product which will be purchased automatically on a set schedule
+**Subscription** -- a product which will be re-purchased automatically every month
 
 #### Initializing the ODK
 
@@ -353,5 +353,6 @@ Some of the many reasons to do so are:
 - A voucher may have been redeemed while the game wasn't running.
 - An entitlement may have been revoked by a customer service representative.
 - A success response may not have reached your application (e.g. if the users broadband connection drops out while OUYA's servers are authorising the payment).
+- The gamer cancelled his/her subscription.
 
 An important thing to note is that a gamer's set of entitlements can change without the game running, thus doing things like saving off a "game has been purchased" flag and using that as the authoratative truth doesn't work correctly.  Be sure to query the servers to ensure users are presented with the correct set of options (eg: "buy now" or "play full game").
