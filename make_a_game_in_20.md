@@ -5,6 +5,8 @@
 4. TV with HDMI input
 5. Internet connection
 
+Watch the video to follow along: https://vimeo.com/102651617
+
 ##**Getting Set Up**
 
 **Install JDK**
