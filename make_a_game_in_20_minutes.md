@@ -55,7 +55,7 @@ Watch the video to follow along: https://vimeo.com/102651617
 
 **Download the Demo Game package**
 
-1. Download the latest release unitypackage from here: https://github.com/ouya/unity-2d-demo/releases/
+1. Download the latest release unitypackage from here: https://github.com/ouya/unity-2d-demo/releases/latest
 
 **Install Unity**
 
