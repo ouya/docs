@@ -7,6 +7,40 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ----------
 
 
+### August 4, 2014 ###
+
+<table border=1>
+
+ <tr>
+
+ <td>OUYA DEV SUPPORT (1:07:29)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=g8KQgLAa1yA" target="_blank">
+<img src="http://img.youtube.com/vi/g8KQgLAa1yA/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 8/4" width="240" height="180" border="10" /></a>
+ </td>
+  <td>Zombie Sock (30:01)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=kv-qJohAcrs" target="_blank">
+<img src="http://img.youtube.com/vi/kv-qJohAcrs/0.jpg" alt="Zombie Sock" width="240" height="180" border="10" /></a></td>
+ </tr>
+
+</table>
+
+* <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/18466">Mixamo Fuse</a> 
+
+* <a target=_blank href="http://vimeo.com/67501143">The Secret of Animation</a>
+
+<a target=_blank href="https://www.youtube.com/watch?v=g8KQgLAa1yA&t=1m7s">(1:07)</a> - Derp with Doherty
+
+<a target=_blank href="https://www.youtube.com/watch?v=g8KQgLAa1yA&t=6m1s">(6:01)</a> - Importing clothing into Mixamo Fuse
+
+<a target=_blank href="https://www.youtube.com/watch?v=g8KQgLAa1yA&t=35m11s">(35:11)</a> - Jared News
+
+<a target=_blank href="https://www.youtube.com/watch?v=g8KQgLAa1yA&t=40m3s">(40:03)</a> - ShadowLight (*Boss) / Shaders
+
+<a target=_blank href="https://www.youtube.com/watch?v=g8KQgLAa1yA&t=51m40s">(51:40)</a> - Kickstarter Tips
+
+----------
+
+
 ### July 28, 2014 ###
 
 <table border=1>
