@@ -33,12 +33,12 @@ In-App Purchasing (IAP) is how your app can make money.  The OUYA Developer Kit 
 * *Gamer* -- the gamer that purchased the product
 * *UUID* -- the identifier of the gamer that purchased the product
 
+**Product Types** -- there are currently three types of products:
+* *Entitlements* --  a product which can be purchased only once and remains available to the game upon reinstallation
+* *Consumable* -- a product which can be purchased repeatedly
+* *Subscription* -- a product which will be re-purchased automatically every month 
 
-**Entitlements** --  a product which can be purchased only once and remains available to the game upon reinstallation
-
-**Consumable** -- a product which can be purchased repeatedly
-
-**Subscription** -- a product which will be re-purchased automatically every month
+**Cross Game Product** -- a product of any type that if purchased, will be reported as purchased in all of your games
 
 #### Initializing the ODK
 
