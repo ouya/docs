@@ -9,6 +9,8 @@
 
 Watch the video to follow along: https://vimeo.com/102651617
 
+#####Please Note: If you are running Windows 32bit, there will not be a Program Files (x86) folder available. Browse to the Program Files folder instead. Program Files (x86) is only available when running a Windows 64bit system.
+
 ##**Getting Set Up**
 
 **Install JDK**
@@ -47,7 +49,7 @@ Watch the video to follow along: https://vimeo.com/102651617
 1. Select “Show All Devices” and click Next
 1. Click the “Have Disk…” button
 1. Browse to the folder where you installed the Android SDK and select:
-<sdk>/extras/google/usb_driver/android_winusb.inf 
+(sdk)/extras/google/usb_driver/android_winusb.inf  **Please Note: If you are running Windows 32bit, there will not be a Program Files (x86) folder available. Browse to the Program Files folder instead. Program Files (x86) is only available when running a Windows 64bit system.**
 1. Choose OK
 1. Select the “Android Composite ADB Interface” model from the list and click Next
 1. If there’s a warning about compatibility, just click Yes
@@ -68,7 +70,7 @@ Watch the video to follow along: https://vimeo.com/102651617
 1. Once in the editor go to Assets > Import Package > Custom Package…
 1. Navigate to your downloads folder and find the Demo package from github
 1. Import the demo package, and when a window pops up, leave all assets selected
-1. Once imported, go to File > Build Settings
+1. Once imported, go to File > Build Settings 
 1. Select Android and hit Switch Platform
 1. Finally Click Build and Run to save and launch the apk
 1. If prompted, browse to the Android SDK folder
