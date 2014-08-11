@@ -12,11 +12,11 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <table border=1>
 
  <tr>
- <td>OUYA DEV SUPPORT (0:51:05)<br/>
+ <td>OUYA DEV SUPPORT (51:05)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=oaZNq4wtJZM" target="_blank">
 <img src="http://img.youtube.com/vi/oaZNq4wtJZM/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 8/11" width="240" height="180" border="10" /></a>
  </td>
-  <td>OE - Input (34:40)<br/>
+  <td>OE - Unity - Input (34:40)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=fNK85u3sxxg" target="_blank">
 <img src="http://img.youtube.com/vi/fNK85u3sxxg/0.jpg" alt="OUYA Everywhere - Unity - Virtual Controller" width="240" height="180" border="10" /></a></td>
  </tr>
