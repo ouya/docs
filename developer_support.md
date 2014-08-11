@@ -7,6 +7,36 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ----------
 
 
+### August 11, 2014 ###
+
+<table border=1>
+
+ <tr>
+ <td>OUYA DEV SUPPORT (0:51:05)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=oaZNq4wtJZM" target="_blank">
+<img src="http://img.youtube.com/vi/oaZNq4wtJZM/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 8/11" width="240" height="180" border="10" /></a>
+ </td>
+  <td>OE - Input (34:40)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=fNK85u3sxxg" target="_blank">
+<img src="http://img.youtube.com/vi/fNK85u3sxxg/0.jpg" alt="OUYA Everywhere - Unity - Virtual Controller" width="240" height="180" border="10" /></a></td>
+ </tr>
+ 
+  <tr>
+ <td>Export to Face Plus (10:21)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=XkrY0xDHYV8" target="_blank">
+<img src="http://img.youtube.com/vi/XkrY0xDHYV8/0.jpg" alt="Exporting from Fuse to Face Plus in Unity" width="240" height="180" border="10" /></a>
+ </td>
+  <td></td>
+ </tr>
+
+</table>
+
+* Check out all the <a target=_blank href="http://www.freethegamesfund.com">[Free-The-Games-Fund]</a> games!
+
+
+----------
+
+
 ### August 4, 2014 ###
 
 <table border=1>
