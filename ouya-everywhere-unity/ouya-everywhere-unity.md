@@ -33,6 +33,8 @@ This input API is targeted at the OUYA Android Console and associated devices an
 
 Open your game or a new project.
 
+Note: Make sure that your project path does not contain spaces in order to be compatible with the NDK compiler.
+
 ![image alt text](image_0.png)
 
 Import the Core package. From the menu item Assets->Import Package->Custom Package.
@@ -65,8 +67,10 @@ ProjectSettings/InputManager.asset
 
 Importing the signing key is a placeholder for where to place the signing key downloaded from the developer portal. The signing key is used in in-app-purchase encryption and decryption. The in-app-purchase API will not work until you create a game in the developer portal to download the game's signing key. Be cautious when importing updates to not replace this file.
 
+Note (ODK 1.0.14.1): The signing key was moved to be compatible with 3rd party plugins.
+
 ```
-Assets/Plugins/Android/res/raw/key.der
+Assets/Plugins/Android/assets/key.der
 ```
 
 ## Orientation ##
@@ -75,15 +79,19 @@ Within the Player Settings, Android Tab, set the default orientation to Landscap
 
 ![image alt text](image_19.png)
 
-## OuyaGameObject ##
+## OuyaGameObject.cs ##
 
 Add the OuyaGameObject to your initial loading scene. It uses DontDestroyOnLoad so you only want one instance of the OuyaGameObject. It handles communication between Java to C#. Using the inspector set your developer id.
 
 ![image alt text](image_20.png)
 
-## OuyaExampleCommon ##
+## Legacy OuyaExampleCommon.cs (Removed) ##
 
-The legacy OuyaExampleCommon.cs script is now optional and can be removed or replaced with another input system.
+The legacy OuyaExampleCommon.cs script can been removed or replaced with another input system.
+
+## Legacy InputManager.asset (Removed) ##
+
+The InputManager Mappings file is no longer used by the plugin. So you may choose to keep your existing mapping file which is used for non-OUYA platforms.
 
 # Dependencies #
 
@@ -248,7 +256,7 @@ UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
 
 Some legacy files are not required to be imported or can be removed.
 
-## OuyaUnityApplication.jar ##
+## Legacy OuyaUnityApplication.jar (Removed) ##
 
 If you have the legacy OuyaUnityApplication.jar file make sure that it’s removed. If you forget this step, you’ll get an DEX error when building the game.
 
@@ -256,7 +264,7 @@ If you have the legacy OuyaUnityApplication.jar file make sure that it’s remov
 Assets\Plugins\Android\OuyaUnityApplication.jar
 ```
 
-## OuyaUnityApplication.java ##
+## Legacy OuyaUnityApplication.java (Removed) ##
 
 If you have the legacy OuyaUnityApplication.java file make sure that it’s removed. If you forget this step, you’ll get a Java compile error.
 
@@ -264,7 +272,7 @@ If you have the legacy OuyaUnityApplication.java file make sure that it’s remo
 Assets\Plugins\Android\src\OuyaUnityApplication.java
 ```
 
-## OuyaNativeActivity.java ##
+## Legacy OuyaNativeActivity.java (Removed) ##
 
 If you have the legacy OuyaNativeActivity.java file make sure that it’s removed. If you forget this step, you’ll get a Java compile error.
 
@@ -272,9 +280,11 @@ If you have the legacy OuyaNativeActivity.java file make sure that it’s remove
 Assets\Plugins\Android\src\OuyaNativeActivity.java
 ```
 
-## R.java ##
+## Legacy R.java (Removed) ##
 
-The Core Unity Package may include example R.java files that should not be imported into your game. You may want to delete these extra files if they were imported. 
+The Core Unity Package may include example R.java files that should not be imported into your game. You may want to delete these extra files if they were imported.
+
+Note (ODK 1.0.14.1): R.java and resources were moved to be compatible with other 3rd party plugins that also supplied this generated file.  
 
 ```
 Assets\Plugins\Android\src\tv\...\R.java
