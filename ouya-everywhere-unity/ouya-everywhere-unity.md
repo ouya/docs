@@ -55,14 +55,6 @@ Assets/Plugins/Android/res/drawable/app_icon.png (96x96).
 
 If the icons have already been customized, there's no need to import the icons and replace with the sample icons.
 
-## InputManager.asset ##
-
-The InputManager.asset is no longer needed to work on OUYA and supported devices. Importing this file is optional and will replace existing input mappings. InputManager.asset contains 20 axises and 20 buttons for the 4 supported controllers on Linux, Mac, and Windows.
-
-```
-ProjectSettings/InputManager.asset
-```
-
 ## Signing key ##
 
 Importing the signing key is a placeholder for where to place the signing key downloaded from the developer portal. The signing key is used in in-app-purchase encryption and decryption. The in-app-purchase API will not work until you create a game in the developer portal to download the game's signing key. Be cautious when importing updates to not replace this file.
@@ -84,14 +76,6 @@ Within the Player Settings, Android Tab, set the default orientation to Landscap
 Add the OuyaGameObject to your initial loading scene. It uses DontDestroyOnLoad so you only want one instance of the OuyaGameObject. It handles communication between Java to C#. Using the inspector set your developer id.
 
 ![image alt text](image_20.png)
-
-## Legacy OuyaExampleCommon.cs (Removed) ##
-
-The legacy OuyaExampleCommon.cs script can been removed or replaced with another input system.
-
-## Legacy InputManager.asset (Removed) ##
-
-The InputManager Mappings file is no longer used by the plugin. So you may choose to keep your existing mapping file which is used for non-OUYA platforms.
 
 # Dependencies #
 
@@ -255,6 +239,41 @@ UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
 # Legacy #
 
 Some legacy files are not required to be imported or can be removed.
+
+## Legacy InputManager.asset (Removed) ##
+
+The InputManager Mappings file is no longer used by the plugin. So you may choose to keep your existing mapping file which is used for non-OUYA platforms.
+
+```
+ProjectSettings/InputManager.asset
+```
+
+## Legacy OuyaExampleCommon.cs (Removed) ##
+
+The legacy OuyaExampleCommon.cs script can been removed or replaced with another input system.
+
+```
+Assets/Plugins/OuyaExampleCommon.cs
+```
+
+There are a number of related legacy input C# scripts that should be removed.
+
+```
+Assets/Plugins/IOuyaController.cs
+Assets/Plugins/OuyaControllerCommon.cs
+Assets/Plugins/OuyaExampleCommon.cs
+Assets/Plugins/OuyaKeyCodes.cs
+Assets/Plugins/PS2Controller.cs
+Assets/Plugins/XBox360Controller.cs
+```
+
+## Legacy OuyaPostProcessor.cs (Removed) ##
+
+The OuyaPostProcessor would auto compile C++ and Java source after a detected change. However, changes to the plugin are infrequent enough making this feature not used and so it was removed. Typically you only need to compile NDK and the Java Plugin after importing an update of the plugin.
+
+```
+Assets/Ouya/SDK/Editor/OuyaPostProcessor.cs
+```
 
 ## Legacy OuyaUnityApplication.jar (Removed) ##
 
