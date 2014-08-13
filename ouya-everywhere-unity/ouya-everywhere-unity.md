@@ -309,6 +309,14 @@ Note (ODK 1.0.14.1): R.java and resources were moved to be compatible with other
 Assets\Plugins\Android\src\tv\...\R.java
 ```
 
+## Legacy Litjson (Removed) ##
+
+Litjson is a public domain 3rd party library for parsing JSON data. Android already has classes for handling JSONObject parsing and so the legacy Litjson was replaced.
+
+```
+Assets\Litjson
+```
+
 # OUYA Panel #
 
 Unity Free or Unity Pro
