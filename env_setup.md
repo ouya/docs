@@ -14,8 +14,8 @@ Developing for the OUYA requires a small set of packages to be installed. In the
    
 **NOTE:** Windows 8 users, you will need to disable driver signature verification to install the unsigned Android driver.  
 [See here](windows8.md) for instructions.
-  
-## Step 2: Add Android SDK to your PATH
+## Step 3: Add Android SDK to your PATH
+
 To use **adb** or other Android tools from the command line, you'll need to add the build and platform tools folders to your system's PATH environment variable. After setting the PATH, you may need to close your terminal window or log out for the changes to take effect.
 
 ### Setting PATH on Mac/Linux
@@ -36,7 +36,7 @@ To use **adb** or other Android tools from the command line, you'll need to add 
    replacing each `<SDK>` with the path to your Android SDK folder
 5. Click **OK**
 
-## Step 3: Install driver for OUYA Console
+## Step 4: Install driver for OUYA Console
 
 For ADB to be able to connect with the console, you'll need to modify some system and Android SDK files.
 
@@ -47,7 +47,7 @@ For ADB to be able to connect with the console, you'll need to modify some syste
    `0x2836`
 3. Save and close the file
 
-## For Windows Users:
+### For Windows Users:
 
 1. Edit the file `<SDK>\extras\google\usb_driver\android_winusb.inf`
 2. Locate the `[Google.NTx86]` and `[Google.NTamd64]` sections
