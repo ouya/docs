@@ -7,9 +7,9 @@
 
 **API**
 * [Controllers](controllers.md)
-* [OUYA Everywhere](ouya-everywhere.md)
 * [Purchases](purchasing.md)
 * [Storage](storage.md)
+* [OUYA Everywhere](ouya-everywhere.md)
 
 **Guidelines**
 * [User Interface](interface-guidelines.md)
