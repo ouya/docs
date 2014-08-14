@@ -1,46 +1,59 @@
-## In-App Purchasing
+# In-App Purchasing
 
 In-App Purchasing (IAP) is how your app can make money.  The OUYA Developer Kit (ODK) is designed to be both easy to use and secure.
 
-#### Definitions
+## Definitions
 
-**Gamer Info** -- this is information about the user.  It has two attributes:
-* *UUID* -- a developer-facing identifier
-* *Username* -- the user's public username
+**Gamer Info** - information about the user.  Its attributes:
 
-**Product** -- this is what is purchased by the user.  It has ten attributes:
-* *Identifier* -- a developer-facing identifier (unique per developer)
-* *Name* -- the user-facing name
-* *Description* -- the general description of the product
-* *Type* -- the type of product (Entitlement, Consumable, etc.)
-* *Currency Code* -- defines the type of currency
-* *Local Price* -- the cost of the product given the type of currency
-* *Original Price* -- the total price of the product given no sale is active
-* *Percent Off* -- the percentage reduced from the original price
-* *Price In Cents* -- the product price in US cents
-* *Product Version To Bundle* -- the version of the product
+* *UUID* - a developer-facing identifier
+* *Username* - the user's public username
+
+**Product** - an item purchasable by the user.  Its attributes:
+
+* *Identifier* - a developer-facing identifier (unique per developer)
+* *Name* - the user-facing name
+* *Description* - the general description of the product
+* *Type* - the type of product
+  * *Entitlement* -  a product which can be purchased only once and remains available to the game upon reinstallation
+  * *Consumable* - a product which can be purchased repeatedly
+  * *Subscription* - a product which will be re-purchased automatically every month 
+* *Currency Code* - defines the type of currency
+* *Local Price* - the cost of the product given the type of currency
+* *Original Price* - the total price of the product given no sale is active
+* *Percent Off* - the percentage reduced from the original price
+* *Price In Cents* - the product price in US cents
+* *Product Version To Bundle* - the version of the product
 
 
-**Purchasable** -- identifies a product when making purchases
+**Purchasable** - identifies a product when making purchases
 
-**Receipt** -- information about a prior purchase. it has eight attributes:
-* *Product ID* -- the product identifier
-* *Currency* -- the currency that the product was purchased in
-* *Local Price* -- the cost of the product given the type of currency
-* *Price In Cents* -- the product price in US cents
-* *PurchaseDate* -- when the purchase was made
-* *GeneratedDate* -- when the receipt was created
-* *Gamer* -- the gamer that purchased the product
-* *UUID* -- the identifier of the gamer that purchased the product
+**Receipt** - information about a prior purchase. it has eight attributes:
 
-**Product Types** -- there are currently three types of products:
-* *Entitlements* --  a product which can be purchased only once and remains available to the game upon reinstallation
-* *Consumable* -- a product which can be purchased repeatedly
-* *Subscription* -- a product which will be re-purchased automatically every month 
+* *Product ID* - the product identifier
+* *Currency* - the currency that the product was purchased in
+* *Local Price* - the cost of the product given the type of currency
+* *Price In Cents* - the product price in US cents
+* *PurchaseDate* - when the purchase was made
+* *GeneratedDate* - when the receipt was created
+* *Gamer* - the gamer that purchased the product
+* *UUID* - the identifier of the gamer that purchased the product
 
-**Cross Game Product** -- a product of any type that if purchased, will be reported as purchased in all of your games
+**Product Types** - there are currently three types of products:
 
-#### Initializing the ODK
+
+**Cross Game Product** - a product of any type that if purchased, will be reported as purchased in all of your games
+
+
+
+## Creating Products
+
+In order for users to give you money, you must first create products for them to buy.  This is done on the OUYA website via the [Developer Portal](https://devs.ouya.tv/developers).
+After logging in, click on the **Products** menu and then the **New Product** link.  This will take you to a page where you can create a new product.
+
+## Adding products to your App
+
+### Initializing the ODK
 
 All IAP functionality goes through the **OuyaFacade** object.  The **OuyaFacade** singleton should be initialized at the beginning of the application and used for all IAP requests.
 ```java
@@ -64,7 +77,7 @@ Of course, when your application is finished, it is polite to inform the **OuyaF
 
 Now we're ready for some real action!
 
-### Running on OUYA###
+### Check for OUYA hardware
 
 Before invoking in-app-purchase methods check if you are running OUYA hardware.
 
@@ -81,24 +94,7 @@ else
 
 See the [OUYA Everywhere](ouya-everywhere.md) document for more details.
 
-#### Testing purchases
-
-The OuyaFacade also has a testing mode that was intended as a way to allow you to make free purchases. This has been deprecated for various reasons and will no longer work. There is no point in using the test mode anymore.
-
-Instead, all purchases made from the same account that created the game will be free. In other words, developers can make purchases in their own games for free, but everyone else will be charged.
-
-To delete your test purchases, visit your [products page](https://devs.ouya.tv/developers/products) in the developer portal.
-
-If you want to make double sure that this works as described, you can always sign up for another account using a spare email address.
-
-To enable testing with multiple accounts we plan to allow developers to add a limited number of "tester accounts" for a given game sometime in the near future.
-
-#### Creating Products
-
-In order for users to give you money, you must first create products for them to buy.  This is done on the OUYA website via the [Developer Portal](https://devs.ouya.tv/developers).
-After logging in, click on the **Products** menu and then the **New Product** link.  This will take you to a page where you can enter the product ID, price and name.
-
-#### Getting Product Information
+### Getting Product Information
 
 Once the products have been created, you may want your application to query the servers for the current name and price.  This is done by requesting a product list, where products that you are interested in are specified by product ID.
 ```java
@@ -108,9 +104,9 @@ Once the products have been created, you may want your application to query the 
 ```
 Since this request has to travel across the Internet to the OUYA servers, the response will be returned via a callback mechanism.  It is up to your application to create an appropriate listener object.  Listeners extend the **OuyaResponseListener** and have three callback methods:
 
-* **onSuccess**	-- the request succeeded and the requested data is passed back
-* **onFailure**	-- the request failed and the error is passed back
-* **onCancel**	-- the user cancelled the request (for example, they hit "Cancel" when prompted for a password)
+* **onSuccess**	- the request succeeded and the requested data is passed back
+* **onFailure**	- the request failed and the error is passed back
+* **onCancel**	- the user cancelled the request (for example, they hit "Cancel" when prompted for a password)
 
 Now we will create our own listener!  In this example, we are extending the **CancelIgnoringOuyaResponseListener** which ignores cancels. Therefore, we only need to provide **onSuccess** and **onFailure** methods:
 ```java
@@ -135,7 +131,7 @@ So, how do we actually get the data we want? By making a request via **OuyaFacad
 ```
 So easy!
 
-#### Making a Purchase
+### Making a Purchase
 
 The first thing you will need to do is ensure that your application key is included in your application. You can down load the DER representation of your application key from the games area of the developer portal. To create a Java representation of the key you should use the following code:
 
@@ -244,7 +240,7 @@ Once we have defined the listener, we need to make the purchase. The following c
 ```
 Now we wait for the money to start pouring in...
 
-#### Querying Purchase Receipts
+### Querying Purchase Receipts
 
 At this point, we can get information on products and purchase them, but what if the user purchased something in a previous play session?  The ODK provides a way to list purchase receipts. Yes, this will require another listener object!
 
@@ -286,7 +282,7 @@ As usual, making the actual request is quite simple:
 The receipt decryption happens inside the application to help prevent hacking.  By moving the decryption into each application there is no "one piece of code" a hacker can attack to break encryption for all applications.  In the future, we will encourage developers to avoid using the **decryptReceiptResponse** method. They will need to move the method into their application, and *perturb* what it does slightly (changing for-loops to while-loops, and so forth) to help make things even more secure.
 Currently, the ODK is under heavy development, so the helper method will assist in insulating you from our "under-the-hood" changes.
 
-#### Identifying the User
+### Identifying the User
 
 If your application talks to an external server, it is often necessary to get a unique identifier for the current user (for example, to store high scores on a website).  Games are able to access a gamer's unique id and username.
 This is done in the normal pattern of creating a listener:
@@ -311,7 +307,15 @@ Then making the request:
 ```
 **Note**: These game UUIDs are different across developers; two apps by different developers which query the UUID of the same user will get different results.
 
-#### Common onFailure errors
+## Testing purchases
+
+All purchases made from the same account that created the game will be free. In other words, developers can make purchases in their own games for free, but everyone else will be charged.
+
+To delete your test purchases, visit your [products page](https://devs.ouya.tv/developers/products) in the developer portal.
+
+To enable testing with multiple accounts we plan to allow developers to add a limited number of "tester accounts" for a given game sometime in the near future.
+
+## Common onFailure errors
 
 We have provided a class which will handle some of the common errors which the 
 OUYA framework may report to your application. Using this helper class may cause your application to be forced into the background while the user enters their username and/or password.
@@ -331,7 +335,7 @@ Where context is the current Context, errorCode, errorMessage, and optionalData 
 
 If the helper can handle the error the method will return true, if it can not it will return false.
 
-#### Listeners And Obfuscators (e.g. ProGuard)
+## Use of Obfuscators (e.g. ProGuard)
 
 If you pass your application through a system which may obfuscate your code you should ensure that your listeners
 are not obfuscated. If an obfuscator changes the name of the listener methods the framework will not be able to
@@ -344,7 +348,7 @@ If you are using ProGuard doing this involves adding the following lines to your
 -keep public class * implements tv.ouya.console.api.OuyaResponseListener
 ````
 
-#### Remember to check receipts
+## Remember to check receipts
 
 We've noticed a bunch of games not properly checking receipts: games should _always_ query the server for the most up-to-date receipt status.
 
