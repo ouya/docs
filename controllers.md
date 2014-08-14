@@ -10,7 +10,7 @@ One of the huge advantages of the OUYA console is that gamers get to use a *real
 - a touchpad, configured to behave as a mouse input (Touchpad)
 See the interface-guidelines for a link to button images.
 
-**Note:** The analog triggers also act as digital buttons, with a threshold of 0.5 for the analog value.
+**NOTE:** The analog triggers also act as digital buttons, with a threshold of 0.5 for the analog value.
 
 Since controller interfaces are so crucial, we've done some work to make your life easier.
 
@@ -118,7 +118,7 @@ To bring up the system menu you may now double-tap the OUYA button, or long pres
 
 This new MENU function provides an easy and consistent way for games and apps to map a pause or context menu to a button on our controller.
 
-*NOTE:* Because the menu button press is emulated, the up and down events happen at once. This means you won't be able to detect it being pressed using the passive anytime state querying. It's much more reliable to detect the menu press in your onKeyUp/Down code.
+**NOTE:** Because the menu button press is emulated, the up and down events happen at once. This means you won't be able to detect it being pressed using the passive anytime state querying. It's much more reliable to detect the menu press in your onKeyUp/Down code.
 
 ##### Distinguishing between Analog Joystick and Touchpad
 
