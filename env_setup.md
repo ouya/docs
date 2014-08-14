@@ -28,7 +28,7 @@ To use **adb** or other Android tools from the command line, you'll need to add 
 
 ### Setting PATH in Windows
 
-1. Open **Advanced System Settings**, usually found by **Right click My Computer > Properties
+1. Open **Advanced System Settings**, usually found by **Right click My Computer > Properties**
 2. In the **Advanced** tab, click the **Environment Variables** button
 3. Under System Variables, select **PATH** and click the **Edit** button
 4. Add the following text to the end of the value field:  
