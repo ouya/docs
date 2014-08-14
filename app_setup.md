@@ -4,6 +4,12 @@
 
 For your Android application to be compatible with the OUYA, it must target platform **16** (Android 4.1.2) or later.
 
+**Example:**
+
+```xml
+<uses-sdk android:minSdkVersion="16" />
+```
+
 ## Step 1: Add OUYA SDK jar to build path
 
 To access OUYA-specific functions, you'll need to [download the ODK](https://devs.ouya.tv/developers/odk) and add `ouya-sdk.jar` to the build-path of your app.  
@@ -15,7 +21,7 @@ For your OUYA app to show up in the **PLAY** section, it must have an activity t
 
 **Example:**
 
-````
+```xml
 <activity android:name=".GameActivity" android:label="@string/app_name">
   <intent-filter>
     <action android:name="android.intent.action.MAIN"/>
@@ -23,7 +29,7 @@ For your OUYA app to show up in the **PLAY** section, it must have an activity t
     <category android:name="tv.ouya.intent.category.GAME"/>
   </intent-filter>  
 </activity>
-````
+```
 
 ## Step 3: Add an icon
 
