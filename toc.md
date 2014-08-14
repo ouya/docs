@@ -1,6 +1,9 @@
 * [Welcome](index.md)
-* [Setup](setup.md)
 * [Support](developer_support.md)
+
+**Setup**
+* [Environment Setup](env_setup.md)
+* [App Setup](app_setup.md)
 
 **API**
 * [Controllers](controllers.md)
