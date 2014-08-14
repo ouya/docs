@@ -51,11 +51,11 @@ For ADB to be able to connect with the console, you'll need to modify some syste
 
 1. Edit the file `<SDK>\extras\google\usb_driver\android_winusb.inf`
 2. Locate the `[Google.NTx86]` and `[Google.NTamd64]` sections
-3. Within both sections, append the following lines:  
+3. Within both sections, append the following lines:
 
-       ;OUYA Console  
-	   %SingleAdbInterface% = USB_Install, USB\VID_2836&PID_0010  
-	   %CompositeAdbInterface% = USB_Install, USB\VID_2836&PID_0010&MI_01  
+        ;OUYA Console  
+        %SingleAdbInterface% = USB_Install, USB\VID_2836&PID_0010  
+        %CompositeAdbInterface% = USB_Install, USB\VID_2836&PID_0010&MI_01  
 4. Save and close the file  
 5. Create or edit the file `%USERPROFILE%\.android\adb_usb.ini`  
    (`%USERPROFILE%` is typically a folder such as `C:\Users\MyName\`)
