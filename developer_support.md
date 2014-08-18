@@ -29,6 +29,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  
 * TimG's Favorite Book: <a target=_blank href="http://www.amazon.com/Prey-Michael-Crichton/dp/0061703087">[Prey]</a> by Michael Crichton
 
+<a target=_blank href="https://www.youtube.com/watch?v=pxDtnaIERQs&t=9m15s">(9:15)</a> - Handling controller input while developing a game with Adventure Creator
+
 ----------
 
 
