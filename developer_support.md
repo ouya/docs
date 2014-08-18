@@ -7,6 +7,28 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ----------
 
 
+### August 18, 2014 ###
+
+<table border=1>
+
+ <tr>
+ <td>OUYA DEV SUPPORT (43:40)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=pxDtnaIERQs" target="_blank">
+<img src="http://img.youtube.com/vi/pxDtnaIERQs/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 8/18" width="240" height="180" border="10" /></a>
+ </td>
+  <td></td>
+ </tr>
+
+</table>
+
+* Event: <a target=_blank href="http://unity3d.com/unite">[Unite]</a> - August 20-22, 2014.
+
+* Create games without coding with <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/11896">[Adventure Creator]</a>.
+
+
+----------
+
+
 ### August 11, 2014 ###
 
 <table border=1>
