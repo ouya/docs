@@ -25,6 +25,9 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * Create games without coding with <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/11896">[Adventure Creator]</a>.
 
+* Bob's Favorite Book: <a target=_blank href="http://www.amazon.com/The-Sirens-Titan-A-Novel/dp/0385333498">[The Sirens of Titan: A Novel]</a> by Kurt Vonnegut
+ 
+* TimG's Favorite Book: <a target=_blank href="http://www.amazon.com/Prey-Michael-Crichton/dp/0061703087">[Prey]</a> by Michael Crichton
 
 ----------
 
