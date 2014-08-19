@@ -1,12 +1,15 @@
 * [Welcome](index.md)
-* [Setup](setup.md)
 * [Support](developer_support.md)
+
+**Setup**
+* [Environment Setup](env_setup.md)
+* [App Setup](app_setup.md)
 
 **API**
 * [Controllers](controllers.md)
-* [OUYA Everywhere](ouya-everywhere.md)
 * [Purchases](purchasing.md)
 * [Storage](storage.md)
+* [OUYA Everywhere](ouya-everywhere.md)
 
 **Guidelines**
 * [User Interface](interface-guidelines.md)
