@@ -57,7 +57,7 @@ If the icons have already been customized, there's no need to import the icons a
 
 ## Signing key ##
 
-Importing the signing key is a placeholder for where to place the signing key downloaded from the developer portal. The signing key is used in in-app-purchase encryption and decryption. The in-app-purchase API will not work until you create a game in the developer portal to download the game's signing key. Be cautious when importing updates to not replace this file.
+Importing the signing key is a placeholder for where to place the signing key downloaded from the developer portal. The signing key is used in in-app-purchase encryption and decryption. The in-app-purchase API will not work until you [create a game in the developer portal](https://devs.ouya.tv/developers/games) to download the game's signing key. Be cautious when importing updates to not replace this file.
 
 Note (ODK 1.0.14.1): The signing key was moved to be compatible with 3rd party plugins.
 
