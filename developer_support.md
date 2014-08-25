@@ -23,9 +23,9 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * Event: <a target=_blank href="http://prime.paxsite.com/">[PAX]</a> - August 29-September 1, 2014.
 
-* Event: <a target=_blank href="https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/OuyaShowProducts.cs">[Show Products Example]</a> - FetchGamerInfo gets the players username
+* Example: <a target=_blank href="https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/OuyaShowProducts.cs">[Show Products Example]</a> - FetchGamerInfo gets the players username
 
-* Event: <a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Unity/PlayMakerhttps://github.com/ouya/ouya-sdk-examples/tree/master/Unity/PlayMaker">[PlayMaker Example Project]</a> - Import PlayMaker and the OUYA SDK into this example project to interact with OUYA Controllers
+* Example: <a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Unity/PlayMaker">[PlayMaker Example Project]</a> - Import PlayMaker and the OUYA SDK into this example project to interact with OUYA Controllers
 
 <a target=_blank href="https://www.youtube.com/watch?v=o1Wx3HFE80g&t=25m38s">(25:38)</a> - Developing a game without scripting using PlayMaker, and hooking up controller buttons.
 
