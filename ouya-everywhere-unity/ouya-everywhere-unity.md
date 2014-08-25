@@ -618,3 +618,11 @@ Import the Examples package. From the menu item Assets->Import Package->Custom P
 The virtual controller example exercises the new OUYA-Everywhere input. The button names and images are now accessible from the API. And the virtual controller buttons highlight for multiple controllers for supported controllers. The right-hand JOY buttons toggle input for specific player numbers.
 
 ![image alt text](image_18.png)
+
+## Virtual Controller Example ##
+
+The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/VirtualController.cs) script displays a 2D controller with axis and buttons that highlight when the physical controller is used.
+
+## Input Test ##
+
+The [input test](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/OuyaInputTest.cs) script displays all the axis, button up, and button down states to verify that input is correctly configured for Unity.
