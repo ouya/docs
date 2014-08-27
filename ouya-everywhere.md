@@ -19,8 +19,7 @@ In order to help games be as portable as possible there are a set of new APIs av
 - [Controller Input](#user-content-controller-input)
 
 
-<a name="user-content-device-identification" />
-<h3 id="device-identification">Device Identification</h3>
+## Device Identification
 
 While most games will work smoothly across all different devices, sometimes it may be necessary to specifically identify what hardware the game is running on.
 The simplest way to tell if the game is running on an OUYA-supported device is:
@@ -60,8 +59,7 @@ been added, yet this game has been compiled against an older ODK which doesn't
 have an enum entry for the new hardware.
 
 
-<a name="user-content-controller-images" />
-<h3 id="controller-images">Controller Images</h3>
+## Controller Images
 
 As new console systems are added, it can become cumbersome for each game to manage the images for the varied controller buttons.  To alleviate this issue, there is the following API:
 
@@ -90,8 +88,8 @@ All current OuyaController.BUTTON_* contants have valid button data (including o
 
 Using this API will keep your game looking correct as new console hardware support is added -- without any recompilations!
 
-<a name="user-content-controller-input" />
-<h3 id="controller-input">Controller Input</h3>
+
+## Controller Input
 
 One common issue with Android games is supporting different controller hardare.  We've created a new API which will remap input from various controller manufacturers to the standard OUYA button layout.  The remapping logic is provided by the OUYA Framework, and will be constantly updated to add support for more and more controllers.
 
