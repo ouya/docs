@@ -17,7 +17,7 @@ In order to help games be as portable as possible there are a set of new APIs av
 - [Device Identification](#user-content-device-identification)
 - [Controller Images](#user-content-controller-images)
 - [Controller Input](#user-content-controller-input)
-
+- [Store Identification](#user-content-store-identification)
 
 ## Device Identification
 
@@ -173,3 +173,18 @@ If you are unable to extend the OuyaActivity (eg: the game engine you are using 
 ```
 
 
+## Store Identification
+
+For developers who choose to use a single apk across multiple storefronts (OUYA, Google Play, Amazon, etc), it can be important to identify which system the game was installed from -- especially now that some OUYA-supported platforms also support Google Play.  One way to detect where your APK was installed from is by using <a href="http://developer.android.com/reference/android/content/pm/PackageManager.html#getInstallerPackageName(java.lang.String)">PackageManager.getInstallerPackageName</a>:
+```java
+    final String installedFrom = getPackageManager().getInstallerPackageName(getPackageName());
+    if ("com.android.vending".equals(installedFrom)) {
+      // From Google Play
+    } else if ("com.amazon.venezia".equals(installedFrom)) {
+      // From Amazon
+    } else if (OuyaFacade.getInstance().isRunningOnOUYASupportedHardware()) {
+      // From OUYA
+    }
+```
+Note that if you install your development builds via `adb install mygame.apk` then PackageManager.getInstallerPackageName will return null.
+The OUYA installer package name has a few different possibilities based, which is why suggest using the OuyaFacade.isRunningOnOUYASupportedHardware method.
