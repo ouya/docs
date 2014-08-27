@@ -155,16 +155,22 @@ If you are unable to extend the OuyaActivity (eg: the game engine you are using 
   
     @Override
     public boolean dispatchKeyEvent(KeyEvent keyEvent) {
-      boolean handled = OuyaInputMapper.dispatchKeyEvent(this, keyEvent);
+      boolean handled = false;
+      if (OuyaInputMapper.shouldHandleInputEvent(keyEvent)) {
+        handled = OuyaInputMapper.dispatchKeyEvent(this, keyEvent);
+      }
       ...
-      return handled;
+      return handled || super.dispatchKeyEvent(keyEvent);
     }
   
     @Override
     public boolean dispatchGenericMotionEvent(MotionEvent motionEvent) {
-      boolean handled = OuyaInputMapper.dispatchGenericMotionEvent(this, motionEvent);
+      boolean handled = false;
+      if (OuyaInputMapper.shouldHandleInputEvent(motionEvent)) {
+        handled = OuyaInputMapper.dispatchGenericMotionEvent(this, motionEvent);
+      }
       ...
-      return handled;
+      return handled || super.dispatchGenericMotionEvent(motionEvent);
     }
 ```
 
