@@ -10,6 +10,7 @@
 * [Purchases](purchasing.md)
 * [Storage](storage.md)
 * [OUYA Everywhere](ouya-everywhere.md)
+* [Custom Launchers](custom_launchers.md)
 
 **Guidelines**
 * [User Interface](interface-guidelines.md)
