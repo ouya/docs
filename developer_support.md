@@ -23,6 +23,10 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * Event: <a target=_blank href="http://www.indiecade.com/">[Indiecade]</a> - October 9-12, 2014.
 
+* <a target=_blank href="https://www.kickstarter.com/projects/594946424/glomtom-ergonomic-pad-will-level-up-your-gaming-ex">[GlomTom]</a> - The pillow that makes gaming even better
+
+* <a target=_blank href="https://www.kickstarter.com/projects/embraceplus/embrace-a-smart-piece-of-wearable-technology">[Embrace+]</a> - Embrace+ add wrist LED and force-feedback interaction to your game
+
 * <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/3558">[ProBuilder 2]</a> - Model geometry directly in the Unity editor
 
 * <a target=_blank href="http://www.esri.com/software/cityengine">[City Engine]</a> - Generate realistic city scapes
