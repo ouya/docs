@@ -23,6 +23,10 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * Event: <a target=_blank href="http://www.indiecade.com/">[Indiecade]</a> - October 9-12, 2014.
 
+* Event/KS: <a target=_blank href="https://www.kickstarter.com/projects/gaymercon/gx3-everyone-games">[GX3]</a> - KS - GX: Everyone Games #GX3 (GaymerX)
+
+* KS: <a target=_blank href="https://www.kickstarter.com/projects/238749912/shadow-light-all-new-content">[ShadowLight]</a> - 5 expansion levels plus a new *Bonus level stretch goal
+
 * <a target=_blank href="https://www.kickstarter.com/projects/594946424/glomtom-ergonomic-pad-will-level-up-your-gaming-ex">[GlomTom]</a> - The pillow that makes gaming even better
 
 * <a target=_blank href="https://www.kickstarter.com/projects/embraceplus/embrace-a-smart-piece-of-wearable-technology">[Embrace+]</a> - Embrace+ add wrist LED and force-feedback interaction to your game
