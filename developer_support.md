@@ -7,6 +7,25 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ----------
 
 
+### September 8, 2014 ###
+
+<table border=1>
+
+ <tr>
+ <td>OUYA DEV SUPPORT (00:51:15)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Q1sxqpy2jF0" target="_blank">
+<img src="http://img.youtube.com/vi/Q1sxqpy2jF0/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 9/8" width="240" height="180" border="10" /></a>
+ </td>
+  <td></td>
+ </tr>
+
+</table>
+
+* Event: <a target=_blank href="http://www.indiecade.com/">[Indiecade]</a> - October 9-12, 2014.
+
+----------
+
+
 ### August 25, 2014 ###
 
 <table border=1>
