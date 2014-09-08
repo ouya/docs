@@ -23,6 +23,11 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * Event: <a target=_blank href="http://www.indiecade.com/">[Indiecade]</a> - October 9-12, 2014.
 
+* <a target=_blank href="https://www.assetstore.unity3d.com/en/#!/content/3558">[ProBuilder 2]</a> - Model geometry directly in the Unity editor
+
+* <a target=_blank href="http://www.esri.com/software/cityengine">[City Engine]</a> - Generate realistic city scapes
+
+* <a target=_blank href="http://www.sidefx.com/index.php?option=com_content&task=blogcategory&id=227&Itemid=381">[Houdini Engine]</a> - Procedural content generation
 ----------
 
 
