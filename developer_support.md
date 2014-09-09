@@ -37,6 +37,10 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * <a target=_blank href="http://www.sidefx.com/index.php?option=com_content&task=blogcategory&id=227&Itemid=381">[Houdini Engine]</a> - Procedural content generation
 
+<a target=_blank href="https://www.youtube.com/watch?v=Q1sxqpy2jF0&t=9m20s">(9:20)</a> - Game development and playing games is just better with a GlomTom.
+
+<a target=_blank href="https://www.youtube.com/watch?v=Q1sxqpy2jF0&t=26m30s">(26:30)</a> - Kickstarter Embrace+ in game development.
+
 <a target=_blank href="https://www.youtube.com/watch?v=Q1sxqpy2jF0&t=28m05s">(28:05)</a> - Using ProBuilder to construct a room that the ceiling toggles visibiility when a player enters the room.
 
 ----------
