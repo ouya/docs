@@ -86,6 +86,14 @@ Corona Enterprise includes sample applications:
 Applications/CoronaEnterprise/Samples/
 ```
 
+##### Authorize
+
+Initially when setting up Corona Enterprise, the license needs to be authorized via the command-line.
+
+```
+/Applications/CoronaEnterprise/Corona/mac/bin/CoronaBuilder.app/Contents/MacOS/CoronaBuilder authorize your_email your_password
+```
+
 I had to edit the build script to add paths to the ant includes:<br/>
 ```
 Applications/CoronaEnterprise/Corona/android/lib/Corona/build.xml
