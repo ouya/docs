@@ -7,6 +7,37 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ----------
 
 
+### September 15, 2014 ###
+
+<table border=1>
+
+ <tr>
+ <td>OUYA DEV SUPPORT (01:03:45)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=LJ3BPEobIgs" target="_blank">
+<img src="http://img.youtube.com/vi/LJ3BPEobIgs/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 9/15" width="240" height="180" border="10" /></a>
+ </td>
+  <td></td>
+ </tr>
+
+</table>
+
+* Event: <a target=_blank href="http://www.indiecade.com/">[Indiecade]</a> - October 9-12, 2014.
+
+* <a target=_blank href="http://u3d.as/content/invert-game-studios-llc/u-frame-game-framework/6gM">[UFrame]</a> - Keep your art and code separate, design faster, and auto generate code from designer files.
+
+* <a target=_blank href="http://invertgamestudios.com/home/video-tutorials/upgrading-to-1-4">[UFrame Tutorials]</a> - Including "Angry Flappers" tutorial.
+
+* <a target=_blank href="http://coronalabs.com/products/corona-sdk/">[Corona SDK]</a> - Download Corona Basic/Pro/Enterprise
+
+<a target=_blank href="https://www.youtube.com/watch?v=LJ3BPEobIgs&t=1m25s">(1:25)</a> - Just the Facts
+
+<a target=_blank href="https://www.youtube.com/watch?v=LJ3BPEobIgs&t=12m51s">(12:51)</a> - Intro to Corona Game Engine
+
+<a target=_blank href="https://www.youtube.com/watch?v=LJ3BPEobIgs&t=24m19s">(24:19)</a> - Intro to uFrame from the developer
+
+----------
+
+
 ### September 8, 2014 ###
 
 <table border=1>
