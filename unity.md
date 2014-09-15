@@ -49,7 +49,7 @@ Assets/Plugins/Android/assets/key.der
 ```
 ### Step 5: Sync Bundle ID / Package Name
 
-`Assets/Plugins/Android/AndroidManifest.xml` overwrites Unity's Player bundle ID, so you will need to make sure to make sure the package name it uses matches your actual bundle ID. The easiest way to do this is from the menu (OUYA > Sync Bundle ID)
+`Assets/Plugins/Android/AndroidManifest.xml` overwrites Unity's Player bundle ID, so you will need to make sure to make sure the package name it uses matches your actual bundle ID. The easiest way to do this is from the menu (Edit > Sync Android Bundle ID)
 
 ![Sync Bundle ID Menu](images/unity_sync_id.png)
 
