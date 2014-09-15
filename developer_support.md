@@ -29,6 +29,12 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * <a target=_blank href="http://coronalabs.com/products/corona-sdk/">[Corona SDK]</a> - Download Corona Basic/Pro/Enterprise
 
+* <a target=_blank href="http://outlawgametools.com/outlaw-code-editor-and-project-manager/">[Outlaw IDE]</a> - Intellisense when editing Lua scripts
+
+* <a target=_blank href="http://www.sublimetext.com/">[Sublime Text]</a> - C++ and Lua Script editor
+
+* <a target=_blank href="https://www.eclipse.org/">[Eclipse]</a> - Java Android project editor
+
 <a target=_blank href="https://www.youtube.com/watch?v=LJ3BPEobIgs&t=1m25s">(1:25)</a> - Just the Facts
 
 <a target=_blank href="https://www.youtube.com/watch?v=LJ3BPEobIgs&t=12m51s">(12:51)</a> - Intro to Corona Game Engine
