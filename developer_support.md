@@ -23,6 +23,10 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * Event: <a target=_blank href="http://www.indiecade.com/">[Indiecade]</a> - October 9-12, 2014.
 
+* <a target=_blank href="http://coronalabs.com/products/corona-sdk/">[Corona SDK]</a> - Download Corona Basic/Pro/Enterprise
+ 
+* <a target=_blank href="https://www.eclipse.org/">[Eclipse]</a> - Java Android project editor
+
 <a target=_blank href="https://www.youtube.com/watch?v=boUInpdxY3w&t=1m50s">(1:50)</a> - Derp with Doherty
 
 <a target=_blank href="https://www.youtube.com/watch?v=boUInpdxY3w&t=5m0s">(5:00)</a> - Just the Facts
