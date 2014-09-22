@@ -23,6 +23,11 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * Event: <a target=_blank href="http://www.indiecade.com/">[Indiecade]</a> - October 9-12, 2014.
 
+<a target=_blank href="https://www.youtube.com/watch?v=boUInpdxY3w&t=1m50s">(1:50)</a> - Derp with Doherty
+
+<a target=_blank href="https://www.youtube.com/watch?v=boUInpdxY3w&t=5m0s">(5:00)</a> - Just the Facts
+
+<a target=_blank href="https://www.youtube.com/watch?v=boUInpdxY3w&t=20m50s">(20:50)</a> - Corona Game Engine Overview, Android Video Player, Android Image Player (with safe area controls)
 
 ----------
 
