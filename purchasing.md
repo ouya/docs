@@ -104,6 +104,8 @@ Of course, when your application is finished, it is polite to inform the **OuyaF
 	}
 ```
 
+*For more info about the XIAOMI\_APPLICATION\_&#42; constants, see [Enabling Xiaomi Support](enable_xiaomi_support.md).*
+
 Now we're ready for some real action!
 
 ### Check for OUYA hardware
