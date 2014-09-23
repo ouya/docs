@@ -22,6 +22,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 </table>
 
 * Event: <a target=_blank href="http://www.indiecade.com/">[Indiecade]</a> - October 9-12, 2014.
+ 
+* Event: <a target=_blank href="http://community.thefoundry.co.uk/discussion/topic.aspx?f=3&t=92541">[The Foundary Halloween Contest]</a> - Oct 31st, 2014.
 
 * <a target=_blank href="http://coronalabs.com/products/corona-sdk/">[Corona SDK]</a> - Download Corona Basic/Pro/Enterprise
  
