@@ -6,6 +6,37 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 ----------
 
+### September 29, 2014 ###
+
+<table border=1>
+
+ <tr>
+ <td>OUYA DEV SUPPORT (01:00:34)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=J1DjjQg9k2c" target="_blank">
+<img src="http://img.youtube.com/vi/J1DjjQg9k2c/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 9/29" width="240" height="180" border="10" /></a>
+ </td>
+  <td></td>
+ </tr>
+
+</table>
+
+* Event: <a target=_blank href="http://www.indiecade.com/">[Indiecade]</a> - October 9-12, 2014.
+ 
+* Event: <a target=_blank href="http://community.thefoundry.co.uk/discussion/topic.aspx?f=3&t=92541">[The Foundary Halloween Contest]</a> - Oct 31st, 2014.
+
+* <a target=_blank href="http://scratch.mit.edu/">[Scratch]</a> - Game Engine
+
+* <a target=_blank href="https://cs50.harvard.edu/">[Scratch Training]</a> - Harvard Educated.
+
+<a target=_blank href="https://www.youtube.com/watch?v=J1DjjQg9k2c&t=2m54s">(2:54)</a> - Just the Facts
+
+<a target=_blank href="https://www.youtube.com/watch?v=J1DjjQg9k2c&t=8m05s">(8:05)</a> - Derp with Doherty
+
+<a target=_blank href="https://www.youtube.com/watch?v=J1DjjQg9k2c&t=9m58s">(9:58)</a> - Corona Game Engine Overview
+
+
+----------
+
 
 ### September 22, 2014 ###
 
