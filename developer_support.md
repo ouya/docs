@@ -37,7 +37,9 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * <a target=_blank href="http://scratch.mit.edu/">[Scratch]</a> - Game Engine
 
-* <a target=_blank href="https://cs50.harvard.edu/">[Scratch Training]</a> - Harvard Educated.
+* <a target=_blank href="https://cs50.harvard.edu/">[Scratch Training]</a> - Harvard Educated
+
+* <a target=_blank href="http://helpx.adobe.com/flash-player/kb/archived-flash-player-versions.html">[Flash for Android]</a> - Sideload Flash to play Scratch in the browser
 
 <a target=_blank href="https://www.youtube.com/watch?v=J1DjjQg9k2c&t=2m54s">(2:54)</a> - Just the Facts
 
