@@ -15,7 +15,18 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=J1DjjQg9k2c" target="_blank">
 <img src="http://img.youtube.com/vi/J1DjjQg9k2c/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 9/29" width="240" height="180" border="10" /></a>
  </td>
-  <td></td>
+ <td>Fan OUYA Ad<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=-DwLWRPQ8pI" target="_blank">
+<img src="http://img.youtube.com/vi/-DwLWRPQ8pI/0.jpg" alt="Fan made OUYA Ad" width="240" height="180" border="10" /></a>
+ </td>
+ </tr>
+
+ <tr>
+ <td>Battery Swap<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=QBrXsa9hxRk" target="_blank">
+<img src="http://img.youtube.com/vi/QBrXsa9hxRk/0.jpg" alt="OUYA - 38 Second Battery Swap" width="240" height="180" border="10" /></a>
+ </td>
+ <td></td>
  </tr>
 
 </table>
@@ -32,7 +43,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 <a target=_blank href="https://www.youtube.com/watch?v=J1DjjQg9k2c&t=8m05s">(8:05)</a> - Derp with Doherty
 
-<a target=_blank href="https://www.youtube.com/watch?v=J1DjjQg9k2c&t=9m58s">(9:58)</a> - Corona Game Engine Overview
+<a target=_blank href="https://www.youtube.com/watch?v=J1DjjQg9k2c&t=9m58s">(9:58)</a> - Scratch Game Engine Overview
 
 
 ----------
