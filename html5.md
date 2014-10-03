@@ -18,29 +18,29 @@ Icons are placed in the drawable resource folders, using the same locations spec
 
 ## Chromium ##
 
-[Chromium](chromium.md) provides hardware acceleration for WebGL on rendering and video decoding.
+[`Chromium`](chromium.md) provides hardware acceleration for WebGL on rendering and video decoding.
 
 HTML5 apps/games can be embedded into a Chromium apk.
 
 ## Prebuild configurations ##
 
-Rather than using a Linux build machine to create Chromium apks, several prebuilt configurations are available for easy customization.
+Rather than using a Linux build machine to create `Chromium` apks, several prebuilt configurations are available for easy customization.
 
 Customization scripts are available for Windows and Mac. Windows scripts have the 'cmd' extension and 'sh' for Mac.
 
 ## Streaming ##
 
-Chromium can point to an external URL and stream in content, however, this type of setup requires an Internet connection.
+`Chromium` can point to an external URL and stream in content, however, this type of setup requires an Internet connection.
 
 ## Web Archive ##
 
-An HTML5 website can be wrapped into a zip archive and embedded into the Chromium app.
+An HTML5 website can be wrapped into a zip archive and embedded into the `Chromium` app.
 
 The archive of the website is placed in the application as a raw resource.
 
 When the app launches, the files within the archive are extracted to the application's data folder.
 
-Use the [Web Archive](https://github.com/ouya/ouya-sdk-examples/tree/master/Html5/WebArchive) prebuilt configuration of Chromium.
+Use the [Web Archive](https://github.com/ouya/ouya-sdk-examples/tree/master/Html5/WebArchive) prebuilt configuration of `Chromium`.
 
 ### ```1_Decode``` ###
 
@@ -110,6 +110,14 @@ When the app launches, a custom splash screen can be turned on and used.
 
 Location: `ContentShell/res/drawable/splash_screen.png`
 
+Use of the splash screen is optional. The splash screen can be enabled which is specified in the string resources under the id `use_splash_screen`.
+
+Location: `ContentShell/res/values/strings.xml`
+
+```xml
+<string name="use_splash_screen">true</string>
+```
+
 ### ```2_Build``` ###
 
 2_build again uses `apktool` repackages your ContentShell customization and rebuilds the APK.
@@ -171,6 +179,16 @@ Val is the float value of the input for that axis.
 onGenericMotionEvent(playerNum, axis, val) {
    if (axis == OuyaController. AXIS_LS_X) {
    }
+   if (axis == OuyaController. AXIS_LS_Y) {
+   }
+   if (axis == OuyaController. AXIS_RS_X) {
+   }
+   if (axis == OuyaController. AXIS_RS_Y) {
+   }
+   if (axis == OuyaController. AXIS_L2) {
+   }
+   if (axis == OuyaController. AXIS_R2) {
+   }
 }
 ```
 
@@ -200,7 +218,31 @@ The Integer Button is the button in the event.
 The key down event indicates a button was just pressed.
 
 ```
-onKeyDown(playerNum, button) {
+onKeyDown(playerNum, button) {   
+   if (button == OuyaController.BUTTON_O) {
+   }
+   if (button == OuyaController.BUTTON_U) {
+   }
+   if (button == OuyaController.BUTTON_Y) {
+   }
+   if (button == OuyaController.BUTTON_A) {
+   }
+   if (button == OuyaController.BUTTON_L1) {
+   }
+   if (button == OuyaController.BUTTON_R1) {
+   }
+   if (button == OuyaController.BUTTON_L3) {
+   }
+   if (button == OuyaController.BUTTON_R3) {
+   }
+   if (button == OuyaController.BUTTON_DPAD_UP) {
+   }
+   if (button == OuyaController.BUTTON_DPAD_DOWN) {
+   }
+   if (button == OuyaController.BUTTON_DPAD_RIGHT) {
+   }
+   if (button == OuyaController.BUTTON_DPAD_LEFT) {
+   }
    if (button == OuyaController.BUTTON_MENU) {
    }
 }
@@ -210,6 +252,30 @@ The key up event indicates a button was just released.
 
 ```
 onKeyUp(playerNum, button) {
+   if (button == OuyaController.BUTTON_O) {
+   }
+   if (button == OuyaController.BUTTON_U) {
+   }
+   if (button == OuyaController.BUTTON_Y) {
+   }
+   if (button == OuyaController.BUTTON_A) {
+   }
+   if (button == OuyaController.BUTTON_L1) {
+   }
+   if (button == OuyaController.BUTTON_R1) {
+   }
+   if (button == OuyaController.BUTTON_L3) {
+   }
+   if (button == OuyaController.BUTTON_R3) {
+   }
+   if (button == OuyaController.BUTTON_DPAD_UP) {
+   }
+   if (button == OuyaController.BUTTON_DPAD_DOWN) {
+   }
+   if (button == OuyaController.BUTTON_DPAD_RIGHT) {
+   }
+   if (button == OuyaController.BUTTON_DPAD_LEFT) {
+   }
    if (button == OuyaController.BUTTON_MENU) {
    }
 }
@@ -226,12 +292,12 @@ OuyaController.showCursor(show);
 ### Plugin Methods ###
 
 ```
-setDeveloperId(developerId, successCallback, failureCallback) {
+setDeveloperId(developerId, onSuccess, onFailure) {
 }
 ```
 
 ```
-initOuyaPlugin(successCallback, failureCallback) {
+initOuyaPlugin(onSuccess, onFailure) {
 }
 ```
 
