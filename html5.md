@@ -148,6 +148,8 @@ The OUYA needs to be connected via micro-usb or over the network and listed in `
 
 The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/blob/master/Html5/VirtualController/web_archive/index.html) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated.
 
+![image alt text](html5/image_1.png)
+
 ### In-App-Purchases ###
 
 # API #
