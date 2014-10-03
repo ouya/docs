@@ -6,9 +6,9 @@
 
 [JDK6](setup.md) for repackaging
 
-[MacDown](http://macdown.uranusjr.com/) for Markup editing
-
 [Android SDK](setup.md)
+
+[MacDown](http://macdown.uranusjr.com/) for markup editing
 
 # Getting Started #
 
@@ -148,9 +148,13 @@ The OUYA needs to be connected via micro-usb or over the network and listed in `
 
 The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/blob/master/Html5/VirtualController/web_archive/index.html) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated.
 
-![image alt text](html5/image_1.png)
+![Virtual Controller](html5/image_1.png)
 
 ### In-App-Purchases ###
+
+The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Html5/InAppPurchases/web_archive/index.html) example uses the ODK to access gamer info, purchasing, and receipts.
+
+![In-App-Purchases](html5/image_2.png)
 
 # API #
 
