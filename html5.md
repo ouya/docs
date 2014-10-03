@@ -56,7 +56,7 @@ Decode uses the `apktool`, to extract the encoded contents from the prebuilt apk
 
 The first file to customize is the AndroidManifest.xml where the package identifier for your app must be set. The package identifier must match the game identifier that was created in the developer portal.
 
-`ContentShell/AndroidManifest.xml`
+Location: `ContentShell/AndroidManifest.xml`
 
 ```xml
 <manifest package="YOUR_PACKAGE_IDENTIFIER">...
@@ -64,19 +64,23 @@ The first file to customize is the AndroidManifest.xml where the package identif
 
 The application name is specified in the string resources under the id `app_name`.
 
-`ContentShell/res/values/strings.xml`
+Location: `ContentShell/res/values/strings.xml`
+
+```xml
+<string name="app_name">YOUR_APP_NAME</string>
+```
 
 ##### `icons` #####
 
 All apps will need to customize the icons which have the same dimensions as specified in the [content review guidelines](content-review-guidelines.md).
 
-`ContentShell/res/drawable/app_icon.png`
+Location: `ContentShell/res/drawable/app_icon.png`
 
-`ContentShell/res/drawable-xhdpi/ouya_icon.png`
+Location: `ContentShell/res/drawable-xhdpi/ouya_icon.png`
 
 The web archive is a zip file which is renamed to be compatible as an Android resource. The web archive must be all lowercase and is renamed with the `jar` extension.
 
-`ContentShell/res/raw/web_archive.jar`
+Location: `ContentShell/res/raw/web_archive.jar`
 
 The `web_archive.jar` should be replaced with your `HTML5` application.
 
@@ -84,7 +88,7 @@ The `web_archive.jar` should be replaced with your `HTML5` application.
 
 The name of the archived raw resource is specified in the string resources under the id `raw_web_archive` leaving off the file extension.
 
-`ContentShell/res/values/strings.xml`
+Location: `ContentShell/res/values/strings.xml`
 
 ```xml
 <string name="raw_web_archive">web_archive</string>
@@ -94,7 +98,7 @@ The name of the archived raw resource is specified in the string resources under
 
 The web archive will include an html start page which is specified in the string resources under the id `local_start_page`.
 
-`ContentShell/res/values/strings.xml`
+Location: `ContentShell/res/values/strings.xml`
 
 ```xml
 <string name="local_start_page">/index.html</string>
@@ -104,7 +108,7 @@ The web archive will include an html start page which is specified in the string
 
 When the app launches, a custom splash screen can be turned on and used.
 
-`ContentShell/res/drawable/splash_screen.png`
+Location: `ContentShell/res/drawable/splash_screen.png`
 
 ### ```2_Build``` ###
 
@@ -165,6 +169,8 @@ Val is the float value of the input for that axis.
 
 ```
 onGenericMotionEvent(playerNum, axis, val) {
+   if (axis == OuyaController. AXIS_LS_X) {
+   }
 }
 ```
 
