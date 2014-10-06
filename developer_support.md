@@ -6,6 +6,30 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 ----------
 
+### October 6, 2014 ###
+
+<table border=1>
+
+ <tr>
+ <td>OUYA DEV SUPPORT (00:29:24)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=S_eqoADvBLw" target="_blank">
+<img src="http://img.youtube.com/vi/S_eqoADvBLw/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 10/6" width="240" height="180" border="10" /></a>
+ </td>
+ <td></td>
+ </tr>
+
+</table>
+
+* Event: <a target=_blank href="http://www.indiecade.com/">[Indiecade]</a> - October 9-12, 2014.
+ 
+* Event: <a target=_blank href="http://community.thefoundry.co.uk/discussion/topic.aspx?f=3&t=92541">[The Foundary Halloween Contest]</a> - Oct 31st, 2014.
+
+* <a target=_blank href="https://github.com/ouya/docs/blob/master/html5.md">[HTML5]</a> - New HTML5 ODK support for Controllers, In-App-Purchases, and Repackaging for the OUYA Store
+
+<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=3m38s">(3:38)</a> - Jared hosts "Tim said" and "Just the Facts"
+
+----------
+
 ### September 29, 2014 ###
 
 <table border=1>
