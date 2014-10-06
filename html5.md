@@ -458,7 +458,7 @@ The onFailure callback indicates the request to set the safe area failed.
             
       // Invoke the plugin method
       var safeAreaAmount = 0.0; //full border padding
-      OuyaSDK.setSafeArea(safeAreaAmount);
+      OuyaSDK.setSafeArea(safeAreaAmount, onSuccessSetSafeArea, onFailureSetSafeArea);
 ```
 
 ##### Shutdown #####
