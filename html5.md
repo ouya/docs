@@ -287,37 +287,170 @@ onKeyUp(playerNum, button) {
 }
 ```
 
-### OuyaController.showCursor ###
-
-Show will hide the cursor when false and show when true.
-
-```
-OuyaController.showCursor(show);
-```
-
 ### Plugin Methods ###
 
-```
-setDeveloperId(developerId, onSuccess, onFailure) {
-}
+The plugin methods are defined on the OuyaSDK object.
+
+```javascript
+      var OuyaSDK = new Object();
 ```
 
-```
-initOuyaPlugin(onSuccess, onFailure) {
-}
+##### SetDeveloperId #####
+
+The developer id is the first important information that must be set. The developer id is diplayed in the developer portal.
+
+The onSuccess callback will be invoked when the developer id has been set.
+
+The onFailure callback will be invoked if there was a problem setting the developer id.
+
+```javascript
+      // Plugin method definition
+      OuyaSDK.setDeveloperId = function(developerId, onSuccess, onFailure)
+      {
+        OuyaSDK.developerId = developerId;
+        OuyaSDK.onSuccess = onSuccess;
+        OuyaSDK.onFailure = onFailure;
+        OuyaSDK.method = "setDeveloperId";
+      };
+
+      // Invoke the plugin method
+      OuyaSDK.setDeveloperId(developerId, onSuccessSetDeveloperId, onFailureSetDeveloperId);
 ```
 
-```
-requestProducts(products, onSuccess, onFailure, onCancel) {
-}
+##### InitOuyaPlugin #####
+
+After the developer id has been set, initialize the OUYA Plugin.
+
+Upon success, the onSuccess callback will be invoked.
+
+If the initialization fails, the onFailure callback will be invoked.
+
+```javascript
+      // Plugin method definition
+      OuyaSDK.initOuyaPlugin = function(onSuccess, onFailure) {
+        OuyaSDK.onSuccess = onSuccess;
+        OuyaSDK.onFailure = onFailure;
+        OuyaSDK.method = "initOuyaPlugin";
+      };
+      
+      // Invoke the plugin method
+      OuyaSDK.initOuyaPlugin(onSuccessInitOuyaPlugin, onFailureInitOuyaPlugin);
 ```
 
-```
-requestPurchase(purchasable, onSuccess, onFailure, onCancel) {
-}
+##### RequestGamerInfo ######
+
+The gamer info contains the username and gamer uuid.
+
+The onSuccess callback receives the gamer info.
+
+The onFailure callback receives an error code and error message.
+
+The onCancel callback invokes if the request was cancelled.
+
+```javascript
+      // Plugin method definition
+      OuyaSDK.requestGamerInfo = function(onSuccess, onFailure, onCancel) {
+        OuyaSDK.onSuccess = onSuccess;
+        OuyaSDK.onFailure = onFailure;
+        OuyaSDK.onCancel = onCancel;
+        OuyaSDK.method = "requestGamerInfo";
+      };
+            
+      // Invoke the plugin method
+      var developerId = "[YOUR DEVELOPER ID]";
+      OuyaSDK.setDeveloperId(developerId, onSuccessSetDeveloperId, onFailureSetDeveloperId);
 ```
 
+##### RequestProducts #####
+
+The product info contains the description price information.
+
+The product parameter is passed an array of product identifiers.
+
+The onSuccess callback receives an array of product details.
+
+The onFailure callback receives an error code and error message.
+
+The onCancel callback invokes if the request was cancelled.
+
+```javascript
+      // Plugin method definition
+      OuyaSDK.requestProducts = function(products, onSuccess, onFailure, onCancel) {
+        OuyaSDK.products = products;
+        OuyaSDK.onSuccess = onSuccess;
+        OuyaSDK.onFailure = onFailure;
+        OuyaSDK.onCancel = onCancel;
+        OuyaSDK.method = "requestProducts";
+      };
+      
+      // Invoke the plugin method
+      var products = Array("YOUR_PRODUCT_1", "YOUR_PRODUCT_2", "YOUR_PRODUCT3");
+      OuyaSDK.requestProducts(products, onSuccessRequestProducts, onFailureRequestProducts, onCancelRequestProducts)
 ```
-requestReceipts(onSuccess, onFailure, onCancel) {
-}
+
+##### RequestPurchase #####
+
+The purchable parameter is the product identifier being purchased.
+
+The onSuccess callback indicates successful purchase.
+
+The onFailure callback indicates the purchase failed.
+
+The onCancel callback indicates the purchase was cancelled.
+
+```javascript
+      // Plugin method definition
+      OuyaSDK.requestPurchase = function(purchasable, onSuccess, onFailure, onCancel) {
+        OuyaSDK.purchasable = purchasable;
+        OuyaSDK.onSuccess = onSuccess;
+        OuyaSDK.onFailure = onFailure;
+        OuyaSDK.onCancel = onCancel;
+        OuyaSDK.method = "requestPurchase";
+      };
+      
+      // Invoke the plugin method
+      var purchasable = "YOUR_PRODUCT_ID";
+      OuyaSDK.requestPurchase(purchasable, onSuccessRequestPurchase, onFailureRequestPurchase, onCancelRequestPurchase);
+      		               return;
+```
+
+##### RequestReceipts #####
+
+The onSuccess callback receives an array of receipts that the gamer purchased from the developer.
+
+The onSuccess callback receives an error code and error message about why the request failed.
+
+The onCancel callback indicates the request was cancelled.
+
+```javascript
+      // Plugin method definition
+      OuyaSDK.requestReceipts = function(onSuccess, onFailure, onCancel) {
+        OuyaSDK.onSuccess = onSuccess;
+        OuyaSDK.onFailure = onFailure;
+        OuyaSDK.onCancel = onCancel;
+        OuyaSDK.method = "requestReceipts";
+      };
+      
+      // Invoke the plugin method
+      OuyaSDK.requestReceipts(onSuccessRequestReceipts, onFailureRequestReceipts, onCancelRequestReceipts);
+```
+
+##### Shutdown #####
+
+Shutdown provides a way to exit the HTML5 application.
+
+The onSuccess callback indicates the shutdown is about to happen.
+
+The onFailure callback indicates the request to shutdown failed.
+
+```javascript
+      // Plugin method definition
+      OuyaSDK.shutdown = function(onSuccess, onFailure) {
+        OuyaSDK.onSuccess = onSuccess;
+        OuyaSDK.onFailure = onFailure;
+        OuyaSDK.method = "shutdown";
+      }
+      
+      // Invoke the plugin method
+      OuyaSDK.shutdown(onSuccessShutdown, onFailureShutdown);
 ```
