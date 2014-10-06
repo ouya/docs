@@ -26,6 +26,12 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * <a target=_blank href="https://github.com/ouya/docs/blob/master/html5.md">[HTML5]</a> - New HTML5 ODK support for Controllers, In-App-Purchases, and Repackaging for the OUYA Store
 
+* <a target=_blank href="http://www.google.com/intl/en/chrome/browser/canary.html">[Google Canary]</a> - Install the latest version of Chromium to access debug tools
+
+* <a target=_blank href="https://developer.chrome.com/devtools/docs/remote-debugging">[HTML5 Remote Debugging]</a> - Debug from your desktop while HTML5 is running on your OUYA
+
+* <a target=_blank href="https://chrome.google.com/webstore/detail/adb/dpngiggdglpdnjdoaefidgiigpemgage">[ADB Add-On]</a> - Full development IDE for remote debugging on OUYA
+
 <a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=3m38s">(3:38)</a> - Jared hosts "Tim said" and "Just the Facts"
 
 <a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=17m40s">(17:40)</a> - Quick overview of HTML5
