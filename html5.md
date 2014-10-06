@@ -357,8 +357,7 @@ The onCancel callback invokes if the request was cancelled.
       };
             
       // Invoke the plugin method
-      var developerId = "[YOUR DEVELOPER ID]";
-      OuyaSDK.setDeveloperId(developerId, onSuccessSetDeveloperId, onFailureSetDeveloperId);
+      OuyaSDK.requestGamerInfo(onSuccessRequestGamerInfo, onFailureRequestGamerInfo, onCancelRequestGamerInfo);
 ```
 
 ##### RequestProducts #####
