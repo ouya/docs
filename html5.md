@@ -8,8 +8,6 @@
 
 [Android SDK](setup.md)
 
-[MacDown](http://macdown.uranusjr.com/) for markup editing
-
 # Forums #
 
 [Html5 on OUYA Forums](http://forums.ouya.tv/categories/html5-on-ouya)
