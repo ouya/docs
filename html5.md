@@ -182,7 +182,7 @@ Val is the float value of the input for that axis.
 
 
 ```
-onGenericMotionEvent(playerNum, axis, val) {
+function onGenericMotionEvent(playerNum, axis, val) {
    if (axis == OuyaController. AXIS_LS_X) {
    }
    if (axis == OuyaController. AXIS_LS_Y) {
@@ -224,7 +224,7 @@ The Integer Button is the button in the event.
 The key down event indicates a button was just pressed.
 
 ```
-onKeyDown(playerNum, button) {   
+function onKeyDown(playerNum, button) {   
    if (button == OuyaController.BUTTON_O) {
    }
    if (button == OuyaController.BUTTON_U) {
@@ -257,7 +257,7 @@ onKeyDown(playerNum, button) {
 The key up event indicates a button was just released.
 
 ```
-onKeyUp(playerNum, button) {
+function onKeyUp(playerNum, button) {
    if (button == OuyaController.BUTTON_O) {
    }
    if (button == OuyaController.BUTTON_U) {
