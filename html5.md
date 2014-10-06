@@ -16,7 +16,7 @@
 
 ## Icons ##
 
-Icons are placed in the drawable resource folders, using the same locations specified in the content review guidelines.
+Icons are placed in the drawable resource folders, using the same locations specified in the [content review guidelines](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#icons).
 
 ## Chromium ##
 
@@ -74,7 +74,7 @@ Location: `ContentShell/res/values/strings.xml`
 
 ##### `icons` #####
 
-All apps will need to customize the icons which have the same dimensions as specified in the [content review guidelines](content-review-guidelines.md).
+All apps will need to customize the icons which have the same dimensions as specified in the [content review guidelines](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#icons).
 
 Location: `ContentShell/res/drawable/app_icon.png`
 
