@@ -25,6 +25,7 @@
 * [Corona](corona.md)
 * [Game Maker](game-maker.md)
 * [Goo](goo.md)
+* [HTML5](https://github.com/ouya/docs/blob/master/html5.md)
 * [libGDX](libGDX.md)
 * [Marmalade](marmalade.md)
 * [MonoGame](mono-game.md)
