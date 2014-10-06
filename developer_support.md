@@ -28,6 +28,10 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 <a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=3m38s">(3:38)</a> - Jared hosts "Tim said" and "Just the Facts"
 
+<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=17m40s">(17:40)</a> - Quick overview of HTML5
+
+<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=24m12s">(24:12)</a> - Kellee requesting feedback for officehours@ouya.tv
+
 ----------
 
 ### September 29, 2014 ###
