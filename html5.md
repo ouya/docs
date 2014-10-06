@@ -10,6 +10,10 @@
 
 [MacDown](http://macdown.uranusjr.com/) for markup editing
 
+# Forums #
+
+[Html5 on OUYA Forums](http://forums.ouya.tv/categories/html5-on-ouya)
+
 # Getting Started #
 
 ## Icons ##
@@ -410,7 +414,6 @@ The onCancel callback indicates the purchase was cancelled.
       // Invoke the plugin method
       var purchasable = "YOUR_PRODUCT_ID";
       OuyaSDK.requestPurchase(purchasable, onSuccessRequestPurchase, onFailureRequestPurchase, onCancelRequestPurchase);
-      		               return;
 ```
 
 ##### RequestReceipts #####
