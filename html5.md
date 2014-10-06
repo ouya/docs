@@ -435,6 +435,32 @@ The onCancel callback indicates the request was cancelled.
       OuyaSDK.requestReceipts(onSuccessRequestReceipts, onFailureRequestReceipts, onCancelRequestReceipts);
 ```
 
+##### SetSafeArea #####
+
+The safe area is explained in detail in the [content-review-guidelines](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#safe-zone).
+
+The safe area for HTML5 apps can be adjusted with setSafeArea.
+
+The amount parameter adds full padding with 0.0 and no padding with 1.0. 
+
+The onSuccess callback indicates the safe area was set.
+
+The onFailure callback indicates the request to set the safe area failed.
+
+```javascript
+      // Plugin method definition
+      OuyaSDK.setSafeArea = function(amount, onSuccess, onFailure) {
+        OuyaSDK.safeAreaAmount = amount;
+        OuyaSDK.onSuccess = onSuccess;
+        OuyaSDK.onFailure = onFailure;
+        OuyaSDK.method = "setSafeArea";
+      }
+            
+      // Invoke the plugin method
+      var safeAreaAmount = 0.0; //full border padding
+      OuyaSDK.setSafeArea(safeAreaAmount);
+```
+
 ##### Shutdown #####
 
 Shutdown provides a way to exit the HTML5 application.
