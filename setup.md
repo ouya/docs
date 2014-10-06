@@ -334,3 +334,7 @@ For games using the Android UI Framework, the Android documentation from Google 
 ##### Video Capture
 
 For capturing video of your game, we recommend using [Elgato](http://www.elgato.com/) and the [capture software](http://www.elgato.com/gaming/game-capture-hd/support/update). Here is a setup and tutorial [video](http://www.youtube.com/watch?v=-Igb4IcpbDY).
+
+##### Documentation
+
+Documentation is a key part of the software development process for apps and games. Markup is a common format for documentation and is also used heavily in the OUYA documentation. [MacDown](http://macdown.uranusjr.com/) is a free markup editor for the Mac.
