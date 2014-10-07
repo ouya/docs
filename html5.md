@@ -142,7 +142,7 @@ Location: `ContentShell/res/values/strings.xml`
 
 ### ```4_Sign``` ###
 
-4_sign uses the `jarsigner` to certify your game/app with your `keystore`. The keystore is used by the auto-updater and ensures a 3rd party is not monkeying with your app data. After publishing in the OUYA Store, make a backup of your keystore as it must be used in all future updates of the app/game.
+4_sign uses the `jarsigner` to certify your game/app with your `keystore`. `You must create a keystore before publishing in the OUYA Store.` The default sign script comes with a debug keystore that will not be accepted in the final publishing process. The debug keystore is perfectly fine to use during development. The keystore is used by the auto-updater and ensures a 3rd party is not monkeying with your app data. After creating a keystore for your game, make a backup of your keystore as it must be used in all future updates of the app/game. If the keystore is ever lost, users will need to uninstall your game in order to get updates. We recommend emailing yourself a copy of the keystore. After making the keystore, customize the sign script to use your keystore, password, and alias.
 
 `jarsigner` requires `JDK6` to package properly. You may need to customize the script to explicitly point at the `JDK6` version of `jarsigner`.
 
