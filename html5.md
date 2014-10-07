@@ -14,6 +14,16 @@
 
 # Getting Started #
 
+<table border=1>
+ <tr>
+ <td>HTML5 Controller and IAP Support (6:57)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=JnJQa7XDNAI" target="_blank">
+<img src="http://img.youtube.com/vi/JnJQa7XDNAI/0.jpg" alt="HTML5 Controller and IAP Support" width="240" height="180" border="10" /></a>
+ </td>
+ <td></td>
+ </tr>
+</table>
+
 ## Icons ##
 
 Icons are placed in the drawable resource folders, using the same locations specified in the [content review guidelines](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#icons).
