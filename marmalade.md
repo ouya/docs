@@ -67,7 +67,7 @@ Open the project properties for the configurations
  to "Visual Studio 2012 (v110)"
 ```
 
-* Note: If you find your binary resources not being compiled, set the target platform to 'GCC ARM Debug' and start the debugger. The 'data-ram/data-gles1' binary resources will be generated during the debug session.
+* Note: If you find your binary resources not being compiled, set the target platform to 'GCC ARM Debug' and start the debugger. The 'data-ram/data-gles1' binary resources will be generated during the debug session. [Details](https://answers.madewithmarmalade.com/questions/16743/marmalade-bin-files-are-not-compiling.html)
 
 * Note: If you have Visual Studio set to launch 'As Administrator', Marmalade won't be able to auto-launch Visual Studio.
 
