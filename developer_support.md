@@ -6,6 +6,37 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 ----------
 
+### October 13, 2014 ###
+
+<table border=1>
+
+ <tr>
+ <td>OUYA DEV SUPPORT (00:53:50)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=6r84DLrxUHo" target="_blank">
+<img src="http://img.youtube.com/vi/6r84DLrxUHo/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 10/13" width="240" height="180" border="10" /></a>
+ </td>
+ <td>Intro to HTML5<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=JnJQa7XDNAI" target="_blank">
+<img src="http://img.youtube.com/vi/JnJQa7XDNAI/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 10/13" width="240" height="180" border="10" /></a>
+ </td>
+ </tr>
+
+</table>
+
+* Event: <a target=_blank href="http://community.thefoundry.co.uk/discussion/topic.aspx?f=3&t=92541">[The Foundary Halloween Contest]</a> - Oct 31st, 2014.
+
+* [HTML5](https://github.com/ouya/docs/blob/master/html5.md) - OUYA-Everywhere and In-App-Purchase support for publishing HTML5 Games
+
+* [Construct 2](forums.ouya.tv/discussion/4013/sticky-getting-input-working-with-construct-2) - OE-Input support for Construct 2, expanding from HTML5
+
+* [Marmalade](https://github.com/ouya/docs/blob/master/marmalade.md) - Upgraded to ODK 1.0.14 with OE-Input and IAP for the Marmalade Engine
+
+<a target=_blank href="https://www.youtube.com/watch?v=6r84DLrxUHo&t=3m38s">(2:36)</a> - Jared with "Just the Facts"
+
+<a target=_blank href="https://www.youtube.com/watch?v=6r84DLrxUHo&t=35m19s">(35:19)</a> - New HTML5, Construct 2, and Marmalade ODK support
+
+----------
+
 ### October 6, 2014 ###
 
 <table border=1>
