@@ -7,15 +7,33 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Marmala
 
 @OUYA - (Marmalade on OUYA Forums) - http://forums.ouya.tv/categories/marmalade-on-ouya<br/>
 
-## Guide
+# Getting Started #
+
+<table border=1>
+ <tr>
+ <td>OUYA Marmalade Controller and IAP Support (8:09)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=HvU-eoLyLYg" target="_blank">
+<img src="http://img.youtube.com/vi/HvU-eoLyLYg/0.jpg" alt="OUYA Marmalade Controller and IAP Support" width="240" height="180" border="10" /></a>
+ </td>
+ <td></td>
+ </tr>
+</table>
 
 ### Examples
 
-<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/VirtualController"><b>Virtual Controller</b></a> - Maps OUYA controllers to multiple virtual controllers
-
 <a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/MarmaladeODK"><b>Marmalade ODK Extension</b></a> - OUYA Controller and In-App-Purchase extension for Marmalade
 
-<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/InAppPurchases"><b>InAppPurchases</b></a> - In-App-Purchase uses the ODK extension
+### Virtual Controller ###
+
+The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/VirtualController) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated.
+
+![Virtual Controller](marmalade/image_1.png)
+
+### In-App-Purchases ###
+
+The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/InAppPurchases) example uses the ODK to access gamer info, purchasing, and receipts.
+
+![In-App-Purchases](marmalade/image_2.png)
 
 ### Resources
 
