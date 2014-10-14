@@ -21,7 +21,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  </td>
  </tr>
  <tr>
- <td>OUYA Marmalade Controller and IAP Support (8:09)<br/>
+ <td>Intro to Marmalade (8:09)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=HvU-eoLyLYg" target="_blank">
 <img src="http://img.youtube.com/vi/HvU-eoLyLYg/0.jpg" alt="OUYA Marmalade Controller and IAP Support" width="240" height="180" border="10" /></a>
  </td>
