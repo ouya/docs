@@ -19,22 +19,6 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Marmala
  </tr>
 </table>
 
-### Examples
-
-<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/MarmaladeODK"><b>Marmalade ODK Extension</b></a> - OUYA Controller and In-App-Purchase extension for Marmalade
-
-### Virtual Controller ###
-
-The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/VirtualController) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated.
-
-![Virtual Controller](marmalade/image_1.png)
-
-### In-App-Purchases ###
-
-The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/InAppPurchases) example uses the ODK to access gamer info, purchasing, and receipts.
-
-![In-App-Purchases](marmalade/image_2.png)
-
 ### Resources
 
 @Marmalade - (Forums) - https://developer.madewithmarmalade.com/develop/announce-and-discuss
@@ -59,7 +43,7 @@ Be sure to checkout the <a target=_blank href="https://github.com/ouya/ouya-sdk-
 
 #### Windows
 
-Switch to your preferred Marmalade SDK version by running 's3eConfig.exe' found in the desired version 'C:\Marmalade\7.0\s3e\bin' folder.
+Switch to your preferred Marmalade SDK version by running 's3eConfig.exe' found in the desired version 'C:\Marmalade\7.4\s3e\bin' folder.
 
 Be sure to set the 'NDK_ROOT' in the My Computer->Properties->Advanced System Settings->Environment Variables.
 
@@ -142,11 +126,7 @@ Before calling the Marmalade ODK extension, an application should check if the e
 	}
 ```
 
-If the Marmalade ODK extension is available, initialize it with the developer id found in the OUYA developer portal.
-
-```
-OuyaPlugin_asyncSetDeveloperId("310a8f51-4d6e-4ae5-bda0-b93878e5f5d0");
-```
+If the Marmalade ODK extension is available, [initialize](#ouyaplugin_asyncsetdeveloperid) it with the developer id found in the [OUYA developer portal](http://devs.ouya.tv).
 
 ### Virtual Controller Example
 
@@ -161,22 +141,95 @@ Since the application will be polling the Marmalade ODK extension for input, mak
 ```
 	// loop while application has not quit
 	while (!s3eDeviceCheckQuitRequest())
-	{
-		// handle polling the extension for controller input
-		handleInput();
-		
+	{	
 		// handle drawing the ui and invoking in-app-purchases
 		render();
+
+		// handle polling the extension for controller input
+		handleInput();
 
 		// yield in the main loop to avoid killing the processor
 		s3eDeviceYield(0);
 	}
 ```
 
-To detect pressed and released events, make sure the input frame is started and the top of the frame in the main loop.
+When handling input detecting button down and button released events, make sure you detect in a tight loop and then clear the button state afterward. You want to avoid taking time like doing rendering when detecting button up and down events as they might be missed.
 
 ```
-OuyaController_startOfFrame();
+void handleInput()
+{
+	for (int index = 0; index < OuyaController_MAX_CONTROLLERS; ++index)
+	{
+		m_controllers[index].HandleInput();
+	}
+
+	OuyaPlugin_clearButtonStates();
+}
+```
+
+I.e. in the HandleInput method, here is a check for the Menu Button press.
+
+The menu button sprite is highlighted for a second when detected.
+
+```
+void VirtualControllerSprite::HandleInput()
+{
+	if (GetButtonUp(OuyaController_BUTTON_MENU))
+	{
+		_timerMenuDetected = std::clock();
+	}
+}
+```
+
+## `OuyaPlugin_isPressed` ##
+
+OuyaPlugin_isPressed returns if the button is either up or down and can be called at any time.
+
+bool GetButton(int playerNum, int button)
+{
+	bool val = OuyaPlugin_isPressed(playerNum, button);
+	return val;
+}
+
+## `OuyaPlugin_isPressedDown` ##
+
+OuyaPlugin_isPressedDown returns true if a button was just pressed. Make sure to group pressed logic together and invoke `OuyaPlugin_clearButtonStates` afterward to avoid missing pressed events.
+
+bool GetButtonDown(int playerNum, int button)
+{
+	bool val = OuyaPlugin_isPressedDown(playerNum, button);
+	return val;
+}
+
+## `OuyaPlugin_isPressedUp` ##
+
+OuyaPlugin_isPressedUp returns true if a button was just released. Make sure to group released logic together and invoke `OuyaPlugin_clearButtonStates` afterward to avoid missing released events.
+
+bool GetButtonUp(int playerNum, int button)
+{
+	bool val = OuyaPlugin_isPressedUp(playerNum, button);
+	return val;
+}
+
+## `OuyaPlugin_clearButtonStates` ##
+
+After button down and up detection logic completes, clear the button states to avoid missing any pressed and released events. If any delays occur between checking pressed and released states before clearing the state, a window will open where input could be lost.
+
+```
+OuyaPlugin_clearButtonStates();
+```
+
+## `OuyaPlugin_getAxis` ##
+
+Axis values return as an int and need to be cast to a float to get the expected in the -1 to 1 range.
+
+```
+float GetAxis(int playerNum, int axis)
+{
+	int val = OuyaPlugin_getAxis(playerNum, axis);
+	float result = *(reinterpret_cast<float*>(&val));
+	return result;
+}
 ```
 
 Axis constants
@@ -207,82 +260,6 @@ Button constants
 	  static const int BUTTON_R3 = 107;
 	  static const int BUTTON_L3 = 106;
 ```
-
-To check for input from a controller, select the controller by index.
-
-```
-if (OuyaController_selectControllerByPlayer(index))
-```
-
-Axis values are returned -256 to 256 and divide by 256.0f to normalize the range -1 to 1.
-
-```
-OuyaController_getAxisValue(axis) / 256.0f
-```
-
-Check the button state by using the button constants.
-
-```
-if (OuyaController_getButton(button))
-```
-
-### In App Purchase Example
-
-To build the example switch to the folder 'Marmalade\InAppPurchases' in the Marmalade examples.
-
-##### Windows
-
-Double-click 'InAppPurchases.mkb' which will open the project in Visual Studio.
-
-In Visual Studio, set the build target to 'GCC ARM Debug' and build the project.
-
-In Visual Studio, set the build target to 'GCC X86 ANDROID Release' and build and run which will launch the deploy tool.
-
-The the debug dialog select build to deploy 'ARM GCC Debug' or 'ARM GCC Release' and hit 'Next Stage &gt;'.
-
-The 'Default' configuration should be selected and hit 'Next Stage &gt;'.
-
-Select the 'Android' platform and hit 'Next Stage &gt;'.
-
-For the 'Do Action' pick 'Package, Install, and Run'.
-
-Hit 'Deploy All' to build the Android package.
-
-The deploy tool will generate an Android package.
-
-If you want to manually deploy the Android package with adb commands you'll be able to install on the OUYA.
-
-```
-adb install -r the.apk
-```
-
-#### Project Files
-
-InAppPurchases.mkb - The build and deployment configuration, double-click to open Visual Studio
-
-app.icf - Override the default memory limits
-
-Application.h/cpp - Holds an instance of the UI, meant to hold application variables
-
-ApplicationCallbacksFetchGamerUUID.h/cpp - Handles callbacks coming from extension to the application with the result of FetchGamerUUID
-
-ApplicationCallbacksRequestProducts.h/cpp - Handles callbacks coming from extension to the application with the result of RequestProducts
-
-ApplicationCallbacksRequestPurchase.h/cpp - Handles callbacks coming from extension to the application with the result of RequestPurchase
-
-ApplicationCallbacksRequestReceipts.h/cpp - Handles callbacks coming from extension to the application with the result of RequestReceipts
-
-ApplicationProduct.h/cpp - A container to hold the ODK products that's safe to access in the Application
-
-ApplicationReceipt.h/cpp - A container to hold the ODK receipts that's safe to access in the Application
-
-Main.cpp - The Application main loop
-
-TextButton.h/cpp - A UI control for displaying text that pressing the 'O' button will fire an event
-
-TextLabel.h/cpp - A UI control for displaying text
-
-UI.h/cpp - Displays the user interface and handles invoking the IAP events here
 
 #### Callbacks
 
@@ -478,3 +455,81 @@ The error callback indicates the user aborted the operation and the event name i
 ```
 void ApplicationCallbacksRequestReceipts::OnCancel()
 ```
+
+### Examples
+
+<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/MarmaladeODK"><b>Marmalade ODK Extension</b></a> - OUYA Controller and In-App-Purchase extension for Marmalade
+
+### Virtual Controller ###
+
+The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/VirtualController) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated. The Virtual Controller example includes support for OUYA-Everywhere.
+
+![Virtual Controller](marmalade/image_1.png)
+
+### In-App-Purchases ###
+
+The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/InAppPurchases) example uses the ODK to access gamer info, purchasing, and receipts.
+
+![In-App-Purchases](marmalade/image_2.png)
+
+### In App Purchase Example
+
+To build the example switch to the folder 'Marmalade\InAppPurchases' in the Marmalade examples.
+
+##### Windows
+
+Double-click 'InAppPurchases.mkb' which will open the project in Visual Studio.
+
+In Visual Studio, set the build target to 'GCC ARM Debug' and build the project.
+
+In Visual Studio, set the build target to 'GCC X86 ANDROID Release' and build and run which will launch the deploy tool.
+
+The the debug dialog select build to deploy 'ARM GCC Debug' or 'ARM GCC Release' and hit 'Next Stage &gt;'.
+
+The 'Default' configuration should be selected and hit 'Next Stage &gt;'.
+
+Select the 'Android' platform and hit 'Next Stage &gt;'.
+
+For the 'Do Action' pick 'Package, Install, and Run'.
+
+Hit 'Deploy All' to build the Android package.
+
+The deploy tool will generate an Android package.
+
+If you want to manually deploy the Android package with adb commands you'll be able to install on the OUYA.
+
+```
+adb install -r the.apk
+```
+
+#### Project Files
+
+InAppPurchases.mkb - The build and deployment configuration, double-click to open Visual Studio
+
+app.icf - Override the default memory limits
+
+Application.h/cpp - Holds an instance of the UI, meant to hold application variables
+
+ApplicationCallbacksInitOuyaPlugin.h/cpp - Handles callbacks for success or failure events when initializing the OUYA plugin
+
+ApplicationCallbacksRequestGamerInfo.h/cpp - Handles callbacks coming from extension to the application with the result of RequestGamerInfo
+
+ApplicationCallbacksRequestProducts.h/cpp - Handles callbacks coming from extension to the application with the result of RequestProducts
+
+ApplicationCallbacksRequestPurchase.h/cpp - Handles callbacks coming from extension to the application with the result of RequestPurchase
+
+ApplicationCallbacksRequestReceipts.h/cpp - Handles callbacks coming from extension to the application with the result of RequestReceipts
+
+ApplicationCallbacksSetDeveloperId.h/cpp - Handles callbacks for success or failure events when setting the developer id
+
+ApplicationProduct.h/cpp - A container to hold the ODK products that's safe to access in the Application
+
+ApplicationReceipt.h/cpp - A container to hold the ODK receipts that's safe to access in the Application
+
+Main.cpp - The Application main loop
+
+TextButton.h/cpp - A UI control for displaying text that pressing the 'O' button will fire an event
+
+TextLabel.h/cpp - A UI control for displaying text
+
+UI.h/cpp - Displays the user interface and handles invoking the IAP events here
