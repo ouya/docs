@@ -15,7 +15,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=6r84DLrxUHo" target="_blank">
 <img src="http://img.youtube.com/vi/6r84DLrxUHo/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 10/13" width="240" height="180" border="10" /></a>
  </td>
- <td>Intro to HTML5<br/>
+ <td>Intro to HTML5 (6:57)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=JnJQa7XDNAI" target="_blank">
 <img src="http://img.youtube.com/vi/JnJQa7XDNAI/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 10/13" width="240" height="180" border="10" /></a>
  </td>
