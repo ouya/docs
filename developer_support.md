@@ -20,7 +20,13 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <img src="http://img.youtube.com/vi/JnJQa7XDNAI/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 10/13" width="240" height="180" border="10" /></a>
  </td>
  </tr>
-
+ <tr>
+ <td>OUYA Marmalade Controller and IAP Support (8:09)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=HvU-eoLyLYg" target="_blank">
+<img src="http://img.youtube.com/vi/HvU-eoLyLYg/0.jpg" alt="OUYA Marmalade Controller and IAP Support" width="240" height="180" border="10" /></a>
+ </td>
+ <td></td>
+ </tr>
 </table>
 
 * Event: <a target=_blank href="http://community.thefoundry.co.uk/discussion/topic.aspx?f=3&t=92541">[The Foundary Halloween Contest]</a> - Oct 31st, 2014.
