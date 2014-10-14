@@ -185,31 +185,37 @@ void VirtualControllerSprite::HandleInput()
 
 OuyaPlugin_isPressed returns if the button is either up or down and can be called at any time.
 
+```
 bool GetButton(int playerNum, int button)
 {
 	bool val = OuyaPlugin_isPressed(playerNum, button);
 	return val;
 }
+```
 
 ## `OuyaPlugin_isPressedDown` ##
 
 OuyaPlugin_isPressedDown returns true if a button was just pressed. Make sure to group pressed logic together and invoke `OuyaPlugin_clearButtonStates` afterward to avoid missing pressed events.
 
+```
 bool GetButtonDown(int playerNum, int button)
 {
 	bool val = OuyaPlugin_isPressedDown(playerNum, button);
 	return val;
 }
+```
 
 ## `OuyaPlugin_isPressedUp` ##
 
 OuyaPlugin_isPressedUp returns true if a button was just released. Make sure to group released logic together and invoke `OuyaPlugin_clearButtonStates` afterward to avoid missing released events.
 
+```
 bool GetButtonUp(int playerNum, int button)
 {
 	bool val = OuyaPlugin_isPressedUp(playerNum, button);
 	return val;
 }
+```
 
 ## `OuyaPlugin_clearButtonStates` ##
 
@@ -369,7 +375,7 @@ void ApplicationCallbacksRequestGamerInfo::OnFailure(int errorCode, const std::s
 void ApplicationCallbacksRequestGamerInfo::OnCancel()
 ```
 
-#### Request Products
+## `OuyaPlugin_asyncOuyaRequestProducts` ##
 
 Pass an array of JSON to the Marmalade ODK Extension to get the details of the product list and invoke the callbacks upon completion.
 
@@ -398,7 +404,7 @@ The error callback indicates the user aborted the operation and the event name i
 void ApplicationCallbacksRequestProducts::OnCancel()
 ```
 
-#### Request Purchase
+## `OuyaPlugin_asyncOuyaRequestPurchase` ##
 
 Invoke the Marmalade ODK Extension to request purchase for the identifier and invoke the callbacks upon completion.
 
@@ -427,7 +433,7 @@ The error callback indicates the user aborted the operation and the event name i
 void ApplicationCallbacksRequestPurchase::OnCancel()
 ```
 
-#### Request Receipts
+## `OuyaPlugin_asyncOuyaRequestReceipts` ##
 
 Invoke the Marmalade ODK Extension to request receipts and invoke the callbacks upon completion.
 
