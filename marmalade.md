@@ -299,7 +299,7 @@ void MethodOnCancel(cancelEvent* event)
 
 The callback process begins by first invoking methods in the Marmalade ODK extension.
 
-Methods that retrieve information asyncronously need callbacks to return the data.
+Methods that retrieve information asynchronously need callbacks to return the data.
 
 The supplied callbacks are invoked upon completion of the extension operation.
 
@@ -309,76 +309,69 @@ The failure callback will return if an error was detected.
 
 The cancel callback will invoke if the user cancelled the operation.
 
-'OuyaPlugin_asyncOuyaFetchGamerUUID' invokes in the extension in a separate memory space.
+## `OuyaPlugin_asyncSetDeveloperId` ##
+
+Before initializing the OUYA Plugin, set the developer id from the [developer portal](http://devs.ouya.tv).
+
+The success event is invoked on success.
+
+The failure event is called if there was a problem.
 
 ```
-OuyaPlugin_asyncOuyaFetchGamerUUID(
-	Application::m_ui.m_callbacksFetchGamerUUID->GetSuccessEvent(),
-	Application::m_ui.m_callbacksFetchGamerUUID->GetFailureEvent(),
-	Application::m_ui.m_callbacksFetchGamerUUID->GetCancelEvent());
+	OuyaPlugin_asyncSetDeveloperId("310a8f51-4d6e-4ae5-bda0-b93878e5f5d0",
+		Application::m_ui.m_callbacksSetDeveloperId->GetSuccessEvent(),
+		Application::m_ui.m_callbacksSetDeveloperId->GetFailureEvent());
 ```
 
-The success, failure, and cancel events have accessors for the s3eCallback callbacks.
+## `OuyaPlugin_initOuyaPlugin` ##
+
+After the developer id has been set, the plugin should be initialized.
+
+Avoid invoking IAP methods until the OuyaPlugin has been initialized.
+
+The success event is invoked after IAP has been initialized.
+
+The failure event happens if there was a problem. 
 
 ```
-s3eCallback ApplicationCallbacksFetchGamerUUID::GetSuccessEvent()
-s3eCallback ApplicationCallbacksFetchGamerUUID::GetFailureEvent()
-s3eCallback ApplicationCallbacksFetchGamerUUID::GetCancelEvent()
+	OuyaPlugin_initOuyaPlugin(Application::m_ui.m_callbacksInitOuyaPlugin->GetSuccessEvent(),
+		Application::m_ui.m_callbacksInitOuyaPlugin->GetFailureEvent());
 ```
 
-When the Marmalade ODK has completed FetchGamerUUID, it invokes the Application callback for onSuccess, onFailure, or onCancel.
+## `OuyaPlugin_asyncOuyaRequestGamerInfo` ##
 
-The callback method receives an event which holds data that needs to be copied to application memory.
-
-```
-void FetchGamerUuidOnSuccess(s3eFetchGamerUuidSuccessEvent* event)
-void FetchGamerUuidOnFailure(s3eFetchGamerUuidFailureEvent* event)
-void FetchGamerUuidOnCancel(s3eFetchGamerUuidCancelEvent* event)
-```
-
-The original call to Invoke Fetch GamerUUID passed 3 potential callbacks. The resulting callback is invoked after the data is copied.
+GamerInfo provides access to the gamer username and uuid.
 
 ```
-void ApplicationCallbacksFetchGamerUUID::OnSuccess(const std::string& gamerUUID)
-void ApplicationCallbacksFetchGamerUUID::OnFailure(int errorCode, const std::string& errorMessage)
-void ApplicationCallbacksFetchGamerUUID::OnCancel()
+	class GamerInfo
+	{
+	public:
+		std::string Username;
+		std::string Uuid;
+	};
 ```
 
-When the gamerUUID string is received, it's then passed to the UI to display.
+The success event indicates success which also provides the gamer info.
 
-The UI also has a message field which displays the callback details.
+The failure event indicates a problem with error code and error message.
 
-```
-Application::m_ui.SetMessage("ApplicationCallbacksFetchGamerUUID::OnCancel");
-```
+The cancel event indicates the user cancelled the request.
 
-#### Fetch Gamer UUID
-
-Invokes the Marmalade ODK Extension to get the Gamer UUID and invokes the respective callback on completion.
+Invoking request gamer info takes the success, failure, and cancel event callbacks.
 
 ```
-OuyaPlugin_asyncOuyaFetchGamerUUID(
-	Application::m_ui.m_callbacksFetchGamerUUID->GetSuccessEvent(),
-	Application::m_ui.m_callbacksFetchGamerUUID->GetFailureEvent(),
-	Application::m_ui.m_callbacksFetchGamerUUID->GetCancelEvent());
+				OuyaPlugin_asyncOuyaRequestGamerInfo(
+					Application::m_ui.m_callbacksRequestGamerInfo->GetSuccessEvent(),
+					Application::m_ui.m_callbacksRequestGamerInfo->GetFailureEvent(),
+					Application::m_ui.m_callbacksRequestGamerInfo->GetCancelEvent());
 ```
 
-The success callback passes the retrieved gamerUUID, which is passed to the UI.
+When the Marmalade ODK has completed FetchGamerInfo, it invokes the Application callback for onSuccess, onFailure, or onCancel.
 
 ```
-void ApplicationCallbacksFetchGamerUUID::OnSuccess(const std::string& gamerUUID)
-```
-
-The failure callback passes an error code and string message about the failure, which is passed to the UI.
-
-```
-void ApplicationCallbacksFetchGamerUUID::OnFailure(int errorCode, const std::string& errorMessage)
-```
-
-The error callback indicates the user aborted the operation and the event name is passed to the UI.
-
-```
-void ApplicationCallbacksFetchGamerUUID::OnCancel()
+void ApplicationCallbacksRequestGamerInfo::OnSuccess(const OuyaSDK::GamerInfo& gamerInfo)
+void ApplicationCallbacksRequestGamerInfo::OnFailure(int errorCode, const std::string& errorMessage)
+void ApplicationCallbacksRequestGamerInfo::OnCancel()
 ```
 
 #### Request Products
