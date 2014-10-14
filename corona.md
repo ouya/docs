@@ -111,9 +111,6 @@ Outlaw IDE - http://outlawgametools.com/outlaw-code-editor-and-project-manager/
 
 #Full Document
 
-### Authors
-Tim Graupmann (tim@tagenigma.com)
-
 ### Audience
 The ouya-sdk-examples are targeted towards Corona Enterprise users intending to publish to the OUYA platform.
 
