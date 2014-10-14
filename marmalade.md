@@ -128,7 +128,7 @@ Before calling the Marmalade ODK extension, an application should check if the e
 
 If the Marmalade ODK extension is available, [initialize](#ouyaplugin_asyncsetdeveloperid) it with the developer id found in the [OUYA developer portal](http://devs.ouya.tv).
 
-### Virtual Controller Example
+### Input ###
 
 Input comes from the Marmalade ODK Extension. Include the ODK header to get access to the extension.
 
@@ -462,7 +462,7 @@ void ApplicationCallbacksRequestReceipts::OnCancel()
 
 ### Virtual Controller ###
 
-The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/VirtualController) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated. The Virtual Controller example includes support for OUYA-Everywhere.
+The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/VirtualController) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated. The Virtual Controller example includes support for [OUYA-Everywhere](ouya-everywhere.md).
 
 ![Virtual Controller](marmalade/image_1.png)
 
