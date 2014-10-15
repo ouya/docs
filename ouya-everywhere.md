@@ -7,6 +7,7 @@ The OUYA Everywhere initiative delivers OUYA to gamers wherever they play - whet
 OUYA Everywhere has engine-specific documentation for supported engines.
 
 * [OUYA Everywhere on Android Java](https://github.com/ouya/docs/blob/master/ouya-everywhere-android-java/ouya-everywhere-android-java.md)
+* [OUYA Everywhere on Corona](https://github.com/ouya/docs/blob/master/corona.md)
 * [OUYA Everywhere on HTML5](https://github.com/ouya/docs/blob/master/html5.md)
 * [OUYA Everywhere on Marmalade](https://github.com/ouya/docs/blob/master/marmalade.md)
 * [OUYA Everywhere on MonoGame](https://github.com/ouya/docs/blob/master/ouya-everywhere-monogame/ouya-everywhere-monogame.md)
