@@ -76,11 +76,6 @@
  
 </table>
 
-<table border="1"><tr><td>
-In most cases you can install the latest version of the Android SDK.<br/>
-Android SDK Latest - http://developer.android.com/sdk/index.html<br/>
-</td></tr></table>
-
 ##### Preliminary Instructions
 
 To fully complete the setup, you will need:
@@ -100,13 +95,23 @@ Java `JDK6` is used in the signing process and the Java runtime is necessary to 
 
 [JDK6](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html) for Windows is found in an archive section on the Oracle website. Both 32-bit and 64-bit versions of `JDK6` will work.
 
-## `ADB` ##
+## `Android SDK` ##
+
+The [Android SDK](http://developer.android.com/sdk/index.html) is necessary for building applications and games on the Android platform.
+
+The `Android SDK` includes useful tools and platform-tools. The Android debugger `adb` has many uses including deploying applications to the OUYA.
+
+`zipalign` is used by engines to package Android apps and games.
+
+`SDK Manager` handles installation and updating the `Android SDK` build tools, packages and platforms.
 
 <img src="http://ouya-docs.s3.amazonaws.com/images/AndroidSDKRev21.jpg"/>
 
 The marqueed items in red are suggested installs.
 
 On Mac/Linux, you can skip installing the usb driver.
+
+## `ADB` ##
 
 ##### ADB Connection method
 
