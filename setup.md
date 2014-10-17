@@ -81,18 +81,32 @@ In most cases you can install the latest version of the Android SDK.<br/>
 Android SDK Latest - http://developer.android.com/sdk/index.html<br/>
 </td></tr></table>
 
-<img src="http://ouya-docs.s3.amazonaws.com/images/AndroidSDKRev21.jpg"/>
-
-The marqueed items in red are suggested installs.
-
-On Mac/Linux, you can skip installing the usb driver.
-
 ##### Preliminary Instructions
 
 To fully complete the setup, you will need:
 * an OUYA
 * a computer running Mac OS X or Windows
 * a Micro USB to USB cable (or Wifi/Ethernet Connection)
+
+## `JDK6` ##
+
+Java `JDK6` is used in the signing process and the Java runtime is necessary to run the Android SDK. `JDK6` includes useful tools like `jarsigner` which is necessary to sign your Android apps before publishing in the OUYA store.
+
+### Mac OS X ###
+
+[Java for OS X 2014-001](http://support.apple.com/kb/DL1572) includes `JDK6` which is no longer installed by default.
+
+### Windows ###
+
+[JDK6](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html) for Windows is found in an archive section on the Oracle website. Both 32-bit and 64-bit versions of `JDK6` will work.
+
+## `ADB` ##
+
+<img src="http://ouya-docs.s3.amazonaws.com/images/AndroidSDKRev21.jpg"/>
+
+The marqueed items in red are suggested installs.
+
+On Mac/Linux, you can skip installing the usb driver.
 
 ##### ADB Connection method
 
