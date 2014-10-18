@@ -35,6 +35,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * [Construct 2](http://forums.ouya.tv/discussion/4013/sticky-getting-input-working-with-construct-2) - OE-Input support for Construct 2, expanding from HTML5
 
+* Intro to creating [Construct 2 Plugins](https://www.scirra.com/tutorials/352/plugins-roll-your-own-with-the-javascript-sdk)
+
 * [Marmalade](https://github.com/ouya/docs/blob/master/marmalade.md) - Upgraded to ODK 1.0.14 with OE-Input and IAP for the Marmalade Engine
 
 <a target=_blank href="https://www.youtube.com/watch?v=6r84DLrxUHo&t=3m38s">(2:36)</a> - Jared with "Just the Facts"
