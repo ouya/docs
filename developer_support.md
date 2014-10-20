@@ -15,12 +15,16 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=1Ct2uMsmAMo" target="_blank">
 <img src="http://img.youtube.com/vi/1Ct2uMsmAMo/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 10/20" width="240" height="180" border="10" /></a>
  </td>
- <td></td>
+ <td>Intro to Construct 2 (19:40)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=HXf0Gp_i9ew" target="_blank">
+<img src="http://img.youtube.com/vi/HXf0Gp_i9ew/0.jpg" alt="Intro to Construct 2 on OUYA" width="240" height="180" border="10" /></a>
+ </td>
  </tr>
 </table>
 
 * Event: <a target=_blank href="http://community.thefoundry.co.uk/discussion/topic.aspx?f=3&t=92541">[The Foundary Halloween Contest]</a> - Oct 31st, 2014.
 
+* [Construct 2](https://www.scirra.com/construct2) - Game Engine
 
 ----------
 
