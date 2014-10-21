@@ -46,7 +46,7 @@ Construct 2 is an visually programable engine that publishes HTML5.
 
 ## Publishing ##
 
-Publishing to the OUYA requires that you package the generated HTML from `Construct 2` into an Android wrapper, preferrably using the `WebArchive` prebuilt configuration from the [HTML5 docs](html5.md).
+Publishing to the OUYA requires that you package the generated HTML from `Construct 2` into an Android wrapper, preferrably using the `WebArchive` prebuilt configuration from the [HTML5 docs](html5.md). The `WebArchive` prebuilt configuration provides accelerated `WebGL` and accelerated video decoding.
 
 1. Use the menu `File->Export project...` item
 
