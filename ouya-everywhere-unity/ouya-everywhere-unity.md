@@ -15,6 +15,10 @@ Download the OUYA Core package from from the [ouya-sdk-examples Unity releases](
 Note: Before importing ALWAYS make a backup of your game!
 ``` 
 
+**Note:** Make a backup of your `signing key` in `Assets/Plugins/Android/assets/key.der` before importing the `OuyaSDK-Core.unitypackage`.
+
+**Note:** Make a backup of your `icons` in `Assets/Plugins/Android/res/drawable/app_icon.png` and `Assets/Plugins/Android/res/drawable-xhdpi/ouya_icon.png` before importing the `OuyaSDK-Core.unitypackage`.
+
 # Source #
 
 The source code for OUYA-Everywhere with Unity can be found within the [ouya-sdk-examples for Unity](https://github.com/ouya/ouya-sdk-examples/tree/master/Unity/OuyaSDK).
@@ -123,6 +127,12 @@ Add the OuyaGameObject to your initial loading scene. It uses DontDestroyOnLoad 
 
 ![image alt text](image_20.png)
 
+## Other Player Settings ##
+
+In the Android `Player Settings` and within the `Other Settings` subgroup, here you can enter your package identifier from the [developer portal](http://devs.ouya.tv) into the `bundle id` field. Make sure the `minimum API level` field to 16.
+
+![image alt text](image_28.png)
+
 # Dependencies #
 
 The OUYA Plugin has dependencies on the Android SDK for packaging and deploying Android applications.
@@ -130,29 +140,6 @@ The OUYA Plugin has dependencies on the Android SDK for packaging and deploying 
 The OUYA Plugin includes prebuilt Java and Native plugins, recompiling the Java and Native plugin is no longer required.
 
 Android SDK - [http://developer.android.com/sdk/index.html?hl=sk](http://developer.android.com/sdk/index.html?hl=sk)
-
-## Android SDK Setup ##
-
-Launch the SDK Manager within the Android SDK folder.
-
-![image alt text](image_2.png)
-
-If you upgrade your Android SDK Platform-tools to 19 also be sure to install the Android SDK Build-tools as some tools have moved around.
-
-![image alt text](image_3.png)
-
-Install the SDK Platform for API 16.
-
-![image alt text](image_4.png)
-
-Any updates to the Android SDK will require to re-edit the adb_usb.ini to add 0x2836 so that the OUYA can be recognized over micro-usb cable.
-
-![image alt text](image_5.png)
-
-Make sure there’s no white space or empty lines after the last entry in the adb_usb.ini file.
-
-![image alt text](image_6.png)
-
 
 # OUYA Everywhere API #
 
