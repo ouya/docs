@@ -26,6 +26,9 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * [Construct 2](https://www.scirra.com/construct2) - Game Engine
 
+* [Reagan-Gorbachev](https://www.ouya.tv/game/Reagan-Gorbachev/) - Now on OUYA!
+
+
 ----------
 
 ### October 13, 2014 ###
