@@ -37,7 +37,7 @@ This input API is targeted at the OUYA Android Console and associated devices an
 
 # Updating #
 
-Import the `OuyaSDK-Core.unitypackage` to update the plugin. In the import dialog uncheck the `AndroidManifest.xml`, `signing key` and `icons` if you don't want to replace your customizations. The imported plugin will be ready to `Build and Run` as recompiling the `Java` and `Native` plugins are no longer required now that the package includes the prebuilt libraries.
+Download `OuyaSDK-Core.unitypackage` from [Releases](https://github.com/ouya/ouya-sdk-examples/releases). Import the `OuyaSDK-Core.unitypackage` to update the plugin. In the import dialog uncheck the `AndroidManifest.xml`, `signing key` and `icons` if you don't want to replace your customizations. The imported plugin will be ready to `Build and Run` as recompiling the `Java` and `Native` plugins are no longer required now that the package includes the prebuilt libraries.
 
 # Setup #
 
