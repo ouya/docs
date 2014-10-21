@@ -7,6 +7,8 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Marmala
 
 @OUYA - (Marmalade on OUYA Forums) - http://forums.ouya.tv/categories/marmalade-on-ouya<br/>
 
+@Marmalade - (Forums) - https://developer.madewithmarmalade.com/develop/announce-and-discuss
+
 # Getting Started #
 
 <table border=1>
@@ -20,8 +22,6 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Marmala
 </table>
 
 ### Resources
-
-@Marmalade - (Forums) - https://developer.madewithmarmalade.com/develop/announce-and-discuss
 
 Marmalade - https://www.madewithmarmalade.com
 
