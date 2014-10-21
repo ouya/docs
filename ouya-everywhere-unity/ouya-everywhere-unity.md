@@ -141,9 +141,9 @@ The OUYA Plugin includes prebuilt Java and Native plugins, recompiling the Java 
 
 Android SDK - [http://developer.android.com/sdk/index.html?hl=sk](http://developer.android.com/sdk/index.html?hl=sk)
 
-# OUYA Everywhere API #
+# OUYA SDK API #
 
-Be sure to be on the Android platform before invoking the OUYA Everywhere API.
+Be sure to be on the `Android` platform before invoking the OUYA SDK API.
 
 ```
 #if UNITY_ANDROID && !UNITY_EDITOR
@@ -158,6 +158,8 @@ Be sure to be on the Android platform before invoking the OUYA Everywhere API.
 ```
 
 ## Initialization ##
+
+Initialization is handled by the `OuyaGameObject` being placed in your initial scene.
 
 Make sure that before invoking other OuyaSDK methods than isIAPInitComplete returns true. This gives time for the Java to initialize before accessing the controller, button names, button images, products, purchase, receipts, and toggling cursor visibility.
 
@@ -415,6 +417,271 @@ OuyaController.showCursor(false);
 OuyaController.showCursor(true);
 
 #endif
+```
+
+# Request Gamer Info #
+
+Gamer Info provides access to the gamer username and uuid.
+
+Extend the `IRequestGamerInfoListener` interface to receive the callbacks for invoking `OuyaSDK.requestGamerInfo()`.
+
+C#
+```
+public class MyScript : MonoBehaviour,
+    OuyaSDK.IRequestGamerInfoListener
+{
+}
+```
+
+Register the instance to receive the interface callback events.
+
+C#
+```
+    void Awake()
+    {
+        OuyaSDK.registerRequestGamerInfoListener(this);
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterRequestGamerInfoListener(this);
+    }
+```
+
+The success event will receive the gamer info.
+
+C#
+```
+    public void RequestGamerInfoOnSuccess(string gamerUUID, string gamerUserName)
+    {
+    }
+```
+
+The failure event will receive an error code and error message.
+
+C#
+```
+    public void RequestGamerInfoOnFailure(int errorCode, string errorMessage)
+    {
+    }
+```
+
+The cancel event indicates the request was cancelled.
+
+C#
+```
+    public void RequestGamerInfoOnCancel()
+    {
+    }
+```
+
+# Request Products #
+
+Product Info provides access to the product name, details, localPrice, and other information.
+
+Prepare a list of Purchasables to request details for.
+
+C#
+```
+string[] productItems =
+{
+	"YOUR_PRODUCT_ID_1",
+	"YOUR_PRODUCT_ID_2",
+	"YOUR_PRODUCT_ID_3",
+};
+
+List<OuyaSDK.Purchasable> purchasables =
+	new List<OuyaSDK.Purchasable>();
+	
+foreach (string productId in productItems)
+{
+	OuyaSDK.Purchasable purchasable = new OuyaSDK.Purchasable();
+	purchasable.productId = productId;
+	purchasables.Add(purchasable);
+}
+
+OuyaSDK.requestProducts(purchasables);
+```
+
+Extend the `IRequestProductsListener ` interface to receive the callbacks for invoking `OuyaSDK.requestProducts(purchasables)`.
+
+C#
+```
+public class MyScript : MonoBehaviour,
+    OuyaSDK.IRequestProductsListener
+{
+}
+```
+
+Register the instance to receive the interface callback events.
+
+C#
+```
+    void Awake()
+    {
+        OuyaSDK.registerRequestProductsListener(this);
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterRequestProductsListener(this);
+    }
+```
+
+The success event will receive a list of products.
+
+C#
+```
+    public void RequestProductsOnSuccess(List<OuyaSDK.Product> products)
+    {
+    }
+```
+
+The failure event will receive an error code and error message.
+
+C#
+```
+    public void RequestProductsOnFailure(int errorCode, string errorMessage)
+    {
+    }
+```
+
+The cancel event indicates the request was cancelled.
+
+C#
+```
+    public void RequestProductsOnCancel()
+    {
+    }
+```
+
+# Request Purchase #
+
+A gamer can purchase an entitlement or consumable using `OuyaSDK.requestPurchase`.
+
+Prepare a `Purchasable` to initiate a purchase.
+
+C#
+```
+OuyaSDK.Purchasable purchasable = new OuyaSDK.Purchasable();
+purchasable.productId = "YOUR_PRODUCT_ID";
+OuyaSDK.requestPurchase(purchasable);
+```
+
+Extend the `IRequestPurchaseListener ` interface to receive the callbacks for invoking `OuyaSDK.requestPurchase(purchasable)`.
+
+C#
+```
+public class MyScript : MonoBehaviour,
+    OuyaSDK.IRequestPurchaseListener
+{
+}
+```
+
+Register the instance to receive the interface callback events.
+
+C#
+```
+    void Awake()
+    {
+        OuyaSDK.registerRequestPurchaseListener(this);
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterRequestPurchaseListener(this);
+    }
+```
+
+The success event will receive the purchased product.
+
+C#
+```
+    public void RequestPurchaseOnSuccess(OuyaSDK.Product product)
+    {
+    }
+```
+
+The failure event will receive an error code and error message.
+
+C#
+```
+    public void RequestPurchaseOnFailure(int errorCode, string errorMessage)
+    {
+    }
+```
+
+The cancel event indicates the request was cancelled.
+
+C#
+```
+    public void RequestPurchaseOnCancel()
+    {
+    }
+```
+
+# Request Receipts #
+
+Receipts return all the `entitlements` that the `gamer` has purchased from the `developer`.
+
+Extend the `IRequestReceiptsListener ` interface to receive the callbacks for invoking `OuyaSDK.OuyaSDK.requestReceipts()`.
+
+C#
+```
+public class MyScript : MonoBehaviour,
+    OuyaSDK.IRequestReceiptsListener
+{
+}
+```
+
+Register the instance to receive the interface callback events.
+
+C#
+```
+    void Awake()
+    {
+        OuyaSDK.registerRequestReceiptsListener(this);
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterRequestReceiptsListener(this);
+    }
+```
+
+The success event will receive a list of receipts.
+
+C#
+```
+    public void RequestReceiptsOnSuccess(List<OuyaSDK.Receipt> receipts)
+    {
+    }
+```
+
+The failure event will receive an error code and error message.
+
+C#
+```
+    public void RequestReceiptsOnFailure(int errorCode, string errorMessage)
+    {
+    }
+```
+
+The cancel event indicates the request was cancelled.
+
+C#
+```
+    public void RequestReceiptsOnCancel()
+    {
+    }
+```
+
+# Set Safe Area #
+
+Part of the content submission guideline rules is that all important information needs to be in the safe zone. The safe area can be adjusted by passing an amount when calling `OuyaSDK.setSafeArea(amount)`.
+
+C#
+```
+float amount;
+amount = 0f; //full border pdding
+amount = 1f; //no border padding
+OuyaSDK.setSafeArea(amount);
 ```
 
 # Examples #
