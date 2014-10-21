@@ -439,6 +439,14 @@ public class MyScript : MonoBehaviour,
 }
 ```
 
+JavaScript
+```
+public class MyScript extends MonoBehaviour implements
+	OuyaSDK.IRequestGamerInfoListener
+{
+}
+```
+
 Register the instance to receive the interface callback events.
 
 C#
@@ -453,11 +461,31 @@ C#
     }
 ```
 
+JavaScript
+```
+    function Awake()
+    {
+        OuyaSDK.registerRequestGamerInfoListener(this);
+    }
+
+    function OnDestroy()
+    {
+        OuyaSDK.unregisterRequestGamerInfoListener(this);
+    }
+```
+
 The success event will receive the gamer info.
 
 C#
 ```
-    public void RequestGamerInfoOnSuccess(string gamerUUID, string gamerUserName)
+    public void RequestGamerInfoOnSuccess(string uuid, string username)
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestGamerInfoOnSuccess(uuid : String, username : String)
     {
     }
 ```
@@ -471,11 +499,25 @@ C#
     }
 ```
 
+JavaScript
+```
+    public function RequestGamerInfoOnFailure(errorCode : int, errorMessage : String)
+    {
+    }
+```
+
 The cancel event indicates the request was cancelled.
 
 C#
 ```
     public void RequestGamerInfoOnCancel()
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestGamerInfoOnCancel()
     {
     }
 ```
@@ -518,6 +560,14 @@ public class MyScript : MonoBehaviour,
 }
 ```
 
+JavaScript
+```
+public class MyScript extends MonoBehaviour implements
+	OuyaSDK.IRequestProductsListener
+{
+}
+```
+
 Register the instance to receive the interface callback events.
 
 C#
@@ -532,11 +582,31 @@ C#
     }
 ```
 
+JavaScript
+```
+    function Awake()
+    {
+        OuyaSDK.registerRequestProductsListener(this);
+    }
+
+    function OnDestroy()
+    {
+        OuyaSDK.unregisterRequestProductsListener(this);
+    }
+```
+
 The success event will receive a list of products.
 
 C#
 ```
     public void RequestProductsOnSuccess(List<OuyaSDK.Product> products)
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestProductsOnSuccess(products : List.<OuyaSDK.Product>)
     {
     }
 ```
@@ -550,11 +620,25 @@ C#
     }
 ```
 
+JavaScript
+```
+    public function RequestProductsOnFailure(errorCode : int, errorMessage : String)
+    {
+    }
+```
+
 The cancel event indicates the request was cancelled.
 
 C#
 ```
     public void RequestProductsOnCancel()
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestProductsOnCancel()
     {
     }
 ```
@@ -582,6 +666,14 @@ public class MyScript : MonoBehaviour,
 }
 ```
 
+JavaScript
+```
+public class MyScript extends MonoBehaviour implements
+	OuyaSDK.IRequestPurchaseListener
+{
+}
+```
+
 Register the instance to receive the interface callback events.
 
 C#
@@ -596,11 +688,31 @@ C#
     }
 ```
 
+JavaScript
+```
+    function Awake()
+    {
+        OuyaSDK.registerRequestPurchaseListener(this);
+    }
+
+    function OnDestroy()
+    {
+        OuyaSDK.unregisterRequestPurchaseListener(this);
+    }
+```
+
 The success event will receive the purchased product.
 
 C#
 ```
     public void RequestPurchaseOnSuccess(OuyaSDK.Product product)
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestPurchaseOnSuccess(product : OuyaSDK.Product)
     {
     }
 ```
@@ -614,11 +726,25 @@ C#
     }
 ```
 
+JavaScript
+```
+    public function RequestPurchaseOnFailure(errorCode : int, errorMessage : String)
+    {
+    }
+```
+
 The cancel event indicates the request was cancelled.
 
 C#
 ```
     public void RequestPurchaseOnCancel()
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestPurchaseOnCancel()
     {
     }
 ```
@@ -637,6 +763,14 @@ public class MyScript : MonoBehaviour,
 }
 ```
 
+JavaScript
+```
+public class MyScript extends MonoBehaviour implements
+	OuyaSDK.IRequestReceiptsListener
+{
+}
+```
+
 Register the instance to receive the interface callback events.
 
 C#
@@ -651,11 +785,31 @@ C#
     }
 ```
 
+JavaScript
+```
+    function Awake()
+    {
+        OuyaSDK.registerRequestReceiptsListener(this);
+    }
+
+    function OnDestroy()
+    {
+        OuyaSDK.unregisterRequestReceiptsListener(this);
+    }
+```
+
 The success event will receive a list of receipts.
 
 C#
 ```
     public void RequestReceiptsOnSuccess(List<OuyaSDK.Receipt> receipts)
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestReceiptsOnSuccess(receipts : List.<OuyaSDK.Receipt>)
     {
     }
 ```
@@ -669,11 +823,25 @@ C#
     }
 ```
 
+JavaScript
+```
+    public function RequestReceiptsOnFailure(errorCode : int, errorMessage : String)
+    {
+    }
+```
+
 The cancel event indicates the request was cancelled.
 
 C#
 ```
     public void RequestReceiptsOnCancel()
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestReceiptsOnCancel()
     {
     }
 ```
