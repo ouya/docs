@@ -550,6 +550,28 @@ foreach (string productId in productItems)
 OuyaSDK.requestProducts(purchasables);
 ```
 
+JavaScript
+```
+var productItems : String[] =
+{
+	"YOUR_PRODUCT_ID_1",
+	"YOUR_PRODUCT_ID_2",
+	"YOUR_PRODUCT_ID_3",
+};
+
+var purchasables : List<OuyaSDK.Purchasable> =
+	new List<OuyaSDK.Purchasable>();
+	
+foreach (var productId : String in productItems)
+{
+	var purchasable : OuyaSDK.Purchasable = new OuyaSDK.Purchasable();
+	purchasable.productId = productId;
+	purchasables.Add(purchasable);
+}
+
+OuyaSDK.requestProducts(purchasables);
+```
+
 Extend the `IRequestProductsListener ` interface to receive the callbacks for invoking `OuyaSDK.requestProducts(purchasables)`.
 
 C#
@@ -652,6 +674,13 @@ Prepare a `Purchasable` to initiate a purchase.
 C#
 ```
 OuyaSDK.Purchasable purchasable = new OuyaSDK.Purchasable();
+purchasable.productId = "YOUR_PRODUCT_ID";
+OuyaSDK.requestPurchase(purchasable);
+```
+
+JavaScript
+```
+var purchasable : OuyaSDK.Purchasable = new OuyaSDK.Purchasable();
 purchasable.productId = "YOUR_PRODUCT_ID";
 OuyaSDK.requestPurchase(purchasable);
 ```
@@ -855,6 +884,14 @@ C#
 float amount;
 amount = 0f; //full border pdding
 amount = 1f; //no border padding
+OuyaSDK.setSafeArea(amount);
+```
+
+JavaScript
+```
+var amount : float;
+amount = 0; //full border pdding
+amount = 1; //no border padding
 OuyaSDK.setSafeArea(amount);
 ```
 
