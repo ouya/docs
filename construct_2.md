@@ -5,7 +5,9 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Constru
 
 ### Forums
 
-@OUYA - (Construct 2 on OUYA Forums) - http://forums.ouya.tv/categories/construct2-on-ouya<br/>
+@OUYA - (Construct 2 on OUYA Forums) - http://forums.ouya.tv/categories/construct2-on-ouya
+
+@Construct 2 - (Forums) - https://www.scirra.com/forum/
 
 ## Getting Started
 
