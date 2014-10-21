@@ -41,9 +41,55 @@ Import the Core package. From the menu item Assets->Import Package->Custom Packa
 
 ![image alt text](image_1.png)
 
+## `OuyaSDK-Core.unitypackage` ##
+
 Import the OuyaSDK-Core.unitypackage.
 
+`Ouya\SDK\Editor\OuyaMenuAdmin.cs` - Adds OUYA menu items for exporting packages for release
+
+`Ouya\SDK\Editor\OuyaPanel.cs` - Provides example switcher to auto change package name and icons
+
+`Ouya\SDK\Prefabs\OuyaGameObject.prefab` - Add the prefab to the initial scene for apps/games to enable the OUYA Plugin
+
+`Ouya\SDK\Scripts\OuyaGameObject.cs` - Handles communication with the OUYA Plugin between C#, C++, and Java
+
 ![image alt text](image_21.png)
+
+### Android Customization ###
+
+`Plugins\Android\AndroidManifest.xml` - Defines the package identifier and start activity.
+
+`Plugins\Android\assets\key.der` - The signing key from the developer portal
+
+`Plugins\Android\libs\armeabi-v7a\lib-ouya-ndk.so` - Prebuilt native library for the OUYA Plugin
+
+`Plugins\Android\libs\armeabi\lib-ouya-ndk.so` - Prebuilt native library for the OUYA Plugin
+
+`Plugins\Android\libs\x86\lib-ouya-ndk.so` - Prebuilt native library for the OUYA Plugin
+
+`Plugins\Android\libs\ouya-sdk.jar` - The OUYA SDK Java library
+
+`Plugins\Android\OuyaUnityPlugin.jar` - Prebuit OUYA Unity Plugin Java library
+
+`Plugins\Android\res\raw\drawable-xhdpi\ouya_icon.png` - The 732x412 OUYA Store icon
+
+`Plugins\Android\res\raw\drawable\app_icon.png` - The 96x96 settings icon
+
+![image alt text](image_22.png)
+
+### Plugin Scripts ###
+
+Files within `Plugins` make scripts available to `C#` and `JavaScript` developers.
+
+`Plugins\JSONArray.cs` - JNI hooks for using Android JSON Array parsing
+
+`Plugins\JSONObject.cs` - JNI hooks for using Android JSON Object parsing
+
+`Plugins\OuyaController.cs` - JNI hooks for interacting with the OUYA Controller
+
+`Plugins\OuyaSDK.cs` - The OUYA Plugin SDK methods for input and in-app-purchases
+
+![image alt text](image_23.png)
 
 ## Icons ##
 
