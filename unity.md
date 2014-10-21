@@ -1,45 +1,18 @@
 ## Unity Game Engine
 
-### Downloads
-***OLD*** Open source, clone https://github.com/ouya/ouya-unity-plugin directly from public GIT.
+# Legacy `THIS DOCUMENT IS SUPER OLD` #
 
-### Forums
+Go to the [New Unity](https://github.com/ouya/docs/blob/master/ouya-everywhere-unity/ouya-everywhere-unity.md) documentation.
 
-@OUYA - (Unity on OUYA Forums) - http://forums.ouya.tv/categories/unity-on-ouya<br/>
+`OLD DOCUMENTATION BELOW`
 
-### Developer Support Hangouts
-J
-2013:
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=2pHtay8fF-w" target="_blank">Feb 11</a>]&nbsp;
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=cgZ8dbHgi00" target="_blank">Feb 18</a>]&nbsp;
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=qGeUaxXCrAs" target="_blank">Mar 4A</a>]&nbsp;
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=hE4FbM3Gpp8" target="_blank">Mar 4B</a>]&nbsp;
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=4VdF5NelOWk" target="_blank">Mar 4C</a>]&nbsp;
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=DEeu6L7UFSY" target="_blank">Mar 11</a>]&nbsp;
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=Mp0qiOfyQt0" target="_blank">Mar 18</a>]&nbsp;
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=yz0OR6Sqyhc" target="_blank">Mar 25</a>]&nbsp;
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=rUF7c0OrA_Q" target="_blank">Mar 27</a>]&nbsp;
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=q8mY40VWBxo" target="_blank">Apr 1</a>]&nbsp;
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=Ctw44DXqnzc" target="_blank">Apr 8</a>]&nbsp;
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=vfb66JxdzKk" target="_blank">Apr 15</a>]&nbsp;
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=bA39KnsG-kA" target="_blank">Apr 22</a>]&nbsp;
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=Y9tRNVSEEbo" target="_blank">Apr 29</a>]&nbsp;
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=SugaCc5OpoQ" target="_blank">May 6</a>]&nbsp;
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=85vkB2rGGhU" target="_blank">May 13</a>]&nbsp;
-[<a href="http://www.youtube.com/watch?feature=player_embedded&v=c86lI_BnuHA" target="_blank">May 23</a>]
+`OLD DOCUMENTATION BELOW`
 
-# Legacy ***THIS DOCUMENT IS SUPER OLD*** #
+`OLD DOCUMENTATION BELOW`
 
-Thid ouya-unity-plugin is now the OLD legacy plugin. If you want the latest plugin head on over to the OUYA-Everywhere Unity documentation. <a href="ouya-everywhere.md">[docs]</a>
+`OLD DOCUMENTATION BELOW`
 
-The old legacy source is located in github at:
-https://github.com/ouya/ouya-unity-plugin
-
-The new latest plugin for OUYA-Everywhere and Unity can be found in:
-https://github.com/ouya/ouya-sdk-examples/tree/master/Unity/OuyaSDK
-
-And then there's a brand new set of docs with tons of screenshots along with a step by step guide.
-<a href="ouya-everywhere.md">[docs]</a>
+`OLD DOCUMENTATION BELOW`
 
 <hr>
 
