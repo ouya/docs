@@ -141,7 +141,7 @@ Within the Player Settings, Android Tab, set the default orientation to Landscap
 
 ## OuyaGameObject.cs ##
 
-Add the OuyaGameObject to your initial loading scene. It uses DontDestroyOnLoad so you only want one instance of the OuyaGameObject. It handles communication between Java to C#. Using the inspector set your developer id.
+Add the OuyaGameObject to your initial loading scene. It uses DontDestroyOnLoad so you only want one instance of the OuyaGameObject. It handles communication between Java to C#. Select the `OuyaGameObject` in the `SceneView` and in the inspector, the `OUYA Plugin Init Values` field will be visible. Add an entry for `tv.ouya.developer_id` that corresponds to your developer uuid in the [developer portal](http://devs.ouya.tv).
 
 ![image alt text](image_20.png)
 
