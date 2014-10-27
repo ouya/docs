@@ -40,6 +40,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 <a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=25m26s">(25:26)</a> - Bawb/Kellee: Strategizing an Effect Launch
 
+<a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=38m43s">(38:43)</a> - Bawb/Kellee: What's the best way to make connections for just starting out?
+
 ----------
 
 ### October 20, 2014 ###
