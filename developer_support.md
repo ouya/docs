@@ -38,7 +38,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 <a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=18m25s">(18:25)</a> - Kellee: Review of GDC China
 
-<a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=25m26s">(25:26)</a> - Bawb/Kellee: Strategizing an Effective Launch
+<a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=24m39s">(24:39)</a> - Bawb/Kellee: Strategizing an Effective Launch
 
 <a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=38m43s">(38:43)</a> - Bawb/Kellee: What's the best way to make connections for just starting out?
 
