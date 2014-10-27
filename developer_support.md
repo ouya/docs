@@ -38,6 +38,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 <a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=18m25s">(18:25)</a> - Kellee: Review of GDC China
 
+<a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=25m26s">(18:25)</a> - Bawb/Kellee: Strategizing an Effect Launch
+
 ----------
 
 ### October 20, 2014 ###
