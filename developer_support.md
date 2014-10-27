@@ -22,6 +22,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  </tr>
 </table>
 
+* Event: <a target=_blank href="http://www.game-connection.com/">[Game Connection Europe 2014]</a> - Oct 29th - 31st, 2014.
+
 * Event: <a target=_blank href="http://community.thefoundry.co.uk/discussion/topic.aspx?f=3&t=92541">[The Foundary Halloween Contest]</a> - Oct 31st, 2014.
 
 * Developing for OUYA with [Construct 2](construct_2.md)
