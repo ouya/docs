@@ -28,6 +28,14 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * Packaging accelerated WebGL into your [HTML5](html5.md) games
 
+* [Google Canary](https://www.google.com/intl/en/chrome/browser/canary.html) Remote HTML5 debugging
+
+<a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=0m50s">(0:50)</a> - Jared: Just the Facts
+
+<a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=3m33s">(3:33)</a> - Tim: Publishing with Construct 2
+
+<a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=18m25s">(18:25)</a> - Kellee: Review of China GDC
+
 ----------
 
 ### October 20, 2014 ###
