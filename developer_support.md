@@ -34,7 +34,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 <a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=3m33s">(3:33)</a> - Tim: Publishing with Construct 2
 
-<a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=18m25s">(18:25)</a> - Kellee: Review of China GDC
+<a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=18m25s">(18:25)</a> - Kellee: Review of GDC China
 
 ----------
 
