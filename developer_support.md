@@ -27,6 +27,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 <a target=_blank href="https://www.youtube.com/watch?v=TBWXiuGSF0o&t=14m50s">(14:50)</a> - Tim: Exposing Community Content in Unity
 
+<a target=_blank href="https://www.youtube.com/watch?v=TBWXiuGSF0o&t=31m20s">(31:20)</a> - Tim: Dive into JNI
+
 ### October 27, 2014 ###
 
 <table border=1>
