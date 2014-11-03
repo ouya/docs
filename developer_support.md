@@ -6,6 +6,21 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 ----------
 
+### November 3, 2014 ###
+
+<table border=1>
+
+ <tr>
+ <td>OUYA DEV SUPPORT (00:53:09)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=TBWXiuGSF0o" target="_blank">
+<img src="http://img.youtube.com/vi/TBWXiuGSF0o/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 11/3" width="240" height="180" border="10" /></a>
+ </td>
+ <td></td>
+ </tr>
+</table>
+
+* Event: <a target=_blank href="http://www.gdcnext.com/">[GDC Next]</a> - Nov 3rd - 4th, 2014.
+
 ### October 27, 2014 ###
 
 <table border=1>
