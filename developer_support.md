@@ -21,6 +21,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * Event: <a target=_blank href="http://www.gdcnext.com/">[GDC Next]</a> - Nov 3rd - 4th, 2014.
 
+* Developing for OUYA with [Unity](https://github.com/ouya/docs/blob/master/ouya-everywhere-unity/ouya-everywhere-unity.md)
+
 <a target=_blank href="https://www.youtube.com/watch?v=TBWXiuGSF0o&t=2m55s">(2:55)</a> - Jared: Just the Facts
 
 <a target=_blank href="https://www.youtube.com/watch?v=TBWXiuGSF0o&t=6m30s">(6:30)</a> - Jared: All about bundles
