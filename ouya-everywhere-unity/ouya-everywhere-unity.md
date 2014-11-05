@@ -907,6 +907,487 @@ amount = 1; //no border padding
 OuyaSDK.setSafeArea(amount);
 ```
 
+# Community Content #
+
+The general process for using the Community Content API is register listeners and wait for initialization.
+
+If the Community Content is available the `CC Actions` are available.
+
+* Create
+* Delete
+* Download
+* Edit
+* Search for installed items
+* Search for published items
+* Publish
+* Unpublish
+
+## `IContentInitializedListener` ##
+
+One way to check if Community Content has been initialized is to implement the `IContentInitializedListener` interface.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`ContentInitializedOnInitialized` is invoked when the  `OuyaContent` becomes accessible.
+`ContentInitializedOnDestroyed` is invoked when the `OuyaContent` has been destroyed.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IContentInitializedListener
+{
+    private void Awake()
+    {
+        OuyaSDK.registerContentInitializedListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterContentInitializedListener(this);
+    }
+    public void ContentInitializedOnInitialized()
+    {
+    }
+    public void ContentInitializedOnDestroyed()
+    {
+    }
+}
+```
+
+## `OuyaContent` ##
+
+`OuyaContent` is the entry point for accessing the Community Content API.
+`OuyaUnityPlugin` provides a reference to the `OuyaContent` object.
+Make sure to wrap the `OuyaContent` accessor with `using` to ensure the JNI reference is disposed.
+
+C#
+```
+using (OuyaContent ouyaContent = OuyaUnityPlugin.getOuyaContent())
+{
+}
+```
+
+## `isAvailable` ##
+
+Before accessing Community Content, make sure the API is available to the gamer.
+The Community Content API won't be available if an `age gate` is active for the gamer. 
+
+C#
+```
+bool isAvailable = ouyaContent.isAvailable();
+```
+
+## `isInitialized` ##
+
+One way to check if Community Content has been initialized is to invoke `isInitialized`.
+
+C#
+```
+if (ouyaContent.isInitialized())
+{
+}
+```
+
+## `IContentDeleteListener` ##
+
+Implement the `IContentDeleteListener` interface to receive the callbacks from deleting an `OuyaMod` community content object.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`ContentDeleteOnDeleted` is invoked when the  `OuyaMod` has been deleted.
+`ContentDeleteOnDeleteFailed` is invoked when the `OuyaMod` deletion has failed.
+The listener callbacks occur after `OuyaUnityPlugin.contentDelete` is invoked.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IContentDeleteListener
+{
+    private void Awake()
+    {
+        OuyaSDK.registerContentDeleteListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterContentDeleteListener(this);
+    }
+    public void ContentDeleteOnDeleted(OuyaMod ouyaMod)
+    {
+    }
+    public void ContentDeleteOnDeleteFailed(OuyaMod ouyaMod, int code, string reason)
+    {
+    }
+    void Delete(OuyaMod ouyaMod)
+    {
+        OuyaUnityPlugin.contentDelete(ouyaMod);
+    }
+}
+```
+
+## `IContentDownloadListener` ##
+
+Implement the `IContentDownloadListener` interface to receive the callbacks from downloading an `OuyaMod` community content object.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`ContentDownloadOnComplete` is invoked when the `OuyaMod` has finished downloading.
+`ContentDownloadOnProgress` is invoked when the `OuyaMod` download is in progress.
+`ContentDownloadOnFailed` is invoked when the `OuyaMod` download has failed.
+The listener callbacks occur after `OuyaUnityPlugin.contentDownload` is invoked.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IContentDownloadListener
+{
+    private void Awake()
+    {
+        OuyaSDK.registerContentDownloadListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterContentDownloadListener(this);
+    }
+    public void ContentDownloadOnComplete(OuyaMod ouyaMod)
+    {
+    }
+    public void ContentDownloadOnProgress(OuyaMod ouyaMod, int progress)
+    {
+    }
+    public void ContentDownloadOnFailed(OuyaMod ouyaMod)
+    {
+    }
+    void Download(OuyaMod ouyaMod)
+    {
+        OuyaUnityPlugin.contentDownload(ouyaMod);
+    }
+}
+```
+
+## `IContentInstalledSearchListener` ##
+
+Implement the `IContentInstalledSearchListener` interface to receive the callbacks from searching for installed `OuyaMod` community content object.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`ContentInstalledSearchOnResults` is invoked when the search for `OuyaMod` installed content has finished.
+`ContentInstalledSearchOnError` is invoked when the `OuyaMod` search has failed.
+The listener callbacks occur after `OuyaUnityPlugin.getOuyaContentInstalled` is invoked.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IContentDownloadListener
+{
+    private void Awake()
+    {
+        OuyaSDK.registerContentInstalledSearchListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterContentInstalledSearchListener(this);
+    }
+    public void ContentInstalledSearchOnResults(List<OuyaMod> ouyaMods, int count)
+    {
+    }
+    public void ContentInstalledSearchOnError(int code, string reason)
+    {
+    }
+    void Search()
+    {
+        OuyaUnityPlugin.getOuyaContentInstalled();
+    }
+}
+```
+
+## `IContentPublishedSearchListener` ##
+
+Implement the `IContentPublishedSearchListener` interface to receive the callbacks from searching for published `OuyaMod` community content object.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`ContentPublishedSearchOnResults` is invoked when the search for `OuyaMod` published content has finished.
+`ContentPublishedSearchOnError` is invoked when the `OuyaMod` search has failed.
+The listener callbacks occur after `OuyaUnityPlugin.getOuyaContentPublished` is invoked.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IContentPublishedSearchListener
+{
+    private void Awake()
+    {
+        OuyaSDK.registerContentPublishedSearchListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterContentPublishedSearchListener(this);
+    }
+    public void ContentPublishedSearchOnResults(List<OuyaMod> ouyaMods, int count)
+    {
+    }
+    public void ContentPublishedSearchOnError(int code, string reason)
+    {
+    }
+    void Search(OuyaContent.SortMethod sortMethod)
+    {
+        OuyaUnityPlugin.getOuyaContentPublished(sortMethod);
+    }
+}
+```
+
+## `IContentPublishListener` ##
+
+Implement the `IContentPublishListener` interface to receive the callbacks from publishing an `OuyaMod` community content object.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`ContentPublishOnSuccess` is invoked when the `OuyaMod` has published successfully.
+`ContentPublishOnError` is invoked when the `OuyaMod` publish has failed.
+The listener callbacks occur after `OuyaUnityPlugin.contentPublish` is invoked.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IContentPublishListener
+{
+    private void Awake()
+    {
+        OuyaSDK.registerContentPublishListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterContentPublishListener(this);
+    }
+    public void ContentPublishOnSuccess(OuyaMod ouyaMod)
+    {
+    }
+    public void ContentPublishOnError(OuyaMod ouyaMod, int code, string reason)
+    {
+    }
+    void Publish(OuyaMod ouyaMod)
+    {
+        OuyaUnityPlugin.contentPublish(ouyaMod);
+    }
+}
+```
+
+## `IContentSaveListener` ##
+
+Implement the `IContentSaveListener` interface to receive the callbacks from saving an `OuyaMod` community content object.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`ContentSaveOnSuccess` is invoked when the `OuyaMod` has saved successfully.
+`ContentSaveOnError` is invoked when the `OuyaMod` save has failed.
+The listener callbacks occur after `OuyaUnityPlugin.saveOuyaMod` is invoked.
+Saved OuyaMod content will return in the installed Community Content searches.
+The saved OuyaMod content needs to be published to show in the published search results.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IContentSaveListener
+{
+    private void Awake()
+    {
+        OuyaSDK.unregisterContentSaveListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterContentSaveListener(this);
+    }
+    public void ContentSaveOnSuccess(OuyaMod ouyaMod)
+    {
+    }
+    public void ContentSaveOnError(OuyaMod ouyaMod, int code, string reason)
+    {
+    }
+    void Save(OuyaMod ouyaMod, OuyaMod.Editor editor)
+    {
+        OuyaUnityPlugin.saveOuyaMod(ouyaMod, editor);
+    }
+}
+```
+
+## `IContentUnpublishListener` ##
+
+Implement the `IContentUnpublishListener` interface to receive the callbacks from unpublishing an `OuyaMod` community content object.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`ContentUnpublishOnSuccess` is invoked when the `OuyaMod` has unpublished successfully.
+`ContentUnpublishOnError` is invoked when the `OuyaMod` unpublish has failed.
+The listener callbacks occur after `OuyaUnityPlugin.contentUnpublish` is invoked.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IContentUnpublishListener
+{
+    private void Awake()
+    {
+        OuyaSDK.registerContentUnpublishListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterContentUnpublishListener(this);
+    }
+    public void ContentUnpublishOnSuccess(OuyaMod ouyaMod)
+    {
+    }
+    public void ContentUnpublishOnError(OuyaMod ouyaMod, int code, string reason)
+    {
+    }
+    void Unpublish(OuyaMod ouyaMod)
+    {
+        OuyaUnityPlugin.contentUnpublish(ouyaMod);
+    }
+}
+```
+
+## `IResumeListener` ##
+
+Implement the `IResumeListener` interface to receive the resume callback.
+When the Community Content rate and flag dialogs are closed the resume callback will indicate the game can continue.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`OuyaOnResume` is invoked when the game has been resumed.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IResumeListener
+{
+    private void Awake()
+    {
+        OuyaSDK.registerResumeListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterResumeListener(this);
+    }
+    public void OuyaOnResume()
+    {
+    }
+}
+```
+
+## `Create` ##
+
+The `OuyaContent` object is used to create content.
+The `OuyaMod` content must be saved before it will be returned by searching for installed content.
+The `OuyaMod` content must be published before it will be returned by searching for published content.
+
+C#
+```
+    using (OuyaContent ouyaContent = OuyaUnityPlugin.getOuyaContent())
+    {
+        if (ouyaContent.isInitialized())
+        {
+            using (OuyaMod ouyaMod = ouyaContent.create())
+            {
+            }
+        }
+    }
+
+```
+
+## `OuyaMod.Editor` ##
+
+The `Editor` object is used to edit the `OuyaMod` fields.
+
+C#
+```
+    using (OuyaContent ouyaContent = OuyaUnityPlugin.getOuyaContent())
+    {
+	    using (OuyaMod ouyaMod = ouyaContent.create())
+	    {
+	        using (OuyaMod.Editor editor = ouyaMod.edit())
+	        {
+	        }
+	    }
+	}
+```
+
+Some fields are required.
+
+C#
+```
+	void AddRequiredFields(OuyaMod ouyaMod)
+	{
+	    using (OuyaMod.Editor editor = ouyaMod.edit())
+	    {
+			editor.setTitle("Custom Level");
+			editor.setCategory("level");
+			editor.setDescription("This is my custom level");
+	    }
+	}
+```
+
+Files can be added to `OuyaMod` objects by passing a byte array.
+
+C#
+```
+	void AddFile(OuyaMod ouyaMod, string filename, byte[] data)
+	{
+	    using (OuyaMod.Editor editor = ouyaMod.edit())
+	    {
+	        using (OutputStream os = editor.newFile(filename))
+	        {
+	            os.write(data);
+	            os.close();
+	        }
+		}
+	}
+```
+
+Screenshots can be added to `OuyaMod` objects by converting `Texture2D` to Android `Bitmap` objects.
+Be sure to make the Texture readable and RGBA32 before attempting to convert to a `Bitmap` object.
+
+C#
+```
+	void AddScreenshot(OuyaMod.Editor editor, Texture2D texture)
+	{
+		byte[] buffer = texture.EncodeToPNG();
+		if (null != buffer &&
+		    buffer.Length >= 0)
+		{
+		    Bitmap bitmap = BitmapFactory.decodeByteArray(buffer, 0, buffer.Length);
+			editor.addScreenshot(bitmap);
+		}
+	}
+```
+
+The `Editor` object also sets optional fields.
+
+C#
+```
+	void AddOptionalData(OuyaMod ouyaMod)
+	{
+	    using (OuyaMod.Editor editor = ouyaMod.edit())
+	    {
+			editor.addTag("space");
+			editor.addTag("king of the hill");
+			
+			editor.setMetadata("difficulty=4;theme=space;mode=koth");
+		}
+	}
+```
+
+After editing fields be sure to save the changes.
+
+C#
+```
+	void Save(OuyaMod ouyaMod)
+	{
+	    using (OuyaMod.Editor editor = ouyaMod.edit())
+	    {
+			OuyaUnityPlugin.saveOuyaMod(ouyaMod, editor);
+		}
+	}
+```
+
 # Examples #
 
 Download the Examples package from github releases…
@@ -949,9 +1430,15 @@ The `ShowProducts` scene is an in-app-purchase example that uses the `OuyaSDK` t
 
 ## Safe Area Example ##
 
-The Safe Area example uses the DPAD left and right to invoke `OuyaSDK.setSafeArea(float amount)`. Using 0.0 for the amount uses full border padding. Using 1.0 for the amount uses no border padding.
+The [Safe Area](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/OuyaSafeArea.cs) example uses the DPAD left and right to invoke `OuyaSDK.setSafeArea(float amount)`. Using 0.0 for the amount uses full border padding. Using 1.0 for the amount uses no border padding.
 
 ![image alt text](image_24.png)
+
+## Community Content Example ##
+
+The [Community Content](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/OuyaCommunityContent.cs) example shows how to create, edit, publish, unpublish, download, and delete Community Content.
+
+![image alt text](image_29.png)
 
 <hr>
 
