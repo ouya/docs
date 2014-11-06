@@ -915,7 +915,7 @@ OuyaSDK.setSafeArea(amount);
 
 # Community Content #
 
-The general process for using the Community Content API is register listeners and wait for initialization.
+The [Community Content](community_content.md) documentation has a detailed overview of features.
 
 If the Community Content is available the `CC Actions` are available.
 
@@ -927,6 +927,8 @@ If the Community Content is available the `CC Actions` are available.
 * Search for published items
 * Publish
 * Unpublish
+
+The general process for using the Community Content API is register listeners and wait for initialization.
 
 ## `IContentInitializedListener` ##
 
