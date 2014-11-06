@@ -21,7 +21,13 @@ OUYA-Everywhere INPUT Documentation for the Unity Game Engine
 
 # Releases #
 
-Download the OUYA Core package from from the [ouya-sdk-examples Unity releases](https://github.com/ouya/ouya-sdk-examples/releases/).
+Several Unity packages are available from the [ouya-sdk-examples releases](https://github.com/ouya/ouya-sdk-examples/releases/)
+
+* Unity OuyaSDK-Core.unitypackage - Most packages require the OUYA Core package
+
+* Unity OuyaSDK-Examples.unitypackage - Package includes Virtual Controller, InAppPurchase, Safe Area, and Community Content examples 
+
+* Unity OuyaSDK-StarterKit.unitypackage - Starter Kit for jumping into OUYA programming
 
 ```
 Note: Before importing ALWAYS make a backup of your game!
