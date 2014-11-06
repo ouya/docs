@@ -915,7 +915,7 @@ OuyaSDK.setSafeArea(amount);
 
 # Community Content #
 
-The [Community Content](community_content.md) documentation has a detailed overview of features.
+The [Community Content](https://github.com/ouya/docs/blob/master/community_content.md) documentation has a detailed overview of features.
 
 If the Community Content is available the `CC Actions` are available.
 
