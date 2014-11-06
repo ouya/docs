@@ -55,6 +55,26 @@ After logging in, click on the **Products** menu and then the **New Product** li
 
 ### Initializing the ODK
 
+The first thing you will need to do is ensure that your application key is included in your application. You can down load the DER representation of your application key from the games area of the developer portal. To create a Java representation of the key you should use the following code:
+
+```java
+	byte[] loadApplicationKey() {
+        // Create a PublicKey object from the key data downloaded from the developer portal.
+        try {
+            // Read in the key.der file (downloaded from the developer portal)
+            InputStream inputStream = getResources().openRawResource(R.raw.key);
+            byte[] applicationKey = new byte[inputStream.available()];
+            inputStream.read(applicationKey);
+            inputStream.close();
+            return applicationKey;
+        } catch (Exception e) {
+            Log.e(LOG_TAG, "Unable to load application key", e);
+        }
+
+        return null;
+    }
+```
+
 All IAP functionality goes through the **OuyaFacade** object.  The **OuyaFacade** singleton should be initialized at the beginning of the application and used for all IAP requests.
 ```java
 	// Your developer id can be found in the Developer Portal
@@ -62,7 +82,16 @@ All IAP functionality goes through the **OuyaFacade** object.  The **OuyaFacade*
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		OuyaFacade.getInstance().init(this, DEVELOPER_ID);
+		Bundle developerInfo = new Bundle();
+
+		// Your developer id can be found in the Developer Portal
+		developerInfo.putString(OuyaFacade.OUYA_DEVELOPER_ID, DEVELOPER_ID);
+
+		// There are a variety of ways to store and access your application key.
+		// Two of them are demoed in the samples 'game-sample' and 'iap-sample-app'
+		developerInfo.putByteArray(OuyaFacade.OUYA_DEVELOPER_PUBLIC_KEY, loadApplicationKey());
+
+		OuyaFacade.getInstance().init(this, developerInfo);
 		super.onCreate(savedInstanceState);
 	}
 ```
@@ -111,9 +140,9 @@ Since this request has to travel across the Internet to the OUYA servers, the re
 Now we will create our own listener!  In this example, we are extending the **CancelIgnoringOuyaResponseListener** which ignores cancels. Therefore, we only need to provide **onSuccess** and **onFailure** methods:
 ```java
 	OuyaResponseListener<ArrayList<Product>> productListListener =
-		new CancelIgnoringOuyaResponseListener<ArrayList<Product>>() {
+		new CancelIgnoringOuyaResponseListener<List<Product>>() {
 			@Override
-			public void onSuccess(ArrayList<Product> products) {
+			public void onSuccess(List<Product> products) {
 				for(Product p : products) {
 					Log.d("Product", p.getName() + " costs " + p.getFormattedPrice());
 				}
@@ -127,115 +156,45 @@ Now we will create our own listener!  In this example, we are extending the **Ca
 ```
 So, how do we actually get the data we want? By making a request via **OuyaFacade**:
 ```java
-	OuyaFacade.getInstance().requestProductList(PRODUCT_ID_LIST, productListListener);
+	OuyaFacade ouyaFacade = OuyaFacade.getInstance();
+	ouyaFacade.requestProductList(currentActivity, PRODUCT_ID_LIST, productListListener);
 ```
 So easy!
 
 ### Making a Purchase
 
-The first thing you will need to do is ensure that your application key is included in your application. You can down load the DER representation of your application key from the games area of the developer portal. To create a Java representation of the key you should use the following code:
+You will need to create a purchase listener which handles responses from the server. Each purchase will have a unique purchase ID.
 
 ```java
-        // Create a PublicKey object from the key data downloaded from the developer portal.
-        try {
-            // Read in the key.der file (downloaded from the developer portal)
-            InputStream inputStream = getResources().openRawResource(R.raw.key);
-            byte[] applicationKey = new byte[inputStream.available()];
-            inputStream.read(applicationKey);
-            inputStream.close();
-            // Create a public key
-            X509EncodedKeySpec keySpec = new X509EncodedKeySpec(applicationKey);
-            KeyFactory keyFactory = KeyFactory.getInstance("RSA");
-            mPublicKey = keyFactory.generatePublic(keySpec);
-        } catch (Exception e) {
-            Log.e(LOG_TAG, "Unable to create encryption key", e);
+	PurchasableResponseListener purchaseListener = new PurchasableResponseListener() {
+		@Override
+		public void onSuccess(PurchaseResult result) {
+			// If you previously stored the OrderId/ProductId combination, now is the time
+			// to verify it.  See the requestPurchase section below.
+			Log.d(TAG, result.getProductId() + " purchased.  Order: " + result.getOrderId());
+		}
+
+        @Override
+        public void onFailure(int errorCode, String errorMessage, Bundle optionalData) {
+			Log.d("Error", errorMessage);
         }
+
+        @Override
+        public void onCancel() {
+			Log.d("Info", "User cancelled purchase");
+        }
+	}
 ```
 
-Once you have your key embedded you will need to create a purchase listener which handles responses from the server. Each purchase will have a unique purchase ID. In this example we use a Map of these IDs to the Product being purchased to allow us to determine what has been purchased :
-
+Once we have defined the listener, we need to make the purchase. The following code allows the SDK to generate a unique purchase ID, but you can specify your own if you prefer.
 ```java
-	CancelIgnoringOuyaResponseListener<String> purchaseListener =
-		new CancelIgnoringOuyaResponseListener<String>() {
-			@Override
-			public void onSuccess(String result) {
-	            try {
-    	            OuyaEncryptionHelper helper = new OuyaEncryptionHelper();
+    public void requestPurchase(final Product product) {
 
-        	        JSONObject response = new JSONObject(result);
+        Purchasable purchasable = new Purchasable(product.getIdentifier());
 
-               	    id = helper.decryptPurchaseResponse(response, mPublicKey);
-                   	Product storedProduct;
-                    synchronized (mOutstandingPurchaseRequests) {
-   	                    storedProduct = mOutstandingPurchaseRequests.remove(id);
-       	            }
-           	        if(storedProduct == null) {
-                        onFailure(
-                        	OuyaErrorCodes.THROW_DURING_ON_SUCCESS, 
-                        	"No purchase outstanding for the given purchase request",
-                        	Bundle.EMPTY);
-   	                    return;
-       	            }
-        	        
-					Log.d("Purchase", "Congrats you bought: " + storedProduct.getName());
-            	} catch (Exception e) {
-					Log.e("Purchase", "Your purchase failed.", e);
-				}
-			}
-
-			@Override
-			public void onFailure(int errorCode, String errorMessage, Bundle errorBundle) {
-				Log.d("Error", errorMessage);
-			}
-		};
-```
-
-Once we have defined the listener, we need to make the purchase. The following code provides a method which encrypts the purchase in the way the server expects;
-```java
-    public void requestPurchase(final Product product)
-        throws GeneralSecurityException, UnsupportedEncodingException, JSONException {
-        SecureRandom sr = SecureRandom.getInstance("SHA1PRNG");
-
-        // This is an ID that allows you to associate a successful purchase with
-        // it's original request. The server does nothing with this string except
-        // pass it back to you, so it only needs to be unique within this instance
-        // of your app to allow you to pair responses with requests.
-        String uniqueId = Long.toHexString(sr.nextLong());
-
-        JSONObject purchaseRequest = new JSONObject();
-        purchaseRequest.put("uuid", uniqueId);
-        purchaseRequest.put("identifier", product.getIdentifier());
-        // This value is only needed for testing, not setting it results in a live purchase
-        purchaseRequest.put("testing", "true"); 
-        String purchaseRequestJson = purchaseRequest.toString();
-
-        byte[] keyBytes = new byte[16];
-        sr.nextBytes(keyBytes);
-        SecretKey key = new SecretKeySpec(keyBytes, "AES");
-
-        byte[] ivBytes = new byte[16];
-        sr.nextBytes(ivBytes);
-        IvParameterSpec iv = new IvParameterSpec(ivBytes);
-
-        Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding", "BC");
-        cipher.init(Cipher.ENCRYPT_MODE, key, iv);
-        byte[] payload = cipher.doFinal(purchaseRequestJson.getBytes("UTF-8"));
-
-        cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding", "BC");
-        cipher.init(Cipher.ENCRYPT_MODE, mPublicKey);
-        byte[] encryptedKey = cipher.doFinal(keyBytes);
-
-        Purchasable purchasable =
-                new Purchasable(
-                        product.getIdentifier(),
-                        Base64.encodeToString(encryptedKey, Base64.NO_WRAP),
-                        Base64.encodeToString(ivBytes, Base64.NO_WRAP),
-                        Base64.encodeToString(payload, Base64.NO_WRAP) );
-
-        synchronized (mOutstandingPurchaseRequests) {
-            mOutstandingPurchaseRequests.put(uniqueId, product);
-        }
-        OuyaFacade.getInstance().requestPurchase(purchasable, purchaseListener);
+		// If you want, you can store the OrderId of the Purchasable so that you can
+		// associate the request with the successful PurchaseResult.
+        OuyaFacade.getInstance().requestPurchase(currentActivity, purchasable, purchaseListener);
     }
 ```
 Now we wait for the money to start pouring in...
@@ -248,24 +207,15 @@ Be sure to always query receipts for previous purchases and not just store your 
 
 **Note**: Only products that are entitlements are returned. This is to avoid re-awarding players consumable product purchases that have already been consumed.
 
-For security reasons, the receipts are returned encrypted and must be decrypted within the application itself.  To assist with this, you can use the **OuyaEncryptionHelper**'s **decryptReceiptResponse** method.
-
 Let us take a look at our listener:
 ```java
-	CancelIgnoringOuyaResponseListener<String> receiptListListener =
-		new CancelIgnoringOuyaResponseListener<String>() {
+	// The receipt listener now receives a collection of tv.ouya.console.api.Receipt objects.
+	CancelIgnoringOuyaResponseListener<Collection<Receipt>> receiptListListener =
+		new CancelIgnoringOuyaResponseListener<Collection<Receipt>>() {
 			@Override
-			public void onSuccess(String receiptResponse) {
-				OuyaEncryptionHelper helper = new OuyaEncryptionHelper();
-				List<Receipt> receipts = null;
-				try {
-	                JSONObject response = new JSONObject(receiptResponse);
-       	            receipts = helper.decryptReceiptResponse(response, mPublicKey);
-				} catch (Exception e) {
-					throw new RuntimeException(e);
-				}
+			public void onSuccess(Collection<Receipt> receipts) {
 				for (Receipt r : receipts) {
-					Log.d("Receipt", "You have purchased: " + r.getIdentifier() + " for " + r.getFormattedPrice());
+					Log.d("Receipt", r.getIdentifier() + " purchased for " + r.getFormattedPrice());
 				}
 			}
 
@@ -277,10 +227,8 @@ Let us take a look at our listener:
 ```
 As usual, making the actual request is quite simple:
 ```java
-	OuyaFacade.getInstance().requestReceipts(receiptListListener);
+	OuyaFacade.getInstance().requestReceipts(currentActivity, receiptListListener);
 ```
-The receipt decryption happens inside the application to help prevent hacking.  By moving the decryption into each application there is no "one piece of code" a hacker can attack to break encryption for all applications.  In the future, we will encourage developers to avoid using the **decryptReceiptResponse** method. They will need to move the method into their application, and *perturb* what it does slightly (changing for-loops to while-loops, and so forth) to help make things even more secure.
-Currently, the ODK is under heavy development, so the helper method will assist in insulating you from our "under-the-hood" changes.
 
 ### Identifying the User
 
@@ -303,7 +251,7 @@ This is done in the normal pattern of creating a listener:
 ```
 Then making the request:
 ```java
-	OuyaFacade.getInstance().requestGamerInfo(gamerInfoListener);
+	OuyaFacade.getInstance().requestGamerInfo(currentActivity, gamerInfoListener);
 ```
 **Note**: These game UUIDs are different across developers; two apps by different developers which query the UUID of the same user will get different results.
 
