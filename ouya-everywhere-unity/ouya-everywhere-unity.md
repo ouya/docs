@@ -21,7 +21,7 @@ OUYA-Everywhere INPUT Documentation for the Unity Game Engine
 
 # Releases #
 
-Several Unity packages are available from the [ouya-sdk-examples releases](https://github.com/ouya/ouya-sdk-examples/releases/)
+Several Unity packages are available from the [ouya-sdk-examples releases](https://github.com/ouya/ouya-sdk-examples/releases/):
 
 * Unity OuyaSDK-Core.unitypackage - Most packages require the OUYA Core package
 
