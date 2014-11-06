@@ -23,11 +23,11 @@ OUYA-Everywhere INPUT Documentation for the Unity Game Engine
 
 Several Unity packages are available from the [ouya-sdk-examples releases](https://github.com/ouya/ouya-sdk-examples/releases/):
 
-* Unity OuyaSDK-Core.unitypackage - Most packages require the OUYA Core package
+* [Unity OuyaSDK-Core.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Core) - Most packages require the OUYA Core package
 
-* Unity OuyaSDK-Examples.unitypackage - Package includes Virtual Controller, InAppPurchase, Safe Area, and Community Content examples 
+* [Unity OuyaSDK-Examples.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Examples) - Package includes Virtual Controller, InAppPurchase, Safe Area, and Community Content examples 
 
-* Unity OuyaSDK-StarterKit.unitypackage - Starter Kit for jumping into OUYA programming
+* [Unity OuyaSDK-StarterKit.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-StarterKit) - Starter Kit for jumping into OUYA programming
 
 ```
 Note: Before importing ALWAYS make a backup of your game!
