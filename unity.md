@@ -2,7 +2,7 @@
 
 # Legacy `THIS DOCUMENT IS SUPER OLD` #
 
-Go to the [New Unity](https://github.com/ouya/docs/blob/master/ouya-everywhere-unity/ouya-everywhere-unity.md) documentation.
+The [Unity](https://github.com/ouya/docs/blob/master/ouya-everywhere-unity/ouya-everywhere-unity.md) documentation has moved.
 
 `OLD DOCUMENTATION BELOW`
 
