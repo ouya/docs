@@ -115,7 +115,8 @@ Outlaw IDE - http://outlawgametools.com/outlaw-code-editor-and-project-manager/
 The ouya-sdk-examples are targeted towards Corona Enterprise users intending to publish to the OUYA platform.
 
 ### Supported Platforms
-The Corona examples were created using the Mac platform.
+Building Corona Enterpise examples that use Android java requires the Mac platform.
+Samples that use the [OUYA Plugin for Corona](https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/Submission/ouya/docs/ouya/index.markdown) will build on Mac or Windows.
 
 ### Introduction
 Welcome to the Corona Enterprise development club. These examples provide a quick way to add OUYA controller and in-app-purchase support to your game.
@@ -183,115 +184,62 @@ application =
 
 The starting point for your Corona game.
 
-Subscribe to axis events with a callback to receive axis input events.
+Subscribe to OUYA-Everywhere input events.
 
+lua
 ```
--- Add the axis event listener.
-Runtime:addEventListener( "axis", onAxisEvent )
-```
-
-Subscribe to key events with a callback to receive key input events.
-
-```
--- Add the key event listener.
-Runtime:addEventListener( "key", onKeyEvent )
-```
-
-#### Virtual Controller
-
-<img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/801589767.png?1376936189"/>
-
-Open the Corona Simulator at the path - ouya-sdk-examples/Corona/VirtualController/
-
-The key event callback gives you access to the event.
-
-```
--- Called when a key event has been received.
-local function onKeyEvent( event )
-
+if nil ~= ouyaSDK and nil ~= ouyaSDK.asyncLuaOuyaInitInput then
+	ouyaSDK.asyncLuaOuyaInitInput(inputs.onGenericMotionEvent, inputs.onKeyDown, inputs.onKeyUp);
 end
 ```
 
-The event device descriptor tells you which controller the input came from.
 
+Axis events come in with the onGenericMotionEvent callback.
+playerNum is the controller number 0 through 3. (Zero-based)
+Axis is the axis number for the event.
+Val is the floating input value for the axis.
+
+lua
 ```
-if (tostring(event.device.descriptor) == "Joystick 1") then
+inputs.onGenericMotionEvent = function (playerNum, axis, val)
+end
 ```
 
-The system button can be detected by the key name. The phase indicates whether the button is up or down.
+Button events come in with the onKeyDown and onKeyUp events.
+PlayerNum is the controller number 0 through 3. (Zero-based).
+Button is the button number for the event.
+
+lua
 ```
-    --System Button / Pause Menu
-    if (event.keyName == "menu" and event.phase == "up") then
-        print ("menu button detected")
+inputs.onKeyDown = function (playerNum, button)
+end
+
+inputs.onKeyUp = function (playerNum, button)
+end
+```
+
+Button numbers can be used to detect the menu button press.
+
+lua
+```
+    if (button == OuyaController.BUTTON_MENU) then
     end
 ```
 
-For the OUYA controller, the dpads can be detected by their key names. "down", "left", "right", "up".
-```
-    if (event.keyName == "down") then
-    if (event.keyName == "left") then
-    if (event.keyName == "right") then
-    if (event.keyName == "up") then
-```
+Use `OuyaController` buttons to deteremine which button was pressed in the event.
 
-For the OUYA controller, the left stick and right stick buttons can be detected by key names.
+lua
 ```
- if (event.keyName == "leftJoystickButton") then
- if (event.keyName == "rightJoystickButton") then
+	if (button == OuyaController.BUTTON_DPAD_LEFT) then
+    end
 ```
+    
+#### Virtual Controller
 
-For the OUYA controler, the "O", "U", "Y", "A" butons can be detected by key names, also.
+![Virtual Controller Example](corona/image_1.png)
 
-```
- if (event.keyName == "buttonA") then -- O button
- if (event.keyName == "buttonX") then -- U button
- if (event.keyName == "buttonY") then -- Y button
- if (event.keyName == "buttonB") then -- A button
-```
+Open the Corona Simulator at the path - ouya-sdk-examples/Corona/VirtualController/
 
-For the OUYA controller, the left and right bumpers are detected by key names.
-```
-if (event.keyName == "leftShoulderButton1") then -- Left bumper
-if (event.keyName == "rightShoulderButton1") then -- right bumper
-```
-
-For the OUYA controller, the left and right triggers are detected by key name.
-```
-if (event.keyName == "leftShoulderButton2") then -- left trigger
-if (event.keyName == "rightShoulderButton2") then -- right trigger
-```
-
-The axis event callback gives you access to the event.
-
-```
--- Called when an axis event has been received.
-local function onAxisEvent( event )
-
-end
-```
-
-The event device descriptor tells you which controller the input came from.
-
-```
-if (tostring(event.device.descriptor) == "Joystick 1") then
-```
-
-Access values can be accessed via the normalizeValue field.
-
-```
-local valAxis = event.normalizedValue;
-```
-
-The corresponding axis can be determined by number for the OUYA Controller.
-
-```
-if (event.axis.number == 1) then -- LX
-if (event.axis.number == 2) then -- LY
-if (event.axis.number == 4) then -- RX
-if (event.axis.number == 5) then -- RY
-if (event.axis.number == 3) then -- Left Trigger
-if (event.axis.number == 6) then -- Right Trigger
-```
 
 #### main.lua
 
@@ -306,14 +254,6 @@ globals.controllers =
 };
 ```
 
-And the axis and button events are registered and handled by the inputs.lua script.
-```
--- Add the key event listener.
-Runtime:addEventListener( "key", inputs.onKeyEvent )
-
--- Add the axis event listener.
-Runtime:addEventListener( "axis", inputs.onAxisEvent )
-```
 
 #### globals.lua
 
@@ -380,15 +320,11 @@ android update project --path .
 
 ### In-App-Purchases
 
-<img src="http://d3j5vwomefv46c.cloudfront.net/photos/large/801590366.png?1376936440"/>
+![In-App-Purchase Example](corona/image_2.png)
 
 #### libs/ouya-sdk.jar
 
 The OUYA ODK library used by Corona.
-
-#### libs/gson-2.2.2.jar
-
-The Google JSON encoding library.
 
 #### src/.../CoronaApplication.java
 
@@ -398,7 +334,7 @@ Contained within CoronaRuntimeEventHandler defines Lua fuction interfaces that a
 
 The activity is used to load the signing key resource and initialize the CoronaOuyaPlugin for in-app-purchases.
 
-#### src/.../AsyncLuaOuyaFetchGamerUUID.java
+#### src/.../AsyncLuaOuyaRequestGamerInfo.java
 
 This provides the Lua interface to Java to fetch the gamer uuid. 
 
@@ -414,16 +350,12 @@ This provides the Lua interface to Java to request a purchase.
 
 This provides the Lua interface to Java to request receipts. 
 
-#### src/.../AsyncLuaOuyaSetDeveloperId.java
-
-This provides the Lua interface to Java to set the developer id used by in-app-purchases. 
-
 #### src/.../Callbacks*.java
 
 The callback methods extract the arguments from the Lua calling method and returning the results to Lua after the service is invoked. Each callback implements onSuccess, onFailure, and onCancel methods.
 
 ```
-CallbacksFetchGamerUUID.java
+CallbacksRequestGamerInfo.java
 CallbacksRequestProducts.java
 CallbacksRequestPurchase.java
 CallbacksRequestPurchase.java
@@ -446,7 +378,7 @@ This is an interface that holds static references and accessors for easy access 
 
 When the CoronaOuyaFacade listener hits the onSuccess, onFailure, or onCancel callback the corresponding Lua callback is called.
 ```
-Corona/callbacksFetchGamerUUID.lua
+Corona/callbacksRequestGamerInfo.lua
 Corona/callbacksRequestProducts.lua
 Corona/callbacksRequestPurchase.lua
 Corona/callbacksRequestReceipts.lua
@@ -469,7 +401,16 @@ This lua script provides the input handlers and navigation through the main menu
 Be sure to set your developer id from the developer portal.
 
 ```
-local DEVELOPER_ID = "310a8f51-4d6e-4ae5-bda0-b93878e5f5d0";
+local json = require "json"
+if nil ~= ouyaSDK and nil ~= ouyaSDK.initOuyaPlugin then
+	local data = {
+	[1] = {
+	    ["key"] = "tv.ouya.developer_id",
+	    ["value"] = "310a8f51-4d6e-4ae5-bda0-b93878e5f5d0"
+	}};
+	local jsonData = json.encode(data);
+	ouyaSDK.initOuyaPlugin(callbacksInitOuyaPlugin.onSuccess, callbacksInitOuyaPlugin.onFailure, jsonData);
+end
 ```
 
 The main script sets up the basic button and text layout of the application. The key input listener is also registered here.
