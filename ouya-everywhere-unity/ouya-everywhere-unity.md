@@ -3,17 +3,41 @@
 
 OUYA-Everywhere INPUT Documentation for the Unity Game Engine
 
-# Audience #
+# Forums #
 
-This document is for Unity developers that want to import the OUYA SDK to access API functions and publish to the OUYA Android Console.
+[Unity on OUYA Forums](http://forums.ouya.tv/categories/unity-on-ouya)
+
+# Getting Started #
+
+<table border=1>
+ <tr>
+ <td>Controller with NGUI (2:08)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=pN9deVg4nd8" target="_blank">
+<img src="http://img.youtube.com/vi/pN9deVg4nd8/0.jpg" alt="OUYA Controller Support for NGUI on Unity" width="240" height="180" border="10" /></a>
+ </td>
+ <td></td>
+ </tr>
+</table>
 
 # Releases #
 
-Download the OUYA Core package from from the [ouya-sdk-examples Unity releases](https://github.com/ouya/ouya-sdk-examples/releases/).
+Several Unity packages are available from the [ouya-sdk-examples releases](https://github.com/ouya/ouya-sdk-examples/releases/):
+
+* [Unity OuyaSDK-Core.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Core) - Most packages require the OUYA Core package
+
+* [Unity OuyaSDK-Examples.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Examples) - Package includes Virtual Controller, InAppPurchase, Safe Area, and Community Content examples 
+
+* [Unity OuyaSDK-StarterKit.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-StarterKit) - Starter Kit for jumping into OUYA programming
 
 ```
 Note: Before importing ALWAYS make a backup of your game!
 ``` 
+
+**Note:** Make a backup of your `AndroidManifest.xml` in `Assets/Plugins/Android/AndroidManifest.xml` before importing the `OuyaSDK-Core.unitypackage`.
+
+**Note:** Make a backup of your `signing key` in `Assets/Plugins/Android/assets/key.der` before importing the `OuyaSDK-Core.unitypackage`.
+
+**Note:** Make a backup of your `icons` in `Assets/Plugins/Android/res/drawable/app_icon.png` and `Assets/Plugins/Android/res/drawable-xhdpi/ouya_icon.png` before importing the `OuyaSDK-Core.unitypackage`.
 
 # Source #
 
@@ -29,6 +53,10 @@ The ouya-core.unitypackage contains a static access class for accessing input an
 
 This input API is targeted at the OUYA Android Console and associated devices and is not maintained as a cross-platform input system.
 
+# Updating #
+
+Download `OuyaSDK-Core.unitypackage` from [Releases](https://github.com/ouya/ouya-sdk-examples/releases). Import the `OuyaSDK-Core.unitypackage` to update the plugin. In the import dialog uncheck the `AndroidManifest.xml`, `signing key` and `icons` if you don't want to replace your customizations. The imported plugin will be ready to `Build and Run` as recompiling the `Java` and `Native` plugins are no longer required now that the package includes the prebuilt libraries.
+
 # Setup #
 
 Open your game or a new project.
@@ -41,9 +69,55 @@ Import the Core package. From the menu item Assets->Import Package->Custom Packa
 
 ![image alt text](image_1.png)
 
+## `OuyaSDK-Core.unitypackage` ##
+
 Import the OuyaSDK-Core.unitypackage.
 
+`Ouya\SDK\Editor\OuyaMenuAdmin.cs` - Adds OUYA menu items for exporting packages for release
+
+`Ouya\SDK\Editor\OuyaPanel.cs` - Provides example switcher to auto change package name and icons
+
+`Ouya\SDK\Prefabs\OuyaGameObject.prefab` - Add the prefab to the initial scene for apps/games to enable the OUYA Plugin
+
+`Ouya\SDK\Scripts\OuyaGameObject.cs` - Handles communication with the OUYA Plugin between C#, C++, and Java
+
 ![image alt text](image_21.png)
+
+### Android Customization ###
+
+`Plugins\Android\AndroidManifest.xml` - Defines the package identifier and start activity.
+
+`Plugins\Android\assets\key.der` - The signing key from the developer portal
+
+`Plugins\Android\libs\armeabi-v7a\lib-ouya-ndk.so` - Prebuilt native library for the OUYA Plugin
+
+`Plugins\Android\libs\armeabi\lib-ouya-ndk.so` - Prebuilt native library for the OUYA Plugin
+
+`Plugins\Android\libs\x86\lib-ouya-ndk.so` - Prebuilt native library for the OUYA Plugin
+
+`Plugins\Android\libs\ouya-sdk.jar` - The OUYA SDK Java library
+
+`Plugins\Android\OuyaUnityPlugin.jar` - Prebuit OUYA Unity Plugin Java library
+
+`Plugins\Android\res\raw\drawable-xhdpi\ouya_icon.png` - The 732x412 OUYA Store icon
+
+`Plugins\Android\res\raw\drawable\app_icon.png` - The 96x96 settings icon
+
+![image alt text](image_22.png)
+
+### Plugin Scripts ###
+
+Files within `Plugins` make scripts available to `C#` and `JavaScript` developers.
+
+`Plugins\JSONArray.cs` - JNI hooks for using Android JSON Array parsing
+
+`Plugins\JSONObject.cs` - JNI hooks for using Android JSON Object parsing
+
+`Plugins\OuyaController.cs` - JNI hooks for interacting with the OUYA Controller
+
+`Plugins\OuyaSDK.cs` - The OUYA Plugin SDK methods for input and in-app-purchases
+
+![image alt text](image_23.png)
 
 ## Icons ##
 
@@ -73,265 +147,27 @@ Within the Player Settings, Android Tab, set the default orientation to Landscap
 
 ## OuyaGameObject.cs ##
 
-Add the OuyaGameObject to your initial loading scene. It uses DontDestroyOnLoad so you only want one instance of the OuyaGameObject. It handles communication between Java to C#. Using the inspector set your developer id.
+Add the OuyaGameObject to your initial loading scene. It uses DontDestroyOnLoad so you only want one instance of the OuyaGameObject. It handles communication between Java to C#. Select the `OuyaGameObject` in the `SceneView` and in the inspector, the `OUYA Plugin Init Values` field will be visible. Add an entry for `tv.ouya.developer_id` that corresponds to your developer uuid in the [developer portal](http://devs.ouya.tv).
 
 ![image alt text](image_20.png)
 
+## Other Player Settings ##
+
+In the Android `Player Settings` and within the `Other Settings` subgroup, here you can enter your package identifier from the [developer portal](http://devs.ouya.tv) into the `bundle id` field. Make sure the `minimum API level` field to 16.
+
+![image alt text](image_28.png)
+
 # Dependencies #
 
-The OUYA Plugin has dependencies on the Android SDK, Android NDK, and Java JDK.
+The OUYA Plugin has dependencies on the Android SDK for packaging and deploying Android applications.
+
+The OUYA Plugin includes prebuilt Java and Native plugins, recompiling the Java and Native plugin is no longer required.
 
 Android SDK - [http://developer.android.com/sdk/index.html?hl=sk](http://developer.android.com/sdk/index.html?hl=sk)
 
-Android NDK - [https://developer.android.com/tools/sdk/ndk/index.html](https://developer.android.com/tools/sdk/ndk/index.html)
+# OUYA SDK API #
 
-Java6 (32-bit) - [http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-javase6-419409.html](http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-javase6-419409.html)
-
-If you are on Windows if you install the [[Tegra Android Developer Pack]](https://developer.nvidia.com/tegra-resources), it comes with all of the needed dependencies and is the easiest way to set things up. Be sure to register for "NVIDIA GameWorks™ Registered Developer Program" to get access to the Tegra Android Developer Pack downloads.[ [Tegra Registered Developer Program]](https://developer.nvidia.com/registered-developer-programs)
-
-Launch the SDK Manager within the Android SDK folder.
-
-![image alt text](image_2.png)
-
-If you upgrade your Android SDK Platform-tools to 19 also be sure to install the Android SDK Build-tools as some tools have moved around.
-
-![image alt text](image_3.png)
-
-Install the SDK Platform for API 16.
-
-![image alt text](image_4.png)
-
-Any updates to the Android SDK will require to re-edit the adb_usb.ini to add 0x2836 so that the OUYA can be recognized over micro-usb cable.
-
-![image alt text](image_5.png)
-
-Make sure there’s no white space or empty lines after the last entry in the adb_usb.ini file.
-
-![image alt text](image_6.png)
-
-The OUYA Panel via the menu item Window->Open OUYA Panel.
-
-![image alt text](image_7.png)
-
-On the Unity tab make sure that the Unity JAR is found and nothing is greyed out. Since you are running the Unity editor to access this panel it’s highly unlikely things would be grayed out unless there was a problem during install. In which case, reinstall your version of Unity.
-
-![image alt text](image_8.png)
-
-On the Java tab make sure the path to your Java JDK6 1.6 (32-bit) is found. Nothing should be grayed out. You may need to Select the SDK Path and browse to where you’ve installing the JDK. The tools may appear gray if the JDK cannot be found or if you are not pointed at the 32-bit version of JDK 6.
-
-![image alt text](image_9.png)
-
-If you don’t have the JDK there’s a button that will take you to download the Oracle website. Sorry you have to create a login to download Java. Make sure it’s Java 6 in the older versions and that it is 32-bit.
-
-On the Android SDK tab, make sure that nothing is grayed out. You can set the Android API-16 level in the player settings. You may need to browse to where you’ve downloaded the Android SDK. You may need to run the Android SDK in order to install the SDK platform-16.
-
-![image alt text](image_10.png)
-
-On the Android NDK tab, make sure nothing is grayed out. NDK is required this time to be setup. Click the download link if you don’t have the Android NDK.
-
-![image alt text](image_11.png)
-
-The OUYA menu still has the export options from the previous version. And Core is the only package that you need to get your game up and running.
-
-![image alt text](image_12.png)
-
-This time when you import core, it’s optional to import the ProjectSettings\InputManager.asset as the new input completely bypasses the Unity Input API. You might want these settings for the non-Android platforms.
-
-FAQ: All the other ProjectSettings that are part of the original project that was opened are just the defaults. There’s no need to copy these to your game project and you probably shouldn’t.
-
-FAQ: Which input system should I use. The legacy input system is still useful for non-OUYA platforms. [https://github.com/ouya/ouya-unity-plugin](https://github.com/ouya/ouya-unity-plugin) Where the new OUYA-Everywhere input system is great for the feature that you don’t need to rebuild your game to support new devices and controllers for the Android platform. The new OUYA-Everywhere input system keeps your game compatible with all officially supported OUYA devices in the future. The new OUYA-Everywhere input system is cleaner too. There’s no longer the need to have a massive C# script with tons of switch blocks and controller mappings. OUYA support handles adding support for new controllers so you don’t have to.
-
-FAQ: Is there more info on non-OUYA platforms? Talking about Mac, Windows, Linux, XBOX, etc, you are free to use whatever input system you want to use. The new OuyaSDK.OuyaInput APIs are great for the Android platform and making everything appear as an OUYA controller. On the non-OUYA side there are projects dedicated to supporting hundreds of controllers on Mac, Windows, Linux and those are worth checking out. I say that because OUYA support is our primary focus and so that’s what this library is targeted at.
-
-Okay back on the OUYA-Everywhere input.
-
-## Compile NDK ##
-
-First you want to click the Compile NDK button.
-
-* Note: Avoid spaces in the project path as it can cause issues with building NDK.
-
-If everything is working okay your console output in the editor should look like this.
-
-![image alt text](image_13.png)
-
-The expected output in the console log should read:
-
-```
-[Results] elapsedTime: 1.995114 errors: 
-output: [armeabi-v7a] Compile++ arm  : -ouya-ndk <= jni.cpp
-[armeabi-v7a] SharedLibrary  : lib-ouya-ndk.so
-[armeabi-v7a] Install        : lib-ouya-ndk.so => libs/armeabi-v7a/lib-ouya-ndk.so
-
-UnityEngine.Debug:Log(Object)
-OuyaPanel:RunProcess(List`1, String, String, String, String&, String&, String) (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:2801)
-OuyaPanel:RunProcess(List`1, String, String, String, String&, String&) (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:2760)
-OuyaPanel:RunProcess(List`1, String, String) (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:2723)
-OuyaPanel:CompileNDK() (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:507)
-OuyaPanel:Update() (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:883)
-UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
-```
-
-## Main Activity ##
-
-The next key things are in the OUYA Tab, make sure you’ve set a unique bundle identifier. And your main activity should be "MainActivity".
-
-![image alt text](image_14.png)
-
-## Sync Bundle ID ##
-
-When you change the bundle identifier, you’ll see a popup. Where you just hit the "Sync Bundle Id" to make the android manifest and package name match. Keep in mind this is case sensitive and needs to match the bundle id that you will use in the developer portal when submitting your game. Case matters.
-
-![image alt text](image_15.png)
-
-After syncing the bundle id, now the error warning should disappear.
-
-## Compile Plugin ##
-
-Click the Compile Plugin button and that will compile the Java plugin. If successful you should see the editor console log print signatures for the compiled Java classes.
-
-![image alt text](image_16.png)
-
-The expected output in the console log should show the main activity signature:
-
-```
-MainActivity
-[Results] elapsedTime: 0.1450083 errors: 
-output: Compiled from "MainActivity.java"
-public class tv.ouya.demo.SceneShowUnityInput.MainActivity extends tv.ouya.sdk.OuyaUnityActivity{
-public tv.ouya.demo.SceneShowUnityInput.MainActivity();
-  Signature: ()V
-protected void onCreate(android.os.Bundle);
-  Signature: (Landroid/os/Bundle;)V
-public void onStart();
-  Signature: ()V
-public void onStop();
-  Signature: ()V
-protected void onActivityResult(int, int, android.content.Intent);
-  Signature: (IILandroid/content/Intent;)V
-protected void onSaveInstanceState(android.os.Bundle);
-  Signature: (Landroid/os/Bundle;)V
-protected void onDestroy();
-  Signature: ()V
-public void onResume();
-  Signature: ()V
-public void onPause();
-  Signature: ()V
-public void onConfigurationChanged(android.content.res.Configuration);
-  Signature: (Landroid/content/res/Configuration;)V
-public void onWindowFocusChanged(boolean);
-  Signature: (Z)V
-static java.lang.Boolean access$000(tv.ouya.demo.SceneShowUnityInput.MainActivity);
-  Signature: (Ltv/ouya/demo/SceneShowUnityInput/MainActivity;)Ljava/lang/Boolean;
-}
-
-
-UnityEngine.Debug:Log(Object)
-OuyaPanel:RunProcess(List`1, String, String, String, String&, String&, String) (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:2807)
-OuyaPanel:RunProcess(List`1, String, String, String, String) (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:2749)
-OuyaPanel:RunProcess(String, String, String, String) (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:2742)
-OuyaMenuAdmin:BuildApplicationJar() (at Assets/Ouya/SDK/Editor/OuyaMenuAdmin.cs:338)
-OuyaMenuAdmin:MenuGeneratePluginJar() (at Assets/Ouya/SDK/Editor/OuyaMenuAdmin.cs:127)
-OuyaPanel:Update() (at Assets/Ouya/SDK/Editor/OuyaPanel.cs:894)
-UnityEditor.EditorApplication:Internal_CallUpdateFunctions()
-```
-
-# Legacy #
-
-Some legacy files are not required to be imported or can be removed.
-
-## Legacy InputManager.asset (Removed) ##
-
-The InputManager Mappings file is no longer used by the plugin. So you may choose to keep your existing mapping file which is used for non-OUYA platforms.
-
-```
-ProjectSettings/InputManager.asset
-```
-
-## Legacy OuyaExampleCommon.cs (Removed) ##
-
-The legacy OuyaExampleCommon.cs script can been removed or replaced with another input system.
-
-```
-Assets/Plugins/OuyaExampleCommon.cs
-```
-
-There are a number of related legacy input C# scripts that should be removed.
-
-```
-Assets/Plugins/IOuyaController.cs
-Assets/Plugins/OuyaControllerCommon.cs
-Assets/Plugins/OuyaExampleCommon.cs
-Assets/Plugins/OuyaKeyCodes.cs
-Assets/Plugins/PS2Controller.cs
-Assets/Plugins/XBox360Controller.cs
-```
-
-## Legacy OuyaPostProcessor.cs (Removed) ##
-
-The OuyaPostProcessor would auto compile C++ and Java source after a detected change. However, changes to the plugin are infrequent enough making this feature not used and so it was removed. Typically you only need to compile NDK and the Java Plugin after importing an update of the plugin.
-
-```
-Assets/Ouya/SDK/Editor/OuyaPostProcessor.cs
-```
-
-## Legacy OuyaUnityApplication.jar (Removed) ##
-
-If you have the legacy OuyaUnityApplication.jar file make sure that it’s removed. If you forget this step, you’ll get an DEX error when building the game.
-
-```
-Assets\Plugins\Android\OuyaUnityApplication.jar
-```
-
-## Legacy OuyaUnityApplication.java (Removed) ##
-
-If you have the legacy OuyaUnityApplication.java file make sure that it’s removed. If you forget this step, you’ll get a Java compile error.
-
-```
-Assets\Plugins\Android\src\OuyaUnityApplication.java
-```
-
-## Legacy OuyaNativeActivity.java (Removed) ##
-
-If you have the legacy OuyaNativeActivity.java file make sure that it’s removed. If you forget this step, you’ll get a Java compile error.
-
-```
-Assets\Plugins\Android\src\OuyaNativeActivity.java
-```
-
-## Legacy R.java (Removed) ##
-
-The Core Unity Package may include example R.java files that should not be imported into your game. You may want to delete these extra files if they were imported.
-
-Note (ODK 1.0.14.1): R.java and resources were moved to be compatible with other 3rd party plugins that also supplied this generated file.  
-
-```
-Assets\Plugins\Android\src\tv\...\R.java
-```
-
-## Legacy Litjson (Removed) ##
-
-Litjson is a public domain 3rd party library for parsing JSON data. Android already has classes for handling JSONObject parsing and so the legacy Litjson was replaced.
-
-```
-Assets\Litjson
-```
-
-# OUYA Panel #
-
-Unity Free or Unity Pro
-
-If you have the free version you’ll have to use the menu File->Build Settings or File->Build and Run.
-
-If you have the pro version, you can hit the Build and Run Application button in the OUYA Panel.
-
-FAQ: If you have the Android free version you won’t be able to use pro features like render textures.
-
-The Run Application and Stop Application are convenient for relaunching or exiting your application while it’s running on the OUYA.
-
-# OUYA Everywhere API #
-
-Be sure to be on the Android platform before invoking the OUYA Everywhere API.
+Be sure to be on the `Android` platform before invoking the OUYA SDK API.
 
 ```
 #if UNITY_ANDROID && !UNITY_EDITOR
@@ -346,6 +182,8 @@ Be sure to be on the Android platform before invoking the OUYA Everywhere API.
 ```
 
 ## Initialization ##
+
+Initialization is handled by the `OuyaGameObject` being placed in your initial scene.
 
 Make sure that before invoking other OuyaSDK methods than isIAPInitComplete returns true. This gives time for the Java to initialize before accessing the controller, button names, button images, products, purchase, receipts, and toggling cursor visibility.
 
@@ -462,12 +300,12 @@ float OuyaSDK.OuyaInput.GetAxis(int playerNum, int axis);
 
 #if UNITY_ANDROID && !UNITY_EDITOR
 
-OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_LS_X);
-OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_LS_Y);
-OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_RS_X);
-OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_RS_Y);
-OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_L2);
-OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_R2);
+OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_LS_X)
+OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_LS_Y)
+OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_RS_X)
+OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_RS_Y)
+OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_L2)
+OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_R2)
 
 #endif
 
@@ -476,12 +314,12 @@ float OuyaSDK.OuyaInput.GetAxisRaw(int playerNum, int axis);
 
 #if UNITY_ANDROID && !UNITY_EDITOR
 
-OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_LS_X);
-OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_LS_Y);
-OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_RS_X);
-OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_RS_Y);
-OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_L2);
-OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_R2);
+OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_LS_X)
+OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_LS_Y)
+OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_RS_X)
+OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_RS_Y)
+OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_L2)
+OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_R2)
 
 #endif
 ```
@@ -511,18 +349,18 @@ bool OuyaSDK.OuyaInput.GetButton(int playerNum, int keyCode);
 
 #if UNITY_ANDROID && !UNITY_EDITOR
 
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_O);
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_U);
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_Y);
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_A);
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_L1);
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_R1);
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_L3);
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_R3);
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_DPAD_UP);
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_DPAD_DOWN);
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_DPAD_RIGHT);
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_DPAD_LEFT);
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_O)
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_U)
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_Y)
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_A)
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_L1)
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_R1)
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_L3)
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_R3)
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_DPAD_UP)
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_DPAD_DOWN)
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_DPAD_RIGHT)
+OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_DPAD_LEFT)
 
 #endif
 
@@ -531,19 +369,19 @@ bool OuyaSDK.OuyaInput.GetButtonDown(int playerNum, int button);
 
 #if UNITY_ANDROID && !UNITY_EDITOR
 
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_O);
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_U);
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_Y);
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_A);
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_L1);
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_R1);
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_L3);
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_R3);
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_UP);
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_DOWN);
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_RIGHT);
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_LEFT);
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_MENU);
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_O)
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_U)
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_Y)
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_A)
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_L1)
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_R1)
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_L3)
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_R3)
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_UP)
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_DOWN)
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_RIGHT)
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_LEFT)
+OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_MENU)
 
 #endif
 
@@ -552,19 +390,19 @@ bool OuyaSDK.OuyaInput.GetButtonUp(int playerNum, int button);
 
 #if UNITY_ANDROID && !UNITY_EDITOR
 
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_O);
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_U);
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_Y);
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_A);
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_L1);
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_R1);
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_L3);
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_R3);
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_UP);
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_DOWN);
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_RIGHT);
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_LEFT);
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_MENU);
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_O)
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_U)
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_Y)
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_A)
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_L1)
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_R1)
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_L3)
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_R3)
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_UP)
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_DOWN)
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_RIGHT)
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_LEFT)
+OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_MENU)
 
 #endif
 ```
@@ -583,7 +421,7 @@ C#
 
 //@returns true if the player number is connected
 //@returns false if the player number is disconnected
-//bool OuyaSDK.OuyaInput.IsControllerConnected(int playerNum);
+bool OuyaSDK.OuyaInput.IsControllerConnected(int playerNum);
 
 #endif
 ```
@@ -605,6 +443,959 @@ OuyaController.showCursor(true);
 #endif
 ```
 
+# Request Gamer Info #
+
+Gamer Info provides access to the gamer username and uuid.
+
+Extend the `IRequestGamerInfoListener` interface to receive the callbacks for invoking `OuyaSDK.requestGamerInfo()`.
+
+C#
+```
+public class MyScript : MonoBehaviour,
+    OuyaSDK.IRequestGamerInfoListener
+{
+}
+```
+
+JavaScript
+```
+public class MyScript extends MonoBehaviour implements
+	OuyaSDK.IRequestGamerInfoListener
+{
+}
+```
+
+Register the instance to receive the interface callback events.
+
+C#
+```
+    void Awake()
+    {
+        OuyaSDK.registerRequestGamerInfoListener(this);
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterRequestGamerInfoListener(this);
+    }
+```
+
+JavaScript
+```
+    function Awake()
+    {
+        OuyaSDK.registerRequestGamerInfoListener(this);
+    }
+
+    function OnDestroy()
+    {
+        OuyaSDK.unregisterRequestGamerInfoListener(this);
+    }
+```
+
+The success event will receive the gamer info.
+
+C#
+```
+    public void RequestGamerInfoOnSuccess(string uuid, string username)
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestGamerInfoOnSuccess(uuid : String, username : String)
+    {
+    }
+```
+
+The failure event will receive an error code and error message.
+
+C#
+```
+    public void RequestGamerInfoOnFailure(int errorCode, string errorMessage)
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestGamerInfoOnFailure(errorCode : int, errorMessage : String)
+    {
+    }
+```
+
+The cancel event indicates the request was cancelled.
+
+C#
+```
+    public void RequestGamerInfoOnCancel()
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestGamerInfoOnCancel()
+    {
+    }
+```
+
+# Request Products #
+
+Product Info provides access to the product name, details, localPrice, and other information.
+
+Prepare a list of Purchasables to request details for.
+
+C#
+```
+string[] productItems =
+{
+	"YOUR_PRODUCT_ID_1",
+	"YOUR_PRODUCT_ID_2",
+	"YOUR_PRODUCT_ID_3",
+};
+
+List<OuyaSDK.Purchasable> purchasables =
+	new List<OuyaSDK.Purchasable>();
+	
+foreach (string productId in productItems)
+{
+	OuyaSDK.Purchasable purchasable = new OuyaSDK.Purchasable();
+	purchasable.productId = productId;
+	purchasables.Add(purchasable);
+}
+
+OuyaSDK.requestProducts(purchasables);
+```
+
+JavaScript
+```
+var productItems : String[] =
+{
+	"YOUR_PRODUCT_ID_1",
+	"YOUR_PRODUCT_ID_2",
+	"YOUR_PRODUCT_ID_3",
+};
+
+var purchasables : List<OuyaSDK.Purchasable> =
+	new List<OuyaSDK.Purchasable>();
+	
+foreach (var productId : String in productItems)
+{
+	var purchasable : OuyaSDK.Purchasable = new OuyaSDK.Purchasable();
+	purchasable.productId = productId;
+	purchasables.Add(purchasable);
+}
+
+OuyaSDK.requestProducts(purchasables);
+```
+
+Extend the `IRequestProductsListener ` interface to receive the callbacks for invoking `OuyaSDK.requestProducts(purchasables)`.
+
+C#
+```
+public class MyScript : MonoBehaviour,
+    OuyaSDK.IRequestProductsListener
+{
+}
+```
+
+JavaScript
+```
+public class MyScript extends MonoBehaviour implements
+	OuyaSDK.IRequestProductsListener
+{
+}
+```
+
+Register the instance to receive the interface callback events.
+
+C#
+```
+    void Awake()
+    {
+        OuyaSDK.registerRequestProductsListener(this);
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterRequestProductsListener(this);
+    }
+```
+
+JavaScript
+```
+    function Awake()
+    {
+        OuyaSDK.registerRequestProductsListener(this);
+    }
+
+    function OnDestroy()
+    {
+        OuyaSDK.unregisterRequestProductsListener(this);
+    }
+```
+
+The success event will receive a list of products.
+
+C#
+```
+    public void RequestProductsOnSuccess(List<OuyaSDK.Product> products)
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestProductsOnSuccess(products : List.<OuyaSDK.Product>)
+    {
+    }
+```
+
+The failure event will receive an error code and error message.
+
+C#
+```
+    public void RequestProductsOnFailure(int errorCode, string errorMessage)
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestProductsOnFailure(errorCode : int, errorMessage : String)
+    {
+    }
+```
+
+The cancel event indicates the request was cancelled.
+
+C#
+```
+    public void RequestProductsOnCancel()
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestProductsOnCancel()
+    {
+    }
+```
+
+# Request Purchase #
+
+A gamer can purchase an entitlement or consumable using `OuyaSDK.requestPurchase`.
+
+Prepare a `Purchasable` to initiate a purchase.
+
+C#
+```
+OuyaSDK.Purchasable purchasable = new OuyaSDK.Purchasable();
+purchasable.productId = "YOUR_PRODUCT_ID";
+OuyaSDK.requestPurchase(purchasable);
+```
+
+JavaScript
+```
+var purchasable : OuyaSDK.Purchasable = new OuyaSDK.Purchasable();
+purchasable.productId = "YOUR_PRODUCT_ID";
+OuyaSDK.requestPurchase(purchasable);
+```
+
+Extend the `IRequestPurchaseListener ` interface to receive the callbacks for invoking `OuyaSDK.requestPurchase(purchasable)`.
+
+C#
+```
+public class MyScript : MonoBehaviour,
+    OuyaSDK.IRequestPurchaseListener
+{
+}
+```
+
+JavaScript
+```
+public class MyScript extends MonoBehaviour implements
+	OuyaSDK.IRequestPurchaseListener
+{
+}
+```
+
+Register the instance to receive the interface callback events.
+
+C#
+```
+    void Awake()
+    {
+        OuyaSDK.registerRequestPurchaseListener(this);
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterRequestPurchaseListener(this);
+    }
+```
+
+JavaScript
+```
+    function Awake()
+    {
+        OuyaSDK.registerRequestPurchaseListener(this);
+    }
+
+    function OnDestroy()
+    {
+        OuyaSDK.unregisterRequestPurchaseListener(this);
+    }
+```
+
+The success event will receive the purchased product.
+
+C#
+```
+    public void RequestPurchaseOnSuccess(OuyaSDK.Product product)
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestPurchaseOnSuccess(product : OuyaSDK.Product)
+    {
+    }
+```
+
+The failure event will receive an error code and error message.
+
+C#
+```
+    public void RequestPurchaseOnFailure(int errorCode, string errorMessage)
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestPurchaseOnFailure(errorCode : int, errorMessage : String)
+    {
+    }
+```
+
+The cancel event indicates the request was cancelled.
+
+C#
+```
+    public void RequestPurchaseOnCancel()
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestPurchaseOnCancel()
+    {
+    }
+```
+
+# Request Receipts #
+
+Receipts return all the `entitlements` that the `gamer` has purchased from the `developer`.
+
+Extend the `IRequestReceiptsListener ` interface to receive the callbacks for invoking `OuyaSDK.OuyaSDK.requestReceipts()`.
+
+C#
+```
+public class MyScript : MonoBehaviour,
+    OuyaSDK.IRequestReceiptsListener
+{
+}
+```
+
+JavaScript
+```
+public class MyScript extends MonoBehaviour implements
+	OuyaSDK.IRequestReceiptsListener
+{
+}
+```
+
+Register the instance to receive the interface callback events.
+
+C#
+```
+    void Awake()
+    {
+        OuyaSDK.registerRequestReceiptsListener(this);
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterRequestReceiptsListener(this);
+    }
+```
+
+JavaScript
+```
+    function Awake()
+    {
+        OuyaSDK.registerRequestReceiptsListener(this);
+    }
+
+    function OnDestroy()
+    {
+        OuyaSDK.unregisterRequestReceiptsListener(this);
+    }
+```
+
+The success event will receive a list of receipts.
+
+C#
+```
+    public void RequestReceiptsOnSuccess(List<OuyaSDK.Receipt> receipts)
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestReceiptsOnSuccess(receipts : List.<OuyaSDK.Receipt>)
+    {
+    }
+```
+
+The failure event will receive an error code and error message.
+
+C#
+```
+    public void RequestReceiptsOnFailure(int errorCode, string errorMessage)
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestReceiptsOnFailure(errorCode : int, errorMessage : String)
+    {
+    }
+```
+
+The cancel event indicates the request was cancelled.
+
+C#
+```
+    public void RequestReceiptsOnCancel()
+    {
+    }
+```
+
+JavaScript
+```
+    public function RequestReceiptsOnCancel()
+    {
+    }
+```
+
+# Set Safe Area #
+
+Part of the content submission guideline rules is that all important information needs to be in the safe zone. The safe area can be adjusted by passing an amount when calling `OuyaSDK.setSafeArea(amount)`.
+
+C#
+```
+float amount;
+amount = 0f; //full border pdding
+amount = 1f; //no border padding
+OuyaSDK.setSafeArea(amount);
+```
+
+JavaScript
+```
+var amount : float;
+amount = 0; //full border pdding
+amount = 1; //no border padding
+OuyaSDK.setSafeArea(amount);
+```
+
+# Community Content #
+
+The [Community Content](https://github.com/ouya/docs/blob/master/community_content.md) documentation has a detailed overview of features.
+
+If the Community Content is available the `CC Actions` are available.
+
+* Create
+* Delete
+* Download
+* Edit
+* Search for installed items
+* Search for published items
+* Publish
+* Unpublish
+
+The general process for using the Community Content API is register listeners and wait for initialization.
+
+## `IContentInitializedListener` ##
+
+One way to check if Community Content has been initialized is to implement the `IContentInitializedListener` interface.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`ContentInitializedOnInitialized` is invoked when the  `OuyaContent` becomes accessible.
+`ContentInitializedOnDestroyed` is invoked when the `OuyaContent` has been destroyed.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IContentInitializedListener
+{
+    private void Awake()
+    {
+        OuyaSDK.registerContentInitializedListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterContentInitializedListener(this);
+    }
+    public void ContentInitializedOnInitialized()
+    {
+    }
+    public void ContentInitializedOnDestroyed()
+    {
+    }
+}
+```
+
+## `OuyaContent` ##
+
+`OuyaContent` is the entry point for accessing the Community Content API.
+`OuyaUnityPlugin` provides a reference to the `OuyaContent` object.
+Make sure to wrap the `OuyaContent` accessor with `using` to ensure the JNI reference is disposed.
+
+C#
+```
+using (OuyaContent ouyaContent = OuyaUnityPlugin.getOuyaContent())
+{
+}
+```
+
+## `isAvailable` ##
+
+Before accessing Community Content, make sure the API is available to the gamer.
+The Community Content API won't be available if an `age gate` is active for the gamer. 
+
+C#
+```
+bool isAvailable = ouyaContent.isAvailable();
+```
+
+## `isInitialized` ##
+
+One way to check if Community Content has been initialized is to invoke `isInitialized`.
+
+C#
+```
+if (ouyaContent.isInitialized())
+{
+}
+```
+
+## `IContentDeleteListener` ##
+
+Implement the `IContentDeleteListener` interface to receive the callbacks from deleting an `OuyaMod` community content object.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`ContentDeleteOnDeleted` is invoked when the  `OuyaMod` has been deleted.
+`ContentDeleteOnDeleteFailed` is invoked when the `OuyaMod` deletion has failed.
+The listener callbacks occur after `OuyaUnityPlugin.contentDelete` is invoked.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IContentDeleteListener
+{
+    private void Awake()
+    {
+        OuyaSDK.registerContentDeleteListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterContentDeleteListener(this);
+    }
+    public void ContentDeleteOnDeleted(OuyaMod ouyaMod)
+    {
+    }
+    public void ContentDeleteOnDeleteFailed(OuyaMod ouyaMod, int code, string reason)
+    {
+    }
+    void Delete(OuyaMod ouyaMod)
+    {
+        OuyaUnityPlugin.contentDelete(ouyaMod);
+    }
+}
+```
+
+## `IContentDownloadListener` ##
+
+Implement the `IContentDownloadListener` interface to receive the callbacks from downloading an `OuyaMod` community content object.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`ContentDownloadOnComplete` is invoked when the `OuyaMod` has finished downloading.
+`ContentDownloadOnProgress` is invoked when the `OuyaMod` download is in progress.
+`ContentDownloadOnFailed` is invoked when the `OuyaMod` download has failed.
+The listener callbacks occur after `OuyaUnityPlugin.contentDownload` is invoked.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IContentDownloadListener
+{
+    private void Awake()
+    {
+        OuyaSDK.registerContentDownloadListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterContentDownloadListener(this);
+    }
+    public void ContentDownloadOnComplete(OuyaMod ouyaMod)
+    {
+    }
+    public void ContentDownloadOnProgress(OuyaMod ouyaMod, int progress)
+    {
+    }
+    public void ContentDownloadOnFailed(OuyaMod ouyaMod)
+    {
+    }
+    void Download(OuyaMod ouyaMod)
+    {
+        OuyaUnityPlugin.contentDownload(ouyaMod);
+    }
+}
+```
+
+## `IContentInstalledSearchListener` ##
+
+Implement the `IContentInstalledSearchListener` interface to receive the callbacks from searching for installed `OuyaMod` community content object.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`ContentInstalledSearchOnResults` is invoked when the search for `OuyaMod` installed content has finished.
+`ContentInstalledSearchOnError` is invoked when the `OuyaMod` search has failed.
+The listener callbacks occur after `OuyaUnityPlugin.getOuyaContentInstalled` is invoked.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IContentDownloadListener
+{
+    private void Awake()
+    {
+        OuyaSDK.registerContentInstalledSearchListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterContentInstalledSearchListener(this);
+    }
+    public void ContentInstalledSearchOnResults(List<OuyaMod> ouyaMods, int count)
+    {
+    }
+    public void ContentInstalledSearchOnError(int code, string reason)
+    {
+    }
+    void Search()
+    {
+        OuyaUnityPlugin.getOuyaContentInstalled();
+    }
+}
+```
+
+## `IContentPublishedSearchListener` ##
+
+Implement the `IContentPublishedSearchListener` interface to receive the callbacks from searching for published `OuyaMod` community content object.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`ContentPublishedSearchOnResults` is invoked when the search for `OuyaMod` published content has finished.
+`ContentPublishedSearchOnError` is invoked when the `OuyaMod` search has failed.
+The listener callbacks occur after `OuyaUnityPlugin.getOuyaContentPublished` is invoked.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IContentPublishedSearchListener
+{
+    private void Awake()
+    {
+        OuyaSDK.registerContentPublishedSearchListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterContentPublishedSearchListener(this);
+    }
+    public void ContentPublishedSearchOnResults(List<OuyaMod> ouyaMods, int count)
+    {
+    }
+    public void ContentPublishedSearchOnError(int code, string reason)
+    {
+    }
+    void Search(OuyaContent.SortMethod sortMethod)
+    {
+        OuyaUnityPlugin.getOuyaContentPublished(sortMethod);
+    }
+}
+```
+
+## `IContentPublishListener` ##
+
+Implement the `IContentPublishListener` interface to receive the callbacks from publishing an `OuyaMod` community content object.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`ContentPublishOnSuccess` is invoked when the `OuyaMod` has published successfully.
+`ContentPublishOnError` is invoked when the `OuyaMod` publish has failed.
+The listener callbacks occur after `OuyaUnityPlugin.contentPublish` is invoked.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IContentPublishListener
+{
+    private void Awake()
+    {
+        OuyaSDK.registerContentPublishListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterContentPublishListener(this);
+    }
+    public void ContentPublishOnSuccess(OuyaMod ouyaMod)
+    {
+    }
+    public void ContentPublishOnError(OuyaMod ouyaMod, int code, string reason)
+    {
+    }
+    void Publish(OuyaMod ouyaMod)
+    {
+        OuyaUnityPlugin.contentPublish(ouyaMod);
+    }
+}
+```
+
+## `IContentSaveListener` ##
+
+Implement the `IContentSaveListener` interface to receive the callbacks from saving an `OuyaMod` community content object.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`ContentSaveOnSuccess` is invoked when the `OuyaMod` has saved successfully.
+`ContentSaveOnError` is invoked when the `OuyaMod` save has failed.
+The listener callbacks occur after `OuyaUnityPlugin.saveOuyaMod` is invoked.
+Saved OuyaMod content will return in the installed Community Content searches.
+The saved OuyaMod content needs to be published to show in the published search results.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IContentSaveListener
+{
+    private void Awake()
+    {
+        OuyaSDK.unregisterContentSaveListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterContentSaveListener(this);
+    }
+    public void ContentSaveOnSuccess(OuyaMod ouyaMod)
+    {
+    }
+    public void ContentSaveOnError(OuyaMod ouyaMod, int code, string reason)
+    {
+    }
+    void Save(OuyaMod ouyaMod, OuyaMod.Editor editor)
+    {
+        OuyaUnityPlugin.saveOuyaMod(ouyaMod, editor);
+    }
+}
+```
+
+## `IContentUnpublishListener` ##
+
+Implement the `IContentUnpublishListener` interface to receive the callbacks from unpublishing an `OuyaMod` community content object.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`ContentUnpublishOnSuccess` is invoked when the `OuyaMod` has unpublished successfully.
+`ContentUnpublishOnError` is invoked when the `OuyaMod` unpublish has failed.
+The listener callbacks occur after `OuyaUnityPlugin.contentUnpublish` is invoked.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IContentUnpublishListener
+{
+    private void Awake()
+    {
+        OuyaSDK.registerContentUnpublishListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterContentUnpublishListener(this);
+    }
+    public void ContentUnpublishOnSuccess(OuyaMod ouyaMod)
+    {
+    }
+    public void ContentUnpublishOnError(OuyaMod ouyaMod, int code, string reason)
+    {
+    }
+    void Unpublish(OuyaMod ouyaMod)
+    {
+        OuyaUnityPlugin.contentUnpublish(ouyaMod);
+    }
+}
+```
+
+## `IResumeListener` ##
+
+Implement the `IResumeListener` interface to receive the resume callback.
+When the Community Content rate and flag dialogs are closed the resume callback will indicate the game can continue.
+Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
+`OuyaOnResume` is invoked when the game has been resumed.
+
+C#
+```
+public class MyScript : MonoBehaviour
+#if UNITY_ANDROID && !UNITY_EDITOR
+    ,
+    OuyaSDK.IResumeListener
+{
+    private void Awake()
+    {
+        OuyaSDK.registerResumeListener(this);
+    }
+    private void OnDestroy()
+    {
+        OuyaSDK.unregisterResumeListener(this);
+    }
+    public void OuyaOnResume()
+    {
+    }
+}
+```
+
+## `Create` ##
+
+The `OuyaContent` object is used to create content.
+The `OuyaMod` content must be saved before it will be returned by searching for installed content.
+The `OuyaMod` content must be published before it will be returned by searching for published content.
+
+C#
+```
+    using (OuyaContent ouyaContent = OuyaUnityPlugin.getOuyaContent())
+    {
+        if (ouyaContent.isInitialized())
+        {
+            using (OuyaMod ouyaMod = ouyaContent.create())
+            {
+            }
+        }
+    }
+
+```
+
+## `OuyaMod.Editor` ##
+
+The `Editor` object is used to edit the `OuyaMod` fields.
+
+C#
+```
+    using (OuyaContent ouyaContent = OuyaUnityPlugin.getOuyaContent())
+    {
+	    using (OuyaMod ouyaMod = ouyaContent.create())
+	    {
+	        using (OuyaMod.Editor editor = ouyaMod.edit())
+	        {
+	        }
+	    }
+	}
+```
+
+Some fields are required.
+
+C#
+```
+	void AddRequiredFields(OuyaMod ouyaMod)
+	{
+	    using (OuyaMod.Editor editor = ouyaMod.edit())
+	    {
+			editor.setTitle("Custom Level");
+			editor.setCategory("level");
+			editor.setDescription("This is my custom level");
+	    }
+	}
+```
+
+Files can be added to `OuyaMod` objects by passing a byte array.
+
+C#
+```
+	void AddFile(OuyaMod ouyaMod, string filename, byte[] data)
+	{
+	    using (OuyaMod.Editor editor = ouyaMod.edit())
+	    {
+	        using (OutputStream os = editor.newFile(filename))
+	        {
+	            os.write(data);
+	            os.close();
+	        }
+		}
+	}
+```
+
+Screenshots can be added to `OuyaMod` objects by converting `Texture2D` to Android `Bitmap` objects.
+Be sure to make the Texture readable and RGBA32 before attempting to convert to a `Bitmap` object.
+
+C#
+```
+	void AddScreenshot(OuyaMod.Editor editor, Texture2D texture)
+	{
+		byte[] buffer = texture.EncodeToPNG();
+		if (null != buffer &&
+		    buffer.Length >= 0)
+		{
+		    Bitmap bitmap = BitmapFactory.decodeByteArray(buffer, 0, buffer.Length);
+			editor.addScreenshot(bitmap);
+		}
+	}
+```
+
+The `Editor` object also sets optional fields.
+
+C#
+```
+	void AddOptionalData(OuyaMod ouyaMod)
+	{
+	    using (OuyaMod.Editor editor = ouyaMod.edit())
+	    {
+			editor.addTag("space");
+			editor.addTag("king of the hill");
+			
+			editor.setMetadata("difficulty=4;theme=space;mode=koth");
+		}
+	}
+```
+
+After editing fields be sure to save the changes.
+
+C#
+```
+	void Save(OuyaMod ouyaMod)
+	{
+	    using (OuyaMod.Editor editor = ouyaMod.edit())
+	    {
+			OuyaUnityPlugin.saveOuyaMod(ouyaMod, editor);
+		}
+	}
+```
+
 # Examples #
 
 Download the Examples package from github releases…
@@ -613,16 +1404,143 @@ Import the Examples package. From the menu item Assets->Import Package->Custom P
 
 ![image alt text](image_17.png)
 
+## OUYA Panel ##
+
+Open the `OUYA Panel` from the `Window->Open OUYA Panel` menu item.
+
+![image alt text](image_7.png)
+
+The `OUYA Panel` provides a quick way to switch between examples.
+
+![image alt text](image_27.png)
+
+Use the drop down to select the example and then click the `Switch to Example` button which updates the icons and package name.
+
 # Virtual Controller Example #
 
 The virtual controller example exercises the new OUYA-Everywhere input. The button names and images are now accessible from the API. And the virtual controller buttons highlight for multiple controllers for supported controllers. The right-hand JOY buttons toggle input for specific player numbers.
 
 ![image alt text](image_18.png)
 
-## Virtual Controller Example ##
-
 The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/VirtualController.cs) script displays a 2D controller with axis and buttons that highlight when the physical controller is used.
 
 ## Input Test ##
 
 The [Input Test](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/OuyaInputTest.cs) script displays all the axis, button up, and button down states to verify that input is correctly setup.
+
+![image alt text](image_26.png)
+
+## In App Purchase Example ##
+
+The `ShowProducts` scene is an in-app-purchase example that uses the `OuyaSDK` to access gamer info, purchasing, and receipts.
+
+![image alt text](image_25.png)
+
+## Safe Area Example ##
+
+The [Safe Area](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/OuyaSafeArea.cs) example uses the DPAD left and right to invoke `OuyaSDK.setSafeArea(float amount)`. Using 0.0 for the amount uses full border padding. Using 1.0 for the amount uses no border padding.
+
+![image alt text](image_24.png)
+
+## Community Content Example ##
+
+The [Community Content](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/OuyaCommunityContent.cs) example shows how to create, edit, publish, unpublish, download, and delete Community Content.
+
+![image alt text](image_29.png)
+
+<hr>
+
+# Customization #
+
+The OUYA Plugin remains customizable and if you want to extend the Java and Native plugins there are dependencies on the Android SDK, Android NDK, and Java JDK.
+
+Android NDK - [https://developer.android.com/tools/sdk/ndk/index.html](https://developer.android.com/tools/sdk/ndk/index.html)
+
+Java6 (32-bit/64-bit) - [http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-javase6-419409.html](http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-javase6-419409.html)
+
+If you are on Windows if you install the [[Tegra Android Developer Pack]](https://developer.nvidia.com/tegra-resources), it comes with all of the needed dependencies and is the easiest way to set things up. Be sure to register for "NVIDIA GameWorks™ Registered Developer Program" to get access to the Tegra Android Developer Pack downloads.[ [Tegra Registered Developer Program]](https://developer.nvidia.com/registered-developer-programs)
+
+<hr>
+
+# Legacy (old files no longer needed) #
+
+If you used previous versions of the OUYA Unity Plugin many of the old files are no longer needed and can be considered legacy.
+
+Some legacy files are not required to be imported or can be removed.
+
+## Legacy InputManager.asset (Removed) ##
+
+The InputManager Mappings file is no longer used by the plugin. So you may choose to keep your existing mapping file which is used for non-OUYA platforms.
+
+```
+ProjectSettings/InputManager.asset
+```
+
+## Legacy OuyaExampleCommon.cs (Removed) ##
+
+The legacy OuyaExampleCommon.cs script can been removed or replaced with another input system.
+
+```
+Assets/Plugins/OuyaExampleCommon.cs
+```
+
+There are a number of related legacy input C# scripts that should be removed.
+
+```
+Assets/Plugins/IOuyaController.cs
+Assets/Plugins/OuyaControllerCommon.cs
+Assets/Plugins/OuyaExampleCommon.cs
+Assets/Plugins/OuyaKeyCodes.cs
+Assets/Plugins/PS2Controller.cs
+Assets/Plugins/XBox360Controller.cs
+```
+
+## Legacy OuyaPostProcessor.cs (Removed) ##
+
+The OuyaPostProcessor would auto compile C++ and Java source after a detected change. However, changes to the plugin are infrequent enough making this feature not used and so it was removed. Typically you only need to compile NDK and the Java Plugin after importing an update of the plugin.
+
+```
+Assets/Ouya/SDK/Editor/OuyaPostProcessor.cs
+```
+
+## Legacy OuyaUnityApplication.jar (Removed) ##
+
+If you have the legacy OuyaUnityApplication.jar file make sure that it’s removed. If you forget this step, you’ll get an DEX error when building the game.
+
+```
+Assets\Plugins\Android\OuyaUnityApplication.jar
+```
+
+## Legacy OuyaUnityApplication.java (Removed) ##
+
+If you have the legacy OuyaUnityApplication.java file make sure that it’s removed. If you forget this step, you’ll get a Java compile error.
+
+```
+Assets\Plugins\Android\src\OuyaUnityApplication.java
+```
+
+## Legacy OuyaNativeActivity.java (Removed) ##
+
+If you have the legacy OuyaNativeActivity.java file make sure that it’s removed. If you forget this step, you’ll get a Java compile error.
+
+```
+Assets\Plugins\Android\src\OuyaNativeActivity.java
+```
+
+## Legacy R.java (Removed) ##
+
+The Core Unity Package may include example R.java files that should not be imported into your game. You may want to delete these extra files if they were imported.
+
+Note (ODK 1.0.14.1): R.java and resources were moved to be compatible with other 3rd party plugins that also supplied this generated file.  
+
+```
+Assets\Plugins\Android\src\tv\...\R.java
+```
+
+## Legacy Litjson (Removed) ##
+
+Litjson is a public domain 3rd party library for parsing JSON data. Android already has classes for handling JSONObject parsing and so the legacy Litjson was replaced.
+
+```
+Assets\Litjson
+```
