@@ -126,7 +126,7 @@ Before calling the Marmalade ODK extension, an application should check if the e
 	}
 ```
 
-If the Marmalade ODK extension is available, [initialize](#OuyaPlugin_initOuyaPlugin) it with the developer id found in the [OUYA developer portal](http://devs.ouya.tv).
+If the Marmalade ODK extension is available, [initialize](#ouyaplugin_initouyaplugin) it with the developer id found in the [OUYA developer portal](http://devs.ouya.tv).
 
 c++
 ```
@@ -308,9 +308,9 @@ The event field memory is allocated in the extension space, so be especially car
 The best practice is to copy the event data immediately after receiving the event.
 
 ```
-void MethodOnSuccess(dataForSuccessEvent* event)
-void MethodOnFailure(dataForFailureEvent* event)
-void MethodOnCancel(cancelEvent* event)
+	void MethodOnSuccess(dataForSuccessEvent* event)
+	void MethodOnFailure(dataForFailureEvent* event)
+	void MethodOnCancel(cancelEvent* event)
 ```
 
 #### Callback Process
@@ -386,18 +386,18 @@ The cancel event indicates the user cancelled the request.
 Invoking request gamer info takes the success, failure, and cancel event callbacks.
 
 ```
-				OuyaPlugin_asyncOuyaRequestGamerInfo(
-					Application::m_ui.m_callbacksRequestGamerInfo->GetSuccessEvent(),
-					Application::m_ui.m_callbacksRequestGamerInfo->GetFailureEvent(),
-					Application::m_ui.m_callbacksRequestGamerInfo->GetCancelEvent());
+	OuyaPlugin_asyncOuyaRequestGamerInfo(
+		Application::m_ui.m_callbacksRequestGamerInfo->GetSuccessEvent(),
+		Application::m_ui.m_callbacksRequestGamerInfo->GetFailureEvent(),
+		Application::m_ui.m_callbacksRequestGamerInfo->GetCancelEvent());
 ```
 
 When the Marmalade ODK has completed FetchGamerInfo, it invokes the Application callback for onSuccess, onFailure, or onCancel.
 
 ```
-void ApplicationCallbacksRequestGamerInfo::OnSuccess(const OuyaSDK::GamerInfo& gamerInfo)
-void ApplicationCallbacksRequestGamerInfo::OnFailure(int errorCode, const std::string& errorMessage)
-void ApplicationCallbacksRequestGamerInfo::OnCancel()
+	void ApplicationCallbacksRequestGamerInfo::OnSuccess(const OuyaSDK::GamerInfo& gamerInfo)
+	void ApplicationCallbacksRequestGamerInfo::OnFailure(int errorCode, const std::string& errorMessage)
+	void ApplicationCallbacksRequestGamerInfo::OnCancel()
 ```
 
 ## `OuyaPlugin_asyncOuyaRequestProducts` ##
@@ -405,10 +405,10 @@ void ApplicationCallbacksRequestGamerInfo::OnCancel()
 Pass an array of JSON to the Marmalade ODK Extension to get the details of the product list and invoke the callbacks upon completion.
 
 ```
-OuyaPlugin_asyncOuyaRequestProducts(productsJson.c_str(),
-	Application::m_ui.m_callbacksRequestProducts->GetSuccessEvent(),
-	Application::m_ui.m_callbacksRequestProducts->GetFailureEvent(),
-	Application::m_ui.m_callbacksRequestProducts->GetCancelEvent());
+	OuyaPlugin_asyncOuyaRequestProducts(productsJson.c_str(),
+		Application::m_ui.m_callbacksRequestProducts->GetSuccessEvent(),
+		Application::m_ui.m_callbacksRequestProducts->GetFailureEvent(),
+		Application::m_ui.m_callbacksRequestProducts->GetCancelEvent());
 ```
 
 The success callback passes the retrieved product list, which is passed to the UI.
@@ -434,10 +434,10 @@ void ApplicationCallbacksRequestProducts::OnCancel()
 Invoke the Marmalade ODK Extension to request purchase for the identifier and invoke the callbacks upon completion.
 
 ```
-OuyaPlugin_asyncOuyaRequestPurchase(product->Identifier.c_str(),
-	Application::m_ui.m_callbacksRequestPurchase->GetSuccessEvent(),
-	Application::m_ui.m_callbacksRequestPurchase->GetFailureEvent(),
-	Application::m_ui.m_callbacksRequestPurchase->GetCancelEvent());
+	OuyaPlugin_asyncOuyaRequestPurchase(product->Identifier.c_str(),
+		Application::m_ui.m_callbacksRequestPurchase->GetSuccessEvent(),
+		Application::m_ui.m_callbacksRequestPurchase->GetFailureEvent(),
+		Application::m_ui.m_callbacksRequestPurchase->GetCancelEvent());
 ```
 
 The success callback passes the purchased product details, which is passed to the UI.
@@ -463,10 +463,10 @@ void ApplicationCallbacksRequestPurchase::OnCancel()
 Invoke the Marmalade ODK Extension to request receipts and invoke the callbacks upon completion.
 
 ```
-OuyaPlugin_asyncOuyaRequestReceipts(
-	Application::m_ui.m_callbacksRequestReceipts->GetSuccessEvent(),
-	Application::m_ui.m_callbacksRequestReceipts->GetFailureEvent(),
-	Application::m_ui.m_callbacksRequestReceipts->GetCancelEvent());
+	OuyaPlugin_asyncOuyaRequestReceipts(
+		Application::m_ui.m_callbacksRequestReceipts->GetSuccessEvent(),
+		Application::m_ui.m_callbacksRequestReceipts->GetFailureEvent(),
+		Application::m_ui.m_callbacksRequestReceipts->GetCancelEvent());
 ```
 
 The success callback passes the retrieved receipts list, which is passed to the UI.
