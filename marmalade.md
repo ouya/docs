@@ -126,7 +126,24 @@ Before calling the Marmalade ODK extension, an application should check if the e
 	}
 ```
 
-If the Marmalade ODK extension is available, [initialize](#ouyaplugin_asyncsetdeveloperid) it with the developer id found in the [OUYA developer portal](http://devs.ouya.tv).
+If the Marmalade ODK extension is available, [initialize](#OuyaPlugin_initOuyaPlugin) it with the developer id found in the [OUYA developer portal](http://devs.ouya.tv).
+
+c++
+```
+void Application::InitOuyaPlugin()
+{
+	int jsonArray = OuyaPlugin_JSONArray_Construct();
+	int index = 0;
+	int jsonObject = OuyaPlugin_JSONObject_Construct();
+	OuyaPlugin_JSONObject_Put(jsonObject, "key", "tv.ouya.developer_id");
+	OuyaPlugin_JSONObject_Put(jsonObject, "value", "310a8f51-4d6e-4ae5-bda0-b93878e5f5d0");
+	OuyaPlugin_JSONArray_Put(jsonArray, index, jsonObject);
+	std::string jsonData = OuyaPlugin_JSONArray_ToString(jsonArray);
+	OuyaPlugin_initOuyaPlugin(jsonData.c_str(),
+	Application::m_ui.m_callbacksInitOuyaPlugin->GetSuccessEvent(),
+	Application::m_ui.m_callbacksInitOuyaPlugin->GetFailureEvent());
+}
+```
 
 ### Input ###
 
@@ -310,23 +327,9 @@ The failure callback will return if an error was detected.
 
 The cancel callback will invoke if the user cancelled the operation.
 
-## `OuyaPlugin_asyncSetDeveloperId` ##
-
-Before initializing the OUYA Plugin, set the developer id from the [developer portal](http://devs.ouya.tv).
-
-The success event is invoked on success.
-
-The failure event is called if there was a problem.
-
-```
-	OuyaPlugin_asyncSetDeveloperId("310a8f51-4d6e-4ae5-bda0-b93878e5f5d0",
-		Application::m_ui.m_callbacksSetDeveloperId->GetSuccessEvent(),
-		Application::m_ui.m_callbacksSetDeveloperId->GetFailureEvent());
-```
-
 ## `OuyaPlugin_initOuyaPlugin` ##
 
-After the developer id has been set, the plugin should be initialized.
+The developer id from the [developer portal](http://devs.ouya.tv) needs to be prepared in a `JSONObject` to initialize the OUYA Plugin.
 
 Avoid invoking IAP methods until the OuyaPlugin has been initialized.
 
@@ -334,8 +337,30 @@ The success event is invoked after IAP has been initialized.
 
 The failure event happens if there was a problem. 
 
+c++
 ```
-	OuyaPlugin_initOuyaPlugin(Application::m_ui.m_callbacksInitOuyaPlugin->GetSuccessEvent(),
+	// construct the JSON Array
+	int jsonArray = OuyaPlugin_JSONArray_Construct();
+
+	// prepare the first JSON Object index
+	int index = 0;
+
+	// construct the JSON Object
+	int jsonObject = OuyaPlugin_JSONObject_Construct();
+
+	// add the developer id from the developer portal
+	OuyaPlugin_JSONObject_Put(jsonObject, "key", "tv.ouya.developer_id");
+	OuyaPlugin_JSONObject_Put(jsonObject, "value", "310a8f51-4d6e-4ae5-bda0-b93878e5f5d0");
+
+	// assign the JSON Object to the first array element
+	OuyaPlugin_JSONArray_Put(jsonArray, index, jsonObject);
+
+	// convert the JSON Object to a string to send with the initialization plugin values
+	std::string jsonData = OuyaPlugin_JSONArray_ToString(jsonArray);
+
+	// initialize the OUYA plugin and wait for the callbacks before using the IAP API
+	OuyaPlugin_initOuyaPlugin(jsonData.c_str(),
+		Application::m_ui.m_callbacksInitOuyaPlugin->GetSuccessEvent(),
 		Application::m_ui.m_callbacksInitOuyaPlugin->GetFailureEvent());
 ```
 
@@ -525,8 +550,6 @@ ApplicationCallbacksRequestProducts.h/cpp - Handles callbacks coming from extens
 ApplicationCallbacksRequestPurchase.h/cpp - Handles callbacks coming from extension to the application with the result of RequestPurchase
 
 ApplicationCallbacksRequestReceipts.h/cpp - Handles callbacks coming from extension to the application with the result of RequestReceipts
-
-ApplicationCallbacksSetDeveloperId.h/cpp - Handles callbacks for success or failure events when setting the developer id
 
 ApplicationProduct.h/cpp - A container to hold the ODK products that's safe to access in the Application
 
