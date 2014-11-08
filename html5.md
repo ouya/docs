@@ -307,31 +307,11 @@ The plugin methods are defined on the OuyaSDK object.
       var OuyaSDK = new Object();
 ```
 
-##### SetDeveloperId #####
-
-The developer id is the first important information that must be set. The developer id is diplayed in the developer portal.
-
-The onSuccess callback will be invoked when the developer id has been set.
-
-The onFailure callback will be invoked if there was a problem setting the developer id.
-
-```javascript
-      // Plugin method definition
-      OuyaSDK.setDeveloperId = function(developerId, onSuccess, onFailure)
-      {
-        OuyaSDK.developerId = developerId;
-        OuyaSDK.onSuccess = onSuccess;
-        OuyaSDK.onFailure = onFailure;
-        OuyaSDK.method = "setDeveloperId";
-      };
-
-      // Invoke the plugin method
-      OuyaSDK.setDeveloperId(developerId, onSuccessSetDeveloperId, onFailureSetDeveloperId);
-```
-
 ##### InitOuyaPlugin #####
 
-After the developer id has been set, initialize the OUYA Plugin.
+The developer id is displayed in the [developer portal](http://devs.ouya.tv) and is used to initialize the OUYA Plugin.
+
+Avoid invoking IAP methods until after the OUYA Plugin has been initialized.
 
 Upon success, the onSuccess callback will be invoked.
 
@@ -339,14 +319,24 @@ If the initialization fails, the onFailure callback will be invoked.
 
 ```javascript
       // Plugin method definition
-      OuyaSDK.initOuyaPlugin = function(onSuccess, onFailure) {
+      OuyaSDK.initOuyaPlugin = function(jsonData, onSuccess, onFailure) {
+        OuyaSDK.initValues = jsonData;
         OuyaSDK.onSuccess = onSuccess;
         OuyaSDK.onFailure = onFailure;
         OuyaSDK.method = "initOuyaPlugin";
       };
       
+      // Prepare the plugin initialization values
+      var data = Array();
+      data[0] =
+      {
+        'key': 'tv.ouya.developer_id',
+        'value': '310a8f51-4d6e-4ae5-bda0-b93878e5f5d0'
+      };
+      var jsonData = JSON.stringify(data);
+
       // Invoke the plugin method
-      OuyaSDK.initOuyaPlugin(onSuccessInitOuyaPlugin, onFailureInitOuyaPlugin);
+      OuyaSDK.initOuyaPlugin(jsonData, onSuccessInitOuyaPlugin, onFailureInitOuyaPlugin);
 ```
 
 ##### RequestGamerInfo ######
