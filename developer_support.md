@@ -18,6 +18,12 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  </tr>
 </table>
 
+<a target=_blank href="https://www.youtube.com/watch?v=XGCBxXTkF3g&t=1m19s">(1:19)</a> - Jared: Just the Facts
+
+<a target=_blank href="https://www.youtube.com/watch?v=XGCBxXTkF3g&t=11m05s">(11:05)</a> - Tim: Construct2 IAP
+
+<a target=_blank href="https://www.youtube.com/watch?v=XGCBxXTkF3g&t=35m01s">(35:01)</a> - Kellee: The Journey Into Games. What inspires Kellee!?
+
 ----------
 
 ### November 3, 2014 ###
