@@ -6,10 +6,23 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 ----------
 
+### November 10, 2014 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:58:04)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=XGCBxXTkF3g" target="_blank">
+<img src="http://img.youtube.com/vi/XGCBxXTkF3g/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 11/10" width="240" height="180" border="10" /></a>
+ </td>
+ <td></td>
+ </tr>
+</table>
+
+----------
+
 ### November 3, 2014 ###
 
 <table border=1>
-
  <tr>
  <td>OUYA DEV SUPPORT (00:53:09)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=TBWXiuGSF0o" target="_blank">
@@ -34,7 +47,6 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ### October 27, 2014 ###
 
 <table border=1>
-
  <tr>
  <td>OUYA DEV SUPPORT (00:51:09)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=lsvuZ9CRNcQ" target="_blank">
@@ -72,7 +84,6 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ### October 20, 2014 ###
 
 <table border=1>
-
  <tr>
  <td>OUYA DEV SUPPORT (00:51:09)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=1Ct2uMsmAMo" target="_blank">
@@ -97,7 +108,6 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 ### October 13, 2014 ###
 
 <table border=1>
-
  <tr>
  <td>OUYA DEV SUPPORT (00:53:50)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=6r84DLrxUHo" target="_blank">
