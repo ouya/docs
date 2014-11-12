@@ -246,7 +246,27 @@ Add the action `OuyaSDK\Request Receipts`.
 
 `Request Receipts` has 3 events for `on Success`, `on Failure`, and `on Cancel`.
 
+![Insert Object](construct_2/image_34.png)
+
+`Request Receipts` on Success gets a list of receipt details. `OuyaSDK.ReceiptsLength` returns the count of receipts returned. 
+
 ![Insert Object](construct_2/image_30.png)
+
+Retrieving receipts details uses an index from 0 to (`OuyaSDK.ReceiptsLength` - 1). Create a global ReceiptIndex used to get the receipt details.
+
+![Insert Object](construct_2/image_35.png)
+
+Use the `Set` action to set the ReceiptIndex to start at the beginning of the receipts list.
+
+![Insert Object](construct_2/image_36.png)
+
+Add a `Repeat` event to iterate over each of the returned receipts. 
+
+![Insert Object](construct_2/image_18.png)
+
+The count will be `OuyaSDK.ReceiptsLength` times.
+
+![Insert Object](construct_2/image_37.png)
 
 All the `OuyaSDK.GetReceipts*` accessors take the `ReceiptIndex` to return the Receipt item's details.
 
