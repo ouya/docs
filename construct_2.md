@@ -68,6 +68,19 @@ Publishing to the OUYA requires that you package the generated HTML from `Constr
 
 10. Repackage the WebArchive and run on the OUYA using the available WebArchive scripts
 
+# Setup
+
+Before you can use the `OuyaSDK` be sure to create a game in the [developer portal](http://devs.ouya.tv) and download the signing key.
+
+The IAP example places the signing key in `ouya-sdk-examples\Construct2\InAppPurchases\customization\assets\key.der` which gets packaged when running `ouya-sdk-examples\Construct2\InAppPurchases\package.cmd` after exporting HTML5 to `ouya-sdk-examples\Construct2\InAppPurchases\Build`. 
+
+## Testing
+
+You won't be charged when making IAP purchases of your own game.
+Be sure to log into the OUYA with the same developer account that the game is created for in the [developer portal](http://devs.ouya.tv).
+You can reverse purchases in the [purchase page](https://devs.ouya.tv/developers/products) of the [developer portal](http://devs.ouya.tv) to test refund scenarios or testing first-time purchases.
+Look for the `View and remove your purchases of your products` link on the bottom of the [purchase page](https://devs.ouya.tv/developers/products) to refund purchases of your own game.
+
 # `OuyaSDK` API
 
 To access the OUYA SDK, insert an `OuyaSDK` object into your layout.
