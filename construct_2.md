@@ -68,6 +68,52 @@ Publishing to the OUYA requires that you package the generated HTML from `Constr
 
 10. Repackage the WebArchive and run on the OUYA using the available WebArchive scripts
 
+# `OuyaSDK` API
+
+To access the OUYA SDK, insert an `OuyaSDK` object into your layout.
+
+![Insert Object](construct_2/image_3.png)
+
+## Initialize the OUYA Plugin
+
+Interacting with the OUYA SDK can be done via the `event sheet`.
+
+### Start of Layout
+
+Add an event `System\On start of layout`.
+
+![start of layout](construct_2/image_5.png)
+
+Add actions `addInitOuyaPluginValues` and `initOuyaPlugin` to the `On start of layout` event.
+
+![init actions](construct_2/image_6.png)
+
+### `addInitOuyaPluginValues`
+
+`addInitOuyaPluginValues` has `key` and `value` arguments.
+Add a `key` of "tv.ouya.developer_id".
+Add a `value` using your developer UUID from the [developer portal](http://devs.ouya.tv).
+
+![init actions](construct_2/image_7.png)
+
+The `initOuyaPlugin` action will invoke initializing the OUYA Plugin given the values added with `addInitOuyaPluginValues`.
+
+![Insert Object](construct_2/image_4.png)
+
+### Init Events
+
+`Initialize OUYA Plugin on Success` will be invoked if the OUYA Plugin was initialized.
+
+`Initialize OUYA Plugin on Failure` will be invoked if the OUYA Plugin failed to initialize.
+
+After initializing the OUYA Plugin the other IAP actions can be invoked.
+
+![Insert Object](construct_2/image_8.png)
+
+Actions can be added to the init events.
+
+![Insert Object](construct_2/image_9.png)
+
 ### Examples
 
 ## `Virtual Controller` ##
@@ -77,3 +123,11 @@ The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/C
 Open the `VirtualController.capx` from the Construct 2 SDK examples.
 
 ![Virtual Controller Example](construct_2/image_1.png)
+
+## `In-App-Purchases` ##
+
+The [In-App-Purchases](https://github.com/ouya/ouya-sdk-examples/tree/master/Construct2/InAppPurchases) example shows making purchases, checking receipts, adjusting the safe area, and exiting the app.
+
+Open the `InAppPurchases.capx` from the Construct 2 SDK examples.
+
+![Virtual Controller Example](construct_2/image_2.png)
