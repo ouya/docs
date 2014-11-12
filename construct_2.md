@@ -216,6 +216,20 @@ Increment the `ProductIndex` with a `Set` action after looking up the data for e
 
 Requesting a purchase requires the Product entitlement or consumable was created in the [developer portal](http://devs.ouya.tv).
 
+<pre>
+
+{
+    "gamer": "2927b3d9-e940-077a-8f68-af923f52f5d9",
+    "uuid": "be05dfcdc4eb0d50",
+    "generatedDate": "Thu Jan 01 00:00:00 GMT 1970",
+    "localPrice": 0.99,
+    "identifier": "cool_level",
+    "currency": "USD",
+    "purchaseDate": "Tue Nov 11 01:36:12 GMT 2014"
+}
+
+</pre>
+
 Add the action `OuyaSDK\Request Purchase`.
 
 ![Insert Object](construct_2/image_23.png)
@@ -233,6 +247,18 @@ Add the action `OuyaSDK\Request Receipts`.
 `Request Receipts` has 3 events for `on Success`, `on Failure`, and `on Cancel`.
 
 ![Insert Object](construct_2/image_30.png)
+
+All the `OuyaSDK.GetReceipts*` accessors take the `ReceiptIndex` to return the Receipt item's details.
+
+`OuyaSDK.GetReceiptsIdentifier(ReceiptIndex)` - Returns a string of the product identifier
+
+`OuyaSDK.GetReceiptsGeneratedDate(ReceiptIndex)` - Returns a string of the generated date
+
+`OuyaSDK.GetReceiptsLocalPrice(ReceiptIndex)` returns a float for the local price of the receipt.
+
+Increment the `ReceiptIndex` with a `Set` action after looking up the data for each product.
+
+![Insert Object](construct_2/image_33.png)
 
 ## Set Safe Area
 
