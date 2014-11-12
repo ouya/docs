@@ -212,6 +212,56 @@ Increment the `ProductIndex` with a `Set` action after looking up the data for e
 
 ![Insert Object](construct_2/image_21.png)
 
+## Request Purchase
+
+Requesting a purchase requires the Product entitlement or consumable was created in the [developer portal](http://devs.ouya.tv).
+
+Add the action `OuyaSDK\Request Purchase`.
+
+![Insert Object](construct_2/image_23.png)
+
+`Request Purchase` has 3 events for `on Success`, `on Failure`, and `on Cancel`.
+
+![Insert Object](construct_2/image_24.png)
+
+## Request Receipts
+
+Add the action `OuyaSDK\Request Receipts`.
+
+![Insert Object](construct_2/image_25.png)
+
+`Request Receipts` has 3 events for `on Success`, `on Failure`, and `on Cancel`.
+
+![Insert Object](construct_2/image_30.png)
+
+## Set Safe Area
+
+Add the action `OuyaSDK\Set Safe Area`.
+
+![Insert Object](construct_2/image_26.png)
+
+The IAP example uses a floating-point `SafeAreaAmount` global variable that adjusts the safe area amount.
+
+![Insert Object](construct_2/image_29.png)
+
+The `Set Safe Area` action takes a `SafeAreaAmount` floating-point number. Safe area amounts range from 0.0 with full border to 1.0 with border. 
+
+![Insert Object](construct_2/image_28.png)
+
+`Set Safe Area` has 2 events for `on Success`, and `on Failure`.
+
+![Insert Object](construct_2/image_31.png)
+
+## Shutdown
+
+Add the action `OuyaSDK\Shutdown`.
+
+![Insert Object](construct_2/image_27.png)
+
+`Shutdown` has 2 events for `on Success`, and `on Failure`.
+
+![Insert Object](construct_2/image_32.png)
+
 # Examples
 
 The examples are `capx` files which are complete projects that depend on installing the `OuyaSDK` Construct 2 plugin.
