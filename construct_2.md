@@ -127,7 +127,94 @@ Actions can be added to the init events.
 
 ![Insert Object](construct_2/image_9.png)
 
-### Examples
+## Request Gamer Info
+
+The gamer info includes the gamer's username and unique identifier. Add an `OuyaSDK\Request Gamer Info` action.
+
+![Insert Object](construct_2/image_10.png)
+
+`Request Gamer Info` has 3 events for `on Success`, `on Failure`, and `on Cancel`.
+
+![Insert Object](construct_2/image_12.png)
+
+The `Gamer Info` fields are available in the `onSuccess` event.
+
+`OuyaSDK.GamerInfoUsername` returns the string for the gamer's username which can be used to display in a `Text` object. 
+
+`OuyaSDK.GamerInfoUuid` returns the string for the gamer's unique identifier.
+
+![Insert Object](construct_2/image_11.png)
+
+## Request Products
+
+Requesting products gets the details about the Product created in the [developer portal](http://devs.ouya.tv).
+
+<pre>
+{
+    "currencyCode": "USD",
+    "originalPrice": 2.99,
+    "localPrice": 2.99,
+    "description": "",
+    "name": "Sharp Axe",
+    "developerName": "Sample Developer",
+    "identifier": "sharp_axe",
+    "percentOff": 0
+}
+</pre>
+
+Add the action `OuyaSDK\Request Products`.
+
+![Insert Object](construct_2/image_13.png)
+
+`Request Products` takes a string which is a comma separated list of product ids.
+![Insert Object](construct_2/image_14.png)
+
+The IAP example waits for a button press before invoking the `Request Products` action.
+![Insert Object](construct_2/image_15.png)
+
+`Request Products` has 3 events for `on Success`, `on Failure`, and `on Cancel`.
+
+![Insert Object](construct_2/image_17.png)
+
+`Request Products on Success` gets a list of product details.
+`OuyaSDK.ProductsLength` returns the count of products returned. 
+
+![Insert Object](construct_2/image_16.png)
+
+Retrieving product details uses an index from 0 to (`OuyaSDK.ProductsLength` - 1).
+Create a global `ProductIndex` used to get the product details.
+
+![Insert Object](construct_2/image_20.png)
+
+Use the `Set` action to set the `ProductIndex` to start at the beginning of the products list.
+
+![Insert Object](construct_2/image_22.png)
+
+Add a `Repeat` event to iterate over each of the returned products. 
+
+![Insert Object](construct_2/image_18.png)
+
+The count will be `OuyaSDK.ProductsLength` times.
+
+![Insert Object](construct_2/image_19.png)
+
+All the `OuyaSDK.GetProducts*` accessors take the `ProductIndex` to return the Product item's details.
+
+`OuyaSDK.GetProductsIdentifier(ProductIndex)` - Returns a string of the product identifier
+
+`OuyaSDK.GetProductsName(ProductIndex)` - Returns a string of the product name
+
+`OuyaSDK.GetProductsDescription(ProductIndex)` - Returns a string of the product description
+
+`OuyaSDK.GetProductsLocalPrice(ProductIndex)` returns a float for the local price of the product.
+
+Increment the `ProductIndex` with a `Set` action after looking up the data for each product.
+
+![Insert Object](construct_2/image_21.png)
+
+# Examples
+
+The examples are `capx` files which are complete projects that depend on installing the `OuyaSDK` Construct 2 plugin.
 
 ## `Virtual Controller` ##
 
