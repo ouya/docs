@@ -241,20 +241,6 @@ The `onFailure` event provides error code and error message fields.
 
 Requesting a purchase requires the Product entitlement or consumable was created in the [developer portal](http://devs.ouya.tv).
 
-<pre>
-
-{
-    "gamer": "2927b3d9-e940-077a-8f68-af923f52f5d9",
-    "uuid": "be05dfcdc4eb0d50",
-    "generatedDate": "Thu Jan 01 00:00:00 GMT 1970",
-    "localPrice": 0.99,
-    "identifier": "cool_level",
-    "currency": "USD",
-    "purchaseDate": "Tue Nov 11 01:36:12 GMT 2014"
-}
-
-</pre>
-
 Add the action `OuyaSDK\Request Purchase`.
 
 ![Insert Object](construct_2/image_23.png)
@@ -270,6 +256,20 @@ The `onFailure` event provides error code and error message fields.
 * `OuyaSDK.errorMessageOnFailureRequestPurchase` - The failure `error message` as a string
 
 ## Request Receipts
+
+<pre>
+
+{
+    "gamer": "2927b3d9-e940-077a-8f68-af923f52f5d9",
+    "uuid": "be05dfcdc4eb0d50",
+    "generatedDate": "Thu Jan 01 00:00:00 GMT 1970",
+    "localPrice": 0.99,
+    "identifier": "cool_level",
+    "currency": "USD",
+    "purchaseDate": "Tue Nov 11 01:36:12 GMT 2014"
+}
+
+</pre>
 
 Add the action `OuyaSDK\Request Receipts`.
 
