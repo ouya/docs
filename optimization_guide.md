@@ -28,6 +28,8 @@ This document serves to give the reader ideas on where to start on the optimizat
 
 5 - Manual culling. Don't just let the GPU handling culling for you. Your scripts can check if an object is seen by the camera and if you manually disable GameObjects you can get back the performance they may be eating. Also you can batch gameobjects in the same vicinity and toggle groups on and off as a sort of super-frustrum.
 
+6 - Run the [PerfHUD ES](http://error454.com/2013/11/14/profiling-ouya-tegra-3-games-using-nvidia-perfhud-es/) profiler to measure draw calls and inspect performance.
+
 ## Share ##
 
 Be sure to share your optimization ideas so we can improve this guide.
