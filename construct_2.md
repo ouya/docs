@@ -83,7 +83,14 @@ Look for the `View and remove your purchases of your products` link on the botto
 
 # `OuyaSDK` API
 
-To access the OUYA SDK, insert an `OuyaSDK` object into your layout.
+To access the `OUYA SDK`, insert an `OuyaSDK` object into your layout.
+The `OuyaSDK` object has to be in the layout for the `OuyaSDK` events to fire.
+
+Right click the `Layout` and select `Insert New Object`.
+
+![Insert Object](construct_2/image_38.png)
+
+Select `OuyaSDK` and click `Insert`.
 
 ![Insert Object](construct_2/image_3.png)
 
