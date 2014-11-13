@@ -134,6 +134,12 @@ Actions can be added to the init events.
 
 ![Insert Object](construct_2/image_9.png)
 
+The `onFailure` event provides error code and error message fields.
+
+* `OuyaSDK.errorCodeOnFailureInitOuyaPlugin` - The failure `error code` as a number
+
+* `OuyaSDK.errorMessageOnFailureInitOuyaPlugin` - The failure `error message` as a string
+
 ## Request Gamer Info
 
 The gamer info includes the gamer's username and unique identifier. Add an `OuyaSDK\Request Gamer Info` action.
@@ -151,6 +157,12 @@ The `Gamer Info` fields are available in the `onSuccess` event.
 `OuyaSDK.GamerInfoUuid` returns the string for the gamer's unique identifier.
 
 ![Insert Object](construct_2/image_11.png)
+
+The `onFailure` event provides error code and error message fields.
+
+* `OuyaSDK.errorCodeOnFailureRequestGamerInfo` - The failure `error code` as a number
+
+* `OuyaSDK.errorMessageOnFailureRequestGamerInfo` - The failure `error message` as a string
 
 ## Request Products
 
@@ -219,6 +231,12 @@ Increment the `ProductIndex` with a `Set` action after looking up the data for e
 
 ![Insert Object](construct_2/image_21.png)
 
+The `onFailure` event provides error code and error message fields.
+
+* `OuyaSDK.errorCodeOnFailureRequestProducts` - The failure `error code` as a number
+
+* `OuyaSDK.errorMessageOnFailureRequestProducts` - The failure `error message` as a string
+
 ## Request Purchase
 
 Requesting a purchase requires the Product entitlement or consumable was created in the [developer portal](http://devs.ouya.tv).
@@ -244,6 +262,12 @@ Add the action `OuyaSDK\Request Purchase`.
 `Request Purchase` has 3 events for `on Success`, `on Failure`, and `on Cancel`.
 
 ![Insert Object](construct_2/image_24.png)
+
+The `onFailure` event provides error code and error message fields.
+
+* `OuyaSDK.errorCodeOnFailureRequestPurchase` - The failure `error code` as a number
+
+* `OuyaSDK.errorMessageOnFailureRequestPurchase` - The failure `error message` as a string
 
 ## Request Receipts
 
@@ -287,6 +311,12 @@ Increment the `ReceiptIndex` with a `Set` action after looking up the data for e
 
 ![Insert Object](construct_2/image_33.png)
 
+The `onFailure` event provides error code and error message fields.
+
+* `OuyaSDK.errorCodeOnFailureRequestReceipts` - The failure `error code` as a number
+
+* `OuyaSDK.errorMessageOnFailureRequestReceipts` - The failure `error message` as a string
+
 ## Set Safe Area
 
 Add the action `OuyaSDK\Set Safe Area`.
@@ -305,6 +335,12 @@ The `Set Safe Area` action takes a `SafeAreaAmount` floating-point number. Safe 
 
 ![Insert Object](construct_2/image_31.png)
 
+The `onFailure` event provides error code and error message fields.
+
+* `OuyaSDK.errorCodeOnFailureSetSafeArea` - The failure `error code` as a number
+
+* `OuyaSDK.errorMessageOnFailureSetSafeArea` - The failure `error message` as a string
+
 ## Shutdown
 
 Add the action `OuyaSDK\Shutdown`.
@@ -314,6 +350,12 @@ Add the action `OuyaSDK\Shutdown`.
 `Shutdown` has 2 events for `on Success`, and `on Failure`.
 
 ![Insert Object](construct_2/image_32.png)
+
+The `onFailure` event provides error code and error message fields.
+
+* `OuyaSDK.errorCodeOnFailureShutdown` - The failure `error code` as a number
+
+* `OuyaSDK.errorMessageOnFailureShutdown` - The failure `error message` as a string
 
 # Examples
 
