@@ -108,11 +108,17 @@ Add actions `addInitOuyaPluginValues` and `initOuyaPlugin` to the `On start of l
 
 ![init actions](construct_2/image_6.png)
 
+### `Developer UUID`
+
+The `Developer UUID` is available in the [developer portal](http://devs.ouya.tv).
+
+![init actions](construct_2/image_39.png)
+
 ### `addInitOuyaPluginValues`
 
 `addInitOuyaPluginValues` has `key` and `value` arguments.
 Add a `key` of "tv.ouya.developer_id".
-Add a `value` using your developer UUID from the [developer portal](http://devs.ouya.tv).
+Add a `value` using your `Developer UUID`.
 
 ![init actions](construct_2/image_7.png)
 
