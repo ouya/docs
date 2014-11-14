@@ -111,6 +111,7 @@ Add actions `addInitOuyaPluginValues` and `initOuyaPlugin` to the `On start of l
 ### `Developer UUID`
 
 The `Developer UUID` is available in the [developer portal](http://devs.ouya.tv).
+You must be logged in to see your `Developer UUID`.
 
 ![init actions](construct_2/image_39.png)
 
