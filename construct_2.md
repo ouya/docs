@@ -193,6 +193,8 @@ Add the action `OuyaSDK\Request Products`.
 ![Insert Object](construct_2/image_13.png)
 
 `Request Products` takes a string which is a comma separated list of product ids.
+You can pass a comma separated list `"a,b,c,d,e,f"` or a single product `"my_awesome_sauce"`.
+
 ![Insert Object](construct_2/image_14.png)
 
 The IAP example waits for a button press before invoking the `Request Products` action.
@@ -263,6 +265,9 @@ The `onFailure` event provides error code and error message fields.
 * `OuyaSDK.errorMessageOnFailureRequestPurchase` - The failure `error message` as a string
 
 ## Request Receipts
+
+A receipt indicates that the gamer has purchased your entitlement.
+After querying the receipts list, iterate through the items to check if your entitlement `product_id` is found to unlock the full game or feature.
 
 <pre>
 
