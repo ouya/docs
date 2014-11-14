@@ -30,6 +30,8 @@ This document serves to give the reader ideas on where to start on the optimizat
 
 6 - Run the [PerfHUD ES](http://error454.com/2013/11/14/profiling-ouya-tegra-3-games-using-nvidia-perfhud-es/) profiler to measure draw calls and inspect performance.
 
+* Note: Be sure that the `android.permission.INTERNET` permission is enabled in the `AndroidManifest.xml` to ensure the profiler can be used.
+
 ## Share ##
 
 Be sure to share your optimization ideas so we can improve this guide.
