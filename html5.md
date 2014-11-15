@@ -480,3 +480,11 @@ The onFailure callback indicates the request to shutdown failed.
       // Invoke the plugin method
       OuyaSDK.shutdown(onSuccessShutdown, onFailureShutdown);
 ```
+
+# Debugger
+
+Several tools are available to enhance your debugging experience on the OUYA.
+
+* [Google Canary](https://www.google.com/intl/en/chrome/browser/canary.html) is used to debug HTML5 apps while they run on the OUYA.
+
+* [ADB Add-On](https://chrome.google.com/webstore/detail/adb/dpngiggdglpdnjdoaefidgiigpemgage) is a Add-On for Google Canary that enables HTML5 debugging of Chromium apps on the OUYA.
