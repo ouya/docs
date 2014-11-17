@@ -6,6 +6,35 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 ----------
 
+### November 17, 2014 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:45:49)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=B8uDlgARB74" target="_blank">
+<img src="http://img.youtube.com/vi/B8uDlgARB74/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 11/17" width="240" height="180" border="10" /></a>
+ </td>
+ <td></td>
+ </tr>
+</table>
+
+* [Git For Ages 4 and Up](https://www.youtube.com/watch?v=1ffBJ4sVUb4) - Visually learn GIT for version control and all about under-the-hood
+
+* [Verve](http://www.taron.de/forum/viewtopic.php?f=4&t=4) - Fluid Dynamics Painting
+
+<a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=1m19s">(1:19)</a> - Bob/Tim: Talk about signing keys and keystores
+
+<a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=4m50s">(4:50)</a> - Bob/Jon: Mustache Movember Challenge
+
+<a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=5m47s">(5:47)</a> - Jared: Just the Facts
+
+<a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=22m27s">(22:27)</a> - Tim: Construct 2 Updates
+
+<a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=23m04s">(23:04)</a> - Tim: Intro to Unreal
+
+
+----------
+
 ### November 10, 2014 ###
 
 <table border=1>
