@@ -12,8 +12,15 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  <tr>
  <td>OUYA DEV SUPPORT (00:45:49)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=B8uDlgARB74" target="_blank">
-<img src="http://img.youtube.com/vi/B8uDlgARB74/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 11/17" width="240" height="180" border="10" /></a>
- </td>
+<img src="http://img.youtube.com/vi/B8uDlgARB74/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 11/17" width="240" height="180" border="10" /></a></td>
+ <td>GIT for 4yr Olds (1:39:42)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=1ffBJ4sVUb4" target="_blank">
+<img src="http://img.youtube.com/vi/1ffBJ4sVUb4/0.jpg" alt="Git For Ages 4 and Up" width="240" height="180" border="10" /></a></td>
+ </tr>
+ <tr>
+ <td>Verve Demo 1 (37:21)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=PBO2hNv_tTE" target="_blank">
+<img src="http://img.youtube.com/vi/PBO2hNv_tTE/0.jpg" alt="Verve Demo 1" width="240" height="180" border="10" /></a></td>
  <td></td>
  </tr>
 </table>
