@@ -53,6 +53,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 <a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=23m04s">(23:04)</a> - Tim: Intro to Unreal
 
+<a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=35m10s">(35:10)</a> - Tim: Intro to Verve
+
 
 ----------
 
