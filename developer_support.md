@@ -18,6 +18,20 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
  </tr>
 </table>
 
+* Get the [Unreal Engine](https://www.unrealengine.com/what-is-unreal-engine-4) - Unreal Engine and Source, All for $19 per month + 5% of Revenue
+
+* [Unreal Forum Post](https://forums.unrealengine.com/showthread.php?51910-Getting-Started-Android-Development-References-Documentation-Feedback) - Unreal - Tracking OUYA Plugin process and requests for info
+
+* [Android Quick Start](https://docs.unrealengine.com/latest/INT/Platforms/Android/GettingStarted/index.html) - Unreal - Documentation steps for getting started with Unreal
+
+* [Android Reference Guide](https://docs.unrealengine.com/latest/INT/Platforms/Android/Reference/index.html) - Unreal - Environment variable setup for Android publishing
+
+* [Shoutout to @MegaNuke](http://forums.ouya.tv/discussion/3827/steps-to-make-your-unreal-game-work-on-ouya-tested#latest) - Unreal - Excellent primer to getting started with Unreal
+
+* [Blueprints](https://docs.unrealengine.com/latest/INT/Engine/Blueprints/UserGuide/Types/ClassBlueprint/index.html) - Unreal - Visual Scripting
+
+* [Introduction to Paper2D](https://docs.unrealengine.com/latest/INT/Videos/Player/index.html?series=PLZlv_N0_O1gauJh60307mE_67jqK42twB&video=w5I3ljBJKa0) - Unreal - Intro to 2D sprites
+
 * [Git For Ages 4 and Up](https://www.youtube.com/watch?v=1ffBJ4sVUb4) - Visually learn GIT for version control and all about under-the-hood
 
 * [Verve](http://www.taron.de/forum/viewtopic.php?f=4&t=4) - Fluid Dynamics Painting
