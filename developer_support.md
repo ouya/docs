@@ -41,7 +41,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * [Git For Ages 4 and Up](https://www.youtube.com/watch?v=1ffBJ4sVUb4) - Visually learn GIT for version control and all about under-the-hood
 
-* [Verve](http://www.taron.de/forum/viewtopic.php?f=4&t=4) - Fluid Dynamics Painting
+* [Verve](http://www.taron.de/forum/viewtopic.php?f=4&t=4) - Free Fluid Dynamics Painting
 
 <a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=1m19s">(1:19)</a> - Bob/Tim: Talk about signing keys and keystores
 
