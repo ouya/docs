@@ -43,7 +43,7 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * [Verve](http://www.taron.de/forum/viewtopic.php?f=4&t=4) - Free Fluid Dynamics Painting
 
-<a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=1m19s">(0:36)</a> - Bob/Tim: Talk about signing keys and keystores
+<a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=0m36s">(0:36)</a> - Bob/Tim: Talk about signing keys and keystores
 
 <a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=4m50s">(4:50)</a> - Bob/Jon: Mustache Movember Challenge
 
