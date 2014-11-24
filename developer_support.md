@@ -6,6 +6,37 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 ----------
 
+### November 24, 2014 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:54:36)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=mWuiEZ5Nmws" target="_blank">
+<img src="http://img.youtube.com/vi/mWuiEZ5Nmws/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 11/24" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+* Get the [Unreal Engine](https://www.unrealengine.com/what-is-unreal-engine-4) - Unreal Engine and Source, All for $19 per month + 5% of Revenue
+
+* [Unreal Forum Post](https://forums.unrealengine.com/showthread.php?51910-Getting-Started-Android-Development-References-Documentation-Feedback) - Unreal - Tracking OUYA Plugin process and requests for info
+
+* [UE4 Video Playlist](https://wiki.unrealengine.com/Category:Epic_Video_Playlists) - Unreal - Epic Video Playlists
+
+* [UE4 Programming Playlist](https://wiki.unrealengine.com/Introduction_to_UE4_Programming_Playlist) - Unreal - Introduction to UE4 Programming Playlist
+
+* [NativeActivityOuyaInput](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/NativeActivityOuyaInput) - Native Android - Example remaps native input code through OUYA-Everywhere and sends remapped input back to native code
+
+<a target=_blank href="https://www.youtube.com/watch?v=mWuiEZ5Nmws&t=1m40s">(1:40)</a> - Jared: Just the Facts
+
+<a target=_blank href="https://www.youtube.com/watch?v=mWuiEZ5Nmws&t=4m13s">(4:13)</a> - Kellee: Adventures in Brazil at the SBGames event
+
+<a target=_blank href="https://www.youtube.com/watch?v=mWuiEZ5Nmws&t=12m40s">(12:40)</a> - Caleb: Construct 2 and Controller Quest
+
+<a target=_blank href="https://www.youtube.com/watch?v=mWuiEZ5Nmws&t=16m46s">(16:46)</a> - Tim: Using OUYA-Everywhere in Native Apps using C++ and Java
+
+----------
+
 ### November 17, 2014 ###
 
 <table border=1>
