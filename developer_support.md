@@ -166,6 +166,8 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 <a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=3m33s">(3:33)</a> - Tim: Publishing with Construct 2
 
+<a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=8m00s">(8:00)</a> - Tim: Remotely debugging HTML5/Construct 2 on the OUYA from Canary/ADB on the desktop
+
 <a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=18m25s">(18:25)</a> - Kellee: Review of GDC China
 
 <a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=24m39s">(24:39)</a> - Bawb/Kellee: Strategizing an Effective Launch
