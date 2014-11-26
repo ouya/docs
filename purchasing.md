@@ -44,7 +44,14 @@ In-App Purchasing (IAP) is how your app can make money.  The OUYA Developer Kit 
 
 **Cross Game Product** - a product of any type that if purchased, will be reported as purchased in all of your games
 
+## Overview
 
+* When the game/application starts, check for receipts
+* If the receipt check fails, use the cache to check for `full_unlock`
+* If the receipt is found, set `full_unlock` in the cache and show the full game
+* If no receipt is found, show the demo and remove `full_unlock` from the cache
+* If buy is successful, add `full_unlock` to the cache and show the full game
+* If buy is unsuccessful, remove `full_unlock` from the cache and show the demo
 
 ## Creating Products
 
