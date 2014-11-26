@@ -262,11 +262,13 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 * <a target=_blank href="https://chrome.google.com/webstore/detail/adb/dpngiggdglpdnjdoaefidgiigpemgage">[ADB Add-On]</a> - Full development IDE for remote debugging on OUYA
 
-<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=3m38s">(3:38)</a> - Jared hosts "Tim said" and "Just the Facts"
+<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=3m38s">(3:38)</a> - Jared: "Just the Facts"
 
-<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=17m40s">(17:40)</a> - Quick overview of HTML5
+<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=17m40s">(17:40)</a> - Tim: Quick overview of HTML5
 
-<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=24m12s">(24:12)</a> - Kellee requesting feedback for officehours@ouya.tv
+<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=21m22s">(21:22)</a> - Tim: Remote HTML Debugging with Canary/ADB on OUYA
+
+<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=24m12s">(24:12)</a> - Kellee: Requests feedback for officehours@ouya.tv
 
 ----------
 
