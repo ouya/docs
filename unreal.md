@@ -16,6 +16,14 @@
  </tr>
 </table>
 
+## Quick Start
+
+* First you need an [Unreal subscription](http://unrealengine.com) ($19/month + 5%)
+
+* Link your Github account with your Unreal account per the [wiki instructions](https://wiki.unrealengine.com/GitHub_Setup)
+
+* Get a link to the `OUYA fork` of the `UE4 4.5 Branch`
+
 ### Examples
 
 Examples are included at the base GIT path.
