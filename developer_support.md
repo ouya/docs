@@ -6,6 +6,93 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 ----------
 
+View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlist?list=PLg9qh0aZmQO8UjxetGdI6_egUFJCBtjNl)
+
+----------
+
+### November 24, 2014 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:54:36)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=mWuiEZ5Nmws" target="_blank">
+<img src="http://img.youtube.com/vi/mWuiEZ5Nmws/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 11/24" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+* Get the [Unreal Engine](https://www.unrealengine.com/what-is-unreal-engine-4) - Unreal Engine and Source, All for $19 per month + 5% of Revenue
+
+* [Unreal Forum Post](https://forums.unrealengine.com/showthread.php?51910-Getting-Started-Android-Development-References-Documentation-Feedback) - Unreal - Tracking OUYA Plugin process and requests for info
+
+* [UE4 Video Playlist](https://wiki.unrealengine.com/Category:Epic_Video_Playlists) - Unreal - Epic Video Playlists
+
+* [UE4 Programming Playlist](https://wiki.unrealengine.com/Introduction_to_UE4_Programming_Playlist) - Unreal - Introduction to UE4 Programming Playlist
+
+* [NativeActivityOuyaInput](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/NativeActivityOuyaInput) - Native Android - Example remaps native input code through OUYA-Everywhere and sends remapped input back to native code
+
+<a target=_blank href="https://www.youtube.com/watch?v=mWuiEZ5Nmws&t=1m40s">(1:40)</a> - Jared: Just the Facts
+
+<a target=_blank href="https://www.youtube.com/watch?v=mWuiEZ5Nmws&t=4m13s">(4:13)</a> - Kellee: Adventures in Brazil at the SBGames event
+
+<a target=_blank href="https://www.youtube.com/watch?v=mWuiEZ5Nmws&t=12m40s">(12:40)</a> - Caleb: Construct 2 and Controller Quest
+
+<a target=_blank href="https://www.youtube.com/watch?v=mWuiEZ5Nmws&t=16m46s">(16:46)</a> - Tim: Using OUYA-Everywhere in Native Apps using C++ and Java
+
+----------
+
+### November 17, 2014 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:45:49)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=B8uDlgARB74" target="_blank">
+<img src="http://img.youtube.com/vi/B8uDlgARB74/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 11/17" width="240" height="180" border="10" /></a></td>
+ <td>GIT for 4yr Olds (1:39:42)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=1ffBJ4sVUb4" target="_blank">
+<img src="http://img.youtube.com/vi/1ffBJ4sVUb4/0.jpg" alt="Git For Ages 4 and Up" width="240" height="180" border="10" /></a></td>
+ </tr>
+ <tr>
+ <td>Verve Demo 1 (37:21)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=PBO2hNv_tTE" target="_blank">
+<img src="http://img.youtube.com/vi/PBO2hNv_tTE/0.jpg" alt="Verve Demo 1" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+* Get the [Unreal Engine](https://www.unrealengine.com/what-is-unreal-engine-4) - Unreal Engine and Source, All for $19 per month + 5% of Revenue
+
+* [Unreal Forum Post](https://forums.unrealengine.com/showthread.php?51910-Getting-Started-Android-Development-References-Documentation-Feedback) - Unreal - Tracking OUYA Plugin process and requests for info
+
+* [Android Quick Start](https://docs.unrealengine.com/latest/INT/Platforms/Android/GettingStarted/index.html) - Unreal - Documentation steps for getting started with Unreal
+
+* [Android Reference Guide](https://docs.unrealengine.com/latest/INT/Platforms/Android/Reference/index.html) - Unreal - Environment variable setup for Android publishing
+
+* [Shoutout to @MegaNuke](http://forums.ouya.tv/discussion/3827/steps-to-make-your-unreal-game-work-on-ouya-tested#latest) - Unreal - Excellent primer to getting started with Unreal
+
+* [Blueprints](https://docs.unrealengine.com/latest/INT/Engine/Blueprints/UserGuide/Types/ClassBlueprint/index.html) - Unreal - Visual Scripting
+
+* [Introduction to Paper2D](https://docs.unrealengine.com/latest/INT/Videos/Player/index.html?series=PLZlv_N0_O1gauJh60307mE_67jqK42twB&video=w5I3ljBJKa0) - Unreal - Intro to 2D sprites
+
+* [Git For Ages 4 and Up](https://www.youtube.com/watch?v=1ffBJ4sVUb4) - Visually learn GIT for version control and all about under-the-hood
+
+* [Verve](http://www.taron.de/forum/viewtopic.php?f=4&t=4) - Free Fluid Dynamics Painting
+
+<a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=0m36s">(0:36)</a> - Bob/Tim: Talk about signing keys and keystores
+
+<a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=4m50s">(4:50)</a> - Bob/Jon: Mustache Movember Challenge
+
+<a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=5m47s">(5:47)</a> - Jared: Just the Facts
+
+<a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=22m27s">(22:27)</a> - Tim: Construct 2 Updates
+
+<a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=23m04s">(23:04)</a> - Tim: Intro to Unreal
+
+<a target=_blank href="https://www.youtube.com/watch?v=B8uDlgARB74&t=35m10s">(35:10)</a> - Tim: Intro to Verve
+
+
+----------
+
 ### November 10, 2014 ###
 
 <table border=1>
@@ -78,6 +165,8 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 <a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=0m50s">(0:50)</a> - Jared: Just the Facts
 
 <a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=3m33s">(3:33)</a> - Tim: Publishing with Construct 2
+
+<a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=8m00s">(8:00)</a> - Tim: Remotely debugging HTML5/Construct 2 on the OUYA from Canary/ADB on the desktop
 
 <a target=_blank href="https://www.youtube.com/watch?v=lsvuZ9CRNcQ&t=18m25s">(18:25)</a> - Kellee: Review of GDC China
 
@@ -175,11 +264,13 @@ Once a week, OUYA participates in a live broadcast with developers to answer que
 
 * <a target=_blank href="https://chrome.google.com/webstore/detail/adb/dpngiggdglpdnjdoaefidgiigpemgage">[ADB Add-On]</a> - Full development IDE for remote debugging on OUYA
 
-<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=3m38s">(3:38)</a> - Jared hosts "Tim said" and "Just the Facts"
+<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=3m38s">(3:38)</a> - Jared: "Just the Facts"
 
-<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=17m40s">(17:40)</a> - Quick overview of HTML5
+<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=17m40s">(17:40)</a> - Tim: Quick overview of HTML5
 
-<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=24m12s">(24:12)</a> - Kellee requesting feedback for officehours@ouya.tv
+<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=21m22s">(21:22)</a> - Tim: Remote HTML Debugging with Canary/ADB on OUYA
+
+<a target=_blank href="https://www.youtube.com/watch?v=S_eqoADvBLw&t=24m12s">(24:12)</a> - Kellee: Requests feedback for officehours@ouya.tv
 
 ----------
 

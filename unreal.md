@@ -1,8 +1,34 @@
 ## Unreal Engine
 
-## Guide
+# Forums #
 
-Note: Android support is only available to full UE3 source licensees. Please contact the sales team at Epic to discuss licensing options.
+[Unreal on OUYA Forums](http://forums.ouya.tv/categories/unreal-on-ouya)
+
+# Getting Started #
+
+<table border=1>
+ <tr>
+ <td>UE4 on OUYA (28:49)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=lK7qGgeuI74" target="_blank">
+<img src="http://img.youtube.com/vi/lK7qGgeuI74/0.jpg" alt="OUYA Support for UE4 with Tappy Chicken" width="240" height="180" border="10" /></a>
+ </td>
+ <td></td>
+ </tr>
+</table>
+
+## Quick Start
+
+* First you need an [Unreal subscription](http://unrealengine.com) ($19/month + 5%)
+
+* Link your Github account with your Unreal account per the [wiki instructions](https://wiki.unrealengine.com/GitHub_Setup)
+
+* Only after linking your Github account will you have access to the [UE4 Source](https://github.com/EpicGames/UnrealEngine).
+
+* Download the [4.5-OUYA branch](https://github.com/ouya/UnrealEngine/tree/4.5-OUYA) to get the `OUYA fork` of the `Unreal Engine`
+
+```
+git clone -b 4.5-OUYA https://github.com/ouya/UnrealEngine
+```
 
 ### Examples
 
