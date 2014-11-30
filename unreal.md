@@ -24,7 +24,7 @@
 
 * Only after linking your Github account will you have access to the [UE4 Source](https://github.com/EpicGames/UnrealEngine).
 
-* Get a link to the `OUYA fork` of the `UE4 4.5 Branch`
+* Download the [4.5-OUYA branch](https://github.com/ouya/UnrealEngine) for the `OUYA fork` of the `UE4 4.5 Branch`
 
 ### Examples
 
