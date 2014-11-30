@@ -26,8 +26,6 @@
 
 * Download the [4.5-OUYA branch](https://github.com/ouya/UnrealEngine/tree/4.5-OUYA) to get the `OUYA fork` of the `Unreal Engine`
 
-`git clone -b 4.5-OUYA https://github.com/ouya/UnrealEngine`
-
 ```
 git clone -b 4.5-OUYA https://github.com/ouya/UnrealEngine
 Cloning into 'UnrealEngine'...
