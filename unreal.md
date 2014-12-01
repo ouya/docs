@@ -118,7 +118,7 @@ Checking out files: 100% (26995/26995), done.
 
 ![Compile Blueprint](unreal/image_19.png)
 
-` Click the `Play` button to verify the flow is functioning properly to troubleshoot any issues.
+* Click the `Play` button to verify the flow is functioning properly to troubleshoot any issues.
 
 ![Check Flow](unreal/image_20.png)
 
