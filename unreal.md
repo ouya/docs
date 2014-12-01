@@ -70,7 +70,7 @@ Checking out files: 100% (26995/26995), done.
 
 ![Launch editor](unreal/image_8.png)
 
-## `UE4 Editor`
+# `UE4 Editor`
 
 * Create a `New Project` as a `Blueprint` project in the `Unreal Project Browser` to publish to `Android` the fastest. Select `No Starter Content` to reduce the file size. Enter a location of an empty folder to place the project and give it a name. Click `Create Project`.
 
@@ -95,6 +95,32 @@ Checking out files: 100% (26995/26995), done.
 * Click the `Compile` button to update the latest `Blueprint` changes after adding the `OuyaSDK` and `OuyaController` object references to the `Level Blueprint`.
 
 ![Compile Blueprint](unreal/image_14.png)
+
+* `Right-Click` on the `Event Graph` to add an `Event Tick` to the `Level Blueprint`. The event adds an update event to the flow. 
+
+![Event Tick](unreal/image_15.png)
+
+* `Right-Click` on the `Event Graph` while the `OuyaSDK` object in the `Scene Outliner` is selected to add `Ouya Get Any Button Down` to the `Level Blueprint`. The event checks if any controller has a `pressed` event for the `button` parameter. 
+
+## OUYA-Everywhere Input
+
+![Any Button Down](unreal/image_16.png)
+
+* `Right-Click` on the `Event Graph` while the `OuyaController` object in the `Scene Outliner` is selected to add `Get BUTTON O` to the `Level Blueprint`. The event gets the `KeyCode` for the `BUTTON_O` on the OUYA Controller. 
+
+![Button KeyCode](unreal/image_17.png)
+
+* `Right-Click` on the `Event Graph` while the `OuyaSDK` object in the `Scene Outliner` is selected to add `Ouya Clear Button States` to the `Level Blueprint`. The event clears any detected `pressed` and `released` states so the next `Update Tick` can detect the next events.
+
+![Clear Button States](unreal/image_18.png)
+
+* Click the `Compile` button to update the latest `Blueprint` changes after adding a set of events that will detect a `pressed` event for the given `button` for any `OuyaController`.
+
+![Compile Blueprint](unreal/image_19.png)
+
+` Click the `Play` button to verify the flow is functioning properly to troubleshoot any issues.
+
+![Check Flow](unreal/image_20.png)
 
 ### Examples
 
