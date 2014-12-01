@@ -35,7 +35,7 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 <a target=_blank href="https://www.youtube.com/watch?v=RLl_vFEUwFc&t=3m46s">(3:46)</a> - Jared: Just the Facts
 
-<a target=_blank href="https://www.youtube.com/watch?v=RLl_vFEUwFc&t=18m19s">(18:19)</a> - Tim: UE4 on OUYA, Unreal Editor, and blueprints
+<a target=_blank href="https://www.youtube.com/watch?v=RLl_vFEUwFc&t=18m19s">(18:19)</a> - Tim: UE4 on OUYA, Unreal Editor, and Blueprints
 
 ----------
 
