@@ -122,9 +122,83 @@ Checking out files: 100% (26995/26995), done.
 
 ![Check Flow](unreal/image_20.png)
 
-### Examples
+## Deployment
+
+* Before building for `Android` check your `Project Settings` in the `Unreal Editor`.
+
+![Check Flow](unreal/image_22.png)
+
+* Click `Android` in the `Platforms` section. 
+
+![Check Flow](unreal/image_23.png)
+
+* Set the `Orientation` to `Landscape` for the TV.
+
+![Check Flow](unreal/image_24.png)
+
+* Click the `Open Manifest Folder` button to customize the manifest.
+
+![Check Flow](unreal/image_25.png)
+
+* Edit the `AndroidManifest.xml` in a `Text-Editor`.
+
+![Check Flow](unreal/image_26.png)
+
+* Add the `intent-filter` so the game will appear in the `Play` section in the `OUYA Launcher`.
+
+<pre>
+&lt;category android:name="tv.ouya.intent.category.GAME" /&gt;
+</pre>
+
+![Check Flow](unreal/image_27.png)
+
+* Build for `Tegra 3` devices using the `File->Package Project->Android->Android (DXT)` menu item.
+
+![Check Flow](unreal/image_28.png)
+
+* Browse for an empty folder or use the previous path to output the `APK` from the build process.
+
+![Check Flow](unreal/image_29.png)
+
+* Click `Show Output Log` to watch for any packaging errors that may occur while building the `APK`.
+
+![Check Flow](unreal/image_30.png)
+
+* A `Blueprint` only project should build within a few minutes versus a `Code` project which will take much longer.
+
+![Check Flow](unreal/image_31.png)
+
+* Run the `Install_ProjectName_Development.bat` script to install to the connected `OUYA`.
+
+![Check Flow](unreal/image_32.png)
+
+* Generally the install takes 1 second per MB and prints `Success` when the install has completed.
+
+![Check Flow](unreal/image_33.png)
+
+## Examples
 
 Examples are included at the base GIT path.
+
+### Tappy Chicken
+
+`Tappy Chicken` is a complete example project in the `Unreal Launcher`. The complete project can be installed within the `MarketPlace` in the `Complete Projects` section.
+
+* Add a `Custom Event` named `OUYA_PLAY` that simulates clicking on the `PLAY` button at the start of the game. 
+
+![Play Button](unreal/image_34.png)
+
+* Add a `Custom Event` named `OUYA_TOUCH` that simulates "tapping anywhere" at the start of the game. 
+
+![Tap Anywhere](unreal/image_35.png)
+
+* Add a `Custom Event` named `OUYA_FLAP` that simulates flapping the chicken during gameplay.
+
+![Flap Chicken](unreal/image_36.png)
+
+The following event flow adds the custom events needed to play `Tappy Chicken` on the OUYA. If the `BUTTON_O` pressed event is detected on `Any` OUYA Controller then the custom events will be invoked for `OUYA_PLAY`, `OUYA_TOUCH`, and `OUYA_FLAP`. 
+
+![Check Flow](unreal/image_21.png)
 
 ### Resources
 
