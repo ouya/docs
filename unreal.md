@@ -40,6 +40,62 @@ Checking out files: 100% (26995/26995), done.
 
 * Download `Required_1of2.zip` and `Required_2of2.zip` from the [4.5.X Releases](https://github.com/EpicGames/UnrealEngine/releases) and unpack in the `UnrealEngine` checkout folder.
 
+![Unzip here](unreal/image_1.png)
+
+* Follow the [Build the Engine](https://wiki.unrealengine.com/GitHub_Setup#Buld_the_Engine) steps to generate the Visual Studio solution.
+ 
+![Generate project files](unreal/image_2.png)
+
+* Open the `UE4.sln` in Visual Studio
+
+![Open Visual Studio](unreal/image_3.png)
+
+* Add `Solution Configurations` and `Solutions Platforms` to the Visual Studio Toolbar to easily target the `UE4` build platforms. 
+
+![Options for toolbar](unreal/image_4.png)
+
+* Build the `Development Editor` on the `Win64` platform which will build the `UnrealEngine\Engine\Binaries\Win64\UE4Editor.exe` editor application.
+
+![Build UE4](unreal/image_5.png)
+
+* Build the `Development Client` on the `Android` platform which will build the `UnrealEngine\Engine\Binaries\Android\UE4Client-armv7-es2.so` native library.
+
+![Build Android](unreal/image_6.png)
+
+* Run the script `UnrealEngine\Engine\Binaries\Android\copy_client_for_game.cmd` to copy the native library as the `UE4Game-armv7-es2.so` dependency to use when building BluePrint projects.
+
+![Copy dependency](unreal/image_7.png) 
+
+* Launch the `UE4` editor from `UnrealEngine\Engine\Binaries\Win64\UE4Editor.exe`.
+
+![Launch editor](unreal/image_8.png)
+
+## `UE4 Editor`
+
+* Create a `New Project` as a `Blueprint` project in the `Unreal Project Browser` to publish to `Android` the fastest. Select `No Starter Content` to reduce the file size. Enter a location of an empty folder to place the project and give it a name. Click `Create Project`.
+
+![New Project](unreal/image_9.png)
+
+* Use the `Object Browser` and search for `OUYA` to add the `OuyaController` and `OuyaSDK` actors to the level.
+
+![Object Browser](unreal/image_10.png)
+
+* Open the `Level Blueprint`.
+
+![Level Blueprint](unreal/image_11.png)
+
+* With `OuyaSDK` selected in the `Scene Outliner`, `Right-Click` to add a reference in the `Level Blueprint`.
+
+![Add OuyaSDK](unreal/image_12.png)
+
+* With `OuyaController` selected in the `Scene Outliner`, `Right-Click` to add a reference in the `Level Blueprint`.
+
+![Add OuyaController](unreal/image_13.png)
+
+* Click the `Compile` button to update the latest `Blueprint` changes after adding the `OuyaSDK` and `OuyaController` object references to the `Level Blueprint`.
+
+![Add OuyaController](unreal/image_14.png)
+
 ### Examples
 
 Examples are included at the base GIT path.
