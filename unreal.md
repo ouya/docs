@@ -94,7 +94,7 @@ Checking out files: 100% (26995/26995), done.
 
 * Click the `Compile` button to update the latest `Blueprint` changes after adding the `OuyaSDK` and `OuyaController` object references to the `Level Blueprint`.
 
-![Add OuyaController](unreal/image_14.png)
+![Compile Blueprint](unreal/image_14.png)
 
 ### Examples
 
