@@ -25,8 +25,9 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
  <td>UE4 on OUYA (28:49)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=lK7qGgeuI74" target="_blank">
 <img src="http://img.youtube.com/vi/lK7qGgeuI74/0.jpg" alt="UE4 on OUYA" width="240" height="180" border="10" /></a></td>
- <td></td>
- </tr>
+ <td>Customize Tappy Chicken (2:50)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=ALWtpYGSomE" target="_blank">
+<img src="http://img.youtube.com/vi/ALWtpYGSomE/0.jpg" alt="Customize Tappy Chicken" width="240" height="180" border="10" /></a></td>
  </tr>
 </table>
 
