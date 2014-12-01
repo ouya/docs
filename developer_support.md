@@ -10,6 +10,34 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
+### December 1, 2014 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (01:05:24)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=RLl_vFEUwFc" target="_blank">
+<img src="http://img.youtube.com/vi/RLl_vFEUwFc/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 12/1" width="240" height="180" border="10" /></a></td>
+ <td>Fan Made (1000 Games)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=ZOTEA_Kn6d0" target="_blank">
+<img src="http://img.youtube.com/vi/ZOTEA_Kn6d0/0.jpg" alt="OUYA 1,000 Games" width="240" height="180" border="10" /></a></td>
+ </tr>
+ <tr>
+ <td>UE4 on OUYA (28:49)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=lK7qGgeuI74" target="_blank">
+<img src="http://img.youtube.com/vi/lK7qGgeuI74/0.jpg" alt="UE4 on OUYA" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+ </tr>
+</table>
+
+* [Unreal Engine Documentation](https://github.com/ouya/docs/blob/master/unreal.md) - Unreal Engine on OUYA
+
+<a target=_blank href="https://www.youtube.com/watch?v=RLl_vFEUwFc&t=3m46s">(3:46)</a> - Jared: Just the Facts
+
+<a target=_blank href="https://www.youtube.com/watch?v=RLl_vFEUwFc&t=18m19s">(18:19)</a> - Tim: UE4 on OUYA, Unreal Editor, and blueprints
+
+----------
+
 ### November 24, 2014 ###
 
 <table border=1>
