@@ -236,7 +236,7 @@ lua
     
 #### Virtual Controller
 
-![Virtual Controller Example](corona/image_1.png)
+![Virtual Controller Example](https://raw.githubusercontent.com/ouya/docs/master/corona/image_1.png)
 
 Open the Corona Simulator at the path - ouya-sdk-examples/Corona/VirtualController/
 
@@ -320,7 +320,7 @@ android update project --path .
 
 ### In-App-Purchases
 
-![In-App-Purchase Example](corona/image_2.png)
+![In-App-Purchase Example](https://raw.githubusercontent.com/ouya/docs/master/corona/image_2.png)
 
 #### libs/ouya-sdk.jar
 
