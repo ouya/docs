@@ -184,6 +184,10 @@ Examples are included at the base GIT path.
 
 `Tappy Chicken` is a complete example project in the `Unreal Launcher`. The complete project can be installed within the `MarketPlace` in the `Complete Projects` section.
 
+* Double-Click the `BP_MainGame` blueprint to open the `Event Graph` of the `Class Blueprint`.
+ 
+![Play Button](unreal/image_37.png) 
+
 * Add a `Custom Event` named `OUYA_PLAY` that simulates clicking on the `PLAY` button at the start of the game. 
 
 ![Play Button](unreal/image_34.png)
@@ -194,11 +198,21 @@ Examples are included at the base GIT path.
 
 * Add a `Custom Event` named `OUYA_FLAP` that simulates flapping the chicken during gameplay.
 
+* Compile the blueprint changes.
+
+* Open the `Level Blueprint`.
+
+![Play Button](unreal/image_38.png)
+
 ![Flap Chicken](unreal/image_36.png)
 
 The following event flow adds the custom events needed to play `Tappy Chicken` on the OUYA. If the `BUTTON_O` pressed event is detected on `Any` OUYA Controller then the custom events will be invoked for `OUYA_PLAY`, `OUYA_TOUCH`, and `OUYA_FLAP`. `OUYA Clear Button States` clears the detected pressed and released events so they can be detected in the next update frame.
 
 ![Check Flow](unreal/image_21.png)
+
+* Compile the blueprint changes.
+
+* Backup the changes with the `File->Save All` menu item.
 
 ### Resources
 
