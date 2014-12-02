@@ -1,10 +1,12 @@
-## Unreal Engine
+# Unreal Engine
 
-# Forums #
+## Forums #
 
-[Unreal on OUYA Forums](http://forums.ouya.tv/categories/unreal-on-ouya)
+* [Unreal on OUYA Forums](http://forums.ouya.tv/categories/unreal-on-ouya)
 
-# Getting Started #
+* [UnrealEngine Forums](https://forums.unrealengine.com/forum.php)
+
+## Getting Started #
 
 <table border=1>
  <tr>
@@ -23,6 +25,26 @@
 * Link your Github account with your Unreal account per the [wiki instructions](https://wiki.unrealengine.com/GitHub_Setup#GitHub_Account)
 
 * Only after linking your Github account will you have access to the [UE4 Source](https://github.com/EpicGames/UnrealEngine).
+
+## Resources
+
+* Get the [Unreal Engine](https://www.unrealengine.com/what-is-unreal-engine-4) - Unreal Engine and Source, All for $19 per month + 5% of Revenue
+
+* [Unreal Forum Post](https://forums.unrealengine.com/showthread.php?51910-Getting-Started-Android-Development-References-Documentation-Feedback) - Unreal - Tracking OUYA Plugin process and requests for info
+
+* [UE4 Video Playlist](https://wiki.unrealengine.com/Category:Epic_Video_Playlists) - Unreal - Epic Video Playlists
+
+* [UE4 Programming Playlist](https://wiki.unrealengine.com/Introduction_to_UE4_Programming_Playlist) - Unreal - Introduction to UE4 Programming Playlist
+
+* [Android Quick Start](https://docs.unrealengine.com/latest/INT/Platforms/Android/GettingStarted/index.html) - Unreal - Documentation steps for getting started with Unreal
+
+* [Android Reference Guide](https://docs.unrealengine.com/latest/INT/Platforms/Android/Reference/index.html) - Unreal - Environment variable setup for Android publishing
+
+* [Blueprints](https://docs.unrealengine.com/latest/INT/Engine/Blueprints/UserGuide/Types/ClassBlueprint/index.html) - Unreal - Visual Scripting
+
+* [Introduction to Paper2D](https://docs.unrealengine.com/latest/INT/Videos/Player/index.html?series=PLZlv_N0_O1gauJh60307mE_67jqK42twB&video=w5I3ljBJKa0) - Unreal - Intro to 2D sprites
+
+## Build UE4
 
 * Download the [4.5-OUYA branch](https://github.com/ouya/UnrealEngine/tree/4.5-OUYA) to get the `OUYA fork` of the `Unreal Engine`
 
@@ -213,13 +235,3 @@ The following event flow adds the custom events needed to play `Tappy Chicken` o
 * Compile the blueprint changes.
 
 * Backup the changes with the `File->Save All` menu item.
-
-### Resources
-
-UE3, UnrealScript Forums - http://forums.epicgames.com/forums/350-Unreal-Tournament-3-Programming-amp-Unrealscript<br/>
-
-UDK - http://www.unrealengine.com/udk/downloads/<br/>
-UDK Documentation - http://www.unrealengine.com/udk/documentation/<br/>
-Getting Started (UDK) - http://udn.epicgames.com/Three/DevelopmentKitGettingStarted.html<br/>
-Community Video Tutorials: 65 Videos in a UDK Beginner's series - http://thenewboston.org/list.php?cat=12<br/>
-UDK Video Tutorials - http://udn.epicgames.com/Three/VideoTutorials.html<br/>
