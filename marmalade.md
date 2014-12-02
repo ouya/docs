@@ -495,13 +495,13 @@ void ApplicationCallbacksRequestReceipts::OnCancel()
 
 The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/VirtualController) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated. The Virtual Controller example includes support for [OUYA-Everywhere](ouya-everywhere.md).
 
-![Virtual Controller](marmalade/image_1.png)
+![Virtual Controller](https://raw.githubusercontent.com/ouya/docs/master/marmalade/image_1.png)
 
 ### In-App-Purchases ###
 
 The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/InAppPurchases) example uses the ODK to access gamer info, purchasing, and receipts.
 
-![In-App-Purchases](marmalade/image_2.png)
+![In-App-Purchases](https://raw.githubusercontent.com/ouya/docs/master/marmalade/image_2.png)
 
 ### In App Purchase Example
 
