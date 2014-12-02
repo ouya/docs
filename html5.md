@@ -160,13 +160,13 @@ The OUYA needs to be connected via micro-usb or over the network and listed in `
 
 The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/blob/master/Html5/VirtualController/web_archive/index.html) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated.
 
-![Virtual Controller](html5/image_1.png)
+![Virtual Controller](https://raw.githubusercontent.com/ouya/docs/master/html5/image_1.png)
 
 ### In-App-Purchases ###
 
 The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Html5/InAppPurchases/web_archive/index.html) example uses the ODK to access gamer info, purchasing, and receipts.
 
-![In-App-Purchases](html5/image_2.png)
+![In-App-Purchases](https://raw.githubusercontent.com/ouya/docs/master/html5/image_2.png)
 
 # API #
 
@@ -236,7 +236,7 @@ The Integer Button is the button in the event.
 The key down event indicates a button was just pressed.
 
 ```
-function onKeyDown(playerNum, button) {   
+function onKeyDown(playerNum, button) {
    if (button == OuyaController.BUTTON_O) {
    }
    if (button == OuyaController.BUTTON_U) {
@@ -325,7 +325,7 @@ If the initialization fails, the onFailure callback will be invoked.
         OuyaSDK.onFailure = onFailure;
         OuyaSDK.method = "initOuyaPlugin";
       };
-      
+
       // Prepare the plugin initialization values
       var data = Array();
       data[0] =
@@ -357,7 +357,7 @@ The onCancel callback invokes if the request was cancelled.
         OuyaSDK.onCancel = onCancel;
         OuyaSDK.method = "requestGamerInfo";
       };
-            
+
       // Invoke the plugin method
       OuyaSDK.requestGamerInfo(onSuccessRequestGamerInfo, onFailureRequestGamerInfo, onCancelRequestGamerInfo);
 ```
@@ -383,7 +383,7 @@ The onCancel callback invokes if the request was cancelled.
         OuyaSDK.onCancel = onCancel;
         OuyaSDK.method = "requestProducts";
       };
-      
+
       // Invoke the plugin method
       var products = Array("YOUR_PRODUCT_1", "YOUR_PRODUCT_2", "YOUR_PRODUCT3");
       OuyaSDK.requestProducts(products, onSuccessRequestProducts, onFailureRequestProducts, onCancelRequestProducts)
@@ -408,7 +408,7 @@ The onCancel callback indicates the purchase was cancelled.
         OuyaSDK.onCancel = onCancel;
         OuyaSDK.method = "requestPurchase";
       };
-      
+
       // Invoke the plugin method
       var purchasable = "YOUR_PRODUCT_ID";
       OuyaSDK.requestPurchase(purchasable, onSuccessRequestPurchase, onFailureRequestPurchase, onCancelRequestPurchase);
@@ -430,7 +430,7 @@ The onCancel callback indicates the request was cancelled.
         OuyaSDK.onCancel = onCancel;
         OuyaSDK.method = "requestReceipts";
       };
-      
+
       // Invoke the plugin method
       OuyaSDK.requestReceipts(onSuccessRequestReceipts, onFailureRequestReceipts, onCancelRequestReceipts);
 ```
@@ -441,7 +441,7 @@ The safe area is explained in detail in the [content-review-guidelines](https://
 
 The safe area for HTML5 apps can be adjusted with setSafeArea.
 
-The amount parameter adds full padding with 0.0 and no padding with 1.0. 
+The amount parameter adds full padding with 0.0 and no padding with 1.0.
 
 The onSuccess callback indicates the safe area was set.
 
@@ -455,7 +455,7 @@ The onFailure callback indicates the request to set the safe area failed.
         OuyaSDK.onFailure = onFailure;
         OuyaSDK.method = "setSafeArea";
       }
-            
+
       // Invoke the plugin method
       var safeAreaAmount = 0.0; //full border padding
       OuyaSDK.setSafeArea(safeAreaAmount, onSuccessSetSafeArea, onFailureSetSafeArea);
@@ -476,7 +476,7 @@ The onFailure callback indicates the request to shutdown failed.
         OuyaSDK.onFailure = onFailure;
         OuyaSDK.method = "shutdown";
       }
-      
+
       // Invoke the plugin method
       OuyaSDK.shutdown(onSuccessShutdown, onFailureShutdown);
 ```
