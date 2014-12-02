@@ -12,9 +12,10 @@
  <tr>
  <td>UE4 on OUYA (28:49)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=lK7qGgeuI74" target="_blank">
-<img src="http://img.youtube.com/vi/lK7qGgeuI74/0.jpg" alt="OUYA Support for UE4 with Tappy Chicken" width="240" height="180" border="10" /></a>
- </td>
- <td></td>
+<img src="http://img.youtube.com/vi/lK7qGgeuI74/0.jpg" alt="OUYA Support for UE4 with Tappy Chicken" width="240" height="180" border="10" /></a></td>
+ <td>Customize Tappy Chicken (2:50)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=ALWtpYGSomE" target="_blank">
+<img src="http://img.youtube.com/vi/ALWtpYGSomE/0.jpg" alt="Customize Tappy Chicken" width="240" height="180" border="10" /></a></td>
  </tr>
 </table>
 
@@ -98,9 +99,25 @@ Checking out files: 100% (26995/26995), done.
 
 ![New Project](unreal/image_9.png)
 
+* Use the `File->New Level` menu item to create a new level.
+
+![New Project](unreal/image_39.png)
+
+* Choose an `Empty Level` to start fresh.
+
+![New Project](unreal/image_40.png)
+
 * Use the `Object Browser` and search for `OUYA` to add the `OuyaController` and `OuyaSDK` actors to the level.
 
-![Object Browser](unreal/image_10.png)
+![Object Browser](unreal/image_41.png)
+
+* Use the `File->Save As` menu item to save the level.
+
+![Object Browser](unreal/image_42.png)
+
+* Enter a name for the level and click `Save`.
+
+![Object Browser](unreal/image_43.png)
 
 * Open the `Level Blueprint`.
 
@@ -150,9 +167,17 @@ Checking out files: 100% (26995/26995), done.
 
 ![Check Flow](unreal/image_22.png)
 
-* Click `Android` in the `Platforms` section. 
+* Check `Use OBB in APK` in the `Packaging` settings to output a single `APK`.
 
-![Check Flow](unreal/image_23.png)
+![Check Flow](unreal/image_48.png)
+
+* Uncheck `Mobile HDR` in the `Rendering` settings.
+
+![Check Flow](unreal/image_47.png)
+
+* Click `Android` in the `Platforms` section.  You may need to click `Configure Now` to configure the project for the `Android` platform.
+
+![Check Flow](unreal/image_44.png)
 
 * Set the `Orientation` to `Landscape` for the TV.
 
