@@ -281,6 +281,14 @@ The menu button detection uses `Ouya Get Button Down` to catch the pressed event
 
 ![Clear States](unreal/image_52.png)
 
+One issue with the timer is that we need to pass which menu sprite should be hidden and delegate timers don't have parameters.
+
+![Clear States](unreal/image_60.png)
+
+Since we can't pass a delegate parameter, we use an array to store the menu sprite references to clear sprite visibility after the timer completes. Before calling the timer, we add the sprite actor reference to the array. When the delegate fires, all the sprite actor references are hidden and then the array is cleared.
+
+![Clear States](unreal/image_61.png)
+
 The `Ouya Get Axis` event is used to get the axis value for a given controller axis.
 
 ![Get Axis](unreal/image_58.png)
