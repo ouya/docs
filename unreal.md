@@ -229,8 +229,6 @@ Checking out files: 100% (26995/26995), done.
 
 ## Examples
 
-Examples are included at the base GIT path.
-
 ### Tappy Chicken
 
 `Tappy Chicken` is a complete example project in the `Unreal Launcher`. The complete project can be installed within the `MarketPlace` in the `Complete Projects` section.
@@ -264,3 +262,27 @@ The following event flow adds the custom events needed to play `Tappy Chicken` o
 * Compile the blueprint changes.
 
 * Backup the changes with the `File->Save All` menu item.
+
+### Virtual Controller
+
+The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/Unreal/VirtualController) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated.
+
+The `BP_Controller` class blueprint provides a custom event named `Update Controller Sprite` which takes sprite parameter references in order to toggle visibility. The custom event first sets the parameters in variables for cleaner flow organization.
+
+![Check Flow](unreal/image_50.png)
+
+The `Ouya Get Button` event is used to get the current state of each controller button.
+
+![Check Flow](unreal/image_51.png)
+
+The menu button detection uses `Ouya Get Button Down` to catch the pressed event and then uses a `Timer Delegate` to clear the highlighted `Menu Button` after a second.
+
+![Check Flow](unreal/image_52.png)
+
+The `level blueprint` passes sprite actor references from the scene to the class blueprint. The `OuyaSDK` and `OuyaController` are also passed to the `Update Controller Sprite` custom event.  
+
+![Check Flow](unreal/image_53.png)
+
+The `Scene Outliner` shows all the `Sprite Actor` objects that make up a controller in a subfolder. The highlighted buttons and axis sprites are hidden by default. The left and right stick sprites are marked as `Movable` in the details tab.
+
+![Check Flow](unreal/image_54.png)
