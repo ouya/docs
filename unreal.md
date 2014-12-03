@@ -267,9 +267,11 @@ The following event flow adds the custom events needed to play `Tappy Chicken` o
 
 The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/Unreal/VirtualController) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated.
 
+![Check Flow](unreal/image_57.png)
+
 The `BP_Controller` class blueprint provides a custom event named `Update Controller Sprite` which takes sprite parameter references in order to toggle visibility. The custom event first sets the parameters in variables for cleaner flow organization.
 
-![Check Flow](unreal/image_50.png)
+![Check Flow](unreal/image_55.png)
 
 The `Ouya Get Button` event is used to get the current state of each controller button.
 
@@ -279,6 +281,14 @@ The menu button detection uses `Ouya Get Button Down` to catch the pressed event
 
 ![Check Flow](unreal/image_52.png)
 
+The `Ouya Get Axis` event is used to get the axis value for a given controller axis.
+
+![Check Flow](unreal/image_58.png)
+
+For the `Left Stick` and `Right Stick`, the input is rotated to match the camera angle. The axis sprites are also moved in the rotated direction using the axis input.
+
+![Check Flow](unreal/image_59.png)
+
 The `level blueprint` passes sprite actor references from the scene to the class blueprint. The `OuyaSDK` and `OuyaController` are also passed to the `Update Controller Sprite` custom event.  
 
 ![Check Flow](unreal/image_53.png)
@@ -286,3 +296,7 @@ The `level blueprint` passes sprite actor references from the scene to the class
 The `Scene Outliner` shows all the `Sprite Actor` objects that make up a controller in a subfolder. The highlighted buttons and axis sprites are hidden by default. The left and right stick sprites are marked as `Movable` in the details tab.
 
 ![Check Flow](unreal/image_54.png)
+
+The `level blueprint` shows mapping all the `Scene Outliner` sprites to the `Update Controller Sprite` custom event.
+
+![Check Flow](unreal/image_56.png)
