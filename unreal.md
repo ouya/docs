@@ -27,6 +27,16 @@
 
 * Only after linking your Github account will you have access to the [UE4 Source](https://github.com/EpicGames/UnrealEngine).
 
+### FAQ
+
+* If you run and the screen is just all black or weird it could be a few issues:
+
+1. Did you compile for `Development Editor/Win64`, `Development Client/Android`, and run `copy_client_for_game.cmd`?
+
+2. Did you disable Mobile HDR lighting?
+
+3. Did you add a `Camera` to your scene and set a default `Level`?
+
 ## Resources
 
 * Get the [Unreal Engine](https://www.unrealengine.com/what-is-unreal-engine-4) - Unreal Engine and Source, All for $19 per month + 5% of Revenue
@@ -45,6 +55,8 @@
 
 * [Introduction to Paper2D](https://docs.unrealengine.com/latest/INT/Videos/Player/index.html?series=PLZlv_N0_O1gauJh60307mE_67jqK42twB&video=w5I3ljBJKa0) - Unreal - Intro to 2D sprites
 
+* [Unreal Chat](http://webchat.freenode.net/?channels=%23unrealengine) - #UnrealEngine on Freenode
+
 ### Training and Jams
 
 * [Training Streams](https://forums.unrealengine.com/showthread.php?53457-Twitch-NEW!-Training-Stream-Spline-and-Spline-Mesh-Components-Dec-9-2014) happen Tuesdays for Q&A training sessions.
@@ -57,7 +69,9 @@
 
 * Coding Documentation [Functions](https://docs.unrealengine.com/latest/INT/Programming/UnrealArchitecture/Reference/Functions/index.html)
 
-* [Core Data Types](https://docs.unrealengine.com/latest/INT/Programming/UnrealArchitecture/Reference/Properties/index.html) allowed in BlueprintCallable functions 
+* [Core Data Types](https://docs.unrealengine.com/latest/INT/Programming/UnrealArchitecture/Reference/Properties/index.html) allowed in BlueprintCallable functions
+
+* [Artificial Intelligence](https://docs.unrealengine.com/latest/INT/Gameplay/AI/index.html) - AI Overview and Behavior Tree Quick Start Guide  
 
 ## Build UE4
 
