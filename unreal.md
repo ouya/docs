@@ -45,6 +45,12 @@
 
 * [Introduction to Paper2D](https://docs.unrealengine.com/latest/INT/Videos/Player/index.html?series=PLZlv_N0_O1gauJh60307mE_67jqK42twB&video=w5I3ljBJKa0) - Unreal - Intro to 2D sprites
 
+### Training and Jams
+
+* [Training Streams](https://forums.unrealengine.com/showthread.php?53457-Twitch-NEW!-Training-Stream-Spline-and-Spline-Mesh-Components-Dec-9-2014) happen Tuesdays for Q&A training sessions.
+
+* [Game Jams](https://forums.unrealengine.com/showthread.php?53417-DECEMBER-GAME-JAM-Theme-Announced-on-Dec-11th-Twitch-Stream!&highlight=game+jam) - Epic hosts month game jams.
+
 ## Build UE4
 
 * Download the [4.5-OUYA branch](https://github.com/ouya/UnrealEngine/tree/4.5-OUYA) to get the `OUYA fork` of the `Unreal Engine`
