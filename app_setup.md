@@ -34,3 +34,15 @@ For your OUYA app to show up in the **PLAY** section, it must have an activity t
 ## Step 3: Add an icon
 
 All OUYA apps have an icon which is displayed in various places on the system. The icon is expected to be located in `res/drawable-xhdpi/ouya_icon.png` with the dimensions 732px x 412px
+
+## Step 4: Create and secure your keystore
+
+When releasing an APK, it must be signed by a keystore to verify its source. You can create a keystore using built-in wizards in [Eclipse](http://developer.android.com/tools/publishing/app-signing.html#adt) and [Android Studio/IntelliJ](http://developer.android.com/tools/publishing/app-signing.html#studio), or via the command line:
+
+```
+keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+```
+
+Additionally, it is **CRITICAL** that you keep this keystore in a secure place. You will not be able to update your app if you lose your key. Updates must be signed with the exact same key; there is no way to re-create it if lost.
+
+Detailed information on Android app signing is available [here](http://developer.android.com/tools/publishing/app-signing.html)
