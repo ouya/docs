@@ -271,7 +271,7 @@ The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/U
 
 The `Level Blueprint` has a `Setup Camera` step that sets the `Camera Actor` as the view target since for this example the camera will remain in a fixed position.
 
-![Check Flow](unreal/image_62.png)
+![Camera Setup](unreal/image_62.png)
 
 The `BP_Controller` class blueprint provides a custom event named `Update Controller Sprite` which takes sprite parameter references in order to toggle visibility. The custom event first sets the parameters in variables for cleaner flow organization.
 
