@@ -312,3 +312,9 @@ The `Scene Outliner` shows all the `Sprite Actor` objects that make up a control
 The `level blueprint` shows mapping all the `Scene Outliner` sprites to the `Update Controller Sprite` custom event.
 
 ![Level Blueprint](unreal/image_56.png)
+
+### In-App-Purchases
+
+The [In-App-Purchases](https://github.com/ouya/ouya-sdk-examples/tree/master/Unreal/InAppPurchases) example shows making purchases, checking receipts, adjusting the safe area, and exiting the app.
+
+![Screenshot](unreal/image_63.png)
