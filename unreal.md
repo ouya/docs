@@ -49,7 +49,15 @@
 
 * [Training Streams](https://forums.unrealengine.com/showthread.php?53457-Twitch-NEW!-Training-Stream-Spline-and-Spline-Mesh-Components-Dec-9-2014) happen Tuesdays for Q&A training sessions.
 
+* Weekly [Unreal Twitch Stream](http://www.twitch.tv/unrealengine)
+
 * [Game Jams](https://forums.unrealengine.com/showthread.php?53417-DECEMBER-GAME-JAM-Theme-Announced-on-Dec-11th-Twitch-Stream!&highlight=game+jam) - Epic hosts monthly game jams.
+
+### Documentation
+
+* Coding Documentation [Functions](https://docs.unrealengine.com/latest/INT/Programming/UnrealArchitecture/Reference/Functions/index.html)
+
+* [Core Data Types](https://docs.unrealengine.com/latest/INT/Programming/UnrealArchitecture/Reference/Properties/index.html) allowed in BlueprintCallable functions 
 
 ## Build UE4
 
