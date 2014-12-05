@@ -190,6 +190,8 @@ Updates of the game needs to use the same Key Store.
 
 Be sure to email yourself a backup of the keystore because you always need to submit updates of the game with the same keystore.
 
+### Create the KeyStore
+
 * Generate a unique keystore for your game. Make sure `ADB` is in your path and `keytool` is in your path.
 
 Example keystore filename: `ouya_your.keystore` (put your own name here)
@@ -222,4 +224,20 @@ Is CN=OUYA Inc, OU=OUYA Inc, O=OUYA Inc, L=San Mateo, ST=CA, C=US correct?
 Enter key password for <YourAlias>
 (RETURN if same as keystore password):
 Re-enter new password: 
+```
+
+### Sign APK with the KeyStore
+
+Before submitting your `APK` to the store, make sure your `APK` is signed with your `Key Store`.
+
+Make sure `jarsigner` is in your path and you are using `JDK6`.
+
+Example keystore filename: `ouya_your.keystore` (put your own name here)
+
+Example keystore alias: `YourAlias` (put your own alias)
+
+Example keystore password: `your_password` (put your own password)
+
+```
+jarsigner -keystore ouya_your.keystore -storepass your_password -keypass your_password Your.apk YourAlias
 ```
