@@ -67,9 +67,11 @@
 
 ### Documentation
 
-* Coding Documentation [Functions](https://docs.unrealengine.com/latest/INT/Programming/UnrealArchitecture/Reference/Functions/index.html)
+* Coding Documentation: [Delegates](https://docs.unrealengine.com/latest/INT/Programming/UnrealArchitecture/Delegates/index.html)
 
-* [Core Data Types](https://docs.unrealengine.com/latest/INT/Programming/UnrealArchitecture/Reference/Properties/index.html) allowed in BlueprintCallable functions
+* Coding Documentation: [Functions](https://docs.unrealengine.com/latest/INT/Programming/UnrealArchitecture/Reference/Functions/index.html)
+
+* Coding Documentation: [Properties/Core Data Types](https://docs.unrealengine.com/latest/INT/Programming/UnrealArchitecture/Reference/Properties/index.html)
 
 * [Artificial Intelligence](https://docs.unrealengine.com/latest/INT/Gameplay/AI/index.html) - AI Overview and Behavior Tree Quick Start Guide  
 
