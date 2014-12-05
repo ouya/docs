@@ -170,7 +170,7 @@ The 96x96 icon displays on some legacy Android settings pages.
 
 <img src="https://s3.amazonaws.com/ouya-docs/images/Settings_96x96.png"/>
 
-##Video
+## Video
 
 * In the developer portal after you've created the game entry, an edit link will appear. You can use this edit link to alter the description, add screenshots, submit new builds, and add video for your title. Your list of games can be found <a target=_blank href="https://gamers.ouya.tv/developers/games">[here]</a>.
  
@@ -179,3 +179,42 @@ The 96x96 icon displays on some legacy Android settings pages.
 * When editing game details, add one or more videos into the Video urls field. Add one vimeo url per line.
  
 <table border="1"><tr><td><img src="http://ouya-docs.s3.amazonaws.com/images/VideosURLbox.png"/></td></tr></table>
+
+## Key Store
+
+The Key Store is a security mechanism for your game.
+The Key Store must be used to submit your game to the store.
+Updates of the game needs to use the same Key Store.
+Be sure to email yourself a backup of the keystore because you always need to submit updates of the game with the same keystore.
+
+* Generate a unique keystore for your game. Make sure `ADB` is in your path and `keytool` is in your path.
+
+Example keystore filename: `ouya_your.keystore` (put your own name here)
+Example keystore alias: `YourAlias` (put your own alias)
+Example keystore password: `your_password` (put your own password)
+
+```
+keytool -genkey -alias YourAlias -keystore ouya_your.keystore -keyalg RSA -keysize 2048 -validity 36135 -storepass your_password
+```
+
+And then fill out the info with `your company info`:
+
+```
+What is your first and last name?
+[Unknown]: OUYA Inc
+What is the name of your organizational unit?
+[Unknown]: OUYA Inc
+What is the name of your organization?
+[Unknown]: OUYA Inc
+What is the name of your City or Locality?
+[Unknown]: San Mateo
+What is the name of your State or Province?
+[Unknown]: CA
+What is the two-letter country code for this unit?
+[Unknown]: US
+Is CN=OUYA Inc, OU=OUYA Inc, O=OUYA Inc, L=San Mateo, ST=CA, C=US correct?
+[no]: yes
+Enter key password for <YourAlias>
+(RETURN if same as keystore password):
+Re-enter new password: 
+```
