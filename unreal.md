@@ -27,6 +27,8 @@
 
 * Only after linking your Github account will you have access to the [UE4 Source](https://github.com/EpicGames/UnrealEngine).
 
+* Send an email to tgraupmann@ouya.tv to get access to the [UE4 Developer Team](https://github.com/orgs/ouya/teams/ue4-developers). In the email, please provide a link to your [Github account](https://github.com/tgraupmann) to grant access if you belong to the [EpicGames Organization](https://github.com/EpicGames).
+
 ### FAQ
 
 * If you run and the screen is just all black or weird it could be a few issues:
