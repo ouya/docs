@@ -348,3 +348,31 @@ The `level blueprint` shows mapping all the `Scene Outliner` sprites to the `Upd
 The [In-App-Purchases](https://github.com/ouya/ouya-sdk-examples/tree/master/Unreal/InAppPurchases) example shows making purchases, checking receipts, adjusting the safe area, and exiting the app.
 
 ![Screenshot](unreal/image_63.png)
+
+The `OuyaSDK` provides methods to access In-App-Purchases:
+
+* AddInitOuyaPluginValues - Use to set the `Developer Id`
+
+* InitOuyaPlugin - Initialize the `OuyaSDK` to invoke IAP calls
+
+* RequestGamerInfo - Get the gamer's `username` and `uuid`
+
+* RequestProducts - Get the `Product` details
+ 
+* RequestPurchase - Purchase a `Product`
+
+* RequestReceipts - Verify the gamer has purchased the application
+
+* SetSafeArea - Adjust the safe area to control the border order
+
+* Shutdown - Shutdown/Exit the application   
+
+![Screenshot](unreal/image_64.png)
+
+* Be sure to set your `DEVELOPER_ID` from the [Developer Portal](http://devs.ouya.tv).
+
+![Screenshot](unreal/image_65.png)
+
+* Request Products has 3 delegates for onSuccess, onFailure, and onCancel.
+
+![Screenshot](unreal/image_66.png)
