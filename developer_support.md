@@ -21,7 +21,7 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
  </tr>
 </table>
 
-* Event: [Unreal Game Jam](https://forums.unrealengine.com/showthread.php?53417-DECEMBER-GAME-JAM-Theme-Announced-on-Dec-11th-Twitch-Stream!) on December 11th, 2014
+* Event: [Unreal Game Jam](https://forums.unrealengine.com/showthread.php?53417-DECEMBER-GAME-JAM-Theme-Announced-on-Dec-11th-Twitch-Stream!) on December 11th, 2014 - December 14th, 2014
 
 * Documentation for [Generating a Key Store](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#key-store)
 
