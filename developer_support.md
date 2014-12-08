@@ -31,7 +31,7 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 * [Example Keyboard](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/ExampleKeyboard) - Interesting Keyboard Interaction Example.
 
-<a target=_blank href="https://www.youtube.com/watch?v=yieFAe5D9rc&t=3m23s">(3:23)</a> - Kellee/Jared/Bawb: Cereal Podcast
+<a target=_blank href="https://www.youtube.com/watch?v=yieFAe5D9rc&t=3m23s">(3:23)</a> - Kellee/Jared/Bawb: [Cereal Podcast](https://www.youtube.com/watch?v=GZCSMU-fIEc)
 
 <a target=_blank href="https://www.youtube.com/watch?v=yieFAe5D9rc&t=6m39s">(6:39)</a> - Kellee: [That Dragon Cancer Met Goal](https://www.kickstarter.com/projects/godatplay/that-dragon-cancer)
 
