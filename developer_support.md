@@ -10,6 +10,37 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
+### December 8, 2014 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:58:49)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=yieFAe5D9rc" target="_blank">
+<img src="http://img.youtube.com/vi/mWuiEZ5Nmws/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 12/8" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+* Event: [Unreal Game Jam](https://forums.unrealengine.com/showthread.php?53417-DECEMBER-GAME-JAM-Theme-Announced-on-Dec-11th-Twitch-Stream!) on December 11th, 2014
+
+* Documentation for [Generating a Key Store](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#key-store)
+
+* Read the [Unreal Documentation](unreal.md) - Check out the examples for Virtual Controller and In-App-Purchases for Unreal
+
+* [Multiple Activities IAP Example](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/MultipleActivitiesIAP) - Community question about doing IAP with multiple activities turned into an example.
+
+* [Example Keyboard](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/ExampleKeyboard) - Interesting Keyboard Interaction Example.
+
+<a target=_blank href="https://www.youtube.com/watch?v=yieFAe5D9rc&t=3m23s">(3:23)</a> - Kellee/Jared/Bawb: Cereal Podcast
+
+<a target=_blank href="https://www.youtube.com/watch?v=yieFAe5D9rc&t=6m39s">(6:39)</a> - Kellee: [That Dragon Cancer Met Goal](https://www.kickstarter.com/projects/godatplay/that-dragon-cancer)
+
+<a target=_blank href="https://www.youtube.com/watch?v=yieFAe5D9rc&t=14m36s">(14:36)</a> - Jared: Just the Facts
+
+<a target=_blank href="https://www.youtube.com/watch?v=yieFAe5D9rc&t=26m42s">(26:42)</a> - Tim: UE4 Updates / Virtual Controller / IAP Example
+
+----------
+
 ### December 1, 2014 ###
 
 <table border=1>
