@@ -23,13 +23,13 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 * Event: [Unreal Game Jam](https://forums.unrealengine.com/showthread.php?53417-DECEMBER-GAME-JAM-Theme-Announced-on-Dec-11th-Twitch-Stream!) on December 11th, 2014 - December 14th, 2014
 
-* Documentation for [Generating a Key Store](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#key-store)
+* Documentation for [Generating a Key Store](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#key-store) and [More](app_setup.md#step-4-create-and-secure-your-keystore)
 
 * Read the [Unreal Documentation](unreal.md) - Check out the examples for Virtual Controller and In-App-Purchases for Unreal
 
-* [Multiple Activities IAP Example](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/MultipleActivitiesIAP) - Community question about doing IAP with multiple activities turned into an example.
+* [Multiple Activities IAP Example](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/MultipleActivitiesIAP) - Community question about doing IAP with multiple activities turned into an example
 
-* [Example Keyboard](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/ExampleKeyboard) - Interesting Keyboard Interaction Example.
+* [Example Keyboard](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/ExampleKeyboard) - Interesting Keyboard Interaction Example
 
 <a target=_blank href="https://www.youtube.com/watch?v=yieFAe5D9rc&t=3m23s">(3:23)</a> - Kellee/Jared/Bawb: [Cereal Podcast](https://www.youtube.com/watch?v=GZCSMU-fIEc)
 
