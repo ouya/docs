@@ -16,7 +16,7 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
  <tr>
  <td>OUYA DEV SUPPORT (00:58:49)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=yieFAe5D9rc" target="_blank">
-<img src="http://img.youtube.com/vi/mWuiEZ5Nmws/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 12/8" width="240" height="180" border="10" /></a></td>
+<img src="http://img.youtube.com/vi/yieFAe5D9rc/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 12/8" width="240" height="180" border="10" /></a></td>
  <td></td>
  </tr>
 </table>
