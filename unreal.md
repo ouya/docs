@@ -375,6 +375,10 @@ The `OuyaSDK` provides methods to access In-App-Purchases:
 
 ![Screenshot](unreal/image_65.png)
 
+* Invoking `Add Init Ouya Plugin Values` has 2 delegates for onSuccess and onFailure.
+
+![Screenshot](unreal/image_67.png)
+
 * Request Products has 3 delegates for onSuccess, onFailure, and onCancel.
 
 ![Screenshot](unreal/image_66.png)
