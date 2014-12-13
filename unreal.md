@@ -27,7 +27,7 @@
 
 * Only after linking your Github account will you have access to the [UE4 Source](https://github.com/EpicGames/UnrealEngine).
 
-* Send an email to tgraupmann@ouya.tv to get access to the [UE4 Developer Team](https://github.com/orgs/ouya/teams/ue4-developers). In the email, please provide a link to your [Github account](https://github.com/tgraupmann) to grant access if you belong to the [EpicGames Organization](https://github.com/EpicGames).
+* After linking your Github account, you should have access to the [4.6-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) for the OUYA Fork of UE4.
 
 ### FAQ
 
@@ -79,10 +79,10 @@
 
 ## Build UE4
 
-* Download the [4.5-OUYA branch](https://github.com/ouya/UnrealEngine/tree/4.5-OUYA) to get the `OUYA fork` of the `Unreal Engine`
+* Download the [4.6-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) to get the `OUYA fork` of the `Unreal Engine`
 
 ```
-git clone -b 4.5-OUYA https://github.com/ouya/UnrealEngine
+git clone -b 4.6-OUYA https://github.com/tgraupmann/UnrealEngine
 Cloning into 'UnrealEngine'...
 remote: Counting objects: 243979, done.
 remote: Compressing objects: 100% (53/53), done.
@@ -93,7 +93,9 @@ Checking connectivity... done.
 Checking out files: 100% (26995/26995), done.
 ```
 
-* Download `Required_1of2.zip` and `Required_2of2.zip` from the [4.5.X Releases](https://github.com/EpicGames/UnrealEngine/releases) and unpack in the `UnrealEngine` checkout folder.
+* *Important*: The 4.6 release introduces a new system for downloading binary dependencies - just run the 'Setup' script in the root of your UE folder to get started. See the [README](https://github.com/EpicGames/UnrealEngine/blob/4.6.0-release/README.md) or [forum post](https://forums.unrealengine.com/showthread.php?51998-GitHub-dependency-zips-and-latest-preview-snapshots) for more information.
+
+* Unpack `Required_1of2.zip` and `Required_2of2.zip` and unpack in the `UnrealEngine` checkout folder.
 
 ![Unzip here](unreal/image_1.png)
 
