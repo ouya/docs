@@ -107,6 +107,8 @@ Checking out files: 100% (26995/26995), done.
 
 * *Important*: The 4.6 release introduces a new system for downloading binary dependencies - just run the 'Setup' script in the root of your UE folder to get started. See the [README](https://github.com/EpicGames/UnrealEngine/blob/4.6.0-release/README.md) or [forum post](https://forums.unrealengine.com/showthread.php?51998-GitHub-dependency-zips-and-latest-preview-snapshots) for more information.
 
+![Generate project files](unreal/image_1.png)
+
 * Follow the [Build the Engine](https://wiki.unrealengine.com/GitHub_Setup#Buld_the_Engine) steps to generate the Visual Studio solution.
  
 ![Generate project files](unreal/image_2.png)
