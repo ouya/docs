@@ -29,6 +29,12 @@
 
 * After linking your Github account, you should have access to the [4.6-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) for the OUYA Fork of UE4.
 
+* Quick Link: [Tappy Chicken Example](#tappy-chicken)
+
+* Quick Link: [Virtual Controller Example](#virtual-controller)
+
+* Quick Link: [In-App-Purchase Example](#in-app-purchases)
+
 ### FAQ
 
 * If you run and the screen is just all black or weird it could be a few issues:
