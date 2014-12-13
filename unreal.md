@@ -29,6 +29,12 @@
 
 * After linking your Github account, you should have access to the [4.6-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) for the OUYA Fork of UE4.
 
+* Quick Link: [Building the OUYA Fork of UE4](#build-ue4)
+
+* Quick Link: [Getting Started in the UE4 Editor](#ue4-editor)
+
+* Quick Link: [Deploying to the OUYA](#deployment)
+
 * Quick Link: [Tappy Chicken Example](#tappy-chicken)
 
 * Quick Link: [Virtual Controller Example](#virtual-controller)
