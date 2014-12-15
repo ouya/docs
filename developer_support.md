@@ -10,6 +10,31 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
+### December 15, 2014 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:50:36)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=xvQ8mXw30Ak" target="_blank">
+<img src="http://img.youtube.com/vi/xvQ8mXw30Ak/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 12/15" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+* Documentation for [Generating a Key Store](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#key-store) and [More](app_setup.md#step-4-create-and-secure-your-keystore)
+
+* Read the [Unreal Documentation](unreal.md) - Check out the examples for Virtual Controller and In-App-Purchases for Unreal
+
+<a target=_blank href="https://www.youtube.com/watch?v=xvQ8mXw30Ak&t=1m40s">(1:40)</a> - Tim/Bawb/Tozeleal: "Tozeleal" definitely backed up the keystore
+
+<a target=_blank href="https://www.youtube.com/watch?v=xvQ8mXw30Ak&t=13m10s">(13:10)</a> - Jared: Just the Facts, Corrections and Skeleton Crew for Content Reviews weekdays after the 19th
+
+<a target=_blank href="https://www.youtube.com/watch?v=xvQ8mXw30Ak&t=19m09s">(19:09)</a> - Kellee: Advanced Game Projects Course and the Future
+
+<a target=_blank href="https://www.youtube.com/watch?v=xvQ8mXw30Ak&t=29m29s">(29:29)</a> - Tim: UE4 supported on OUYA with Virtual Controller and IAP Examples
+
+----------
+
 ### December 8, 2014 ###
 
 <table border=1>
