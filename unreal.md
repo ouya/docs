@@ -411,7 +411,7 @@ Upon success, the `InitOuyaPlugin` can be invoked.
 
 ## Init Ouya Plugin
 
-* Invoking `Init Ouya Plugin` has 2 delegates for `onSuccess` and `onFailure`.
+* `Init Ouya Plugin` has 2 delegates for `onSuccess` and `onFailure`.
 Be sure to invoke `Add Init Ouya Plugin Values` successfully before invoking `Init Ouya Plugin`.
 
 ![Screenshot](unreal/image_73.png)
@@ -424,11 +424,11 @@ Upon success, the other `OuyaSDK` methods can be invoked.
 
 ## Request Gamer Info
 
-* Invoking `Request Gamer Info` has 3 delegates for `onSuccess`, `onFailure`, and `onCancel`.
+* `Request Gamer Info` has 3 delegates for `onSuccess`, `onFailure`, and `onCancel`.
 
 ![Screenshot](unreal/image_75.png)
 
-* Upon success failure, or cancel, the `Request Gamer Info` callbacks will be invoked.
+* Upon success, failure, or cancel, the `Request Gamer Info` callbacks will be invoked.
 `onSuccess` provides a `Gamer Info` result object. `onFailure` receives an integer `ErrorCode` and string `Error Message` about the failure. `onCancel` receives no arguments.
 
 ![Screenshot](unreal/image_76.png)
@@ -437,9 +437,9 @@ Upon success, the other `OuyaSDK` methods can be invoked.
 
 ![Screenshot](unreal/image_77.png)
 
-# Request Products
+## Request Products
 
-* Request Products has 3 delegates for `onSuccess`, `onFailure`, and `onCancel`.
+* `Request Products` has 3 delegates for `onSuccess`, `onFailure`, and `onCancel`.
 
 ![Screenshot](unreal/image_66.png)
 
@@ -447,7 +447,7 @@ Upon success, the other `OuyaSDK` methods can be invoked.
 
 ![Screenshot](unreal/image_78.png)
 
-* Upon success failure, or cancel, the `Request Products` callbacks will be invoked.
+* Upon success, failure, or cancel, the `Request Products` callbacks will be invoked.
 `onSuccess` provides an `Ouya Product` result array. `onFailure` receives an integer `ErrorCode` and string `Error Message` about the failure. `onCancel` receives no arguments.
 
 ![Screenshot](unreal/image_79.png)
@@ -459,3 +459,47 @@ Upon success, the other `OuyaSDK` methods can be invoked.
 * Several `Ouya Product` fields are available. The example uses a highlight mechanism to select one of the returned `Ouya Product` object's `identifier` for the `Request Purchase` button.
 
 ![Screenshot](unreal/image_81.png)
+
+## Request Purchase
+
+* `Request Purchase` has 3 delegates for `onSuccess`, `onFailure`, and `onCancel`.
+
+![Screenshot](unreal/image_82.png)
+
+* The example uses the `Result Products` array variable which is `set` in the `onSuccessRequestProducts` callback. Since the `purchasable` parameter for `Request Purchase` takes a `string` argument, you can hardcode the value, pass a string, or use an `array element` like the example.
+
+![Screenshot](unreal/image_84.png)
+
+* Upon success, failure, or cancel, the `Request Purchase` callbacks will be invoked.
+`onSuccess` provides an `Ouya Purchase Result` result object. `onFailure` receives an integer `ErrorCode` and string `Error Message` about the failure. `onCancel` receives no arguments.
+
+![Screenshot](unreal/image_83.png)
+
+## Request Receipts
+
+* `Request Receipts` has 3 delegates for `onSuccess`, `onFailure`, and `onCancel`.
+
+![Screenshot](unreal/image_85.png)
+
+* Upon success, or failure, or cancel, the `Request Receipts` callbacks will be invoked.
+`onSuccess` provides an `Ouya Receipt` result array. `onFailure` receives an integer `ErrorCode` and string `Error Message` about the failure. `onCancel` receives no arguments.
+
+![Screenshot](unreal/image_86.png)
+
+* The example iterates through the `Ouya Receipt` array to get the details for each `Ouya Receipt` object.
+
+![Screenshot](unreal/image_87.png)
+
+* Several `Ouya Receipt` fields are available including the `identifier` which games can check for if a `entitlement` was purchased.
+
+![Screenshot](unreal/image_88.png)
+
+## Shutdown
+
+* `Shutdown` has 2 delegates for `onSuccess` and `onFailure`.
+
+![Screenshot](unreal/image_89.png)
+
+* Upon success or failure, the `Shutdown` callbacks will be invoked.
+
+![Screenshot](unreal/image_90.png)
