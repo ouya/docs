@@ -15,6 +15,21 @@ For your Android application to be compatible with the OUYA, it must target plat
 To access OUYA-specific functions, you'll need to [download the ODK](https://devs.ouya.tv/developers/odk) and add `ouya-sdk.jar` to the build-path of your app.  
 This jar can be found in the `libs/` folder of the ODK.
 
+### Gradle
+
+If you're using gradle, you can compile against our latest SDK using the following in your `build.gradle`:
+
+```Gradle
+repositories {
+    maven {
+        url "http://maven.ouya.tv/"
+    }
+}
+dependencies {
+    compile 'tv.ouya:sdk:+' // You can replace "+" with a specific version number
+}
+```
+
 ## Step 2: Add intent-filter
 
 For your OUYA app to show up in the **PLAY** section, it must have an activity that contains a filter for either `tv.ouya.intent.category.GAME` or `tv.ouya.intent.category.APP`.
