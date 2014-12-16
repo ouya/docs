@@ -26,7 +26,7 @@ repositories {
     }
 }
 dependencies {
-    compile 'tv.ouya:sdk:+' // You can replace "+" with a specific version number
+    compile 'ouya:ouya-sdk:+' // You can replace "+" with a specific version number
 }
 ```
 
