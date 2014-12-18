@@ -71,6 +71,8 @@
 
 * [Unreal Chat](http://webchat.freenode.net/?channels=%23unrealengine) - #UnrealEngine on Freenode
 
+* [C# for Unreal Engine](http://mono-ue.github.io/) - Write gameplay, AI, UI elements, and more  with C#
+
 ### Training and Jams
 
 * [Training Streams](https://forums.unrealengine.com/showthread.php?53457-Twitch-NEW!-Training-Stream-Spline-and-Spline-Mesh-Components-Dec-9-2014) happen Tuesdays for Q&A training sessions.
