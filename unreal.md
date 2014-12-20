@@ -504,4 +504,15 @@ Upon success, the other `OuyaSDK` methods can be invoked.
 
 * Upon success or failure, the `Shutdown` callbacks will be invoked.
 
-![Screenshot](unreal/image_90.png)
+![Shutdown](unreal/image_90.png)
+
+# Community Content
+
+The [Community Content](https://github.com/ouya/ouya-sdk-examples/tree/master/Unreal/CommunityContent) example shows how to interact with the Community Content API from blueprints.
+
+## Get Screenshots
+
+* Upon success, or failure, the `Get Screenshots` callbacks will be invoked.
+`onSuccess` provides an `Ouya Mod` object and `Ouya Mod Screenshot` result array. `onFailure` receives an `Ouya Mod` object, an integer `ErrorCode` and string `Error Message` about the failure.
+
+![Get Screenshots](unreal/image_91.png)
