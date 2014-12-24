@@ -8,6 +8,10 @@ The review team will be checking to make sure ads are not doing bad things like 
 
 There are numerous 3rd party advertisement delivery platforms.
 
+### AdMob
+
+* [AdMob](https://developers.google.com/mobile-ads-sdk/download) is part of the Google Play services platform and is not available as a standalone sdk. Without Google Play services installed on the OUYA by default, the API won't be available.
+
 ### Chartboost
 
 * [Chartboost](https://www.chartboost.com/en/) is an ad delivery network designed for games with a cross-platform API
