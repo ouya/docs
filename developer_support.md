@@ -10,6 +10,29 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
+### January 5, 2015 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:30:00)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=qaHetptlybE" target="_blank">
+<img src="http://img.youtube.com/vi/qaHetptlybE/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 1/5" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+* Read the [Unreal Documentation](unreal.md) - Check out the examples for Virtual Controller, In-App-Purchases, and Community-Content for Unreal
+
+* <a target=_blank href="https://www.youtube.com/watch?v=qaHetptlybE&t=3m00s">(3:00)</a> - Jared/Kellee: Derptastic Tips, "You can never have enough screenshots... and include a trailer"
+
+* <a target=_blank href="https://www.youtube.com/watch?v=qaHetptlybE&t=3m00s">(3:00)</a> - Jared/Kellee: Derptastic Tips, "You can never have enough screenshots... and include a trailer"
+
+* <a target=_blank href="https://www.youtube.com/watch?v=qaHetptlybE&t=6m00s">(6:00)</a> - Jared/Kellee: New news, sales, and bundles
+
+* <a target=_blank href="https://www.youtube.com/watch?v=qaHetptlybE&t=17m00s">(17:00)</a> - Tim: Video editing tips, and iterating Community Content support for UE4
+
+----------
+
 ### December 15, 2014 ###
 
 <table border=1>
