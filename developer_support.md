@@ -25,8 +25,6 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 * <a target=_blank href="https://www.youtube.com/watch?v=qaHetptlybE&t=3m00s">(3:00)</a> - Jared/Kellee: Derptastic Tips, "You can never have enough screenshots... and include a trailer"
 
-* <a target=_blank href="https://www.youtube.com/watch?v=qaHetptlybE&t=3m00s">(3:00)</a> - Jared/Kellee: Derptastic Tips, "You can never have enough screenshots... and include a trailer"
-
 * <a target=_blank href="https://www.youtube.com/watch?v=qaHetptlybE&t=6m00s">(6:00)</a> - Jared/Kellee: New news, sales, and bundles
 
 * <a target=_blank href="https://www.youtube.com/watch?v=qaHetptlybE&t=17m00s">(17:00)</a> - Tim: Video editing tips, and iterating Community Content support for UE4
