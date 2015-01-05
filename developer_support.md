@@ -23,6 +23,8 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 * Read the [Unreal Documentation](unreal.md) - Check out the examples for Virtual Controller, In-App-Purchases, and Community-Content for Unreal
 
+* [GameMaker OUYA Starter Project](http://gmc.yoyogames.com/index.php?showtopic=649385#entry4719038) - Community Created Starter Project, for getting started with GMS!
+
 * <a target=_blank href="https://www.youtube.com/watch?v=qaHetptlybE&t=3m00s">(3:00)</a> - Jared/Kellee: Derptastic Tips, "You can never have enough screenshots... and include a trailer"
 
 * <a target=_blank href="https://www.youtube.com/watch?v=qaHetptlybE&t=6m00s">(6:00)</a> - Jared/Kellee: New news, sales, and bundles
