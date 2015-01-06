@@ -510,9 +510,36 @@ Upon success, the other `OuyaSDK` methods can be invoked.
 
 The [Community Content](https://github.com/ouya/ouya-sdk-examples/tree/master/Unreal/CommunityContent) example shows how to interact with the Community Content API from blueprints.
 
+## Get OUYA Content
+
+* Before interacting with the Community Content API, get a reference to the `OUYA Content` actor.
+
+![Get Screenshots](unreal/image_92.png)
+
+* Upon success, or failure the `Get OUYA Content` callbacks will be invoked.
+`onSuccess` provides an `OUYA Content` object.
+
+![Get Screenshots](unreal/image_93.png)
+
+`onFailure` receives an `errorCode` and `errorMessage` details about the failure.
+
+![Get Screenshots](unreal/image_94.png)
+
+## Initialize OUYA Content
+
+* `Init` has 2 delegates for `onContentInitialized` and `onContentDestroyed`.
+The `onContentInitialized` delegate will be called with `OuyaContent` has been initialized.
+The `onContentDestroyed` delegate will be called with `OuyaContent` has been destroyed.
+* `OuyaContent` should be initialized before invoking other `Community Content` methods.
+
+![Get Screenshots](unreal/image_95.png)
+
 ## Get Screenshots
 
 * Upon success, or failure, the `Get Screenshots` callbacks will be invoked.
-`onSuccess` provides an `Ouya Mod` object and `Ouya Mod Screenshot` result array. `onFailure` receives an `Ouya Mod` object, an integer `ErrorCode` and string `Error Message` about the failure.
+`onSuccess` provides an `Ouya Mod` object and `Ouya Mod Screenshot` result array.
+`onFailure` receives an `Ouya Mod` object, an integer `ErrorCode` and string `Error Message` about the failure.
 
 ![Get Screenshots](unreal/image_91.png)
+
+
