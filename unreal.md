@@ -481,26 +481,26 @@ Upon success, the other `OuyaSDK` methods can be invoked.
 
 * `Request Receipts` has 3 delegates for `onSuccess`, `onFailure`, and `onCancel`.
 
-![Screenshot](unreal/image_85.png)
+![Request Receipts](unreal/image_85.png)
 
 * Upon success, or failure, or cancel, the `Request Receipts` callbacks will be invoked.
 `onSuccess` provides an `Ouya Receipt` result array. `onFailure` receives an integer `ErrorCode` and string `Error Message` about the failure. `onCancel` receives no arguments.
 
-![Screenshot](unreal/image_86.png)
+![Receipt callbacks](unreal/image_86.png)
 
 * The example iterates through the `Ouya Receipt` array to get the details for each `Ouya Receipt` object.
 
-![Screenshot](unreal/image_87.png)
+![Display Receipts](unreal/image_87.png)
 
 * Several `Ouya Receipt` fields are available including the `identifier` which games can check for if a `entitlement` was purchased.
 
-![Screenshot](unreal/image_88.png)
+![Display Receipt](unreal/image_88.png)
 
 ## Shutdown
 
 * `Shutdown` has 2 delegates for `onSuccess` and `onFailure`.
 
-![Screenshot](unreal/image_89.png)
+![Shutdown](unreal/image_89.png)
 
 * Upon success or failure, the `Shutdown` callbacks will be invoked.
 
@@ -515,7 +515,7 @@ The [Community Content](https://github.com/ouya/ouya-sdk-examples/tree/master/Un
 * The examples use a `Status` text field to display the current status.
 The `setTextStatus` custom event is reused as a helper to display the status. 
 
-![Failure callback](unreal/image_97.png)
+![Success callback](unreal/image_97.png)
 
 ## Failure Callbacks
 
@@ -554,7 +554,7 @@ The `onContentDestroyed` delegate will be called with `OuyaContent` has been des
 
 * `onFailure` receives an `errorCode` and `errorMessage` details about the failure.
 
-![Get OUYA Content](unreal/image_93.png)
+![Create OuyaMod](unreal/image_93.png)
 
 ## Edit OUYA Mod
 
@@ -564,19 +564,57 @@ The `onContentDestroyed` delegate will be called with `OuyaContent` has been des
 
 * `onFailure` receives the associated `OuyaMod` actor, an `errorCode` and `errorMessage` details about the failure.
 
-![Get OUYA Content](unreal/image_98.png)
+![Edit OuyaMod](unreal/image_98.png)
 
 ## Flag OUYA Mod
 
 * The `Flag` function will open the dialog to `Flag` the content item for review.
 
-![Get OUYA Content](unreal/image_94.png)
+![Flag OuyaMod](unreal/image_94.png)
+
+## Get Category
+
+* `Get Category` on the `OuyaMod` actor gets the `string` category field.
+
+![Get Category](unreal/image_99.png)
+
+## Get Description
+
+* `Get Description` on the `OuyaMod` actor gets the `string` description field.
+
+![Get Description](unreal/image_100.png)
+
+## Get Filenames
+
+* `Get Filenames` on the `OuyaMod` actor gets an array of filename `string` objects.
+
+![Get Filenames](unreal/image_101.png)
+
+## Get Meta Data
+
+* `Get Meta Data` on the `OuyaMod` actor gets the `string` meta data field.
+
+![Get MetaData](unreal/image_102.png)
+
+## Get Rating Average
+
+* `Get Rating Average` on the `OuyaMod` actor gets the `string` rating average field.
+
+![Get RatingAverage](unreal/image_103.png)
+
+## Get Rating Count
+
+* `Get Rating Count` on the `OuyaMod` actor gets the `string` rating count field.
+
+![Get RatingCount](unreal/image_104.png)
 
 ## Get Screenshots
 
 * Upon success, or failure, the `Get Screenshots` callbacks will be invoked.
-`onSuccess` provides an `Ouya Mod` object and `Ouya Mod Screenshot` result array.
-`onFailure` receives an `Ouya Mod` object, an integer `ErrorCode` and string `Error Message` about the failure.
+
+* `onSuccess` provides an `Ouya Mod` object and `Ouya Mod Screenshot` result array.
+
+* `onFailure` receives an `Ouya Mod` object, an integer `ErrorCode` and string `Error Message` about the failure.
 
 ![Get Screenshots](unreal/image_91.png)
 
