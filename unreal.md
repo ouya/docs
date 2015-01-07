@@ -510,20 +510,30 @@ Upon success, the other `OuyaSDK` methods can be invoked.
 
 The [Community Content](https://github.com/ouya/ouya-sdk-examples/tree/master/Unreal/CommunityContent) example shows how to interact with the Community Content API from blueprints.
 
+## Success Callbacks
+
+* The examples use a `Status` text field to display the current status.
+The `setTextStatus` custom event is reused as a helper to display the status. 
+
+![Failure callback](unreal/image_97.png)
+
+## Failure Callbacks
+
+* Most failure callbacks have an `errorCode` and `errorMessage` which are displayed in status text field for the examples. The `setErrorTextStatus` custom event can be reused to simplify the failure callbacks.
+
+![Failure callback](unreal/image_96.png)
+
 ## Get OUYA Content
 
 * Before interacting with the Community Content API, get a reference to the `OUYA Content` actor.
 
-![Get Screenshots](unreal/image_92.png)
-
 * Upon success, or failure the `Get OUYA Content` callbacks will be invoked.
-`onSuccess` provides an `OUYA Content` object.
 
-![Get Screenshots](unreal/image_93.png)
+* `onSuccess` receives a reference to the `OuyaContent` actor.
 
-`onFailure` receives an `errorCode` and `errorMessage` details about the failure.
+* `onFailure` receives an `errorCode` and `errorMessage` details about the failure.
 
-![Get Screenshots](unreal/image_94.png)
+![Get OUYA Content](unreal/image_92.png)
 
 ## Initialize OUYA Content
 
@@ -532,7 +542,35 @@ The `onContentInitialized` delegate will be called with `OuyaContent` has been i
 The `onContentDestroyed` delegate will be called with `OuyaContent` has been destroyed.
 * `OuyaContent` should be initialized before invoking other `Community Content` methods.
 
-![Get Screenshots](unreal/image_95.png)
+![Initialize OuyaContent](unreal/image_95.png)
+
+## Create OUYA Mod
+
+* `CreateOuyaMod` creates a local `Community Content` record which you can use for editing and publishing.
+
+* Upon success or failure the `CreateOuyaMod` callbacks will be invoked.
+
+* `onSuccess` receives a reference to the `OuyaMod` actor.
+
+* `onFailure` receives an `errorCode` and `errorMessage` details about the failure.
+
+![Get OUYA Content](unreal/image_93.png)
+
+## Edit OUYA Mod
+
+* Upon success, or failure, the `Edit OuyaMod` callbacks will be invoked.
+
+* `onSuccess` receives a reference to the `OuyaModEditor` and `OuyaMod` actors.
+
+* `onFailure` receives the associated `OuyaMod` actor, an `errorCode` and `errorMessage` details about the failure.
+
+![Get OUYA Content](unreal/image_98.png)
+
+## Flag OUYA Mod
+
+* The `Flag` function will open the dialog to `Flag` the content item for review.
+
+![Get OUYA Content](unreal/image_94.png)
 
 ## Get Screenshots
 
