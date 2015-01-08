@@ -81,6 +81,8 @@
 
 * [Game Jams](https://forums.unrealengine.com/showthread.php?53417-DECEMBER-GAME-JAM-Theme-Announced-on-Dec-11th-Twitch-Stream!&highlight=game+jam) - Epic hosts monthly game jams.
 
+* [Answer Hub](https://answers.unrealengine.com/index.html) is the best way to get your questions about UE4 answered. 
+
 ### Documentation
 
 * Coding Documentation: [Delegates](https://docs.unrealengine.com/latest/INT/Programming/UnrealArchitecture/Delegates/index.html)
@@ -598,13 +600,13 @@ The `onContentDestroyed` delegate will be called with `OuyaContent` has been des
 
 ## Get Rating Average
 
-* `Get Rating Average` on the `OuyaMod` actor gets the `string` rating average field.
+* `Get Rating Average` on the `OuyaMod` actor gets the `float` rating average field.
 
 ![Get RatingAverage](unreal/image_103.png)
 
 ## Get Rating Count
 
-* `Get Rating Count` on the `OuyaMod` actor gets the `string` rating count field.
+* `Get Rating Count` on the `OuyaMod` actor gets the `integer` rating count field.
 
 ![Get RatingCount](unreal/image_104.png)
 
@@ -618,4 +620,50 @@ The `onContentDestroyed` delegate will be called with `OuyaContent` has been des
 
 ![Get Screenshots](unreal/image_91.png)
 
+## Get Tags
 
+* `Get Tags` on the `OuyaMod` actor gets an array of tag `string` objects.
+
+![Get Tags](unreal/image_105.png)
+
+## Get Title
+
+* `Get Title` on the `OuyaMod` actor gets the `string` title field.
+
+![Get Title](unreal/image_106.png)
+
+## Get User Rating
+
+* `Get User Rating` on the `OuyaMod` actor gets the `float` user rating field.
+
+![Get UserRating](unreal/image_107.png)
+
+## Is Downloading
+
+* `Is Downloading` on the `OuyaMod` actor gets the `boolean` is downloading field.
+
+![Is Downloading](unreal/image_108.png)
+
+## Is Flagged
+
+* `Is Flagged` on the `OuyaMod` actor gets the `boolean` is flagged field.
+
+![Is Flagged](unreal/image_109.png)
+
+## Is Installed
+
+* `Is Installed` on the `OuyaMod` actor gets the `boolean` is installed field.
+
+![Is Installed](unreal/image_110.png)
+
+## Is Published
+
+* `Is Published` on the `OuyaMod` actor gets the `boolean` is published field.
+
+![Is Published](unreal/image_111.png)
+
+## Rate OUYA Mod
+
+* The `Rate` function will open the dialog to `Rate` the content item by the user.
+
+![Rate OuyaMod](unreal/image_112.png)
