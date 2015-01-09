@@ -667,3 +667,57 @@ The `onContentDestroyed` delegate will be called with `OuyaContent` has been des
 * The `Rate` function will open the dialog to `Rate` the content item by the user.
 
 ![Rate OuyaMod](unreal/image_112.png)
+
+## OUYA Mod Editor Add Tag
+
+* The `Add Tag` function on `OuyaModEditor` will add the `string` tag to the associated `OuyaMod` actor being edited.
+
+![Edit AddTag](unreal/image_113.png)
+
+## OUYA Mod Editor Delete Filename
+
+* The `Delete Filename` function on `OuyaModEditor` will delete `string` filename associated `OuyaMod` actor being edited.
+
+![Delete Filename](unreal/image_114.png)
+
+## OUYA Mod Editor New Text File
+
+* The `New Text File` function on `OuyaModEditor` will create a `string` filename associated `OuyaMod` actor being edited and the contents of the file are passed as a `string` .
+
+![New Text File](unreal/image_115.png)
+
+## OUYA Mod Editor Remove Screenshot
+
+* The `Remove Screenshot` function on `OuyaModEditor` will remove the `OuyaModScreenshot` from the `OuyaMod` actor being edited.
+
+![Remove Screenshot](unreal/image_116.png)
+
+## OUYA Mod Editor Remove Tag
+
+* The `Remove Tag` function on `OuyaModEditor` will remove the `string` tag from the `OuyaMod` actor being edited.
+
+![Remove Tag](unreal/image_117.png)
+
+## OUYA Mod Editor Set Category
+
+* The `Set Category` function on `OuyaModEditor` will set the `string` category on the `OuyaMod` actor being edited.
+
+![Set Category](unreal/image_118.png)
+
+## OUYA Mod Editor Set Description
+
+* The `Set Description` function on `OuyaModEditor` will set the `string` description on the `OuyaMod` actor being edited.
+
+![Set Description](unreal/image_119.png)
+
+## OUYA Mod Editor Set Meta Data
+
+* The `Set Meta Data` function on `OuyaModEditor` will set the `string` meta data on the `OuyaMod` actor being edited.
+
+![Set MetaData](unreal/image_120.png)
+
+## OUYA Mod Editor Set Title
+
+* The `Set Title` function on `OuyaModEditor` will set the `string` title on the `OuyaMod` actor being edited.
+
+![Set Title](unreal/image_121.png)
