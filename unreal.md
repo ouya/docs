@@ -73,6 +73,8 @@
 
 * [C# for Unreal Engine](http://mono-ue.github.io/) - Write gameplay, AI, UI elements, and more  with C#
 
+* [Zeef Resource Page](http://unreal-engine-4.zeef.com) - Tons of Unreal resource links
+
 ### Training and Jams
 
 * [Training Streams](https://forums.unrealengine.com/showthread.php?53457-Twitch-NEW!-Training-Stream-Spline-and-Spline-Mesh-Components-Dec-9-2014) happen Tuesdays for Q&A training sessions.
