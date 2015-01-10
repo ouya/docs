@@ -558,6 +558,28 @@ The `onContentDestroyed` delegate will be called with `OuyaContent` has been des
 
 ![Create OuyaMod](unreal/image_93.png)
 
+## Delete OUYA Mod
+
+* Upon success, or failure, the `Delete` callbacks will be invoked.
+
+* `onSuccess` receives the `Ouya Mod` object that was deleted.
+
+* `onFailure` receives an `Ouya Mod` object, an integer `ErrorCode` and string `Error Message` about the failure.
+
+![Delete](unreal/image_125.png)
+
+## Download OUYA Mod
+
+* Upon download complete, download progress, or download failure, the `Download` callbacks will be invoked.
+
+* `onComplete` receives the `Ouya Mod` object that was downloaded.
+
+* `onProgress` receives the `Ouya Mod` object that is downloading and an `integer` progress.
+
+* `onFailure` receives the `Ouya Mod` object that failed to download.
+
+![Download](unreal/image_126.png)
+
 ## Edit OUYA Mod
 
 * Upon success, or failure, the `Edit OuyaMod` callbacks will be invoked.
@@ -698,6 +720,12 @@ The `onContentDestroyed` delegate will be called with `OuyaContent` has been des
 
 ![Remove Tag](unreal/image_117.png)
 
+## OUYA Mod Editor Save
+
+* The `Save` function on `OuyaModEditor` will save the associated `OuyaMod` actor being edited.
+
+![Save OuyaMod](unreal/image_122.png)
+
 ## OUYA Mod Editor Set Category
 
 * The `Set Category` function on `OuyaModEditor` will set the `string` category on the `OuyaMod` actor being edited.
@@ -721,3 +749,23 @@ The `onContentDestroyed` delegate will be called with `OuyaContent` has been des
 * The `Set Title` function on `OuyaModEditor` will set the `string` title on the `OuyaMod` actor being edited.
 
 ![Set Title](unreal/image_121.png)
+
+## Publish OUYA Mod
+
+* Upon success, or failure, the `Publish` callbacks will be invoked.
+
+* `onSuccess` receives the `Ouya Mod` object that was published.
+
+* `onFailure` receives an `Ouya Mod` object, an integer `ErrorCode` and string `Error Message` about the failure.
+
+![Publish](unreal/image_123.png)
+
+## Unpublish OUYA Mod
+
+* Upon success, or failure, the `Unpublish` callbacks will be invoked.
+
+* `onSuccess` receives the `Ouya Mod` object that was unpublished.
+
+* `onFailure` receives an `Ouya Mod` object, an integer `ErrorCode` and string `Error Message` about the failure.
+
+![Unpublish](unreal/image_124.png)
