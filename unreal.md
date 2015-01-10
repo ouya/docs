@@ -620,6 +620,26 @@ The `onContentDestroyed` delegate will be called with `OuyaContent` has been des
 
 ![Get MetaData](unreal/image_102.png)
 
+## Get Installed OUYA Content
+
+* Upon success, or error, the `Get Installed OUYA Content` callbacks will be invoked.
+
+* `onSuccess` receives a reference to an array of `OuyaMod` actors.
+
+* `onError` receives an `errorCode` and `errorMessage` details about the failure.
+
+![Installed Content](unreal/image_127.png)
+
+## Get Published OUYA Content
+
+* Upon success, or error, the `Get Published OUYA Content` callbacks will be invoked.
+
+* `onSuccess` receives a reference to an array of `OuyaMod` actors.
+
+* `onError` receives an `errorCode` and `errorMessage` details about the failure.
+
+![Published Content](unreal/image_128.png)
+
 ## Get Rating Average
 
 * `Get Rating Average` on the `OuyaMod` actor gets the `float` rating average field.
