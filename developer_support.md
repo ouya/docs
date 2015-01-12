@@ -10,6 +10,29 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
+### January 12, 2015 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:26:21)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=xpre3VdgbXM" target="_blank">
+<img src="http://img.youtube.com/vi/xpre3VdgbXM/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 1/12" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+* Event: March, 2015 - [Session](http://schedule.gdconf.com/session/indie-publishing-a-whole-new-world) - Indie Publishing A Whole New World
+
+* Read the [Unreal Documentation](unreal.md) - Adding Community Content Blueprints to the Unreal documentation
+
+<a target=_blank href="https://www.youtube.com/watch?v=xpre3VdgbXM&t=1m00s">(1:00)</a> - Kellee: About GDC Panel Discussion - Indie publishing, A Whole New World
+
+<a target=_blank href="https://www.youtube.com/watch?v=xpre3VdgbXM&t=11m05s">(11:05)</a> - Jared: Game News
+
+<a target=_blank href="https://www.youtube.com/watch?v=xpre3VdgbXM&t=16m45s">(16:45)</a> - Tim: Documenting Community Content for Unreal with [MarkdownPad 2](http://markdownpad.com/) on Windows and [MacDown](http://macdown.uranusjr.com/) on Mac
+
+----------
+
 ### January 5, 2015 ###
 
 <table border=1>
