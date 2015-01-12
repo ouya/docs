@@ -25,7 +25,7 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 * Read the [Unreal Documentation](unreal.md) - Adding Community Content Blueprints to the Unreal documentation
 
-<a target=_blank href="https://www.youtube.com/watch?v=xpre3VdgbXM&t=1m00s">(1:00)</a> - Kellee: About GDC Panel Discussion - Indie publishing, A Whole New World
+<a target=_blank href="https://www.youtube.com/watch?v=xpre3VdgbXM&t=1m06s">(1:06)</a> - Kellee: About GDC Panel Discussion - Indie publishing, A Whole New World
 
 <a target=_blank href="https://www.youtube.com/watch?v=xpre3VdgbXM&t=11m05s">(11:05)</a> - Jared: Game News
 
