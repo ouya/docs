@@ -247,7 +247,7 @@ Connect your OUYA to your PC (Micro USB to USB), open Command Prompt (Win+R then
 
 ##### Eclipse
 
-* Be sure to install the [ADT PLugin](http://developer.android.com/sdk/installing/installing-adt.html) for Eclipse.
+* Be sure to install the [ADT Plugin](http://developer.android.com/sdk/installing/installing-adt.html) for Eclipse.
 
 First step, turn on line numbers:
 
