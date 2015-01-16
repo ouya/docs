@@ -48,6 +48,33 @@ The Xiaomi market requires a special application key and ID.  Contact the [OUYA 
 	}
 ```
 
+## Pass in the list of product IDs that you can purchase
+
+Using any non-OUYA store requires that the SDK be informed about all the product IDs that might be used by the game.  This is so the SDK can do any transforms that are specific to the store that the game is connecting to.
+
+```java
+
+	// All product IDs that might be used
+	public static final String[] ALL_PRODUCT_IDS = new String[] {
+		"long_sword",
+		"sharp_axe",
+		"100_extra_lives"
+	}
+
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        Bundle developerInfo = new Bundle();
+
+        // ... other initialization.
+
+        developerInfo.putStringArray(OuyaFacade.OUYA_PRODUCT_ID_LIST, ALL_PRODUCT_IDS);
+
+        OuyaFacade.getInstance().init(this, developerInfo);
+        super.onCreate(savedInstanceState)
+    }
+
+```
+
 ## Xiaomi requires specific icon sizes
 
 To match all supported Xiaomi devices, the application icon must have the following resolutions: **drawable-tvdpi, drawable-mdpi, drawable-hdpi, drawable-xhdpi**, though they're not the standard Android size icons.
