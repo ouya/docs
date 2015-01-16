@@ -17,7 +17,7 @@ In-App Purchasing (IAP) is how your app can make money.  The OUYA Developer Kit 
 * *Type* - the type of product
   * *Entitlement* -  a product which can be purchased only once and remains available to the game upon reinstallation
   * *Consumable* - a product which can be purchased repeatedly
-  * *Subscription* - a product which will be re-purchased automatically every month 
+  * *Subscription* - an entitlement which will be re-purchased automatically every month (and will be removed when the subscription ends)
 * *Currency Code* - defines the type of currency
 * *Local Price* - the cost of the product given the type of currency
 * *Original Price* - the total price of the product given no sale is active
@@ -210,7 +210,7 @@ At this point, we can get information on products and purchase them, but what if
 
 Be sure to always query receipts for previous purchases and not just store your own "they bought the game" flag along with your saved-game data.  That method won't work if the user changes consoles (among many other edge cases).  See the "Remember to check receipts" section for more details.
 
-**Note**: Only products that are entitlements are returned. This is to avoid re-awarding players consumable product purchases that have already been consumed.
+**Note**: Only products that are entitlements/subscriptions are returned. This is to avoid re-awarding players consumable product purchases that have already been consumed.
 
 Let us take a look at our listener:
 ```java
