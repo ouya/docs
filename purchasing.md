@@ -39,8 +39,6 @@ In-App Purchasing (IAP) is how your app can make money.  The OUYA Developer Kit 
 * *Gamer* - the gamer that purchased the product
 * *UUID* - the identifier of the gamer that purchased the product
 
-**Product Types** - there are currently three types of products:
-
 
 **Cross Game Product** - a product of any type that if purchased, will be reported as purchased in all of your games
 
