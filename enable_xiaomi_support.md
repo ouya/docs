@@ -30,7 +30,8 @@ The Xiaomi market requires a special application key and ID.  Contact the [OUYA 
 	// Your developer id can be found in the Developer Portal
 	public static final String DEVELOPER_ID = "00000000-0000-0000-0000-000000000000";
 
-	// Both of these values will be emailed to you by the OUYA team after you've been selected by the OUYA team
+	// Both of these values will be emailed to you by the OUYA team after you've been 
+	// selected by the OUYA team
 	public static final String XIAOMI_APP_ID = "0000000000000";
 	public static final String XIAOMI_APP_KEY = "000000000000000000";
 
