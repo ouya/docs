@@ -9,7 +9,7 @@ Download latest ODK from the OUYA Developer portal and setup your game to use it
 
 ## Add the necessary files to your build
 
-* Download and extract [SDK_MIBOX_2.0.1](link_to_sdk_zip)
+* Download and extract [SDK_MIBOX_2.0.1](https://ouya-sdks.s3.amazonaws.com/xiaomi/SDK_MIBOX_2.0.1.zip)
 * Place **SDK_MIBOX_2.0.1.jar** with the libraries of your game
 * Place **MiGameCenterSDKService.apk** in your <game>/assets directory.
 
