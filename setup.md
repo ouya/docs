@@ -105,7 +105,13 @@ The `Android SDK` includes useful tools and platform-tools. The Android debugger
 
 `SDK Manager` handles installation and updating the `Android SDK` build tools, packages and platforms.
 
-<img src="http://ouya-docs.s3.amazonaws.com/images/AndroidSDKRev21.jpg"/>
+* Install the `Tools\*` and `Android 4.1.2 (API 16)\SDK Platform`.
+
+![SDK Extras](setup/image_6.png)
+
+* Install the `Extras\Android Support Library` and `Google USB Driver`.
+
+![SDK Extras](setup/image_7.png)
 
 The marqueed items in red are suggested installs.
 
@@ -161,7 +167,7 @@ Before continuing, make sure your OUYA is powered and **not connected to your co
     Install the Java runtime if prompted.  
 
 4. **Important**: There should be no carriage return after the hex value. Any blank lines in this file will result in an error.
-Add the following line to `~/.android/adb_usb.ini` (create it if it doesn't exist) for your OUYA console to be recognised:
+Add the following line to `~/.android/adb_usb.ini` (create it if it doesn't exist) for your OUYA console to be recognized:
 
         0x2836
 
@@ -174,6 +180,28 @@ Add the following line to `~/.android/adb_usb.ini` (create it if it doesn't exis
     Your console should be shown in the list of available devices.
 
 ##### Windows
+
+* To add the Android SDK to your path go to the `System` in the `Control Panel`.
+`Click` on `Advanced System Settings`.
+
+![Control Panel](setup/image_1.png)
+
+* `Click` on the `Advanced Tab` and `Click` on `Environment Variables`.
+
+![Control Panel](setup/image_2.png)
+
+* Select `Path` in `System Variables` and `Click` on `Edit`.
+
+![Control Panel](setup/image_3.png)
+
+* `Paths` are separated with semi-colons and add the full path to the `sdk\platform tools` (the path will depend on where you installed the Android SDK).
+
+![Control Panel](setup/image_4.png)
+
+* `Paths` are separated with semi-colons and add the full path to the `sdk\tools` (the path will depend on where you installed the Android SDK).
+`Click` on `OK`. `Relaunch` the `Command-Prompt` to use the new `path`.
+
+![Control Panel](setup/image_5.png)
 
 *Windows 8 users:* You will need to disable driver signature verification to install the unsigned Android driver. This involves restarting your PC so do this before you start. See [here](windows8.md) for step-by-step instructions.
 
