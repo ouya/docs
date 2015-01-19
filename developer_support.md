@@ -29,7 +29,7 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 <a target=_blank href="https://www.youtube.com/watch?v=OecoMCyp-gQ&t=8m9s">(8:09)</a> - Jared: Game News
 
-<a target=_blank href="https://www.youtube.com/watch?v=OecoMCyp-gQ&t=8m9s">(15:59)</a> - Tim: Unreal Exposing ODK API Callbacks to Native Code and Merging
+<a target=_blank href="https://www.youtube.com/watch?v=OecoMCyp-gQ&t=15m59s">(15:59)</a> - Tim: Unreal Exposing ODK API Callbacks to Native Code and Merging
 
 ----------
 
