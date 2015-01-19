@@ -10,6 +10,29 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
+### January 19, 2015 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:28:55)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=OecoMCyp-gQ" target="_blank">
+<img src="http://img.youtube.com/vi/OecoMCyp-gQ/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 1/19" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+* Event: March, 2015 - [Session](http://schedule.gdconf.com/session/indie-publishing-a-whole-new-world) - Indie Publishing A Whole New World
+
+* Read the [Unreal Documentation](unreal.md) - Adding Community Content Blueprints to the Unreal documentation
+
+* [WinMerge](http://winmerge.org) - Free visual difference compare tool
+
+<a target=_blank href="https://www.youtube.com/watch?v=OecoMCyp-gQ&t=8m9s">(8:09)</a> - Jared: Game News
+
+<a target=_blank href="https://www.youtube.com/watch?v=OecoMCyp-gQ&t=8m9s">(15:59)</a> - Tim: Unreal Exposing ODK API Callbacks to Native Code and Merging
+
+----------
+
 ### January 12, 2015 ###
 
 <table border=1>
