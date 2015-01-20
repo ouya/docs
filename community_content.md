@@ -236,4 +236,5 @@ Since published Community Content is not moderated, there is the potential for a
     }
 ```
 
-
+## Example
+There is now a sample Community Content app distributed in the ODK. It is located in the `Samples/cc-sample` folder. This app allows the user to create graphical emblems and share them.
