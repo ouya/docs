@@ -26,6 +26,8 @@ Xiaomi's SDK requires several additional permissions in order to work.
 
 The Xiaomi market requires a special application key and ID.  Contact the [OUYA team](mailto:xiaomisupport@ouya.tv) to get these values.
 
+Additionally, non-OUYA markets require being pre-informed about all possible product IDs that might be used during the game's run.  This is so the SDK can do any transforms that are specific to the market that the game is connecting to.
+
 ```java
 	// Your developer id can be found in the Developer Portal
 	public static final String DEVELOPER_ID = "00000000-0000-0000-0000-000000000000";
@@ -34,6 +36,13 @@ The Xiaomi market requires a special application key and ID.  Contact the [OUYA 
 	// selected by the OUYA team
 	public static final String XIAOMI_APP_ID = "0000000000000";
 	public static final String XIAOMI_APP_KEY = "000000000000000000";
+
+	// All product IDs that might be used
+	public static final String[] ALL_PRODUCT_IDS = new String[] {
+		"long_sword",
+		"sharp_axe",
+		"100_extra_lives"
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,36 +55,11 @@ The Xiaomi market requires a special application key and ID.  Contact the [OUYA 
 		developerInfo.putString(OuyaFacade.XIAOMI_APPLICATION_ID, XIAOMI_APP_ID);
 		developerInfo.putString(OuyaFacade.XIAOMI_APPLICATION_KEY, XIAOMI_APP_KEY);
 
+        developerInfo.putStringArray(OuyaFacade.OUYA_PRODUCT_ID_LIST, ALL_PRODUCT_IDS);
+
 		OuyaFacade.getInstance().init(this, developerInfo);
 		super.onCreate(savedInstanceState);
 	}
-```
-
-## Pass in the list of product IDs that you can purchase
-
-Using any non-OUYA store requires that the SDK be informed about all the product IDs that might be used by the game.  This is so the SDK can do any transforms that are specific to the store that the game is connecting to.
-
-```java
-
-	// All product IDs that might be used
-	public static final String[] ALL_PRODUCT_IDS = new String[] {
-		"long_sword",
-		"sharp_axe",
-		"100_extra_lives"
-	}
-
-	@Override
-    protected void onCreate(Bundle savedInstanceState) {
-        Bundle developerInfo = new Bundle();
-
-        // ... other initialization.
-
-        developerInfo.putStringArray(OuyaFacade.OUYA_PRODUCT_ID_LIST, ALL_PRODUCT_IDS);
-
-        OuyaFacade.getInstance().init(this, developerInfo);
-        super.onCreate(savedInstanceState)
-    }
-
 ```
 
 ## Xiaomi requires specific icon sizes
