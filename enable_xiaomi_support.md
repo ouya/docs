@@ -1,7 +1,7 @@
 
 # Enabling Xiaomi Support
 
-While being including in the Xiaomi market is currently an invite-only process, making your app Xiaomi-Enabled is a relatively simple affair.
+While being included in the Xiaomi market is currently an invite-only process, making your app Xiaomi-Enabled is a relatively simple affair.
 
 ## Update to the latest ODK
 
