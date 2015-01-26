@@ -10,6 +10,43 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
+### January 26, 2015 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:28:55)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=KQTKq2TQqaU" target="_blank">
+<img src="http://img.youtube.com/vi/KQTKq2TQqaU/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 1/26" width="240" height="180" border="10" /></a></td>
+ <td>Miracle Fly<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=WXOW9PCBGnI" target="_blank">
+<img src="http://img.youtube.com/vi/WXOW9PCBGnI/0.jpg" alt="Miracle Fly" width="240" height="180" border="10" /></a></td>
+ </tr>
+</table>
+
+* Event: March, 2015 - [Session](http://schedule.gdconf.com/session/indie-publishing-a-whole-new-world) - Indie Publishing A Whole New World
+
+* [uFrame Game Framework](https://www.assetstore.unity3d.com/en/#!/content/14381) - Development framework keeps your code consistent, scalable, and visually designable
+
+* [Substance Plugin for Modo](http://www.allegorithmic.com/substance-modo) - This plugin allows you to use Substances in Modo 801
+
+* Read the [Unreal Documentation](unreal.md) - Adding Android implementation to the Community Content Blueprints in Unreal
+
+<a target=_blank href="https://www.youtube.com/watch?v=WXOW9PCBGnI&t=1m34s">(1:34)</a> - Tim/Bawb/Jared: Fun games this weekend
+
+<a target=_blank href="https://www.youtube.com/watch?v=WXOW9PCBGnI&t=7m27s">(7:27)</a> - Tim: Using exploits in "Pixel Staff"
+
+<a target=_blank href="https://www.youtube.com/watch?v=WXOW9PCBGnI&t=9m23s">(9:23)</a> - Jared: Game News
+
+<a target=_blank href="https://www.youtube.com/watch?v=WXOW9PCBGnI&t=13m50s">(13:50)</a> - Tim: Adding Community Content Screenshots in Blueprints with Unreal
+
+<a target=_blank href="https://www.youtube.com/watch?v=WXOW9PCBGnI&t=27m15s">(27:15)</a> - Tim: uFrame in Unity
+
+<a target=_blank href="https://www.youtube.com/watch?v=WXOW9PCBGnI&t=28m40s">(28:40)</a> - Jared: Getting OUYA consoles
+
+<a target=_blank href="https://www.youtube.com/watch?v=WXOW9PCBGnI&t=29m30s">(29:30)</a> - Tim: Allegorithmic Substances in Modo
+
+----------
+
 ### January 19, 2015 ###
 
 <table border=1>
