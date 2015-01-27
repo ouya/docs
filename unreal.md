@@ -712,6 +712,12 @@ The `onContentDestroyed` delegate will be called with `OuyaContent` has been des
 
 ![Rate OuyaMod](unreal/image_112.png)
 
+## OUYA Mod Editor Add Screenshot
+
+* The `Add Screenshot` function on `OuyaModEditor` will add the `UTexture2D` to the `OuyaMod` actor being edited.
+
+![Add Screenshot](unreal/image_130.png)
+
 ## OUYA Mod Editor Add Tag
 
 * The `Add Tag` function on `OuyaModEditor` will add the `string` tag to the associated `OuyaMod` actor being edited.
