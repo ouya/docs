@@ -93,7 +93,9 @@
 
 * Coding Documentation: [Properties/Core Data Types](https://docs.unrealengine.com/latest/INT/Programming/UnrealArchitecture/Reference/Properties/index.html)
 
-* [Artificial Intelligence](https://docs.unrealengine.com/latest/INT/Gameplay/AI/index.html) - AI Overview and Behavior Tree Quick Start Guide  
+* [Artificial Intelligence](https://docs.unrealengine.com/latest/INT/Gameplay/AI/index.html) - AI Overview and Behavior Tree Quick Start Guide
+
+* [JNI Spec](http://docs.oracle.com/javase/6/docs/technotes/guides/jni/spec/functions.html) - UE4 to Android communication uses the JNI specification   
 
 ## Build UE4
 
