@@ -62,11 +62,12 @@ Additionally, non-OUYA markets require being pre-informed about all possible pro
 	}
 ```
 
-## Xiaomi requires specific icon sizes
+## Create a Xiaomi-specific icon
 
-To match all supported Xiaomi devices, the application icon must have the following resolutions: **drawable-tvdpi, drawable-mdpi, drawable-hdpi, drawable-xhdpi**, though they're not the standard Android size icons.
+The application icon on Xiaomi is a little unusual.  It will exist in the xhdpi resolution, but it is not a standard Android icon.
 
-* **drawable-hdpi, drawable-xhdpi, drawable-mdpi, drawable-tvdpi**:
+* **res/drawable-xhdpi**:
+	* File must be named "ouya_xiaomi_icon.png"
     * 284x160, 32-bit
     * 15px rounded corners 
     * Hero element
@@ -75,17 +76,19 @@ To match all supported Xiaomi devices, the application icon must have the follow
     	* Bottom 50px
     	* Background should be a solid color
     	* No actual text - will be inserted by system at runtime.
+    * NOTE: Do NOT update your AndroidManifest.xml to reference ouya_xiaomi_icon - you only need to place the asset in the correct location.
     * See [this example](res/game_tile_alt.png)
 
 	![this example](res/game_tile_alt.png)
 
+## Xiaomi requires a .psd image.
 * Xiaomi also requires a 800x800 image of the protagonist character(s), or something showing what the game is about.
 	* Must be in PSD format.
 	* Should be sent directly to the [OUYA team](mailto:xiaomisupport@ouya.tv)
 
 ## Submission
 
-Once the above changes have been made, your updated APK should be submitted via the OUYA Developer portal.  You'll then need to email OUYA at [xiaomisupport@ouya.tv](mailto:xiaomisupport@ouya.tv) to let us know it's ready.  Once you've done that, we'll take a snapshot of the in-app-purchase products that you have and send them to Xiaomi.  Please make sure that you've created any necessary in-app-purchase products **BEFORE** telling us your subbmission is ready.  This email is also when you should send OUYA your protagonist PSD file.
+Once the above changes have been made, your updated APK should be submitted via the OUYA Developer portal.  You'll then need to email OUYA at [xiaomisupport@ouya.tv](mailto:xiaomisupport@ouya.tv) to let us know it's ready.  Once you've done that, we'll take a snapshot of the in-app-purchase products that you have and send them to Xiaomi.  Please make sure that you've created any necessary in-app-purchase products **BEFORE** telling us your submission is ready.  This email is also when you should send OUYA your protagonist PSD file.
 
 ## TL;DR
 	* Update to the latest ODK.
