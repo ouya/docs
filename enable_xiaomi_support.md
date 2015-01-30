@@ -103,3 +103,7 @@ Once the above changes have been made, your updated APK should be submitted via 
 ## That's it!
 
 Wasn't that easy?  :)
+
+## Questions?
+
+If it actually wasn't that easy and you have questions, please don't hesitate to email us at [xiaomisupport@ouya.tv](mailto:xiaomisupport@ouya.tv).
