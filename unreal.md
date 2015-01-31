@@ -628,7 +628,7 @@ The `onContentDestroyed` delegate will be called with `OuyaContent` has been des
 
 * Upon success, or error, the `Get Installed OUYA Content` callbacks will be invoked.
 
-* `onSuccess` receives a reference to an array of `OuyaMod` actors.
+* `onSuccess` receives a reference to an array of `OuyaMod` actors, and the `Integer` count of installed items.
 
 * `onError` receives an `errorCode` and `errorMessage` details about the failure.
 
@@ -638,7 +638,7 @@ The `onContentDestroyed` delegate will be called with `OuyaContent` has been des
 
 * Upon success, or error, the `Get Published OUYA Content` callbacks will be invoked.
 
-* `onSuccess` receives a reference to an array of `OuyaMod` actors.
+* `onSuccess` receives a reference to an array of `OuyaMod` actors, and the `Integer` count of published items.
 
 * `onError` receives an `errorCode` and `errorMessage` details about the failure.
 
@@ -671,6 +671,12 @@ The `onContentDestroyed` delegate will be called with `OuyaContent` has been des
 * `Get Tags` on the `OuyaMod` actor gets an array of tag `string` objects.
 
 ![Get Tags](unreal/image_105.png)
+
+## Get Text File
+
+* `Get Text File` on the `OuyaMod` actor passes a `FString` *filename* argument and returns a `FString` of the file contents.
+
+![Get Text File](unreal/image_132.png)
 
 ## Get Title
 
@@ -799,3 +805,15 @@ The `onContentDestroyed` delegate will be called with `OuyaContent` has been des
 * `onFailure` receives an `Ouya Mod` object, an integer `ErrorCode` and string `Error Message` about the failure.
 
 ![Unpublish](unreal/image_124.png)
+
+## GetImage
+
+* Invoking `GetImage` on the `OuyaModScreenshot` actor returns a `UTexture2D` image.
+
+![Get Image](unreal/image_133.png)
+
+## GetThumbnail
+
+* Invoking `GetThumbnail` on the `OuyaModScreenshot` actor returns a `UTexture2D` image.
+
+![Get Thumbnail](unreal/image_134.png)
