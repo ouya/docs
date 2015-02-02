@@ -10,6 +10,27 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
+### Febuary 2, 2015 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:28:14)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=IDy9ju2nUlc" target="_blank">
+<img src="http://img.youtube.com/vi/IDy9ju2nUlc/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 2/2" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+* Event: March, 2015 - [Session](http://schedule.gdconf.com/session/indie-publishing-a-whole-new-world) - Indie Publishing A Whole New World
+
+<a target=_blank href="https://www.youtube.com/watch?v=IDy9ju2nUlc&t=6m32s">(6:32)</a> - Bawb: Tips for making your game ready for China
+
+<a target=_blank href="https://www.youtube.com/watch?v=IDy9ju2nUlc&t=10m20s">(10:20)</a> - Jared: Game News
+
+<a target=_blank href="https://www.youtube.com/watch?v=IDy9ju2nUlc&t=28m10s">(28:10)</a> - Ryan: Photobomb
+
+----------
+
 ### January 26, 2015 ###
 
 <table border=1>
