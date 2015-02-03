@@ -17,7 +17,9 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
  <td>OUYA DEV SUPPORT (00:28:14)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=IDy9ju2nUlc" target="_blank">
 <img src="http://img.youtube.com/vi/IDy9ju2nUlc/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 2/2" width="240" height="180" border="10" /></a></td>
- <td></td>
+ <td>Using Asphalt Substance (00:01:17)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=uQa2fbXFK3Q" target="_blank">
+<img src="http://img.youtube.com/vi/uQa2fbXFK3Q/0.jpg" alt="Using Asphalt Substance in Modo 801" width="240" height="180" border="10" /></a></td>
  </tr>
 </table>
 
