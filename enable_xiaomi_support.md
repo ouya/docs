@@ -52,10 +52,14 @@ Additionally, non-OUYA markets require being pre-informed about all possible pro
 		developerInfo.putByteArray(OuyaFacade.OUYA_DEVELOPER_PUBLIC_KEY, loadApplicationKey());
 
 		// We must tell the OuyaFacade that we can use the Xiaomi market for purchases.
+		
+		// "tv.ouya.xiaomi_app_id"
 		developerInfo.putString(OuyaFacade.XIAOMI_APPLICATION_ID, XIAOMI_APP_ID);
+		
+		// "tv.ouya.xiaomi_app_key"
 		developerInfo.putString(OuyaFacade.XIAOMI_APPLICATION_KEY, XIAOMI_APP_KEY);
 
-        developerInfo.putStringArray(OuyaFacade.OUYA_PRODUCT_ID_LIST, ALL_PRODUCT_IDS);
+		developerInfo.putStringArray(OuyaFacade.OUYA_PRODUCT_ID_LIST, ALL_PRODUCT_IDS);
 
 		OuyaFacade.getInstance().init(this, developerInfo);
 		super.onCreate(savedInstanceState);
