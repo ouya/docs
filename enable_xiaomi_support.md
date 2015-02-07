@@ -48,7 +48,9 @@ Additionally, non-OUYA markets require being pre-informed about all possible pro
 	protected void onCreate(Bundle savedInstanceState) {
 		Bundle developerInfo = new Bundle();
 
+		// "tv.ouya.developer_id"
 		developerInfo.putString(OuyaFacade.OUYA_DEVELOPER_ID, DEVELOPER_ID);
+		
 		developerInfo.putByteArray(OuyaFacade.OUYA_DEVELOPER_PUBLIC_KEY, loadApplicationKey());
 
 		// We must tell the OuyaFacade that we can use the Xiaomi market for purchases.
@@ -58,7 +60,8 @@ Additionally, non-OUYA markets require being pre-informed about all possible pro
 		
 		// "tv.ouya.xiaomi_app_key"
 		developerInfo.putString(OuyaFacade.XIAOMI_APPLICATION_KEY, XIAOMI_APP_KEY);
-
+		
+		// "tv.ouya.product_id_list"
 		developerInfo.putStringArray(OuyaFacade.OUYA_PRODUCT_ID_LIST, ALL_PRODUCT_IDS);
 
 		OuyaFacade.getInstance().init(this, developerInfo);
