@@ -93,6 +93,14 @@ The application icon on Xiaomi is a little unusual.  It will exist in the xhdpi 
 	* Must be in PSD format.
 	* Should be sent directly to the [OUYA team](mailto:xiaomisupport@ouya.tv)
 
+## Localization Resources
+
+* Use [Android localization](http://developer.android.com/guide/topics/resources/localization.html) to include a `Simplified Chinese` string resource.
+
+```
+res\values-zh-rCN\strings.xml
+```
+
 ## Submission
 
 Once the above changes have been made, your updated APK should be submitted via the OUYA Developer portal.  You'll then need to email OUYA at [xiaomisupport@ouya.tv](mailto:xiaomisupport@ouya.tv) to let us know it's ready.  Once you've done that, we'll take a snapshot of the in-app-purchase products that you have and send them to Xiaomi.  Please make sure that you've created any necessary in-app-purchase products **BEFORE** telling us your submission is ready.  This email is also when you should send OUYA your protagonist PSD file.
