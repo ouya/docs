@@ -35,8 +35,6 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 <a target=_blank href="https://www.youtube.com/watch?v=BhcLiTCvnPU&t=13m36s">(13:36)</a> - Tim: Android Localization Example and Xiaomi Support
 
-<a target=_blank href="https://www.youtube.com/watch?v=BhcLiTCvnPU&t=13m36s">(13:36)</a> - Tim: Android Localization Example and Xiaomi Support
-
 <a target=_blank href="https://www.youtube.com/watch?v=BhcLiTCvnPU&t=16m13s">(16:13)</a> - Tim: Using the OUYA Launcher to switch languages
 
 ----------
