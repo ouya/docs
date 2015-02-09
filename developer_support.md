@@ -25,6 +25,8 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 * Read about how to [Enable Xiaomi Support](https://github.com/ouya/docs/blob/enable_xiaomi/enable_xiaomi_support.md)
 
+* Read the [Unreal OUYA Blog Post](https://www.unrealengine.com/blog/ouya-and-unreal-engine) - OUYA support on UE4
+
 * Read the [Unreal Documentation](unreal.md) - Supports OUYA-Everywhere Input, In-App-Purchases, and Community Content in UE4
 
 * Android [Localization Example](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/AndroidExit) - An app with an `Exit` button localized for English, Deutsch, Francais, Espanol, Italiano, and Suplified Chinese
