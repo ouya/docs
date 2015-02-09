@@ -41,6 +41,8 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 <a target=_blank href="https://www.youtube.com/watch?v=BhcLiTCvnPU&t=16m13s">(16:13)</a> - Tim: Using the OUYA Launcher to switch languages
 
+<a target=_blank href="https://www.youtube.com/watch?v=BhcLiTCvnPU&t=19m36s">(19:36)</a> - Bawb: How does a game get localized?
+
 ----------
 
 ### Febuary 2, 2015 ###
