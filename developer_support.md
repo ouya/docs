@@ -10,6 +10,35 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
+### Febuary 23, 2015 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:43:15)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=R0gtec1Ie_0" target="_blank">
+<img src="http://img.youtube.com/vi/R0gtec1Ie_0/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 2/23" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+* Event: March, 2015 - [Session](http://schedule.gdconf.com/session/indie-publishing-a-whole-new-world) - Indie Publishing A Whole New World
+
+* Read about how to [Enable Xiaomi Support](https://github.com/ouya/docs/blob/enable_xiaomi/enable_xiaomi_support.md)
+
+<a target=_blank href="https://www.youtube.com/watch?v=R0gtec1Ie_0&t=0m50s">(0:50)</a> - Bawb/Jared/Tim: Games over the weekend
+
+<a target=_blank href="https://www.youtube.com/watch?v=R0gtec1Ie_0&t=9m43s">(9:43)</a> - Jared: Just the Facts
+
+<a target=_blank href="https://www.youtube.com/watch?v=R0gtec1Ie_0&t=13m49s">(13:49)</a> - Tim: UE4 Q&A
+
+<a target=_blank href="https://www.youtube.com/watch?v=R0gtec1Ie_0&t=17m34s">(17:34)</a> - Cullen and Britt: Developer guests talk about "Charge Shot" (2-4 local multiplayer game)
+
+<a target=_blank href="https://www.youtube.com/watch?v=R0gtec1Ie_0&t=19m35s">(19:35)</a> - Cullen and Britt: Game Maker on OUYA Tips
+
+<a target=_blank href="https://www.youtube.com/watch?v=R0gtec1Ie_0&t=31m04s">(31:04)</a> - Tim: Upgrade your OUYA-Plugin, add OUYA-Everywhere Input, and localize your text
+
+----------
+
 ### Febuary 9, 2015 ###
 
 <table border=1>
