@@ -38,7 +38,7 @@ Some good examples:
 
 ###TRAILERS = EYEBALLS
 
-A while back, we hooked up with [VIMEO](www.vimeo.com) in order to help DEVS show off their content. You can create a free VIMEO account, upload a cool trailer, and slap it onto your GAME DETAILS PAGE in a snap.
+A while back, we hooked up with [VIMEO](https://www.vimeo.com) in order to help DEVS show off their content. You can create a free VIMEO account, upload a cool trailer, and slap it onto your GAME DETAILS PAGE in a snap.
 
 Go to [GAMES](https://gamers.ouya.tv/developers/games) in the DEV PORTAL, click "EDIT" and just copy/paste your video URL into the appropriate field.
 
@@ -69,7 +69,11 @@ Some good examples:
 ###A GOOD DESCRIPTION GOES A LONG WAY
 
 Space is a premium. You have only a few lines to grab a gamer's attention. Best to make them count. We suggest you order your description along these lines: 
-1.	Reviews2.	Synopsis3.	Feature List4.	What’s available in the full version
+
+1.	Reviews
+2.	Synopsis
+3.	Feature List
+4.	What’s available in the full version
 
 Start with any rave **reviews** your game has received, whether they be by the press, or even your great aunt, people appreciate a good review that communicates the quality or fun factor of your game.
 
