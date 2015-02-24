@@ -2,7 +2,11 @@
 
 The OUYA Everywhere initiative delivers OUYA to gamers wherever they play - whether or not they bought a box from us.  We're the open guys, right?  So why lock OUYA in a box? Even a beautiful one?  OUYA is about games and game developers, not about the way you get it.
 
-### Engines ###
+### Update the ODK
+
+* It's important to keep your `ouya-sdk.jar` updated to take advantage of `OUYA Everywhere - Input` to make your game compatible with OUYA, MOJO, and Xiaomi consoles. The `ouya-sdk.jar` is provided in the `ODK` download in the [developer portal](http://devs.ouya.tv) and is updated with each `OTA` update.
+
+### Engines
 
 OUYA Everywhere has engine-specific documentation for supported engines.
 
@@ -15,7 +19,7 @@ OUYA Everywhere has engine-specific documentation for supported engines.
 * [OUYA Everywhere on Unity](https://github.com/ouya/docs/blob/master/ouya-everywhere-unity/ouya-everywhere-unity.md)
 * [OUYA Everywhere on Unreal](https://github.com/ouya/docs/blob/master/unreal.md)
 
-### Overview ###
+### Overview
 
 In order to help games be as portable as possible there are a set of new APIs available:
 
