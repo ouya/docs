@@ -144,7 +144,7 @@ Since this request has to travel across the Internet to the OUYA servers, the re
 
 Now we will create our own listener!  In this example, we are extending the **CancelIgnoringOuyaResponseListener** which ignores cancels. Therefore, we only need to provide **onSuccess** and **onFailure** methods:
 ```java
-	OuyaResponseListener<ArrayList<Product>> productListListener =
+	CancelIgnoringOuyaResponseListener<List<Product>> productListListener =
 		new CancelIgnoringOuyaResponseListener<List<Product>>() {
 			@Override
 			public void onSuccess(List<Product> products) {
@@ -171,12 +171,12 @@ So easy!
 You will need to create a purchase listener which handles responses from the server. Each purchase will have a unique purchase ID.
 
 ```java
-	PurchasableResponseListener purchaseListener = new PurchasableResponseListener() {
+	OuyaResponseListener<PurchaseResult> purchaseListener = new OuyaResponseListener<PurchaseResult>() {
 		@Override
 		public void onSuccess(PurchaseResult result) {
 			// If you previously stored the OrderId/ProductId combination, now is the time
 			// to verify it.  See the requestPurchase section below.
-			Log.d(TAG, result.getProductId() + " purchased.  Order: " + result.getOrderId());
+			Log.d(TAG, result.getProductIdentifier() + " purchased.  Order: " + result.getOrderId());
 		}
 
         @Override
@@ -215,8 +215,8 @@ Be sure to always query receipts for previous purchases and not just store your 
 Let us take a look at our listener:
 ```java
 	// The receipt listener now receives a collection of tv.ouya.console.api.Receipt objects.
-	CancelIgnoringOuyaResponseListener<Collection<Receipt>> receiptListListener =
-		new CancelIgnoringOuyaResponseListener<Collection<Receipt>>() {
+	OuyaResponseListener<Collection<Receipt>> receiptListListener =
+		new OuyaResponseListener<Collection<Receipt>>() {
 			@Override
 			public void onSuccess(Collection<Receipt> receipts) {
 				for (Receipt r : receipts) {
@@ -227,6 +227,11 @@ Let us take a look at our listener:
 			@Override
 			public void onFailure(int errorCode, String errorMessage, Bundle errorBundle) {
 				Log.d("Error", errorMessage);
+			}
+
+			@Override
+			public void onCancel() {
+				Log.d("Info", "Cancelled checking receipts");
 			}
 		};
 ```
