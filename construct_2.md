@@ -88,11 +88,11 @@ The `OuyaSDK` object has to be in the layout for the `OuyaSDK` events to fire.
 
 Right click the `Layout` and select `Insert New Object`.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_38.png)
+![Insert Object](construct_2/image_38.png)
 
 Select `OuyaSDK` and click `Insert`.
 
-![Insert](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_3.png)
+![Insert](construct_2/image_3.png)
 
 ## Initialize the OUYA Plugin
 
@@ -102,18 +102,18 @@ Interacting with the OUYA SDK can be done via the `event sheet`.
 
 Add an event `System\On start of layout`.
 
-![start of layout](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_5.png)
+![start of layout](construct_2/image_5.png)
 
 Add actions `addInitOuyaPluginValues` and `initOuyaPlugin` to the `On start of layout` event.
 
-![init actions](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_6.png)
+![init actions](construct_2/image_6.png)
 
 ### `Developer UUID`
 
 The `Developer UUID` is available in the [developer portal](http://devs.ouya.tv).
 You must be logged in to see your `Developer UUID`.
 
-![init actions](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_39.png)
+![init actions](construct_2/image_39.png)
 
 ### `addInitOuyaPluginValues`
 
@@ -121,11 +121,11 @@ You must be logged in to see your `Developer UUID`.
 Add a `key` of "tv.ouya.developer_id".
 Add a `value` using your `Developer UUID`.
 
-![init actions](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_7.png)
+![init actions](construct_2/image_7.png)
 
 The `initOuyaPlugin` action will invoke initializing the OUYA Plugin given the values added with `addInitOuyaPluginValues`.
 
-![Add Init Values](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_4.png)
+![Add Init Values](construct_2/image_4.png)
 
 ### Init Events
 
@@ -135,11 +135,11 @@ The `initOuyaPlugin` action will invoke initializing the OUYA Plugin given the v
 
 After initializing the OUYA Plugin the other IAP actions can be invoked.
 
-![Init Plugin](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_8.png)
+![Init Plugin](construct_2/image_8.png)
 
 Actions can be added to the init events.
 
-![Add Event](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_9.png)
+![Add Event](construct_2/image_9.png)
 
 The `onFailure` event provides error code and error message fields.
 
@@ -147,15 +147,29 @@ The `onFailure` event provides error code and error message fields.
 
 * `OuyaSDK.errorMessageOnFailureInitOuyaPlugin` - The failure `error message` as a string
 
+## OUYA Everywhere ##
+
+`addInitOuyaPluginValues` supports additional strings to make the game compatible with OUYA Everywhere devices.
+
+* `tv.ouya.developer_id` - The developer UUID can be found in the [developer portal](http://devs.ouya.tv) after logging in.
+
+* `tv.ouya.xiaomi_app_id` - The Xiaomi App Id is provided by the content team, email `officehours@ouya.tv` to obtain your key.
+
+* `tv.ouya.xiaomi_app_key` - The Xiaomi App Key is provided by the content team, email `officehours@ouya.tv` to obtain your key.
+
+* `tv.ouya.product_id_list` - The product id list is a comma separated list of product ids that can be purchased in the game.
+
+![image alt text](construct_2/image_40.png)
+
 ## Request Gamer Info
 
 The gamer info includes the gamer's username and unique identifier. Add an `OuyaSDK\Request Gamer Info` action.
 
-![Gamer Info](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_10.png)
+![Gamer Info](construct_2/image_10.png)
 
 `Request Gamer Info` has 3 events for `on Success`, `on Failure`, and `on Cancel`.
 
-![Request Gamer Info](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_12.png)
+![Request Gamer Info](construct_2/image_12.png)
 
 The `Gamer Info` fields are available in the `onSuccess` event.
 
@@ -163,7 +177,7 @@ The `Gamer Info` fields are available in the `onSuccess` event.
 
 `OuyaSDK.GamerInfoUuid` returns the string for the gamer's unique identifier.
 
-![GamerInfo Uuid](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_11.png)
+![GamerInfo Uuid](construct_2/image_11.png)
 
 The `onFailure` event provides error code and error message fields.
 
@@ -190,41 +204,41 @@ Requesting products gets the details about the Product created in the [developer
 
 Add the action `OuyaSDK\Request Products`.
 
-![Request Products](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_13.png)
+![Request Products](construct_2/image_13.png)
 
 `Request Products` takes a string which is a comma separated list of product ids.
 You can pass a comma separated list `"a,b,c,d,e,f"` or a single product `"my_awesome_sauce"`.
 
-![CSV List](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_14.png)
+![CSV List](construct_2/image_14.png)
 
 The IAP example waits for a button press before invoking the `Request Products` action.
-![Button](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_15.png)
+![Button](construct_2/image_15.png)
 
 `Request Products` has 3 events for `on Success`, `on Failure`, and `on Cancel`.
 
-![Request Products](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_17.png)
+![Request Products](construct_2/image_17.png)
 
 `Request Products on Success` gets a list of product details.
 `OuyaSDK.ProductsLength` returns the count of products returned. 
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_16.png)
+![Insert Object](construct_2/image_16.png)
 
 Retrieving product details uses an index from 0 to (`OuyaSDK.ProductsLength` - 1).
 Create a global `ProductIndex` used to get the product details.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_20.png)
+![Insert Object](construct_2/image_20.png)
 
 Use the `Set` action to set the `ProductIndex` to start at the beginning of the products list.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_22.png)
+![Insert Object](construct_2/image_22.png)
 
 Add a `Repeat` event to iterate over each of the returned products. 
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_18.png)
+![Insert Object](construct_2/image_18.png)
 
 The count will be `OuyaSDK.ProductsLength` times.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_19.png)
+![Insert Object](construct_2/image_19.png)
 
 All the `OuyaSDK.GetProducts*` accessors take the `ProductIndex` to return the Product item's details.
 
@@ -238,7 +252,7 @@ All the `OuyaSDK.GetProducts*` accessors take the `ProductIndex` to return the P
 
 Increment the `ProductIndex` with a `Set` action after looking up the data for each product.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_21.png)
+![Insert Object](construct_2/image_21.png)
 
 The `onFailure` event provides error code and error message fields.
 
@@ -252,11 +266,11 @@ Requesting a purchase requires the Product entitlement or consumable was created
 
 Add the action `OuyaSDK\Request Purchase`.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_23.png)
+![Insert Object](construct_2/image_23.png)
 
 `Request Purchase` has 3 events for `on Success`, `on Failure`, and `on Cancel`.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_24.png)
+![Insert Object](construct_2/image_24.png)
 
 The `onFailure` event provides error code and error message fields.
 
@@ -285,31 +299,31 @@ After querying the receipts list, iterate through the items to check if your ent
 
 Add the action `OuyaSDK\Request Receipts`.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_25.png)
+![Insert Object](construct_2/image_25.png)
 
 `Request Receipts` has 3 events for `on Success`, `on Failure`, and `on Cancel`.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_34.png)
+![Insert Object](construct_2/image_34.png)
 
 `Request Receipts` on Success gets a list of receipt details. `OuyaSDK.ReceiptsLength` returns the count of receipts returned. 
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_30.png)
+![Insert Object](construct_2/image_30.png)
 
 Retrieving receipts details uses an index from 0 to (`OuyaSDK.ReceiptsLength` - 1). Create a global ReceiptIndex used to get the receipt details.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_35.png)
+![Insert Object](construct_2/image_35.png)
 
 Use the `Set` action to set the ReceiptIndex to start at the beginning of the receipts list.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_36.png)
+![Insert Object](construct_2/image_36.png)
 
 Add a `Repeat` event to iterate over each of the returned receipts. 
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_18.png)
+![Insert Object](construct_2/image_18.png)
 
 The count will be `OuyaSDK.ReceiptsLength` times.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_37.png)
+![Insert Object](construct_2/image_37.png)
 
 All the `OuyaSDK.GetReceipts*` accessors take the `ReceiptIndex` to return the Receipt item's details.
 
@@ -321,7 +335,7 @@ All the `OuyaSDK.GetReceipts*` accessors take the `ReceiptIndex` to return the R
 
 Increment the `ReceiptIndex` with a `Set` action after looking up the data for each product.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_33.png)
+![Insert Object](construct_2/image_33.png)
 
 The `onFailure` event provides error code and error message fields.
 
@@ -333,19 +347,19 @@ The `onFailure` event provides error code and error message fields.
 
 Add the action `OuyaSDK\Set Safe Area`.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_26.png)
+![Insert Object](construct_2/image_26.png)
 
 The IAP example uses a floating-point `SafeAreaAmount` global variable that adjusts the safe area amount.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_29.png)
+![Insert Object](construct_2/image_29.png)
 
 The `Set Safe Area` action takes a `SafeAreaAmount` floating-point number. Safe area amounts range from 0.0 with full border to 1.0 with border. 
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_28.png)
+![Insert Object](construct_2/image_28.png)
 
 `Set Safe Area` has 2 events for `on Success`, and `on Failure`.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_31.png)
+![Insert Object](construct_2/image_31.png)
 
 The `onFailure` event provides error code and error message fields.
 
@@ -357,11 +371,11 @@ The `onFailure` event provides error code and error message fields.
 
 Add the action `OuyaSDK\Shutdown`.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_27.png)
+![Insert Object](construct_2/image_27.png)
 
 `Shutdown` has 2 events for `on Success`, and `on Failure`.
 
-![Insert Object](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_32.png)
+![Insert Object](construct_2/image_32.png)
 
 The `onFailure` event provides error code and error message fields.
 
@@ -379,7 +393,7 @@ The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/C
 
 Open the `VirtualController.capx` from the Construct 2 SDK examples.
 
-![Virtual Controller Example](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_1.png)
+![Virtual Controller Example](construct_2/image_1.png)
 
 ## `In-App-Purchases` ##
 
@@ -387,4 +401,4 @@ The [In-App-Purchases](https://github.com/ouya/ouya-sdk-examples/tree/master/Con
 
 Open the `InAppPurchases.capx` from the Construct 2 SDK examples.
 
-![Virtual Controller Example](https://raw.githubusercontent.com/ouya/docs/master/construct_2/image_2.png)
+![Virtual Controller Example](construct_2/image_2.png)
