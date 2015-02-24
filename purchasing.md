@@ -6,8 +6,8 @@ In-App Purchasing (IAP) is how your app can make money.  The OUYA Developer Kit 
 
 **Gamer Info** - information about the user.  Its attributes:
 
-* *UUID* - a developer-facing identifier
 * *Username* - the user's public username
+* *UUID* - a developer-facing identifier
 
 **Product** - an item purchasable by the user.  Its attributes:
 
@@ -30,13 +30,13 @@ In-App Purchasing (IAP) is how your app can make money.  The OUYA Developer Kit 
 
 **Receipt** - information about a prior purchase. it has eight attributes:
 
-* *Product ID* - the product identifier
 * *Currency* - the currency that the product was purchased in
+* *Gamer* - the gamer that purchased the product
+* *GeneratedDate* - when the receipt was created
 * *Local Price* - the cost of the product given the type of currency
 * *Price In Cents* - the product price in US cents
+* *Product ID* - the product identifier
 * *PurchaseDate* - when the purchase was made
-* *GeneratedDate* - when the receipt was created
-* *Gamer* - the gamer that purchased the product
 * *UUID* - the identifier of the gamer that purchased the product
 
 
@@ -287,6 +287,27 @@ To use this in your onFailure methods you should use the following code:
 Where context is the current Context, errorCode, errorMessage, and optionalData are the parameters passed to your onFailure method, AUTHENTICATION_ACTIVITY_ID is an ID which will be passed to your Activities onActivityResult method if the error handler needs to start the OUYA user authentication Activity, and listener is an OuyaResponseListener<Void> object which is called with the result of a request to add a user account if no accounts are already present on the system.
 
 If the helper can handle the error the method will return true, if it can not it will return false.
+
+#OnActivityResult
+
+* `onActivityResult` must be implemented on the `Activity` and the activity results must be passed to the `OuyaFacade` via `processActivityResult`. 
+
+```
+    @Override
+	public void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (null != mOuyaFacade)
+		{
+			if (mOuyaFacade.processActivityResult(requestCode, resultCode, data)) {
+				// handled activity result
+			} else {
+				// unhandled activity result
+			}
+		} else {
+			// OuyaFacade not initialized
+		}
+	}
+```
 
 ## Use of Obfuscators (e.g. ProGuard)
 
