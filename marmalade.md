@@ -145,6 +145,46 @@ void Application::InitOuyaPlugin()
 }
 ```
 
+## OUYA Everywhere ##
+
+`OuyaPlugin_initOuyaPlugin` supports additional strings to make the game compatible with OUYA Everywhere devices.
+
+* `tv.ouya.developer_id` - The developer UUID can be found in the [developer portal](http://devs.ouya.tv) after logging in.
+
+* `tv.ouya.xiaomi_app_id` - The Xiaomi App Id is provided by the content team, email `officehours@ouya.tv` to obtain your key.
+
+* `tv.ouya.xiaomi_app_key` - The Xiaomi App Key is provided by the content team, email `officehours@ouya.tv` to obtain your key.
+
+* `tv.ouya.product_id_list` - The product id list is a comma separated list of product ids that can be purchased in the game.
+
+c++
+```
+void Application::InitOuyaPlugin()
+{
+	int jsonArray = OuyaPlugin_JSONArray_Construct();
+	int index = 0;
+	int jsonObject = OuyaPlugin_JSONObject_Construct();
+
+	OuyaPlugin_JSONObject_Put(jsonObject, "key", "tv.ouya.developer_id");
+	OuyaPlugin_JSONObject_Put(jsonObject, "value", "00000000-0000-0000-0000-000000000000");
+
+	OuyaPlugin_JSONObject_Put(jsonObject, "key", "tv.ouya.xiaomi_app_id");
+	OuyaPlugin_JSONObject_Put(jsonObject, "value", "0000000000000");
+
+	OuyaPlugin_JSONObject_Put(jsonObject, "key", "tv.ouya.xiaomi_app_key");
+	OuyaPlugin_JSONObject_Put(jsonObject, "value", "000000000000000000");
+
+	OuyaPlugin_JSONObject_Put(jsonObject, "key", "tv.ouya.product_id_list");
+	OuyaPlugin_JSONObject_Put(jsonObject, "value", "long_sword,sharp_axe,cool_level,awesome_sauce");
+
+	OuyaPlugin_JSONArray_Put(jsonArray, index, jsonObject);
+	std::string jsonData = OuyaPlugin_JSONArray_ToString(jsonArray);
+	OuyaPlugin_initOuyaPlugin(jsonData.c_str(),
+	Application::m_ui.m_callbacksInitOuyaPlugin->GetSuccessEvent(),
+	Application::m_ui.m_callbacksInitOuyaPlugin->GetFailureEvent());
+}
+```
+
 ### Input ###
 
 Input comes from the Marmalade ODK Extension. Include the ODK header to get access to the extension.
