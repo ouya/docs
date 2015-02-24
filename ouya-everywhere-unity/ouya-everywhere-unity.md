@@ -151,6 +151,20 @@ Add the OuyaGameObject to your initial loading scene. It uses DontDestroyOnLoad 
 
 ![image alt text](image_20.png)
 
+## OUYA Everywhere ##
+
+Using the inspector, browse the `OuyaGameObject`. Here you can add strings to make the game compatible with OUYA Everywhere devices.
+
+* `tv.ouya.developer_id` - The developer UUID can be found in the [developer portal](http://devs.ouya.tv) after logging in.
+
+* `tv.ouya.xiaomi_app_id` - The Xiaomi App Id is provided by the content team, email `officehours@ouya.tv` to obtain your key.
+
+* `tv.ouya.xiaomi_app_key` - The Xiaomi App Key is provided by the content team, email `officehours@ouya.tv` to obtain your key.
+
+* `tv.ouya.product_id_list` - The product id list is a comma separated list of product ids that can be purchased in the game.
+
+![image alt text](image_31.png)
+
 ## Other Player Settings ##
 
 In the Android `Player Settings` and within the `Other Settings` subgroup, here you can enter your package identifier from the [developer portal](http://devs.ouya.tv) into the `bundle id` field. Make sure the `minimum API level` field to 16.
