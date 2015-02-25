@@ -162,22 +162,34 @@ c++
 void Application::InitOuyaPlugin()
 {
 	int jsonArray = OuyaPlugin_JSONArray_Construct();
-	int index = 0;
-	int jsonObject = OuyaPlugin_JSONObject_Construct();
+	
 
+	int index = 0;
+	
+	int jsonObject = OuyaPlugin_JSONObject_Construct();
 	OuyaPlugin_JSONObject_Put(jsonObject, "key", "tv.ouya.developer_id");
 	OuyaPlugin_JSONObject_Put(jsonObject, "value", "00000000-0000-0000-0000-000000000000");
+	OuyaPlugin_JSONArray_Put(jsonArray, index, jsonObject);
+	++index;
 
+	jsonObject = OuyaPlugin_JSONObject_Construct();
 	OuyaPlugin_JSONObject_Put(jsonObject, "key", "tv.ouya.xiaomi_app_id");
 	OuyaPlugin_JSONObject_Put(jsonObject, "value", "0000000000000");
+	OuyaPlugin_JSONArray_Put(jsonArray, index, jsonObject);
+	++index;
 
+	jsonObject = OuyaPlugin_JSONObject_Construct();
 	OuyaPlugin_JSONObject_Put(jsonObject, "key", "tv.ouya.xiaomi_app_key");
 	OuyaPlugin_JSONObject_Put(jsonObject, "value", "000000000000000000");
+	OuyaPlugin_JSONArray_Put(jsonArray, index, jsonObject);
+	++index;
 
+	jsonObject = OuyaPlugin_JSONObject_Construct();
 	OuyaPlugin_JSONObject_Put(jsonObject, "key", "tv.ouya.product_id_list");
 	OuyaPlugin_JSONObject_Put(jsonObject, "value", "long_sword,sharp_axe,cool_level,awesome_sauce");
-
 	OuyaPlugin_JSONArray_Put(jsonArray, index, jsonObject);
+	++index;
+
 	std::string jsonData = OuyaPlugin_JSONArray_ToString(jsonArray);
 	OuyaPlugin_initOuyaPlugin(jsonData.c_str(),
 	Application::m_ui.m_callbacksInitOuyaPlugin->GetSuccessEvent(),
