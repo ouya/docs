@@ -29,6 +29,8 @@ Several Unity packages are available from the [ouya-sdk-examples releases](https
 
 * [Unity OuyaSDK-StarterKit.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-StarterKit) - Starter Kit for jumping into OUYA programming
 
+* [Unity-OuyaSDK-Xiaomi.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Xiaomi) contains the files and Android.manifest changes for publishing to Xiaomi
+
 ```
 Note: Before importing ALWAYS make a backup of your game!
 ``` 
@@ -171,7 +173,7 @@ Using the inspector, browse the `OuyaGameObject`. Here you can add strings to ma
 
 * `SDK_MIBOX_2.0.1.jar` should be placed in `Assets\Plugins\Android\libs`
 
-* [Unity-OuyaSDK-Xiaomi.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Xiaomi) contains the files and Android.manifest changes for publishing to Xiaomi
+* See the [Releases Section](#releases) to get the package for publishing to Xiaomi
 
 ## Other Player Settings ##
 
