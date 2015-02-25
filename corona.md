@@ -415,6 +415,48 @@ end
 
 The main script sets up the basic button and text layout of the application. The key input listener is also registered here.
 
+## OUYA Everywhere ##
+
+`initOuyaPlugin` supports additional strings to make the game compatible with OUYA Everywhere devices.
+
+* `tv.ouya.developer_id` - The developer UUID can be found in the [developer portal](http://devs.ouya.tv) after logging in.
+
+* `tv.ouya.xiaomi_app_id` - The Xiaomi App Id is provided by the content team, email `officehours@ouya.tv` to obtain your key.
+
+* `tv.ouya.xiaomi_app_key` - The Xiaomi App Key is provided by the content team, email `officehours@ouya.tv` to obtain your key.
+
+* `tv.ouya.product_id_list` - The product id list is a comma separated list of product ids that can be purchased in the game.
+
+```
+local json = require "json"
+if nil ~= ouyaSDK and nil ~= ouyaSDK.initOuyaPlugin then
+	local data = {
+
+	[1] = {
+	    ["key"] = "tv.ouya.developer_id",
+	    ["value"] = "00000000-0000-0000-0000-000000000000"
+	},
+
+	[2] = {
+	    ["key"] = "tv.ouya.xiaomi_app_id",
+	    ["value"] = "0000000000000"
+	},
+
+	[3] = {
+	    ["key"] = "tv.ouya.xiaomi_app_key",
+	    ["value"] = "000000000000000000"
+	},
+
+	[4] = {
+	    ["key"] = "tv.ouya.product_id_list",
+	    ["value"] = "long_sword,sharp_axe,cool_level,awesome_sauce"
+	}};
+
+	local jsonData = json.encode(data);
+	ouyaSDK.initOuyaPlugin(callbacksInitOuyaPlugin.onSuccess, callbacksInitOuyaPlugin.onFailure, jsonData);
+end
+```
+
 #### Corona/ui.lua
 
 The UI script handles displaying the products and receipts using the response data from the in-app-purchase service.
