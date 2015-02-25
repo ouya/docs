@@ -3,6 +3,10 @@
 
 While being included in the Xiaomi market is currently an invite-only process, making your app Xiaomi-Enabled is a relatively simple affair.
 
+## Xiaomi Target Hardware
+
+* [MiBox(Enhanced)](http://dev.xiaomi.com/doc/p=3838/index.html)
+
 ## Update to the latest ODK
 
 Download latest ODK from the OUYA Developer portal and setup your game to use it.
