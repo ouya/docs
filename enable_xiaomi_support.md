@@ -5,7 +5,7 @@ While being included in the Xiaomi market is currently an invite-only process, m
 
 ## Update to the latest ODK
 
-Download latest ODK from the OUYA Developer portal and setup your game to use it.
+Download the following ODK: https://ouya-sdks.s3.amazonaws.com/xiaomi/odk-rc-1.2.1472.zip
 
 ## Add the necessary files to your build
 
@@ -106,7 +106,7 @@ res\values-zh-rCN\strings.xml
 Once the above changes have been made, your updated APK should be submitted via the OUYA Developer portal.  You'll then need to email OUYA at [xiaomisupport@ouya.tv](mailto:xiaomisupport@ouya.tv) to let us know it's ready.  Once you've done that, we'll take a snapshot of the in-app-purchase products that you have and send them to Xiaomi.  Please make sure that you've created any necessary in-app-purchase products **BEFORE** telling us your submission is ready.  This email is also when you should send OUYA your protagonist PSD file.
 
 ## TL;DR
-	* Update to the latest ODK.
+	* Update to the https://ouya-sdks.s3.amazonaws.com/xiaomi/odk-rc-1.2.1472.zip ODK.
 	* Add files to your game project - Xiaomi SDK and Xiaomi's game service apk.
 	* Add required permissions to your manifest.
 	* Update OuyaFacade's initialization bundle.
