@@ -339,6 +339,60 @@ If the initialization fails, the onFailure callback will be invoked.
       OuyaSDK.initOuyaPlugin(jsonData, onSuccessInitOuyaPlugin, onFailureInitOuyaPlugin);
 ```
 
+## OUYA Everywhere ##
+
+`initOuyaPlugin` supports additional strings to make the game compatible with OUYA Everywhere devices.
+
+* `tv.ouya.developer_id` - The developer UUID can be found in the [developer portal](http://devs.ouya.tv) after logging in.
+
+* `tv.ouya.xiaomi_app_id` - The Xiaomi App Id is provided by the content team, email `officehours@ouya.tv` to obtain your key.
+
+* `tv.ouya.xiaomi_app_key` - The Xiaomi App Key is provided by the content team, email `officehours@ouya.tv` to obtain your key.
+
+* `tv.ouya.product_id_list` - The product id list is a comma separated list of product ids that can be purchased in the game.
+
+```javascript
+      // Plugin method definition
+      OuyaSDK.initOuyaPlugin = function(jsonData, onSuccess, onFailure) {
+        OuyaSDK.initValues = jsonData;
+        OuyaSDK.onSuccess = onSuccess;
+        OuyaSDK.onFailure = onFailure;
+        OuyaSDK.method = "initOuyaPlugin";
+      };
+
+      // Prepare the plugin initialization values
+      var data = Array();
+
+      data[0] =
+      {
+        'key': 'tv.ouya.developer_id',
+        'value': '00000000-0000-0000-0000-000000000000'
+      };
+
+      data[1] =
+      {
+        'key': 'tv.ouya.xiaomi_app_id',
+        'value': '0000000000000'
+      };
+
+      data[2] =
+      {
+        'key': 'tv.ouya.xiaomi_app_key',
+        'value': '000000000000000000'
+      };
+
+      data[3] =
+      {
+        'key': 'tv.ouya.product_id_list',
+        'value': 'long_sword,sharp_axe,cool_level,awesome_sauce'
+      };
+
+      var jsonData = JSON.stringify(data);
+
+      // Invoke the plugin method
+      OuyaSDK.initOuyaPlugin(jsonData, onSuccessInitOuyaPlugin, onFailureInitOuyaPlugin);
+```
+
 ##### RequestGamerInfo ######
 
 The gamer info contains the username and gamer uuid.
