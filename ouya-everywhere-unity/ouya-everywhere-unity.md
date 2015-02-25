@@ -165,6 +165,12 @@ Using the inspector, browse the `OuyaGameObject`. Here you can add strings to ma
 
 ![image alt text](image_31.png)
 
+* `MiGameCenterSDKService.apk` should be placed in `Assets\Plugins\Android\assets`
+
+* `ouya-sdk.jar` should be placed in `Assets\Plugins\Android\libs`
+
+* `SDK_MIBOX_2.0.1.jar` should be placed in `Assets\Plugins\Android\libs`
+
 ## Other Player Settings ##
 
 In the Android `Player Settings` and within the `Other Settings` subgroup, here you can enter your package identifier from the [developer portal](http://devs.ouya.tv) into the `bundle id` field. Make sure the `minimum API level` field to 16.
