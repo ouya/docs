@@ -171,6 +171,8 @@ Using the inspector, browse the `OuyaGameObject`. Here you can add strings to ma
 
 * `SDK_MIBOX_2.0.1.jar` should be placed in `Assets\Plugins\Android\libs`
 
+* [Unity-OuyaSDK-Xiaomi.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Xiaomi) contains the files and Android.manifest changes for publishing to Xiaomi
+
 ## Other Player Settings ##
 
 In the Android `Player Settings` and within the `Other Settings` subgroup, here you can enter your package identifier from the [developer portal](http://devs.ouya.tv) into the `bundle id` field. Make sure the `minimum API level` field to 16.
