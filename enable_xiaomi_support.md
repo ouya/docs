@@ -26,7 +26,7 @@ Xiaomi's SDK requires several additional permissions in order to work.
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 ```
 
-## Review the OUYE Everywhere Documentation ##
+## Review the OUYA Everywhere Documentation ##
 
 * Be sure to review the [OUYA Everywhere Documentation](https://github.com/ouya/docs/blob/enable_xiaomi/ouya-everywhere.md) for your engine.
 The next initialization steps may integrate differently for your particular engine.
