@@ -28,7 +28,7 @@ Xiaomi's SDK requires several additional permissions in order to work.
 
 ## Review the OUYA Everywhere Documentation ##
 
-* Be sure to review the [OUYA Everywhere Documentation](https://github.com/ouya/docs/blob/enable_xiaomi/ouya-everywhere.md) for your engine.
+* Be sure to review the [OUYA Everywhere Documentation](https://github.com/ouya/docs/blob/master/ouya-everywhere.md) for your engine.
 The next initialization steps may integrate differently for your particular engine.
 
 ## Update your OuyaFacade initialization bundle
