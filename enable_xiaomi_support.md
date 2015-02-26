@@ -26,11 +26,18 @@ Xiaomi's SDK requires several additional permissions in order to work.
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 ```
 
+## Review the OUE Everywhere Documentation ##
+
+* Be sure to review the [OUYA Everywhere Documentation](https://github.com/ouya/docs/blob/enable_xiaomi/ouya-everywhere.md) for your engine.
+The next initialization steps may integrate differently for your particular engine.
+
 ## Update your OuyaFacade initialization bundle
 
 The Xiaomi market requires a special application key and ID.  Contact the [OUYA team](mailto:xiaomisupport@ouya.tv) to get these values.
 
 Additionally, non-OUYA markets require being pre-informed about all possible product IDs that might be used during the game's run.  This is so the SDK can do any transforms that are specific to the market that the game is connecting to.
+
+*(Using Java Example)*
 
 ```java
 	// Your developer id can be found in the Developer Portal
