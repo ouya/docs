@@ -179,9 +179,11 @@ Using the inspector, browse the `OuyaGameObject`. Here you can add strings to ma
 
 Use [Android localization](http://developer.android.com/guide/topics/resources/localization.html) to include string resources for the languages supported by your game.
 
-* `Assets/Plugins/Android/res/values/strings.xml` (Default/English)
+* `Assets/Plugins/Android/res/values/strings.xml` (Default)
 
 * `Assets/Plugins/Android/res/values-de/strings.xml` (Dutch)
+
+* `Assets/Plugins/Android/res/values-en/strings.xml` (English)
 
 * `Assets/Plugins/Android/res/values-es/strings.xml` (Spanish) 
 
