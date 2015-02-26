@@ -175,6 +175,33 @@ Using the inspector, browse the `OuyaGameObject`. Here you can add strings to ma
 
 * See the [Releases Section](#releases) to get the package for publishing to Xiaomi
 
+## Localization
+
+Use [Android localization](http://developer.android.com/guide/topics/resources/localization.html) to include string resources for the languages supported by your game.
+
+* `Assets/Plugins/Android/res/values/strings.xml` (Default/English)
+
+* `Assets/Plugins/Android/res/values-de/strings.xml` (Dutch)
+
+* `Assets/Plugins/Android/res/values-es/strings.xml` (Spanish) 
+
+* `Assets/Plugins/Android/res/values-fr/strings.xml` (French)
+
+* `Assets/Plugins/Android/res/values-it/strings.xml` (Italian)
+
+* `Assets/Plugins/Android/res/values-zh-rCN/strings.xml` (Simplified Chinese)
+
+Resource files contain `key/value` pairs for looking up localized strings given the `key` value.
+Using the `OuyaSDK` API, invoke `OuyaSDK.getStringResource("app_name")` to return the localized string for the key `app_name` which in this example would return `安卓 出口` when the language is detected as `Simplified Chinese`, i.e. on the `Xiaomi` box.
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">安卓 出口</string>
+  <string name="exit">出口</string>
+</resources>
+```
+
 ## Other Player Settings ##
 
 In the Android `Player Settings` and within the `Other Settings` subgroup, here you can enter your package identifier from the [developer portal](http://devs.ouya.tv) into the `bundle id` field. Make sure the `minimum API level` field to 16.
