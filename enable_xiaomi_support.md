@@ -26,6 +26,11 @@ Xiaomi's SDK requires several additional permissions in order to work.
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 ```
 
+## Receipt Checking ##
+
+* If your game has in-app-purchases, be sure to check for receipts when the application starts.
+This is important to verify entitlement purchases for premium games and demo games with paid unlock.
+
 ## Review the OUYA Everywhere Documentation ##
 
 * Be sure to review the [OUYA Everywhere Documentation](https://github.com/ouya/docs/blob/master/ouya-everywhere.md) for your engine.
