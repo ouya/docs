@@ -80,6 +80,26 @@ Additionally, non-OUYA markets require being pre-informed about all possible pro
 	}
 ```
 
+## Disable Screensaver
+
+* The screensaver should be disabled while your game is running. Invoke `View.setKeepScreenOn(true)` to disable the screensaver. Here is a common scenario of an activity loading the layout and using the content View to disable the screensaver.
+
+*(Using Java Example)*
+
+```java
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		FrameLayout content = (FrameLayout)findViewById(android.R.id.content);
+		if (null != content) {
+			// Disable screensaver
+			content.setKeepScreenOn(true);
+		}
+	}
+```
+
 ## Create a Xiaomi-specific icon
 
 The application icon on Xiaomi is a little unusual.  It will exist in the xhdpi resolution, but it is not a standard Android icon.
