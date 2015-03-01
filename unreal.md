@@ -77,6 +77,8 @@
 
 * [Master Unreal Blueprints](https://forums.unrealengine.com/showthread.php?10221-BOOK-Blueprints-Master-the-Art-of-Unreal-Engine-4-Blueprints) - Books and other resources for mastering Blueprints
 
+* [Syncing Remote Fork](https://help.github.com/articles/syncing-a-fork/) - As EpicGames releases branch updates, the fork needs to be synced
+
 ### Training and Jams
 
 * [Training Streams](https://forums.unrealengine.com/showthread.php?53457-Twitch-NEW!-Training-Stream-Spline-and-Spline-Mesh-Components-Dec-9-2014) happen Tuesdays for Q&A training sessions.
