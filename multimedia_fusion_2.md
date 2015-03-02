@@ -1,4 +1,4 @@
-## Multimedia Fusion 2 Engine
+## Clickteam Fusion Engine
 
 ### Forums
 
@@ -6,7 +6,7 @@
 
 ## Guide
 
-* Note: MMF2 has been rebranded to `ClickTeam Fusion 2.5`
+* Note: `MMF2` has been rebranded to `ClickTeam Fusion 2.5`
 
 ### Examples
 
