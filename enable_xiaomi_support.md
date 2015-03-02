@@ -131,11 +131,21 @@ The application icon on Xiaomi is a little unusual.  It will exist in the xhdpi 
 
 ## Localization Resources
 
-* Use [Android localization](http://developer.android.com/guide/topics/resources/localization.html) to include a `Simplified Chinese` string resource. [Localization Example](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/AndroidExit)
+Use [Android localization](http://developer.android.com/guide/topics/resources/localization.html) to include a `Simplified Chinese` string resource. [Localization Example](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/AndroidExit)
 
-```
-res\values-zh-rCN\strings.xml
-```
+* `res/values/strings.xml` (Default)
+
+* `res/values-de/strings.xml` (Dutch)
+
+* `res/values-en/strings.xml` (English)
+
+* `res/values-es/strings.xml` (Spanish) 
+
+* `res/values-fr/strings.xml` (French)
+
+* `res/values-it/strings.xml` (Italian)
+
+* `res/values-zh-rCN/strings.xml` (Simplified Chinese)
 
 ## Submission
 
