@@ -2,9 +2,11 @@
 
 ### Forums
 
-@OUYA - (Multimedia Fusion 2 on OUYA Forums) - http://forums.ouya.tv/categories/multimedia-fusion-2-on-ouya<br/>
+@OUYA - (Clickteam Fusion on OUYA Forums) - https://forums.ouya.tv/categories/clickteam-fusion-2-on-ouya<br/>
 
 ## Guide
+
+* Note: MMF2 has been rebranded to `ClickTeam Fusion 2.5`
 
 ### Examples
 
