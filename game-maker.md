@@ -20,11 +20,11 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/GameMak
 
 ## Guide
 
-### Video Tutorials
+## Video Tutorials
 
 <b>GameMaker Studio Tutorials</b> - http://www.youtube.com/playlist?list=PLUYhFCYb2qeOBR9AVERSimlZEN-dXCoOW
 
-### Examples
+## Examples
 
 Examples are included at the base GIT path.
 
@@ -32,10 +32,12 @@ Examples are included at the base GIT path.
 
 <a target=_blank href="http://gmc.yoyogames.com/index.php?showtopic=570978&page=1"><b>In-App-Purchases</b></a> - Follow the post by Manuel777 of the GMS Community, which adds purchase support to GMS
 
-### Resources
+## Resources
 
-Game Maker - http://yoyogames.com/gamemaker/download
+* Game Maker - http://yoyogames.com/gamemaker/download
 
-Game Maker Wiki - http://wiki.yoyogames.com/index.php
+* Game Maker Wiki - http://wiki.yoyogames.com/index.php
 
-Game Maker Studio Setup for Android - http://wiki.yoyogames.com/index.php/GameMaker:Studio_Settings_for_Android
+* Game Maker Studio Setup for Android - http://wiki.yoyogames.com/index.php/GameMaker:Studio_Settings_for_Android
+
+* Create a [Native Extension](http://help.yoyogames.com/entries/30690273) For Android
