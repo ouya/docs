@@ -5,10 +5,6 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Android
 
 ## Guide
 
-###Video Tutorials###
-
-<b>The New Boston</b> - has a great set of video tutorials for learning Android - http://thenewboston.org/list.php?cat=6
-
 ###Tegra Toolkit###
 
 The Tegra Toolkit is a large toolset which includes the following:
