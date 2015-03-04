@@ -21,13 +21,17 @@
 
 ## Quick Start
 
-* First you need an [Unreal subscription](http://unrealengine.com) ($19/month + 5%)
+* First you need an [Unreal](http://unrealengine.com) account
 
 * Link your Github account with your Unreal account per the [wiki instructions](https://wiki.unrealengine.com/GitHub_Setup#GitHub_Account)
 
 * Only after linking your Github account will you have access to the [UE4 Source](https://github.com/EpicGames/UnrealEngine).
 
-* After linking your Github account, you should have access to the [4.6-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) for the OUYA Fork of UE4.
+* After linking your Github account, you should have access to the OUYA Branches
+
+* [4.7-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.7-OUYA) for the OUYA Fork of UE4
+
+* [4.6-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) for the OUYA Fork of UE4
 
 * Quick Link: [Building the OUYA Fork of UE4](#build-ue4)
 
@@ -53,7 +57,7 @@
 
 ## Resources
 
-* Get the [Unreal Engine](https://www.unrealengine.com/what-is-unreal-engine-4) - Unreal Engine and Source, All for $19 per month + 5% of Revenue
+* Get the [Unreal Engine](https://www.unrealengine.com/what-is-unreal-engine-4) - Unreal Engine and Source, All for 5% of Revenue after more than $3k gross revenue
 
 * [Unreal Forum Post](https://forums.unrealengine.com/showthread.php?51910-Getting-Started-Android-Development-References-Documentation-Feedback) - Unreal - Tracking OUYA Plugin process and requests for info
 
@@ -246,6 +250,14 @@ Checking out files: 100% (26995/26995), done.
 * Click the `Open Manifest Folder` button to customize the manifest.
 
 ![Open Manifest](unreal/image_25.png)
+
+* Be sure to check `Package game data inside .apk?` which was added in the `4.7 update`. 
+
+![Open Manifest](unreal/image_136.png)
+
+* The Android settings now auto-generate the `AndroidManifest.xml` in the `4.7 update`.
+
+![Open Manifest](unreal/image_137.png)
 
 * Edit the `AndroidManifest.xml` in a `Text-Editor`.
 
