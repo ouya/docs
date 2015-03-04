@@ -11,6 +11,11 @@ While being included in the Xiaomi market is currently an invite-only process, m
 
 Download latest ODK from the OUYA Developer portal and setup your game to use it.
 
+## Review the OUYA Everywhere Documentation ##
+
+* Be sure to review the [OUYA Everywhere Documentation](https://github.com/ouya/docs/blob/master/ouya-everywhere.md) for your engine.
+The next initialization steps may integrate differently for your particular engine.
+
 ## Add the necessary files to your build
 
 * Download and extract [SDK_MIBOX_2.0.1](https://ouya-sdks.s3.amazonaws.com/xiaomi/SDK_MIBOX_2.0.1.zip)
@@ -30,11 +35,6 @@ Xiaomi's SDK requires several additional permissions in order to work.
 
 * If your game has in-app-purchases, be sure to check for receipts when the application starts.
 This is important to verify entitlement purchases for premium games and demo games with paid unlock.
-
-## Review the OUYA Everywhere Documentation ##
-
-* Be sure to review the [OUYA Everywhere Documentation](https://github.com/ouya/docs/blob/master/ouya-everywhere.md) for your engine.
-The next initialization steps may integrate differently for your particular engine.
 
 ## Update your OuyaFacade initialization bundle
 
