@@ -153,9 +153,9 @@ Add the OuyaGameObject to your initial loading scene. It uses DontDestroyOnLoad 
 
 ![image alt text](image_20.png)
 
-## OUYA Everywhere ##
+## Xiaomi Initialization
 
-[Back to general info](../enable_xiaomi_support.md#review-the-ouya-everywhere-documentation)
+[Back to general info](../enable_xiaomi_support.md#xiaomi-initialization)
 
 Using the inspector, browse the `OuyaGameObject`. Here you can add strings to make the game compatible with OUYA Everywhere devices.
 
@@ -218,7 +218,7 @@ Updating to the latest Core plugin in [releases](#releases) will disable the Xia
 
 [Back to general info](../enable_xiaomi_support.md#create-a-xiaomi-specific-icon)
 
-The `ouya_xiaomi_icon.png` 284x160 icon should be places in `Assets/plugins/Android/res/drawable-xhdpi/ouya_xiaomi_icon.png`.
+The `ouya_xiaomi_icon.png` 284x160 icon should be placed in `Assets/plugins/Android/res/drawable-xhdpi/ouya_xiaomi_icon.png`.
 
 ## Other Player Settings ##
 
