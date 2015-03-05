@@ -204,6 +204,10 @@ Using the `OuyaSDK` API, invoke `OuyaSDK.getStringResource("app_name")` to retur
 </resources>
 ```
 
+## Screensaver
+
+* Updating to the latest Core plugin in [releases](#releases) will disable the Xiaomi screensaver while the unity app/game is running. 
+
 ## Other Player Settings ##
 
 In the Android `Player Settings` and within the `Other Settings` subgroup, here you can enter your package identifier from the [developer portal](http://devs.ouya.tv) into the `bundle id` field. Make sure the `minimum API level` field to 16.

@@ -1,6 +1,6 @@
 # Enabling Xiaomi Support
 
-While being included in the Xiaomi market is currently an invite-only process, making your app Xiaomi-Enabled is a relatively simple affair.
+While being included in the Xiaomi market is currently an invite-only process, making your app Xiaomi-Enabled is a relatively simple affair. To ensure your app/game is ready for Xiaomi, be sure to update to the latest OUYA-Everywhere  plugin and publish to the OUYA Store targeting the OUYA. After passing review, your app/game is ready for Xiaomi. 
 
 ## Xiaomi Target Hardware
 
@@ -9,6 +9,10 @@ While being included in the Xiaomi market is currently an invite-only process, m
 ## Update to the latest ODK
 
 Download latest ODK from the OUYA Developer portal and setup your game to use it.
+
+Engine specific details:
+
+* Releases for [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#releases)
 
 ## Review the OUYA Everywhere Documentation ##
 
@@ -104,6 +108,10 @@ Additionally, non-OUYA markets require being pre-informed about all possible pro
 	}
 ```
 
+Engine specific details:
+
+* Screensaver for [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#screensaver)
+
 ## Create a Xiaomi-specific icon
 
 The application icon on Xiaomi is a little unusual.  It will exist in the xhdpi resolution, but it is not a standard Android icon.
@@ -145,6 +153,10 @@ Use [Android localization](http://developer.android.com/guide/topics/resources/l
 * `res/values-it/strings.xml` (Italian)
 
 * `res/values-zh-rCN/strings.xml` (Simplified Chinese)
+
+Engine specific details:
+
+* Localization for [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#localization) 
 
 ## Submission
 
