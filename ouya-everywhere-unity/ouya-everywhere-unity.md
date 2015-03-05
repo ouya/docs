@@ -212,7 +212,13 @@ Using the `OuyaSDK` API, invoke `OuyaSDK.getStringResource("app_name")` to retur
 
 [Back to general info](../enable_xiaomi_support.md#disable-xiaomi-screensaver)
 
-* Updating to the latest Core plugin in [releases](#releases) will disable the Xiaomi screensaver while the unity app/game is running. 
+Updating to the latest Core plugin in [releases](#releases) will disable the Xiaomi screensaver while the unity app/game is running. 
+
+## Create a Xiaomi-specific icon
+
+[Back to general info](../enable_xiaomi_support.md#create-a-xiaomi-specific-icon)
+
+The `ouya_xiaomi_icon.png` 284x160 icon should be places in `Assets/plugins/Android/res/drawable-xhdpi/ouya_xiaomi_icon.png`.
 
 ## Other Player Settings ##
 
