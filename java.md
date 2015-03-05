@@ -10,7 +10,7 @@ Java apps/games use the `ouya-sdk.jar` library included in the `ODK` downloadabl
 
 ## Xiaomi Libraries
 
-[Back to general info](enable_xiaomi_support.md#xiaomi_libraries)
+[Back to general info](enable_xiaomi_support.md#xiaomi-libraries)
 
 Place the Xiaomi libraries in the following destinations:
 
@@ -20,7 +20,7 @@ Place the Xiaomi libraries in the following destinations:
 
 ## Xiaomi Required Permissions
 
-[Back to general info](enable_xiaomi_support.md#xiaomi_required_permissions)
+[Back to general info](enable_xiaomi_support.md#xiaomi-required-permissions)
 
 Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in order to work.
 ```java
@@ -31,7 +31,7 @@ Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in
 
 ## Xiaomi Initialization
 
-[Back to general info](enable_xiaomi_support.md#xiaomi_initialization)
+[Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
 
 * Using `Java`, prepare a `Bundle` with additional `key/value` pairs which are used to initialize the `OuyaFacade`.
 
@@ -78,7 +78,7 @@ Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in
 
 ## Disable Xiaomi Screensaver
 
-[Back to general info](enable_xiaomi_support.md#disable_xiaomi_screensaver)
+[Back to general info](enable_xiaomi_support.md#disable-xiaomi-screensaver)
 
 * The screensaver should be disabled while your game is running. Invoke `View.setKeepScreenOn(true)` to disable the screensaver. Here is a common scenario of an activity loading the layout and using the content View to disable the screensaver.
 
@@ -98,7 +98,7 @@ Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in
 
 ## Create a Xiaomi-specific icon
 
-[Back to general info](enable_xiaomi_support.md#create_a_xiaomi-specific_icon)
+[Back to general info](enable_xiaomi_support.md#create-a-xiaomi-specific-icon)
 
 The `ouya_xiaomi_icon.png` 284x160 icon should be places in `res/drawable-xhdpi/ouya_xiaomi_icon.png`.
 

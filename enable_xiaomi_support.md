@@ -39,8 +39,8 @@ Engine specific details:
 
 Engine specific details:
 
-* [Java](java.md#xiaomi_libraries)
-* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi_libraries)
+* [Java](java.md#xiaomi-libraries)
+* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi-libraries)
 
 ## Xiaomi required permissions
 
@@ -53,8 +53,8 @@ Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in
 
 Engine specific details:
 
-* [Java](java.md#xiaomi_required_permissions)
-* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi_required_permissions)
+* [Java](java.md#xiaomi-required-permissions)
+* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi-required-permissions)
 
 ## Receipt Checking ##
 
@@ -81,8 +81,8 @@ The following initialization strings must be set.
 
 Engine specific details:
 
-* [Java](java.md#xiaomi_initialization)
-* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi_initialization)
+* [Java](java.md#xiaomi-initialization)
+* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi-initialization)
 
 ## Xiaomi Disable Screensaver
 
@@ -90,8 +90,8 @@ Engine specific details:
 
 Engine specific details:
 
-* [Java](java.md#xiaomi_disable_screensaver)
-* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi_disable_screensaver)
+* [Java](java.md#xiaomi-disable-screensaver)
+* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi-disable-screensaver)
 
 ## Create a Xiaomi-specific icon
 
@@ -114,8 +114,8 @@ The application icon on Xiaomi is a little unusual.  It will exist in the xhdpi 
 
 Engine specific details:
 
-* [Java](java.md#create_a_xiaomi-specific_icon)
-* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#create_a_xiaomi-specific_icon)
+* [Java](java.md#create-a-xiaomi-specific-icon)
+* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#create-a-xiaomi-specific-icon)
 
 ## Xiaomi requires a .psd image.
 
