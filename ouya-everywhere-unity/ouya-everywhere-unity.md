@@ -165,6 +165,8 @@ Place the Xiaomi libraries in the following destinations:
 
 The [releases section](#releases) has a link to the `Unity-OuyaSDK-Xiaomi.unitypackage` which contains the files at the intended locations.
 
+## Xiaomi Required Permissions
+
 [Back to general info](../enable_xiaomi_support.md#xiaomi-required-permissions)
 
 Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in order to work.
