@@ -153,6 +153,31 @@ Add the OuyaGameObject to your initial loading scene. It uses DontDestroyOnLoad 
 
 ![image alt text](image_20.png)
 
+## Xiaomi Libraries
+
+[Back to general info](../enable_xiaomi_support.md#xiaomi-libraries)
+
+Place the Xiaomi libraries in the following destinations:
+
+* `Assets/Plugins/Android/assets/MiGameCenterSDKService.apk`
+
+* `Assets/Plugins/Android/libs/SDK_MIBOX_2.0.1.jar`
+
+The [releases section](#releases) has a link to the `Unity-OuyaSDK-Xiaomi.unitypackage` which contains the files at the intended locations.
+
+[Back to general info](../enable_xiaomi_support.md#xiaomi-required-permissions)
+
+Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in order to work.
+```java
+	<uses-permission android:name="com.xiaomi.sdk.permission.PAYMENT"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+```
+
+The [releases section](#releases) has a link to the `Unity-OuyaSDK-Xiaomi.unitypackage` which contains the `AndroidManifest.xml` with the added permissions at the intended location.
+
+* `Assets/Plugins/Android/AndroidManifest.xml`
+
 ## Xiaomi Initialization
 
 [Back to general info](../enable_xiaomi_support.md#xiaomi-initialization)
