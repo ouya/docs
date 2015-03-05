@@ -84,14 +84,14 @@ Engine specific details:
 * [Java](java.md#xiaomi-initialization)
 * [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi-initialization)
 
-## Xiaomi Disable Screensaver
+## Disable Xiaomi Screensaver
 
 * The Xiaomi screensaver should be disabled while your game is running.
 
 Engine specific details:
 
-* [Java](java.md#xiaomi-disable-screensaver)
-* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi-disable-screensaver)
+* [Java](java.md#disable-xiaomi-screensaver)
+* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#disable-xiaomi-screensaver)
 
 ## Create a Xiaomi-specific icon
 
