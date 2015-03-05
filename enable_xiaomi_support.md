@@ -13,7 +13,7 @@ Download latest ODK from the OUYA [Developer portal](http://devs.ouya.tv) and se
 Engine specific details:
 
 * [Java](java.md#releases)
-* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#releases)
+* [Unity](unity.md#releases)
 
 ## Review the OUYA Everywhere Documentation ##
 
@@ -28,7 +28,7 @@ Engine specific details:
 * [OUYA Everywhere on Java](java.md#ouya-everywhere)
 * [OUYA Everywhere on Marmalade](marmalade.md#ouya-everywhere)
 * [OUYA Everywhere on MonoGame](ouya-everywhere-monogame/ouya-everywhere-monogame.md#ouya-everywhere)
-* [OUYA Everywhere on Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#ouya-everywhere)
+* [OUYA Everywhere on Unity](unity.md#ouya-everywhere)
 * [OUYA Everywhere on Unreal](unreal.md#ouya-everywhere)
 
 ## Xiaomi Libraries
@@ -40,7 +40,7 @@ Engine specific details:
 Engine specific details:
 
 * [Java](java.md#xiaomi-libraries)
-* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi-libraries)
+* [Unity](unity.md#xiaomi-libraries)
 
 ## Xiaomi required permissions
 
@@ -54,7 +54,7 @@ Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in
 Engine specific details:
 
 * [Java](java.md#xiaomi-required-permissions)
-* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi-required-permissions)
+* [Unity](unity.md#xiaomi-required-permissions)
 
 ## Receipt Checking ##
 
@@ -82,7 +82,7 @@ The following initialization strings must be set.
 Engine specific details:
 
 * [Java](java.md#xiaomi-initialization)
-* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi-initialization)
+* [Unity](unity.md#xiaomi-initialization)
 
 ## Disable Xiaomi Screensaver
 
@@ -91,7 +91,7 @@ Engine specific details:
 Engine specific details:
 
 * [Java](java.md#disable-xiaomi-screensaver)
-* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#disable-xiaomi-screensaver)
+* [Unity](unity.md#disable-xiaomi-screensaver)
 
 ## Create a Xiaomi-specific icon
 
@@ -115,7 +115,7 @@ The application icon on Xiaomi is a little unusual.  It will exist in the xhdpi 
 Engine specific details:
 
 * [Java](java.md#create-a-xiaomi-specific-icon)
-* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#create-a-xiaomi-specific-icon)
+* [Unity](unity.md#create-a-xiaomi-specific-icon)
 
 ## Xiaomi requires a .psd image.
 
@@ -132,7 +132,7 @@ Xiaomi requires that the app/game has been localized for `Simplified Chinese`.
 Engine specific details:
 
 * [Java](java.md#localization-resources)
-* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#localization-resources) 
+* [Unity](unity.md#localization-resources) 
 
 ## Submission
 
