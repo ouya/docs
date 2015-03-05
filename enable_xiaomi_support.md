@@ -8,109 +8,90 @@ While being included in the Xiaomi market is currently an invite-only process, m
 
 ## Update to the latest ODK
 
-Download latest ODK from the OUYA Developer portal and setup your game to use it.
+Download latest ODK from the OUYA [Developer portal](http://devs.ouya.tv) and setup your game to use it.
 
 Engine specific details:
 
-* Releases for [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#releases)
+* [Java](java.md#releases)
+* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#releases)
 
 ## Review the OUYA Everywhere Documentation ##
 
 * Be sure to review the [OUYA Everywhere Documentation](ouya-everywhere.md) for your engine.
 The next initialization steps may integrate differently for your particular engine.
 
-## Add the necessary files to your build
+Engine specific details:
+
+* [OUYA Everywhere on Construct 2](construct_2.md#ouya-everywhere)
+* [OUYA Everywhere on Corona](corona.md#ouya-everywhere)
+* [OUYA Everywhere on HTML5](html5.md#ouya-everywhere)
+* [OUYA Everywhere on Java](java.md#ouya-everywhere)
+* [OUYA Everywhere on Marmalade](marmalade.md#ouya-everywhere)
+* [OUYA Everywhere on MonoGame](ouya-everywhere-monogame/ouya-everywhere-monogame.md#ouya-everywhere)
+* [OUYA Everywhere on Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#ouya-everywhere)
+* [OUYA Everywhere on Unreal](unreal.md#ouya-everywhere)
+
+## Xiaomi Libraries
 
 * Download and extract [SDK_MIBOX_2.0.1](https://ouya-sdks.s3.amazonaws.com/xiaomi/SDK_MIBOX_2.0.1.zip)
 * Place **SDK_MIBOX_2.0.1.jar** with the libraries of your game
 * Place **MiGameCenterSDKService.apk** in your <game>/assets directory.
 
-## Add the required permissions
+Engine specific details:
 
-Xiaomi's SDK requires several additional permissions in order to work.
+* [Java](java.md#xiaomi_libraries)
+* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi_libraries)
+
+## Xiaomi required permissions
+
+Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in order to work.
 ```java
 	<uses-permission android:name="com.xiaomi.sdk.permission.PAYMENT"/>
     <uses-permission android:name="android.permission.GET_TASKS"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 ```
 
+Engine specific details:
+
+* [Java](java.md#xiaomi_required_permissions)
+* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi_required_permissions)
+
 ## Receipt Checking ##
 
 * If your game has in-app-purchases, be sure to check for receipts when the application starts.
 This is important to verify entitlement purchases for premium games and demo games with paid unlock.
 
-## Update your OuyaFacade initialization bundle
+## Xiaomi Initialization
 
 The Xiaomi market requires a special application key and ID.  Contact the [OUYA team](mailto:xiaomisupport@ouya.tv) to get these values.
 
 Additionally, non-OUYA markets require being pre-informed about all possible product IDs that might be used during the game's run.  This is so the SDK can do any transforms that are specific to the market that the game is connecting to.
 
-*(Using Java Example)*
+The following initialization strings must be set.
 
-```java
-	// Your developer id can be found in the Developer Portal
-	public static final String DEVELOPER_ID = "00000000-0000-0000-0000-000000000000";
-
-	// Both of these values will be emailed to you by the OUYA team after you've been 
-	// selected by the OUYA team
-	public static final String XIAOMI_APP_ID = "0000000000000";
-	public static final String XIAOMI_APP_KEY = "000000000000000000";
-
-	// All product IDs that might be used
-	public static final String[] ALL_PRODUCT_IDS = new String[] {
-		"long_sword",
-		"sharp_axe",
-		"100_extra_lives"
-	}
-
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		Bundle developerInfo = new Bundle();
-
-		// "tv.ouya.developer_id"
-		developerInfo.putString(OuyaFacade.OUYA_DEVELOPER_ID, DEVELOPER_ID);
+* `tv.ouya.developer_id` - The developer UUID available after signing into the [developer portal](http://devs.ouya.tv)
+ 
+* `signing key` - The signing key is created when a game entry is entered in the developer portal. Each game entry in the games list has a signing key available for download.
 		
-		developerInfo.putByteArray(OuyaFacade.OUYA_DEVELOPER_PUBLIC_KEY, loadApplicationKey());
+* `tv.ouya.xiaomi_app_id` - The Xiaomi Application Identifier
 
-		// We must tell the OuyaFacade that we can use the Xiaomi market for purchases.
-		
-		// "tv.ouya.xiaomi_app_id"
-		developerInfo.putString(OuyaFacade.XIAOMI_APPLICATION_ID, XIAOMI_APP_ID);
-		
-		// "tv.ouya.xiaomi_app_key"
-		developerInfo.putString(OuyaFacade.XIAOMI_APPLICATION_KEY, XIAOMI_APP_KEY);
-		
-		// "tv.ouya.product_id_list"
-		developerInfo.putStringArray(OuyaFacade.OUYA_PRODUCT_ID_LIST, ALL_PRODUCT_IDS);
+* `tv.ouya.xiaomi_app_key` - The Xiaomi Application Key
 
-		OuyaFacade.getInstance().init(this, developerInfo);
-		super.onCreate(savedInstanceState);
-	}
-```
-
-## Disable Screensaver
-
-* The screensaver should be disabled while your game is running. Invoke `View.setKeepScreenOn(true)` to disable the screensaver. Here is a common scenario of an activity loading the layout and using the content View to disable the screensaver.
-
-*(Using Java Example)*
-
-```java
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		
-		FrameLayout content = (FrameLayout)findViewById(android.R.id.content);
-		if (null != content) {
-			// Disable screensaver
-			content.setKeepScreenOn(true);
-		}
-	}
-```
+* `tv.ouya.product_id_list` - The list of entitlements available for purchase within the app/game
 
 Engine specific details:
 
-* Screensaver for [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#screensaver)
+* [Java](java.md#xiaomi_initialization)
+* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi_initialization)
+
+## Xiaomi Disable Screensaver
+
+* The Xiaomi screensaver should be disabled while your game is running.
+
+Engine specific details:
+
+* [Java](java.md#xiaomi_disable_screensaver)
+* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#xiaomi_disable_screensaver)
 
 ## Create a Xiaomi-specific icon
 
@@ -131,32 +112,27 @@ The application icon on Xiaomi is a little unusual.  It will exist in the xhdpi 
 
 	![this example](res/game_tile_alt.png)
 
+Engine specific details:
+
+* [Java](java.md#create_a_xiaomi-specific_icon)
+* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#create_a_xiaomi-specific_icon)
+
 ## Xiaomi requires a .psd image.
+
 * Xiaomi also requires a 800x800 image of the protagonist character(s), or something showing what the game is about.
-	* Must be in PSD format.
-	* Should be sent directly to the [OUYA team](mailto:xiaomisupport@ouya.tv)
+
+* Must be in PSD format.
+
+* Should be sent directly to the [OUYA team](mailto:xiaomisupport@ouya.tv)
 
 ## Localization Resources
 
-Use [Android localization](http://developer.android.com/guide/topics/resources/localization.html) to include a `Simplified Chinese` string resource. [Localization Example](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/AndroidExit)
-
-* `res/values/strings.xml` (Default)
-
-* `res/values-de/strings.xml` (Dutch)
-
-* `res/values-en/strings.xml` (English)
-
-* `res/values-es/strings.xml` (Spanish) 
-
-* `res/values-fr/strings.xml` (French)
-
-* `res/values-it/strings.xml` (Italian)
-
-* `res/values-zh-rCN/strings.xml` (Simplified Chinese)
+Xiaomi requires that the app/game has been localized for `Simplified Chinese`. 
 
 Engine specific details:
 
-* Localization for [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#localization) 
+* [Java](java.md#localization-resources)
+* [Unity](ouya-everywhere-unity/ouya-everywhere-unity.md#localization-resources) 
 
 ## Submission
 
