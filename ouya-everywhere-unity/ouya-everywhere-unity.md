@@ -155,6 +155,8 @@ Add the OuyaGameObject to your initial loading scene. It uses DontDestroyOnLoad 
 
 ## OUYA Everywhere ##
 
+[Back to general info](../enable_xiaomi_support.md#review-the-ouya-everywhere-documentation)
+
 Using the inspector, browse the `OuyaGameObject`. Here you can add strings to make the game compatible with OUYA Everywhere devices.
 
 * `tv.ouya.developer_id` - The developer UUID can be found in the [developer portal](http://devs.ouya.tv) after logging in.
@@ -175,7 +177,9 @@ Using the inspector, browse the `OuyaGameObject`. Here you can add strings to ma
 
 * See the [Releases Section](#releases) to get the package for publishing to Xiaomi
 
-## Localization
+## Localization Resources
+
+[Back to general info](../enable_xiaomi_support.md#localization-resources)
 
 Use [Android localization](http://developer.android.com/guide/topics/resources/localization.html) to include string resources for the languages supported by your game.
 
@@ -206,7 +210,7 @@ Using the `OuyaSDK` API, invoke `OuyaSDK.getStringResource("app_name")` to retur
 
 ## Disable Xiaomi Screensaver
 
-[Back to general info](enable_xiaomi_support.md#disable-xiaomi-screensaver)
+[Back to general info](../enable_xiaomi_support.md#disable-xiaomi-screensaver)
 
 * Updating to the latest Core plugin in [releases](#releases) will disable the Xiaomi screensaver while the unity app/game is running. 
 
