@@ -147,7 +147,9 @@ The `onFailure` event provides error code and error message fields.
 
 * `OuyaSDK.errorMessageOnFailureInitOuyaPlugin` - The failure `error message` as a string
 
-## OUYA Everywhere ##
+## Xiaomi Initialization
+
+[Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
 
 `addInitOuyaPluginValues` supports additional strings to make the game compatible with OUYA Everywhere devices.
 

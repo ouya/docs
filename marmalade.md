@@ -145,7 +145,9 @@ void Application::InitOuyaPlugin()
 }
 ```
 
-## OUYA Everywhere ##
+## Xiaomi Initialization
+
+[Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
 
 `OuyaPlugin_initOuyaPlugin` supports additional strings to make the game compatible with OUYA Everywhere devices.
 

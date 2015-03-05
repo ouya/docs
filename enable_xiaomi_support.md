@@ -81,7 +81,12 @@ The following initialization strings must be set.
 
 Engine specific details:
 
+* [Construct 2](construct_2.md#xiaomi-initialization)
+* [Corona](corona.md#xiaomi-initialization)
+* [HTML5](html5.md#xiaomi-initialization)
+* [Marmalade](marmalade.md#xiaomi-initialization)
 * [Java](java.md#xiaomi-initialization)
+* [Unreal](unreal.md#xiaomi-initialization)
 * [Unity](unity.md#xiaomi-initialization)
 
 ## Disable Xiaomi Screensaver

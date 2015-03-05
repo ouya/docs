@@ -433,7 +433,9 @@ Upon success, the `InitOuyaPlugin` can be invoked.
 
 ![Screenshot](unreal/image_71.png)
 
-## OUYA Everywhere ##
+## Xiaomi Initialization
+
+[Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
 
 `addInitOuyaPluginValues` supports additional strings to make the game compatible with OUYA Everywhere devices.
 

@@ -415,7 +415,9 @@ end
 
 The main script sets up the basic button and text layout of the application. The key input listener is also registered here.
 
-## OUYA Everywhere ##
+## Xiaomi Initialization
+
+[Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
 
 `initOuyaPlugin` supports additional strings to make the game compatible with OUYA Everywhere devices.
 

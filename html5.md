@@ -339,7 +339,9 @@ If the initialization fails, the onFailure callback will be invoked.
       OuyaSDK.initOuyaPlugin(jsonData, onSuccessInitOuyaPlugin, onFailureInitOuyaPlugin);
 ```
 
-## OUYA Everywhere ##
+## Xiaomi Initialization
+
+[Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
 
 `initOuyaPlugin` supports additional strings to make the game compatible with OUYA Everywhere devices.
 
