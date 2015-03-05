@@ -108,9 +108,9 @@ The application icon on Xiaomi is a little unusual.  It will exist in the xhdpi 
     	* Background should be a solid color
     	* No actual text - will be inserted by system at runtime.
     * NOTE: Do NOT update your AndroidManifest.xml to reference ouya_xiaomi_icon - you only need to place the asset in the correct location.
-    * See [this example](res/game_tile_alt.png)
+    * See [this example](enable_xiaomi_support/image_1.png)
 
-	![this example](res/game_tile_alt.png)
+	![this example](enable_xiaomi_support/image_1.png)
 
 Engine specific details:
 
