@@ -73,9 +73,9 @@ The following initialization strings must be set.
  
 * `signing key` - The signing key is created when a game entry is entered in the developer portal. Each game entry in the games list has a signing key available for download.
 		
-* `tv.ouya.xiaomi_app_id` - The Xiaomi Application Identifier
+* `com.xiaomi.app_id` - The Xiaomi Application Identifier
 
-* `tv.ouya.xiaomi_app_key` - The Xiaomi Application Key
+* `com.xiaomi.app_key` - The Xiaomi Application Key
 
 * `tv.ouya.product_id_list` - The list of entitlements available for purchase within the app/game
 
