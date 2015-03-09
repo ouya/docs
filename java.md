@@ -62,10 +62,10 @@ Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in
 
 		// We must tell the OuyaFacade that we can use the Xiaomi market for purchases.
 		
-		// "tv.ouya.xiaomi_app_id"
+		// "com.xiaomi.app_id"
 		developerInfo.putString(OuyaFacade.XIAOMI_APPLICATION_ID, XIAOMI_APP_ID);
 		
-		// "tv.ouya.xiaomi_app_key"
+		// "com.xiaomi.app_key"
 		developerInfo.putString(OuyaFacade.XIAOMI_APPLICATION_KEY, XIAOMI_APP_KEY);
 		
 		// "tv.ouya.product_id_list"
