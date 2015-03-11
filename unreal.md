@@ -441,9 +441,9 @@ Upon success, the `InitOuyaPlugin` can be invoked.
 
 * `tv.ouya.developer_id` - The developer UUID can be found in the [developer portal](http://devs.ouya.tv) after logging in.
 
-* `tv.ouya.xiaomi_app_id` - The Xiaomi App Id is provided by the content team, email `officehours@ouya.tv` to obtain your key.
+* `com.xiaomi.app_id` - The Xiaomi App Id is provided by the content team, email `officehours@ouya.tv` to obtain your key.
 
-* `tv.ouya.xiaomi_app_key` - The Xiaomi App Key is provided by the content team, email `officehours@ouya.tv` to obtain your key.
+* `com.xiaomi.app_key` - The Xiaomi App Key is provided by the content team, email `officehours@ouya.tv` to obtain your key.
 
 * `tv.ouya.product_id_list` - The product id list is a comma separated list of product ids that can be purchased in the game.
 
