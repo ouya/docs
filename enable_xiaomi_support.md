@@ -98,6 +98,10 @@ Engine specific details:
 * [Java](java.md#disable-xiaomi-screensaver)
 * [Unity](unity.md#disable-xiaomi-screensaver)
 
+## Exit Button on Main Menu
+
+Typically games have a main menu, and the menu should have an exit button to quit the game. Alternatively, pressing the OUYA `A` button on the main menu should prompt to exit the game.
+
 ## Create a Xiaomi-specific icon
 
 The application icon on Xiaomi is a little unusual.  It will exist in the xhdpi resolution, but it is not a standard Android icon.
