@@ -137,7 +137,13 @@ Xiaomi requires that the app/game has been localized for `Simplified Chinese`.
 Engine specific details:
 
 * [Java](java.md#localization-resources)
-* [Unity](unity.md#localization-resources) 
+* [Unity](unity.md#localization-resources)
+
+## Versioning
+
+Builds need to use standard [Android versioning](http://developer.android.com/tools/publishing/versioning.html).
+Each time a build is submitted to Xiaomi, the `version name` and `version code` need to be incremented.
+In most cases the version can be changed in the `AndroidManifest.xml`. 
 
 ## Submission
 
