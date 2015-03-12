@@ -71,7 +71,10 @@ Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in
 		// "tv.ouya.product_id_list"
 		developerInfo.putStringArray(OuyaFacade.OUYA_PRODUCT_ID_LIST, ALL_PRODUCT_IDS);
 
+		// Pass the Activity for the context parameter when initializing the OuyaFacade.
+		// Passing the application context for the context paramter will not work on Xiaomi.
 		OuyaFacade.getInstance().init(this, developerInfo);
+
 		super.onCreate(savedInstanceState);
 	}
 ```
