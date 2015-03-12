@@ -5,9 +5,13 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/MonoGam
 
 ### Forums
 
-@OUYA - (MonoGame on OUYA Forums) - http://forums.ouya.tv/categories/monogame-on-ouya<br/>
-@MonoGame - (MonoGame Forums) - http://community.monogame.net/category/ouya<br/>
-@MonoGame - (Archived MonoGame Forums) - https://monogame.codeplex.com/discussions/topics/5559/ouya<br/>
+@OUYA - (MonoGame on OUYA Forums) - http://forums.ouya.tv/categories/monogame-on-ouya
+
+@MonoGame - (MonoGame Forums) - http://community.monogame.net/category/ouya
+
+@MonoGame - (Archived MonoGame Forums) - http://monogame.codeplex.com/discussions/topics/5559/ouya
+
+@Xamarin - (Xamarin Forums) - http://forums.xamarin.com
 
 ### Developer Support Hangouts
 
