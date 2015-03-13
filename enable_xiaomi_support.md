@@ -147,6 +147,14 @@ Engine specific details:
 * [Java](java.md#localization-resources)
 * [Unity](unity.md#localization-resources)
 
+## Fonts
+
+* In order to support `Simplified Chinese` text, some engines use [true type fonts](http://en.wikipedia.org/wiki/TrueType) and others use [bitmap fonts](http://en.wikipedia.org/wiki/Computer_font#BITMAP).
+
+* [`bmfont`](http://www.angelcode.com/products/bmfont/) is a free bitmap font generation tool that can convert `true type fonts` into `bitmap fonts`.
+
+![bitmap font  example](enable_xiaomi_support/image_2.png)
+
 ## Versioning
 
 Builds need to use standard [Android versioning](http://developer.android.com/tools/publishing/versioning.html).
