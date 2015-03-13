@@ -89,6 +89,10 @@ Engine specific details:
 * [Unreal](unreal.md#xiaomi-initialization)
 * [Unity](unity.md#xiaomi-initialization)
 
+## Is Running on OUYA Hardware
+
+Calls to `OuyaFacade.isRunningOnOUYASupportedHardware` will fail on Xiaomi if the `OUYA Framework` is previously not installed. Avoid making calls to `isRunningOnOUYASupportedHardware` in your Xiaomi builds.
+
 ## Disable Xiaomi Screensaver
 
 * The Xiaomi screensaver should be disabled while your game is running.
