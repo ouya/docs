@@ -246,6 +246,8 @@ Using the `OuyaSDK` API, invoke `OuyaSDK.getStringResource("app_name")` to retur
 
 ## Fonts
 
+[Back to general info](enable_xiaomi_support.md#fonts)
+
 Unity has a variety of GUI plugins which each handle fonts differently.
 
 * For the [2D Toolkit](http://www.2dtoolkit.com) plugin, `TTF` fonts need to be converted to `Bitmap` fonts and then [import to a sprite collection](http://www.unikronsoftware.com/2dtoolkit/docs/latest/tutorial/importing_a_font_into_a_sprite_collection.html).
