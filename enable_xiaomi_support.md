@@ -8,7 +8,7 @@ While being included in the Xiaomi market is currently an invite-only process, m
 
 ## Update to the latest ODK
 
-Download latest ODK ([ODK-1.2.1493](https://ouya-sdks.s3.amazonaws.com/xiaomi/odk-1.2.1493.zip)) from the OUYA [Developer portal](http://devs.ouya.tv) and setup your game to use it.
+Download latest ODK ([ODK-1.2.1494](https://ouya-sdks.s3.amazonaws.com/xiaomi/odk-1.2.1494.zip)) from the OUYA [Developer portal](http://devs.ouya.tv) and setup your game to use it.
 
 Engine specific details:
 
@@ -167,7 +167,7 @@ Once the above changes have been made, your updated APK should be submitted via 
 
 ## TL;DR
 
-* Update to the latest ODK ([ODK-1.2.1493](https://ouya-sdks.s3.amazonaws.com/xiaomi/odk-1.2.1493.zip)).
+* Update to the latest ODK ([ODK-1.2.1494](https://ouya-sdks.s3.amazonaws.com/xiaomi/odk-1.2.1494.zip)).
 * Add files to your game project - Xiaomi SDK and Xiaomi's game service apk.
 * Add required permissions to your manifest.
 * Update OuyaFacade's initialization bundle.
