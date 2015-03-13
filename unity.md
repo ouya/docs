@@ -201,6 +201,18 @@ Using the inspector, browse the `OuyaGameObject`. Here you can add strings to ma
 
 * See the [Releases Section](#releases) to get the package for publishing to Xiaomi
 
+## Disable Xiaomi Screensaver
+
+[Back to general info](enable_xiaomi_support.md#disable-xiaomi-screensaver)
+
+Updating to the latest Core plugin in [releases](#releases) will disable the Xiaomi screensaver while the unity app/game is running. 
+
+## Create a Xiaomi-specific icon
+
+[Back to general info](enable_xiaomi_support.md#create-a-xiaomi-specific-icon)
+
+The `ouya_xiaomi_icon.png` 284x160 icon should be placed in `Assets/plugins/Android/res/drawable-xhdpi/ouya_xiaomi_icon.png`.
+
 ## Localization Resources
 
 [Back to general info](enable_xiaomi_support.md#localization-resources)
@@ -232,17 +244,11 @@ Using the `OuyaSDK` API, invoke `OuyaSDK.getStringResource("app_name")` to retur
 </resources>
 ```
 
-## Disable Xiaomi Screensaver
+## Fonts
 
-[Back to general info](enable_xiaomi_support.md#disable-xiaomi-screensaver)
+Unity has a variety of GUI plugins which each handle fonts differently.
 
-Updating to the latest Core plugin in [releases](#releases) will disable the Xiaomi screensaver while the unity app/game is running. 
-
-## Create a Xiaomi-specific icon
-
-[Back to general info](enable_xiaomi_support.md#create-a-xiaomi-specific-icon)
-
-The `ouya_xiaomi_icon.png` 284x160 icon should be placed in `Assets/plugins/Android/res/drawable-xhdpi/ouya_xiaomi_icon.png`.
+* For the [2D Toolkit](http://www.2dtoolkit.com) plugin, `TTF` fonts need to be converted to `Bitmap` fonts and then [import to a sprite collection](http://www.unikronsoftware.com/2dtoolkit/docs/latest/tutorial/importing_a_font_into_a_sprite_collection.html).
 
 ## Other Player Settings ##
 

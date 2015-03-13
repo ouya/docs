@@ -155,6 +155,10 @@ Engine specific details:
 
 ![bitmap font  example](enable_xiaomi_support/image_2.png)
 
+Engine specific details:
+
+* [Unity](unity.md#fonts)
+
 ## Versioning
 
 Builds need to use standard [Android versioning](http://developer.android.com/tools/publishing/versioning.html).
