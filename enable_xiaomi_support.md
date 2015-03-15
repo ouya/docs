@@ -83,6 +83,7 @@ Engine specific details:
 
 * [Construct 2](construct_2.md#xiaomi-initialization)
 * [Corona](corona.md#xiaomi-initialization)
+* [GameMaker](game-maker.md#xiaomi-initialization)
 * [HTML5](html5.md#xiaomi-initialization)
 * [Marmalade](marmalade.md#xiaomi-initialization)
 * [Java](java.md#xiaomi-initialization)
