@@ -24,6 +24,7 @@ Engine specific details:
 
 * [OUYA Everywhere on Construct 2](construct_2.md#ouya-everywhere)
 * [OUYA Everywhere on Corona](corona.md#ouya-everywhere)
+* [OUYA Everywhere on GameMaker](game-maker.md#ouya-everywhere)
 * [OUYA Everywhere on HTML5](html5.md#ouya-everywhere)
 * [OUYA Everywhere on Java](java.md#ouya-everywhere)
 * [OUYA Everywhere on Marmalade](marmalade.md#ouya-everywhere)

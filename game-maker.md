@@ -32,18 +32,6 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/GameMak
 
 ![Global settings](game-maker/image_3.png)
 
-## Video Tutorials
-
-<b>GameMaker Studio Tutorials</b> - http://www.youtube.com/playlist?list=PLUYhFCYb2qeOBR9AVERSimlZEN-dXCoOW
-
-## Examples
-
-Examples are included at the base GIT path.
-
-<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/blob/master/GameMaker/VirtualController.gmz"><b>Virtual Controller</b></a> - Maps OUYA controllers to multiple virtual controllers
-
-<a target=_blank href="http://gmc.yoyogames.com/index.php?showtopic=570978&page=1"><b>In-App-Purchases</b></a> - Follow the post by Manuel777 of the GMS Community, which adds purchase support to GMS
-
 ## Resources
 
 * Game Maker - http://yoyogames.com/gamemaker/download
@@ -54,13 +42,19 @@ Examples are included at the base GIT path.
 
 * Create a [Native Extension](http://help.yoyogames.com/entries/30690273) For Android
 
-### Virtual Controller ###
+## Video Tutorials
+
+<b>GameMaker Studio Tutorials</b> - http://www.youtube.com/playlist?list=PLUYhFCYb2qeOBR9AVERSimlZEN-dXCoOW
+
+## Examples
+
+### Virtual Controller
 
 The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/GameMaker/VirtualController.gmx) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated.
 
 ![VirtualController image](game-maker/image_4.png)
 
-## In-App-Purchases
+### In-App-Purchases
 
 The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/GameMaker/InAppPurchases.gmx) example uses the ODK to access gamer info, purchasing, and receipts.
 
