@@ -18,6 +18,10 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/GameMak
 <img src="http://img.youtube.com/vi/zWYVYmk6luc/0.jpg" alt="OUYA Hangout July 15th," width="240" height="180" border="10" /></a></td> 
 <td></td></tr></table>
 
+# Releases #
+
+* [GameMaker-OuyaSDK-Extension](https://github.com/ouya/ouya-sdk-examples/releases/tag/GameMaker-OuyaSDK-Extension) - Enable OUYA Everywhere Input and In-App-Purchases in GameMaker Studio.
+
 ## Guide
 
 * In your project's `Global Game Settings`, on the `Android` tab enter your `Package name` matching the [developer portal](http://devs.ouya.tv) and check `Enable OUYA packaging`.
