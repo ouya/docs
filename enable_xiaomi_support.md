@@ -40,6 +40,7 @@ Engine specific details:
 
 Engine specific details:
 
+* [GameMaker](game-maker.md#xiaomi-libraries)
 * [Java](java.md#xiaomi-libraries)
 * [Unity](unity.md#xiaomi-libraries)
 
@@ -54,6 +55,7 @@ Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in
 
 Engine specific details:
 
+* [GameMaker](game-maker.md#xiaomi-required-permissions)
 * [Java](java.md#xiaomi-required-permissions)
 * [Unity](unity.md#xiaomi-required-permissions)
 

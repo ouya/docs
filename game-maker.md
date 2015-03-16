@@ -348,6 +348,38 @@ The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Game
 
 ![IAP image](game-maker/image_1.png)
 
+## Xiaomi Libraries
+
+[Back to general info](enable_xiaomi_support.md#xiaomi-libraries)
+
+Place the Xiaomi libraries in the following destinations:
+
+* (Within your project folder) `extensions\OuyaSDK\MiGameCenterSDKService.apk`
+
+* (Within your project folder) `extensions\OuyaSDK\AndroidSource\libs\SDK_MIBOX_2.0.1.jar`
+
+## Xiaomi Required Permissions
+
+[Back to general info](enable_xiaomi_support.md#xiaomi-required-permissions)
+
+To edit the `AndroidManifest.xml` you'll need to open the folder using the `Help` menu and select `Open GameMaker in Explorer`. Navigate to `GameMaker-Studio-Dev\Android\runner\AndroidManifest.xml`.
+
+![IAP image](game-maker/image_6.png)
+
+Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in order to work.
+
+```java
+<uses-permission android:name="com.xiaomi.sdk.permission.PAYMENT"/>
+<uses-permission android:name="android.permission.GET_TASKS"/>
+<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+```
+
+Make sure that the Android `android:targetSdkVersion` is set to `16`.
+
+```java
+<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="16"/>
+```
+
 ## Xiaomi Initialization
 
 [Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
