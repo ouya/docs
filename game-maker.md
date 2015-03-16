@@ -239,6 +239,32 @@ if (OuyaSDK_GetAnyButton(BUTTON_DPAD_LEFT)) {
 
 `OuyaSDK_IsAnyConnected` returns `true` if any controller is connected.
 
+### OuyaSDK_RequestGamerInfo
+
+`OuyaSDK_RequestGamerInfo` is an async call that provides access to the `GamerInfo` which gives access to the gamer's `uuid` and `username`.
+
+`OuyaSDK_GetAsyncMethod` will return `onSuccessRequestGamerInfo` or `onFailureRequestGamerInfo` when the request has completed.
+
+### OuyaSDK_RequestProducts
+
+`OuyaSDK_RequestProducts` is an async call that provides access to the `Product` details.
+The first parameter is a `string` comma separated list of identifiers.
+
+`OuyaSDK_GetAsyncMethod` will return `onSuccessRequestProducts` or `onFailureRequestProducts` when the request has completed.
+
+### OuyaSDK_RequestPurchase
+
+`OuyaSDK_RequestPurchase` is an async call that requests purchase of a `Product`.
+The first parameter is a `string` which is a `Product` identifier.
+
+`OuyaSDK_GetAsyncMethod` will return `onSuccessRequestPurchase` or `onFailureRequestPurchase` or `onCancelRequestPurchase` when the request has completed.
+
+### OuyaSDK_RequestReceipts
+
+`OuyaSDK_RequestReceipts` is an async call that requests all the `entitlement` purchases on the server.
+
+`OuyaSDK_GetAsyncMethod` will return `onSuccessRequestReceipts` or `onFailureRequestReceipts` or `onCancelRequestReceipts` when the request has completed.
+
 ## Examples
 
 ### Virtual Controller
