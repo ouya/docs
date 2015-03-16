@@ -288,3 +288,9 @@ ds_map_add(init_ouya_plugin_values, "tv.ouya.product_id_list", strPurchasables);
 OuyaSDK_Init(json_encode(init_ouya_plugin_values));
 ds_map_destroy(init_ouya_plugin_values);
 ```
+
+## Disable Xiaomi Screensaver
+
+[Back to general info](enable_xiaomi_support.md#disable-xiaomi-screensaver)
+
+By using the `OuyaSDK Extension` the Xiaomi screensaver will be disabled automatically.

@@ -101,6 +101,7 @@ Calls to `OuyaFacade.isRunningOnOUYASupportedHardware` will fail on Xiaomi if th
 
 Engine specific details:
 
+* [GameMaker](game-maker.md#disable-xiaomi-screensaver)
 * [Java](java.md#disable-xiaomi-screensaver)
 * [Unity](unity.md#disable-xiaomi-screensaver)
 
