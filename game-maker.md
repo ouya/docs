@@ -163,11 +163,13 @@ if (OuyaSDK_GetButton("0", BUTTON_DPAD_LEFT)) {
 
 Detecting the `Menu` button should use `OuyaSDK_GetButtonDown` or `OuyaSDK_GetButtonUp`.
 
+```
 if (OuyaSDK_GetButtonDown("0", BUTTON_MENU)) {
 }
 
 if (OuyaSDK_GetButtonUp("0", BUTTON_MENU)) {
 }
+```
 
 The `playerNumber` values "0", "1", "2", and "3" are expected for the first `String` parameter.
 
