@@ -287,6 +287,7 @@ if (asyncMethod == "onFailureRequestPurchase") {
 if (asyncMethod == "onSuccessRequestReceipts") {
     var count = OuyaSDK_GetAsyncDataArrayCount();
     text_message = "Status: RequestReceipts count="+string(count);
+}
 ```
 
 * `OuyaSDK_GetAsyncDataArrayString` - Returns the `string` value of the given `field` for a given array `index` from the `data` structure
