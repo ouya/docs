@@ -50,6 +50,193 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/GameMak
 
 <b>GameMaker Studio Tutorials</b> - http://www.youtube.com/playlist?list=PLUYhFCYb2qeOBR9AVERSimlZEN-dXCoOW
 
+## OUYA Extension
+
+The `Ouya-GameMaker-Extension` is available in the [resources section)[#resources].
+GameMaker extension methods only use `String` and `double` for parameters and return types.
+
+### Signing key
+
+The signing key from the [developer portal](http://devs.ouya.tv) should be placed in the `extensions/OuyaSDK/key.der` project subfolder.
+
+### OUYA Everywhere
+
+The `OuyaSDK extension` uses `OUYA-Everywhere Input` which gets the input remapping for supported and future devices.
+
+### OuyaSDK_IsInitialized
+
+`OuyaSDK_IsInitialized` returns true if the `OuyaSDK` extension has been initialized.
+
+### OuyaSDK_GetAxis
+
+Axis input can be obtained through `OuyaSDK_GetAxis`. 
+
+The `playerNumber` values "0", "1", "2", and "3" are expected for the first `String` parameter.
+
+The `axis` values from below are expected for the second `String` parameter.
+
+```
+AXIS_LS_X = "0";
+AXIS_LS_Y = "1";
+AXIS_RS_X = "11";
+AXIS_RS_Y = "14";
+AXIS_L2 = "17";
+AXIS_R2 = "18";
+```
+
+All the axis values for `Controller #1 (0)` can be obtained with the following code.
+
+```
+var lsX = OuyaSDK_GetAxis("0", AXIS_LS_X);
+var lsY = OuyaSDK_GetAxis("0", AXIS_LS_Y);
+var rsX = OuyaSDK_GetAxis("0", AXIS_RS_X);
+var rsY = OuyaSDK_GetAxis("0", AXIS_RS_Y);
+var l2 = OuyaSDK_GetAxis("0", AXIS_L2);
+var r2 = OuyaSDK_GetAxis("0", AXIS_R2);
+```
+
+### OuyaSDK_GetButton
+
+Button input can be obtained through `OuyaSDK_GetButton`.
+
+The `playerNumber` values "0", "1", "2", and "3" are expected for the first `String` parameter.
+
+The `button` values from below are expected for the second `String` parameter.
+
+```
+BUTTON_O = "96";
+BUTTON_U = "99";
+BUTTON_Y = "100";
+BUTTON_A = "97";
+BUTTON_L1 = "102";
+BUTTON_R1 = "103";
+BUTTON_L3 = "106";
+BUTTON_R3 = "107";
+BUTTON_DPAD_UP = "19";
+BUTTON_DPAD_DOWN = "20";
+BUTTON_DPAD_RIGHT = "22";
+BUTTON_DPAD_LEFT = "21";
+BUTTON_MENU = "82";
+```
+
+All the button values for `Controller #1 (0)` can be obtained with the following code.
+
+```
+if (OuyaSDK_GetButton("0", BUTTON_O)) {
+}
+
+if (OuyaSDK_GetButton("0", BUTTON_U)) {
+}
+
+if (OuyaSDK_GetButton("0", BUTTON_Y)) {
+}
+
+if (OuyaSDK_GetButton("0", BUTTON_A)) {
+}
+
+if (OuyaSDK_GetButton("0", BUTTON_L1)) {
+}
+
+if (OuyaSDK_GetButton("0", BUTTON_R1)) {
+}
+
+if (OuyaSDK_GetButton("0", BUTTON_L3)) {
+}
+
+if (OuyaSDK_GetButton("0", BUTTON_R3)) {
+}
+
+if (OuyaSDK_GetButton("0", BUTTON_DPAD_UP)) {
+}
+
+if (OuyaSDK_GetButton("0", BUTTON_DPAD_DOWN)) {
+}
+
+if (OuyaSDK_GetButton("0", BUTTON_DPAD_RIGHT)) {
+}
+
+if (OuyaSDK_GetButton("0", BUTTON_DPAD_LEFT)) {
+}
+```
+
+### OuyaSDK_GetButtonDown and OuyaSDK_GetButtonUp
+
+Detecting the `Menu` button should use `OuyaSDK_GetButtonDown` or `OuyaSDK_GetButtonUp`.
+
+if (OuyaSDK_GetButtonDown("0", BUTTON_MENU)) {
+}
+
+if (OuyaSDK_GetButtonUp("0", BUTTON_MENU)) {
+}
+
+The `playerNumber` values "0", "1", "2", and "3" are expected for the first `String` parameter.
+
+The `button` values from above are expected for the second `String` parameter.
+
+`OuyaSDK_GetButtonDown` returns `true` when the button detected a `pressed` event.
+
+`OuyaSDK_GetButtonUp` returns `true` when the button detected a `released` event.
+
+`OuyaSDK_ClearButtonStatesPressedReleased` should be called at the end of the `Update` event each frame to clear the detected `pressed` and `released` states.
+
+### OuyaSDK_GetAnyButton
+
+`OuyaSDK_GetAnyButton` returns `true` if `any` controller is in the `pressed` state for the button `String` parameter.
+
+```
+if (OuyaSDK_GetAnyButton(BUTTON_O)) {
+}
+
+if (OuyaSDK_GetAnyButton(BUTTON_U)) {
+}
+
+if (OuyaSDK_GetAnyButton(BUTTON_Y)) {
+}
+
+if (OuyaSDK_GetAnyButton(BUTTON_A)) {
+}
+
+if (OuyaSDK_GetAnyButton(BUTTON_L1)) {
+}
+
+if (OuyaSDK_GetAnyButton(BUTTON_R1)) {
+}
+
+if (OuyaSDK_GetAnyButton(BUTTON_L3)) {
+}
+
+if (OuyaSDK_GetAnyButton(BUTTON_R3)) {
+}
+
+if (OuyaSDK_GetAnyButton(BUTTON_DPAD_UP)) {
+}
+
+if (OuyaSDK_GetAnyButton(BUTTON_DPAD_DOWN)) {
+}
+
+if (OuyaSDK_GetAnyButton(BUTTON_DPAD_RIGHT)) {
+}
+
+if (OuyaSDK_GetAnyButton(BUTTON_DPAD_LEFT)) {
+}
+```
+
+### OuyaSDK_GetAnyButtonDown
+
+`OuyaSDK_GetAnyButtonDown` returns `true` if `any` controller had a `pressed` state event in the last update frame for the button `String` parameter.
+
+### OuyaSDK_GetAnyButtonUp
+
+`OuyaSDK_GetAnyButtonUp` returns `true` if `any` controller had a `released` state event in the last update frame for the button `String` parameter.
+
+### OuyaSDK_IsConnected
+
+`OuyaSDK_IsConnected` returns `true` if the `playerNum` first `String` parameter is connected.
+
+### OuyaSDK_IsAnyConnected
+
+`OuyaSDK_IsAnyConnected` returns `true` if any controller is connected.
+
 ## Examples
 
 ### Virtual Controller
