@@ -241,8 +241,71 @@ if (OuyaSDK_GetAnyButton(BUTTON_DPAD_LEFT)) {
 
 ### Async calls
 
-`OuyaSDK_GetAsyncMethod` is used to get completion information from async methods called in the `OuyaSDK extension`.
-Async completion results sit on a stack and `OuyaSDK_GetAsyncMethod` gets the method name from the current completed result. When all the details are extracted from the completion result, invoking `OuyaSDK_PopAsyncResult` will move on to the next completion item.
+`OuyaSDK_GetAsyncMethod` is used to get the async completion result from async methods called in the `OuyaSDK extension`.
+Async completion results sit on a stack and `OuyaSDK_GetAsyncMethod` gets the method name from the current completed result.
+
+```
+asyncMethod = OuyaSDK_GetAsyncMethod();
+if (asyncMethod != undefined &&
+    asyncMethod != "") {
+    text_message = "Status: Method="+asyncMethod;
+}
+```
+
+`OuyaSDK_GetAsyncResult` will return a JSON `string` about the `method` and `data` corresponding to the async completion result.
+
+```
+asyncResult = OuyaSDK_GetAsyncResult();
+if (asyncResult != undefined &&
+    asyncResult != "") {
+    text_message = "Status: Method="+asyncMethod+" json="+asyncResult;
+}
+```
+
+When all the details are extracted from the completion result, invoking `OuyaSDK_PopAsyncResult` will move on to the next completion item.
+
+```
+OuyaSDK_PopAsyncResult();
+```
+
+There are various helper methods for accessing the JSON data for the async completion result.
+All async completion results have a `string` method and a `data` object. 
+
+* `OuyaSDK_GetAsyncMethod` - Returns the `string` name of the async completion method
+
+* `OuyaSDK_GetAsyncDataString` - Returns the `string` value for the completion data given the `string` field.
+
+```
+if (asyncMethod == "onFailureRequestPurchase") {
+    var errorMessage = OuyaSDK_GetAsyncDataString("errorMessage");            
+}
+```
+
+* `OuyaSDK_GetAsyncDataArrayCount` - Returns the `double` count of items in the `data` structure
+
+```
+if (asyncMethod == "onSuccessRequestReceipts") {
+    var count = OuyaSDK_GetAsyncDataArrayCount();
+    text_message = "Status: RequestReceipts count="+string(count);
+```
+
+* `OuyaSDK_GetAsyncDataArrayString` - Returns the `string` value of the given `field` for a given array `index` from the `data` structure
+
+```
+for (var index = 0; index < count; ++index)
+{
+    var identifier = OuyaSDK_GetAsyncDataArrayString(string(index), "identifier");
+}
+```
+
+* `OuyaSDK_GetAsyncDataArrayDouble` - Returns the `double` value of the given `field` for a given array `index` from the `data` structure
+
+```
+for (var index = 0; index < count; ++index)
+{
+	var localPrice = OuyaSDK_GetAsyncDataArrayDouble(string(index), "localPrice");
+}
+```
 
 ### OuyaSDK_RequestGamerInfo
 
