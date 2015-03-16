@@ -15,19 +15,19 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 <table border=1>
  <tr>
  <td>OUYA DEV SUPPORT (00:21:24)<br/>
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=zkeVNofjzuA" target="_blank">
-<img src="http://img.youtube.com/vi/zkeVNofjzuA/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 3/16" width="240" height="180" border="10" /></a></td>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=hSZCkfT6Ljg" target="_blank">
+<img src="http://img.youtube.com/vi/hSZCkfT6Ljg/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 3/16" width="240" height="180" border="10" /></a></td>
  <td></td>
  </tr>
 </table>
 
 * GameMaker [script](https://github.com/ouya/docs/blob/master/game-maker.md) has OUYA, MOJO, Xiaomi support for OE-Input and IAP. (Be sure to be on the beta channel to get the next beta update, hopefully by 3/27).
 
-<a target=_blank href="https://www.youtube.com/watch?v=zkeVNofjzuA&t=1m00s">(1:00)</a> - Kellee/Bawb/Jared/Tim: [Tina's Toy Factory](https://www.ouya.tv/game/Tinas-Toy-Factory/)
+<a target=_blank href="https://www.youtube.com/watch?v=hSZCkfT6Ljg&t=1m00s">(1:00)</a> - Kellee/Bawb/Jared/Tim: [Tina's Toy Factory](https://www.ouya.tv/game/Tinas-Toy-Factory/)
 
-<a target=_blank href="https://www.youtube.com/watch?v=zkeVNofjzuA&t=3m25s">(3:25)</a> - Jared: Just the Facts!
+<a target=_blank href="https://www.youtube.com/watch?v=hSZCkfT6Ljg&t=3m25s">(3:25)</a> - Jared: Just the Facts!
 
-<a target=_blank href="https://www.youtube.com/watch?v=zkeVNofjzuA&t=8m42s">(8:42)</a> - Tim: New Game Maker Extension with OE-Input and IAP support
+<a target=_blank href="https://www.youtube.com/watch?v=hSZCkfT6Ljg&t=8m42s">(8:42)</a> - Tim: New Game Maker Extension with OE-Input and IAP support
 
 ----------
 
