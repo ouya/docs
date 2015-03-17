@@ -114,7 +114,7 @@ The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Mono
 
 [Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
 
-`OuyaSDK_Init` supports initialization strings to make the game compatible with OUYA Everywhere devices.
+`MonoGame` supports initialization strings similar to `Java` syntax to make the game compatible with OUYA Everywhere devices.
 
 * `tv.ouya.developer_id` - The developer UUID can be found in the [developer portal](http://devs.ouya.tv) after logging in.
 
