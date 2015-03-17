@@ -28,7 +28,7 @@ Engine specific details:
 * [OUYA Everywhere on HTML5](html5.md#ouya-everywhere)
 * [OUYA Everywhere on Java](java.md#ouya-everywhere)
 * [OUYA Everywhere on Marmalade](marmalade.md#ouya-everywhere)
-* [OUYA Everywhere on MonoGame](monogame.md#ouya-everywhere)
+* [OUYA Everywhere on MonoGame](mono-game.md#ouya-everywhere)
 * [OUYA Everywhere on Unity](unity.md#ouya-everywhere)
 * [OUYA Everywhere on Unreal](unreal.md#ouya-everywhere)
 
@@ -89,7 +89,7 @@ Engine specific details:
 * [GameMaker](game-maker.md#xiaomi-initialization)
 * [HTML5](html5.md#xiaomi-initialization)
 * [Marmalade](marmalade.md#xiaomi-initialization)
-* [MonoGame](monogame.md#xiaomi-initialization)
+* [MonoGame](mono-game.md#xiaomi-initialization)
 * [Java](java.md#xiaomi-initialization)
 * [Unreal](unreal.md#xiaomi-initialization)
 * [Unity](unity.md#xiaomi-initialization)
