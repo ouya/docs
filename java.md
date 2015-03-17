@@ -137,13 +137,13 @@ The virtual controller example exercises the new OUYA-Everywhere input. The butt
 
 The `AndroidVirtualController` source code can be found within the [ouya-sdk-examples](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/AndroidVirtualController).
 
-![image alt text](image_0.png)
+![image alt text](ouya-everywhere-android-java/image_0.png)
 
 # Android Virtual Controller Project #
 
 The project has a small number of key files that makes the example work.
 
-![image alt text](image_1.png)
+![image alt text](ouya-everywhere-android-java/image_1.png)
 
 ## AndroidManifest.xml ##
 
