@@ -157,7 +157,7 @@ The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Mono
 				return;
 			}
 
-			string[] PURCHASABLES =
+			string[] purchasables =
 			{
 				"long_sword",
 				"sharp_axe",
@@ -169,7 +169,7 @@ The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Mono
 			developerInfo.PutString(OuyaFacade.OUYA_DEVELOPER_ID, "00000000-0000-0000-0000-000000000000");
 			developerInfo.PutString(OuyaFacade.XIAOMI_APPLICATION_ID, "0000000000000");
 			developerInfo.PutString(OuyaFacade.XIAOMI_APPLICATION_KEY, "000000000000000000");
-			developerInfo.PutStringArray(OuyaFacade.OUYA_PRODUCT_ID_LIST, Game1.PURCHASABLES);
+			developerInfo.PutStringArray(OuyaFacade.OUYA_PRODUCT_ID_LIST, purchasables);
 
 			_ouyaFacade = OuyaFacade.Instance;
 			_ouyaFacade.Init(this, developerInfo);
