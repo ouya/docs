@@ -110,6 +110,18 @@ The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Mono
 
 ![IAP image](ouya-everywhere-monogame/image_8.png)
 
+## Playing Music After Exit
+
+A common mistake is to leave sounds and music playing after the application has ended.
+
+If you used the XNA `MediaPlayer` object, be sure to `Stop()` when the user `quits` the application.
+
+```
+Microsoft.Xna.Framework.Media.MediaPlayer.Stop();
+```
+
+
+
 ## Xiaomi Required Permissions
 
 [Back to general info](enable_xiaomi_support.md#xiaomi-required-permissions)
