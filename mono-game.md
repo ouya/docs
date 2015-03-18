@@ -110,6 +110,14 @@ The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Mono
 
 ![IAP image](ouya-everywhere-monogame/image_8.png)
 
+## Xiaomi Required Permissions
+
+[Back to general info](enable_xiaomi_support.md#xiaomi-required-permissions)
+
+Some of the `AndroidManifest.xml` options can be edited in the `Project Options` on your MonoGame project. To add all the permissions, browse to your project `Properties` folder to edit the raw `AndroidManifest.xml`.
+
+![VirtualController image](ouya-everywhere-monogame/image_9.png)
+
 ## Xiaomi Initialization
 
 [Back to general info](enable_xiaomi_support.md#xiaomi-initialization)

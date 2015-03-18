@@ -42,6 +42,7 @@ Engine specific details:
 
 * [GameMaker](game-maker.md#xiaomi-libraries)
 * [Java](java.md#xiaomi-libraries)
+* [MonoGame](mono-game.md#xiaomi-libraries)
 * [Unity](unity.md#xiaomi-libraries)
 
 ## Xiaomi required permissions
