@@ -97,7 +97,7 @@ Engine specific details:
 
 ## Is Running on OUYA Hardware
 
-Calls to `OuyaFacade.isRunningOnOUYASupportedHardware` will fail on Xiaomi if the `OUYA Framework` is previously not installed. Avoid making calls to `isRunningOnOUYASupportedHardware` in your Xiaomi builds.
+Be sure to check that `OuyaFacade.isInitialized()` returns `true` before checking `OuyaFacade.isRunningOnOUYASupportedHardware()`, otherwise the call will fail if the `OUYA Framework` is not present.
 
 ## Disable Xiaomi Screensaver
 

@@ -120,8 +120,6 @@ If you used the XNA `MediaPlayer` object, be sure to `Stop()` when the user `qui
 Microsoft.Xna.Framework.Media.MediaPlayer.Stop();
 ```
 
-
-
 ## Xiaomi Required Permissions
 
 [Back to general info](enable_xiaomi_support.md#xiaomi-required-permissions)
