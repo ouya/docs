@@ -31,6 +31,6 @@ Installing the Windows 8.1 update will remove the unsigned driver.  You must rep
 
 3. Continue with step 3 above in the Windows 8 section.
 
-# Windows 8 and Great
+# Windows 8 and Greater
 
 * Note: `Disable driver signature verification` will revert back to **enabled** after a reboot. So you may have to repeat the above process initially while installing the unsigned drivers. 
