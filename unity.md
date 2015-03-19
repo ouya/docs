@@ -544,6 +544,140 @@ OuyaController.showCursor(true);
 #endif
 ```
 
+# Pause #
+
+The Pause event fires when the game is paused which could mean that the purchase dialog is opening or that the game is exiting. This event gives you a chance to pause the game or to exit cleanly.
+
+Extend the `IPauseListener` interface to receive the callback for a pause event.
+
+C#
+```
+public class MyScript : MonoBehaviour,
+    OuyaSDK.IPauseListener
+{
+}
+```
+
+JavaScript
+```
+public class MyScript extends MonoBehaviour implements
+	OuyaSDK.IPauseListener
+{
+}
+```
+
+Register the instance to receive the interface callback events.
+
+C#
+```
+    void Awake()
+    {
+        OuyaSDK.registerPauseListener(this);
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterPauseListener(this);
+    }
+```
+
+JavaScript
+```
+    function Awake()
+    {
+        OuyaSDK.registerPauseListener(this);
+    }
+
+    function OnDestroy()
+    {
+        OuyaSDK.unregisterPauseListener(this);
+    }
+```
+
+The pause event will fire when the application is paused.
+
+C#
+```
+    public void OuyaOnPause()
+    {
+		Debug.Log("The game is paused.");
+    }
+```
+
+JavaScript
+```
+    public function OuyaOnPause()
+    {
+		Debug.Log("The game is paused.");
+    }
+```
+
+# Resume #
+
+The Resume event fires when the game returns from being paused. This event tells you it's time for gameplay to continue.
+
+Extend the `IResumeListener` interface to receive the callback for a pause event.
+
+C#
+```
+public class MyScript : MonoBehaviour,
+    OuyaSDK.IResumeListener
+{
+}
+```
+
+JavaScript
+```
+public class MyScript extends MonoBehaviour implements
+	OuyaSDK.IResumeListener
+{
+}
+```
+
+Register the instance to receive the interface callback events.
+
+C#
+```
+    void Awake()
+    {
+        OuyaSDK.registerResumeListener(this);
+    }
+    void OnDestroy()
+    {
+        OuyaSDK.unregisterResumeListener(this);
+    }
+```
+
+JavaScript
+```
+    function Awake()
+    {
+        OuyaSDK.registerResumeListener(this);
+    }
+
+    function OnDestroy()
+    {
+        OuyaSDK.unregisterResumeListener(this);
+    }
+```
+
+The resume event will fire when the application has resumed.
+
+C#
+```
+    public void OuyaOnResume()
+    {
+		Debug.Log("The game has resumed.");
+    }
+```
+
+JavaScript
+```
+    public function OuyaOnResume()
+    {
+		Debug.Log("The game has resumed.");
+    }
+```
+
 # Request Gamer Info #
 
 Gamer Info provides access to the gamer username and uuid.
