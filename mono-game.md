@@ -112,7 +112,7 @@ The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Mono
 
 ## GetButtonData
 
-`ButtonData` gives you button names and button textures for the OuyaController button codes on the OUYA, MOJO, and Xiaomi consoles. 
+`ButtonData` gives you button names and button textures for the OuyaController button codes on the `OUYA`, `MOJO`, and `Xiaomi` consoles. 
 
 ```
 		public OuyaController.ButtonData GetButtonData(int button)
@@ -134,7 +134,7 @@ The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Mono
 		}
 ```
 
-### GetButtonDataTexture
+### GetButtonTexture
 
 ```
 		public Texture2D GetButtonTexture(int button)
