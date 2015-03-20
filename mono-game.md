@@ -125,6 +125,8 @@ The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Mono
 
 ### GetButtonName
 
+`ButtonData` has a `string` name that returns the console specific button name. I.e. on OUYA the `OuyaController.BUTTON_O` name is `O` versus on the `Xiaomi` console as `A`.
+
 ```
 		public string GetButtonName(int button)
 		{
@@ -137,6 +139,8 @@ The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Mono
 ```
 
 ### GetButtonTexture
+
+`ButtonData` has a `BitmapDrawable` that can be converted to a `Texture2D` to be drawn in a `SpriteBatch`.
 
 ```
 		public Texture2D GetButtonTexture(int button)
