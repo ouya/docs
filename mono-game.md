@@ -121,7 +121,7 @@ Your game `Activity` will need to pass `OnActivityResult` events to the `OuyaFac
 ```
 		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
 		{
-			if (null != _ouyaFacade) {
+			if (null != ouyaFacade) {
 				ouyaFacade.ProcessActivityResult (requestCode, (int)resultCode, data);
 			}
 		}
