@@ -110,6 +110,151 @@ The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Mono
 
 ![IAP image](ouya-everywhere-monogame/image_8.png)
 
+## OuyaInput
+
+`OE-Input` remaps controllers as if they are an `OuyaController`.
+
+### ClearButtonStates
+
+After checking input, be sure to invoke `ClearButtonStates` at the end of the draw/update to clear the controller pressed/released states for the next frame.
+
+```
+		protected override void Draw(GameTime gameTime)
+		{
+			// draw things...
+			base.Draw (gameTime);
+
+			OuyaInput.ClearButtonStates();
+		}
+```
+
+### Axises
+
+`MonoGame` uses the same `axis` constants that are used in the `Java` OUYA SDK.
+
+```
+OuyaController.AXIS_LS_X
+OuyaController.AXIS_LS_Y
+OuyaController.AXIS_RS_X
+OuyaController.AXIS_RS_Y
+OuyaController.AXIS_L2
+OuyaController.AXIS_R2
+```
+
+### Buttons
+
+`MonoGame` uses the same `button` constants that are used in the `Java` OUYA SDK.
+
+```
+OuyaController.BUTTON_O
+OuyaController.BUTTON_U
+OuyaController.BUTTON_Y
+OuyaController.BUTTON_A
+OuyaController.BUTTON_L1
+OuyaController.BUTTON_L3
+OuyaController.BUTTON_R1
+OuyaController.BUTTON_R3
+OuyaController.BUTTON_DPAD_DOWN
+OuyaController.BUTTON_DPAD_LEFT
+OuyaController.BUTTON_DPAD_RIGHT
+OuyaController.BUTTON_DPAD_UP
+OuyaController.BUTTON_MENU
+```
+
+### GetAxis
+
+`GetAxis` returns the axis value given the `playerNum` (0, 1, 2, or 3) and an `axis` constant. 
+
+```
+float GetAxis(int playerNum, int axis);
+
+float lx = OuyaInput.GetAxis(0, OuyaController.AXIS_LS_X);
+float ly = OuyaInput.GetAxis(0, OuyaController.AXIS_LS_Y);
+float rx = OuyaInput.GetAxis(0, OuyaController.AXIS_RS_X);
+float ry = OuyaInput.GetAxis(0, OuyaController.AXIS_RS_Y);
+float l2 = OuyaInput.GetAxis(0, OuyaController.AXIS_L2);
+float r2 = OuyaInput.GetAxis(0, OuyaController.AXIS_R2);
+```
+
+### GetButton
+
+`GetButton` returns the button state given the `playerNum` (0, 1, 2, or 3) and an `axis` constant.
+`GetButton` returns true if the `button` is currently `pressed` or returns false if the `button` is currently `released`.
+
+```
+bool GetButton(int playerNum, int button)
+
+if (OuyaInput.GetButton(0, OuyaController.BUTTON_O))
+{
+}
+
+if (OuyaInput.GetButton(0, OuyaController.BUTTON_U))
+{
+}
+
+if (OuyaInput.GetButton(0, OuyaController.BUTTON_Y))
+{
+}
+
+if (OuyaInput.GetButton(0, OuyaController.BUTTON_A))
+{
+}
+
+if (OuyaInput.GetButton(0, OuyaController.BUTTON_L1))
+{
+}
+
+if (OuyaInput.GetButton(0, OuyaController.BUTTON_L3))
+{
+}
+
+if (OuyaInput.GetButton(0, OuyaController.BUTTON_R1))
+{
+}
+
+if (OuyaInput.GetButton(0, OuyaController.BUTTON_R3))
+{
+}
+
+if (OuyaInput.GetButton(0, OuyaController.BUTTON_DPAD_DOWN))
+{
+}
+
+if (OuyaInput.GetButton(0, OuyaController.BUTTON_DPAD_LEFT))
+{
+}
+
+if (OuyaInput.GetButton(0, OuyaController.BUTTON_DPAD_RIGHT))
+{
+}
+
+if (OuyaInput.GetButton(0, OuyaController.BUTTON_DPAD_UP))
+{
+}
+```
+
+### GetButtonDown
+
+`GetButtonDown` returns true if the last frame detected a `pressed` event.
+`BUTTON_MENU` should be detected using `GetButtonDown`.
+
+```
+if (OuyaInput.GetButtonDown(0, OuyaController.BUTTON_MENU))
+{
+}
+```
+
+### GetButtonUp
+
+`GetButtonUp` returns true if the last frame detected a `released` event.
+`BUTTON_MENU` should be detected using `GetButtonUp`.
+
+```
+if (OuyaInput.GetButtonDown(0, OuyaController.BUTTON_MENU))
+{
+}
+```
+
 ## GetButtonData
 
 `ButtonData` gives you button names and button textures for the OuyaController button codes on the `OUYA`, `MOJO`, and `Xiaomi` consoles.
@@ -188,6 +333,8 @@ Your game `Activity` will need to pass `OnActivityResult` events to the `OuyaFac
 
 ### RequestGamerInfo
 
+By extending `RequestGamerInfoListener`, the `OnSuccess` and `OnFailure` events can be overloaded and will be invoked when the asynchronous `RequestGamerInfo` method completes.  
+
 ```
 		public class CustomRequestGamerInfoListener : RequestGamerInfoListener
 		{
@@ -212,6 +359,8 @@ Your game `Activity` will need to pass `OnActivityResult` events to the `OuyaFac
 ```
 
 ### RequestProducts
+
+By extending `RequestProductsListener`, the `OnSuccess` and `OnFailure` events can be overloaded and will be invoked when the asynchronous `RequestProductList` method completes.
 
 ```
 		public class CustomRequestProductsListener : RequestProductsListener
@@ -255,6 +404,8 @@ Your game `Activity` will need to pass `OnActivityResult` events to the `OuyaFac
 
 ### RequestPurchase
 
+By extending `RequestPurchaseListener`, the `OnSuccess`, `OnFailure`, and `OnCancel` events can be overloaded and will be invoked when the asynchronous `RequestPurchase` method completes.
+
 ```
 		public class CustomRequestPurchaseListener : RequestPurchaseListener
 		{
@@ -284,6 +435,8 @@ Your game `Activity` will need to pass `OnActivityResult` events to the `OuyaFac
 ```
 
 ### RequestReceipts
+
+By extending `RequestReceiptsListener`, the `OnSuccess`, `OnFailure`, and `OnCancel` events can be overloaded and will be invoked when the asynchronous `RequestReceipts` method completes.
 
 ```
 		public class CustomRequestReceiptsListener : RequestReceiptsListener
