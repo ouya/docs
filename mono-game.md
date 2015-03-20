@@ -110,6 +110,59 @@ The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Mono
 
 ![IAP image](ouya-everywhere-monogame/image_8.png)
 
+## GetButtonData
+
+`ButtonData` gives you button names and button textures for the OuyaController button codes on the OUYA, MOJO, and Xiaomi consoles. 
+
+```
+		public OuyaController.ButtonData GetButtonData(int button)
+		{
+			return OuyaController.GetButtonData(button);
+		}
+```
+
+### GetButtonName
+
+```
+		public string GetButtonName(int button)
+		{
+			OuyaController.ButtonData buttonData = OuyaController.GetButtonData(button);
+			if (null == buttonData) {
+				return string.Empty;
+			}
+			return buttonData.ButtonName;
+		}
+```
+
+### GetButtonDataTexture
+
+```
+		public Texture2D GetButtonTexture(int button)
+		{
+			OuyaController.ButtonData buttonData = OuyaController.GetButtonData(button);
+			if (null == buttonData)
+			{
+				return null;
+			}
+			BitmapDrawable drawable = (BitmapDrawable)buttonData.ButtonDrawable;
+			if (null == drawable)
+			{
+				return null;
+			}
+			Bitmap bitmap = drawable.Bitmap;
+			if (null == bitmap)
+			{
+				return null;
+			}
+			using (MemoryStream ms = new MemoryStream ())
+			{
+				bitmap.Compress (Bitmap.CompressFormat.Png, 100, ms);
+				ms.Position = 0;
+				return Texture2D.FromStream (GraphicsDevice, ms);
+			}
+		}
+```
+
 ## IAP
 
 The following examples are within the context of a class that extends `Microsoft.Xna.Framework.AndroidGameActivity`.
