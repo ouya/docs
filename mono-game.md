@@ -178,7 +178,7 @@ float r2 = OuyaInput.GetAxis(0, OuyaController.AXIS_R2);
 
 ### GetButton
 
-`GetButton` returns the button state given the `playerNum` (0, 1, 2, or 3) and an `axis` constant.
+`GetButton` returns the button state given the `playerNum` (0, 1, 2, or 3) and a `button` constant.
 `GetButton` returns true if the `button` is currently `pressed` or returns false if the `button` is currently `released`.
 
 ```
@@ -235,10 +235,13 @@ if (OuyaInput.GetButton(0, OuyaController.BUTTON_DPAD_UP))
 
 ### GetButtonDown
 
+`GetButtonDown` returns the last button state given the `playerNum` (0, 1, 2, or 3) and a `button` constant.
 `GetButtonDown` returns true if the last frame detected a `pressed` event.
 `BUTTON_MENU` should be detected using `GetButtonDown`.
 
 ```
+bool GetButtonDown(int playerNum, int button);
+
 if (OuyaInput.GetButtonDown(0, OuyaController.BUTTON_MENU))
 {
 }
@@ -246,10 +249,13 @@ if (OuyaInput.GetButtonDown(0, OuyaController.BUTTON_MENU))
 
 ### GetButtonUp
 
+`GetButtonUp` returns the last button state given the `playerNum` (0, 1, 2, or 3) and a `button` constant.
 `GetButtonUp` returns true if the last frame detected a `released` event.
 `BUTTON_MENU` should be detected using `GetButtonUp`.
 
 ```
+bool GetButtonUp(int playerNum, int button);
+
 if (OuyaInput.GetButtonDown(0, OuyaController.BUTTON_MENU))
 {
 }
