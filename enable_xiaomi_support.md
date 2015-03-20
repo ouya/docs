@@ -152,6 +152,7 @@ Xiaomi requires that the app/game has been localized for `Simplified Chinese`.
 Engine specific details:
 
 * [Java](java.md#localization-resources)
+* [MonoGame](mono-game.md#localization-resources)
 * [Unity](unity.md#localization-resources)
 
 ## Fonts

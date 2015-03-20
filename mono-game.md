@@ -233,6 +233,15 @@ if (OuyaInput.GetButton(0, OuyaController.BUTTON_DPAD_UP))
 }
 ```
 
+`GetButton` can also be used without the `playerNum` parameter to find if a button was pressed on `any` controller.
+
+```
+bool GetButton(int button)
+
+if (OuyaInput.GetButton(OuyaController.BUTTON_O))
+{
+}
+
 ### GetButtonDown
 
 `GetButtonDown` returns the last button state given the `playerNum` (0, 1, 2, or 3) and a `button` constant.
@@ -247,6 +256,15 @@ if (OuyaInput.GetButtonDown(0, OuyaController.BUTTON_MENU))
 }
 ```
 
+`GetButtonDown` can also be used without the `playerNum` parameter to find if a button `pressed` event happened on `any` controller.
+
+```
+bool GetButtonDown(int button)
+
+if (OuyaInput.GetButtonDown(OuyaController.BUTTON_O))
+{
+}
+
 ### GetButtonUp
 
 `GetButtonUp` returns the last button state given the `playerNum` (0, 1, 2, or 3) and a `button` constant.
@@ -260,6 +278,15 @@ if (OuyaInput.GetButtonDown(0, OuyaController.BUTTON_MENU))
 {
 }
 ```
+
+`GetButtonUp` can also be used without the `playerNum` parameter to find if a button `released` event happened on `any` controller.
+
+```
+bool GetButtonUp(int button)
+
+if (OuyaInput.GetButtonUp(OuyaController.BUTTON_O))
+{
+}
 
 ## GetButtonData
 
@@ -551,4 +578,49 @@ Some of the `AndroidManifest.xml` options can be edited in the `Project Options`
 
 			_ouyaFacade = OuyaFacade.Instance;
 			_ouyaFacade.Init(this, developerInfo);
+```
+
+## Localization Resources
+
+[Back to general info](enable_xiaomi_support.md#localization-resources)
+
+`MonoGame` uses standard [Android localization](http://developer.android.com/guide/topics/resources/localization.html) for localized string resources.
+
+String resources must be included in the project and marked as an `AndroidResource`.
+
+![IAP image](ouya-everywhere-monogame/image_10.png)
+
+Strings can be placed in designated folders which are automatically selected using the current language.
+
+* `Resources/Values/Strings.xml` (Default)
+
+* `Resources/Values-de/Strings.xml` (Dutch)
+
+* `Resources/Values-en/Strings.xml` (English)
+
+* `Resources/Values-es/Strings.xml` (Spanish) 
+
+* `Resources/Values-fr/Strings.xml` (French)
+
+* `Resources/Values-it/Strings.xml` (Italian)
+
+* `Resources/Values-zh-rCN/Strings.xml` (Simplified Chinese)
+
+### GetStringResource
+
+Within the `Activity` or using a reference to the `Activity`, the resource strings can be found.
+The current Locale will automatically select the right `String` resource.
+
+```
+		private String GetStringResource(String name) {
+			Resources resources = Resources;
+			if (null == resources) {
+				return String.Empty;
+			}
+			int id = resources.GetIdentifier (name, "string", PackageName);
+			if (id <= 0) {
+				return "";
+			}
+			return resources.GetString(id);
+		}
 ```
