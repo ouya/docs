@@ -241,6 +241,7 @@ bool GetButton(int button)
 if (OuyaInput.GetButton(OuyaController.BUTTON_O))
 {
 }
+```
 
 ### GetButtonDown
 
@@ -264,6 +265,7 @@ bool GetButtonDown(int button)
 if (OuyaInput.GetButtonDown(OuyaController.BUTTON_O))
 {
 }
+```
 
 ### GetButtonUp
 
@@ -287,6 +289,7 @@ bool GetButtonUp(int button)
 if (OuyaInput.GetButtonUp(OuyaController.BUTTON_O))
 {
 }
+```
 
 ## GetButtonData
 
