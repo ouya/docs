@@ -110,6 +110,148 @@ The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Mono
 
 ![IAP image](ouya-everywhere-monogame/image_8.png)
 
+## IAP
+
+The following examples are within the context of a class that extends `Microsoft.Xna.Framework.AndroidGameActivity`.
+
+### OnActivityResult
+
+Your game `Activity` will need to pass `OnActivityResult` events to the `OuyaFacade`.
+
+```
+		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
+		{
+			if (null != _ouyaFacade) {
+				ouyaFacade.ProcessActivityResult (requestCode, (int)resultCode, data);
+			}
+		}
+```
+
+### RequestGamerInfo
+
+```
+		public class CustomRequestGamerInfoListener : RequestGamerInfoListener
+		{
+			private const string TAG = "CustomRequestGamerInfoListener";
+			public override void OnSuccess(Java.Lang.Object jObject) {
+				GamerInfo gamerInfo = jObject.JavaCast<GamerInfo>();
+				if (null == gamerInfo) {
+					Log.Error (TAG, "GamerInfo is null!");
+				} else {
+					Log.Info (TAG, "OnSuccess uuid=" + gamerInfo.Uuid + " username=" + gamerInfo.Username);
+				}
+			}
+			public override void OnFailure(int errorCode, String errorMessage, Bundle optionalData) {
+				Log.Error (TAG, "OnFailure errorCode=" + errorCode + " errorMessage=" + errorMessage);
+			}
+		}
+
+		RequestGamerInfoListener requestGamerInfoListener = new CustomRequestGamerInfoListener();
+
+		// first parameter is a reference to the Activity
+		ouyaFacade.RequestGamerInfo(this, requestGamerInfoListener);
+```
+
+### RequestProducts
+
+```
+		public class CustomRequestProductsListener : RequestProductsListener
+		{
+			private const string TAG = "CustomRequestProductsListener";
+			public override void OnSuccess(Java.Lang.Object jObject) {
+				JavaList<Product> products = jObject.JavaCast<JavaList<Product>> ();
+				if (null == products) {
+					Log.Error (TAG, "Products are null!");
+				} else {
+					Log.Info (TAG, "OnSuccess Count="+products.Count);
+				}
+			}
+			public override void OnFailure(int errorCode, String errorMessage, Bundle optionalData) {
+				Log.Error (TAG, "OnFailure errorCode=" + errorCode + " errorMessage=" + errorMessage);
+			}
+		}
+
+		RequestProductsListener requestProductsListener = new CustomRequestProductsListener();
+
+		// sample purchasables
+		string[] purchasables =
+		{
+			"long_sword",
+			"sharp_axe",
+			"cool_level",
+			"awesome_sauce",
+			"__DECLINED__THIS_PURCHASE",
+		};
+
+		List<Purchasable> products = new List<Purchasable>();
+		foreach (string identifier in purchasables)
+		{
+			Purchasable purchasable = new Purchasable(identifier);
+			products.Add(purchasable);
+		}
+
+		// first parameter is a reference to the Activity
+		ouyaFacade.RequestProductList(this, products, requestProductsListener);
+```
+
+### RequestPurchase
+
+```
+		public class CustomRequestPurchaseListener : RequestPurchaseListener
+		{
+			private const string TAG = "CustomRequestPurchaseListener";
+			public override void OnSuccess(Java.Lang.Object jObject) {
+				PurchaseResult purchaseResult = jObject.JavaCast<PurchaseResult>();
+				if (null == purchaseResult) {
+					Log.Error (TAG, "PurchaseResult is null!");
+				} else {
+					Log.Info (TAG, "OnSuccess identiifer"+purchaseResult.ProductIdentifier);
+				}
+			}
+			public override void OnFailure(int errorCode, String errorMessage, Bundle optionalData) {
+				Log.Error (TAG, "OnFailure errorCode=" + errorCode + " errorMessage=" + errorMessage);
+			}
+			public override void OnCancel() {
+				Log.Error (TAG, "Purchase was cancelled");
+			}
+		}
+
+		RequestPurchaseListener requestPurchaseListener = new CustomRequestPurchaseListener();
+
+		Purchasable purchasable = new Purchasable("long_sword"); // the identifier being purchased
+
+		// first parameter is a reference to the Activity
+		ouyaFacade.RequestPurchase(this, purchasable, requestPurchaseListener);
+```
+
+### RequestReceipts
+
+```
+		public class CustomRequestReceiptsListener : RequestReceiptsListener
+		{
+			private const string TAG = "CustomRequestReceiptsListener";
+			public override void OnSuccess(Java.Lang.Object jObject) {
+				JavaCollection<Receipt> receipts = jObject.JavaCast<JavaCollection<Receipt>> ();
+				if (null == receipts) {
+					Log.Error (TAG, "Receipts are null!";
+				} else {
+					Log.Info (TAG, "Request Receipts: OnSuccess Count="+receipts.Count);
+				}
+			}
+			public override void OnFailure(int errorCode, String errorMessage, Bundle optionalData) {
+				Log.Error (TAG, "OnFailure errorCode=" + errorCode + " errorMessage=" + errorMessage);
+			}
+			public override void OnCancel() {
+				Log.Error (TAG, "Receipt request was cancelled");
+			}
+		}
+
+		RequestReceiptsListener requestReceiptsListener = new CustomRequestReceiptsListener();
+
+		// first parameter is a reference to the Activity
+		ouyaFacade.RequestReceipts(this, requestReceiptsListener);
+```
+
 ## Playing Music After Exit
 
 A common mistake is to leave sounds and music playing after the application has ended.
