@@ -510,6 +510,24 @@ If you used the XNA `MediaPlayer` object, be sure to `Stop()` when the user `qui
 Microsoft.Xna.Framework.Media.MediaPlayer.Stop();
 ```
 
+## Xiaomi Libraries
+
+[Back to general info](enable_xiaomi_support.md#xiaomi-libraries)
+
+Place the Xiaomi libraries in the following destinations:
+
+* `Assets/MiGameCenterSDKService.apk`
+
+`MiGameCenterSDKService.apk` should be set as `AndroidAsset`.
+
+![VirtualController image](ouya-everywhere-monogame/image_11.png)
+
+`SDK_MIBOX_2.0.1.jar` should be set as `AndroidJavaLibrary`.
+
+* `Jars/SDK_MIBOX_2.0.1.jar`
+
+![VirtualController image](ouya-everywhere-monogame/image_12.png)
+
 ## Xiaomi Required Permissions
 
 [Back to general info](enable_xiaomi_support.md#xiaomi-required-permissions)
