@@ -653,9 +653,26 @@ The current Locale will automatically select the right `String` resource.
 Use the `content view` to disable the `screensaver` in `MonoGame` from the `Activity` before running your customized `Microsoft.Xna.Framework.Game`. This parallels the Java example using the `Xamarin` auto-generated bind syntax.
 
 ```
-View content = FindViewById (Android.Resource.Id.Content);
-	if (null != content) {
-		content.KeepScreenOn = true;
+public class Activity1 : Microsoft.Xna.Framework.AndroidGameActivity
+{
+	protected override void OnCreate(Bundle bundle)
+	{
+        var g = new Game1();
+        SetContentView(g.Window);
+
+		// Add OE-Input
+		using (var ignore = new TV.Ouya.Sdk.OuyaInputView(this))
+		{
+			// do nothing
+		}
+
+		// Get the Content View to disable the screensaver
+		View content = FindViewById (Android.Resource.Id.Content);
+		if (null != content) {
+			// Disable screensaver
+			content.KeepScreenOn = true;
+		}
+        g.Run();
 	}
-	g.Run();
+}
 ```
