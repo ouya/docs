@@ -108,6 +108,7 @@ Engine specific details:
 
 * [GameMaker](game-maker.md#disable-xiaomi-screensaver)
 * [Java](java.md#disable-xiaomi-screensaver)
+* [MonoGame](mono-game.md#disable-xiaomi-screensaver)
 * [Unity](unity.md#disable-xiaomi-screensaver)
 
 ## Exit Button on Main Menu

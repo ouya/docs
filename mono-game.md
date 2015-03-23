@@ -645,3 +645,17 @@ The current Locale will automatically select the right `String` resource.
 			return resources.GetString(id);
 		}
 ```
+
+## Disable Xiaomi Screensaver
+
+[Back to general info](enable_xiaomi_support.md#disable-xiaomi-screensaver)
+
+Use the `content view` to disable the `screensaver` in `MonoGame` from the `Activity` before running your customized `Microsoft.Xna.Framework.Game`. This parallels the Java example using the `Xamarin` auto-generated bind syntax.
+
+```
+View content = FindViewById (Android.Resource.Id.Content);
+	if (null != content) {
+		content.KeepScreenOn = true;
+	}
+	g.Run();
+```
