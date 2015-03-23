@@ -21,9 +21,9 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
  </tr>
 </table>
 
-* GameMaker [script](https://github.com/ouya/docs/blob/master/game-maker.md) has OUYA, MOJO, Xiaomi support for OE-Input and IAP. (Be sure to be on the beta channel to get the next beta update, hopefully by 3/27).
+* [GameMaker](https://github.com/ouya/docs/blob/master/game-maker.md) has OUYA, MOJO, Xiaomi support for OE-Input and IAP. (Be sure to be on the beta channel to get the next beta update, hopefully by 3/27).
 
-* MonoGame [script](https://github.com/ouya/docs/blob/master/mono-game.md) has OUYA, MOJO, Xiaomi support for OE-Input and IAP.
+* [MonoGame](https://github.com/ouya/docs/blob/master/mono-game.md) has OUYA, MOJO, Xiaomi support for OE-Input and IAP.
 
 <a target=_blank href="https://www.youtube.com/watch?v=CQg_FleFezo&t=0m39s">(0:39)</a> - Bawb/Jared/Kellee/Tim: Weekend OUYA Games!
 
