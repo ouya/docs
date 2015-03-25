@@ -228,4 +228,8 @@ Select the `left` button to log in.
 
 ![left button](enable_xiaomi_support/image_9.png)
 
+If the login is `successful`, a success animation appears briefly.
+
+![login success](enable_xiaomi_support/image_10.png)
+
 After a successful log in, the launcher will return to the `home screen`.
