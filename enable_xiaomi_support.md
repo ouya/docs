@@ -194,6 +194,38 @@ Once the above changes have been made, your updated APK should be submitted via 
 
 Wasn't that easy?  :)
 
-## Questions?
+# Questions?
 
 If it actually wasn't that easy and you have questions, please don't hesitate to email us at [xiaomisupport@ouya.tv](mailto:xiaomisupport@ouya.tv).
+
+# Log into the Xiaomi Console
+
+To log into the console, pick the `second option` on the `home screen`.   
+
+![second option](enable_xiaomi_support/image_3.png)
+
+Choose the `third tab`.
+
+![third tab](enable_xiaomi_support/image_4.png)
+
+Select the `first` item to enter `user` settings.
+
+![user settings](enable_xiaomi_support/image_5.png)
+
+Select the `option on the right` to `sign in`.
+
+![sign in](enable_xiaomi_support/image_6.png)
+
+Confirm with the `left` button.
+
+![confirm sign in](enable_xiaomi_support/image_7.png)
+
+Enter the `user` and `password` using the controller or remote.
+
+![enter user and password](enable_xiaomi_support/image_8.png)
+
+Select the `left` button to log in.
+
+![left button](enable_xiaomi_support/image_9.png)
+
+After a successful log in, the launcher will return to the `home screen`.
