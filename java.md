@@ -91,7 +91,7 @@ Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		FrameLayout content = (FrameLayout)findViewById(android.R.id.content);
+		View content = (View)findViewById(android.R.id.content);
 		if (null != content) {
 			// Disable screensaver
 			content.setKeepScreenOn(true);
