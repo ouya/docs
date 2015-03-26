@@ -295,7 +295,7 @@ Make sure that before invoking other OuyaSDK methods than isIAPInitComplete retu
 
 #if UNITY_ANDROID && !UNITY_EDITOR
 
-void Start()
+IEnumerator Start()
 {
 	while (!OuyaSDK.isIAPInitComplete())
 	{
