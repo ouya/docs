@@ -23,10 +23,6 @@ OUYA Hangout July 15th (1:00:00)<br/>
 
 ## Guide
 
-### Examples
-
-Examples are included at the base GIT path.
-
 <table border=1>
 
  <tr>
@@ -77,12 +73,17 @@ MonoGame has an environmental build settings for advanced users to configure.
 ouya/Resources/environment.txt
 ```
 
-These settings aren't for everygame, but the following environmental tweaks reduce the amount of garbage collection thrashing.
+These settings aren't for every game, but the following environmental tweaks reduce the amount of garbage collection thrashing.
 
 ```
 MONO_GC_PARAMS=soft-heap-limit=512m,nursery-size=64m,evacuation-threshold=66,major=marksweep,concurrent-sweep
 ```
 
+### Xamarin Studio NuGet Packages
+
+`Right-click` the solution and select the `Restore NuGet Packages` menu item if you see an error about **This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them. For more information, see http://go.microsoft.com/fwlink/?LinkID=322105.**.
+
+![NuGet image](ouya-everywhere-monogame/image_13.png)
 
 ### Resources
 
