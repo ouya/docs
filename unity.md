@@ -550,7 +550,7 @@ OuyaController.showCursor(true);
 
 ## Unity GUI Input
 
-Unity 4.6 introduced `Unity GUI`. You will need to connect `OE-Input` with the `Unity GUI` using an `InputModule.
+Unity 4.6 introduced `Unity GUI`. You will need to connect `OE-Input` with the `Unity GUI` using an `InputModule`.
 
 ### In Control
 
