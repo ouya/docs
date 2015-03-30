@@ -512,18 +512,6 @@ OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_MENU)
 #endif
 ```
 
-## Unity GUI Input
-
-Unity 4.6 introduced `Unity GUI`. You will need to connect `OE-Input` with the `Unity GUI` using an `InputModule.
-
-### In Control
-
-`InControl` is a 3rd party Unity package that works with OE-Input on the OUYA and controller support on non-OUYA platforms.
-
-* The [InControl](http://www.gallantgames.com/pages/incontrol-new-unity-gui) Unity package provides an `InputModule` that will connect `OE-Input` with the `Unity GUI`.
-
-* Be sure to add the `OUYA` define symbol in your Android `player settings`.
-
 ## OuyaController.BUTTON_MENU ##
 
 Note: Be sure to check for button states with GetButtonDown and GetButtonUp. Just checking for the GetButton state will never catch the event in time because the down and up event fire within the same frame.
@@ -559,6 +547,18 @@ OuyaController.showCursor(true);
 
 #endif
 ```
+
+## Unity GUI Input
+
+Unity 4.6 introduced `Unity GUI`. You will need to connect `OE-Input` with the `Unity GUI` using an `InputModule.
+
+### In Control
+
+`InControl` is a 3rd party Unity package that works with OE-Input on the OUYA and controller support on non-OUYA platforms.
+
+* The [InControl](http://www.gallantgames.com/pages/incontrol-new-unity-gui) Unity package provides an `InputModule` that will connect `OE-Input` with the `Unity GUI`.
+
+* Be sure to add the `OUYA` define symbol in your Android `player settings`.
 
 # Pause #
 
