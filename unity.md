@@ -317,7 +317,11 @@ using tv.ouya.console.api;
 #endif
 ```
 
-# Accessing Button Names #
+## Button Data ##
+
+Before accessing ButtonData, make sure that `OuyaSDK.isIAPInitComplete` returns true.
+
+## Accessing ButtonData / Button Names ##
 
 OuyaController has a static method to retrieve button names. A null button name means the button was not found.  
 
@@ -340,7 +344,7 @@ string buttonName = buttonData.buttonName;
 #endif
 ```
 
-# Accessing Button Images #
+## Accessing ButtonData / Button Images ##
 
 OuyaController has a static method to retrieve button images as Texture2D images. A null Texture2D image means the button was not found.
 
@@ -507,6 +511,18 @@ OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_MENU)
 
 #endif
 ```
+
+## Unity GUI Input
+
+Unity 4.6 introduced `Unity GUI`. You will need to connect `OE-Input` with the `Unity GUI` using an `InputModule.
+
+### In Control
+
+`InControl` is a 3rd party Unity package that works with OE-Input on the OUYA and controller support on non-OUYA platforms.
+
+* The [InControl](http://www.gallantgames.com/pages/incontrol-new-unity-gui) Unity package provides an `InputModule` that will connect `OE-Input` with the `Unity GUI`.
+
+* Be sure to add the `OUYA` define symbol in your Android `player settings`.
 
 ## OuyaController.BUTTON_MENU ##
 
