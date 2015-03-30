@@ -560,6 +560,8 @@ Unity 4.6 introduced `Unity GUI`. You will need to connect `OE-Input` with the `
 
 * Be sure to add the `OUYA` define symbol in your Android `player settings`.
 
+* Setup the `Input Settings` by selecting the `Edit->Project Settings->InControl->Setup Input Manager` menu item.
+
 # Pause #
 
 The Pause event fires when the game is paused which could mean that the purchase dialog is opening or that the game is exiting. This event gives you a chance to pause the game or to exit cleanly.
