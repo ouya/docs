@@ -558,7 +558,7 @@ Unity 4.6 introduced `Unity GUI`. You will need to connect `OE-Input` with the `
 
 * The [InControl](http://www.gallantgames.com/pages/incontrol-new-unity-gui) Unity package provides an `InputModule` that will connect `OE-Input` with the `Unity GUI`.
 
-* Be sure to add the `OUYA` define symbol in your Android `player settings`.
+* Be sure to add the [`INCONTROL_OUYA` define symbol](http://www.gallantgames.com/pages/incontrol-ouya) in your Android `player settings`.
 
 * Setup the `Input Settings` by selecting the `Edit->Project Settings->InControl->Setup Input Manager` menu item.
 
