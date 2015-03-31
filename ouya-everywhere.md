@@ -47,6 +47,7 @@ For most purposes, the above method should suffice.  However for games that requ
     public enum DeviceEnum {
             OUYA,
             MOJO,
+            XIAOMI,
             UNKNOWN,
     };
     public static class DeviceHardware {
