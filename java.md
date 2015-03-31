@@ -192,6 +192,27 @@ Accepts the ImageView that will display the button image and the keyCode id for 
 	}
 ```
 
+## bitmap ##
+
+The `ButtonData` image can also be converted to a `Bitmap` which can be used in other cases. 
+
+```
+    private Bitmap getButtonDataBitmap(int button) {
+    	OuyaController.ButtonData buttonData = OuyaController.getButtonData(button);
+        if (null == buttonData)
+        {
+            return null;
+        }
+        BitmapDrawable drawable = (BitmapDrawable)buttonData.buttonDrawable;
+        if (null == drawable)
+        {
+            return null;
+        }
+        Bitmap bitmap = drawable.getBitmap();
+        return bitmap;
+    }
+```
+
 ## onCreate ##
 
 Loads the layout and gets the references to the ImageView controls that will handle toggling button visibility when toggled.
