@@ -319,7 +319,7 @@ using tv.ouya.console.api;
 
 ## Button Data ##
 
-Before accessing ButtonData, make sure that `OuyaSDK.isIAPInitComplete` returns true.
+Before accessing ButtonData, make sure that `OuyaSDK.isIAPInitComplete()` returns true.
 
 ## Accessing ButtonData / Button Names ##
 
@@ -346,7 +346,7 @@ string buttonName = buttonData.buttonName;
 
 ## Accessing ButtonData / Button Images ##
 
-OuyaController has a static method to retrieve button images as Texture2D images. A null Texture2D image means the button was not found.
+`OuyaController` has a static method to retrieve button images as Texture2D images. A null Texture2D image means the button was not found.
 
 C#
 ```
