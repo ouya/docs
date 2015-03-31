@@ -106,6 +106,7 @@ Be sure to check that `OuyaFacade.isInitialized()` returns `true` before checkin
 
 Engine specific details:
 
+* [Corona](corona.md#disable-xiaomi-screensaver)
 * [GameMaker](game-maker.md#disable-xiaomi-screensaver)
 * [Java](java.md#disable-xiaomi-screensaver)
 * [MonoGame](mono-game.md#disable-xiaomi-screensaver)
@@ -136,6 +137,7 @@ The application icon on Xiaomi is a little unusual.  It will exist in the xhdpi 
 
 Engine specific details:
 
+* [Corona](corona.md#create-a-xiaomi-specific-icon)
 * [Java](java.md#create-a-xiaomi-specific-icon)
 * [Unity](unity.md#create-a-xiaomi-specific-icon)
 

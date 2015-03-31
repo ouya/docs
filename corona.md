@@ -415,6 +415,10 @@ end
 
 The main script sets up the basic button and text layout of the application. The key input listener is also registered here.
 
+#### Corona/ui.lua
+
+The UI script handles displaying the products and receipts using the response data from the in-app-purchase service.
+
 ## Xiaomi Initialization
 
 [Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
@@ -459,6 +463,18 @@ if nil ~= ouyaSDK and nil ~= ouyaSDK.initOuyaPlugin then
 end
 ```
 
-#### Corona/ui.lua
+## Disable Xiaomi Screensaver
 
-The UI script handles displaying the products and receipts using the response data from the in-app-purchase service.
+[Back to general info](enable_xiaomi_support.md#disable-xiaomi-screensaver)
+
+* The screensaver should be disabled while your game is running. By using the OUYA-Corona plugin, the screensaver will automatically be disabled.
+
+## Create a Xiaomi-specific icon
+
+[Back to general info](enable_xiaomi_support.md#create-a-xiaomi-specific-icon)
+
+The `Corona` [documentation](http://docs.coronalabs.com/daily/guide/distribution/buildSettings/index.html#ouya) has info about how to include `OUYA` and `Xiaomi` store icons. 
+
+* The `Icon-ouya.png` should be 732x412 and placed into your Corona project fodler.
+
+* The `Icon-ouya-xiaomi.png` should be 284x160 and placed into your Corona project fodler.
