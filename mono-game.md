@@ -87,7 +87,7 @@ MONO_GC_PARAMS=soft-heap-limit=512m,nursery-size=64m,evacuation-threshold=66,maj
 
 ### Resources
 
-MonoGame Download - http://monogame.codeplex.com/<br/>
+MonoGame Download - http://www.monogame.net/<br/>
 (old) ODK Bindings for C# - https://github.com/slygamer/ouya-csharp<br/>
 Mono for Android - http://xamarin.com/monoforandroid<br/>
 Installation Instructions - http://docs.xamarin.com/guides/android/getting_started/installation<br/>
