@@ -236,3 +236,21 @@ If the login is `successful`, a success animation appears briefly.
 ![login success](enable_xiaomi_support/image_10.png)
 
 After a successful log in, the launcher will return to the `home screen`.
+
+# Browse to the `OUYA Category` on `Xiaomi`
+
+To log into the console, pick the `second option` on the `home screen`.   
+
+![second option](enable_xiaomi_support/image_3.png)
+
+On the first tab, press `Down` and scroll through the items to the `Right`.
+
+![down image](enable_xiaomi_support/image_11.png)
+
+Enter the `OUYA` Category.
+
+![OUYA Category](enable_xiaomi_support/image_12.png)
+
+Play `OUYA` Games!
+
+![OUYA Games](enable_xiaomi_support/image_13.png)
