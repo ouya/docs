@@ -109,6 +109,7 @@ Engine specific details:
 * [Corona](corona.md#disable-xiaomi-screensaver)
 * [GameMaker](game-maker.md#disable-xiaomi-screensaver)
 * [Java](java.md#disable-xiaomi-screensaver)
+* [Marmalade](marmalade.md#disable-xiaomi-screensaver)
 * [MonoGame](mono-game.md#disable-xiaomi-screensaver)
 * [Unity](unity.md#disable-xiaomi-screensaver)
 
