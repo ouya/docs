@@ -101,7 +101,7 @@ Using this API will keep your game looking correct as new console hardware suppo
 
 ## Controller Input
 
-One common issue with Android games is supporting different controller hardare.  We've created a new API which will remap input from various controller manufacturers to the standard OUYA button layout.  The remapping logic is provided by the OUYA Framework, and will be constantly updated to add support for more and more controllers.
+One common issue with Android games is supporting different controller hardware.  We've created a new API which will remap input from various controller manufacturers to the standard OUYA button layout.  The remapping logic is provided by the OUYA Framework, and will be constantly updated to add support for more and more controllers.
 
 The easiest way to take advantage of this is by simply extending from the OuyaActivity class in the ODK.  This will do a couple things automatically for you:
 
