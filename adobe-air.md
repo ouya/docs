@@ -15,7 +15,9 @@ Examples are included at the base GIT path.
 
 ### Resources
 
-Adobe Air SDK - http://www.adobe.com/devnet/air/air-sdk-download.html
+* Adobe Air SDK - http://www.adobe.com/devnet/air/air-sdk-download.html
+
+* FlashDevelop - http://www.flashdevelop.org/
 
 ### Community Supported Examples
 
