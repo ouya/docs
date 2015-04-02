@@ -9,9 +9,9 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAi
 
 ## Guide
 
-### Examples
+### Videos
 
-Examples are included at the base GIT path.
+* Packaging ANE/SWC/ZIP extensions in FlashDevelop - https://vimeo.com/32551703
 
 ### Resources
 
