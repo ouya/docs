@@ -13,11 +13,21 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAi
 
 * Packaging ANE/SWC/ZIP extensions in FlashDevelop - https://vimeo.com/32551703
 
+* Android Native Extensions - Part 1 - http://gotoandlearn.com/play.php?id=148
+
+* Android Native Extensions - Part 2 - http://gotoandlearn.com/play.php?id=149
+
 ### Resources
 
 * Adobe Air SDK - http://www.adobe.com/devnet/air/air-sdk-download.html
 
 * FlashDevelop - http://www.flashdevelop.org/
+
+* Quick Guide to Creating and Using SWC - http://dev.tutsplus.com/tutorials/quick-guide-to-creating-and-using-swcs--active-1211
+
+* ANEBUILDER - http://as3breeze.com/anebuilder/
+
+* ANE-Wizard - https://github.com/freshplanet/ANE-Wizard
 
 ### Community Supported Examples
 
