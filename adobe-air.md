@@ -49,7 +49,7 @@ The `jar` folder also contains `FlashRuntimeExtensions.jar` (from the AdobeAirSD
 
 ## Build ANE
 
-[build_ane.cmd](https://github.com/ouya/ouya-sdk-examples/blob/master/AdobeAir/OuyaNativeExtension/build_ane.cmd) will package the `OuyaNativeExtension.ane` on Windows adding `JDK` to the path and customizing the `AIR_SDK` path to the `AdobeAirSDK`.
+[build_ane.cmd](https://github.com/ouya/ouya-sdk-examples/blob/master/AdobeAir/OuyaNativeExtension/build_ane.cmd) will package the `OuyaNativeExtension.ane` on Windows. Be sure to customize the paths for `JDK` and `AIR_SDK` pointing at the `AdobeAirSDK` in the build script.
 
 ## Using ANE
 
