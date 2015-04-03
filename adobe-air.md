@@ -59,7 +59,7 @@ The extension interface is the piece between Java and ActionScript and was creat
 
 ## Using ANE
 
-The `OuyaNativeExtension.ane` should be used as a library after placing in the following folders in a FlashDevelop project.
+The [OuyaNativeExtension.ane](https://github.com/ouya/ouya-sdk-examples/blob/master/AdobeAir/OuyaNativeExtension/OuyaNativeExtension.ane) should be used as a library after placing in the following folders in a FlashDevelop project.
 
 ```
 lib\OuyaNativeExtension.ane
