@@ -29,6 +29,44 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAi
 
 * ANE-Wizard - https://github.com/freshplanet/ANE-Wizard
 
+# Building ANE
+
+ANE Extensions wrap Java libraries so they can be invoked from Adobe Air ActionScript.
+
+## Build JAR
+
+The Java JAR needs to be compiled first before it can be wrapped in an ANE Extension.
+
+[Gradle](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir/OuyaNativeExtension/Build) will compile the Java Extension code into `AirOuyaPlugin.jar`.
+
+```
+gradlew clean build copyJar copyNativeArmeabi copyNativeArmeabiV7a copyNativeArmeabiX86
+```
+
+The `AirOuyaPlugin.jar` will output to the [jar](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir/OuyaNativeExtension/jar) extension folder.
+
+The `jar` folder also contains `FlashRuntimeExtensions.jar` (from the AdobeAirSDK) and `ouya-sdk.jar` (from the ODK).
+
+## Build ANE
+
+[build_ane.cmd](https://github.com/ouya/ouya-sdk-examples/blob/master/AdobeAir/OuyaNativeExtension/build_ane.cmd) will package the `OuyaNativeExtension.ane` on Windows adding `JDK` to the path and customizing the `AIR_SDK` path to the `AdobeAirSDK`.
+
+## Using ANE
+
+The `OuyaNativeExtension.ane` should be used as a library after placing in the following folders in a FlashDevelop project.
+
+```
+lib\OuyaNativeExtension.ane
+extension\release\OuyaNativeExtension.ane
+```
+
+For the debug extension folder, extract the contents of `OuyaNativeExtension.ane` into a subfolder named `OuyaNativeExtension.ane`.
+
+```
+extension\debug\OuyaNativeExtension.ane\catalog.xml
+extension\debug\OuyaNativeExtension.ane\library.swf
+```
+
 ### Community Supported Examples
 
 Head on over to GaslightGames implementation for:<br/>
