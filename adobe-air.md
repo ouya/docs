@@ -23,6 +23,8 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAi
 
 * FlashDevelop - http://www.flashdevelop.org/
 
+* FlashBuilder - http://www.adobe.com/products/flash-builder.html 
+
 * Quick Guide to Creating and Using SWC - http://dev.tutsplus.com/tutorials/quick-guide-to-creating-and-using-swcs--active-1211
 
 * ANEBUILDER - http://as3breeze.com/anebuilder/
@@ -46,6 +48,10 @@ gradlew clean build copyJar copyNativeArmeabi copyNativeArmeabiV7a copyNativeArm
 The `AirOuyaPlugin.jar` will output to the [jar](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir/OuyaNativeExtension/jar) extension folder.
 
 The `jar` folder also contains `FlashRuntimeExtensions.jar` (from the AdobeAirSDK) and `ouya-sdk.jar` (from the ODK).
+
+## ANE Extension Interface
+
+The extension interface is the piece between Java and ActionScript and was created using a [FlashBuilder project](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir/OuyaNativeExtension/lib).
 
 ## Build ANE
 
