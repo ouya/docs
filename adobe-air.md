@@ -31,6 +31,18 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAi
 
 * ANE-Wizard - https://github.com/freshplanet/ANE-Wizard
 
+# FlashDevelop/Flex/AdobeAirSDK
+
+When compiling `FlashDevelop`, `Flex`, and the `AdobeAirSDK` you'll want to increase your Java Virtual Machine memory size. Normally the default is `384MB` but you can increase to `1GB` or higher ```java.args=-Xmx1024m```.
+
+There are several locations where the `jvm.config` is configured.
+
+```
+C:\Users\[username]\AppData\Local\FlashDevelop\Apps\flexairsdk\4.6.0+16.0.0\bin\jvm.config
+C:\Program Files\Adobe\Adobe Flash Builder 4.7 (64 Bit)\sdks\3.6.0\bin\jvm.config
+C:\Program Files\Adobe\Adobe Flash Builder 4.7 (64 Bit)\sdks\4.6.0\bin\jvm.config
+```
+
 # Building ANE
 
 ANE Extensions wrap Java libraries so they can be invoked from Adobe Air ActionScript.
