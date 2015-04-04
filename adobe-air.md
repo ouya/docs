@@ -87,6 +87,16 @@ extension\debug\OuyaNativeExtension.ane\catalog.xml
 extension\debug\OuyaNativeExtension.ane\library.swf
 ```
 
+### Edit `application.xml`
+
+Add the `OuyaNativeExtension.ane` extension to your application's extensions.
+
+```
+  <extensions>
+	<extensionID>tv.ouya.sdk.ouyanativecontext</extensionID>
+  </extensions>
+```
+
 ### Community Supported Examples
 
 Head on over to GaslightGames implementation for:<br/>
