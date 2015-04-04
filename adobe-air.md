@@ -97,6 +97,17 @@ Add the `OuyaNativeExtension.ane` extension to your application's extensions.
   </extensions>
 ```
 
+Add the ANE extension's `MainActivity` within the `application` section of the `application.xml`. This will be a second activity after the existing `Activity` block.
+
+```
+		<activity android:name="tv.ouya.sdk.MainActivity">
+			<intent-filter>
+				<action android:name="tv.ouya.sdk.ACTION1" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+``` 
+
 ### Community Supported Examples
 
 Head on over to GaslightGames implementation for:<br/>
