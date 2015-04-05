@@ -106,6 +106,13 @@ Add the ANE extension's `MainActivity` within the `application` section of the `
 
 # OUYA Native Extension
 
+Import the packages to use the OUYA Native Extension.
+
+```
+import tv.ouya.sdk.OuyaController;
+import tv.ouya.sdk.OuyaNativeInterface;
+```
+
 ## OuyaInit
 
 Initialize the `OuyaNativeInterface` to use OUYA-Everywhere Input. The `OuyaNativeExtension.ane` extension must be added to your project. 
@@ -143,6 +150,17 @@ var axis:int = OuyaController.AXIS_LS_X;
 var val:Number = ouyaNativeInterface.GetAxis(playerNum, axis);
 ```
 
+The supported `axis` values are below.
+
+```
+OuyaController.AXIS_LS_X
+OuyaController.AXIS_LS_Y
+OuyaController.AXIS_RS_X
+OuyaController.AXIS_RS_Y
+OuyaController.AXIS_L2
+OuyaController.AXIS_R2
+```
+
 ## GetAnyButton
 
 `GetAnyButton` will return `true` if any controller is pressing the `button`.
@@ -151,6 +169,26 @@ var val:Number = ouyaNativeInterface.GetAxis(playerNum, axis);
 var button:int = OuyaController.BUTTON_O;
 var pressed:Boolean = ouyaNativeInterface.GetAnyButton(button);
 ```
+
+The supported `button` values are below.
+
+```
+OuyaController.BUTTON_O
+OuyaController.BUTTON_U
+OuyaController.BUTTON_Y
+OuyaController.BUTTON_A
+OuyaController.BUTTON_L1
+OuyaController.BUTTON_R1
+OuyaController.BUTTON_L3
+OuyaController.BUTTON_R3
+OuyaController.BUTTON_DPAD_UP
+OuyaController.BUTTON_DPAD_DOWN
+OuyaController.BUTTON_DPAD_RIGHT
+OuyaController.BUTTON_DPAD_LEFT
+OuyaController.BUTTON_MENU
+```
+
+`BUTTON_MENU` should only be used with `ButtonDown` and `ButtonUp` events.
 
 ## GetAnyButtonDown
 
