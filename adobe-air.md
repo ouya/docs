@@ -109,8 +109,8 @@ Add the ANE extension's `MainActivity` within the `application` section of the `
 Import the packages to use the OUYA Native Extension.
 
 ```
-import tv.ouya.sdk.OuyaController;
-import tv.ouya.sdk.OuyaNativeInterface;
+import tv.ouya.console.api;
+import tv.ouya.sdk;
 ```
 
 ## OuyaInit
