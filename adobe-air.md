@@ -100,12 +100,8 @@ Add the `OuyaNativeExtension.ane` extension to your application's extensions.
 Add the ANE extension's `MainActivity` within the `application` section of the `application.xml`. This will be a second activity after the existing `Activity` block.
 
 ```
-		<activity android:name="tv.ouya.sdk.MainActivity">
-			<intent-filter>
-				<action android:name="tv.ouya.sdk.ACTION1" />
-				<category android:name="android.intent.category.DEFAULT" />
-			</intent-filter>
-		</activity>
+		<activity android:name="tv.ouya.sdk.MainActivity"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 ``` 
 
 ### Community Supported Examples
