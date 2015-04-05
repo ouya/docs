@@ -104,6 +104,110 @@ Add the ANE extension's `MainActivity` within the `application` section of the `
 			android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
 ``` 
 
+# OUYA Native Extension
+
+## OuyaInit
+
+Initialize the `OuyaNativeInterface` to use OUYA-Everywhere Input. The `OuyaNativeExtension.ane` extension must be added to your project. 
+
+```
+trace( "Initialize OUYA Extension..." );
+var ouyaNativeInterface:OuyaNativeInterface = new OuyaNativeInterface();
+ouyaNativeInterface.OuyaInit();
+```
+
+## IsAnyConnected
+
+`IsAnyConnected` will return `true` if any controllers are connected, otherwise `false`.
+
+```
+var anyConnected:Boolean = ouyaNativeInterface.IsAnyConnected();
+```
+
+## IsConnected
+
+`IsConnected` will return `true` if the `playerNum` controller is connected.
+
+```
+var playerNum:int = 0;
+var isConnected:Boolean = ouyaNativeInterface.IsConnected(playerNum);
+```
+
+## GetAxis
+
+`GetAxis` will return the `Number` value for the supplied `playerNum` controller and `axis`.
+
+```
+var playerNum:int = 0;
+var axis:int = OuyaController.AXIS_LS_X;
+var val:Number = ouyaNativeInterface.GetAxis(playerNum, axis);
+```
+
+## GetAnyButton
+
+`GetAnyButton` will return `true` if any controller is pressing the `button`.
+
+```
+var button:int = OuyaController.BUTTON_O;
+var pressed:Boolean = ouyaNativeInterface.GetAnyButton(button);
+```
+
+## GetAnyButtonDown
+
+`GetAnyButtonDown` will return `true` if any controller detected a pressed event on the last frame for the `button`.
+
+```
+var button:int = OuyaController.BUTTON_O;
+var pressed:Boolean = ouyaNativeInterface.GetAnyButtonDown(button);
+```
+
+## GetAnyButtonUp 
+
+`GetAnyButtonUp` will return `true` if any controller detected a released event on the last frame for the `button`.
+
+```
+var button:int = OuyaController.BUTTON_O;
+var released:Boolean = ouyaNativeInterface.GetAnyButtonUp(button);
+```
+
+## GetButton
+
+`GetButton` will return `true` if the `playerNum` controller is pressing the `button`.
+
+```
+var playerNum:int = 0;
+var button:int = OuyaController.BUTTON_O;
+var pressed:Boolean = ouyaNativeInterface.GetButton(playerNum, button);
+```
+
+## GetButtonDown
+
+`GetButtonDown` will return `true` if the `playerNum` controller detected a pressed event on the last frame for the `button`.
+
+```
+var playerNum:int = 0;
+var button:int = OuyaController.BUTTON_O;
+var pressed:Boolean = ouyaNativeInterface.GetButtonDown(playerNum, button);
+```
+
+## GetButtonUp
+
+`GetButtonUp` will return `true` if the `playerNum` controller detected a released event on the last frame for the `button`.
+
+```
+var playerNum:int = 0;
+var button:int = OuyaController.BUTTON_O;
+var released:Boolean = ouyaNativeInterface.GetButtonUp(playerNum, button);
+```
+
+## ClearButtonStatesPressedReleased
+
+`ClearButtonStatesPressedReleased` will clear the detected pressed and released states to allow detection for the next update frame.
+
+```
+ouyaNativeInterface.ClearButtonStatesPressedReleased();
+```
+
 ### Community Supported Examples
 
 Head on over to GaslightGames implementation for:<br/>
