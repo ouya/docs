@@ -21,9 +21,11 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAi
 
 * Adobe Air SDK - http://www.adobe.com/devnet/air/air-sdk-download.html
 
-* FlashDevelop - http://www.flashdevelop.org/
+* FlashDevelop - IDE - http://www.flashdevelop.org/
 
-* FlashBuilder - http://www.adobe.com/products/flash-builder.html 
+* FlashBuilder - http://www.adobe.com/products/flash-builder.html
+
+* Flixel - Open source game-making library - http://flixel.org  
 
 * Quick Guide to Creating and Using SWC - http://dev.tutsplus.com/tutorials/quick-guide-to-creating-and-using-swcs--active-1211
 
