@@ -242,6 +242,14 @@ Example keystore password: `your_password` (put your own password)
 jarsigner -keystore ouya_your.keystore -storepass your_password -keypass your_password Your.apk YourAlias
 ```
 
+### Verify Certs
+
+The keystore certificate can be verified after signing the apk.
+
+```
+jarsigner -verify -certs -verbose Your.apk
+```
+
 ### Publish
 
 After signing with the keystore, the `APK` is ready to publish in the [developer portal](http://devs.ouya.tv).
