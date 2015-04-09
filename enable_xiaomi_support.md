@@ -178,6 +178,10 @@ Builds need to use standard [Android versioning](http://developer.android.com/to
 Each time a build is submitted to Xiaomi, the `version name` and `version code` need to be incremented.
 In most cases the version can be changed in the `AndroidManifest.xml`. 
 
+## Engine
+
+* When uploading your game to the developer portal, be sure to fill out which engine you used. That way support will have a context for issues and engine specific fixes can be relayed faster to you.
+
 ## Submission
 
 Once the above changes have been made, your updated APK should be submitted via the OUYA Developer portal.  You'll then need to email OUYA at [xiaomisupport@ouya.tv](mailto:xiaomisupport@ouya.tv) to let us know it's ready.  Once you've done that, we'll take a snapshot of the in-app-purchase products that you have and send them to Xiaomi.  Please make sure that you've created any necessary in-app-purchase products **BEFORE** telling us your submission is ready.  This email is also when you should send OUYA your protagonist PSD file.
