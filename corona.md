@@ -205,6 +205,17 @@ inputs.onGenericMotionEvent = function (playerNum, axis, val)
 end
 ```
 
+The supported `axis` values are below.
+
+```
+OuyaController.AXIS_LS_X
+OuyaController.AXIS_LS_Y
+OuyaController.AXIS_RS_X
+OuyaController.AXIS_RS_Y
+OuyaController.AXIS_L2
+OuyaController.AXIS_R2
+```
+
 Button events come in with the onKeyDown and onKeyUp events.
 PlayerNum is the controller number 0 through 3. (Zero-based).
 Button is the button number for the event.
@@ -218,7 +229,25 @@ inputs.onKeyUp = function (playerNum, button)
 end
 ```
 
-Button numbers can be used to detect the menu button press.
+The supported `button` values are below.
+
+```
+OuyaController.BUTTON_O
+OuyaController.BUTTON_U
+OuyaController.BUTTON_Y
+OuyaController.BUTTON_A
+OuyaController.BUTTON_L1
+OuyaController.BUTTON_R1
+OuyaController.BUTTON_L3
+OuyaController.BUTTON_R3
+OuyaController.BUTTON_DPAD_UP
+OuyaController.BUTTON_DPAD_DOWN
+OuyaController.BUTTON_DPAD_RIGHT
+OuyaController.BUTTON_DPAD_LEFT
+OuyaController.BUTTON_MENU
+```
+
+`OuyaController.BUTTON_MENU` can be used to detect the menu button press.
 
 lua
 ```
@@ -226,7 +255,7 @@ lua
     end
 ```
 
-Use `OuyaController` buttons to deteremine which button was pressed in the event.
+Use `OuyaController` buttons to determine which button was pressed in the event.
 
 lua
 ```
