@@ -10,6 +10,25 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
+### April 13, 2015 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:27:25)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=ZWW12cPwxr4" target="_blank">
+<img src="http://img.youtube.com/vi/ZWW12cPwxr4/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 4/13" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+* Documentation update for [Adobe Air](https://github.com/ouya/docs/blob/master/enable_xiaomi_support.md)
+
+<a target=_blank href="https://www.youtube.com/watch?v=ZWW12cPwxr4&t=3m02s">(3:02)</a> - Jared: Just the Facts!
+
+<a target=_blank href="https://www.youtube.com/watch?v=ZWW12cPwxr4&t=11m10s">(11:10)</a> - Tim: OE-Input documentation added for Adobe Air!
+
+----------
+
 ### March 30, 2015 ###
 
 <table border=1>
