@@ -10,6 +10,25 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
+### April 20, 2015 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:30:50)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=ImLydA3s6QE" target="_blank">
+<img src="http://img.youtube.com/vi/ImLydA3s6QE/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 4/20" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+<a target=_blank href="https://www.youtube.com/watch?v=ImLydA3s6QE&t=1m53s">(1:53)</a> - Kellee: Games For Change
+
+<a target=_blank href="https://www.youtube.com/watch?v=ImLydA3s6QE&t=5m25s">(5:25)</a> - Jared: Just the Facts!
+
+<a target=_blank href="https://www.youtube.com/watch?v=ImLydA3s6QE&t=14m10s">(14:10)</a> - Tim: Making a Xiaomi Icon
+
+----------
+
 ### April 13, 2015 ###
 
 <table border=1>
