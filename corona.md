@@ -74,6 +74,7 @@ Corona Enterpise Daily Builds - http://developer.coronalabs.com/downloads/enterp
 Corona Resources - http://coronalabs.com/resources/<br/>
 Mastering Corona SDK - http://masteringcoronasdk.com/<br/>
 Corona Editor - http://coronalabs.com/blog/2013/12/11/corona-editor-is-now-1-0/<br/>
+Lua Spec - http://www.lua.org/manual/5.3/
 
 ### Building
 
