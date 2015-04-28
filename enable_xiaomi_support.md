@@ -152,7 +152,9 @@ Engine specific details:
 
 ## Localization Resources
 
-Xiaomi requires that the app/game has been localized for `Simplified Chinese`. 
+* Xiaomi requires that the app/game has been localized for `Simplified Chinese`. 
+
+* Xiaomi also requires that the app/game name needs to be localized, if possible.
 
 Engine specific details:
 
