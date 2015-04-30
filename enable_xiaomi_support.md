@@ -4,7 +4,7 @@ While being included in the Xiaomi market is currently an invite-only process, m
 
 ## Xiaomi Target Hardware
 
-* [MiBox(Enhanced)](http://dev.xiaomi.com/doc/p=3838/index.html) [[XiaomiShop]](http://www.xiaomishop.com/116-original-mi-box-proenhanced-3rd-quad-core-smart-tv-4k-hd-box.html)
+* [MiBox(Enhanced)](http://dev.xiaomi.com/doc/p=3838/index.html) [[XiaomiShop]](http://www.honorbuy.com/116-original-mi-box-proenhanced-3rd-quad-core-smart-tv-4k-hd-box.html)
 
 ## Update to the latest ODK
 
