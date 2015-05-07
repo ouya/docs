@@ -10,7 +10,26 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
-### April 20, 2015 ###
+### May 5th, 2015 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:30:30)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=GYI91SVOxnI" target="_blank">
+<img src="http://img.youtube.com/vi/GYI91SVOxnI/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 5/5" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+<a target=_blank href="https://www.youtube.com/watch?v=GYI91SVOxnI&t=5m38s">(5:38)</a> - Jared: Just the Facts!
+
+<a target=_blank href="https://www.youtube.com/watch?v=GYI91SVOxnI&t=9m28s">(9:28)</a> - Kellee: Where in the world is Kellee Santiago
+
+<a target=_blank href="https://www.youtube.com/watch?v=GYI91SVOxnI&t=10m17s">(10:17)</a> - Tim: Localize Your Game
+
+----------
+
+### April 20th, 2015 ###
 
 <table border=1>
  <tr>
@@ -29,7 +48,7 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
-### April 13, 2015 ###
+### April 13th, 2015 ###
 
 <table border=1>
  <tr>
@@ -48,7 +67,7 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
-### March 30, 2015 ###
+### March 30th, 2015 ###
 
 <table border=1>
  <tr>
