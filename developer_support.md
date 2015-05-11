@@ -21,6 +21,12 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
  </tr>
 </table>
 
+* [Control the weather with lasers](http://www.cnn.com/2015/04/24/tech/laser-cloud-seeding-mci/index.html)
+
+* [The Long Dark](http://intothelongdark.com/)
+
+<a target=_blank href="https://www.youtube.com/watch?v=dRBWarjYnQM&t=1m20s">(1:20)</a> - Tim: Indie Gaming
+
 <a target=_blank href="https://www.youtube.com/watch?v=dRBWarjYnQM&t=5m23s">(5:23)</a> - Jared: Just the Facts!
 
 <a target=_blank href="https://www.youtube.com/watch?v=dRBWarjYnQM&t=10m30s">(10:30)</a> - Tim: Xiaomi Storefront, Corona, Sprite Sheets
