@@ -25,9 +25,9 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 * [Optimization Guide](optimization_guide.md)
 
-<a target=_blank href="https://www.youtube.com/watch?v=dRBWarjYnQM&t=5m05s">(5:05)</a> - Jared: Just the Facts!
+<a target=_blank href="https://www.youtube.com/watch?v=M3tXW_ZmFsY&t=5m05s">(5:05)</a> - Jared: Just the Facts!
 
-<a target=_blank href="https://www.youtube.com/watch?v=dRBWarjYnQM&t=8m19s">(8:19)</a> - Tim: Profiling on OUYA
+<a target=_blank href="https://www.youtube.com/watch?v=M3tXW_ZmFsY&t=8m19s">(8:19)</a> - Tim: Profiling on OUYA
 
 ----------
 
