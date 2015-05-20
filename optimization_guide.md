@@ -4,6 +4,12 @@ All games eventually run into needing to optimize the game before publishing the
 
 This document serves to give the reader ideas on where to start on the optimization process.
 
+## NVIDIA PerfHUD ES ##
+
+[PerfHUD ES](https://developer.nvidia.com/nvidia-perfhud-es) is a profiler that lets you inspect individual draw calls to find bottlenecks and performance leaks.
+Get started fast with the [quick-start guide](http://docs.nvidia.com/gameworks/index.html#developertools/mobile/perfhud_quickstart_guide.htm). 
+Follow the [general overview](http://error454.com/2013/11/14/profiling-ouya-tegra-3-games-using-nvidia-perfhud-es/) for profiling OUYA games.
+
 ## Steps ##
 
 1 - Optimize shaders. In some cases things calculated in the fragment section can be calculated in the vertex section.
@@ -28,7 +34,7 @@ This document serves to give the reader ideas on where to start on the optimizat
 
 5 - Manual culling. Don't just let the GPU handling culling for you. Your scripts can check if an object is seen by the camera and if you manually disable GameObjects you can get back the performance they may be eating. Also you can batch gameobjects in the same vicinity and toggle groups on and off as a sort of super-frustrum.
 
-6 - Run the [PerfHUD ES](http://error454.com/2013/11/14/profiling-ouya-tegra-3-games-using-nvidia-perfhud-es/) profiler to measure draw calls and inspect performance.
+6 - Run the `NVPerfHUD` profiler to measure draw calls and inspect performance.
 
 * Note: Be sure that the `android.permission.INTERNET` permission is enabled in the `AndroidManifest.xml` to ensure the profiler can be used.
 
