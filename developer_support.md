@@ -10,6 +10,27 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
+### May 20th, 2015 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:25:26)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=M3tXW_ZmFsY" target="_blank">
+<img src="http://img.youtube.com/vi/M3tXW_ZmFsY/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 5/20" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+* [Party Golf](https://vimeo.com/127160112)
+
+* [Optimization Guide](optimization_guide.md)
+
+<a target=_blank href="https://www.youtube.com/watch?v=dRBWarjYnQM&t=5m05s">(5:05)</a> - Jared: Just the Facts!
+
+<a target=_blank href="https://www.youtube.com/watch?v=dRBWarjYnQM&t=8m19s">(8:19)</a> - Tim: Profiling on OUYA
+
+----------
+
 ### May 11th, 2015 ###
 
 <table border=1>
