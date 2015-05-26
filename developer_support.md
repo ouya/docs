@@ -25,7 +25,7 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 * [Fuse](http://store.steampowered.com/app/257400/) - Now with Free Auto-Rigging for Fuse Models
 
-<a target=_blank href="https://www.youtube.com/watch?v=jSPMtOdBdqc&t=5m56s">(7:56)</a> - Jared: Just the Facts!
+<a target=_blank href="https://www.youtube.com/watch?v=jSPMtOdBdqc&t=7m56s">(7:56)</a> - Jared: Just the Facts!
 
 <a target=_blank href="https://www.youtube.com/watch?v=jSPMtOdBdqc&t=14m29s">(14:29)</a> - Tim: Receipt and Cached Receipt Checking
 
