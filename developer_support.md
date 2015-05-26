@@ -14,6 +14,27 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 <table border=1>
  <tr>
+ <td>OUYA DEV SUPPORT (00:29:05)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=jSPMtOdBdqc" target="_blank">
+<img src="http://img.youtube.com/vi/jSPMtOdBdqc/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 5/26" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+* [Unity Cached Receipt Example](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/OuyaShowProducts.cs)
+
+* [Fuse](http://store.steampowered.com/app/257400/) - Now with Free Auto-Rigging for Fuse Models
+
+<a target=_blank href="https://www.youtube.com/watch?v=jSPMtOdBdqc&t=5m56s">(7:56)</a> - Jared: Just the Facts!
+
+<a target=_blank href="https://www.youtube.com/watch?v=jSPMtOdBdqc&t=14m29s">(14:29)</a> - Tim: Receipt and Cached Receipt Checking
+
+----------
+
+### May 20th, 2015 ###
+
+<table border=1>
+ <tr>
  <td>OUYA DEV SUPPORT (00:25:26)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=M3tXW_ZmFsY" target="_blank">
 <img src="http://img.youtube.com/vi/M3tXW_ZmFsY/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 5/20" width="240" height="180" border="10" /></a></td>
