@@ -92,7 +92,9 @@ Second option:
 
 <b>Android:Drawables</b> - A list of the built-in Android drawables - http://androiddrawableexplorer.appspot.com/
 
-<b>Unity-VS</b> - http://code.google.com/p/vs-android/
+<b>VS-Android</b> - http://code.google.com/p/vs-android/
+
+<b>PVRTexTool</b> - http://community.imgtec.com/developers/powervr/tools/pvrtextool/ - A utility for compressing textures to reduce the texture memory footprint for games.
 
 #### Docs
 
