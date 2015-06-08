@@ -10,6 +10,29 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
+### June 8th, 2015 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:33:59)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=EFTlx7r9NCE" target="_blank">
+<img src="http://img.youtube.com/vi/NEB-zgghU-A/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 6/8" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+* [Stylized Nature Pack](https://www.assetstore.unity3d.com/en/#!/content/37457)
+
+* [MeshBrush](https://www.assetstore.unity3d.com/en/#!/content/14453)
+
+<a target=_blank href="https://www.youtube.com/watch?v=EFTlx7r9NCE&t=0m44s">(0:44)</a> - Kellee: GTA5
+
+<a target=_blank href="https://www.youtube.com/watch?v=EFTlx7r9NCE&t=7m44s">(7:44)</a> - Jared: Just the Facts!
+
+<a target=_blank href="https://www.youtube.com/watch?v=EFTlx7r9NCE&t=11m20s">(11:20)</a> - Tim: Unity Terrain
+
+----------
+
 ### June 1st, 2015 ###
 
 <table border=1>
