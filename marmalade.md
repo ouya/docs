@@ -73,6 +73,10 @@ Open the project properties for the configurations
 
 * Note: If you have Visual Studio set to launch 'As Administrator', Marmalade won't be able to auto-launch Visual Studio.
 
+* Note: Marmalade requires Android NDK 10 or beeter.
+
+* Note: Marmalade requires JDK7 or better.
+
 The examples can be compiled in Visual Studio.
 
 ### Marmalade ODK Extension
