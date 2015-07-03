@@ -75,7 +75,7 @@ Open the project properties for the configurations
 
 * Note: Marmalade requires Android NDK 10 or better.
 
-* Note: Marmalade requires JDK7 or better. Be sure to set the `JAVA_HOME` environment variable.
+* Note: Marmalade requires JDK7 or better. Be sure to set the `JAVA_HOME` environment variable. A reboot will be required.
 
 The examples can be compiled in Visual Studio.
 
