@@ -50,6 +50,9 @@ Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in
 		"sharp_axe",
 		"100_extra_lives"
 	}
+	
+	// listener for initialization
+	private CancelIgnoringOuyaResponseListener<Bundle> mInitCompletedListener = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -70,10 +73,29 @@ Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in
 		
 		// "tv.ouya.product_id_list"
 		developerInfo.putStringArray(OuyaFacade.OUYA_PRODUCT_ID_LIST, ALL_PRODUCT_IDS);
+		
+		// initialization listener callbacks
+        mInitCompletedListener = new CancelIgnoringOuyaResponseListener<Bundle>() {
+            @Override
+            public void onSuccess(Bundle info) {
+            	Log.i(TAG, "InitCompletedListener: onSuccess");
+            }
+
+            @Override
+            public void onFailure(int errorCode, String errorMessage, Bundle optionalData) {
+            	Log.i(TAG, "InitCompletedListener: onFailure errorCode="+errorCode+" errorMessage="+errorMessage);
+            }
+        };
+	        
+		// Get the OUYA Facade instance
+		OuyaFacade ouyaFacade = OuyaFacade.getInstance();
+	        
+		// Register the init callback
+		ouyaFacade.registerInitCompletedListener(mInitCompletedListener);
 
 		// Pass the Activity for the context parameter when initializing the OuyaFacade.
 		// Passing the application context for the context paramter will not work on Xiaomi.
-		OuyaFacade.getInstance().init(this, developerInfo);
+		ouyaFacade.init(this, developerInfo);
 
 		super.onCreate(savedInstanceState);
 	}

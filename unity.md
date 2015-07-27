@@ -26,13 +26,15 @@ Several Unity packages are available from the [ouya-sdk-examples releases](https
 
 * [Unity OuyaSDK-StarterKit.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-StarterKit) - Starter Kit for jumping into OUYA programming
 
+* [Unity-OuyaSDK-Forge.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Forge) - Files and Android.manifest changes for publishing to Razer Forge
+
 * [Unity-OuyaSDK-Xiaomi.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Xiaomi) - Files and Android.manifest changes for publishing to Xiaomi
 
 ```
 Note: Before importing ALWAYS make a backup of your game!
 ``` 
 
-**Note:** Make a backup of your `AndroidManifest.xml` in `Assets/Plugins/Android/AndroidManifest.xml` before importing the `OuyaSDK-Core.unitypackage`.
+**Note:** Make a backup of your `AndroidManifest.xml` in `Assets/Plugins/Android/AndroidManifest.xml` before importing the `OuyaSDK-Core.unitypackage`, `Unity-OuyaSDK-Forge.unitypackage`, and `Unity-OuyaSDK-Xiaomi.unitypackage`.
 
 **Note:** Make a backup of your `signing key` in `Assets/Plugins/Android/assets/key.der` before importing the `OuyaSDK-Core.unitypackage`.
 
