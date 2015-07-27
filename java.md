@@ -139,6 +139,10 @@ The `AndroidVirtualController` source code can be found within the [ouya-sdk-exa
 
 ![image alt text](ouya-everywhere-android-java/image_0.png)
 
+The `AndroidVirtualController` example uses the `OuyaController.getButtonData` API to display device specific controller images.
+
+![image alt text](ouya-everywhere-android-java/image_2.png)
+
 # Android Virtual Controller Project #
 
 The project has a small number of key files that makes the example work.
@@ -452,3 +456,9 @@ When the button is no longer pressed the ImageView for the highlighted button is
 		return true;
 	}
 ```
+
+# Razer Virtual Controller Example #
+
+The `RazerVirtualController` example includes virtual controller images and mappings for the Razer Serval Controller. The `RazerVirtualController` source code can be found within the [ouya-sdk-examples](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/RazerVirtualController).
+
+![image alt text](ouya-everywhere-android-java/image_3.png)
