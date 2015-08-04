@@ -39,11 +39,19 @@ Install <a target=_blank href="https://www.madewithmarmalade.com/free-trial">[Ma
 
 Activate the Marmalade HUB by entering your license data, which also sets up your development/build environment.
 
+```
+C:\Marmalade\7.8\tools\hub\hub.exe
+```
+
 Be sure to checkout the <a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade">[Marmalade ouya-sdk-examples]</a> from github.
 
 #### Windows
 
-Switch to your preferred Marmalade SDK version by running 's3eConfig.exe' found in the desired version 'C:\Marmalade\7.4\s3e\bin' folder.
+Switch to your preferred Marmalade SDK version by running 's3eConfig.exe' found in the desired version 'C:\Marmalade\7.8\s3e\bin' folder.
+
+```
+C:\Marmalade\7.8\s3e\bin\s3eConfig.exe
+```
 
 Be sure to set the 'NDK_ROOT' in the My Computer->Properties->Advanced System Settings->Environment Variables.
 
