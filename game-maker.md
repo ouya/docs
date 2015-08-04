@@ -42,7 +42,7 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/GameMak
 
 * Game Maker Wiki - http://wiki.yoyogames.com/index.php
 
-* Game Maker Studio Setup for Android - http://wiki.yoyogames.com/index.php/GameMaker:Studio_Settings_for_Android
+* Game Maker Studio Setup for Android - http://help.yoyogames.com/entries/23363366-GameMaker-Studio-Android-SDK-and-NDK-setup-
 
 * Create a [Native Extension](http://help.yoyogames.com/entries/30690273) For Android
 
@@ -52,7 +52,7 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/GameMak
 
 ## OUYA Extension
 
-The `Ouya-GameMaker-Extension` is available in the [resources section)[#resources].
+The `Ouya-GameMaker-Extension` is available in the [resources section](#resources).
 GameMaker extension methods only use `String` and `double` for parameters and return types.
 
 ### Signing key
