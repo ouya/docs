@@ -18,6 +18,8 @@ The OUYA Controller is supported by `OE-Input` on `Forge TV`.
 
 * The `review team` can now test `OE-Input` on `Forge TV` given a download link to the game build.
 
+* Be sure to update 3rd party libraries related to input to ensure `Forge TV` compatibility. (`InControl`)
+
 ## OUYA Everywhere
 
 Applications and games should use the latest `OE plugin` for their particular game engine to publish in the [developer portal](http://devs.ouya.tv).
