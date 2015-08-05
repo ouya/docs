@@ -42,7 +42,7 @@ OUYA Hangout July 15th (1:00:00)<br/>
 
 <b><a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/MonoGame/SetResolutions">SetResolutions</a></b> - Set Resolutions Example
 
-<b><a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/MonoGame/VirtualController">VirtualController</a></b> - Maps OUYA controllers to multiple virtual controllers
+[VirtualController](https://github.com/ouya/ouya-sdk-examples/tree/master/MonoGame/InputView) - Virtual Controllers Example Using `OE-Input`
 
 ### Signing
 
