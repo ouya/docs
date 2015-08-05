@@ -1,6 +1,6 @@
 # Razer Target Hardware
 
-The `Forge TV` runs the `Android 5.0` OS.
+The `Forge TV` runs the `Android 5.0` OS (API 22).
 
 * [Forge TV](http://www.razerzone.com/gaming-systems/razer-forge-tv) - Spec details
 
