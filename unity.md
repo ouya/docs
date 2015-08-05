@@ -564,6 +564,8 @@ Unity 4.6 introduced `Unity GUI`. You will need to connect `OE-Input` with the `
 
 * Setup the `Input Settings` by selecting the `Edit->Project Settings->InControl->Setup Input Manager` menu item.
 
+* Be sure to update to the latest `InControl` package to ensure `Forge TV` compatibility.
+
 # Pause #
 
 The Pause event fires when the game is paused which could mean that the purchase dialog is opening or that the game is exiting. This event gives you a chance to pause the game or to exit cleanly.
