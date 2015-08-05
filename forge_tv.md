@@ -4,17 +4,17 @@ The `Forge TV` runs the `Android 5.0` OS.
 
 * [Forge TV](http://www.razerzone.com/gaming-systems/razer-forge-tv) - Spec details
 
-## OUYA Everywhere
-
-Applications and games should use the latest OUYA-Everywhere plugin for their particular game engine to publish in the [developer portal](http://devs.ouya.tv).
-
 The `Razer Serval` controller is supported by OE-Input on `Forge TV`.
 
 * [Razer Serval Controller](http://www.razerzone.com/gaming-controllers/razer-serval) - Spec Details
 
 The OUYA Controller is supported by OE-Input on `Forge TV`.
 
-## List of engines that support Forge TV
+## OUYA Everywhere
+
+Applications and games should use the latest OUYA-Everywhere plugin for their particular game engine to publish in the [developer portal](http://devs.ouya.tv).
+
+## List of Engines That Support Forge TV
 
 The latest OE-Input adds support for many controllers on the `Forge TV` device. 
 
