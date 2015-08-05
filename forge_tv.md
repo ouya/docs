@@ -10,7 +10,7 @@ Applications and games should use the latest OUYA-Everywhere plugin for their pa
 
 ## List of engines that support Forge TV
 
-The latest OE-Input adds support for many controller for the `Forge TV` device. 
+The latest OE-Input adds support for many controllers on the `Forge TV` device. 
 
 * [Corona](corona.md)
 * [GameMaker](game-maker.md)
