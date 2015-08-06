@@ -52,7 +52,7 @@ The OUYA Controller is supported by `OE-Input` on `Forge TV`.
 
 ## Engines That Support Forge TV
 
-The latest `OE-Input` adds support for many controllers on the `Forge TV` device. 
+The latest `OE-Input` adds support for many controllers on the `Forge TV` device. The following engines have `Forge TV` support and more will be added to this list:
 
 * [Corona](corona.md)
 * [GameMaker](game-maker.md)
