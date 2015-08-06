@@ -52,7 +52,7 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/GameMak
 
 ## OUYA Extension
 
-The `Ouya-GameMaker-Extension` is available in the [resources section)[#resources].
+The `Ouya-GameMaker-Extension` is available in the [resources section](game-maker.md#resources).
 GameMaker extension methods only use `String` and `double` for parameters and return types.
 
 ### Signing key
