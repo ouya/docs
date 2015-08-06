@@ -8,19 +8,19 @@ This document will help you put your `OUYA Game` on `Cortex TV` (the storefront 
 
 ## Table of contents
 
-[Audience](Audience)
+[Audience](forge_tv.md#audience)
 
-[Specifications](Specifications)
+[Specifications](forge_tv.md#specifications)
 
-[Notes](Notes)
+[Notes](forge_tv.md#notes)
 
-[Engines That Support Forge TV](Engines-That-Support-Forge-TV)
+[Engines That Support Forge TV](forge_tv.md#engines-that-support-forge-tv)
 
-[Step 1. Upgrade the OE Plugin](Step-1--Upgrade-the-OE-Plugin)
+[Step 1. Upgrade the OE Plugin](forge_tv.md#step-1--upgrade-the-oe-plugin)
 
-[Step 2. Fix Button Images](Step-2--Fix-Button-Images)
+[Step 2. Fix Button Images](forge_tv.md#Step-2--fix-button-images)
 
-[Controller Image](Controller-Image)
+[Controller Image](forge_tv.md#controller-image)
 
 ## Audience
 
