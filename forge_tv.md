@@ -1,4 +1,32 @@
-# Razer Target Hardware
+# Put Your OUYA Game on `Cortex TV`
+
+`OUYA Publishing` is in the process of testing games in the `OUYA Store` for compatibility on `Forge TV`.
+
+Some games are completely functional whereas other games may have issues with input, and other games have minor cosmetic issues.
+
+This document will help you put your `OUYA Game` on `Cortex TV` (the storefront for the Forge TV).
+
+## Table of contents
+
+[Audience](Audience)
+
+[Specifications](Specifications)
+
+[Notes](Notes)
+
+[Engines That Support Forge TV](Engines-That-Support-Forge-TV)
+
+[Step 1. Upgrade the OE Plugin](Step-1--Upgrade-the-OE-Plugin)
+
+[Step 2. Fix Button Images](Step-2--Fix-Button-Images)
+
+[Controller Image](Controller-Image)
+
+## Audience
+
+`OUYA Developers` wanting to publish to the `Forge TV` console.
+
+## Specifications
 
 The `Forge TV` runs the `Android 5.0` OS (API 22).
 
@@ -10,21 +38,17 @@ The `Razer Serval` controller is supported by `OE-Input` on `Forge TV`.
 
 The OUYA Controller is supported by `OE-Input` on `Forge TV`.
 
-## FAQ
+## Notes
 
-* An upcoming `Forge TV` OTA update will include `KL mapping files` which adds support for many controllers.
+* An upcoming `Forge TV` OTA update will include new support for many controllers.
 
-* An upcoming `Forge TV` OTA update will include the `OUYA Framework` and `store launcher` which makes `OE-Input` possible.
+* An upcoming `Forge TV` OTA update will also include the `OUYA Framework` and `store launcher` which makes `OE-Input` possible.
 
 * The `review team` can now test `OE-Input` on `Forge TV` given a download link to the game build.
 
-* Be sure to update 3rd party libraries related to input to ensure `Forge TV` compatibility. (`InControl`)
+* Be sure to update 3rd party libraries related to input to ensure `Forge TV` compatibility. (i.e. `InControl`)
 
-## OUYA Everywhere
-
-Applications and games should use the latest `OE plugin` for their particular game engine to publish in the [developer portal](http://devs.ouya.tv).
-
-## List of Engines That Support Forge TV
+## Engines That Support Forge TV
 
 The latest `OE-Input` adds support for many controllers on the `Forge TV` device. 
 
@@ -34,7 +58,11 @@ The latest `OE-Input` adds support for many controllers on the `Forge TV` device
 * [MonoGame](mono-game.md)
 * [Unity](unity.md)
 
-## Button Images
+## Step 1. Upgrade the OE Plugin
+
+Applications and games should use the latest `OE plugin` for their particular game engine to publish in the [developer portal](http://devs.ouya.tv).
+
+## Step 2. Fix Button Images
 
 [Button images](https://github.com/ouya/docs/blob/master/ouya-everywhere.md#controller-images) vary on each device. Games should use the `OE API` to get the correct button images at run-time. The submission review process checks to see that the correct button images are used.
 
