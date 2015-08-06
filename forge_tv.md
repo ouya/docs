@@ -34,25 +34,25 @@ The `Forge TV` runs the `Android 5.0` OS (API 22).
 
 * [Forge TV](http://www.razerzone.com/gaming-systems/razer-forge-tv) - Spec details
 
-The `Razer Serval` controller is supported by `OE-Input` on `Forge TV`.
+The `Razer Serval` controller is supported by [`OUYA-Everywhere`](ouya-everywhere.md) on `Forge TV`.
 
 * [Razer Serval Controller](http://www.razerzone.com/gaming-controllers/razer-serval) - Spec Details
 
-The OUYA Controller is supported by `OE-Input` on `Forge TV`.
+The OUYA Controller is supported by [`OUYA-Everywhere`](ouya-everywhere.md) on `Forge TV`.
 
 ## Notes
 
 * An upcoming `Forge TV` OTA update will include new support for many controllers.
 
-* An upcoming `Forge TV` OTA update will also include the `OUYA Framework` and `store launcher` which makes `OE-Input` possible.
+* An upcoming `Forge TV` OTA update will also include the `OUYA Framework` and `store launcher` which makes [`OUYA-Everywhere`](ouya-everywhere.md) possible.
 
-* The `review team` can now test `OE-Input` on `Forge TV` given a download link to the game build.
+* The `review team` can now test [`OUYA-Everywhere`](ouya-everywhere.md) on `Forge TV` given a download link to the game build.
 
 * Be sure to update 3rd party libraries related to input to ensure `Forge TV` compatibility. (i.e. `InControl`)
 
 ## Engines That Support Forge TV
 
-The latest `OE-Input` adds support for many controllers on the `Forge TV` device. The following engines have `Forge TV` support and more will be added to this list:
+The latest [`OUYA-Everywhere`](ouya-everywhere.md) adds support for many controllers on the `Forge TV` device. The following engines have `Forge TV` support and more will be added to this list:
 
 * [Corona](corona.md)
 * [GameMaker](game-maker.md)
@@ -60,9 +60,9 @@ The latest `OE-Input` adds support for many controllers on the `Forge TV` device
 * [MonoGame](mono-game.md)
 * [Unity](unity.md)
 
-## Step 1. Upgrade the OE Plugin
+## Step 1. Upgrade the OUYA-Everywhere Plugin
 
-Applications and games should use the latest `OE plugin` for their particular game engine to publish in the [developer portal](http://devs.ouya.tv).
+Applications and games should use the latest [`OUYA-Everywhere`](ouya-everywhere.md) Plugin for their particular game engine to publish in the [developer portal](http://devs.ouya.tv).
 
 ## Step 2. Fix Button Images
 
