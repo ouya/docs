@@ -66,7 +66,7 @@ Applications and games should use the latest [`OUYA-Everywhere`](ouya-everywhere
 
 ## Step 2. Fix Button Images
 
-[Button images](https://github.com/ouya/docs/blob/master/ouya-everywhere.md#controller-images) vary on each device. Games should use the `OE API` to get the correct button images at run-time. The submission review process checks to see that the correct button images are used.
+[Button images](https://github.com/ouya/docs/blob/master/ouya-everywhere.md#controller-images) vary on each device. Games should use [`OUYA-Everywhere`](ouya-everywhere.md) to get the correct button images at run-time. The submission review process checks to see that the correct button images are used.
 
 ![Button images](forge_tv/image_1.png)
 
