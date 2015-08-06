@@ -6,7 +6,7 @@ Some games are completely functional whereas other games may have issues with in
 
 This document will help you put your `OUYA Game` on `Cortex TV` (the storefront for the Forge TV).
 
-## Table of contents
+## Table of Contents
 
 [Audience](forge_tv.md#audience)
 
