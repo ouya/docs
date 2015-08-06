@@ -44,6 +44,26 @@ OUYA Hangout July 15th (1:00:00)<br/>
 
 [VirtualController](https://github.com/ouya/ouya-sdk-examples/tree/master/MonoGame/InputView) - Virtual Controllers Example Using `OE-Input`
 
+## Setup
+
+1. Download the latest [MonoGame](https://github.com/mono/MonoGame/releases/tag/v3.4) release.
+
+2. Download the [MonoGame Dependencies](https://github.com/Mono-Game/MonoGame.Dependencies) and unpack into the `ThirdParty\Dependencies` folder.
+
+3. Run `Protobuild.exe` in the root source folder to generate the build solutions.
+
+4. Compile `MonoGame.Framework.Android.sln` in `Release` mode.
+
+5. Copy the compiled `MonoGame libaries` into your C# project.
+
+6. Learn `MonoGame` by browsing the [MonoGame Samples](https://github.com/Mono-Game/MonoGame.Samples). 
+
+```
+MonoGame.Framework\bin\Android\AnyCPU\Release\Lidgren.Network.dll
+MonoGame.Framework\bin\Android\AnyCPU\Release\MonoGame.Framework.dll
+MonoGame.Framework\bin\Android\AnyCPU\Release\MonoGame.Framework.Net.dll
+```
+
 ### Signing
 
 The auto update process requires that you use the same keystore in your app and every update.
