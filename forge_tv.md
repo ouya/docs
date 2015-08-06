@@ -2,7 +2,7 @@
 
 `OUYA Publishing` is in the process of testing games in the `OUYA Store` for compatibility on `Forge TV`.
 
-Some games are completely functional whereas other games may have issues with input, and other games have minor cosmetic issues.
+Some games may be completely functional, whereas other games may have issues with input, and other games may have cosmetic issues with button images.
 
 This document will help you put your `OUYA Game` on `Cortex TV` (the storefront for the Forge TV).
 
