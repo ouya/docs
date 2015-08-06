@@ -46,17 +46,15 @@ OUYA Hangout July 15th (1:00:00)<br/>
 
 ## Setup
 
-<ol>
+1) Download the latest [MonoGame](https://github.com/mono/MonoGame/releases/tag/v3.4) release.
 
-<li> Download the latest [MonoGame](https://github.com/mono/MonoGame/releases/tag/v3.4) release.</li>
+2) Download the [MonoGame Dependencies](https://github.com/Mono-Game/MonoGame.Dependencies) and unpack into the `ThirdParty\Dependencies` folder.
 
-<li> Download the [MonoGame Dependencies](https://github.com/Mono-Game/MonoGame.Dependencies) and unpack into the `ThirdParty\Dependencies` folder.</li>
+3) Run `Protobuild.exe` in the root source folder to generate the build solutions.
 
-<li> Run `Protobuild.exe` in the root source folder to generate the build solutions.</li>
+4) Compile `MonoGame.Framework.Android.sln` in `Release` mode.
 
-<li> Compile `MonoGame.Framework.Android.sln` in `Release` mode.</li>
-
-<li> Copy the compiled `MonoGame libaries` into your C# project.</li>
+5) Copy the compiled `MonoGame libaries` into your C# project.
 
 ```
 MonoGame.Framework\bin\Android\AnyCPU\Release\Lidgren.Network.dll
@@ -64,9 +62,8 @@ MonoGame.Framework\bin\Android\AnyCPU\Release\MonoGame.Framework.dll
 MonoGame.Framework\bin\Android\AnyCPU\Release\MonoGame.Framework.Net.dll
 ```
 
-<li> Learn `MonoGame` by browsing the [MonoGame Samples](https://github.com/Mono-Game/MonoGame.Samples).</li>
+6) Learn `MonoGame` by browsing the [MonoGame Samples](https://github.com/Mono-Game/MonoGame.Samples).
 
-</ol>
 
 ### Signing
 
