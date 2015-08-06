@@ -56,13 +56,13 @@ OUYA Hangout July 15th (1:00:00)<br/>
 
 5. Copy the compiled `MonoGame libaries` into your C# project.
 
-6. Learn `MonoGame` by browsing the [MonoGame Samples](https://github.com/Mono-Game/MonoGame.Samples). 
-
 ```
 MonoGame.Framework\bin\Android\AnyCPU\Release\Lidgren.Network.dll
 MonoGame.Framework\bin\Android\AnyCPU\Release\MonoGame.Framework.dll
 MonoGame.Framework\bin\Android\AnyCPU\Release\MonoGame.Framework.Net.dll
 ```
+
+6. Learn `MonoGame` by browsing the [MonoGame Samples](https://github.com/Mono-Game/MonoGame.Samples).
 
 ### Signing
 
