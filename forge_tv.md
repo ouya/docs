@@ -2,7 +2,7 @@
 
 `OUYA Publishing` is in the process of testing games in the `OUYA Store` for compatibility on `Forge TV`.
 
-Some games may be completely functional, whereas other games may have issues with input, and other games may have cosmetic issues with button images.
+Some games are perfectly functional, whereas other games may have issues with input, and other games may have cosmetic issues with button images.
 
 This document will help you put your `OUYA Game` on `Razer Cortex TV` (the storefront for the Forge TV).
 
@@ -64,9 +64,13 @@ The latest [`OUYA-Everywhere`](ouya-everywhere.md) adds support for many control
 
 Applications and games should use the latest [`OUYA-Everywhere`](ouya-everywhere.md) Plugin for their particular game engine to publish in the [developer portal](http://devs.ouya.tv).
 
+Locate the appropriate engine documentation from the above list in order to the newest plugin.
+
 ## Step 2. Fix Button Images
 
-[Button images](https://github.com/ouya/docs/blob/master/ouya-everywhere.md#controller-images) vary on each device. Games should use [`OUYA-Everywhere`](ouya-everywhere.md) to get the correct button images at run-time. The submission review process checks to see that the correct button images are used.
+[Button images](https://github.com/ouya/docs/blob/master/ouya-everywhere.md#controller-images) vary on each device. Games can use [`OUYA-Everywhere`](ouya-everywhere.md) to get the correct button images at run-time. The submission review process checks to see that the correct button images are used.
+
+Developers can also design custom button images, as long as  images reflect `Forge TV` A,B,X,Y formatting (see below).
 
 ![Button images](forge_tv/image_1.png)
 
