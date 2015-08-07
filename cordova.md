@@ -23,7 +23,7 @@ The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/C
 The initial `Cordova` project was created with the command-line from the `Cordova` folder.
 
 ```
-cordova create VirtualController tv.ouya.sdk.examples.cordova.virtualcontroller VirtualController
+cordova create VirtualController tv.ouya.examples.cordova.virtualcontroller VirtualController
 ```
 
 `Android` support is added to the `Cordova` project with the following command-line.
