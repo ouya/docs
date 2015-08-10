@@ -25,7 +25,7 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 * [Developer Portal](http://devs.ouya.tv)
 
-<a target=_blank href="https://www.youtube.com/watch?v=_U9xzFAVFG4&t=0m00s">(0:00)</a> - Bawb/Jared/Kellee: News Update!
+<a target=_blank href="https://www.youtube.com/watch?v=_U9xzFAVFG4&t=0m01s">(0:01)</a> - Bawb/Jared/Kellee: News Update!
 
 <a target=_blank href="https://www.youtube.com/watch?v=_U9xzFAVFG4&t=10m39s">(10:39)</a> - Tim: Publishing to the Forge TV
 
