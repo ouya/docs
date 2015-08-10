@@ -48,7 +48,7 @@ The OUYA Controller is supported by [`OUYA-Everywhere`](ouya-everywhere.md) on `
 
 * The `review team` can now test [`OUYA-Everywhere`](ouya-everywhere.md) on `Forge TV` given a download link to the game build.
 
-* Be sure to update 3rd party libraries related to input to ensure `Forge TV` compatibility. (i.e. `InControl`)
+* Be sure to update 3rd party libraries related to input to ensure `Forge TV` compatibility. (i.e. `InControl`*)
 
 ## Engines That Support Forge TV
 
@@ -59,6 +59,7 @@ The latest [`OUYA-Everywhere`](ouya-everywhere.md) adds support for many control
 * [Java](java.md)
 * [MonoGame](mono-game.md)
 * [Unity](unity.md)
+	* *InControl -- If you use InControl for Unity3D, be sure to update your InControl library. For more information, read the [InControl documentation on their website.](http://www.gallantgames.com/pages/incontrol-ouya)
 
 ## Step 1. Upgrade the OUYA-Everywhere Plugin
 
