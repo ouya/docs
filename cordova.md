@@ -10,6 +10,72 @@ The [`Cordova`](https://cordova.apache.org/) engine provides a hardware-accelera
 
 * [Cordova Android Plugins](http://cordova.apache.org/docs/en/5.0.0/guide_platforms_android_plugin.md.html#Android%20Plugins)
 
+## HTML5
+
+To interact with Cordova plugins, first add `Cordova` includes in the `head`.
+
+```
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+```
+
+### Input
+
+Register the `Cordova` input hooks to receive `HTML5` input.
+
+```
+	function onLoad() {
+
+		cordova.exec(
+			function(jsonData) {
+				var jsonObject = JSON.parse(jsonData);
+				var playerNum = jsonObject.playerNum;
+				var axis = jsonObject.axis;
+				var val = jsonObject.val;
+				//console.log("HTML5 CallbackOnGenericMotionEvent playerNum="+playerNum+" axis="+axis+" val="+val);
+				onGenericMotionEvent(playerNum, axis, val);
+			},
+			function(err) {
+				console.error("HTML5 setCallbackOnGenericMotionEvent Failed: "+err);
+			},
+			"OuyaSDK", "setCallbackOnGenericMotionEvent", [ "" ]);
+
+		cordova.exec(
+			function(jsonData) {
+				var jsonObject = JSON.parse(jsonData);
+				var playerNum = jsonObject.playerNum;
+				var button = jsonObject.button;
+				//console.log("HTML5 CallbackOnKeyUp playerNum="+playerNum+" button="+button);
+				onKeyUp(playerNum, button);
+			},
+			function(err) {
+				console.error("HTML5 setCallbackOnKeyUp Failed: "+err);
+			},
+			"OuyaSDK", "setCallbackOnKeyUp", [ "" ]);
+
+		cordova.exec(
+			function(jsonData) {
+				var jsonObject = JSON.parse(jsonData);
+				var playerNum = jsonObject.playerNum;
+				var button = jsonObject.button;
+				//console.log("HTML5 CallbackonKeyDown playerNum="+playerNum+" button="+button);
+				onKeyDown(playerNum, button);
+			},
+			function(err) {
+				console.error("HTML5 setCallbackOnKeyDown Failed: "+err);
+			},
+			"OuyaSDK", "setCallbackOnKeyDown", [ "" ]);
+	}
+```
+
+### OnLoad
+
+Wait for the document to load before making calls to the `Cordova` API, by using the `body` to register the `onload` callback.
+
+```
+  <body onload="onLoad()">
+``` 
+
 ## Examples
 
 * Be sure to update to the latest version of `Android Studio`.
