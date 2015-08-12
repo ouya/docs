@@ -26,6 +26,12 @@ Register the `Cordova` input hooks to receive `HTML5` input.
 ```
 	function onLoad() {
 
+      	if (cordova.exec == undefined) {
+      		onFailure(0, "Wait for plugin to load!");
+			setTimeout(function(){ onLoad() }, 1000);
+      		return;
+      	}
+
 		cordova.exec(
 			function(jsonData) {
 				var jsonObject = JSON.parse(jsonData);
@@ -103,3 +109,31 @@ To build and run the `Virtual Controller Example` run the following command from
 ```
 cordova run android
 ```
+
+After running the above command, the project can be imported into `Android Studio` using the `Cordova\VirtualController\platforms\android` folder.
+
+### In-App-Purchases
+
+The [In-App-Purchases](https://github.com/ouya/ouya-sdk-examples/tree/master/Cordova/InAppPurchases) example shows making purchases, checking receipts, adjusting the safe area, and exiting the app.
+
+![image_1.png](cordova/image_2.png)
+
+The initial `Cordova` project was created with the command-line from the `Cordova` folder.
+
+```
+cordova create InAppPurchases tv.ouya.examples.cordova.inapppurchases InAppPurchases
+```
+
+`Android` support is added to the `Cordova` project with the following command-line.
+
+```
+cordova platform add android
+```
+
+To build and run the `In-App-Purchase Example` run the following command from the `Cordova/InAppPurchases` folder.
+
+```
+cordova run android
+```
+
+After running the above command, the project can be imported into `Android Studio` using the `Cordova\InAppPurchases\platforms\android` folder.
