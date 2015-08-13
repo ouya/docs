@@ -98,7 +98,7 @@ The initial `Cordova` project was created with the command-line from the `Cordov
 cordova create VirtualController tv.ouya.examples.cordova.virtualcontroller VirtualController
 ```
 
-`Android` support is added to the `Cordova` project with the following command-line.
+`Android` support is added to the `Cordova` project with the following command-line from the `Cordova/VirtualController` folder.
 
 ```
 cordova platform add android

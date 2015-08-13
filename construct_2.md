@@ -393,9 +393,34 @@ The examples are `capx` files which are complete projects that depend on install
 
 The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/Construct2/VirtualController) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated. The Virtual Controller example includes support for [OUYA-Everywhere](ouya-everywhere.md).
 
-Open the `VirtualController.capx` from the Construct 2 SDK examples.
-
 ![Virtual Controller Example](construct_2/image_1.png)
+
+### Building HTML5 with Construct 2
+
+Open the `VirtualController.capx` from the `Construct2\VirtualController` example folder.
+
+### Virtual Controller Wrapped In Cordova
+
+The initial `Cordova` project was created with the command-line from the `Cordova` folder.
+
+```
+cordova create VirtualController tv.ouya.examples.construct2.virtualcontroller VirtualController
+```
+
+`Android` support is added to the `Cordova` project with the following command-line from the `Construct2/VirtualController` folder.
+
+```
+cordova platform add android
+```
+
+To build and run the `Virtual Controller Example` run the following command from the `Construct2/VirtualController` folder.
+
+```
+cordova run android
+```
+
+When building in `Construct 2` and exporting to `HTML5` be sure to output to the `Construct2\VirtualController\www` folder so that the above command will pick up the files.
+
 
 ## `In-App-Purchases` ##
 
