@@ -36,43 +36,43 @@ Construct 2 is an visually programable engine that publishes HTML5.
 
 ### Windows ###
 
-1. Install [Construct 2](https://www.scirra.com/construct2).
+1) Install [Construct 2](https://www.scirra.com/construct2).
 
-2. Install your license file into the `C:\Program Files\Construct 2\` folder.
+2) Install your license file into the `C:\Program Files\Construct 2\` folder.
 
-3. Install the `Construct 2` plugin changes and the [OuyaSDK plugins](https://github.com/ouya/ouya-sdk-examples/tree/master/Construct2/Program%20Files/Construct%202/exporters/html5/plugins) into your `Construct 2` plugin folder.
+3) Install the `Construct 2` [exporter changes](https://github.com/ouya/ouya-sdk-examples/tree/master/Construct2/Program%20Files/Construct%202/exporters/) into your `Construct 2` exporters folder.
 
-4. Restart Construct 2
+4) Restart Construct 2
 
 ## Publishing ##
 
-Publishing to the OUYA requires that you package the generated HTML from `Construct 2` into an Android wrapper, preferrably using the `WebArchive` prebuilt configuration from the [HTML5 docs](html5.md). The `WebArchive` prebuilt configuration provides accelerated `WebGL` and accelerated video decoding.
+Publishing to the `OUYA` requires that you package the generated `HTML5` from `Construct 2` into an Android wrapper, `Cordova`. The wrapper provides accelerated `WebGL` and accelerated video decoding.
 
-1. Use the menu `File->Export project...` item
+1) Use the menu `File->Export project...` item
 
-2. Select `HTML5 website` and click `Next` button
+2) Select `HTML5 website` and click `Next` button
 
-3. Specify the `HTML5` output folder and click `Next` button
+![export HTML5](construct_2/image_41.png)
 
-4. Select `Normal style` and click the `Export` button
+3) Specify the `HTML5` output folder and click `Next` button (this should be the `Cordova` www folder.
 
-5. Zip the `HTML5` output into a single zip file.
+![export HTML5](construct_2/image_42.png)
 
-6. Rename the zip file to `web_archive.jar`
+4) Select `Normal style` and click the `Export` button
 
-7. Move `web_archive.jar` into the WebArchive `res/raw` folder
+5) Return to `Construct 2` or open the destination `www` folder.
 
-8. Customize the package name in `ContentShell/AndroidManifest.xml`
+![export HTML5](construct_2/image_44.png)
 
-9. Customize the app name in 'ContentShell/res/values/string.xml`
+6) Run the `package.cmd` script in the root of the project which runs `cordova run android` to package and install the packaged Android app on the connected `Android` device.
 
-10. Repackage the WebArchive and run on the OUYA using the available WebArchive scripts
+![export HTML5](construct_2/image_43.png) 
 
 # Setup
 
 Before you can use the `OuyaSDK` be sure to create a game in the [developer portal](http://devs.ouya.tv) and download the signing key.
 
-The IAP example places the signing key in `ouya-sdk-examples\Construct2\InAppPurchases\customization\assets\key.der` which gets packaged when running `ouya-sdk-examples\Construct2\InAppPurchases\package.cmd` after exporting HTML5 to `ouya-sdk-examples\Construct2\InAppPurchases\Build`. 
+The IAP example places the signing key in `Construct2\InAppPurchases\platforms\android\assets\key.der` which gets packaged when running `ouya-sdk-examples\Construct2\InAppPurchases\package.cmd` after exporting `HTML5` to `Construct2\InAppPurchases\www`. 
 
 ## Testing
 
@@ -133,7 +133,9 @@ The `initOuyaPlugin` action will invoke initializing the OUYA Plugin given the v
 
 `Initialize OUYA Plugin on Failure` will be invoked if the OUYA Plugin failed to initialize.
 
-After initializing the OUYA Plugin the other IAP actions can be invoked.
+* After the success callback, the other IAP actions can be invoked.
+
+* After the failure callback, be sure to reinvoke the `InitOuyaPlugin` action to ensure the `OUYA` plugin successfully initializes.
 
 ![Init Plugin](construct_2/image_8.png)
 
