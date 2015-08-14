@@ -56,7 +56,7 @@ Publishing to the `OUYA` requires that you package the generated `HTML5` from `C
 
 ![export type](construct_2/image_41.png)
 
-3) Specify the `HTML5` output folder and click `Next` button (this should be the `Cordova` www folder.
+3) Specify the `HTML5` output folder and click `Next` button (this should be the `Cordova` www folder).
 
 ![export destination](construct_2/image_42.png)
 
