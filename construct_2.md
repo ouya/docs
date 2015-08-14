@@ -413,25 +413,31 @@ Open the `VirtualController.capx` from the `Construct2\VirtualController` exampl
 
 ### Virtual Controller Wrapped In Cordova
 
-The initial `Cordova` project was created with the command-line from the `Construct2` folder.
+1) The initial `Cordova` project was created with the command-line from the `Construct2` folder.
 
 ```
 cordova create VirtualController tv.ouya.examples.construct2.virtualcontroller VirtualController
 ```
 
-`Android` support is added to the `Cordova` project with the following command-line from the `Construct2/VirtualController` folder.
+2) `Android` support is added to the `Cordova` project with the following command-line from the `Construct2/VirtualController` folder.
 
 ```
 cordova platform add android
 ```
 
-To build and run the `Virtual Controller Example` run the following command from the `Construct2/VirtualController` folder.
+3) Use the `Cordova` command-line to add the `cordova-plugin-ouya-sdk` plugin.
+
+```
+cordova plugin add https://github.com/ouya/cordova-plugin-ouya-sdk.git#master
+```
+
+4) To build and run the `Virtual Controller Example` run the following command from the `Construct2/VirtualController` folder.
 
 ```
 cordova run android
 ```
 
-When building in `Construct 2` and exporting to `HTML5` be sure to output to the `Construct2\VirtualController\www` folder so that the above command will pick up the files.
+5) When building in `Construct 2` and exporting to `HTML5` be sure to output to the `Construct2\VirtualController\www` folder so that the above command will pick up the files.
 
 
 ## `In-App-Purchases` ##
@@ -446,22 +452,28 @@ Open the `InAppPurchases.capx` from the `Construct2\InAppPurchases` example fold
 
 ### In-App-Purchases Wrapped In Cordova
 
-The initial `Cordova` project was created with the command-line from the `Construct2` folder.
+1) The initial `Cordova` project was created with the command-line from the `Construct2` folder.
 
 ```
 cordova create InAppPurchases tv.ouya.examples.construct2.inapppurchases InAppPurchases
 ```
 
-`Android` support is added to the `Cordova` project with the following command-line from the `Construct2/InAppPurchases` folder.
+2) `Android` support is added to the `Cordova` project with the following command-line from the `Construct2/InAppPurchases` folder.
 
 ```
 cordova platform add android
 ```
 
-To build and run the `In-App-Purchases Example` run the following command from the `Construct2/InAppPurchases` folder.
+3) Use the `Cordova` command-line to add the `cordova-plugin-ouya-sdk` plugin.
+
+```
+cordova plugin add https://github.com/ouya/cordova-plugin-ouya-sdk.git#master
+```
+
+4) To build and run the `In-App-Purchases Example` run the following command from the `Construct2/InAppPurchases` folder.
 
 ```
 cordova run android
 ```
 
-When building in `Construct 2` and exporting to `HTML5` be sure to output to the `Construct2\InAppPurchases\www` folder so that the above command will pick up the files.
+5) When building in `Construct 2` and exporting to `HTML5` be sure to output to the `Construct2\InAppPurchases\www` folder so that the above command will pick up the files.
