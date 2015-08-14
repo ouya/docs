@@ -401,7 +401,7 @@ Open the `VirtualController.capx` from the `Construct2\VirtualController` exampl
 
 ### Virtual Controller Wrapped In Cordova
 
-The initial `Cordova` project was created with the command-line from the `Cordova` folder.
+The initial `Cordova` project was created with the command-line from the `Construct2` folder.
 
 ```
 cordova create VirtualController tv.ouya.examples.construct2.virtualcontroller VirtualController
@@ -426,6 +426,30 @@ When building in `Construct 2` and exporting to `HTML5` be sure to output to the
 
 The [In-App-Purchases](https://github.com/ouya/ouya-sdk-examples/tree/master/Construct2/InAppPurchases) example shows making purchases, checking receipts, adjusting the safe area, and exiting the app.
 
-Open the `InAppPurchases.capx` from the Construct 2 SDK examples.
-
 ![Virtual Controller Example](construct_2/image_2.png)
+
+### Building HTML5 with Construct 2
+
+Open the `InAppPurchases.capx` from the `Construct2\InAppPurchases` example folder.
+
+### In-App-Purchases Wrapped In Cordova
+
+The initial `Cordova` project was created with the command-line from the `Construct2` folder.
+
+```
+cordova create InAppPurchases tv.ouya.examples.construct2.inapppurchases InAppPurchases
+```
+
+`Android` support is added to the `Cordova` project with the following command-line from the `Construct2/InAppPurchases` folder.
+
+```
+cordova platform add android
+```
+
+To build and run the `In-App-Purchases Example` run the following command from the `Construct2/InAppPurchases` folder.
+
+```
+cordova run android
+```
+
+When building in `Construct 2` and exporting to `HTML5` be sure to output to the `Construct2\InAppPurchases\www` folder so that the above command will pick up the files.
