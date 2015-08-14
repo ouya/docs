@@ -46,27 +46,37 @@ Construct 2 is an visually programable engine that publishes HTML5.
 
 ## Publishing ##
 
-Publishing to the `OUYA` requires that you package the generated `HTML5` from `Construct 2` into an Android wrapper, `Cordova`. The wrapper provides accelerated `WebGL` and accelerated video decoding.
+Publishing to the `OUYA` requires that you package the generated `HTML5` from `Construct 2` into an Android wrapper, [`Cordova`](cordova.md). The wrapper provides accelerated `WebGL` and accelerated video decoding.
 
 1) Use the menu `File->Export project...` item
 
+![file export](construct_2/image_46.png)
+
 2) Select `HTML5 website` and click `Next` button
 
-![export HTML5](construct_2/image_41.png)
+![export type](construct_2/image_41.png)
 
 3) Specify the `HTML5` output folder and click `Next` button (this should be the `Cordova` www folder.
 
-![export HTML5](construct_2/image_42.png)
+![export destination](construct_2/image_42.png)
 
 4) Select `Normal style` and click the `Export` button
 
+![export style](construct_2/image_45.png)
+
 5) Return to `Construct 2` or open the destination `www` folder.
 
-![export HTML5](construct_2/image_44.png)
+![destination folder](construct_2/image_44.png)
 
-6) Run the `package.cmd` script in the root of the project which runs `cordova run android` to package and install the packaged Android app on the connected `Android` device.
+6) Before the `Cordova` scripting can be run, be sure to install the [`Cordova` Command-Line Interface](http://cordova.apache.org/docs/en/5.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface)
 
-![export HTML5](construct_2/image_43.png) 
+7) Run the `package.cmd` script in the root of the project which runs `cordova run android`.
+
+![package command](construct_2/image_43.png)
+
+8) The script builds the `Android` app, installs, and runs on the connected `Android` device.
+
+![package command](construct_2/image_47.png)  
 
 # Setup
 
