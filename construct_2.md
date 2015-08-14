@@ -440,7 +440,7 @@ cordova run android
 5) Manually copy `plugins\cordova-plugin-ouya-sdk\src\android\MainActivity.java` to `platforms\android\src\tv\ouya\examples\construct2\virtualcontroller\MainActivity.java` and edit the package name to be `tv.ouya.examples.construct2.virtualcontroller`. `Cordova` auto-configs cannot replace `XML` nodes making this manual one-off necessary.
 
 ```
-package tv.ouya.examples.construct2.inapppurchases;
+package tv.ouya.examples.construct2.virtualcontroller;
 ```
 
 6) When building in `Construct 2` and exporting to `HTML5` be sure to output to the `Construct2\VirtualController\www` folder so that the above command will pick up the files.
