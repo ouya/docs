@@ -10,6 +10,36 @@ The [`Cordova`](https://cordova.apache.org/) engine provides a hardware-accelera
 
 * [Cordova Android Plugins](http://cordova.apache.org/docs/en/5.0.0/guide_platforms_android_plugin.md.html#Android%20Plugins)
 
+## Cordova Command-Line Interface
+
+1) Before the `Cordova` projects can be created, be sure to install the [`Cordova` Command-Line Interface](http://cordova.apache.org/docs/en/5.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface).
+
+2) Install [`Node.js`](https://nodejs.org/).
+
+On Windows, `Node.js` can be installed from an `MSI` installer and be sure to add 'Node and npm' to the path.
+
+![Node.js installer](cordova/image_3.png)
+
+3) Be sure to install a `GIT` source-control client. `Cordova` will report errors if `git` is missing from the path.
+
+![Missing git](cordova/image_5.png)
+
+4) Open a new terminal to install `Cordova` globally.
+
+On Mac:
+
+```
+sudo npm install -g cordova
+```
+
+On Windows:
+
+```
+npm install -g cordova
+```
+
+![Install Cordova](cordova/image_4.png)
+
 ## HTML5
 
 To interact with Cordova plugins, first add `Cordova` includes in the `head`.
