@@ -68,7 +68,7 @@ Publishing to the `OUYA` requires that you package the generated `HTML5` from `C
 
 ![destination folder](construct_2/image_44.png)
 
-6) Before the `Cordova` scripting can be run, be sure to install the [`Cordova` Command-Line Interface](http://cordova.apache.org/docs/en/5.0.0/guide_cli_index.md.html#The%20Command-Line%20Interface).
+6) Before the `Cordova` scripting can be run, be sure to setup the [`Cordova` Command-Line Interface](cordova.md#cordova-command-line-interface).
 
 7) Run the `package.cmd` script in the root of the project which runs `cordova run android`.
 
