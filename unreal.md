@@ -60,7 +60,7 @@
 4. Did you install the specific version of the Tegra Android Development Pack? 
 A specific version of TADP needs to be installed which is found in the `Engine\Extras\Android\` folder.
 
-![TADP installer](image_138.png)
+![TADP installer](unreal/image_138.png)
 
 ## Resources
 
