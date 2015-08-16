@@ -29,6 +29,8 @@
 
 * After linking your Github account, you should have access to the OUYA Branches
 
+* [4.8-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.8-OUYA) for the OUYA Fork of UE4
+
 * [4.7-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.7-OUYA) for the OUYA Fork of UE4
 
 * [4.6-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) for the OUYA Fork of UE4
@@ -57,6 +59,8 @@
 
 4. Did you install the specific version of the Tegra Android Development Pack? 
 A specific version of TADP needs to be installed which is found in the `Engine\Extras\Android\` folder.
+
+![TADP installer](image_138.png)
 
 ## Resources
 
