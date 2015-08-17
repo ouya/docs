@@ -68,7 +68,7 @@ Publishing to the `OUYA` requires that you package the generated `HTML5` from `C
 
 ![destination folder](construct_2/image_44.png)
 
-6) Before the `Cordova` scripting can be run, be sure to setup the [`Cordova` Command-Line Interface](cordova.md#cordova-command-line-interface).
+6) Before the `Cordova` scripting can be run, be sure to install the [`Cordova` Command-Line Interface](cordova.md#cordova-command-line-interface).
 
 7) Run the `package.cmd` script in the root of the project which runs `cordova run android`.
 
@@ -449,7 +449,7 @@ package tv.ouya.examples.construct2.virtualcontroller;
 
 The [In-App-Purchases](https://github.com/ouya/ouya-sdk-examples/tree/master/Construct2/InAppPurchases) example shows making purchases, checking receipts, adjusting the safe area, and exiting the app.
 
-![Virtual Controller Example](construct_2/image_2.png)
+![IAP Example](construct_2/image_2.png)
 
 ### Building HTML5 with Construct 2
 

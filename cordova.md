@@ -122,25 +122,37 @@ The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/C
 
 ![image_1.png](cordova/image_1.png)
 
-The initial `Cordova` project was created with the command-line from the `Cordova` folder.
+1) The initial `Cordova` project was created with the command-line from the `Construct2` folder.
 
 ```
 cordova create VirtualController tv.ouya.examples.cordova.virtualcontroller VirtualController
 ```
 
-`Android` support is added to the `Cordova` project with the following command-line from the `Cordova/VirtualController` folder.
+2) `Android` support is added to the `Cordova` project with the following command-line from the `Cordova/VirtualController` folder.
 
 ```
 cordova platform add android
 ```
 
-To build and run the `Virtual Controller Example` run the following command from the `Cordova/VirtualController` folder.
+3) Use the `Cordova` command-line to add the `cordova-plugin-ouya-sdk` plugin.
+
+```
+cordova plugin add https://github.com/ouya/cordova-plugin-ouya-sdk.git#master
+```
+
+4) To build and run the `Virtual Controller Example` run the following command from the `Cordova/VirtualController` folder.
 
 ```
 cordova run android
 ```
 
-After running the above command, the project can be imported into `Android Studio` using the `Cordova\VirtualController\platforms\android` folder.
+5) Manually copy `plugins\cordova-plugin-ouya-sdk\src\android\MainActivity.java` to `platforms\android\src\tv\ouya\examples\cordova\virtualcontroller\MainActivity.java` and edit the package name to be `tv.ouya.examples.cordova.virtualcontroller`. `Cordova` auto-configs cannot replace `XML` nodes making this manual one-off necessary.
+
+```
+package tv.ouya.examples.cordova.virtualcontroller;
+```
+
+6) Be sure to save `HTML5` in the `Cordova\VirtualController\www` folder so that the above command will pick up the files.
 
 ### In-App-Purchases
 
@@ -148,22 +160,35 @@ The [In-App-Purchases](https://github.com/ouya/ouya-sdk-examples/tree/master/Cor
 
 ![image_1.png](cordova/image_2.png)
 
-The initial `Cordova` project was created with the command-line from the `Cordova` folder.
+
+1) The initial `Cordova` project was created with the command-line from the `Cordova` folder.
 
 ```
 cordova create InAppPurchases tv.ouya.examples.cordova.inapppurchases InAppPurchases
 ```
 
-`Android` support is added to the `Cordova` project with the following command-line.
+2) `Android` support is added to the `Cordova` project with the following command-line from the `Cordova/InAppPurchases` folder.
 
 ```
 cordova platform add android
 ```
 
-To build and run the `In-App-Purchase Example` run the following command from the `Cordova/InAppPurchases` folder.
+3) Use the `Cordova` command-line to add the `cordova-plugin-ouya-sdk` plugin.
+
+```
+cordova plugin add https://github.com/ouya/cordova-plugin-ouya-sdk.git#master
+```
+
+4) To build and run the `In-App-Purchases Example` run the following command from the `Cordova/InAppPurchases` folder.
 
 ```
 cordova run android
 ```
 
-After running the above command, the project can be imported into `Android Studio` using the `Cordova\InAppPurchases\platforms\android` folder.
+5) Manually copy `plugins\cordova-plugin-ouya-sdk\src\android\MainActivity.java` to `platforms\android\src\tv\ouya\examples\cordova\inapppurchases\MainActivity.java` and edit the package name to be `tv.ouya.examples.cordova.inapppurchases`. `Cordova` auto-configs cannot replace `XML` nodes making this manual one-off necessary.
+
+```
+package tv.ouya.examples.cordova.inapppurchases;
+```
+
+6) Be sure to save `HTML5` in the `Cordova\InAppPurchases\www` folder so that the above command will pick up the files.
