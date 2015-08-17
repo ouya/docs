@@ -195,17 +195,17 @@ Val is the float value of the input for that axis.
 
 ```
 function onGenericMotionEvent(playerNum, axis, val) {
-   if (axis == OuyaController. AXIS_LS_X) {
+   if (axis == OuyaController.AXIS_LS_X) {
    }
-   if (axis == OuyaController. AXIS_LS_Y) {
+   if (axis == OuyaController.AXIS_LS_Y) {
    }
-   if (axis == OuyaController. AXIS_RS_X) {
+   if (axis == OuyaController.AXIS_RS_X) {
    }
-   if (axis == OuyaController. AXIS_RS_Y) {
+   if (axis == OuyaController.AXIS_RS_Y) {
    }
-   if (axis == OuyaController. AXIS_L2) {
+   if (axis == OuyaController.AXIS_L2) {
    }
-   if (axis == OuyaController. AXIS_R2) {
+   if (axis == OuyaController.AXIS_R2) {
    }
 }
 ```
