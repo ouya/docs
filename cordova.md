@@ -152,7 +152,7 @@ cordova run android
 package tv.ouya.examples.cordova.virtualcontroller;
 ```
 
-6) Be sure to save `HTML5` in the `Cordova\VirtualController\www` folder so that the above command will pick up the files.
+6) The example [`HTML5` contents](https://github.com/ouya/ouya-sdk-examples/blob/master/Cordova/VirtualController/www/index.html) are placed within the `Cordova\VirtualController\www` folder so that the above command will copy the files to the `Android` platform.
 
 ### In-App-Purchases
 
@@ -191,4 +191,4 @@ cordova run android
 package tv.ouya.examples.cordova.inapppurchases;
 ```
 
-6) Be sure to save `HTML5` in the `Cordova\InAppPurchases\www` folder so that the above command will pick up the files.
+6) The example [`HTML5` contents](https://github.com/ouya/ouya-sdk-examples/blob/master/Cordova/InAppPurchases/www/index.html) are placed within the `Cordova\InAppPurchases\www` folder so that the above command will copy the files to the `Android` platform.
