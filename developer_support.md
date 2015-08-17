@@ -29,7 +29,7 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 <a target=_blank href="https://www.youtube.com/watch?v=zbCSrqT4230&t=0m50s">(0:50)</a> - Bawb: News Games For the Week
 
-<a target=_blank href="https://www.youtube.com/watch?v=zbCSrqT4230&t=0m50s">(0:50)</a> - Jared: Just the Facts!
+<a target=_blank href="https://www.youtube.com/watch?v=zbCSrqT4230&t=2m10s">(2:10)</a> - Jared: Just the Facts!
 
 <a target=_blank href="https://www.youtube.com/watch?v=zbCSrqT4230&t=5m31s">(5:31)</a> - Tim: Cordova and Construct 2 support on the Forge TV and OUYA
 
