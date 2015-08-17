@@ -29,7 +29,7 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 * [Construct 2 Support on Forge TV and OUYA](construct_2.md)
 
-* Twitter accounts: [Min-Liang Tan](http://twitter.com/minliangtan) [playouya](http://twitter.com/playouya) [Bawb](http://twitter.com/bawbmills) [Kellee](http://twitter.com/KelleeSan) [Jared](https://twitter.com/jaredtyeager) [tgraupmann](http://twitter.com/tgraupmann)
+* Twitter accounts: [Min-Liang Tan](http://twitter.com/minliangtan) [playouya](http://twitter.com/playouya) [Bawb](http://twitter.com/bawbmills) [Kellee](http://twitter.com/KelleeSan) [Jared](https://twitter.com/jaredtyeager) [Tim](http://twitter.com/tgraupmann)
 
 <a target=_blank href="https://www.youtube.com/watch?v=zbCSrqT4230&t=0m50s">(0:50)</a> - Bawb: News Games For the Week
 
