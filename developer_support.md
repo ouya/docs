@@ -10,6 +10,31 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
+### August 17th, 2015 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:21:14)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=zbCSrqT4230" target="_blank">
+<img src="http://img.youtube.com/vi/zbCSrqT4230/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 8/17" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+* [Developer Portal](http://devs.ouya.tv)
+
+* [Forge TV Engine Documentation](forge_tv.md)
+
+* Twitter accounts: [Min-Liang Tan](http://twitter.com/minliangtan) [playouya](http://twitter.com/playouya) [Bawb](http://twitter.com/bawbmills) [Kellee](http://twitter.com/KelleeSan) [Jared](https://twitter.com/jaredtyeager) [tgraupmann](http://twitter.com/tgraupmann)
+
+<a target=_blank href="https://www.youtube.com/watch?v=zbCSrqT4230&t=0m50s">(0:50)</a> - Bawb: News Games For the Week
+
+<a target=_blank href="https://www.youtube.com/watch?v=zbCSrqT4230&t=0m50s">(0:50)</a> - Jared: Just the Facts!
+
+<a target=_blank href="https://www.youtube.com/watch?v=zbCSrqT4230&t=5m31s">(5:31)</a> - Tim: Cordova and Construct 2 support on the Forge TV and OUYA
+
+----------
+
 ### August 10th, 2015 ###
 
 <table border=1>
@@ -21,9 +46,9 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
  </tr>
 </table>
 
-* [Forge TV Engine Documentation](forge_tv.md)
-
 * [Developer Portal](http://devs.ouya.tv)
+
+* [Forge TV Engine Documentation](forge_tv.md)
 
 <a target=_blank href="https://www.youtube.com/watch?v=_U9xzFAVFG4&t=0m01s">(0:01)</a> - Bawb/Jared/Kellee: News Update!
 
