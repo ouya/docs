@@ -654,7 +654,7 @@ The onFailure callback indicates the request to set the safe area failed.
 
 ##### GetDeviceHardware #####
 
-Device identification is part of [ouya-everywhere.md#device-identification](OUYA-Everywhere). HTML5 apps can use device specific game logic and media using the name from getDeviceHardware. 
+Device identification is part of [OUYA-Everywhere](ouya-everywhere.md#device-identification). HTML5 apps can use device specific game logic and media using the name from getDeviceHardware. 
 
 The onSuccess callback receives the name of the device hardware.
 
