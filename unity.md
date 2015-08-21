@@ -20,13 +20,11 @@
 
 Several Unity packages are available from the [ouya-sdk-examples releases](https://github.com/ouya/ouya-sdk-examples/releases/):
 
-* [Unity OuyaSDK-Core.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Core) - Most packages require the OUYA Core package
+* [Unity OuyaSDK-Core.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Core) - Most packages require the OUYA Core package, supports OUYA, MOJO, and Razer Forge TV consoles
 
 * [Unity OuyaSDK-Examples.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Examples) - Package includes Virtual Controller, InAppPurchase, Safe Area, and Community Content examples 
 
 * [Unity OuyaSDK-StarterKit.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-StarterKit) - Starter Kit for jumping into OUYA programming
-
-* [Unity-OuyaSDK-Forge.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Forge) - Files and Android.manifest changes for publishing to Razer Forge
 
 * [Unity-OuyaSDK-Xiaomi.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Xiaomi) - Files and Android.manifest changes for publishing to Xiaomi
 
