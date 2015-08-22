@@ -59,6 +59,7 @@ The latest [`OUYA-Everywhere`](ouya-everywhere.md) adds support for many control
 * [Corona](corona.md)
 * [GameMaker](game-maker.md)
 * [Java](java.md)
+* [Marmalade](marmalade.md)
 * [MonoGame](mono-game.md)
 * [Unity](unity.md)
 	* *InControl -- If you use InControl for Unity3D, be sure to update your InControl library. For more information, read the [InControl documentation on their website.](http://www.gallantgames.com/pages/incontrol-ouya)
