@@ -27,7 +27,7 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 * [Marmalade on Forge TV and OUYA](marmalade.md)
 
-* [MonoGame 4.4 Support on Forge TV and OUYA](mono-game.md)
+* [MonoGame Support on Forge TV and OUYA](mono-game.md)
 
 * [Optimization Guide](https://github.com/ouya/docs/blob/master/optimization_guide.md)
 
