@@ -118,6 +118,23 @@ MonoGame Content Builder - https://github.com/mono/MonoGame/wiki/MonoGame-Conten
 Docs and Tutorials - http://www.monogame.net/documentation<br/>
 Binding JARs - http://docs.xamarin.com/guides/android/advanced_topics/java_integration_overview/binding_a_java_library_(.jar)/<br/>
 
+# Forge TV
+
+In order to use `MonoGame` 4.4, the API level has to be set to `17`.
+`MonoGame` 4.4 adds proper pause/resume support which allows textures and other content to reload when the game is reopened from the launcher.
+
+1) In Visual Studio, right-click the `MonoGame` project and select properties.
+
+![image_1](mono-game/image_1.png)
+
+2) Under the `Application` tab select API level `17`. Any lesser API version will crash on launch with the unhandled exception `System.MissingMethodException: Method 'AudioManager.GetProperty' not found`. 
+
+![image_2](mono-game/image_2.png) 
+
+# OUYA Console
+
+Since OUYA uses API level `16`, you'll have to use a `MonoGame` version prior to `4.4`.
+
 ## Examples
 
 ### Virtual Controller
