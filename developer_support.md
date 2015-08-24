@@ -10,6 +10,33 @@ View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlis
 
 ----------
 
+### August 24th, 2015 ###
+
+<table border=1>
+ <tr>
+ <td>OUYA DEV SUPPORT (00:23:54)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=GmN0Pa0OEiU" target="_blank">
+<img src="http://img.youtube.com/vi/GmN0Pa0OEiU/0.jpg" alt="OUYA DEV SUPPORT OFFICE HOURS 8/24" width="240" height="180" border="10" /></a></td>
+ <td></td>
+ </tr>
+</table>
+
+* Event: [PAX Prime](http://prime.paxsite.com) - Seattle, WA August 28-31
+
+* [Forge TV Engine Documentation](forge_tv.md)
+
+* [Marmalade on Forge TV and OUYA](marmalade.md)
+
+* [MonoGame 4.4 Support on Forge TV and OUYA](mono-game.md)
+
+* [Optimization Guide](https://github.com/ouya/docs/blob/master/optimization_guide.md)
+
+<a target=_blank href="https://www.youtube.com/watch?v=GmN0Pa0OEiU&t=8m11s">(8:11)</a> - Jared: Just the Facts!
+
+<a target=_blank href="https://www.youtube.com/watch?v=GmN0Pa0OEiU&t=11m34s">(11:34)</a> - Tim: Marmalade and MonoGame 4.4 support on the Forge TV
+
+----------
+
 ### August 17th, 2015 ###
 
 <table border=1>
