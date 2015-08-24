@@ -508,3 +508,28 @@ The `Corona` [documentation](http://docs.coronalabs.com/daily/guide/distribution
 * The `Icon-ouya.png` should be 732x412 and placed into your Corona project fodler.
 
 * The `Icon-ouya-xiaomi.png` should be 284x160 and placed into your Corona project fodler.
+
+# API
+
+In order to use the `OUYA` plugin be sure to include the [plugin_ouya.lua](https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/Submission/ouya/samples/InAppPurchasesPlugin/Corona/plugin_ouya.lua) script in your `Corona` project folder.
+
+## Is Available
+
+When a `Corona` game starts be sure to check that the `OUYA` plugin is available before loading the game. Games that do not check `IsAvailable` may flicker or appear to load twice.
+
+```
+local ouya = require("plugin.ouya") -- load the ouya plugin
+plugin_ouya = require "plugin_ouya"
+if nil ~= plugin_ouya and nil ~= plugin_ouya.luaOuyaIsAvailable then
+	print ("*** Check if plugin is available **** Is Available??? == " .. tostring(plugin_ouya.luaOuyaIsAvailable()))
+	if plugin_ouya.luaOuyaIsAvailable() then
+		-- continue loading game
+	else
+		-- OUYA Plugin has not loaded
+		return;
+	end
+else
+	-- OUYA Plugin has not loaded
+	return;
+end
+```
