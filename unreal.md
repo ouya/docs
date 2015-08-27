@@ -858,3 +858,41 @@ The `onContentDestroyed` delegate will be called with `OuyaContent` has been des
 * Invoking `GetThumbnail` on the `OuyaModScreenshot` actor returns a `UTexture2D` image.
 
 ![Get Thumbnail](unreal/image_134.png)
+
+# Forge TV
+
+To be able to run `UE4` on the `Forge TV` be sure to use the `4.7-OUYA` branch.
+
+## Texture Compression
+
+For sprites to appear in the `Forge TV` be sure to set the compression format as the `default` compression format will not display on `Forge TV`.
+
+1) Browse to your texture images in the `Content Browser` and `double-click` on the texture item.
+
+![image_139](unreal/image_139.png)
+
+2) Change the texture format to `TC_UserInterface2D` or similar format and click `Save` to support the texture on `Forge TV`.
+
+![image_140](unreal/image_140.png)
+
+## Android settings
+
+UE4 version `4.7` added `AndroidManifest.xml` editing to the `Project Settings`.
+Be sure to enable `Package game data inside apk?`.
+Add the following `intent-filter` entry for `Extra Settings for &lt;activity&gt; section` which should fit all on the same line. This allows the game to appear on the main `Forge TV` launcher and in the `OUYA` play store.
+
+```
+<intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /><category android:name="tv.ouya.intent.category.GAME" /><category android:name="android.intent.category.LEANBACK_LAUNCHER" /></intent-filter>
+```
+
+![image_141](unreal/image_141.png)
+
+### Wake Lock
+
+Be sure to add the `WAKE_LOCK` permission to prevent a `screensaver` from displaying while the `UE4` game is running.
+
+1) Click the `+` button next to `Extra Permissions` to add an element.
+
+2) In the new element enter `android.permission.WAKE_LOCK`. 
+
+![image_142](unreal/image_142.png)
