@@ -878,8 +878,10 @@ For sprites to appear in the `Forge TV` be sure to set the compression format as
 ## Android settings
 
 UE4 version `4.7` added `AndroidManifest.xml` editing to the `Project Settings`.
-Be sure to enable `Package game data inside apk?`.
-Add the following `intent-filter` entry for `Extra Settings for &lt;activity&gt; section` which should fit all on the same line. This allows the game to appear on the main `Forge TV` launcher and in the `OUYA` play store.
+
+1) Be sure to enable `Package game data inside apk?`.
+
+2) Add the following `intent-filter` entry for `Extra Settings for <activity> section` which should fit all on the same line. This allows the game to appear on the main `Forge TV` launcher and in the `OUYA` play store.
 
 ```
 <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /><category android:name="tv.ouya.intent.category.GAME" /><category android:name="android.intent.category.LEANBACK_LAUNCHER" /></intent-filter>
