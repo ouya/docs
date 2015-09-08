@@ -87,7 +87,7 @@ The `RazerVirtualController` example includes controller images for the `Razer S
 
 ![Serval Image](ouya-everywhere-android-java/image_3.png)
 
-## ADB Debuggging
+## ADB Debugging
 
 The [Razer Developer Portal](http://developer.razerzone.com/forge-tv/developer-setup/) will take you through the setup of `Forge TV` for ADB debugging. Debugging and side-loading apps to the `Forge TV` requires a male-to-male USB cable.
 
