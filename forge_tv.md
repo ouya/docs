@@ -88,3 +88,7 @@ The `RazerVirtualController` example includes controller images for the `Razer S
 ## ADB
 
 The [Razer Developer Portal](http://developer.razerzone.com/forge-tv/developer-setup/) will take you through the setup of `Forge TV` for ADB debugging. Debugging and side-loading apps to the `Forge TV` requires a male-to-male USB cable.
+
+## Pairing Serval
+
+* With `Settings->Add accessory` open, hold `HOME`, `BACK`, and `POWER` buttons `pressed` down to put the `Serval` in pairing mode.
