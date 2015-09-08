@@ -884,7 +884,7 @@ UE4 version `4.7` added `AndroidManifest.xml` editing to the `Project Settings`.
 2) Add the following `intent-filter` entry for `Extra Settings for <activity> section` which should fit all on the same line. This allows the game to appear on the main `Forge TV` launcher and in the `OUYA` play store.
 
 ```
-<intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /><category android:name="tv.ouya.intent.category.GAME" /><category android:name="android.intent.category.LEANBACK_LAUNCHER" /></intent-filter>
+<intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /><category android:name="tv.ouya.intent.category.GAME" /></intent-filter>
 ```
 
 ![image_141](unreal/image_141.png)
