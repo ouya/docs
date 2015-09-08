@@ -22,7 +22,9 @@ This document will help you put your `OUYA Game` on `Razer Cortex TV` (the store
 
 [Controller Image](forge_tv.md#controller-image)
 
-[ADB](forge_tv.md#adb)
+[ADB Debugging](forge_tv.md#adb-debugging)
+
+[Pairing Serval](forge_tv.md#pairing-serval)
 
 ## Audience
 
@@ -85,7 +87,7 @@ The `RazerVirtualController` example includes controller images for the `Razer S
 
 ![Serval Image](ouya-everywhere-android-java/image_3.png)
 
-## ADB
+## ADB Debuggging
 
 The [Razer Developer Portal](http://developer.razerzone.com/forge-tv/developer-setup/) will take you through the setup of `Forge TV` for ADB debugging. Debugging and side-loading apps to the `Forge TV` requires a male-to-male USB cable.
 
