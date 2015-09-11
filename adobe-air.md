@@ -69,6 +69,22 @@ The `jar` folder also contains `FlashRuntimeExtensions.jar` (from the AdobeAirSD
 
 The extension interface is the piece between Java and ActionScript and was created using a [FlashBuilder project](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir/OuyaNativeExtension/lib).
 
+After the builder project has imported, `Adobe Builder` will auto compile the `SWC` file which is needed any time ActionScript is changed in the `ANE`.
+
+![adobe-air/image_1.png](adobe-air/image_1.png)
+
+1) In `Flash Builder` choose the `File->Import Flash Builder Project` menu item.
+
+![adobe-air/image_2.png](adobe-air/image_2.png)
+
+2) Choose `Project Folder`, browse to the `AdobeAir/OuyaNativeExtension/lib` folder, and click `OK`.
+
+![adobe-air/image_3.png](adobe-air/image_3.png)
+
+3) After making changes to `ActionScript` switch back to `Flash Builder` which will auto-generate a new `SWC` file.
+
+4) Building the `ANE` from script will embed the `SWC` file.
+
 ## Build ANE
 
 [build_ane.cmd](https://github.com/ouya/ouya-sdk-examples/blob/master/AdobeAir/OuyaNativeExtension/build_ane.cmd) will package the `OuyaNativeExtension.ane` on Windows. Be sure to customize the paths for `JDK` and `AIR_SDK` pointing at the `AdobeAirSDK` in the build script.
