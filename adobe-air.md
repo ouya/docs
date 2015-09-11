@@ -381,6 +381,40 @@ The [Flash Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/ma
 
 ![image_4.png](adobe-air/image_4.png)
 
+1) The Virtual Controller example modifies the `Main.as` ActionScript to add an update event that will later control sprite visibility.
+
+```
+package
+{
+    import flash.display.MovieClip;
+	import flash.events.Event;
+	import tv.ouya.sdk.OuyaNativeInterface;
+
+    public class Main extends MovieClip
+    {
+		// reference to the native interface
+		var _mOuyaNativeInterface: OuyaNativeInterface;
+
+		// frame event listener
+		private function fl_EnterFrameHandler_1(event:Event):void
+		{
+		}
+
+        public function Main()
+        {
+			// create the native interface and initialize the OUYA native extension
+			_mOuyaNativeInterface = new OuyaNativeInterface();
+
+			// initialize the OUYA plugin
+			_mOuyaNativeInterface.OuyaInit();
+
+			// add an event listener for each frame
+			addEventListener(Event.ENTER_FRAME, fl_EnterFrameHandler_1);
+		}
+	}
+}
+```
+
 ### Community Supported Examples
 
 Head on over to GaslightGames implementation for:<br/>
