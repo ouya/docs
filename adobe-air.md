@@ -264,6 +264,14 @@ var released:Boolean = ouyaNativeInterface.GetButtonUp(playerNum, button);
 ouyaNativeInterface.ClearButtonStatesPressedReleased();
 ```
 
+## Examples
+
+### Flash Virtual Controller
+
+The [Flash Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir/FlashVirtualController) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated.
+
+![image_4.png](adobe-air/image_4.png)
+
 ### Community Supported Examples
 
 Head on over to GaslightGames implementation for:<br/>
