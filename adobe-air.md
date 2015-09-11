@@ -630,6 +630,161 @@ package
 		}
 ```
 
+6) The sprites used by the example are first imported to the library from `PNG` files. Use the `File->Import->Import to Library` menu item to select the images in the project folder.
+
+![image_9.png](adobe-air/image_9.png)
+
+7) Switch to the `library` tab and `right-click` the imported images to select `Properties...`.
+
+![image_10.png](adobe-air/image_10.png)
+
+8) Switch the the `ActionScript` tab and enable `Export for ActionScript` and `Export in frame 1`. Set the `Class` field to a name and be sure to capitalize the first letter by convention. Click `OK`. Repeat for all of the image sprites.
+
+![image_11.png](adobe-air/image_11.png)
+
+9) The `VirtualController` constructor keeps a reference to the `Main` object and the `OuyaNativeInterface` object. The `Main` object is needed to dynamically add children to the stage document. The `PlayerNum` argument corresponds to the `OUYA` controller number. The `x` and `y` parameter indicates where to instantiate the `Bitmap` objects on the stage.
+
+```
+package
+{
+	import flash.display.Bitmap;
+	import flash.display.BitmapData;
+    import flash.display.MovieClip;
+	import flash.display.PixelSnapping;
+	import flash.geom.Matrix;
+	import tv.ouya.console.api.OuyaController;
+	import tv.ouya.sdk.OuyaNativeInterface;
+
+    public class VirtualController extends MovieClip
+    {
+		// reference to the Main document
+		var _mMain: Main;
+
+		// reference to the native interface
+		var _mOuyaNativeInterface: OuyaNativeInterface;
+		
+		// player number for the virtual controller sprite collection
+		var _mPlayerNum:int = 0;
+		
+		// X-position for the sprite controller
+		var _mX:Number = 0;
+
+		// Y-position for the sprite controller
+		var _mY:Number = 0;
+
+		// constructor for the Virtual Controller
+		public function VirtualController(main:Main, ane:OuyaNativeInterface, playerNum:int, x:Number, y:Number)
+        {
+			_mMain = main;
+			_mOuyaNativeInterface = ane;
+			_mPlayerNum = playerNum;
+			_mX = x;
+			_mY = y;
+		}
+	}
+}
+```
+
+10) The `VirtualController` constructor uses a helper method to add scaled sprites to the stage document.
+
+```
+		private function AddBitmap(bitmap : Bitmap) : Bitmap
+		{
+			var scale:Number = 2;
+			var matrix:Matrix = new Matrix();
+			matrix.scale(scale, scale);
+
+			var resizedBitmapData:BitmapData = new BitmapData(bitmap.width * scale, bitmap.height * scale, true, 0x000000);
+			resizedBitmapData.draw(bitmap, matrix, null, null, null, true);
+
+			var resizedBitmap = new Bitmap(resizedBitmapData, PixelSnapping.NEVER, true);
+			
+			resizedBitmap.x = _mX;
+			resizedBitmap.y = _mY;
+			
+			_mMain.addChild(resizedBitmap);
+			return resizedBitmap;
+		}
+```
+
+11) The `VirtualController` constructor instantiates the sprite objects from the library.
+
+```
+		// sprite references
+		var _mController:Bitmap;
+		var _mButtonO:Bitmap;
+		var _mButtonU:Bitmap;
+		var _mButtonY:Bitmap;
+		var _mButtonA:Bitmap;
+		var _mButtonL1:Bitmap;
+		var _mButtonL2:Bitmap;
+		var _mButtonL3:Bitmap;
+		var _mButtonR1:Bitmap;
+		var _mButtonR2:Bitmap;
+		var _mButtonR3:Bitmap;
+		var _mButtonLS:Bitmap;
+		var _mButtonRS:Bitmap;
+		var _mButtonDpadDown:Bitmap;
+		var _mButtonDpadLeft:Bitmap;
+		var _mButtonDpadRight:Bitmap;
+		var _mButtonDpadUp:Bitmap;
+		var _mButtonMenu:Bitmap;
+
+		public function VirtualController(main:Main, ane:OuyaNativeInterface, playerNum:int, x:Number, y:Number)
+        {
+			_mMain = main;
+			_mOuyaNativeInterface = ane;
+			_mPlayerNum = playerNum;
+			_mX = x;
+			_mY = y;
+
+			_mController = AddBitmap(new Bitmap(new ImageController()));
+			_mButtonO = AddBitmap(new Bitmap(new ImageO()));
+			_mButtonU = AddBitmap(new Bitmap(new ImageU()));
+			_mButtonY = AddBitmap(new Bitmap(new ImageY()));
+			_mButtonA = AddBitmap(new Bitmap(new ImageA()));		
+			_mButtonL1 = AddBitmap(new Bitmap(new ImageL1()));
+			_mButtonL2 = AddBitmap(new Bitmap(new ImageL2()));
+			_mButtonL3 = AddBitmap(new Bitmap(new ImageL3()));
+			_mButtonR1 = AddBitmap(new Bitmap(new ImageR1()));
+			_mButtonR2 = AddBitmap(new Bitmap(new ImageR2()));
+			_mButtonR3 = AddBitmap(new Bitmap(new ImageR3()));
+			_mButtonLS = AddBitmap(new Bitmap(new ImageLS()));
+			_mButtonRS = AddBitmap(new Bitmap(new ImageRS()));
+			_mButtonDpadDown = AddBitmap(new Bitmap(new ImageDpadDown()));
+			_mButtonDpadLeft = AddBitmap(new Bitmap(new ImageDpadLeft()));
+			_mButtonDpadRight = AddBitmap(new Bitmap(new ImageDpadRight()));
+			_mButtonDpadUp = AddBitmap(new Bitmap(new ImageDpadUp()));
+			_mButtonMenu = AddBitmap(new Bitmap(new ImageMenu()));
+        }
+```
+
+12) The `Update` method uses a helper method to update `Bitmap` visibility.
+
+```
+		private function UpdateVisibility(bitmap:Bitmap, show:Boolean) : void
+		{
+			if (show)
+			{
+				bitmap.alpha = 1;
+			}
+			else
+			{
+				bitmap.alpha = 0;
+			}
+		}
+```
+
+13) The `Update` method uses a helper method to move the left and right stick sprites.
+
+```
+		private function MoveBitmap(bitmap : Bitmap, offsetX : Number, offsetY : Number) : void
+		{
+			bitmap.x = _mX + offsetX;
+			bitmap.y = _mY + offsetY;
+		}
+```
+
 ### Community Supported Examples
 
 Head on over to GaslightGames implementation for:<br/>
