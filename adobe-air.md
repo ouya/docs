@@ -325,13 +325,19 @@ package
 
 ![image_6.png](adobe-air/image_6.png)
 
-8) The `App ID` field should match the `package identifier` that was created in the [developer portal](http://devs.ouya.tv). Notice that `Adobe-Air` apps are always prefixed with `air`.
+8) On the `Deployment` tab, the `Certificate` field must be set. You can either browse to an existing `p12` certificate or create one with the `Create` button. This field must be set before clicking the `Publish` button. If `Remember password for this session` is set you can publish directly from the `File->Publish` menu item. Publishing will produce an `APK` file which can be installed on the command-line.
+
+`adb install -r application.apk`
+
+![image_8.png](adobe-air/image_8.png)
+
+9) On the `General` tab, the `App ID` field should match the `package identifier` that was created in the [developer portal](http://devs.ouya.tv). Notice that `Adobe-Air` apps are always prefixed with `air`.
 
 ![image_7.png](adobe-air/image_7.png)
 
-9) Select the `ARM` processor and click the `+` button to browse to the `OuyaNativeExtension.ane` copied to your project folder and click `OK`.
+10) Select the `ARM` processor and click the `+` button to browse to the `OuyaNativeExtension.ane` copied to your project folder and click `OK`.
 
-10) When publishing the `extensions` section will automatically appear in your project's `ApplicationName-app.xml` file and that section cannot be edited manually.
+11) When publishing the `extensions` section will automatically appear in your project's `ApplicationName-app.xml` file and that section cannot be edited manually.
 
 ```
   <extensions>
