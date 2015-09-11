@@ -337,7 +337,7 @@ package
 
 10) Select the `ARM` processor and click the `+` button to browse to the `OuyaNativeExtension.ane` copied to your project folder and click `OK`.
 
-11) When publishing the `extensions` section will automatically appear in your project's `ApplicationName-app.xml` file and that section cannot be edited manually.
+11) When publishing, the `extensions` section will automatically appear in your project's `ApplicationName-app.xml` file and that section cannot be edited manually.
 
 ```
   <extensions>
@@ -398,6 +398,94 @@ package
 		// frame event listener
 		private function fl_EnterFrameHandler_1(event:Event):void
 		{
+		}
+
+        public function Main()
+        {
+			// create the native interface and initialize the OUYA native extension
+			_mOuyaNativeInterface = new OuyaNativeInterface();
+
+			// initialize the OUYA plugin
+			_mOuyaNativeInterface.OuyaInit();
+
+			// add an event listener for each frame
+			addEventListener(Event.ENTER_FRAME, fl_EnterFrameHandler_1);
+		}
+	}
+}
+```
+
+2) In the update event, `ClearButtonStatesPressedReleased` will clear the button pressed and release states each update frame.
+
+```
+package
+{
+    import flash.display.MovieClip;
+	import flash.events.Event;
+	import tv.ouya.sdk.OuyaNativeInterface;
+
+    public class Main extends MovieClip
+    {
+		// reference to the native interface
+		var _mOuyaNativeInterface: OuyaNativeInterface;
+
+		// frame event listener
+		private function fl_EnterFrameHandler_1(event:Event):void
+		{
+			// clear the button pressed and released states each frame
+			_mOuyaNativeInterface.ClearButtonStatesPressedReleased();
+		}
+
+        public function Main()
+        {
+			// create the native interface and initialize the OUYA native extension
+			_mOuyaNativeInterface = new OuyaNativeInterface();
+
+			// initialize the OUYA plugin
+			_mOuyaNativeInterface.OuyaInit();
+
+			// add an event listener for each frame
+			addEventListener(Event.ENTER_FRAME, fl_EnterFrameHandler_1);
+		}
+	}
+}
+```
+
+3) The update event can fire hundreds of times per second, where the input can be checked far less often. Use a time limitor to throttle-down checking input.
+
+```
+package
+{
+    import flash.display.MovieClip;
+	import flash.events.Event;
+	import tv.ouya.sdk.OuyaNativeInterface;
+
+    public class Main extends MovieClip
+    {
+		// the amount of time to wait in milliseconds between checking input
+		var INTERVAL_MS_INPUT:Number = 10;
+
+		// reference to the native interface
+		var _mOuyaNativeInterface: OuyaNativeInterface;
+
+		// a timer to throttle checking input
+		var _mInputTimer:Number = 0;
+
+		// frame event listener
+		private function fl_EnterFrameHandler_1(event:Event):void
+		{
+			// use the date to access time
+			var date:Date = new Date();
+
+			// check the time interval
+			if (_mInputTimer < date.getTime())
+			{
+				// add an input delay
+				_mInputTimer = date.getTime() + INTERVAL_MS_INPUT;
+
+				// clear the button pressed and released states each frame
+				_mOuyaNativeInterface.ClearButtonStatesPressedReleased();
+			}
 		}
 
         public function Main()
