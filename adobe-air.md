@@ -503,6 +503,76 @@ package
 }
 ```
 
+4) The `VirtualController` object is used to create sprites for each of the virtual controllers on screen.
+
+```
+package
+{
+    import flash.display.MovieClip;
+	import flash.events.Event;
+	import tv.ouya.sdk.OuyaNativeInterface;
+
+    public class Main extends MovieClip
+    {
+		// the amount of time to wait in milliseconds between checking input
+		var INTERVAL_MS_INPUT:Number = 10;
+
+		// reference to the native interface
+		var _mOuyaNativeInterface: OuyaNativeInterface;
+
+		// a timer to throttle checking input
+		var _mInputTimer:Number = 0;
+
+		// Virtual controller references
+		var _mVirtualController1: VirtualController;
+		var _mVirtualController2: VirtualController;
+		var _mVirtualController3: VirtualController;
+		var _mVirtualController4: VirtualController;
+
+		// frame event listener
+		private function fl_EnterFrameHandler_1(event:Event):void
+		{
+			// use the date to access time
+			var date:Date = new Date();
+
+			// check the time interval
+			if (_mInputTimer < date.getTime())
+			{
+				// add an input delay
+				_mInputTimer = date.getTime() + INTERVAL_MS_INPUT;
+
+				// update the virtual controller sprites each frame
+				_mVirtualController1.Update();
+				_mVirtualController2.Update();
+				_mVirtualController3.Update();
+				_mVirtualController4.Update();
+
+				// clear the button pressed and released states each frame
+				_mOuyaNativeInterface.ClearButtonStatesPressedReleased();
+			}
+		}
+
+        public function Main()
+        {
+			// create the native interface and initialize the OUYA native extension
+			_mOuyaNativeInterface = new OuyaNativeInterface();
+
+			// initialize the OUYA plugin
+			_mOuyaNativeInterface.OuyaInit();
+
+			// create the virtual controller sprites on start and specify the playerNum along with where to place on screen
+			_mVirtualController1 = new VirtualController(this, _mOuyaNativeInterface, 0, 15.65, -75.1);
+			_mVirtualController2 = new VirtualController(this, _mOuyaNativeInterface, 1, 1232.55, -75.1);
+			_mVirtualController3 = new VirtualController(this, _mOuyaNativeInterface, 2, 15.65, 495.75);
+			_mVirtualController4 = new VirtualController(this, _mOuyaNativeInterface, 3, 1232.55, 495.75);
+
+			// add an event listener for each frame
+			addEventListener(Event.ENTER_FRAME, fl_EnterFrameHandler_1);
+		}
+	}
+}
+```
+
 ### Community Supported Examples
 
 Head on over to GaslightGames implementation for:<br/>
