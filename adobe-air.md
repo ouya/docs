@@ -266,6 +266,109 @@ ouyaNativeInterface.ClearButtonStatesPressedReleased();
 
 ## Examples
 
+### Flash
+
+The following steps setup the `Main.as` ActionScript file to load at start-up to initialize the `OUYA` native extension.
+
+1) Switch to the `selection tool` and `left-click` on the stage to select the document.
+
+![image_5.png](adobe-air/image_5.png)
+
+2) In the `Property` window change the `Class` field to `Main` to reference the `Main.as`.
+
+3) Also set the document size to `1920x1080`.
+
+4) To the right of the `Class` field there's an edit button to open the existing `Main.as` or use the file menu to create a new `Main.as` action script document.
+
+5) Create a bare-bones `Main` class. When the application starts, the first thing that will be called is the `Main` constructor.
+
+```
+package
+{
+    import flash.display.MovieClip;
+
+    public class Main extends MovieClip
+    {
+        public function Main()
+        {
+		}
+	}
+}
+```
+
+6) Add code to load the `OUYA` native extension and save a reference to the native interface.
+
+```
+package
+{
+    import flash.display.MovieClip;
+	import tv.ouya.sdk.OuyaNativeInterface;
+
+    public class Main extends MovieClip
+    {
+		// reference to the native interface
+		var _mOuyaNativeInterface: OuyaNativeInterface;
+
+        public function Main()
+        {
+			// create the native interface and initialize the OUYA native extension
+			_mOuyaNativeInterface = new OuyaNativeInterface();
+
+			// initialize the OUYA plugin
+			_mOuyaNativeInterface.OuyaInit();
+		}
+	}
+}
+```
+
+7) Open the `File->Air 17.0 for Android Settings` menu item.
+
+![image_6.png](adobe-air/image_6.png)
+
+8) The `App ID` field should match the `package identifier` that was created in the [developer portal](http://devs.ouya.tv). Notice that `Adobe-Air` apps are always prefixed with `air`.
+
+![image_7.png](adobe-air/image_7.png)
+
+9) Select the `ARM` processor and click the `+` button to browse to the `OuyaNativeExtension.ane` copied to your project folder and click `OK`.
+
+10) When publishing the `extensions` section will automatically appear in your project's `ApplicationName-app.xml` file and that section cannot be edited manually.
+
+```
+  <extensions>
+    <extensionID>tv.ouya.sdk.ouyanativecontext</extensionID>
+  </extensions>
+```
+
+11) Edit your project's `ApplicationName-app.xml` to add the following manifest additions.
+
+```
+<application xmlns="http://ns.adobe.com/air/application/17.0">
+	<android> 
+		  <manifestAdditions>
+		  <![CDATA[
+				<manifest>
+					<uses-permission android:name="android.permission.WAKE_LOCK" />
+					<application>
+						<activity>
+							<intent-filter>
+								<action android:name="android.intent.action.MAIN"/>
+								<category android:name="android.intent.category.LAUNCHER"/>
+								<category android:name="tv.ouya.intent.category.GAME"/>
+							</intent-filter>
+						</activity>
+						<activity android:name="tv.ouya.sdk.MainActivity"
+							android:theme="@android:style/Theme.Translucent.NoTitleBar">
+							<intent-filter>
+								<category android:name="android.intent.category.DEFAULT" />
+							</intent-filter>
+						</activity>					
+					</application>
+				</manifest>
+			]]>
+		</manifestAdditions>
+	</android> 	
+```
+
 ### Flash Virtual Controller
 
 The [Flash Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir/FlashVirtualController) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated.
