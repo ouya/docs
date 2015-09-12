@@ -865,6 +865,15 @@ The `onContentDestroyed` delegate will be called with `OuyaContent` has been des
 
 To be able to run `UE4` on the `Forge TV` be sure to use the `4.7-OUYA`, `4.8-OUYA`, or `4.9-OUYA` branch.
 
+## Building Source
+
+Build the following targets before launching the `Unreal Editor` to support publishing to `ARM` for `Forge TV`.
+
+* `Development Editor` for `Win64`
+* `Development Client` for `Android`
+* `Development` for `Win64`
+* `Development` for `Android`
+
 ## Texture Compression
 
 For sprites to appear in the `Forge TV` be sure to set the compression format as the `default` compression format will not display on `Forge TV`.
@@ -888,13 +897,6 @@ UE4 version `4.7` added `AndroidManifest.xml` editing to the `Project Settings`.
 ```
 <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /><category android:name="tv.ouya.intent.category.GAME" /></intent-filter>
 ```
-
-3) Build the following targets before launching the `Unreal Editor` to support publishing to `ARM` for `Forge TV`.
-
-* `Development Editor` for `Win64`
-* `Development Client` for `Android`
-* `Development` for `Win64`
-* `Development` for `Android`
 
 ![image_141](unreal/image_141.png)
 
