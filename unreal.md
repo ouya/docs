@@ -867,7 +867,15 @@ To be able to run `UE4` on the `Forge TV` be sure to use the `4.7-OUYA`, `4.8-OU
 
 ## Building Source
 
-Build the following targets before launching the `Unreal Editor` to support publishing to `ARM` for `Forge TV`.
+1) Be sure to upgrade the [`Android NDK`](https://developer.android.com/tools/sdk/ndk/index.html) to `R10E` or later. And update your environment variables to point to the downloaded location.
+
+```
+ANDROID_NDK_ROOT
+NDKROOT
+NDK_ROOT
+```
+
+2) Build the following targets before launching the `Unreal Editor` to support publishing to `ARM` for `Forge TV`.
 
 * `Development Editor` for `Win64`
 * `Development Client` for `Android`
