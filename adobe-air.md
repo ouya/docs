@@ -33,6 +33,8 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAi
 
 * ANE-Wizard - https://github.com/freshplanet/ANE-Wizard
 
+* [Adobe Scout](https://creative.adobe.com/products/scout) - Profiler 
+
 # FlashDevelop/Flex/AdobeAirSDK
 
 When compiling `FlashDevelop`, `Flex`, and the `AdobeAirSDK` you'll want to increase your Java Virtual Machine memory size. Normally the default is `384MB` but you can increase to `1GB` or higher ```java.args=-Xmx1024m```.
@@ -810,3 +812,11 @@ https://github.com/gaslightgames
 
 Using Adobe AIR to create OUYA games:<br/>
 http://zehfernando.com/2013/using-adobe-air-to-create-ouya-games/
+
+## Profiling
+
+### Adobe Scout
+
+[`Adobe Scout`](https://creative.adobe.com/products/scout) is a free profiling tool from `Adobe Creative Cloud` that allows you to find memory issues and performance bottlenecks in your `Air` apps running on `Android`.
+
+![image_15.png](adobe-air/image_15.png)
