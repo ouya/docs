@@ -375,6 +375,18 @@ package
 	</android> 	
 ```
 
+12) Open the `File->Open ActionScript Settings` menu item.
+
+![image_12.png](adobe-air/image_12.png)
+
+13) On the `Library Path` tab, click the `Browse to Native Extension` button to select the `OuyaNativeExtension.ane` file in the project folder.
+
+![image_14.png](adobe-air/image_14.png)
+
+14) With the `OuyaNativeExtension.ane` added to the library path, click `OK`. This setting uses an absolute path and if the path is different then the path will need to be reset in order to publish. 
+
+![image_13.png](adobe-air/image_13.png)
+
 ### Flash Virtual Controller
 
 The [Flash Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir/FlashVirtualController) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated.
