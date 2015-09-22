@@ -20,6 +20,8 @@ This document will help you put your `OUYA Game` on `Razer Cortex TV` (the store
 
 [Step 2. Fix Button Images](forge_tv.md#step-2-fix-button-images)
 
+[Step 3. Menu Button Handling](forge_tv.md#step-3-menu-button-handling)
+
 [Controller Image](forge_tv.md#controller-image)
 
 [ADB Debugging](forge_tv.md#adb-debugging)
@@ -81,6 +83,10 @@ Locate the appropriate engine documentation from the above list in order to the 
 Developers can also design custom button images, as long as  images reflect `Forge TV` A,B,X,Y formatting (see below).
 
 ![Button images](forge_tv/image_1.png)
+
+## Step 3. Menu Button Handling
+
+Some games use the OUYA `BUTTON_MENU` to start or pause games. On `Forge TV` the `OUYA` button maps to the `HOME` button which opens the `Guide` instead. For standard `Android TV` controllers the `START` and `SELECT` buttons have been remapped to the `BUTTON_MENU` so games can continue to use the menu button without changing the code. Controllers that don't have a `SELECT` or `START` button won't be able to trigger a `BUTTON_MENU` press in the game (like the `OUYA` controller). Games can detect the `onPause` event to pause the game which is triggered with the `Guide` is opened. Games should make sure they can be started without using the `BUTTON_MENU` to maximize controller support.
 
 ## Controller Image
 
