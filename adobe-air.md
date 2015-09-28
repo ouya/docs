@@ -799,19 +799,191 @@ package
 		}
 ```
 
-### Community Supported Examples
+### In-App-Purchases
 
-Head on over to GaslightGames implementation for:<br/>
+The [In-App-Purchases](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir/FlashInAppPurchases) example uses the ODK to access gamer info, purchasing, and receipts.
 
-- Controllers
+![image_17.png](adobe-air/image_17.png)
 
-- In App Purchases
+1) Log into the [`developer portal`](http://devs.ouya.tv) to record your `developer UUID` to configure in-app-purchases.
 
-https://github.com/gaslightgames
+![image_18.png](adobe-air/image_18.png)
 
+2) In the `Games` section of the `developer portal` create an entry matching your `package name` matching the `air` prefix. Download the `signing key` for the game entry into your `Flash` project folder.
 
-Using Adobe AIR to create OUYA games:<br/>
-http://zehfernando.com/2013/using-adobe-air-to-create-ouya-games/
+3) Use the `File->AIR Android Settings..` menu item to add the signing key. 
+
+![image_6.png](adobe-air/image_6.png)
+
+4) On the `General` tab click the `+` button to add the `key.der` to the included files to reference the `signing key`. And then click `OK`.
+
+![image_19.png](adobe-air/image_19.png)
+
+5) The IAP example modifies the `Main.as` ActionScript to add an update event that will control the stage text content. The `Main` constructor initializes the ANE interface and initializes the ANE.
+
+```
+package
+{
+	// Import the MovieClip namespace
+    import flash.display.MovieClip;
+
+	// The OuyaController keycodes are used by input events
+	import tv.ouya.console.api.OuyaController;
+
+	// Import the namespace for the ANE
+	import tv.ouya.sdk.OuyaNativeInterface;
+
+	// The Main document extends from MovieClip 
+    public class Main extends MovieClip
+    {
+		// The developer id displays when you log into the http://devs.ouya.tv developer portal
+		static var DEVLEOPER_ID:String = "310a8f51-4d6e-4ae5-bda0-b93878e5f5d0";
+
+		// save a reference to the ANE interface
+		var _mOuyaNativeInterface: OuyaNativeInterface;
+
+		// The main constructor
+        public function Main()
+        {
+			// create an instance of the ANE interface
+			_mOuyaNativeInterface = new OuyaNativeInterface();
+
+			// Initialize the ANE by passing your developer id
+			_mOuyaNativeInterface.OuyaInit(DEVLEOPER_ID);
+		}
+	}
+}
+```
+
+6) In order to receive IAP extents, use the ANE interface `context` to add a listener to get status events.
+
+```
+		// callback for context status events
+		private function onStatusEvent( _event : StatusEvent ) : void 
+		{
+			// status events have a String code
+			_mOuyaNativeInterface.LogInfo("Code: " + _event.code );
+
+			// status events have a String level
+			_mOuyaNativeInterface.LogInfo("Level: " + _event.level );
+		}
+
+		// The main constructor
+        public function Main()
+        {
+			// create an instance of the ANE interface
+			_mOuyaNativeInterface = new OuyaNativeInterface();
+
+			// Initialize the ANE by passing your developer id
+			_mOuyaNativeInterface.OuyaInit(DEVLEOPER_ID);
+
+			// Add a status event listener on the ANE context
+			_mOuyaNativeInterface.GetExtensionContext().addEventListener( StatusEvent.STATUS, onStatusEvent );
+		}
+}
+```
+
+7) `Context` status events provide `IAP` callbacks and latency free input. The `event` code indicates the type of event. And the `event` level was used to pass a `JSON` string with the data for the event. The example includes all the parsing logic for the `JSON` responses.
+
+```
+		private function onStatusEvent( _event : StatusEvent ) : void 
+		{
+			if (_event.code == "Axis") {
+				Axis(_event.level);
+				return;
+			} else if (_event.code == "ButtonDown") {
+				ButtonDown(_event.level);
+				return;
+			} else if (_event.code == "ButtonUp") {
+				ButtonUp(_event.level);
+				return;
+			}
+			
+			// Display status events in the example label
+			LblStatus.text = "STATUS: "+_event.code;
+			
+			if (_event.code == "RequestGamerInfoOnSuccess") {
+				RequestGamerInfoOnSuccess(_event.level);
+			} else if (_event.code == "RequestGamerInfoError" ||
+				_event.code == "RequestProductsError" ||
+				_event.code == "RequestPurchaseError" ||
+				_event.code == "RequestReceiptsError" ||
+				_event.code == "RequestGamerInfoOnFailure" ||
+				_event.code == "RequestProductsOnFailure" ||
+				_event.code == "RequestPurchaseOnFailure" ||
+				_event.code == "RequestReceiptsOnFailure" ||
+				_event.code == "RequestGamerInfoOnCancel" ||
+				_event.code == "RequestProductsOnCancel" ||
+				_event.code == "RequestPurchaseOnCancel" ||
+				_event.code == "RequestReceiptsOnCancel") {
+				OnGenericError(_event.code, _event.level);
+			} else if (_event.code == "RequestProductsOnSuccess") {
+				RequestProductsOnSuccess(_event.level);
+			} else if (_event.code == "RequestPurchaseOnSuccess") {
+				RequestPurchaseOnSuccess(_event.level);
+			} else if (_event.code == "RequestReceiptsOnSuccess") {
+				RequestReceiptsOnSuccess(_event.level);
+			} else {
+				_mOuyaNativeInterface.LogInfo("Code: " + _event.code );
+				_mOuyaNativeInterface.LogInfo("Level: " + _event.level );
+			}
+		}
+``` 
+
+## IAP
+
+`IAP` methods use the reference to the `ANE` interface and the `context` status events to get responses.
+
+### RequestProducts
+
+`RequestProducts` takes a `JSONArray` of `String` product identifiers to get the details about the `entitlement` or `consumable`.
+
+```
+var jsonData:String = "[\"long_sword\",\"sharp_axe\",\"__DECLINED__THIS_PURCHASE\"]";
+_mOuyaNativeInterface.RequestProducts(jsonData);
+```
+
+### RequestPurchase
+
+`RequestPurchase` takes a `String` identifier for the `entitlement` or `consumable` being purchased.
+
+```
+var identifier:String = "long_sword";
+_mOuyaNativeInterface.RequestPurchase(identifier);
+```
+
+### RequestReceipts
+
+`RequestReceipts` takes no arguments and the callback gets a list of receipts that the logged in gamer has purchased associated with the package.
+
+```
+_mOuyaNativeInterface.RequestReceipts();
+```
+
+### RequestGamerInfo
+
+`RequestGamerInfo` gets the `GamerInfo` for the logged in gamer. The `GamerInfo` holds the gamer `UUID` and `Username`.
+
+```
+_mOuyaNativeInterface.RequestGamerInfo();
+```
+
+### Shutdown
+
+`Shutdown` cleanly shuts down the `ANE` interface before exiting.
+
+Import the `NativeApplication` namespace to get access to the singleton and exit method.
+
+```
+import flash.desktop.NativeApplication;
+```
+
+Shutdown the `ANE` interface before exiting the application.
+
+```
+_mOuyaNativeInterface.Shutdown();
+NativeApplication.nativeApplication.exit();
+```
 
 ## Profiling
 
@@ -820,3 +992,64 @@ http://zehfernando.com/2013/using-adobe-air-to-create-ouya-games/
 [`Adobe Scout`](https://creative.adobe.com/products/scout) is a free profiling tool from `Adobe Creative Cloud` that allows you to find memory issues and performance bottlenecks in your `Air` apps running on `Android`.
 
 ![image_15.png](adobe-air/image_15.png)
+
+1) You will need to sideload [`Adobe Scout`](https://play.google.com/store/apps/details?id=com.adobe.monocle.companion&hl=en) on to the `Forge TV` to install the profiler.
+
+2) The sideloaded `Adobe Scout` will appear in `Settings->Apps->Downloaded apps`.
+
+![image_20.png](adobe-air/image_20.png)
+
+3) You will need to plug in a `USB mouse` into the `Forge TV` in order to navigate the `Adobe Scout` application.
+
+4) Use the `mouse` to check the box next to `Enable`.
+
+![image_21.png](adobe-air/image_21.png)  
+
+5) You will need to manually enter the `IP Address` of your `desktop/laptop` running `Adobe Scout` which should be running.
+
+6) In `Flash` use the `File->Publish Settings` menu item.
+
+![image_23.png](adobe-air/image_23.png)
+
+7) On `Publish->Flash (.swf)` be sure to enable the `Enable detailed telemetry` and click `OK`.
+
+![image_22.png](adobe-air/image_22.png)
+
+8) Republish and sideload the application and upon launch `Adobe Scout` will auto connect.
+
+## Fast Input
+
+Using the profiler, it turns out that using the `ANE` interface to check axis and button states negatively affected performance. `ANE` calls have a whole lifecycle triggered by each call. And requesting all the axis and buttons for `4` controllers added `36` millisecond of lag each update frame. The lag introduced bad frame rates and input queueing. Instead, a `context` status event was added to provide latency free axis and button events. The following `JSON` response parsing can be used for input without any lag. 
+
+```
+		private function Axis(jsonData:String):void
+		{
+			var json:Object = JSON.parse(jsonData);
+			var playerNum:int = json.playerNum;
+			var axis:int = json.axis;
+			var val:Number = json.value;
+
+			// logs the input event, comment out this logging in your actual game
+			_mOuyaNativeInterface.LogInfo("Axis: playerNum:"+playerNum+" axis:"+axis+" value:"+val);
+		}
+		
+		private function ButtonDown(jsonData:String):void
+		{
+			var json:Object = JSON.parse(jsonData);
+			var playerNum:int = json.playerNum;
+			var button:int = json.button;
+
+			// logs the input event, comment out this logging in your actual game
+			_mOuyaNativeInterface.LogInfo("ButtonDown: playerNum:"+playerNum+" button:"+button);
+		}
+		
+		private function ButtonUp(jsonData:String):void
+		{
+			var json:Object = JSON.parse(jsonData);
+			var playerNum:int = json.playerNum;
+			var button:int = json.button;
+
+			// logs the input event, comment out this logging in your actual game
+			_mOuyaNativeInterface.LogInfo("ButtonUp: playerNum:"+playerNum+" button:"+button);
+		}
+``` 
