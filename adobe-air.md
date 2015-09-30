@@ -1067,6 +1067,14 @@ Using the profiler, it turns out that using the `ANE` interface to check axis an
 
 			// logs the input event, comment out this logging in your actual game
 			_mOuyaNativeInterface.LogInfo("Axis: playerNum:"+playerNum+" axis:"+axis+" value:"+val);
+
+			if (axis == OuyaController.AXIS_LS_X) {
+			} else if (axis == OuyaController.AXIS_LS_Y) {
+			} else if (axis == OuyaController.AXIS_RS_X) {
+			} else if (axis == OuyaController.AXIS_RS_Y) {
+			} else if (axis == OuyaController.AXIS_L2) {
+			} else if (axis == OuyaController.AXIS_R2) {
+			}
 		}
 		
 		private function ButtonDown(jsonData:String):void
@@ -1077,6 +1085,21 @@ Using the profiler, it turns out that using the `ANE` interface to check axis an
 
 			// logs the input event, comment out this logging in your actual game
 			_mOuyaNativeInterface.LogInfo("ButtonDown: playerNum:"+playerNum+" button:"+button);
+
+			if (button == OuyaController.BUTTON_O) {
+			} else if (button == OuyaController.BUTTON_U) {
+			} else if (button == OuyaController.BUTTON_Y) {
+			} else if (button == OuyaController.BUTTON_A) {
+			} else if (button == OuyaController.BUTTON_L1) {
+			} else if (button == OuyaController.BUTTON_L3) {
+			} else if (button == OuyaController.BUTTON_R1) {
+			} else if (button == OuyaController.BUTTON_R3) {
+			} else if (button == OuyaController.BUTTON_DPAD_DOWN) {
+			} else if (button == OuyaController.BUTTON_DPAD_LEFT) {
+			} else if (button == OuyaController.BUTTON_DPAD_RIGHT) {
+			} else if (button == OuyaController.BUTTON_DPAD_UP) {
+			} else if (button == OuyaController.BUTTON_MENU) {
+			}
 		}
 		
 		private function ButtonUp(jsonData:String):void
@@ -1087,5 +1110,20 @@ Using the profiler, it turns out that using the `ANE` interface to check axis an
 
 			// logs the input event, comment out this logging in your actual game
 			_mOuyaNativeInterface.LogInfo("ButtonUp: playerNum:"+playerNum+" button:"+button);
+
+			if (button == OuyaController.BUTTON_O) {
+			} else if (button == OuyaController.BUTTON_U) {
+			} else if (button == OuyaController.BUTTON_Y) {
+			} else if (button == OuyaController.BUTTON_A) {
+			} else if (button == OuyaController.BUTTON_L1) {
+			} else if (button == OuyaController.BUTTON_L3) {
+			} else if (button == OuyaController.BUTTON_R1) {
+			} else if (button == OuyaController.BUTTON_R3) {
+			} else if (button == OuyaController.BUTTON_DPAD_DOWN) {
+			} else if (button == OuyaController.BUTTON_DPAD_LEFT) {
+			} else if (button == OuyaController.BUTTON_DPAD_RIGHT) {
+			} else if (button == OuyaController.BUTTON_DPAD_UP) {
+			} else if (button == OuyaController.BUTTON_MENU) {
+			}
 		}
 ``` 
