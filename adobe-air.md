@@ -1019,7 +1019,43 @@ NativeApplication.nativeApplication.exit();
 
 ## Fast Input
 
-Using the profiler, it turns out that using the `ANE` interface to check axis and button states negatively affected performance. `ANE` calls have a whole lifecycle triggered by each call. And requesting all the axis and buttons for `4` controllers added `36` millisecond of lag each update frame. The lag introduced bad frame rates and input queueing. Instead, a `context` status event was added to provide latency free axis and button events. The following `JSON` response parsing can be used for input without any lag. 
+Using the profiler, it turns out that using the `ANE` interface to check axis and button states negatively affected performance. `ANE` calls have a whole lifecycle triggered by each call. And requesting all the axis and buttons for `4` controllers added `36` millisecond of lag each update frame. The lag introduced bad frame rates and input queueing. Instead, a `context` status event was added to provide latency free axis and button events. The following `JSON` response parsing can be used for input without any lag.
+
+1) Add the `context` status event in the `Main` constructor.
+
+```
+        public function Main()
+        {
+			// create an instance of the ANE interface
+			_mOuyaNativeInterface = new OuyaNativeInterface();
+
+			// initialize the ANE
+			_mOuyaNativeInterface.OuyaInit(DEVLEOPER_ID);
+
+			// Add the status event
+			_mOuyaNativeInterface.GetExtensionContext().addEventListener( StatusEvent.STATUS, onStatusEvent );
+        }
+```
+
+2) Add the status event handler.
+
+```
+		private function onStatusEvent( _event : StatusEvent ) : void 
+		{
+			if (_event.code == "Axis") {
+				Axis(_event.level);
+				return;
+			} else if (_event.code == "ButtonDown") {
+				ButtonDown(_event.level);
+				return;
+			} else if (_event.code == "ButtonUp") {
+				ButtonUp(_event.level);
+				return;
+			}
+		}
+```
+
+3) Add JSON parsing methods for input. 
 
 ```
 		private function Axis(jsonData:String):void
