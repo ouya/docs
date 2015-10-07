@@ -33,7 +33,9 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAi
 
 * ANE-Wizard - https://github.com/freshplanet/ANE-Wizard
 
-* [Adobe Scout](https://creative.adobe.com/products/scout) - Profiler 
+* [Adobe Scout](https://creative.adobe.com/products/scout) - Profiler Application
+
+* [Adobe Scout APK](http://apkpure.com/adobe-scout/com.adobe.monocle.companion) - Sideload the Adobe Scout APK for profiing with Adobe Scout
 
 # FlashDevelop/Flex/AdobeAirSDK
 
