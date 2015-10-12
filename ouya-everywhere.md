@@ -53,7 +53,7 @@ For most purposes, the above method should suffice.  However for games that requ
     public DeviceHardware getDeviceHardware();
     
     // Example method for checking device
-    private void CheckDevice() {
+    private void checkDevice() {
         OuyaFacade ouyaFacade = OuyaFacade.getInstance();
         if (null != ouyaFacade) {
             DeviceHardware deviceHardware = ouyaFacade.getDeviceHardware();
