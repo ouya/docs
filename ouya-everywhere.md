@@ -42,19 +42,31 @@ This will return true on an officially support device, such as the OUYA console 
 For most purposes, the above method should suffice.  However for games that require more precise device identification, this method also exists:
 
 ```java
-    public DeviceHardware getDeviceHardware();
-
-    public enum DeviceEnum {
-            OUYA,
-            MOJO,
-            XIAOMI,
-            UNKNOWN,
-    };
+    // DeviceHardware information
     public static class DeviceHardware {
         public boolean isSupported();
         public String deviceName();
         public DeviceEnum deviceEnum();
     };
+
+    // OuyaFacade.getInstance().getDeviceHardware()
+    public DeviceHardware getDeviceHardware();
+    
+    // Example method for checking device
+    private void CheckDevice() {
+        OuyaFacade ouyaFacade = OuyaFacade.getInstance();
+        if (null != ouyaFacade) {
+            DeviceHardware deviceHardware = ouyaFacade.getDeviceHardware();
+            if (null != deviceHardware) {
+                String deviceName = deviceHardware.deviceName();
+                if (deviceName == "M.O.J.O.") {
+                } else if (deviceName == "OUYA") {
+                } else if (deviceName == "Razer Forge") {
+                } else if (deviceName == "Xiaomi") {
+                }
+            }
+        }
+    }
 ```
 
 This will provide more specific device information:
