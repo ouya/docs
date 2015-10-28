@@ -153,7 +153,7 @@ Strings can be placed in designated folders which are automatically selected usi
 
 # Java Examples #
 
-# Virtual Controller Example #
+## Virtual Controller Example ##
 
 The virtual controller example exercises the new OUYA-Everywhere input. The button names and images are now accessible from the API. And the virtual controller buttons highlight with multiple controllers for supported controllers. TextViews display the incoming keycode values and the remapped keycodes after the OuyaInputMapper has remapped the input.
 
@@ -165,39 +165,39 @@ The `AndroidVirtualController` example uses the `OuyaController.getButtonData` A
 
 ![image alt text](ouya-everywhere-android-java/image_2.png)
 
-# Android Virtual Controller Project #
+## Android Virtual Controller Project ## 
 
 The project has a small number of key files that makes the example work.
 
 ![image alt text](ouya-everywhere-android-java/image_1.png)
 
-## AndroidManifest.xml ##
+### AndroidManifest.xml ###
 
 Specifies the target Android API level of 16 and the starting activity.
 
-## MainActivity.java ##
+### MainActivity.java ###
 
 The starting and only activity in the project responsible for the logic to display text, buttons, and toggle image visibility based on input.
 
-## DebugInput.java ##
+### DebugInput.java ###
 
 A debug class for displaying keycode and axis value input in human-readable format in the logcat.
 
-## ouya-sdk.jar ##
+### ouya-sdk.jar ###
 
 The Java library released through the ODK in the developer portal which provides access to the OUYA SDK.
 
-## activity_main.xml ##
+### activity_main.xml ###
 
 The Android layout that specifies the position and content that displays text and images.
 
-## drawables ##
+### drawables ###
 
 The drawable resources hold the icons and controller images used in the example.
 
-# Example Code #
+### Example Code ###
 
-## MainActivity ##
+#### MainActivity ####
 
 The MainActivity extends the OuyaActivity from the ouya-sdk.jar for the easiest way to add OUYA-Everywhere input.
 
@@ -205,7 +205,7 @@ The MainActivity extends the OuyaActivity from the ouya-sdk.jar for the easiest 
 public class MainActivity extends OuyaActivity {
 ```
 
-## setDrawable ##
+#### setDrawable ####
 
 Accepts the ImageView that will display the button image and the keyCode id for the corresponding button image.
 
@@ -218,7 +218,7 @@ Accepts the ImageView that will display the button image and the keyCode id for 
 	}
 ```
 
-## bitmap ##
+#### bitmap ####
 
 The `ButtonData` image can also be converted to a `Bitmap` which can be used in other cases. 
 
@@ -239,7 +239,7 @@ The `ButtonData` image can also be converted to a `Bitmap` which can be used in 
     }
 ```
 
-## onCreate ##
+#### onCreate ####
 
 Loads the layout and gets the references to the ImageView controls that will handle toggling button visibility when toggled.
 
@@ -325,7 +325,7 @@ Input can be event based, or spawn a thread to set visibility on an interval. Th
 ```
  
 
-## onStart ##
+#### onStart ####
 
 Initialization displays build information and sets the drawable button images from the new api.
 
@@ -353,7 +353,7 @@ Initialization displays build information and sets the drawable button images fr
 	}
 ```
 
-## onGenericMotionEvent ##
+#### onGenericMotionEvent ####
 
 The axis events arrive with onGenericMotionEvent after the OUYA-Everywhere has remapped the input.
 
@@ -368,7 +368,7 @@ The axis events arrive with onGenericMotionEvent after the OUYA-Everywhere has r
 	    float r2 = motionEvent.getAxisValue(OuyaController.AXIS_R2);
 ```
 
-## onKeyDown ##
+#### onKeyDown ####
 
 When a button is pressed the corresponding image is highlighted. When the system button is detected, the image is highlighted for an interval.
 
@@ -424,7 +424,7 @@ When a button is pressed the corresponding image is highlighted. When the system
 	}
 ```
 
-## onKeyUp ##
+#### onKeyUp ####
 
 When the button is no longer pressed the ImageView for the highlighted button is hidden.
 
@@ -479,8 +479,104 @@ When the button is no longer pressed the ImageView for the highlighted button is
 	}
 ```
 
-# Razer Virtual Controller Example #
+## Razer Virtual Controller Example ##
 
 The `RazerVirtualController` example includes virtual controller images and mappings for the Razer Serval Controller. The `RazerVirtualController` source code can be found within the [ouya-sdk-examples](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/RazerVirtualController).
 
 ![image alt text](ouya-everywhere-android-java/image_3.png)
+
+## In-App-Purchases Example ##
+
+The `ODK` download in the [developer portal](http://devs.ouya.tv) includes an in-app-purchase sample application.
+
+## OuyaFacade ##
+
+The `OuyaFacade` has several listeners for `in-app-purchase` callbacks.
+
+```
+public class CustomActivity extends Activity
+{
+	// The tag for log messages
+	private static final String TAG = ActivityCommon.class.getSimpleName(); 
+
+	// Your game talks to the OuyaFacade, which hides all the mechanics of doing an in-app purchase.
+	private OuyaFacade mOuyaFacade = null;
+	
+	// listener for fetching gamer info
+	private CancelIgnoringOuyaResponseListener<GamerInfo> mRequestGamerInfoListener = null;
+
+	// listener for getting products
+	private CancelIgnoringOuyaResponseListener<List<Product>> mRequestProductsListener = null;
+	
+	// listener for requesting purchase
+	private OuyaResponseListener<PurchaseResult> mRequestPurchaseListener = null;
+	
+	// listener for getting receipts
+	private OuyaResponseListener<Collection<Receipt>> mRequestReceiptsListener = null;
+}
+```
+
+Implement the listeners to pass to the `OuyaFacade` IAP methods.
+
+```
+		mRequestGamerInfoListener = new CancelIgnoringOuyaResponseListener<GamerInfo>() {
+            @Override
+            public void onSuccess(GamerInfo info) {
+            	Log.d(TAG, "RequestGamerInfoListener: onSuccess");
+            }
+
+            @Override
+            public void onFailure(int errorCode, String errorMessage, Bundle optionalData) {
+            	Log.d(TAG, "RequestGamerInfoListener: onFailure errorCode="+errorCode+" errorMessage="+errorMessage);
+            }
+        };
+        
+		mRequestProductsListener = new CancelIgnoringOuyaResponseListener<List<Product>>() {
+			@Override
+			public void onSuccess(final List<Product> products) {
+				Log.d(TAG, "RequestProductsListener: onSuccess received "+products.size()+" products");
+			}
+
+			@Override
+			public void onFailure(int errorCode, String errorMessage, Bundle optionalData) {
+				Log.d(TAG, "sRequestProductsListener: onFailure errorCode="+errorCode+" errorMessage="+errorMessage);
+			}
+		};
+
+		mRequestPurchaseListener = new OuyaResponseListener<PurchaseResult>() {
+
+			@Override
+			public void onSuccess(PurchaseResult result) {
+				Log.d(TAG, "RequestPurchaseListener: onSuccess");
+			}
+
+			@Override
+			public void onFailure(int errorCode, String errorMessage, Bundle optionalData) {
+				Log.d(TAG, "RequestPurchaseListener: onFailure errorCode="+errorCode+" errorMessage="+errorMessage);
+			}
+
+			@Override
+			public void onCancel() {
+				Log.d(TAG, "RequestPurchaseListener: onCancel");
+			}
+		};
+		
+		mRequestReceiptsListener = new OuyaResponseListener<Collection<Receipt>>() {
+
+			@Override
+			public void onSuccess(Collection<Receipt> receipts) {
+				Log.d(TAG, "RequestReceiptsListener: onSuccess received "+receipts.size() + " receipts");
+			}
+
+			@Override
+			public void onFailure(int errorCode, String errorMessage, Bundle optionalData) {
+				Log.d(TAG, "RequestReceiptsListener: onFailure: errorCode="+errorCode+" errorMessage="+errorMessage);
+			}
+
+			@Override
+			public void onCancel() {
+				Log.d(TAG, "RequestReceiptsListener: onCancel");
+			}
+		};
+	}
+```
