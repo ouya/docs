@@ -578,5 +578,4 @@ Implement the listeners to pass to the `OuyaFacade` IAP methods.
 				Log.d(TAG, "RequestReceiptsListener: onCancel");
 			}
 		};
-	}
 ```
