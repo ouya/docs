@@ -188,11 +188,13 @@ The Key Store must be used to submit your game to the store.
 
 Updates of the game needs to use the same Key Store.
 
-Be sure to email yourself a backup of the keystore because you always need to submit updates of the game with the same keystore.
+Be sure to email yourself a backup of the keystore and password because you always need to submit updates of the game with the same keystore.
 
 ### Create the KeyStore
 
-* Generate a unique keystore for your game. Make sure `ADB` is in your path and `keytool` is in your path.
+* IDE tools like [Eclipse](http://developer.android.com/tools/publishing/app-signing-eclipse.html) and [Unity](http://docs.unity3d.com/Manual/class-PlayerSettingsAndroid.html) can be used to create the keystore.
+
+* Or generate a unique keystore for your game on the command-line. Make sure `ADB` is in your path and `keytool` is in your path.
 
 Example keystore filename: `ouya_your.keystore` (put your own name here)
 
