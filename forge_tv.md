@@ -92,7 +92,7 @@ Some games use the OUYA `BUTTON_MENU` to start or pause games. On `Forge TV` the
 
 ## Step 4. Signing
 
-Before submitting your game to the [developer portal](http://devs.ouya.tv), be sure to sign your `APK` with the `[keystore]`(content-review-guidelines.md#keystore).
+Before submitting your game to the [developer portal](http://devs.ouya.tv), be sure to sign your `APK` with the `[keystore](content-review-guidelines.md#keystore)`.
 
 ## Controller Image
 
