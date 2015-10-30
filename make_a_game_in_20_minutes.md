@@ -1,6 +1,6 @@
-##MAKE A GAME IN 20 MINUTES
+# MAKE A GAME IN 20 MINUTES #
 
-###**Things You’ll Need Before You Start:**
+## Things You’ll Need Before You Start: ##
 - OUYA Console
 - Windows 7 PC
 - Micro USB Cable
@@ -11,22 +11,22 @@ Watch the video to follow along: https://vimeo.com/102651617
 
 #####Please Note: If you are running Windows 32bit, there will not be a Program Files (x86) folder available. Browse to the Program Files folder instead. Program Files (x86) is only available when running a Windows 64bit system.
 
-##**Getting Set Up**
+## Getting Set Up ##
 
-**Install JDK**
+## Install JDK ##
 
 1. Go to: http://www.oracle.com/technetwork/java/javasebusiness/downloads/java-archive-downloads-javase6-419409.html
 1. Download JDK 6 (32bit / x86) [requires an Oracle account]
 1. Install the JDK and JRE using the downloaded installer, following the onscreen prompts and keep the default settings.
 
 
-**Install Android SDK**
+## Install Android SDK ##
 
 1. Download the standalone SDK (not ADT/Studio bundle) from: http://developer.android.com/sdk/index.html
 1. Run the SDK tools installer, noting the location of the SDK folder, keep the default settings again
 
 
-**Set up Android SDK** 
+## Set up Android SDK ##
 
 1. Open the Android SDK Manager
 1. Click “Deselect All” if you don’t want to download unnecessary tools (?)
@@ -38,7 +38,7 @@ Watch the video to follow along: https://vimeo.com/102651617
 1. Close both windows when complete
 
 
-**Setup OUYA adb**
+## Setup OUYA adb ##
 
 1. Open Device Manager (Start Menu - type Device Manager)
 1. Connect your OUYA console to your PC via the MICRO USB port (not the regular USB), also connect your console to your TV. Then power on the console.
@@ -55,15 +55,15 @@ Watch the video to follow along: https://vimeo.com/102651617
 1. If there’s a warning about compatibility, just click Yes
 1. Close the windows when finished
 
-**Download the Demo Game package**
+## Download the Demo Game package ##
 
 1. Download the latest release unitypackage from here: https://github.com/ouya/unity-2d-demo/releases/latest
 
-**Install Unity**
+## Install Unity ##
 
 1. Download and install Unity following the installation prompts: http://unity3d.com/unity/download
 
-##**Getting The Demo Running**
+## Getting The Demo Running ##
 
 1. Create a new Unity Project
 1. In the new project dialog, select your project folder and select “2D” in the defaults drop down
@@ -77,38 +77,38 @@ Watch the video to follow along: https://vimeo.com/102651617
 1. Your game should automatically begin to play on your OUYA console that’s still plugged in to your TV
 
 
-**Making Tweaks in Unity**
+## Making Tweaks in Unity ##
 
 1. In the project tree (one of the several panes labeled with a tab), open Scenes > Level
 
-**Changing Jump Height**
+## Changing Jump Height ##
 
 1. In the project tree, select “Assets > Prefabs > Characters > hero”
 1. In the Inspector, find the PLAYER CONTROL (SCRIPT) section, and change the Jump Force field from 1000 to 1200	
 
-**Changing Enemy HP:**
+## Changing Enemy HP: ##
 
 1. In project tree, select “Assets > Prefabs > Characters > enemy2”
 1. In the Inspector, find the ENEMY (SCRIPT) section and change the HP field from 2 to 3
 
-**Changing Enemy Speed:**
+## Changing Enemy Speed: ##
 
 1. In project tree, select “Assets > Prefabs > Characters > enemy1”
 1. In the Inspector, find the ENEMY (SCRIPT) section and change the Move Speed field from 6 to 8
 
-**Changing Bus Sprite**
+## Changing Bus Sprite ##
 
 1. In project tree, select “Assets > Prefabs > Environment > Bus”
 1. In the Inspector, find the SPRITE RENDERER section, and click the circle next to the Sprite field where it says “Bus”
 1. Double click the new Bus sprite (with alien passengers) in the window that pops up
 
-**Changing Background Image**
+## Changing Background Image ##
 
 1. In Hierarchy tab, select “backgrounds > env_bg”
 1. In the Inspector, find the SPRITE RENDERER section, and click the circle next to the Sprite field labeled env_bg
 1. Double click the night time background in the window that pops up
 
-**Changing Music**
+## Changing Music ##
 
 1. In the Hierarchy tab, select “music”
 1. In the Inspector, find the AUDIO SOURCE section and click the circle next to the Audio Clip field labeled MainTheme
@@ -117,7 +117,7 @@ Watch the video to follow along: https://vimeo.com/102651617
 1. The game will automatically begin to play on your OUYA console that should still be running the first version of the game.
 1. Check out the differences!
 
-**Creating APK for publishing**
+## Creating APK for publishing ##
 
 1. Create your keystore
 1. Go to Edit > Project Settings > Player
@@ -130,20 +130,20 @@ Watch the video to follow along: https://vimeo.com/102651617
 1. Select CREATE KEY when you’re done.
 1. Return to the PUBLISH SETTINGS section, and select your newly created alias from the Key -> Alias dropdown box, and type in the password you’ve chosen.
 
-**Changing the package name**
+## Changing the package name ##
 
 1. Open the OUYA panel by going to Window > Open OUYA Panel
 1. Change the bundle ID by selecting the Bundle Identifier text and entering your package name
 1. A warning message will appear.
 1. To fix this, hit the “Sync Bundle ID” button to update the package name of all your files
 
-**Build APK**
+## Build APK ##
 
 1. Open File > Build Settings
 1. Click the Build button to save your APK
 
 
-**Create a Developer Profile and Upload your game**
+## Create a Developer Profile and Upload your game ##
 
 1. Go to https://devs.ouya.tv and create or log in to your developer account
 1. Go to https://devs.ouya.tv/developers/edit and fill out your Developer Profile, and Marketplace Agreement
