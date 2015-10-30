@@ -180,27 +180,27 @@ The 96x96 icon displays on some legacy Android settings pages.
  
 <table border="1"><tr><td><img src="http://ouya-docs.s3.amazonaws.com/images/VideosURLbox.png"/></td></tr></table>
 
-## Key Store
+## Keystore
 
-The Key Store is a security mechanism for your game.
+The `keystore` is a security mechanism for your game.
 
-The Key Store must be used to submit your game to the store.
+The `keystore` must be used to submit your game to the store.
 
-Updates of the game needs to use the same Key Store.
+Updates of the game needs to use the same `keystore`.
 
 Be sure to email yourself a backup of the keystore and password because you always need to submit updates of the game with the same keystore.
 
 ### Create the KeyStore
 
-* IDE tools like [Eclipse](http://developer.android.com/tools/publishing/app-signing-eclipse.html) and [Unity](http://docs.unity3d.com/Manual/class-PlayerSettingsAndroid.html) can be used to create the keystore.
+* IDE tools like [Eclipse](http://developer.android.com/tools/publishing/app-signing-eclipse.html) and [Unity](http://docs.unity3d.com/Manual/class-PlayerSettingsAndroid.html) can be used to create the `keystore`.
 
-* Or generate a unique keystore for your game on the command-line. Make sure `ADB` is in your path and `keytool` is in your path.
+* Or generate a unique `keystore` for your game on the command-line. Make sure `ADB` is in your path and `keytool` is in your path.
 
-Example keystore filename: `ouya_your.keystore` (put your own name here)
+Example `keystore` filename: `ouya_your.keystore` (put your own name here)
 
-Example keystore alias: `YourAlias` (put your own alias)
+Example `keystore` alias: `YourAlias` (put your own alias)
 
-Example keystore password: `your_password` (put your own password)
+Example `keystore` password: `your_password` (put your own password)
 
 ```
 keytool -genkey -alias YourAlias -keystore ouya_your.keystore -keyalg RSA -keysize 2048 -validity 36135 -storepass your_password
@@ -228,17 +228,17 @@ Enter key password for <YourAlias>
 Re-enter new password: 
 ```
 
-### Sign APK with the KeyStore
+### Sign APK with the Keystore
 
-Before submitting your `APK` to the store, make sure your `APK` is signed with your `Key Store`.
+Before submitting your `APK` to the store, make sure your `APK` is signed with your `keystore`.
 
 Make sure `jarsigner` is in your path and you are using `JDK6`.
 
-Example keystore filename: `ouya_your.keystore` (put your own name here)
+Example `keystore` filename: `ouya_your.keystore` (put your own name here)
 
-Example keystore alias: `YourAlias` (put your own alias)
+Example `keystore` alias: `YourAlias` (put your own alias)
 
-Example keystore password: `your_password` (put your own password)
+Example `keystore` password: `your_password` (put your own password)
 
 ```
 jarsigner -keystore ouya_your.keystore -storepass your_password -keypass your_password Your.apk YourAlias
@@ -246,7 +246,7 @@ jarsigner -keystore ouya_your.keystore -storepass your_password -keypass your_pa
 
 ### Verify Certs
 
-The keystore certificate can be verified after signing the apk.
+The `keystore` certificate can be verified after signing the apk.
 
 ```
 jarsigner -verify -certs -verbose Your.apk
@@ -254,4 +254,4 @@ jarsigner -verify -certs -verbose Your.apk
 
 ### Publish
 
-After signing with the keystore, the `APK` is ready to publish in the [developer portal](http://devs.ouya.tv).
+After signing with the `keystore`, the `APK` is ready to publish in the [developer portal](http://devs.ouya.tv).
