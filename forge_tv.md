@@ -1,6 +1,6 @@
 # Put Your OUYA Game on `Razer Cortex TV`
 
-`OUYA Publishing` is in the process of testing games in the `OUYA Store` for compatibility on `Forge TV`.
+`OUYA Publishing` is in the process of testing games in the `OUYA Store` for compatibility on `Cortex`, Razer's appstore for `Forge TV`.
 
 Some games are perfectly functional, whereas other games may have issues with input, and other games may have cosmetic issues with button images.
 
@@ -14,7 +14,7 @@ This document will help you put your `OUYA Game` on `Razer Cortex TV` (the store
 
 [Notes](forge_tv.md#notes)
 
-[Engines That Support Forge TV](forge_tv.md#engines-that-support-forge-tv)
+[Engines That Support C TV](forge_tv.md#engines-that-support-forge-tv)
 
 [Step 1. Upgrade the OUYA-Everywhere Plugin](forge_tv.md#step-1-upgrade-the-ouya-everywhere-plugin)
 
