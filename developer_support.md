@@ -2,11 +2,11 @@
 
 ## Office Hours ##
 
-Once a week, OUYA participates in a live broadcast with developers to answer questions in a Q & A format.
+`Razer` participates in broadcasts with developers to answer questions in a Q & A format.
 
 ----------
 
-View the entire [OUYA Dev Office Hours Playlist](https://www.youtube.com/playlist?list=PLg9qh0aZmQO8UjxetGdI6_egUFJCBtjNl)
+View the entire [Razer Dev Office Hours Playlist](https://www.youtube.com/playlist?list=PLg9qh0aZmQO8UjxetGdI6_egUFJCBtjNl)
 
 ----------
 
