@@ -15,6 +15,7 @@ We understand your need to get feedback quickly and we are committed to making t
 Last week, it took us three days to review an average Game.  We’ll update this weekly for you.
 
 ## Technical Guidelines
+
 ### Safe Zone
 We want to provide a great experience for gamers with any type of TV. Some TVs have a substantial amount of overscan -- so much so that you can’t see the outside edge of the game at all. 
 
@@ -78,6 +79,10 @@ Here is TimG with a video tip on handling the safe area.
 
 </table>
 
+##Game Details
+
+* **Video**: Premium titles are required to have a preview video.
+
 ##Content No-No’s
 
 We want you to build imaginative, inventive games. To make sure OUYA has a great environment for gamers, there are a few things we don’t want to see on OUYA. First, make sure to rate your game according to OUYA’s Content Rating Guidelines below (be honest).  Then ensure your submitted screen-shots and Game Details text contains no explicit content. And finally, let’s avoid these:
@@ -86,11 +91,11 @@ We want you to build imaginative, inventive games. To make sure OUYA has a great
 
 * **Violence**: Do not encourage real world violence, in any way.
 
-* **Sexually Explicit Content**: Don’t go overboard on nudity or obscene references… you know what we mean.
+* **Sexually Explicit Content**: Don’t go overboard on nudity or obscene references… you know what we mean. There should be no explicit content in the game details page or video.
 
 * **Misrepresentation** (of your Game or Yourself): Be who you say you are. Don’t confuse gamers by being “like” other games.
 
-* **Intellectual Property**: Do not infringe on the intellectual property rights of others including patent, trademark, trade secret, copyright, and all other proprietary rights.
+* **Intellectual Property**: Do not infringe on the intellectual property rights of others including patent, trademark, trade secret, copyright, and all other proprietary rights. The game details page should only include intellectual property that you own.
 
 * **Dangerous Products**: Do not transmit viruses, worms, malware, or any other items that may harm gamers or the OUYA platform.
 
