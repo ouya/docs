@@ -81,6 +81,8 @@ Here is TimG with a video tip on handling the safe area.
 
 ##Game Details 
 
+* **Cost**: The review team will verify the cost displays correctly on the games details page. Costs can be `FREE` (free game without in-app-purchases), `FREE*` (free game with in-app-purchases), `PRICE` (premium game without in-app-purchases, and `PRICE*` (premium game with in-app-purchases). 
+
 * **Downloadable**: The review team will verify the game can be downloaded from the games details page.
 
 * **Genre**: A request to the review team is needed if the game title fails to appear in the expected genres.
