@@ -79,9 +79,29 @@ Here is TimG with a video tip on handling the safe area.
 
 </table>
 
-##Game Details
+##Game Details 
+
+* **Downloadable**: The review team will verify the game can be downloaded from the games details page.
+
+* **Genre**: A request to the review team is needed if the game title fails to appear in the expected genres.
+
+* **Installable**: The review team will verify the game can be installed from the games details page. 
+
+* **Launchable**: The review team will verify the game can be launched from the games details page.
 
 * **Video**: Premium titles are required to have a preview video.
+
+##App Review
+
+* **APK Size**: The maximum APK size for games under review is 1.25GB. Extra content can be downloaded by the application after launching.
+
+* **Button Mashing**: The review team checks that mashing controller buttons at the start of the game will not crash the app. Commonly when content is loading, button mashing can crash apps under review.
+
+* **Out of Space**: For games that download content in game, the review team checks for download errors that can occur when the system is out of disk space. (Messaging space issues to the user is recommended but not required.)
+
+* **Readable**: The review team checks that important game text is readable from 10 feet back from the TV.
+
+* **Runnable**: The review team will verify the game can be started without immediately crashing.
 
 ##Content No-No’s
 
