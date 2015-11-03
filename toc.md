@@ -29,6 +29,7 @@
 * [Game Maker](game-maker.md)
 * [Goo](goo.md)
 * [HTML5](html5.md)
+* [Java](java.md)
 * [libGDX](libGDX.md)
 * [Marmalade](marmalade.md)
 * [MonoGame](mono-game.md)
