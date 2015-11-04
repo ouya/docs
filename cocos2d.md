@@ -2,7 +2,9 @@
 
 ### Forums
 
-@OUYA - (Cocos2D on OUYA Forums) - http://forums.ouya.tv/categories/cocos2d-on-ouya<br/>
+[Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
+
+[Cocos2D on OUYA Forums](http://forums.ouya.tv/categories/cocos2d-on-ouya)
 
 ## About
 
