@@ -1,13 +1,16 @@
 ## Construct 2 Engine
 
 ### Downloads
-Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Construct2
+
+[Example Source](https://github.com/ouya/ouya-sdk-examples/tree/master/Construct2)
 
 ### Forums
 
-@OUYA - (Construct 2 on OUYA Forums) - http://forums.ouya.tv/categories/construct2-on-ouya
+[Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
-@Construct 2 - (Forums) - https://www.scirra.com/forum/
+[Construct 2 on OUYA Forums](http://forums.ouya.tv/categories/construct2-on-ouya)
+
+[Construct 2 on Scirra Forums](https://www.scirra.com/forum/)
 
 ## Getting Started
 
@@ -46,7 +49,7 @@ Construct 2 is an visually programable engine that publishes HTML5.
 
 ## Publishing ##
 
-Publishing to the `OUYA` requires that you package the generated `HTML5` from `Construct 2` into an Android wrapper, [`Cordova`](cordova.md). The wrapper provides accelerated `WebGL` and accelerated video decoding.
+Publishing to `Cortex TV` requires that you package the generated `HTML5` from `Construct 2` into an Android wrapper, [`Cordova`](cordova.md). The wrapper provides accelerated `WebGL` and accelerated video decoding.
 
 1) Use the menu `File->Export project...` item.
 
@@ -87,7 +90,7 @@ The IAP example places the signing key in `Construct2\InAppPurchases\platforms\a
 ## Testing
 
 You won't be charged when making IAP purchases of your own game.
-Be sure to log into the OUYA with the same developer account that the game is created for in the [developer portal](http://devs.ouya.tv).
+Be sure to log into `Cortex TV` with the same developer account that the game is created for in the [developer portal](http://devs.ouya.tv).
 You can reverse purchases in the [purchase page](https://devs.ouya.tv/developers/products) of the [developer portal](http://devs.ouya.tv) to test refund scenarios or testing first-time purchases.
 Look for the `View and remove your purchases of your products` link on the bottom of the [purchase page](https://devs.ouya.tv/developers/products) to refund purchases of your own game.
 
@@ -106,7 +109,7 @@ Select `OuyaSDK` and click `Insert`.
 
 ## Initialize the OUYA Plugin
 
-Interacting with the OUYA SDK can be done via the `event sheet`.
+Interacting with the `Cortex TV` SDK can be done via the `event sheet`.
 
 ### Start of Layout
 
