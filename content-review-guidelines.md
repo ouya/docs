@@ -2,15 +2,15 @@ Version 1.1, July 25, 2013
 
 ##Introduction
 
-Welcome, OUYA Devs! We’re thrilled you’ve decided to develop for OUYA.
+Welcome, `Cortex TV` Devs! We’re thrilled you’ve decided to develop for `Forge TV`.
 
-We want to provide a great experience for both gamers and developers, which is why we will review all Games and Apps (read “Games”) you submit to OUYA. Below are the guidelines we’ll use. Of course, we are open to any developer -- but we want all the games on OUYA to come together to make OUYA great.
+We want to provide a great experience for both gamers and developers, which is why we will review all Games and Apps (read “Games”) you submit to `Cortex TV`. Below are the guidelines we’ll use. Of course, we are open to any developer -- but we want all the games on `Cortex TV` to come together to make `Cortex TV` great.
 
-By following the guidelines below, young grasshopper, you’ll be live on OUYA before you know it (Yeah!). We will try to keep this document as stable as possible, and communicate if we need to make changes.
+By following the guidelines below, young grasshopper, you’ll be live on `Cortex TV` before you know it (Yeah!). We will try to keep this document as stable as possible, and communicate if we need to make changes.
 
 ##Speed of Reply
 
-We understand your need to get feedback quickly and we are committed to making this happen as it benefits you, our developers, as well as OUYA’s gamers.
+We understand your need to get feedback quickly and we are committed to making this happen as it benefits you, our developers, as well as `Cortex TV’s` gamers.
 
 Last week, it took us three days to review an average Game.  We’ll update this weekly for you.
 
@@ -111,7 +111,7 @@ Here is TimG with a video tip on handling the safe area.
 
 ##Content No-No’s
 
-We want you to build imaginative, inventive games. To make sure OUYA has a great environment for gamers, there are a few things we don’t want to see on OUYA. First, make sure to rate your game according to OUYA’s Content Rating Guidelines below (be honest).  Then ensure your submitted screen-shots and Game Details text contains no explicit content. And finally, let’s avoid these:
+We want you to build imaginative, inventive games. To make sure `Cortex TV` has a great environment for gamers, there are a few things we don’t want to see on `Cortex TV`. First, make sure to rate your game according to `Cortex TV’s` Content Rating Guidelines below (be honest).  Then ensure your submitted screen-shots and Game Details text contains no explicit content. And finally, let’s avoid these:
 
 * **Hate Speech**: Do not promote hatred toward an individual or group of people based on their race or ethnic origin, religion, disability, gender, age, veteran status, or sexual orientation/gender identity in your game.  If you do, we’ll reject it.
 
@@ -123,15 +123,17 @@ We want you to build imaginative, inventive games. To make sure OUYA has a great
 
 * **Intellectual Property**: Do not infringe on the intellectual property rights of others including patent, trademark, trade secret, copyright, and all other proprietary rights. The game details page should only include intellectual property that you own.
 
-* **Dangerous Products**: Do not transmit viruses, worms, malware, or any other items that may harm gamers or the OUYA platform.
+* **Dangerous Products**: Do not transmit viruses, worms, malware, or any other items that may harm gamers or the `Cortex TV` platform.
 
 * **Illegal Activities**: Use good judgment and do not break the law.
 
-* **OUYA Trademark**: You can use the OUYA name, logo, and trademark, but you have to respect that these are OUYA’s intellectual property, so we want you to use them in a way that accurately portrays that your game is on OUYA.
+* **`Cortex TV` Trademark**: You can use the `Cortex TV` name, logo, and trademark, but you have to respect that these are `Razer’s` intellectual property, so we want you to use them in a way that accurately portrays that your game is on `Cortex TV`.
+
+* **`OUYA` Trademark**: You can use the `OUYA` name, logo, and trademark, but you have to respect that these are `Razer’s` intellectual property, so we want you to use them in a way that accurately portrays that your game is on `OUYA`.
 
 ##In-App Purchasing & Technical Info
 
-You have to use OUYA’s In-App Payment API to take any payment. The In-App Payment API can be found in our OUYA Development Kit (ODK) at devs.ouya.tv.  It supports micro-transactions and full game downloads as well as any content you want to unlock.
+You have to use `Cortex TV’s` In-App Payment API to take any payment. The In-App Payment API can be found in our `Cortex TV` Development Kit (ODK) at devs.ouya.tv. It supports micro-transactions and full game downloads as well as any content you want to unlock.
 
 You shouldn’t mislead users about any in-app services, goods, content or functionality.
 
@@ -141,16 +143,16 @@ No nasty bugs please! We typically reject content that regularly crashes, has aw
 
 Your game should continue to work even if a network connection goes down (excluding any online functionality, of course).
 
-All games must function on a retail OUYA device, without modifications to hardware or software.
+All games must function on a retail `Forge TV` device, without modifications to hardware or software.
 
 The size of the initial Game’s download (the .apk file) should be 1.2 GB or less. If a Game requires additional files or assets, they should be delivered via your own servers.
 
 Games should run in full-screen mode and be playable in 720p and 1080p (it is TV ya know).
 
-Games should follow the OUYA [Interface Guidelines](https://devs.ouya.tv/developers/docs/interface-guidelines), including the names of the controller buttons and related UI standards.
+Games should follow the `Cortex TV` [Interface Guidelines](https://devs.ouya.tv/developers/docs/interface-guidelines), including the names of the controller buttons and related UI standards.
 
 
-##OUYA Content Ratings
+##Cortex TV Content Ratings
 
 To help expedite your game’s review, we ask that you assign a content rating to your game that reflects the appropriateness of its content for different audiences. The rating scale is as follows:
 
@@ -166,14 +168,14 @@ To help expedite your game’s review, we ask that you assign a content rating t
 
 Please see the [content submission checklist](https://s3.amazonaws.com/ouya-docs/OUYA_Dev_ReviewChecklist.pdf) for the full list. Here are some important points to keep in mind:
 
-* Alcohol, Tobacco and Drugs: Illegal content is illegal on OUYA. That said, games that reference drugs, alcohol, or tobacco products are always rated 12+. Games that focus on drugs, alcohol, or tobacco are 17+. 
-* Gambling: This ain't Vegas, so games or apps that facilitate real gambling aren't allowed in OUYA. Gambling themes and simulated gambling will always be rated 12+ or 17+.
-* Hate: We at OUYA hate on hate. Please keep your speech clean and respect your fellow gamer.
+* Alcohol, Tobacco and Drugs: Illegal content is illegal on `Cortex TV`. That said, games that reference drugs, alcohol, or tobacco products are always rated 12+. Games that focus on drugs, alcohol, or tobacco are 17+. 
+* Gambling: This ain't Vegas, so games or apps that facilitate real gambling aren't allowed in `Cortex TV`. Gambling themes and simulated gambling will always be rated 12+ or 17+.
+* Hate: We at `Razer` hate on hate. Please keep your speech clean and respect your fellow gamer.
 * Profanity and Crude Humor: We can't control how hard you laugh, but we can promise that any crude or profane humor will always be labeled 12+ or 17+.
-* Sexual and Suggestive Content: We know OUYA's one sleek, sexy console, but no: Pornography is never allowed. If games or apps suggest or make sexual references, they'll be rated 12+ or 17+. Focusing on these elements will result in a 17+ rating.
-* User Generated Content and User to User Communication: To protect the community, games or apps rated "everyone" cannot host user generated content or enable communication between users. And should OUYA players want to find and communicate with one another, those games will be rated 12+ or 17+.
+* Sexual and Suggestive Content: We know `Cortex TV` is one sleek, sexy console, but no: Pornography is never allowed. If games or apps suggest or make sexual references, they'll be rated 12+ or 17+. Focusing on these elements will result in a 17+ rating.
+* User Generated Content and User to User Communication: To protect the community, games or apps rated "everyone" cannot host user generated content or enable communication between users. And should `Cortex TV` players want to find and communicate with one another, those games will be rated 12+ or 17+.
 * Violence: We play violence safe. Games or apps that contain mild cartoon or fantasy violence are 9+, realistic or intense fantasy violence is 12+ or 17+, and graphic violence is always rated high maturity.
-* The OUYA name must be fully capitalized both in-game and on the game details page.
+* The `OUYA` name must be fully capitalized both in-game and on the game details page.
 
 ##Communication
 
