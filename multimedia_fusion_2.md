@@ -2,7 +2,9 @@
 
 ### Forums
 
-@OUYA - (Clickteam Fusion on OUYA Forums) - https://forums.ouya.tv/categories/clickteam-fusion-2-on-ouya<br/>
+[Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
+
+[Clickteam Fusion on OUYA Forums](https://forums.ouya.tv/categories/clickteam-fusion-2-on-ouya)
 
 ## Guide
 
@@ -10,7 +12,7 @@
 
 ### Examples
 
-Configure MMF2 for OUYA publishing - http://forums.ouya.tv/discussion/2879/sticky-how-to-setup-mmf2-for-ouya-export-complete-guide?new=1
+Configure `MMF2` for `Cortex TV` publishing - http://forums.ouya.tv/discussion/2879/sticky-how-to-setup-mmf2-for-ouya-export-complete-guide?new=1
 
 Add controller support - http://community.clickteam.com/threads/83074-OUYA-controller-Buttons?p=608743#post608743
 
