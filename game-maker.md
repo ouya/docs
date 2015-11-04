@@ -1,26 +1,28 @@
-## Game Maker
+## Game Maker Engine
 
 ### Downloads
 
-Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/GameMaker
+[Example Source](https://github.com/ouya/ouya-sdk-examples/tree/master/GameMaker)
 
 ### Forums
 
-@OUYA - (Game Maker on OUYA Forums) - http://forums.ouya.tv/categories/gamemaker-on-ouya<br/>
+[Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
+
+[Game Maker on OUYA Forums](http://forums.ouya.tv/categories/gamemaker-on-ouya)
 
 ### Developer Support Hangouts
 
 2013:
 
 <table border=1>
-<tr><td>OUYA Hangout July 15th (1:00:00)<br/>
+<tr><td>Razer Hangout July 15th (1:00:00)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=zWYVYmk6luc" target="_blank">
-<img src="http://img.youtube.com/vi/zWYVYmk6luc/0.jpg" alt="OUYA Hangout July 15th," width="240" height="180" border="10" /></a></td> 
+<img src="http://img.youtube.com/vi/zWYVYmk6luc/0.jpg" alt="Razer Hangout July 15th," width="240" height="180" border="10" /></a></td> 
 <td></td></tr></table>
 
 # Releases #
 
-* [GameMaker-OuyaSDK-Extension](https://github.com/ouya/ouya-sdk-examples/releases/tag/GameMaker-OuyaSDK-Extension) - Enable OUYA Everywhere Input and In-App-Purchases in GameMaker Studio.
+* [GameMaker-OuyaSDK-Extension](https://github.com/ouya/ouya-sdk-examples/releases/tag/GameMaker-OuyaSDK-Extension) - Enable `OUYA` Everywhere Input and In-App-Purchases in GameMaker Studio.
 
 ## Guide
 
@@ -338,7 +340,7 @@ The first parameter is a `string` which is a `Product` identifier.
 
 ### Virtual Controller
 
-The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/GameMaker/VirtualController.gmx) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated.
+The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/GameMaker/VirtualController.gmx) example shows 4 images of the `OUYA` Controller which moves axises and highlights buttons when the physical controller is manipulated.
 
 ![VirtualController image](game-maker/image_4.png)
 
@@ -384,7 +386,7 @@ Make sure that the Android `android:targetSdkVersion` is set to `16`.
 
 [Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
 
-`OuyaSDK_Init` supports initialization strings to make the game compatible with OUYA Everywhere devices.
+`OuyaSDK_Init` supports initialization strings to make the game compatible with `OUYA` Everywhere devices.
 
 * `tv.ouya.developer_id` - The developer UUID can be found in the [developer portal](http://devs.ouya.tv) after logging in.
 
