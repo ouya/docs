@@ -30,7 +30,7 @@ protected void onResume() {
 ```
 
 
-To help make them more usable, we've exposed the ability for them to open up certain activities in the standard OUYA launcher:
+To help make them more usable, we've exposed the ability for them to open up certain activities in the standard `Cortex TV` launcher:
 
 # Pair Controllers
 
@@ -42,7 +42,7 @@ startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("ouya://launcher/manage/c
 
 # Manage
 
-Displays the OUYA Manage menu, allows users to change account/system settings.
+Displays the `Cortex TV` Manage menu, allows users to change account/system settings.
 
 ```
 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("ouya://launcher/manage")));
@@ -58,7 +58,7 @@ startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("ouya://launcher/manage/n
 
 # Discover
 
-Displays the OUYA Discover screen, allows users to browse/download new games.
+Displays the `Cortex TV` Discover screen, allows users to browse/download new games.
 
 ```
 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("ouya://launcher/discover")));
@@ -66,7 +66,7 @@ startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("ouya://launcher/discover
 
 # App Details
 
-Displays the OUYA Details screen for the given package.
+Displays the `Cortex TV` Details screen for the given package.
 
 ```
 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("ouya://launcher/details?app=com.example.app")));
