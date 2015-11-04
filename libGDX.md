@@ -1,6 +1,8 @@
-## libGDX
+## libGDX Engine
 
-### Downloads
+### Forums
+
+[Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
 ## Guide
 
@@ -17,7 +19,7 @@
 
 ### Examples
 
-Mario Zechner created a detailed post about running libGDX on OUYA - http://www.badlogicgames.com/wordpress/?p=2733
+Mario Zechner created a detailed post about running `libGDX` on `Cortex TV` - http://www.badlogicgames.com/wordpress/?p=2733
 
 ### Resources
 
@@ -25,7 +27,7 @@ libGDX - http://libgdx.badlogicgames.com/
 
 # Intro #
 
-`libGDX` uses `Java` and shares most of the [java documentation](java.md) for accessing the `OUYA SDK`.
+`libGDX` uses `Java` and shares most of the [java documentation](java.md) for accessing the `Cortex TV` SDK.
 
 # Button Data #
 
