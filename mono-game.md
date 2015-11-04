@@ -1,25 +1,26 @@
 ## MonoGame Engine
 
 ### Downloads
-Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/MonoGame
+
+[Example Source](https://github.com/ouya/ouya-sdk-examples/tree/master/MonoGame)
 
 ### Forums
 
-@OUYA - (MonoGame on OUYA Forums) - http://forums.ouya.tv/categories/monogame-on-ouya
+[Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
-@MonoGame - (MonoGame Forums) - http://community.monogame.net/category/ouya
+[MonoGame on OUYA Forums](http://forums.ouya.tv/categories/monogame-on-ouya)
 
-@MonoGame - (Archived MonoGame Forums) - http://monogame.codeplex.com/discussions/topics/5559/ouya
+[MonoGame Forums](http://community.monogame.net/category/ouya)
 
-@Xamarin - (Xamarin Forums) - http://forums.xamarin.com
+[Xamarin Forums](http://forums.xamarin.com)
 
 ### Developer Support Hangouts
 
 2013:
 
-OUYA Hangout July 15th (1:00:00)<br/>
+Razer Hangout July 15th (1:00:00)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=zWYVYmk6luc" target="_blank">
-<img src="http://img.youtube.com/vi/zWYVYmk6luc/0.jpg" alt="OUYA Hangout July 15th," width="240" height="180" border="10" /></a>
+<img src="http://img.youtube.com/vi/zWYVYmk6luc/0.jpg" alt="Razer Hangout July 15th," width="240" height="180" border="10" /></a>
 
 ## Guide
 
@@ -120,8 +121,8 @@ Binding JARs - http://docs.xamarin.com/guides/android/advanced_topics/java_integ
 
 # Forge TV
 
-In order to use `MonoGame` 4.4, the API level has to be set to `17`.
-`MonoGame` 4.4 adds proper pause/resume support which allows textures and other content to reload when the game is reopened from the launcher.
+In order to use `MonoGame` 3.4, the API level has to be set to `17`.
+`MonoGame` 3.4 adds proper pause/resume support which allows textures and other content to reload when the game is reopened from the launcher.
 
 1) In Visual Studio, right-click the `MonoGame` project and select properties.
 
@@ -133,7 +134,7 @@ In order to use `MonoGame` 4.4, the API level has to be set to `17`.
 
 # OUYA Console
 
-Since OUYA uses API level `16`, you'll have to use a `MonoGame` version prior to `4.4`.
+Since OUYA uses API level `16`, you'll have to use a `MonoGame` version prior to `3.4`.
 
 ## Examples
 
@@ -169,7 +170,7 @@ After checking input, be sure to invoke `ClearButtonStates` at the end of the dr
 
 ### Axises
 
-`MonoGame` uses the same `axis` constants that are used in the `Java` OUYA SDK.
+`MonoGame` uses the same `axis` constants that are used in the `Java` `Cortex TV` SDK.
 
 ```
 OuyaController.AXIS_LS_X
@@ -182,7 +183,7 @@ OuyaController.AXIS_R2
 
 ### Buttons
 
-`MonoGame` uses the same `button` constants that are used in the `Java` OUYA SDK.
+`MonoGame` uses the same `button` constants that are used in the `Java` `Cortex TV` SDK.
 
 ```
 OuyaController.BUTTON_O
