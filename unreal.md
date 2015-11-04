@@ -31,13 +31,13 @@
 
 * After linking your Github account, you should have access to the `Cortex TV` Branches
 
-* [4.9-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.9-OUYA) for the OUYA Fork of UE4
+* [4.9-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.9-OUYA) for the `Cortex TV` Fork of UE4
 
-* [4.8-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.8-OUYA) for the OUYA Fork of UE4
+* [4.8-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.8-OUYA) for the `Cortex TV` Fork of UE4
 
-* [4.7-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.7-OUYA) for the OUYA Fork of UE4
+* [4.7-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.7-OUYA) for the `Cortex TV` Fork of UE4
 
-* [4.6-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) for the OUYA Fork of UE4
+* [4.6-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) for the `Cortex TV` Fork of UE4
 
 * Quick Link: [Building the Cortex TV Fork of UE4](#build-ue4)
 
