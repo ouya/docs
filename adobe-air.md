@@ -1,11 +1,14 @@
 ## Adobe Air Engine
 
 ### Downloads
-Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir
+
+[Example Source](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir)
 
 ### Forums
 
-@OUYA - (Adobe Air on OUYA Forums) - http://forums.ouya.tv/categories/adobe-air-on-ouya<br/>
+[Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
+
+[Adobe Air on OUYA Forums](http://forums.ouya.tv/categories/adobe-air-on-ouya)
 
 ## Guide
 

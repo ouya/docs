@@ -107,3 +107,7 @@ The [Razer Developer Portal](http://developer.razerzone.com/forge-tv/developer-s
 ## Pairing Serval
 
 * With `Settings->Add accessory` open, hold `HOME`, `BACK`, and `POWER` buttons `pressed` down to put the `Serval` in pairing mode.
+
+## Forums
+
+[Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
