@@ -1,12 +1,16 @@
 # Java Engine
 
+### Forums
+
+[Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
+
 # Audience #
 
 This document is for developers that uses Java to make apps for Android. The docs target developers using Android Studio, Eclipse, or IntelliJ.
 
 ## Releases
 
-Java apps/games use the `ouya-sdk.jar` library included in the `ODK` downloadable from the [OUYA developer portal](http://devs.ouya.tv).
+Java apps/games use the `ouya-sdk.jar` library included in the `ODK` downloadable from the [Cortex TV developer portal](http://devs.ouya.tv).
 
 ## Xiaomi Libraries
 
@@ -39,8 +43,8 @@ Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in
 	// Your developer id can be found in the Developer Portal
 	public static final String DEVELOPER_ID = "00000000-0000-0000-0000-000000000000";
 
-	// Both of these values will be emailed to you by the OUYA team after you've been 
-	// selected by the OUYA team
+	// Both of these values will be emailed to you by the Cortex TV team after you've been 
+	// selected by the Cortex TV team
 	public static final String XIAOMI_APP_ID = "0000000000000";
 	public static final String XIAOMI_APP_KEY = "000000000000000000";
 
