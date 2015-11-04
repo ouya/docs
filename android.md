@@ -1,7 +1,12 @@
 ## Android Java and Native Applications
 
 ### Downloads
-Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Android
+
+[Example Source](https://github.com/ouya/ouya-sdk-examples/tree/master/Android)
+
+### Forums
+
+[Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
 ## Guide
 
@@ -119,7 +124,7 @@ JAR Directories: libs
 and
 
 ```
-JAR Dependencies: gson-2.2.2.jar;ouya-sdk.jar
+JAR Dependencies: ouya-sdk.jar
 ```
 
 ### Environment Variables:
