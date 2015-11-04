@@ -1,21 +1,23 @@
 ## Corona Engine
 
 ### Downloads
-Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Corona
+
+[Example Source](https://github.com/ouya/ouya-sdk-examples/tree/master/Corona)
 
 ### Forums
 
-@OUYA - (Corona on OUYA Forums) - http://forums.ouya.tv/categories/corona-on-ouya<br/>
-@Corona - (Corona Forums) - http://forums.coronalabs.com/forum/627-ouya/<br/>
+[Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
+[Corona on OUYA Forums](http://forums.ouya.tv/categories/corona-on-ouya)
+[Corona on CoronaLabs Forums](http://forums.coronalabs.com/forum/627-ouya/)
 
 ### Developer Support Hangouts
 
 2013:
 
 <table border=1>
-<tr><td>OUYA Hangout July 15th (1:00:00)<br/>
+<tr><td>Razer Hangout July 15th (1:00:00)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=zWYVYmk6luc" target="_blank">
-<img src="http://img.youtube.com/vi/zWYVYmk6luc/0.jpg" alt="OUYA Hangout July 15th," width="240" height="180" border="10" /></a></td> 
+<img src="http://img.youtube.com/vi/zWYVYmk6luc/0.jpg" alt="Razer Hangout July 15th," width="240" height="180" border="10" /></a></td> 
 <td></td></tr></table>
 
 ## Guide
@@ -56,7 +58,7 @@ Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Corona
 
 Examples are included at the base GIT path.
 
-<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/VirtualController"><b>Virtual Controller</b></a> - Maps OUYA controllers to multiple virtual controllers
+<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/VirtualController"><b>Virtual Controller</b></a> - Maps `Cortex TV` controllers to multiple virtual controllers
 
 ####Corona Enterprise Examples
 
@@ -64,7 +66,7 @@ Examples are included at the base GIT path.
 
 ####Corona Pro Examples
 
-<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/Submission/ouya/docs/ouya/index.markdown"><b>InAppPurchasesPlugin</b></a> - Uses ouya plugin for in-app-purchases for Mac and Windows (required Corona PRO)
+<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/Submission/ouya/docs/ouya/index.markdown"><b>InAppPurchasesPlugin</b></a> - Uses `Cortex TV` plugin for in-app-purchases for Mac and Windows (required Corona PRO)
 
 ### Resources
 
@@ -113,20 +115,20 @@ Outlaw IDE - http://outlawgametools.com/outlaw-code-editor-and-project-manager/
 #Full Document
 
 ### Audience
-The ouya-sdk-examples are targeted towards Corona Enterprise users intending to publish to the OUYA platform.
+The ouya-sdk-examples are targeted towards Corona Enterprise users intending to publish to the `Cortex TV` platform.
 
 ### Supported Platforms
 Building Corona Enterpise examples that use Android java requires the Mac platform.
 Samples that use the [OUYA Plugin for Corona](https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/Submission/ouya/docs/ouya/index.markdown) will build on Mac or Windows.
 
 ### Introduction
-Welcome to the Corona Enterprise development club. These examples provide a quick way to add OUYA controller and in-app-purchase support to your game.
+Welcome to the Corona Enterprise development club. These examples provide a quick way to add `Cortex TV` controllers and in-app-purchase support to your game.
 
 ### Corona Simulator
 
 The following examples apply to the Corona Simulator version.
 
-Build for Android/OUYA with Command+Shift+B which will produce an APK that you can install with adb commands.
+Build for `Android` with Command+Shift+B which will produce an APK that you can install with adb commands.
 
 ```
 adb install -r /path/to/Example.apk
@@ -138,7 +140,7 @@ Corona scripts are Lua scripts.
 
 The Corona Simulator doesn't have direct access to the Android.manifest, where build.settings gives you access to modify settings indirectly.
 
-Add the intent filter so that your game appears in the OUYA Play Category.
+Add the intent filter so that your game appears in the `Cortex TV` Play Category.
 
 ```
 settings =
@@ -354,7 +356,7 @@ android update project --path .
 
 #### libs/ouya-sdk.jar
 
-The OUYA ODK library used by Corona.
+The `Cortex TV` ODK library used by Corona.
 
 #### src/.../CoronaApplication.java
 
@@ -503,7 +505,7 @@ end
 
 [Back to general info](enable_xiaomi_support.md#create-a-xiaomi-specific-icon)
 
-The `Corona` [documentation](http://docs.coronalabs.com/daily/guide/distribution/buildSettings/index.html#ouya) has info about how to include `OUYA` and `Xiaomi` store icons. 
+The `Corona` [documentation](http://docs.coronalabs.com/daily/guide/distribution/buildSettings/index.html#ouya) has info about how to include `Cortex TV` and `Xiaomi` store icons. 
 
 * The `Icon-ouya.png` should be 732x412 and placed into your Corona project fodler.
 
@@ -511,11 +513,11 @@ The `Corona` [documentation](http://docs.coronalabs.com/daily/guide/distribution
 
 # API
 
-In order to use the `OUYA` plugin be sure to include the [plugin_ouya.lua](https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/Submission/ouya/samples/InAppPurchasesPlugin/Corona/plugin_ouya.lua) script in your `Corona` project folder.
+In order to use the `Cortex TV` plugin be sure to include the [plugin_ouya.lua](https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/Submission/ouya/samples/InAppPurchasesPlugin/Corona/plugin_ouya.lua) script in your `Corona` project folder.
 
 ## Is Available
 
-When a `Corona` game starts be sure to check that the `OUYA` plugin is available before loading the game. Games that do not check `IsAvailable` may flicker or appear to load twice.
+When a `Corona` game starts be sure to check that the `Cortex TV` plugin is available before loading the game. Games that do not check `IsAvailable` may flicker or appear to load twice.
 
 ```
 local ouya = require("plugin.ouya") -- load the ouya plugin
