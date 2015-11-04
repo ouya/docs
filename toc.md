@@ -16,7 +16,7 @@
 **Guidelines**
 * [User Interface](interface-guidelines.md)
 * [Content & Review](content-review-guidelines.md)
-* [Stand Out on OUYA](stand_out_on_ouya.md)
+* [Stand Out on Cortex TV](stand_out_on_ouya.md)
 * [Enable On Xiaomi](enable_xiaomi_support.md)
 
 **Game Engines**
