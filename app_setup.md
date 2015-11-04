@@ -2,7 +2,7 @@
 
 ## Requirements
 
-For your Android application to be compatible with the OUYA, it must target platform **16** (Android 4.1.2) or later.
+For your Android application to be compatible with the `Forge TV`, it must target platform **16** (Android 4.1.2) or later.
 
 **Example:**
 
@@ -12,12 +12,12 @@ For your Android application to be compatible with the OUYA, it must target plat
 
 ## Step 1: Add OUYA SDK jar to build path
 
-To access OUYA-specific functions, you'll need to [download the ODK](https://devs.ouya.tv/developers/odk) and add `ouya-sdk.jar` to the build-path of your app.  
+To access `Cortex TV` specific functions, you'll need to [download the ODK](https://devs.ouya.tv/developers/odk) and add `ouya-sdk.jar` to the build-path of your app.  
 This jar can be found in the `libs/` folder of the ODK.
 
 ### Gradle
 
-If you're using gradle, you can compile against our latest SDK using the following in your `build.gradle`:
+If you're using `gradle`, you can compile against our latest SDK using the following in your `build.gradle`:
 
 ```Gradle
 repositories {
@@ -32,7 +32,7 @@ dependencies {
 
 ## Step 2: Add intent-filter
 
-For your OUYA app to show up in the **PLAY** section, it must have an activity that contains a filter for either `tv.ouya.intent.category.GAME` or `tv.ouya.intent.category.APP`.
+For your `Cortex TV` app to show up in the **PLAY** section, it must have an activity that contains a filter for either `tv.ouya.intent.category.GAME` or `tv.ouya.intent.category.APP`.
 
 **Example:**
 
@@ -48,7 +48,7 @@ For your OUYA app to show up in the **PLAY** section, it must have an activity t
 
 ## Step 3: Add an icon
 
-All OUYA apps have an icon which is displayed in various places on the system. The icon is expected to be located in `res/drawable-xhdpi/ouya_icon.png` with the dimensions 732px x 412px
+All `Cortex TV` apps have an icon which is displayed in various places on the system. The icon is expected to be located in `res/drawable-xhdpi/ouya_icon.png` with the dimensions 732px x 412px
 
 ## Step 4: Create and secure your keystore
 
