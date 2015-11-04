@@ -1,21 +1,24 @@
 ## Marmalade
 
 ### Downloads
-Open source, clone https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade
+
+[Example Source](https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade)
 
 ### Forums
 
-@OUYA - (Marmalade on OUYA Forums) - http://forums.ouya.tv/categories/marmalade-on-ouya<br/>
+[Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
-@Marmalade - (Forums) - https://developer.madewithmarmalade.com/develop/announce-and-discuss
+[Marmalade on OUYA Forums](http://forums.ouya.tv/categories/marmalade-on-ouya)
+
+[Marmalade on MadeWithMarmalade](https://developer.madewithmarmalade.com/develop/announce-and-discuss)
 
 # Getting Started #
 
 <table border=1>
  <tr>
- <td>OUYA Marmalade Controller and IAP Support (8:09)<br/>
+ <td>Razer Marmalade Controller and IAP Support (8:09)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=HvU-eoLyLYg" target="_blank">
-<img src="http://img.youtube.com/vi/HvU-eoLyLYg/0.jpg" alt="OUYA Marmalade Controller and IAP Support" width="240" height="180" border="10" /></a>
+<img src="http://img.youtube.com/vi/HvU-eoLyLYg/0.jpg" alt="Razer Marmalade Controller and IAP Support" width="240" height="180" border="10" /></a>
  </td>
  <td></td>
  </tr>
@@ -138,7 +141,7 @@ Before calling the Marmalade ODK extension, an application should check if the e
 	}
 ```
 
-If the Marmalade ODK extension is available, [initialize](#ouyaplugin_initouyaplugin) it with the developer id found in the [OUYA developer portal](http://devs.ouya.tv).
+If the Marmalade ODK extension is available, [initialize](#ouyaplugin_initouyaplugin) it with the developer id found in the [Cortex TV developer portal](http://devs.ouya.tv).
 
 c++
 ```
@@ -161,7 +164,7 @@ void Application::InitOuyaPlugin()
 
 [Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
 
-`OuyaPlugin_initOuyaPlugin` supports additional strings to make the game compatible with OUYA Everywhere devices.
+`OuyaPlugin_initOuyaPlugin` supports additional strings to make the game compatible with `Cortex TV` Everywhere devices.
 
 * `tv.ouya.developer_id` - The developer UUID can be found in the [developer portal](http://devs.ouya.tv) after logging in.
 
@@ -561,7 +564,7 @@ void ApplicationCallbacksRequestReceipts::OnCancel()
 
 ### Examples
 
-<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/MarmaladeODK"><b>Marmalade ODK Extension</b></a> - OUYA Controller and In-App-Purchase extension for Marmalade
+<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/MarmaladeODK"><b>Marmalade ODK Extension</b></a> - `Cortex TV` Controller and In-App-Purchase extension for Marmalade
 
 ### Virtual Controller ###
 
@@ -571,7 +574,7 @@ The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/M
 
 ### In-App-Purchases ###
 
-The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/InAppPurchases) example uses the ODK to access gamer info, purchasing, and receipts.
+The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/InAppPurchases) example uses the `Cortex TV` ODK to access gamer info, purchasing, and receipts.
 
 ![In-App-Purchases](https://raw.githubusercontent.com/ouya/docs/master/marmalade/image_2.png)
 
@@ -599,7 +602,7 @@ Hit 'Deploy All' to build the Android package.
 
 The deploy tool will generate an Android package.
 
-If you want to manually deploy the Android package with adb commands you'll be able to install on the OUYA.
+If you want to manually deploy the Android package with `ADB` commands you'll be able to install on the `Forge TV`.
 
 ```
 adb install -r the.apk
@@ -613,7 +616,7 @@ app.icf - Override the default memory limits
 
 Application.h/cpp - Holds an instance of the UI, meant to hold application variables
 
-ApplicationCallbacksInitOuyaPlugin.h/cpp - Handles callbacks for success or failure events when initializing the OUYA plugin
+ApplicationCallbacksInitOuyaPlugin.h/cpp - Handles callbacks for success or failure events when initializing the `Cortex TV` plugin
 
 ApplicationCallbacksRequestGamerInfo.h/cpp - Handles callbacks coming from extension to the application with the result of RequestGamerInfo
 
