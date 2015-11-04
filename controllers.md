@@ -1,14 +1,17 @@
 # Controllers
 
-One of the huge advantages of the OUYA console is that gamers get to use a *real* controller!  The OUYA controller has:
-- four digital buttons (O, U, Y, and A)
+One of the huge advantages of the `Forge TV` console is that gamers get a standard `Android TV` controller!  The `Serval` controller has:
+- four digital buttons (A, B, X, and Y)
 - a four direction digital pad (D-Pad)
 - two analog joysticks (LS, RS)
 - two digital bumper buttons (L1, R1)
 - two analog triggers (L2, R2) 
 - two digital buttons that activate when the joysticks are pushed straight down (L3, R3)
-- a touchpad, configured to behave as a mouse input (Touchpad)
-- a menu button (see the [Menu Button section](#user-content-the-menu-button))
+- a previous/select button (SELECT)
+- a power button (MODE)
+- a next/start button (START)
+- a back button (BACK)
+- a home button (HOME)
 
 Since controller interfaces are so crucial, we've done some work to make your life easier.
 
@@ -17,10 +20,10 @@ Since controller interfaces are so crucial, we've done some work to make your li
 The **OuyaController** class contains OUYA-specific constants for buttons and axes. A small selection are shown below.
 
 ```java
-public static final int BUTTON_O;
-public static final int BUTTON_U;
-public static final int BUTTON_Y;
-public static final int BUTTON_A;
+public static final int BUTTON_O; //A on the Serval
+public static final int BUTTON_U; //X on the Serval
+public static final int BUTTON_Y; //Y on the Serval
+public static final int BUTTON_A; //B on the Serval
 ```
 ## Input using OuyaController
 
@@ -132,95 +135,10 @@ public boolean onGenericMotionEvent(final MotionEvent event) {
     return true;
 }
 ```
-## The Menu Button
+## The Legacy Menu Button
 
-The menu button on the controller serves two functions:  
- - If the button is pressed once, it emulates a keypress of `OuyaController.BUTTON_MENU`.  
- - If pressed twice or long pressed, it opens the OUYA system menu.
+The legacy `OUYA` controller has a `OuyaController.BUTTON_MENU` where this button might not be available on `ALL` controllers. If you want to maximize your game's controller compatibility, it's recommended that you avoid mapping this button with gameplay.
 
-**NOTE:** Because the menu button press is emulated, the up and down events happen at once. This means you won't be able to detect it being pressed using the passive anytime state querying. It's much more reliable to detect the menu press in your onKeyUp/Down code.
-## Joystick and Touchpad Motion events
-
-Both the analog joystick and the touchpad states are read using **onGenericMotionEvent**.  To distinguish between them you can query the input source:
-
-* Joystick == InputDevice.SOURCE_CLASS_JOYSTICK
-* Touchpad == InputDevice.SOURCE_CLASS_POINTER
-
-Example:
-
-```java
-@Override
-public boolean onGenericMotionEvent(final MotionEvent event) {
-    //Get the player #
-    int player = OuyaController.getPlayerNumByDeviceId(event.getDeviceId());    
-    
-    //Joystick
-    if((event.getSource() & InputDevice.SOURCE_CLASS_JOYSTICK) != 0) {
-        float LS_X = event.getAxisValue(OuyaController.AXIS_LS_X);            
-        //do other things with joystick
-    }
-            
-    //Touchpad
-    if((event.getSource() & InputDevice.SOURCE_CLASS_POINTER) != 0) {
-        //Print the pixel coordinates of the cursor
-        Log.i("Touchpad", "Cursor X: " + event.getX() + "Cursor Y: " + event.getY());
-    }
-    
-    return true;
-}
-```
-## The Left Joystick
-
-If you do not consume motion events from the left joystick, the system will send your app dpad KeyEvents.
-
-If you don't want your app to get these key events, return true from `onGenericMotionEvent`. Otherwise, you can differentiate these dpad events using the source field as such:
-```java
-public boolean onKeyDown(int keyCode, KeyEvent event) {
-    if(keycode >= KeyEvent.KEYCODE_DPAD_UP && keycode <= KeyEvent.KEYCODE_DPAD_RIGHT) {
-        if((event.getSource() & InputDevice.SOURCE_DPAD) != 0) {
-            //Event is from actual dpad
-        }
-        if((event.getSource() & InputDevice.SOURCE_JOYSTICK) != 0) {
-            //Event is from joystick
-        }
-    } else {
-        //keyCode is not a dpad keycode
-    }
-    ...
-}
-```
-
-One caveat to keep in mind when using the joystick as a dpad is that the triggering value for the dpad event is `0.5`, which causes diagonals and directionals to be inequal in size.
-If your games requires 8 equally spaced directions, you will have to do your own math from the axes' values.
-## Analog vs Digital Trigger Data
-
-We have deprecated the use of digital (key event) data to determine the state of the trigger buttons (L2 and R2). We now recommend using the analog axis data for more flexible use of the triggers.
-
-To mimic the digital state using the analog data is fairly simple:
-```java
-public boolean isL2Down(OuyaController c) {
-    return (c.getAxisValue(OuyaController.AXIS_L2) > 0.5f); //0.5 can be any threshold between 0.0 (completely released) - 1.0 (completely pressed)
-}
-```
-Just make sure that you have your **onGenericMotionEvent** function sending its events to the OuyaController class, as described at the top of this document.
-## Touchpad cursor
-
-Find the touchpad cursor gets in the way?  Cursor visibility can be controlled by your app!
-```java
-OuyaController.showCursor(false); // hide the mouse cursor
-OuyaController.showCursor(true);  // show the mouse cursor
-```
-
-Want a different touchpad cursor?  The cursor image can be controlled by your app!
-Pass in the custom bitmap to use, along with the co-ordinates of the hotspot.  The hotspot values must be between 0 and the size of the bitmap.
-To restore the cursor to the system default, pass in null as the bitmap.
-```java
-// set to a custom icon
-Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.custom_cursor);
-OuyaController.setCursorBitmap(bitmap, 1, 1);
-
-OuyaController.setCursorBitmap(null, 0, 0); // reset to the default cursor icon
-```
 ## Controller Images
 
-Games commonly need images to show controller graphics for pairing screens or showing controller schemes.  Individual button images/names can be queried at runtime to provide maximal support for different devices (see the [OUYA Everywhere](ouya-everywhere.md) documention for more info).
+Games commonly need images to show controller graphics for pairing screens or showing controller schemes. Individual button images/names can be queried at runtime to provide maximal support for different devices (see the [OUYA Everywhere](ouya-everywhere.md) documention for more info).
