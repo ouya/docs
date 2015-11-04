@@ -8,27 +8,27 @@ This document will help you put your `OUYA Game` on `Razer Cortex TV` (the store
 
 ## Table of Contents
 
-[Audience](forge_tv.md#audience)
+[Audience](forge_tv.md#user-content-audience)
 
-[Specifications](forge_tv.md#specifications)
+[Specifications](forge_tv.md#user-content-specifications)
 
-[Notes](forge_tv.md#notes)
+[Notes](forge_tv.md#user-content-notes)
 
-[Engines That Support C TV](forge_tv.md#engines-that-support-forge-tv)
+[Engines That Support C TV](forge_tv.md#user-content-engines-that-support-forge-tv)
 
-[Step 1. Upgrade the OUYA-Everywhere Plugin](forge_tv.md#step-1-upgrade-the-ouya-everywhere-plugin)
+[Step 1. Upgrade the OUYA-Everywhere Plugin](forge_tv.md#user-content-step-1-upgrade-the-ouya-everywhere-plugin)
 
-[Step 2. Fix Button Images](forge_tv.md#step-2-fix-button-images)
+[Step 2. Fix Button Images](forge_tv.md#user-content-step-2-fix-button-images)
 
-[Step 3. Menu Button Handling](forge_tv.md#step-3-menu-button-handling)
+[Step 3. Menu Button Handling](forge_tv.md#user-content-step-3-menu-button-handling)
 
-[Step 4. Signing](forge_tv.md#step-4-signing)
+[Step 4. Signing](forge_tv.md#user-content-step-4-signing)
 
-[Controller Image](forge_tv.md#controller-image)
+[Controller Image](forge_tv.md#user-content-controller-image)
 
-[ADB Debugging](forge_tv.md#adb-debugging)
+[ADB Debugging](forge_tv.md#user-content-adb-debugging)
 
-[Pairing Serval](forge_tv.md#pairing-serval)
+[Pairing Serval](forge_tv.md#user-content-pairing-serval)
 
 ## Audience
 
@@ -67,10 +67,10 @@ The latest [`OUYA-Everywhere`](ouya-everywhere.md) adds support for many control
 * [GameMaker](game-maker.md)
 * [Java](java.md)
 * [Marmalade](marmalade.md)
-* [MonoGame](mono-game.md#forge-tv)
+* [MonoGame](mono-game.md#user-content-forge-tv)
 * [Unity](unity.md)
 	* *InControl -- If you use InControl for Unity3D, be sure to update your InControl library. For more information, read the [InControl documentation on their website.](http://www.gallantgames.com/pages/incontrol-ouya)
-* [Unreal](unreal.md#forge-tv)
+* [Unreal](unreal.md#user-content-forge-tv)
 
 ## Step 1. Upgrade the OUYA-Everywhere Plugin
 
@@ -80,7 +80,7 @@ Locate the appropriate engine documentation from the above list in order to the 
 
 ## Step 2. Fix Button Images
 
-[Button images](https://github.com/ouya/docs/blob/master/ouya-everywhere.md#controller-images) vary on each device. Games can use [`OUYA-Everywhere`](ouya-everywhere.md) to get the correct button images at run-time. The submission review process checks to see that the correct button images are used.
+[Button images](https://github.com/ouya/docs/blob/master/ouya-everywhere.md#user-content-controller-images) vary on each device. Games can use [`OUYA-Everywhere`](ouya-everywhere.md) to get the correct button images at run-time. The submission review process checks to see that the correct button images are used.
 
 Developers can also design custom button images, as long as  images reflect `Forge TV` A,B,X,Y formatting (see below).
 
@@ -92,7 +92,7 @@ Some games use the OUYA `BUTTON_MENU` to start or pause games. On `Forge TV` the
 
 ## Step 4. Signing
 
-Before submitting your game to the [developer portal](http://devs.ouya.tv), be sure to sign your `APK` with the [keystore](content-review-guidelines.md#keystore).
+Before submitting your game to the [developer portal](http://devs.ouya.tv), be sure to sign your `APK` with the [keystore](content-review-guidelines.md#user-content-keystore).
 
 ## Controller Image
 

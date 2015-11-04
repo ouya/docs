@@ -400,7 +400,7 @@ If the initialization fails, the onFailure callback will be invoked.
 
 ## Xiaomi Initialization
 
-[Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
+[Back to general info](enable_xiaomi_support.md#user-content-xiaomi-initialization)
 
 `initOuyaPlugin` supports additional strings to make the game compatible with OUYA Everywhere devices.
 
@@ -616,7 +616,7 @@ The onCancel callback indicates the request was cancelled.
 
 ##### SetSafeArea #####
 
-The safe area is explained in detail in the [content-review-guidelines](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#safe-zone).
+The safe area is explained in detail in the [content-review-guidelines](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#user-content-safe-zone).
 
 The safe area for HTML5 apps can be adjusted with setSafeArea.
 
@@ -654,7 +654,7 @@ The onFailure callback indicates the request to set the safe area failed.
 
 ##### GetDeviceHardware #####
 
-Device identification is part of [OUYA-Everywhere](ouya-everywhere.md#device-identification). HTML5 apps can use device specific game logic and media using the name from getDeviceHardware. 
+Device identification is part of [OUYA-Everywhere](ouya-everywhere.md#user-content-device-identification). HTML5 apps can use device specific game logic and media using the name from getDeviceHardware. 
 
 The onSuccess callback receives the name of the device hardware.
 

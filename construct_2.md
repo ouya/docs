@@ -71,7 +71,7 @@ Publishing to `Cortex TV` requires that you package the generated `HTML5` from `
 
 ![destination folder](construct_2/image_44.png)
 
-6) Before the `Cordova` scripting can be run, be sure to install the [`Cordova` Command-Line Interface](cordova.md#cordova-command-line-interface).
+6) Before the `Cordova` scripting can be run, be sure to install the [`Cordova` Command-Line Interface](cordova.md#user-content-cordova-command-line-interface).
 
 7) Run the `package.cmd` script in the root of the project which runs `cordova run android`.
 
@@ -164,7 +164,7 @@ The `onFailure` event provides error code and error message fields.
 
 ## Xiaomi Initialization
 
-[Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
+[Back to general info](enable_xiaomi_support.md#user-content-xiaomi-initialization)
 
 `addInitOuyaPluginValues` supports additional strings to make the game compatible with OUYA Everywhere devices.
 

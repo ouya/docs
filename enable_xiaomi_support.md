@@ -12,8 +12,8 @@ Download latest ODK ([ODK-1.3.1503](https://s3.amazonaws.com/ouya-sdks/xiaomi/od
 
 Engine specific details:
 
-* [Java](java.md#releases)
-* [Unity](unity.md#releases)
+* [Java](java.md#user-content-releases)
+* [Unity](unity.md#user-content-releases)
 
 ## Review the OUYA Everywhere Documentation ##
 
@@ -22,15 +22,15 @@ The next initialization steps may integrate differently for your particular engi
 
 Engine specific details:
 
-* [OUYA Everywhere on Construct 2](construct_2.md#ouya-everywhere)
-* [OUYA Everywhere on Corona](corona.md#ouya-everywhere)
-* [OUYA Everywhere on GameMaker](game-maker.md#ouya-everywhere)
-* [OUYA Everywhere on HTML5](html5.md#ouya-everywhere)
-* [OUYA Everywhere on Java](java.md#ouya-everywhere)
-* [OUYA Everywhere on Marmalade](marmalade.md#ouya-everywhere)
-* [OUYA Everywhere on MonoGame](mono-game.md#ouya-everywhere)
-* [OUYA Everywhere on Unity](unity.md#ouya-everywhere)
-* [OUYA Everywhere on Unreal](unreal.md#ouya-everywhere)
+* [OUYA Everywhere on Construct 2](construct_2.md#user-content-ouya-everywhere)
+* [OUYA Everywhere on Corona](corona.md#user-content-ouya-everywhere)
+* [OUYA Everywhere on GameMaker](game-maker.md#user-content-ouya-everywhere)
+* [OUYA Everywhere on HTML5](html5.md#user-content-ouya-everywhere)
+* [OUYA Everywhere on Java](java.md#user-content-ouya-everywhere)
+* [OUYA Everywhere on Marmalade](marmalade.md#user-content-ouya-everywhere)
+* [OUYA Everywhere on MonoGame](mono-game.md#user-content-ouya-everywhere)
+* [OUYA Everywhere on Unity](unity.md#user-content-ouya-everywhere)
+* [OUYA Everywhere on Unreal](unreal.md#user-content-ouya-everywhere)
 
 ## Xiaomi Libraries
 
@@ -40,10 +40,10 @@ Engine specific details:
 
 Engine specific details:
 
-* [GameMaker](game-maker.md#xiaomi-libraries)
-* [Java](java.md#xiaomi-libraries)
-* [MonoGame](mono-game.md#xiaomi-libraries)
-* [Unity](unity.md#xiaomi-libraries)
+* [GameMaker](game-maker.md#user-content-xiaomi-libraries)
+* [Java](java.md#user-content-xiaomi-libraries)
+* [MonoGame](mono-game.md#user-content-xiaomi-libraries)
+* [Unity](unity.md#user-content-xiaomi-libraries)
 
 ## Xiaomi required permissions
 
@@ -56,10 +56,10 @@ Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in
 
 Engine specific details:
 
-* [GameMaker](game-maker.md#xiaomi-required-permissions)
-* [Java](java.md#xiaomi-required-permissions)
-* [MonoGame](mono-game.md#xiaomi-required-permissions)
-* [Unity](unity.md#xiaomi-required-permissions)
+* [GameMaker](game-maker.md#user-content-xiaomi-required-permissions)
+* [Java](java.md#user-content-xiaomi-required-permissions)
+* [MonoGame](mono-game.md#user-content-xiaomi-required-permissions)
+* [Unity](unity.md#user-content-xiaomi-required-permissions)
 
 ## Receipt Checking ##
 
@@ -86,15 +86,15 @@ The following initialization strings must be set.
 
 Engine specific details:
 
-* [Construct 2](construct_2.md#xiaomi-initialization)
-* [Corona](corona.md#xiaomi-initialization)
-* [GameMaker](game-maker.md#xiaomi-initialization)
-* [HTML5](html5.md#xiaomi-initialization)
-* [Marmalade](marmalade.md#xiaomi-initialization)
-* [MonoGame](mono-game.md#xiaomi-initialization)
-* [Java](java.md#xiaomi-initialization)
-* [Unreal](unreal.md#xiaomi-initialization)
-* [Unity](unity.md#xiaomi-initialization)
+* [Construct 2](construct_2.md#user-content-xiaomi-initialization)
+* [Corona](corona.md#user-content-xiaomi-initialization)
+* [GameMaker](game-maker.md#user-content-xiaomi-initialization)
+* [HTML5](html5.md#user-content-xiaomi-initialization)
+* [Marmalade](marmalade.md#user-content-xiaomi-initialization)
+* [MonoGame](mono-game.md#user-content-xiaomi-initialization)
+* [Java](java.md#user-content-xiaomi-initialization)
+* [Unreal](unreal.md#user-content-xiaomi-initialization)
+* [Unity](unity.md#user-content-xiaomi-initialization)
 
 ## Is Running on OUYA Hardware
 
@@ -106,12 +106,12 @@ Be sure to check that `OuyaFacade.isInitialized()` returns `true` before checkin
 
 Engine specific details:
 
-* [Corona](corona.md#disable-xiaomi-screensaver)
-* [GameMaker](game-maker.md#disable-xiaomi-screensaver)
-* [Java](java.md#disable-xiaomi-screensaver)
-* [Marmalade](marmalade.md#disable-xiaomi-screensaver)
-* [MonoGame](mono-game.md#disable-xiaomi-screensaver)
-* [Unity](unity.md#disable-xiaomi-screensaver)
+* [Corona](corona.md#user-content-disable-xiaomi-screensaver)
+* [GameMaker](game-maker.md#user-content-disable-xiaomi-screensaver)
+* [Java](java.md#user-content-disable-xiaomi-screensaver)
+* [Marmalade](marmalade.md#user-content-disable-xiaomi-screensaver)
+* [MonoGame](mono-game.md#user-content-disable-xiaomi-screensaver)
+* [Unity](unity.md#user-content-disable-xiaomi-screensaver)
 
 ## Exit Button on Main Menu
 
@@ -138,9 +138,9 @@ The application icon on Xiaomi is a little unusual.  It will exist in the xhdpi 
 
 Engine specific details:
 
-* [Corona](corona.md#create-a-xiaomi-specific-icon)
-* [Java](java.md#create-a-xiaomi-specific-icon)
-* [Unity](unity.md#create-a-xiaomi-specific-icon)
+* [Corona](corona.md#user-content-create-a-xiaomi-specific-icon)
+* [Java](java.md#user-content-create-a-xiaomi-specific-icon)
+* [Unity](unity.md#user-content-create-a-xiaomi-specific-icon)
 
 ## Xiaomi requires a .psd image.
 
@@ -158,9 +158,9 @@ Engine specific details:
 
 Engine specific details:
 
-* [Java](java.md#localization-resources)
-* [MonoGame](mono-game.md#localization-resources)
-* [Unity](unity.md#localization-resources)
+* [Java](java.md#user-content-localization-resources)
+* [MonoGame](mono-game.md#user-content-localization-resources)
+* [Unity](unity.md#user-content-localization-resources)
 
 ## Fonts
 
@@ -172,7 +172,7 @@ Engine specific details:
 
 Engine specific details:
 
-* [Unity](unity.md#fonts)
+* [Unity](unity.md#user-content-fonts)
 
 ## Versioning
 

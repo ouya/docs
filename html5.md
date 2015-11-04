@@ -32,7 +32,7 @@
 
 ## Icons ##
 
-Icons are placed in the drawable resource folders, using the same locations specified in the [content review guidelines](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#icons).
+Icons are placed in the drawable resource folders, using the same locations specified in the [content review guidelines](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#user-content-icons).
 
 ## Chromium ##
 
@@ -90,7 +90,7 @@ Location: `ContentShell/res/values/strings.xml`
 
 ##### `icons` #####
 
-All apps will need to customize the icons which have the same dimensions as specified in the [content review guidelines](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#icons).
+All apps will need to customize the icons which have the same dimensions as specified in the [content review guidelines](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#user-content-icons).
 
 Location: `ContentShell/res/drawable/app_icon.png`
 
@@ -347,7 +347,7 @@ If the initialization fails, the onFailure callback will be invoked.
 
 ## Xiaomi Initialization
 
-[Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
+[Back to general info](enable_xiaomi_support.md#user-content-xiaomi-initialization)
 
 `initOuyaPlugin` supports additional strings to make the game compatible with OUYA Everywhere devices.
 
@@ -499,7 +499,7 @@ The onCancel callback indicates the request was cancelled.
 
 ##### SetSafeArea #####
 
-The safe area is explained in detail in the [content-review-guidelines](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#safe-zone).
+The safe area is explained in detail in the [content-review-guidelines](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#user-content-safe-zone).
 
 The safe area for HTML5 apps can be adjusted with setSafeArea.
 

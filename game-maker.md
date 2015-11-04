@@ -54,7 +54,7 @@
 
 ## OUYA Extension
 
-The `Ouya-GameMaker-Extension` is available in the [`releases section`](game-maker.md#releases).
+The `Ouya-GameMaker-Extension` is available in the [`releases section`](game-maker.md#user-content-user-content-releases).
 GameMaker extension methods only use `String` and `double` for parameters and return types.
 
 ### Signing key
@@ -352,7 +352,7 @@ The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Game
 
 ## Xiaomi Libraries
 
-[Back to general info](enable_xiaomi_support.md#xiaomi-libraries)
+[Back to general info](enable_xiaomi_support.md#user-content-xiaomi-libraries)
 
 Place the Xiaomi libraries in the following destinations:
 
@@ -362,7 +362,7 @@ Place the Xiaomi libraries in the following destinations:
 
 ## Xiaomi Required Permissions
 
-[Back to general info](enable_xiaomi_support.md#xiaomi-required-permissions)
+[Back to general info](enable_xiaomi_support.md#user-content-xiaomi-required-permissions)
 
 To edit the `AndroidManifest.xml` you'll need to open the folder using the `Help` menu and select `Open GameMaker in Explorer`. Navigate to `GameMaker-Studio-Dev\Android\runner\AndroidManifest.xml`.
 
@@ -384,7 +384,7 @@ Make sure that the Android `android:targetSdkVersion` is set to `16`.
 
 ## Xiaomi Initialization
 
-[Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
+[Back to general info](enable_xiaomi_support.md#user-content-xiaomi-initialization)
 
 `OuyaSDK_Init` supports initialization strings to make the game compatible with `OUYA` Everywhere devices.
 
@@ -420,6 +420,6 @@ ds_map_destroy(init_ouya_plugin_values);
 
 ## Disable Xiaomi Screensaver
 
-[Back to general info](enable_xiaomi_support.md#disable-xiaomi-screensaver)
+[Back to general info](enable_xiaomi_support.md#user-content-disable-xiaomi-screensaver)
 
 By using the `OuyaSDK Extension` the Xiaomi screensaver will be disabled automatically.

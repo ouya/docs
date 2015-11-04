@@ -553,7 +553,7 @@ View the entire [Razer Dev Office Hours Playlist](https://www.youtube.com/playli
  </tr>
 </table>
 
-* Documentation for [Generating a Key Store](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#key-store) and [More](app_setup.md#step-4-create-and-secure-your-keystore)
+* Documentation for [Generating a Key Store](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#user-content-keystore) and [More](app_setup.md#user-content-step-4-create-and-secure-your-keystore)
 
 * Read the [Unreal Documentation](unreal.md) - Check out the examples for Virtual Controller and In-App-Purchases for Unreal
 
@@ -582,7 +582,7 @@ View the entire [Razer Dev Office Hours Playlist](https://www.youtube.com/playli
 
 * Event: [Unreal Game Jam](https://forums.unrealengine.com/showthread.php?53417-DECEMBER-GAME-JAM-Theme-Announced-on-Dec-11th-Twitch-Stream!) on December 11th, 2014 - December 14th, 2014
 
-* Documentation for [Generating a Key Store](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#key-store) and [More](app_setup.md#step-4-create-and-secure-your-keystore)
+* Documentation for [Generating a Key Store](https://github.com/ouya/docs/blob/master/content-review-guidelines.md#user-content-keystore) and [More](app_setup.md#user-content-step-4-create-and-secure-your-keystore)
 
 * Read the [Unreal Documentation](unreal.md) - Check out the examples for Virtual Controller and In-App-Purchases for Unreal
 

@@ -2,7 +2,7 @@
 
 Games can use the `Cortex TV` controller buttons however they wish, but we recommend the mappings below for the **A**, **B**, **X**, and **Y** buttons. If you are running a stock Android application that is not `Cortex TV` aware, this is also how the buttons will be mapped to the standard Android navigation buttons on the navigation bar for a typical device.
 
-The [OUYA-Everywhere](ouya-everywhere.md#controller-images) API is available to access button images and text for use in your games.
+The [OUYA-Everywhere](ouya-everywhere.md#user-content-controller-images) API is available to access button images and text for use in your games.
 
 ```text
 OUYA    Default Function
@@ -35,6 +35,6 @@ Home (HOME)
 
 Leave at least a 10% margin between your UI elements and the edge of the screen. This will help ensure that your content is visible across a wide range of TVs and settings.
 
-More information about safe area can be found in the [content review guidelines](content-review-guidelines.md#safe-zone).
+More information about safe area can be found in the [content review guidelines](content-review-guidelines.md#user-content-safe-zone).
 
 For further tips and advice, read [Google's Designing for TV Guide](https://developers.google.com/tv/web/docs/optimization_guide).

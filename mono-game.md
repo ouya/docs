@@ -552,7 +552,7 @@ Microsoft.Xna.Framework.Media.MediaPlayer.Stop();
 
 ## Xiaomi Libraries
 
-[Back to general info](enable_xiaomi_support.md#xiaomi-libraries)
+[Back to general info](enable_xiaomi_support.md#user-content-xiaomi-libraries)
 
 Place the Xiaomi libraries in the following destinations:
 
@@ -570,7 +570,7 @@ Place the Xiaomi libraries in the following destinations:
 
 ## Xiaomi Required Permissions
 
-[Back to general info](enable_xiaomi_support.md#xiaomi-required-permissions)
+[Back to general info](enable_xiaomi_support.md#user-content-xiaomi-required-permissions)
 
 Some of the `AndroidManifest.xml` options can be edited in the `Project Options` on your MonoGame project. To add all the permissions, browse to your project `Properties` folder to edit the raw `AndroidManifest.xml`.
 
@@ -578,7 +578,7 @@ Some of the `AndroidManifest.xml` options can be edited in the `Project Options`
 
 ## Xiaomi Initialization
 
-[Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
+[Back to general info](enable_xiaomi_support.md#user-content-xiaomi-initialization)
 
 `MonoGame` supports initialization strings similar to `Java` syntax to make the game compatible with OUYA Everywhere devices.
 
@@ -643,7 +643,7 @@ Some of the `AndroidManifest.xml` options can be edited in the `Project Options`
 
 ## Localization Resources
 
-[Back to general info](enable_xiaomi_support.md#localization-resources)
+[Back to general info](enable_xiaomi_support.md#user-content-localization-resources)
 
 `MonoGame` uses standard [Android localization](http://developer.android.com/guide/topics/resources/localization.html) for localized string resources.
 
@@ -688,7 +688,7 @@ The current Locale will automatically select the right `String` resource.
 
 ## Disable Xiaomi Screensaver
 
-[Back to general info](enable_xiaomi_support.md#disable-xiaomi-screensaver)
+[Back to general info](enable_xiaomi_support.md#user-content-disable-xiaomi-screensaver)
 
 Use the `content view` to disable the `screensaver` in `MonoGame` from the `Activity` before running your customized `Microsoft.Xna.Framework.Game`. This parallels the Java example using the `Xamarin` auto-generated bind syntax.
 

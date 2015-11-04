@@ -162,7 +162,7 @@ void Application::InitOuyaPlugin()
 
 ## Xiaomi Initialization
 
-[Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
+[Back to general info](enable_xiaomi_support.md#user-content-xiaomi-initialization)
 
 `OuyaPlugin_initOuyaPlugin` supports additional strings to make the game compatible with `Cortex TV` Everywhere devices.
 
@@ -216,7 +216,7 @@ void Application::InitOuyaPlugin()
 
 ## Disable Xiaomi Screensaver
 
-[Back to general info](enable_xiaomi_support.md#disable-xiaomi-screensaver)
+[Back to general info](enable_xiaomi_support.md#user-content-disable-xiaomi-screensaver)
 
 * The screensaver should be disabled while your game is running. By using the OUYA-Marmalade plugin, the screensaver will automatically be disabled.
 

@@ -154,7 +154,7 @@ Add the OuyaGameObject to your initial loading scene. It uses DontDestroyOnLoad 
 
 ## Xiaomi Libraries
 
-[Back to general info](enable_xiaomi_support.md#xiaomi-libraries)
+[Back to general info](enable_xiaomi_support.md#user-content-xiaomi-libraries)
 
 Place the `Xiaomi` libraries in the following destinations:
 
@@ -166,7 +166,7 @@ The [releases section](#releases) has a link to the `Unity-OuyaSDK-Xiaomi.unityp
 
 ## Xiaomi Required Permissions
 
-[Back to general info](enable_xiaomi_support.md#xiaomi-required-permissions)
+[Back to general info](enable_xiaomi_support.md#user-content-xiaomi-required-permissions)
 
 Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in order to work.
 ```java
@@ -181,7 +181,7 @@ The [releases section](#releases) has a link to the `Unity-OuyaSDK-Xiaomi.unityp
 
 ## Xiaomi Initialization
 
-[Back to general info](enable_xiaomi_support.md#xiaomi-initialization)
+[Back to general info](enable_xiaomi_support.md#user-content-xiaomi-initialization)
 
 Using the inspector, browse the `OuyaGameObject`. Here you can add strings to make the game compatible with OUYA Everywhere devices.
 
@@ -205,19 +205,19 @@ Using the inspector, browse the `OuyaGameObject`. Here you can add strings to ma
 
 ## Disable Xiaomi Screensaver
 
-[Back to general info](enable_xiaomi_support.md#disable-xiaomi-screensaver)
+[Back to general info](enable_xiaomi_support.md#user-content-disable-xiaomi-screensaver)
 
 Updating to the latest Core plugin in [releases](#releases) will disable the Xiaomi screensaver while the unity app/game is running. 
 
 ## Create a Xiaomi-specific icon
 
-[Back to general info](enable_xiaomi_support.md#create-a-xiaomi-specific-icon)
+[Back to general info](enable_xiaomi_support.md#user-content-create-a-xiaomi-specific-icon)
 
 The `ouya_xiaomi_icon.png` 284x160 icon should be placed in `Assets/plugins/Android/res/drawable-xhdpi/ouya_xiaomi_icon.png`.
 
 ## Localization Resources
 
-[Back to general info](enable_xiaomi_support.md#localization-resources)
+[Back to general info](enable_xiaomi_support.md#user-content-localization-resources)
 
 Use [Android localization](http://developer.android.com/guide/topics/resources/localization.html) to include string resources for the languages supported by your game.
 
@@ -248,7 +248,7 @@ Using the `OuyaSDK` API, invoke `OuyaSDK.getStringResource("app_name")` to retur
 
 ## Fonts
 
-[Back to general info](enable_xiaomi_support.md#fonts)
+[Back to general info](enable_xiaomi_support.md#user-content-fonts)
 
 Unity has a variety of GUI plugins which each handle fonts differently.
 
