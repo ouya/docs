@@ -10,7 +10,7 @@
 
 [Marmalade on OUYA Forums](http://forums.ouya.tv/categories/marmalade-on-ouya)
 
-[Marmalade on MadeWithMarmalade](https://developer.madewithmarmalade.com/develop/announce-and-discuss)
+[Marmalade on MadeWithMarmalade Forums](https://developer.madewithmarmalade.com/develop/announce-and-discuss)
 
 # Getting Started #
 
