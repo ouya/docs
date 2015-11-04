@@ -1,6 +1,6 @@
 # Community Content
 
-The Community Content API manages discovery, storage and publishing of user generated content for your app.
+The `Community Content` API manages discovery, storage and publishing of user generated content for your app.
 
 ## Limitations
 
@@ -10,7 +10,7 @@ While we do not limit what you can put into a piece of content, or even limit ho
 
 ## Initialization
 
-The Community Content API is automatically initialized when the **OuyaFacade** is initialized within the ODK.  After initializing the **OuyaFacade**, you’ll be able to access the **OuyaContent** class:
+The Community Content API is automatically initialized when the `OuyaFacade` is initialized within the ODK.  After initializing the `OuyaFacade`, you’ll be able to access the `OuyaContent` class:
 
 ```java
     @Override
@@ -25,7 +25,7 @@ The Community Content API is automatically initialized when the **OuyaFacade** i
 
 ### Waiting for OuyaContent
 
-To ensure that the API has finished initializing, you can use the **OuyaContent.isInitialized()** method, or you can register the **OuyaContent.InitListener** interface to be notified when initialization has completed.  The listener's **onInitialized()** method will be called upon registering if initialization happened prior to the registration call.
+To ensure that the API has finished initializing, you can use the `OuyaContent.isInitialized()` method, or you can register the `OuyaContent.InitListener` interface to be notified when initialization has completed.  The listener's `onInitialized()` method will be called upon registering if initialization happened prior to the registration call.
 
 ```java
     private OuyaContent.InitListener mInitListener = new OuyaContent.InitListener() {
@@ -47,7 +47,7 @@ To ensure that the API has finished initializing, you can use the **OuyaContent.
 
 ### API Availability
 
-Community Content allows your users to interact with your app on a creative level, expanding it in new ways. While this creative interaction is largely constructive, it does allow for potentially mature (or immature) content to be published as well. Community Content is not moderated prior to publishing to the DISCOVER store, so if a user has enabled the Age Gate parental control, then the API will not be accessible to games or the DISCOVER store. Your app should properly disable or hide access to Community Content using the available **OuyaContent.isAvailable()** method:
+Community Content allows your users to interact with your app on a creative level, expanding it in new ways. While this creative interaction is largely constructive, it does allow for potentially mature (or immature) content to be published as well. Community Content is not moderated prior to publishing to the DISCOVER store, so if a user has enabled the Age Gate parental control, then the API will not be accessible to games or the DISCOVER store. Your app should properly disable or hide access to Community Content using the available `OuyaContent.isAvailable()` method:
 
 ```java
     public void loadMods() {
@@ -61,7 +61,7 @@ Community Content allows your users to interact with your app on a creative leve
 
 ## Creating Content
 
-To create content you can use the method **OuyaContent.create()** which returns an **OuyaMod** object for you to fill up:
+To create content you can use the method `OuyaContent.create()` which returns an `OuyaMod` object for you to fill up:
 
 ```java
     private void newMod() {
@@ -71,7 +71,7 @@ To create content you can use the method **OuyaContent.create()** which returns 
 
 ### Editing
 
-After creating the mod, you'll find there aren't any methods for actually modifying the contents outright.  To stage a new revision, you'll need to call **OuyaFacade.edit()** to get an instance of the **OuyaMod.Editor** class.  From here, you can set all of the metadata, add files and set a screenshot.  You can leave an editor open but you must call **OuyaMod.Editor.save()** in order to commit the changes.
+After creating the mod, you'll find there aren't any methods for actually modifying the contents outright.  To stage a new revision, you'll need to call `OuyaFacade.edit()` to get an instance of the `OuyaMod.Editor` class.  From here, you can set all of the metadata, add files and set a screenshot.  You can leave an editor open but you must call `OuyaMod.Editor.save()` in order to commit the changes.
 
 ```java
     private OuyaMod mMod;
@@ -95,7 +95,7 @@ After creating the mod, you'll find there aren't any methods for actually modify
     }
 ```
 
-In order to save content, you must include at least one file and only one screenshot.  Since files and screenshots are managed by the OUYA Framework, you must request a file through the **OuyaMod.Editor** class:
+In order to save content, you must include at least one file and only one screenshot.  Since files and screenshots are managed by the `Cortex TV` Framework, you must request a file through the `OuyaMod.Editor` class:
 
 ```java
     OuyaContent.SaveListener mSaveListener = ...;
@@ -121,7 +121,7 @@ Note that while the API has been designed to allow for multiple screenshots, and
 
 ## Searching for Content
 
-To get a list of published mods from the DISCOVER store, you can use the **OuyaContent.search()** method:
+To get a list of published mods from the DISCOVER store, you can use the `OuyaContent.search()` method:
 
 ```java
     private static final int SEARCH_LIMIT = 10;
@@ -166,7 +166,7 @@ The callback interface **OuyaContent.SearchListener** will provide the total num
 
 ## Downloading Content
 
-Once a user has decided they want a piece of content, you can call **OuyaMod.download()** to initiate the download and automatic unpacking of the content for use:
+Once a user has decided they want a piece of content, you can call `OuyaMod.download()` to initiate the download and automatic unpacking of the content for use:
 
 ```java
     private OuyaContent.DownloadListener mDownloadListener;
@@ -176,7 +176,7 @@ Once a user has decided they want a piece of content, you can call **OuyaMod.dow
     }
 ```
 
-The **OuyaContent.DownloadListener** interface contains methods for progress and completion and can also be used to watch downloads that were already in progress.  You can check to see if content is currently downloading by utilizing **OuyaMod.isDownloading()**:
+The `OuyaContent.DownloadListener` interface contains methods for progress and completion and can also be used to watch downloads that were already in progress.  You can check to see if content is currently downloading by utilizing `OuyaMod.isDownloading()`:
 
 ```java
     private OuyaContent.DownloadListener mDownloadListener;
@@ -188,11 +188,11 @@ The **OuyaContent.DownloadListener** interface contains methods for progress and
     }
 ```
 
-**OuyaContent.DownloadListener.onProgress()** will report the progress of a download as a percentage based on the total download size.
+`OuyaContent.DownloadListener.onProgress()` will report the progress of a download as a percentage based on the total download size.
 
 ## Listing and Loading Installed Content
 
-To view and load content for usage in your app, you can use **OuyaContent.getInstalled()** to get the list of mods:
+To view and load content for usage in your app, you can use `OuyaContent.getInstalled()` to get the list of mods:
 
 ```java
     private void loadMods() {
@@ -200,7 +200,7 @@ To view and load content for usage in your app, you can use **OuyaContent.getIns
     }
 ```
 
-As stated before, files are managed by the Framework, so you'll need to load them through the **OuyaMod** class:
+As stated before, files are managed by the Framework, so you'll need to load them through the `OuyaMod` class:
 
 ```java
     private void loadMod(OuyaMod mod) {
@@ -218,7 +218,7 @@ As stated before, files are managed by the Framework, so you'll need to load the
 
 ### Rating
 
-Aside from creating content, users can also interact with Community Content by providing ratings for published content on a 1-to-5-star scale just as they do with apps.  At the time of this writing it is up to you, the app developer, to provide a button to rate a piece of content as we do not include a button for it within its details page on the DISCOVER store. You do not have to worry about creating a UI for your users to rate the content, all you need to do is call the method **OuyaMod.rate()** to call up the system rate dialog:
+Aside from creating content, users can also interact with Community Content by providing ratings for published content on a 1-to-5-star scale just as they do with apps.  At the time of this writing it is up to you, the app developer, to provide a button to rate a piece of content as we do not include a button for it within its details page on the DISCOVER store. You do not have to worry about creating a UI for your users to rate the content, all you need to do is call the method `OuyaMod.rate()` to call up the system rate dialog:
 
 ```java
     public void rateMod(OuyaMod mod) {
@@ -228,7 +228,7 @@ Aside from creating content, users can also interact with Community Content by p
 
 ### Reporting
 
-Since published Community Content is not moderated, there is the potential for a piece of content to contain offensive material. The API provides the ability for users to flag a piece of published content for review.  While we do provide a Report button on the details page for content, you can also allow users to report from within your app using the **OuyaMod.flag()** method.  Like the Rate dialog, you do not need to create a UI since **OuyaMod.flag()** calls up a system dialog:
+Since published Community Content is not moderated, there is the potential for a piece of content to contain offensive material. The API provides the ability for users to flag a piece of published content for review.  While we do provide a Report button on the details page for content, you can also allow users to report from within your app using the `OuyaMod.flag()` method.  Like the Rate dialog, you do not need to create a UI since `OuyaMod.flag()` calls up a system dialog:
 
 ```java
     public void reportMod(OuyaMod mod) {
