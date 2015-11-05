@@ -265,6 +265,7 @@ Please see the [content submission checklist](https://s3.amazonaws.com/ouya-docs
 * User Generated Content and User to User Communication: To protect the community, games or apps rated "everyone" cannot host user generated content or enable communication between users. And should `Cortex TV` players want to find and communicate with one another, those games will be rated 12+ or 17+.
 * Violence: We play violence safe. Games or apps that contain mild cartoon or fantasy violence are 9+, realistic or intense fantasy violence is 12+ or 17+, and graphic violence is always rated high maturity.
 * The `OUYA` name must be fully capitalized both in-game and on the game details page.
+* The content review team strongly recommends including a change list with submission updates as a polite heads up.
 
 ##Communication
 
