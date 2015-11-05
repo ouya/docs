@@ -141,6 +141,8 @@ Here is TimG with a video tip on handling the safe area.
 
 * **Save**: The review team recommends that games use a feature for saving in-game progress where applicable. If game saving is implemented, the review team will verify that saving functions correctly.
 
+* **Social**: The review team requires that social features (Facebook/Twitter) work as expected if implemented. The game should support switching from social widgets back to the game.
+
 * **Store**: The review team recommends the game uses an in-game store. The review team requires that the in-game store functions properly.
 
 * **Sound**: The review team recommends the game uses stereo sound. Music and sound is required to stop playing if the game is paused when switching back to the `Cortex TV` launcher.
@@ -159,9 +161,9 @@ We want you to build imaginative, inventive games. To make sure `Cortex TV` has 
 
 * **Sexually Explicit Content**: Don’t go overboard on nudity or obscene references… you know what we mean. There should be no explicit content in the game details page or video.
 
-* **Misrepresentation** (of your Game or Yourself): Be who you say you are. Don’t confuse gamers by being “like” other games.
+* **Misrepresentation** (of your Game or Yourself): Be who you say you are. Don’t confuse gamers by being "like" other games.
 
-* **Intellectual Property**: Do not infringe on the intellectual property rights of others including patent, trademark, trade secret, copyright, and all other proprietary rights. The game details page should only include intellectual property that you own.
+* **Intellectual Property**: Do not infringe on the intellectual property rights of others including patent, trademark, trade secret, copyright, and all other proprietary rights. The game details page should only include intellectual property that you own. Emulators must not include any `ROM` files from infringing games.
 
 * **Dangerous Products**: Do not transmit viruses, worms, malware, or any other items that may harm gamers or the `Cortex TV` platform.
 
@@ -169,7 +171,11 @@ We want you to build imaginative, inventive games. To make sure `Cortex TV` has 
 
 * **`Cortex TV` Trademark**: You can use the `Cortex TV` name, logo, and trademark, but you have to respect that these are `Razer’s` intellectual property, so we want you to use them in a way that accurately portrays that your game is on `Cortex TV`.
 
+* **Gambling**: Do not use or promote any real world gambling.
+
 * **`OUYA` Trademark**: You can use the `OUYA` name, logo, and trademark, but you have to respect that these are `Razer’s` intellectual property, so we want you to use them in a way that accurately portrays that your game is on `OUYA`.
+
+* **Copyright**: The review team requires that all copyright dates on the details page and in game are correct.
 
 ##In-App Purchasing & Technical Info
 
@@ -191,6 +197,39 @@ Games should run in full-screen mode and be playable in 720p and 1080p (it is TV
 
 Games should follow the `Cortex TV` [Interface Guidelines](https://devs.ouya.tv/developers/docs/interface-guidelines), including the names of the controller buttons and related UI standards.
 
+* **IAP**: The review team requires that `IAP` functions properly in the `Cortex TV` store and in game. All purchasing for `Cortex TV` games must use the `Cortex TV` API for purchases.
+
+* **Descriptions**: The review team requires `product` descriptions for store items are correct.
+
+* **Readable**: The review team requires that store descriptions are readable.
+
+* **Products**: The review team requires that `entitlements` and `consumables` are purchasable in game and unlock content as expected.
+
+* **Price**: The review team requires that the store, in-game, and purchase prompts display the price correctly.
+
+* **Unlocked Content**: The review team requires that purchased unlocked content functions properly.
+
+* **Out of Memory**: The review team requires that purchases still work properly when the system is out of memory.
+
+* **Purchase Type**: The review team requires that store items are properly labeled as `entitlement`, `consumable`, or `subscription`.
+
+* **Check Receipts**: The review team recommends that the game checks receipts on start. Reinstalling the game should not prompt to purchase unlockable content again.
+
+* **Vouchers**: The review team requires that vouchers unlock entitlements properly for premium games that use a promoted product.
+
+* **Reactive**: - The review team recommends that games unlock content immediately after using vouchers. The user shouldn't be prompted to purchase entitlements after using vouchers.
+
+* **Donations**: The review team requires that the store and game respect the guidelines for soliciting donations and purchases.
+
+* **Buy Button**: The review team recommends including a `BUY` button on the main menu in the game.
+
+* **Premium Titles**: The review team recommends that premium games check for receipts at the start of the game before the user enters into gameplay. Premium games should be purchased before the game can be played. If the receipt check fails to find a receipt, the main menu should show a `BUY` button before gameplay can be entered.
+
+* **Purchase Changes**: The review team recommends honoring old purchases when a game changes purchase types. For example, if a game changes from `free to try` to a `premium` game, purchases from the old purchase type should still work.
+
+* **Premium Content**: The review team requires that premium content purchased in premium games should function properly. 
+
+* **Premium Receipt Checking**: The review team requires that `entitlement` purchases and unlocked content should remain unlocked after the game is reinstalled.
 
 ##Cortex TV Content Ratings
 
@@ -223,23 +262,23 @@ In the event we reject your Game -- including for reasons that may not be captur
 
 So go make some great games...
 
-For any questions or clarifications, please contact us at devsupport@ouya.tv
+For any questions or clarifications, please contact us at `devsupport@ouya.tv`.
 
 ##Icons
 
-* The application image that is shown in the launcher is embedded inside of the APK itself. The expected file is in res/drawable-xhdpi/ouya_icon.png and the image size must be 732x412.
+* The application image that is shown in the launcher is embedded inside of the APK itself. The expected file is in `res/drawable-xhdpi/ouya_icon.png` and the image size must be `732x412`.
  
-* The icon that is shown in the app settings is embedded inside of the APK itself. The expected file is in res/drawable/app_icon.png and the image size must be 96x96.
+* The icon that is shown in the app settings is embedded inside of the APK itself. The expected file is in `res/drawable/app_icon.png` and the image size must be `96x96`.
 
-The 732x412 icon displays in the Play section of the OUYA Launcher.
+The `732x412` icon displays in the Play section of the `Cortex TV` Launcher.
 
 <img src="https://s3.amazonaws.com/ouya-docs/images/PlayStore_732x412.png"/>
 
-The 732x412 icon displays in the Discover section of the OUYA Launcher.
+The `732x412` icon displays in the Discover section of the OUYA Launcher.
 
 <img src="https://s3.amazonaws.com/ouya-docs/images/Discover_732x412.png"/>
 
-The 96x96 icon displays on some legacy Android settings pages.
+The `96x96` icon displays on some legacy Android settings pages.
 
 <img src="https://s3.amazonaws.com/ouya-docs/images/Settings_96x96.png"/>
 
@@ -249,7 +288,7 @@ The 96x96 icon displays on some legacy Android settings pages.
  
 <table border="1"><tr><td><img src="http://ouya-docs.s3.amazonaws.com/images/OuyaEditGame.jpg"/></td></tr></table>
 
-* When editing game details, add one or more videos into the Video urls field. Add one vimeo url per line.
+* When editing game details, add one or more videos into the Video urls field. Add one Vimeo url per line.
  
 <table border="1"><tr><td><img src="http://ouya-docs.s3.amazonaws.com/images/VideosURLbox.png"/></td></tr></table>
 
@@ -261,7 +300,7 @@ The `keystore` must be used to submit your game to the store.
 
 Updates of the game needs to use the same `keystore`.
 
-Be sure to email yourself a backup of the keystore and password because you always need to submit updates of the game with the same keystore.
+Be sure to email yourself a backup of the keystore and password because you always need to submit updates of the game with the same `keystore`.
 
 ### Create the KeyStore
 
