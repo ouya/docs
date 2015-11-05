@@ -109,9 +109,11 @@ Here is TimG with a video tip on handling the safe area.
 
 * **Coming Soon**: The review team recommends that the main menu functions properly unless any features are explicitly labeled as `coming soon`.
 
-* **Controller**: The review team will reject any game where the controller input handling does not function properly. The review team recommends games use `OUYA-Everywhere` input. The review team requires that only controller images that represent `Cortex TV` devices are used in the game. The review team recommends that the controller input handling follow [interface-guidelines](interface-guidelines.md#user-content-interface-guidelines).
+* **Controller**: The review team will reject any game where the controller input handling does not function properly. The review team recommends games use `OUYA-Everywhere` input. The review team requires that only controller images that represent `Cortex TV` devices are used in the game. The review team recommends that the controller input handling follow [interface-guidelines](interface-guidelines.md#user-content-interface-guidelines). The review team recommends that games that use `OUYA-Everywhere` input should use the same axis/button layout on `Cortex TV` devices. The review team recommends that games that use `OUYA-Everywhere` should show button images using the `OUYA-Everywhere` API for `Cortex TV` devices.
 
 * **Corruption**: The review team recommends that the game state shouldn't be corrupted by powering off the `Cortex TV` device in the middle of the game.
+
+* **Devices**: The review team requires that if a user purchases an entitlement on one `Cortex TV` device, the same content should be unlocked on another `Cortex TV` devices. If the entitlement was purchased on `Cortex TV`, the same purchase should also be unlocked in the `OUYA` store, and vice-versa.
 
 * **Endurance**: The review team will recommend fixes when issues are discovered by playing the game for an extended period of time. Issues like memory leaks could crash the game after playing for long periods.
 
@@ -121,6 +123,8 @@ Here is TimG with a video tip on handling the safe area.
 
 * **Menu**: The review team requires that the `DPAD` and `LEFT_STICK` are capable of navigating the in-game menus.
 
+* **Mobile**: The review team requires that no mobile elements or images should appear in menus or gameplay.
+
 * **Multiplayer**: The review team checks that the maximum number of players are supported in multiplayer games without issues. The review team recommends that the game developer is responsible for extensive multiplayer testing. The review team requires that only a single controller map to each player for multiplayer games.
 
 * **Network**: The review team requires that the game handle the loss of a network connection gracefully. If a network connection is required, the game should notify the user that a network connection is needed to continue or give the option to exit the game.
@@ -128,6 +132,10 @@ Here is TimG with a video tip on handling the safe area.
 * **Orientation**: The review team checks that the game uses the `landscape-left` orientation and does not `auto-rotate` during loading or gameplay.
 
 * **Out of Space**: For games that download content in game, the review team checks for download errors that can occur when the system is out of disk space. (Messaging space issues to the user is recommended but not required.)
+
+* **OUYA-Everywhere**: The review team requires games that use the `OUYA-Everywhere` API should launch properly.
+
+* **OUYA Store**: The review team requires that game submissions match their `OUYA Store` counterparts versus just submitting a generic `Android` version.
 
 * **Pause**: The review team recommends that in-game pausing when exiting to `Cortex TV` functions properly. When returning to the game, the game should resume without losing user data.
 
@@ -146,6 +154,8 @@ Here is TimG with a video tip on handling the safe area.
 * **Store**: The review team recommends the game uses an in-game store. The review team requires that the in-game store functions properly.
 
 * **Sound**: The review team recommends the game uses stereo sound. Music and sound is required to stop playing if the game is paused when switching back to the `Cortex TV` launcher.
+
+* **Touchpad**: The review team requires `Cortex TV` games should not have any references to touchpad interaction. There should be no touchpad elements in menus or in game. 
 
 * **Tutorial**: The review team recommends that the game initially starts with a tutorial about the different game modes in the game.
 
