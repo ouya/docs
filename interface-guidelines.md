@@ -5,11 +5,17 @@ Games can use the `Cortex TV` controller buttons however they wish, but we recom
 The [OUYA-Everywhere](ouya-everywhere.md#user-content-controller-images) API is available to access button images and text for use in your games.
 
 ```text
-OUYA    Default Function
+Serval    Default Function
 A       select
 B       back/cancel
 X       -
 Y       -
+
+OUYA    Default Function
+O       select
+U       -
+Y       -
+A       back/cancel
 ```
 
 Please use the naming conventions below when referring to the controller buttons in help screens for your game:

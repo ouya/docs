@@ -1,4 +1,4 @@
-Version 1.1, July 25, 2013
+Version 1.2, November 4th, 2015
 
 ##Introduction
 
@@ -89,6 +89,8 @@ Here is TimG with a video tip on handling the safe area.
 
 * **Downloadable**: The review team will verify the game can be downloaded from the games details page.
 
+* **Full Screen**: The review team will verify the game runs full screen and does not use an incorrect resolution creating large black areas. This is recommended and not required.
+
 * **Genre**: A request to the review team is needed if the game title fails to appear in the expected genres.
 
 * **Installable**: The review team will verify the game can be installed from the games details page. 
@@ -103,11 +105,23 @@ Here is TimG with a video tip on handling the safe area.
 
 * **Button Mashing**: The review team checks that mashing controller buttons at the start of the game will not crash the app. Commonly when content is loading, button mashing can crash apps under review.
 
+* **Coming Soon**: The review team recommends that the main menu functions properly unless any features are explicitly labeled as `coming soon`.
+
+* **Controller**: The review team will reject any game where the controller input handling does not function properly. The review team recommends games use `OUYA-Everywhere` input. The review team requires that only controller images that represent `Cortex TV` devices are used in the game. The review team recommends that the controller input handling follow [interface-guidelines](interface-guidelines.md#user-content-interface-guidelines).
+
+* **Multiplayer**: The review team checks that the maximum number of players are supported in multiplayer games without issues. The review team recommends that the game developer is responsible for extensive multiplayer testing.
+
+* **Orientation**: The review team checks that the game uses the `landscape-left` orientation and does not `auto-rotate` during loading or gameplay.
+
 * **Out of Space**: For games that download content in game, the review team checks for download errors that can occur when the system is out of disk space. (Messaging space issues to the user is recommended but not required.)
+
+* **Phone Features**: The review team recommends that the game does not mention phone features like `accelerometer`, `tilt`, or `vibration`.
 
 * **Readable**: The review team checks that important game text is readable from 10 feet back from the TV.
 
 * **Runnable**: The review team will verify the game can be started without immediately crashing.
+
+* **Tutorial**: The review team recommends that the game initially starts with a tutorial about the different game modes in the game.
 
 ##Content No-No’s
 
