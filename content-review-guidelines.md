@@ -1,4 +1,4 @@
-Version 1.2, November 4th, 2015
+Version 1.2, November 5th, 2015
 
 ##Introduction
 
@@ -105,15 +105,33 @@ Here is TimG with a video tip on handling the safe area.
 
 * **Button Mashing**: The review team checks that mashing controller buttons at the start of the game will not crash the app. Commonly when content is loading, button mashing can crash apps under review.
 
+* **Clear**: The review team recommends that it is clear how to begin playing the game. If the game game uses text fields, the navigation between fields should be easy and not cumbersome.
+
 * **Coming Soon**: The review team recommends that the main menu functions properly unless any features are explicitly labeled as `coming soon`.
 
 * **Controller**: The review team will reject any game where the controller input handling does not function properly. The review team recommends games use `OUYA-Everywhere` input. The review team requires that only controller images that represent `Cortex TV` devices are used in the game. The review team recommends that the controller input handling follow [interface-guidelines](interface-guidelines.md#user-content-interface-guidelines).
 
-* **Multiplayer**: The review team checks that the maximum number of players are supported in multiplayer games without issues. The review team recommends that the game developer is responsible for extensive multiplayer testing.
+* **Corruption**: The review team recommends that the game state shouldn't be corrupted by powering off the `Cortex TV` device in the middle of the game.
+
+* **Endurance**: The review team will recommend fixes when issues are discovered by playing the game for an extended period of time. Issues like memory leaks could crash the game after playing for long periods.
+
+* **Exit**: The review team requires that exiting the game via the game menu works as expected. The game exit functionality should not just pause the game.
+
+* **Legend**: The review team recommends that the game displays a legend which could be displayed in the loading screen. The legend displays a controller layout which shows how sticks and buttons map to in-game actions.
+
+* **Menu**: The review team requires that the `DPAD` and `LEFT_STICK` are capable of navigating the in-game menus.
+
+* **Multiplayer**: The review team checks that the maximum number of players are supported in multiplayer games without issues. The review team recommends that the game developer is responsible for extensive multiplayer testing. The review team requires that only a single controller map to each player for multiplayer games.
+
+* **Network**: The review team requires that the game handle the loss of a network connection gracefully. If a network connection is required, the game should notify the user that a network connection is needed to continue or give the option to exit the game.
 
 * **Orientation**: The review team checks that the game uses the `landscape-left` orientation and does not `auto-rotate` during loading or gameplay.
 
 * **Out of Space**: For games that download content in game, the review team checks for download errors that can occur when the system is out of disk space. (Messaging space issues to the user is recommended but not required.)
+
+* **Pause**: The review team recommends that in-game pausing when exiting to `Cortex TV` functions properly. When returning to the game, the game should resume without losing user data.
+
+* **Performance**: The review team checks for in-game lag and will recommend fixes for any performance issues that are discovered. 
 
 * **Phone Features**: The review team recommends that the game does not mention phone features like `accelerometer`, `tilt`, or `vibration`.
 
@@ -121,7 +139,15 @@ Here is TimG with a video tip on handling the safe area.
 
 * **Runnable**: The review team will verify the game can be started without immediately crashing.
 
+* **Save**: The review team recommends that games use a feature for saving in-game progress where applicable. If game saving is implemented, the review team will verify that saving functions correctly.
+
+* **Store**: The review team recommends the game uses an in-game store. The review team requires that the in-game store functions properly.
+
+* **Sound**: The review team recommends the game uses stereo sound. Music and sound is required to stop playing if the game is paused when switching back to the `Cortex TV` launcher.
+
 * **Tutorial**: The review team recommends that the game initially starts with a tutorial about the different game modes in the game.
+
+* **Updates**: The review team requires that games continue to function after `OTA` updates. The review team will let developers know when game breaking issues are discovered when testing `OTA` updates.
 
 ##Content No-No’s
 
