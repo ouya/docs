@@ -84,7 +84,15 @@ Locate the appropriate engine documentation from the above list in order to the 
 
 Developers can also design custom button images, as long as  images reflect `Forge TV` A,B,X,Y formatting (see below).
 
-![Button images](forge_tv/image_1.png)
+![image_1](forge_tv/image_1.png)
+
+Games need to be updated to use `Cortex TV` button images that had previously used `OUYA` or `non-Cortex TV` button images.
+
+![image_2](forge_tv/image_2.png)
+
+Button legends should show the `Forge TV` button images. It's best to use the `Cortex TV` API to get the button images at runtime. Alternatively, the button images can be baked or hardcoded into the game.
+
+![image_3](forge_tv/image_3.png)
 
 ## Step 3. Menu Button Handling
 
