@@ -14,7 +14,7 @@
 * [Storage](storage.md)
 
 **Guidelines**
-* [Content & Review](content-review-guidelines.md)
+* [Content and Review](content-review-guidelines.md)
 * [Enable On Xiaomi](enable_xiaomi_support.md)
 * [Stand Out on Cortex TV](stand_out_on_ouya.md)
 * [User Interface](interface-guidelines.md)
