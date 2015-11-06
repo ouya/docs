@@ -4,7 +4,7 @@
 
 Some games are perfectly functional, whereas other games may have issues with input, and other games may have cosmetic issues with button images.
 
-This document will help you put your `OUYA Game` on `Razer Cortex TV` (the storefront for the Forge TV) by making your game `OUYA Everywhere` compliant.
+This document will help you put your game on `Razer Cortex TV` (the storefront for the Forge TV) by making your game `OUYA Everywhere` compliant.
 
 ## Table of Contents
 
