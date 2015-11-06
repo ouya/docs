@@ -1,4 +1,4 @@
-# Put Your OUYA Game on `Razer Cortex TV`
+# Put Your Game on `Razer Cortex TV`
 
 `OUYA Publishing` is in the process of testing games in the `OUYA Store` for compatibility on `Cortex`, Razer's appstore for `Forge TV`.
 
