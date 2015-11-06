@@ -4,7 +4,7 @@
 **Setup**
 * [App Setup](app_setup.md)
 * [Environment Setup](env_setup.md)
-* [Put Your OUYA Game on Cortex TV](forge_tv.md)
+* [Put Your Game on Cortex TV](forge_tv.md)
 
 **API**
 * [Controllers](controllers.md)
