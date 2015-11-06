@@ -2,22 +2,22 @@
 * [Support](developer_support.md)
 
 **Setup**
-* [Environment Setup](env_setup.md)
 * [App Setup](app_setup.md)
+* [Environment Setup](env_setup.md)
 * [Put Your OUYA Game on Cortex TV](https://devs.ouya.tv/developers/docs/forge_tv.md)
 
 **API**
 * [Controllers](controllers.md)
+* [Custom Launchers](custom_launchers.md)
+* [OUYA Everywhere](ouya-everywhere.md)
 * [Purchases](purchasing.md)
 * [Storage](storage.md)
-* [OUYA Everywhere](ouya-everywhere.md)
-* [Custom Launchers](custom_launchers.md)
 
 **Guidelines**
-* [User Interface](interface-guidelines.md)
 * [Content & Review](content-review-guidelines.md)
-* [Stand Out on Cortex TV](stand_out_on_ouya.md)
 * [Enable On Xiaomi](enable_xiaomi_support.md)
+* [Stand Out on Cortex TV](stand_out_on_ouya.md)
+* [User Interface](interface-guidelines.md)
 
 **Game Engines**
 * [Adobe Air](adobe-air.md)
