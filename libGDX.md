@@ -19,7 +19,7 @@
 
 ### Examples
 
-Mario Zechner created a detailed post about running `libGDX` on `Cortex TV` - http://www.badlogicgames.com/wordpress/?p=2733
+Mario Zechner created a detailed post about running `libGDX` on `Cortex` - http://www.badlogicgames.com/wordpress/?p=2733
 
 ### Resources
 
@@ -27,7 +27,7 @@ libGDX - http://libgdx.badlogicgames.com/
 
 # Intro #
 
-`libGDX` uses `Java` and shares most of the [java documentation](java.md) for accessing the `Cortex TV` SDK.
+`libGDX` uses `Java` and shares most of the [java documentation](java.md) for accessing the `Cortex` SDK.
 
 # Button Data #
 

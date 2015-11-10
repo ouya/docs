@@ -12,9 +12,9 @@
 
 <table border=1>
  <tr>
- <td>UE4 on Cortex TV (28:49)<br/>
+ <td>UE4 on Cortex (28:49)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=lK7qGgeuI74" target="_blank">
-<img src="http://img.youtube.com/vi/lK7qGgeuI74/0.jpg" alt="Cortex TV Support for UE4 with Tappy Chicken" width="240" height="180" border="10" /></a></td>
+<img src="http://img.youtube.com/vi/lK7qGgeuI74/0.jpg" alt="Cortex Support for UE4 with Tappy Chicken" width="240" height="180" border="10" /></a></td>
  <td>Customize Tappy Chicken (2:50)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=ALWtpYGSomE" target="_blank">
 <img src="http://img.youtube.com/vi/ALWtpYGSomE/0.jpg" alt="Customize Tappy Chicken" width="240" height="180" border="10" /></a></td>
@@ -29,17 +29,17 @@
 
 * Only after linking your Github account will you have access to the [UE4 Source](https://github.com/EpicGames/UnrealEngine).
 
-* After linking your Github account, you should have access to the `Cortex TV` Branches
+* After linking your Github account, you should have access to the `Cortex` Branches
 
-* [4.9-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.9-OUYA) for the `Cortex TV` Fork of UE4
+* [4.9-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.9-OUYA) for the `Cortex` Fork of UE4
 
-* [4.8-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.8-OUYA) for the `Cortex TV` Fork of UE4
+* [4.8-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.8-OUYA) for the `Cortex` Fork of UE4
 
-* [4.7-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.7-OUYA) for the `Cortex TV` Fork of UE4
+* [4.7-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.7-OUYA) for the `Cortex` Fork of UE4
 
-* [4.6-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) for the `Cortex TV` Fork of UE4
+* [4.6-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) for the `Cortex` Fork of UE4
 
-* Quick Link: [Building the Cortex TV Fork of UE4](#build-ue4)
+* Quick Link: [Building the Cortex Fork of UE4](#build-ue4)
 
 * Quick Link: [Getting Started in the UE4 Editor](#ue4-editor)
 
@@ -70,7 +70,7 @@ A specific version of TADP needs to be installed which is found in the `Engine\E
 
 * Get the [Unreal Engine](https://www.unrealengine.com/what-is-unreal-engine-4) - Unreal Engine and Source, All for 5% of Revenue after more than $3k gross revenue
 
-* [Unreal Forum Post](https://forums.unrealengine.com/showthread.php?51910-Getting-Started-Android-Development-References-Documentation-Feedback) - Unreal - Tracking `Cortex TV` Plugin process and requests for info
+* [Unreal Forum Post](https://forums.unrealengine.com/showthread.php?51910-Getting-Started-Android-Development-References-Documentation-Feedback) - Unreal - Tracking `Cortex` Plugin process and requests for info
 
 * [UE4 Video Playlist](https://wiki.unrealengine.com/Category:Epic_Video_Playlists) - Unreal - Epic Video Playlists
 
@@ -120,7 +120,7 @@ A specific version of TADP needs to be installed which is found in the `Engine\E
 
 ## Build UE4
 
-* Download the [4.6-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) to get the `Cortex TV fork` of the `Unreal Engine`
+* Download the [4.6-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) to get the `Cortex fork` of the `Unreal Engine`
 
 ```
 git clone -b 4.6-OUYA https://github.com/tgraupmann/UnrealEngine
@@ -336,7 +336,7 @@ Checking out files: 100% (26995/26995), done.
 
 ![Level Blueprint](unreal/image_38.png)
 
-The following event flow adds the custom events needed to play `Tappy Chicken` on `Cortex TV`. If the `BUTTON_O` pressed event is detected on `Any` `Cortex TV` Controller then the custom events will be invoked for `OUYA_PLAY`, `OUYA_TOUCH`, and `OUYA_FLAP`. `OUYA Clear Button States` clears the detected pressed and released events so they can be detected in the next update frame.
+The following event flow adds the custom events needed to play `Tappy Chicken` on `Cortex`. If the `BUTTON_O` pressed event is detected on `Any` `Cortex` Controller then the custom events will be invoked for `OUYA_PLAY`, `OUYA_TOUCH`, and `OUYA_FLAP`. `OUYA Clear Button States` clears the detected pressed and released events so they can be detected in the next update frame.
 
 ![Check Flow](unreal/image_21.png)
 

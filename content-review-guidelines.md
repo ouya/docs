@@ -2,15 +2,15 @@ Version 1.2, November 5th, 2015
 
 ##Introduction
 
-Welcome, `Cortex TV` Devs! We’re thrilled you’ve decided to develop for `Forge TV`.
+Welcome, `Cortex` Devs! We’re thrilled you’ve decided to develop for `Forge TV`.
 
-We want to provide a great experience for both gamers and developers, which is why we will review all Games and Apps (read “Games”) you submit to `Cortex TV`. Below are the guidelines we’ll use. Of course, we are open to any developer -- but we want all the games on `Cortex TV` to come together to make `Cortex TV` great.
+We want to provide a great experience for both gamers and developers, which is why we will review all Games and Apps (read “Games”) you submit to `Cortex`. Below are the guidelines we’ll use. Of course, we are open to any developer -- but we want all the games on `Cortex` to come together to make `Cortex` great.
 
-By following the guidelines below, young grasshopper, you’ll be live on `Cortex TV` before you know it (Yeah!). We will try to keep this document as stable as possible, and communicate if we need to make changes.
+By following the guidelines below, young grasshopper, you’ll be live on `Cortex` before you know it (Yeah!). We will try to keep this document as stable as possible, and communicate if we need to make changes.
 
 ##Speed of Reply
 
-We understand your need to get feedback quickly and we are committed to making this happen as it benefits you, our developers, as well as `Cortex TV’s` gamers.
+We understand your need to get feedback quickly and we are committed to making this happen as it benefits you, our developers, as well as `Cortex’s` gamers.
 
 Last week, it took us three days to review an average Game.  We’ll update this weekly for you.
 
@@ -109,11 +109,11 @@ Here is TimG with a video tip on handling the safe area.
 
 * **Coming Soon**: The review team recommends that the main menu functions properly unless any features are explicitly labeled as `coming soon`.
 
-* **Controller**: The review team will reject any game where the controller input handling does not function properly. The review team recommends games use `OUYA-Everywhere` input. The review team requires that only controller images that represent `Cortex TV` devices are used in the game. The review team recommends that the controller input handling follow [interface-guidelines](interface-guidelines.md#user-content-interface-guidelines). The review team recommends that games that use `OUYA-Everywhere` input should use the same axis/button layout on `Cortex TV` devices. The review team recommends that games that use `OUYA-Everywhere` should show button images using the `OUYA-Everywhere` API for `Cortex TV` devices.
+* **Controller**: The review team will reject any game where the controller input handling does not function properly. The review team recommends games use `OUYA-Everywhere` input. The review team requires that only controller images that represent `Cortex` devices are used in the game. The review team recommends that the controller input handling follow [interface-guidelines](interface-guidelines.md#user-content-interface-guidelines). The review team recommends that games that use `OUYA-Everywhere` input should use the same axis/button layout on `Cortex` devices. The review team recommends that games that use `OUYA-Everywhere` should show button images using the `OUYA-Everywhere` API for `Cortex` devices.
 
-* **Corruption**: The review team recommends that the game state shouldn't be corrupted by powering off the `Cortex TV` device in the middle of the game.
+* **Corruption**: The review team recommends that the game state shouldn't be corrupted by powering off the `Cortex` device in the middle of the game.
 
-* **Devices**: The review team requires that if a user purchases an entitlement on one `Cortex TV` device, the same content should be unlocked on another `Cortex TV` devices. If the entitlement was purchased on `Cortex TV`, the same purchase should also be unlocked in the `OUYA` store, and vice-versa.
+* **Devices**: The review team requires that if a user purchases an entitlement on one `Cortex` device, the same content should be unlocked on another `Cortex` devices. If the entitlement was purchased on `Cortex`, the same purchase should also be unlocked in the `OUYA` store, and vice-versa.
 
 * **Endurance**: The review team will recommend fixes when issues are discovered by playing the game for an extended period of time. Issues like memory leaks could crash the game after playing for long periods.
 
@@ -137,7 +137,7 @@ Here is TimG with a video tip on handling the safe area.
 
 * **OUYA Store**: The review team requires that game submissions match their `OUYA Store` counterparts versus just submitting a generic `Android` version.
 
-* **Pause**: The review team recommends that in-game pausing when exiting to `Cortex TV` functions properly. When returning to the game, the game should resume without losing user data.
+* **Pause**: The review team recommends that in-game pausing when exiting to `Cortex` functions properly. When returning to the game, the game should resume without losing user data.
 
 * **Performance**: The review team checks for in-game lag and will recommend fixes for any performance issues that are discovered. 
 
@@ -153,9 +153,9 @@ Here is TimG with a video tip on handling the safe area.
 
 * **Store**: The review team recommends the game uses an in-game store. The review team requires that the in-game store functions properly.
 
-* **Sound**: The review team recommends the game uses stereo sound. Music and sound is required to stop playing if the game is paused when switching back to the `Cortex TV` launcher.
+* **Sound**: The review team recommends the game uses stereo sound. Music and sound is required to stop playing if the game is paused when switching back to the `Cortex` launcher.
 
-* **Touchpad**: The review team requires `Cortex TV` games should not have any references to touchpad interaction. There should be no touchpad elements in menus or in game. 
+* **Touchpad**: The review team requires `Cortex` games should not have any references to touchpad interaction. There should be no touchpad elements in menus or in game. 
 
 * **Tutorial**: The review team recommends that the game initially starts with a tutorial about the different game modes in the game.
 
@@ -163,7 +163,7 @@ Here is TimG with a video tip on handling the safe area.
 
 ##Content No-No’s
 
-We want you to build imaginative, inventive games. To make sure `Cortex TV` has a great environment for gamers, there are a few things we don’t want to see on `Cortex TV`. First, make sure to rate your game according to `Cortex TV’s` Content Rating Guidelines below (be honest).  Then ensure your submitted screen-shots and Game Details text contains no explicit content. And finally, let’s avoid these:
+We want you to build imaginative, inventive games. To make sure `Cortex` has a great environment for gamers, there are a few things we don’t want to see on `Cortex`. First, make sure to rate your game according to `Cortex’s` Content Rating Guidelines below (be honest).  Then ensure your submitted screen-shots and Game Details text contains no explicit content. And finally, let’s avoid these:
 
 * **Hate Speech**: Do not promote hatred toward an individual or group of people based on their race or ethnic origin, religion, disability, gender, age, veteran status, or sexual orientation/gender identity in your game.  If you do, we’ll reject it.
 
@@ -175,11 +175,11 @@ We want you to build imaginative, inventive games. To make sure `Cortex TV` has 
 
 * **Intellectual Property**: Do not infringe on the intellectual property rights of others including patent, trademark, trade secret, copyright, and all other proprietary rights. The game details page should only include intellectual property that you own. Emulators must not include any `ROM` files from infringing games.
 
-* **Dangerous Products**: Do not transmit viruses, worms, malware, or any other items that may harm gamers or the `Cortex TV` platform.
+* **Dangerous Products**: Do not transmit viruses, worms, malware, or any other items that may harm gamers or the `Cortex` platform.
 
 * **Illegal Activities**: Use good judgment and do not break the law.
 
-* **`Cortex TV` Trademark**: You can use the `Cortex TV` name, logo, and trademark, but you have to respect that these are `Razer’s` intellectual property, so we want you to use them in a way that accurately portrays that your game is on `Cortex TV`.
+* **`Cortex` Trademark**: You can use the `Cortex` name, logo, and trademark, but you have to respect that these are `Razer’s` intellectual property, so we want you to use them in a way that accurately portrays that your game is on `Cortex`.
 
 * **Gambling**: Do not use or promote any real world gambling.
 
@@ -189,7 +189,7 @@ We want you to build imaginative, inventive games. To make sure `Cortex TV` has 
 
 ##In-App Purchasing & Technical Info
 
-You have to use `Cortex TV’s` In-App Payment API to take any payment. The In-App Payment API can be found in our `Cortex TV` Development Kit (ODK) at devs.ouya.tv. It supports micro-transactions and full game downloads as well as any content you want to unlock.
+You have to use `Cortex’s` In-App Payment API to take any payment. The In-App Payment API can be found in our `Cortex` Development Kit (ODK) at devs.ouya.tv. It supports micro-transactions and full game downloads as well as any content you want to unlock.
 
 You shouldn’t mislead users about any in-app services, goods, content or functionality.
 
@@ -205,9 +205,9 @@ The size of the initial Game’s download (the .apk file) should be 1.2 GB or le
 
 Games should run in full-screen mode and be playable in 720p and 1080p (it is TV ya know).
 
-Games should follow the `Cortex TV` [Interface Guidelines](https://devs.ouya.tv/developers/docs/interface-guidelines), including the names of the controller buttons and related UI standards.
+Games should follow the `Cortex` [Interface Guidelines](https://devs.ouya.tv/developers/docs/interface-guidelines), including the names of the controller buttons and related UI standards.
 
-* **IAP**: The review team requires that `IAP` functions properly in the `Cortex TV` store and in game. All purchasing for `Cortex TV` games must use the `Cortex TV` API for purchases.
+* **IAP**: The review team requires that `IAP` functions properly in the `Cortex` store and in game. All purchasing for `Cortex` games must use the `Cortex` API for purchases.
 
 * **Descriptions**: The review team requires `product` descriptions for store items are correct.
 
@@ -241,7 +241,7 @@ Games should follow the `Cortex TV` [Interface Guidelines](https://devs.ouya.tv/
 
 * **Premium Receipt Checking**: The review team requires that `entitlement` purchases and unlocked content should remain unlocked after the game is reinstalled.
 
-##Cortex TV Content Ratings
+##Cortex Content Ratings
 
 To help expedite your game’s review, we ask that you assign a content rating to your game that reflects the appropriateness of its content for different audiences. The rating scale is as follows:
 
@@ -257,12 +257,12 @@ To help expedite your game’s review, we ask that you assign a content rating t
 
 Please see the [content submission checklist](https://s3.amazonaws.com/ouya-docs/OUYA_Dev_ReviewChecklist.pdf) for the full list. Here are some important points to keep in mind:
 
-* Alcohol, Tobacco and Drugs: Illegal content is illegal on `Cortex TV`. That said, games that reference drugs, alcohol, or tobacco products are always rated 12+. Games that focus on drugs, alcohol, or tobacco are 17+. 
-* Gambling: This ain't Vegas, so games or apps that facilitate real gambling aren't allowed in `Cortex TV`. Gambling themes and simulated gambling will always be rated 12+ or 17+.
+* Alcohol, Tobacco and Drugs: Illegal content is illegal on `Cortex`. That said, games that reference drugs, alcohol, or tobacco products are always rated 12+. Games that focus on drugs, alcohol, or tobacco are 17+. 
+* Gambling: This ain't Vegas, so games or apps that facilitate real gambling aren't allowed in `Cortex`. Gambling themes and simulated gambling will always be rated 12+ or 17+.
 * Hate: We at `Razer` hate on hate. Please keep your speech clean and respect your fellow gamer.
 * Profanity and Crude Humor: We can't control how hard you laugh, but we can promise that any crude or profane humor will always be labeled 12+ or 17+.
-* Sexual and Suggestive Content: We know `Cortex TV` is one sleek, sexy console, but no: Pornography is never allowed. If games or apps suggest or make sexual references, they'll be rated 12+ or 17+. Focusing on these elements will result in a 17+ rating.
-* User Generated Content and User to User Communication: To protect the community, games or apps rated "everyone" cannot host user generated content or enable communication between users. And should `Cortex TV` players want to find and communicate with one another, those games will be rated 12+ or 17+.
+* Sexual and Suggestive Content: We know `Cortex` is one sleek, sexy console, but no: Pornography is never allowed. If games or apps suggest or make sexual references, they'll be rated 12+ or 17+. Focusing on these elements will result in a 17+ rating.
+* User Generated Content and User to User Communication: To protect the community, games or apps rated "everyone" cannot host user generated content or enable communication between users. And should `Cortex` players want to find and communicate with one another, those games will be rated 12+ or 17+.
 * Violence: We play violence safe. Games or apps that contain mild cartoon or fantasy violence are 9+, realistic or intense fantasy violence is 12+ or 17+, and graphic violence is always rated high maturity.
 * The `OUYA` name must be fully capitalized both in-game and on the game details page.
 * The content review team strongly recommends including a change list with submission updates as a polite heads up.
@@ -281,7 +281,7 @@ For any questions or clarifications, please contact us at `devsupport@ouya.tv`.
  
 * The icon that is shown in the app settings is embedded inside of the APK itself. The expected file is in `res/drawable/app_icon.png` and the image size must be `96x96`.
 
-The `732x412` icon displays in the Play section of the `Cortex TV` Launcher.
+The `732x412` icon displays in the Play section of the `Cortex` Launcher.
 
 <img src="https://s3.amazonaws.com/ouya-docs/images/PlayStore_732x412.png"/>
 

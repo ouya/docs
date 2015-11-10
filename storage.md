@@ -26,6 +26,6 @@ To retrieve all the stored data use the method :
 If no data is available a null will be returned.
 
 
-The data saved will be tied to an Android package name. It will not be possible for two games downloaded from the `Cortex TV` store to access the data from each other (because package names have to be unique for each game in the store), but it will be possible for side-loaded applications to use the same package name as your game and so could potentially manipulate it. Because of this you should not use this method for critical data without adding some form of check to the data to ensure the data has not been tampered with by a side-loaded application.
+The data saved will be tied to an Android package name. It will not be possible for two games downloaded from the `Cortex` store to access the data from each other (because package names have to be unique for each game in the store), but it will be possible for side-loaded applications to use the same package name as your game and so could potentially manipulate it. Because of this you should not use this method for critical data without adding some form of check to the data to ensure the data has not been tampered with by a side-loaded application.
 
 Remember that this data is on a per-package basis, it is still the game's responsibility to store things on a per-user basis (for consoles that have multiple accounts on them).

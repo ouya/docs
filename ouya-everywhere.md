@@ -1,6 +1,6 @@
 ## OUYA Everywhere
 
-The OUYA Everywhere initiative delivers `Cortex TV` to gamers wherever they play - whether or not they bought a box from us.  We're the open guys, right?  So why lock `Cortex TV` in a box? Even a beautiful one? `Cortex TV` is about games and game developers, not about the way you get it.
+The OUYA Everywhere initiative delivers `Cortex` to gamers wherever they play - whether or not they bought a box from us.  We're the open guys, right?  So why lock `Cortex` in a box? Even a beautiful one? `Cortex` is about games and game developers, not about the way you get it.
 
 ### Update the ODK
 
@@ -31,7 +31,7 @@ In order to help games be as portable as possible there are a set of new APIs av
 ## Device Identification
 
 While most games will work smoothly across all different devices, sometimes it may be necessary to specifically identify what hardware the game is running on.
-The simplest way to tell if the game is running on an `Cortex TV` supported device is:
+The simplest way to tell if the game is running on an `Cortex` supported device is:
 
 ```java
     public boolean isRunningOnOUYASupportedHardware();
@@ -113,7 +113,7 @@ Using this API will keep your game looking correct as new console hardware suppo
 
 ## Controller Input
 
-One common issue with Android games is supporting different controller hardware.  We've created an `API` which will remap input from various controller manufacturers to the standard `OUYA` button layout.  The remapping logic is provided by the `Cortex TV` Framework, and will be constantly updated to add support for more and more controllers.
+One common issue with Android games is supporting different controller hardware.  We've created an `API` which will remap input from various controller manufacturers to the standard `OUYA` button layout.  The remapping logic is provided by the `Cortex` Framework, and will be constantly updated to add support for more and more controllers.
 
 The easiest way to take advantage of this is by simply extending from the `OuyaActivity` class in the `ODK`.  This will do a couple things automatically for you:
 
@@ -197,7 +197,7 @@ If you are unable to extend the `OuyaActivity` (eg: the game engine you are usin
 
 ## Store Identification
 
-For developers who choose to use a single apk across multiple storefronts (`Cortex TV`, `OUYA`, `Google Play`, `Amazon`, etc), it can be important to identify which system the game was installed from -- especially now that some `Cortex TV` supported platforms also support `Google Play`.  One way to detect where your APK was installed from is by using <a href="http://developer.android.com/reference/android/content/pm/PackageManager.html#getInstallerPackageName(java.lang.String)">PackageManager.getInstallerPackageName</a>:
+For developers who choose to use a single apk across multiple storefronts (`Cortex`, `OUYA`, `Google Play`, `Amazon`, etc), it can be important to identify which system the game was installed from -- especially now that some `Cortex` supported platforms also support `Google Play`.  One way to detect where your APK was installed from is by using <a href="http://developer.android.com/reference/android/content/pm/PackageManager.html#getInstallerPackageName(java.lang.String)">PackageManager.getInstallerPackageName</a>:
 ```java
     final String installedFrom = getPackageManager().getInstallerPackageName(getPackageName());
     if ("com.android.vending".equals(installedFrom)) {
@@ -209,4 +209,4 @@ For developers who choose to use a single apk across multiple storefronts (`Cort
     }
 ```
 Note that if you install your development builds via `adb install mygame.apk` then PackageManager.getInstallerPackageName will return null.
-The `Cortex TV` installer package name has a few different possibilities based, which is why suggest using the `OuyaFacade.isRunningOnOUYASupportedHardware` method.
+The `Cortex` installer package name has a few different possibilities based, which is why suggest using the `OuyaFacade.isRunningOnOUYASupportedHardware` method.

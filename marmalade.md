@@ -141,7 +141,7 @@ Before calling the Marmalade ODK extension, an application should check if the e
 	}
 ```
 
-If the Marmalade ODK extension is available, [initialize](#ouyaplugin_initouyaplugin) it with the developer id found in the [Cortex TV developer portal](http://devs.ouya.tv).
+If the Marmalade ODK extension is available, [initialize](#ouyaplugin_initouyaplugin) it with the developer id found in the [Cortex developer portal](http://devs.ouya.tv).
 
 c++
 ```
@@ -164,7 +164,7 @@ void Application::InitOuyaPlugin()
 
 [Back to general info](enable_xiaomi_support.md#user-content-xiaomi-initialization)
 
-`OuyaPlugin_initOuyaPlugin` supports additional strings to make the game compatible with `Cortex TV` Everywhere devices.
+`OuyaPlugin_initOuyaPlugin` supports additional strings to make the game compatible with `Cortex` Everywhere devices.
 
 * `tv.ouya.developer_id` - The developer UUID can be found in the [developer portal](http://devs.ouya.tv) after logging in.
 
@@ -564,7 +564,7 @@ void ApplicationCallbacksRequestReceipts::OnCancel()
 
 ### Examples
 
-<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/MarmaladeODK"><b>Marmalade ODK Extension</b></a> - `Cortex TV` Controller and In-App-Purchase extension for Marmalade
+<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/MarmaladeODK"><b>Marmalade ODK Extension</b></a> - `Cortex` Controller and In-App-Purchase extension for Marmalade
 
 ### Virtual Controller ###
 
@@ -574,7 +574,7 @@ The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/M
 
 ### In-App-Purchases ###
 
-The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/InAppPurchases) example uses the `Cortex TV` ODK to access gamer info, purchasing, and receipts.
+The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Marmalade/InAppPurchases) example uses the `Cortex` ODK to access gamer info, purchasing, and receipts.
 
 ![In-App-Purchases](https://raw.githubusercontent.com/ouya/docs/master/marmalade/image_2.png)
 
@@ -616,7 +616,7 @@ app.icf - Override the default memory limits
 
 Application.h/cpp - Holds an instance of the UI, meant to hold application variables
 
-ApplicationCallbacksInitOuyaPlugin.h/cpp - Handles callbacks for success or failure events when initializing the `Cortex TV` plugin
+ApplicationCallbacksInitOuyaPlugin.h/cpp - Handles callbacks for success or failure events when initializing the `Cortex` plugin
 
 ApplicationCallbacksRequestGamerInfo.h/cpp - Handles callbacks coming from extension to the application with the result of RequestGamerInfo
 

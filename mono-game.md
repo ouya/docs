@@ -170,7 +170,7 @@ After checking input, be sure to invoke `ClearButtonStates` at the end of the dr
 
 ### Axises
 
-`MonoGame` uses the same `axis` constants that are used in the `Java` `Cortex TV` SDK.
+`MonoGame` uses the same `axis` constants that are used in the `Java` `Cortex` SDK.
 
 ```
 OuyaController.AXIS_LS_X
@@ -183,7 +183,7 @@ OuyaController.AXIS_R2
 
 ### Buttons
 
-`MonoGame` uses the same `button` constants that are used in the `Java` `Cortex TV` SDK.
+`MonoGame` uses the same `button` constants that are used in the `Java` `Cortex` SDK.
 
 ```
 OuyaController.BUTTON_O

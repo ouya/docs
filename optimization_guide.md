@@ -8,7 +8,7 @@ This document serves to give the reader ideas on where to start on the optimizat
 
 [PerfHUD ES](https://developer.nvidia.com/nvidia-perfhud-es) is a profiler that lets you inspect individual draw calls to find bottlenecks and performance leaks.
 Get started fast with the [quick-start guide](http://docs.nvidia.com/gameworks/index.html#developertools/mobile/perfhud_quickstart_guide.htm). 
-Follow the [general overview](http://error454.com/2013/11/14/profiling-ouya-tegra-3-games-using-nvidia-perfhud-es/) for profiling `Cortex TV` games.
+Follow the [general overview](http://error454.com/2013/11/14/profiling-ouya-tegra-3-games-using-nvidia-perfhud-es/) for profiling `Cortex` games.
 
 ## Steps ##
 

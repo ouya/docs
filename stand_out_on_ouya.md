@@ -1,12 +1,12 @@
-#Stand Out on Cortex TV
+#Stand Out on Cortex
 
-On `Cortex TV`, gamers have *a lot* of choices. 
+On `Cortex`, gamers have *a lot* of choices. 
 
 Read below for tips to make your game stand out. 
 
 We designed this guide to help you optimize your GAME DETAILS PAGE. Click on [GAMES](https://gamers.ouya.tv/developers/games) in the DEV PORTAL and click "EDIT" to get started.
 
-Game details show both on `Cortex TV` and on [OUYA.tv](https://www.ouya.tv/games/), so make your work shine!
+Game details show both on `Cortex` and on [OUYA.tv](https://www.ouya.tv/games/), so make your work shine!
 
 ###YOUR GAME ICON: A FIRST IMPRESSION
 Your GAME ICON is the first thing a GAMER sees about your game.

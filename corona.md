@@ -60,7 +60,7 @@
 
 Examples are included at the base GIT path.
 
-<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/VirtualController"><b>Virtual Controller</b></a> - Maps `Cortex TV` controllers to multiple virtual controllers
+<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/VirtualController"><b>Virtual Controller</b></a> - Maps `Cortex` controllers to multiple virtual controllers
 
 ####Corona Enterprise Examples
 
@@ -68,7 +68,7 @@ Examples are included at the base GIT path.
 
 ####Corona Pro Examples
 
-<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/Submission/ouya/docs/ouya/index.markdown"><b>InAppPurchasesPlugin</b></a> - Uses `Cortex TV` plugin for in-app-purchases for Mac and Windows (required Corona PRO)
+<a target=_blank href="https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/Submission/ouya/docs/ouya/index.markdown"><b>InAppPurchasesPlugin</b></a> - Uses `Cortex` plugin for in-app-purchases for Mac and Windows (required Corona PRO)
 
 ### Resources
 
@@ -117,14 +117,14 @@ Outlaw IDE - http://outlawgametools.com/outlaw-code-editor-and-project-manager/
 #Full Document
 
 ### Audience
-The ouya-sdk-examples are targeted towards Corona Enterprise users intending to publish to the `Cortex TV` platform.
+The ouya-sdk-examples are targeted towards Corona Enterprise users intending to publish to the `Cortex` platform.
 
 ### Supported Platforms
 Building Corona Enterpise examples that use Android java requires the Mac platform.
 Samples that use the [OUYA Plugin for Corona](https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/Submission/ouya/docs/ouya/index.markdown) will build on Mac or Windows.
 
 ### Introduction
-Welcome to the Corona Enterprise development club. These examples provide a quick way to add `Cortex TV` controllers and in-app-purchase support to your game.
+Welcome to the Corona Enterprise development club. These examples provide a quick way to add `Cortex` controllers and in-app-purchase support to your game.
 
 ### Corona Simulator
 
@@ -142,7 +142,7 @@ Corona scripts are Lua scripts.
 
 The Corona Simulator doesn't have direct access to the Android.manifest, where build.settings gives you access to modify settings indirectly.
 
-Add the intent filter so that your game appears in the `Cortex TV` Play Category.
+Add the intent filter so that your game appears in the `Cortex` Play Category.
 
 ```
 settings =
@@ -358,7 +358,7 @@ android update project --path .
 
 #### libs/ouya-sdk.jar
 
-The `Cortex TV` ODK library used by Corona.
+The `Cortex` ODK library used by Corona.
 
 #### src/.../CoronaApplication.java
 
@@ -507,7 +507,7 @@ end
 
 [Back to general info](enable_xiaomi_support.md#user-content-create-a-xiaomi-specific-icon)
 
-The `Corona` [documentation](http://docs.coronalabs.com/daily/guide/distribution/buildSettings/index.html#ouya) has info about how to include `Cortex TV` and `Xiaomi` store icons. 
+The `Corona` [documentation](http://docs.coronalabs.com/daily/guide/distribution/buildSettings/index.html#ouya) has info about how to include `Cortex` and `Xiaomi` store icons. 
 
 * The `Icon-ouya.png` should be 732x412 and placed into your Corona project fodler.
 
@@ -515,11 +515,11 @@ The `Corona` [documentation](http://docs.coronalabs.com/daily/guide/distribution
 
 # API
 
-In order to use the `Cortex TV` plugin be sure to include the [plugin_ouya.lua](https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/Submission/ouya/samples/InAppPurchasesPlugin/Corona/plugin_ouya.lua) script in your `Corona` project folder.
+In order to use the `Cortex` plugin be sure to include the [plugin_ouya.lua](https://github.com/ouya/ouya-sdk-examples/blob/master/Corona/Submission/ouya/samples/InAppPurchasesPlugin/Corona/plugin_ouya.lua) script in your `Corona` project folder.
 
 ## Is Available
 
-When a `Corona` game starts be sure to check that the `Cortex TV` plugin is available before loading the game. Games that do not check `IsAvailable` may flicker or appear to load twice.
+When a `Corona` game starts be sure to check that the `Cortex` plugin is available before loading the game. Games that do not check `IsAvailable` may flicker or appear to load twice.
 
 ```
 local ouya = require("plugin.ouya") -- load the ouya plugin

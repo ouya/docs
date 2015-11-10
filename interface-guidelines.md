@@ -1,6 +1,6 @@
 ## Interface Guidelines
 
-Games can use the `Cortex TV` controller buttons however they wish, but we recommend the mappings below for the **A**, **B**, **X**, and **Y** buttons. If you are running a stock Android application that is not `Cortex TV` aware, this is also how the buttons will be mapped to the standard Android navigation buttons on the navigation bar for a typical device.
+Games can use the `Cortex` controller buttons however they wish, but we recommend the mappings below for the **A**, **B**, **X**, and **Y** buttons. If you are running a stock Android application that is not `Cortex` aware, this is also how the buttons will be mapped to the standard Android navigation buttons on the navigation bar for a typical device.
 
 The [OUYA-Everywhere](ouya-everywhere.md#user-content-controller-images) API is available to access button images and text for use in your games.
 

@@ -1,6 +1,6 @@
 # In-App Purchasing
 
-In-App Purchasing (IAP) is how your app can make money.  The `Cortex TV` Developer Kit (ODK) is designed to be both easy to use and secure.
+In-App Purchasing (IAP) is how your app can make money.  The `Cortex` Developer Kit (ODK) is designed to be both easy to use and secure.
 
 ## Definitions
 
@@ -53,7 +53,7 @@ In-App Purchasing (IAP) is how your app can make money.  The `Cortex TV` Develop
 
 ## Creating Products
 
-In order for users to give you money, you must first create products for them to buy.  This is done on the `Cortex TV` website via the [Developer Portal](https://devs.ouya.tv/developers).
+In order for users to give you money, you must first create products for them to buy.  This is done on the `Cortex` website via the [Developer Portal](https://devs.ouya.tv/developers).
 After logging in, click on the **Products** menu and then the **New Product** link.  This will take you to a page where you can create a new product.
 
 ## Adding products to your App
@@ -111,9 +111,9 @@ Of course, when your application is finished, it is polite to inform the `OuyaFa
 
 Now we're ready for some real action!
 
-### Check for `Cortex TV` hardware
+### Check for `Cortex` hardware
 
-Before invoking in-app-purchase methods check if you are running `Cortex TV` hardware.
+Before invoking in-app-purchase methods check if you are running `Cortex` hardware.
 
 ```java
 if (ouyaFacade.isRunningOnOUYASupportedHardware())
@@ -136,7 +136,7 @@ Once the products have been created, you may want your application to query the 
 	public static final List<Purchasable> PRODUCT_ID_LIST =
 		Arrays.asList(new Purchasable("sharp_sword"));
 ```
-Since this request has to travel across the Internet to the `Cortex TV` servers, the response will be returned via a callback mechanism.  It is up to your application to create an appropriate listener object.  Listeners extend the `OuyaResponseListener` and have three callback methods:
+Since this request has to travel across the Internet to the `Cortex` servers, the response will be returned via a callback mechanism.  It is up to your application to create an appropriate listener object.  Listeners extend the `OuyaResponseListener` and have three callback methods:
 
 * **onSuccess**	- the request succeeded and the requested data is passed back
 * **onFailure**	- the request failed and the error is passed back
@@ -276,7 +276,7 @@ To enable testing with multiple accounts we plan to allow developers to add a li
 ## Common onFailure errors
 
 We have provided a class which will handle some of the common errors which the 
-The `Cortex TV` framework may report to your application. Using this helper class may cause your application to be forced into the background while the user enters their username and/or password.
+The `Cortex` framework may report to your application. Using this helper class may cause your application to be forced into the background while the user enters their username and/or password.
 
 To use this in your onFailure methods you should use the following code:
 
@@ -289,7 +289,7 @@ To use this in your onFailure methods you should use the following code:
                                     listener );
 ```
 
-Where context is the current Context, errorCode, errorMessage, and optionalData are the parameters passed to your onFailure method, AUTHENTICATION_ACTIVITY_ID is an ID which will be passed to your Activities onActivityResult method if the error handler needs to start the `Cortex TV` user authentication Activity, and listener is an OuyaResponseListener<Void> object which is called with the result of a request to add a user account if no accounts are already present on the system.
+Where context is the current Context, errorCode, errorMessage, and optionalData are the parameters passed to your onFailure method, AUTHENTICATION_ACTIVITY_ID is an ID which will be passed to your Activities onActivityResult method if the error handler needs to start the `Cortex` user authentication Activity, and listener is an OuyaResponseListener<Void> object which is called with the result of a request to add a user account if no accounts are already present on the system.
 
 If the helper can handle the error the method will return true, if it can not it will return false.
 
@@ -335,7 +335,7 @@ Some of the many reasons to do so are:
 
 - A voucher may have been redeemed while the game wasn't running.
 - An entitlement may have been revoked by a customer service representative.
-- A success response may not have reached your application (e.g. if the users broadband connection drops out while `Cortex TV's` servers are authorising the payment).
+- A success response may not have reached your application (e.g. if the users broadband connection drops out while `Cortex's` servers are authorising the payment).
 - The gamer cancelled his/her subscription.
 
 An important thing to note is that a gamer's set of entitlements can change without the game running, thus doing things like saving off a "game has been purchased" flag and using that as the authoratative truth doesn't work correctly.  Be sure to query the servers to ensure users are presented with the correct set of options (eg: "buy now" or "play full game").

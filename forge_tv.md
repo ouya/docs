@@ -1,10 +1,10 @@
-# Put Your Game on `Razer Cortex TV`
+# Put Your Game on `Razer Cortex`
 
 `OUYA Publishing` is in the process of testing games in the `OUYA Store` for compatibility on `Cortex`, Razer's appstore for `Forge TV`.
 
 Some games are perfectly functional, whereas other games may have issues with input, and other games may have cosmetic issues with button images.
 
-This document will help you put your game on `Razer Cortex TV` (the storefront for the Forge TV) by making your game `OUYA Everywhere` compliant.
+This document will help you put your game on `Razer Cortex` (the storefront for the Forge TV) by making your game `OUYA Everywhere` compliant.
 
 ## Table of Contents
 
@@ -86,11 +86,11 @@ Developers can also design custom button images, as long as  images reflect `For
 
 ![image_1](forge_tv/image_1.png)
 
-Games need to be updated to use `Cortex TV` button images that had previously used `OUYA` or `non-Cortex TV` button images.
+Games need to be updated to use `Cortex` button images that had previously used `OUYA` or `non-Cortex` button images.
 
 ![image_2](forge_tv/image_2.png)
 
-Button legends should show the `Forge TV` button images. It's best to use the `Cortex TV` API to get the button images at runtime. Alternatively, the button images can be baked or hardcoded into the game.
+Button legends should show the `Forge TV` button images. It's best to use the `Cortex` API to get the button images at runtime. Alternatively, the button images can be baked or hardcoded into the game.
 
 ![image_3](forge_tv/image_3.png)
 

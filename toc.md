@@ -4,7 +4,7 @@
 **Setup**
 * [App Setup](app_setup.md)
 * [Environment Setup](env_setup.md)
-* [Put Your Game on Cortex TV](forge_tv.md)
+* [Put Your Game on Cortex](forge_tv.md)
 
 **API**
 * [Controllers](controllers.md)
@@ -16,7 +16,7 @@
 **Guidelines**
 * [Content and Review](content-review-guidelines.md)
 * [Enable On Xiaomi](enable_xiaomi_support.md)
-* [Stand Out on Cortex TV](stand_out_on_ouya.md)
+* [Stand Out on Cortex](stand_out_on_ouya.md)
 * [User Interface](interface-guidelines.md)
 
 **Game Engines**

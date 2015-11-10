@@ -95,7 +95,7 @@ After creating the mod, you'll find there aren't any methods for actually modify
     }
 ```
 
-In order to save content, you must include at least one file and only one screenshot.  Since files and screenshots are managed by the `Cortex TV` Framework, you must request a file through the `OuyaMod.Editor` class:
+In order to save content, you must include at least one file and only one screenshot.  Since files and screenshots are managed by the `Cortex` Framework, you must request a file through the `OuyaMod.Editor` class:
 
 ```java
     OuyaContent.SaveListener mSaveListener = ...;

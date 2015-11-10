@@ -10,7 +10,7 @@
 
 ShiVa is an easy to learn commercial 3D game engine. There is a free version of the software that allows you to freely evaluate it. Android exports made from the free version will bare a watermark but there aren't any time limits etc.
 
-The known list of `Cortex TV` games made using this engine:
+The known list of `Cortex` games made using this engine:
 
 [Arc](https://www.ouya.tv/game/Arc/)
 
@@ -28,4 +28,4 @@ The known list of `Cortex TV` games made using this engine:
 
 ### ODK Integration
 
-When your game is finished, ShiVa gives you a barebones android project that can be opened in eclipse. The ODK can be implemented in seconds using the free `Cortex TV` Build System (courtesy of Hypercane Studios). The documentation for the build tool and a working sample project illustrating in-app purchasing and controller support are maintained in [this open source repo](https://github.com/error454/HyperOUYA).
+When your game is finished, ShiVa gives you a barebones android project that can be opened in eclipse. The ODK can be implemented in seconds using the free `Cortex` Build System (courtesy of Hypercane Studios). The documentation for the build tool and a working sample project illustrating in-app purchasing and controller support are maintained in [this open source repo](https://github.com/error454/HyperOUYA).

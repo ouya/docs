@@ -10,7 +10,7 @@ This document is for developers that uses Java to make apps for Android. The doc
 
 ## Releases
 
-Java apps/games use the `ouya-sdk.jar` library included in the `ODK` downloadable from the [Cortex TV developer portal](http://devs.ouya.tv).
+Java apps/games use the `ouya-sdk.jar` library included in the `ODK` downloadable from the [Cortex developer portal](http://devs.ouya.tv).
 
 ## Xiaomi Libraries
 
@@ -43,8 +43,8 @@ Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in
 	// Your developer id can be found in the Developer Portal
 	public static final String DEVELOPER_ID = "00000000-0000-0000-0000-000000000000";
 
-	// Both of these values will be emailed to you by the Cortex TV team after you've been 
-	// selected by the Cortex TV team
+	// Both of these values will be emailed to you by the Cortex team after you've been 
+	// selected by the Cortex team
 	public static final String XIAOMI_APP_ID = "0000000000000";
 	public static final String XIAOMI_APP_KEY = "000000000000000000";
 

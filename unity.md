@@ -12,7 +12,7 @@
  <tr>
  <td>Controller with NGUI (2:08)<br/>
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=pN9deVg4nd8" target="_blank">
-<img src="http://img.youtube.com/vi/pN9deVg4nd8/0.jpg" alt="Cortex TV Controller Support for NGUI on Unity" width="240" height="180" border="10" /></a>
+<img src="http://img.youtube.com/vi/pN9deVg4nd8/0.jpg" alt="Cortex Controller Support for NGUI on Unity" width="240" height="180" border="10" /></a>
  </td>
  <td></td>
  </tr>
@@ -26,7 +26,7 @@ Several Unity packages are available from the [ouya-sdk-examples releases](https
 
 * [Unity OuyaSDK-Examples.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Examples) - Package includes Virtual Controller, InAppPurchase, Safe Area, and Community Content examples 
 
-* [Unity OuyaSDK-StarterKit.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-StarterKit) - Starter Kit for jumping into `Cortex TV` programming
+* [Unity OuyaSDK-StarterKit.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-StarterKit) - Starter Kit for jumping into `Cortex` programming
 
 * [Unity-OuyaSDK-Xiaomi.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Xiaomi) - Files and Android.manifest changes for publishing to Xiaomi
 
@@ -46,13 +46,13 @@ The source code for OUYA-Everywhere with Unity can be found within the [ouya-sdk
 
 # Overview #
 
-This document covers importing the core package, installing dependencies, building, and publishing your game to `Cortex TV`.
+This document covers importing the core package, installing dependencies, building, and publishing your game to `Cortex`.
 
 # Intro #
 
-The ouya-core.unitypackage contains a static access class for accessing input and the `Cortex TV` SDK API for the Unity game engine. The input API makes it possible to build your game and without needing to rebuild will automatically add future support for new controllers and devices while still correctly mapping for your game. The input API also adds new features like being able to consistently know which controller maps to a player number. And if a controller disconnects and reconnects it will maintain the same player number. The input API makes it possible to detect if a controller has been disconnected.
+The ouya-core.unitypackage contains a static access class for accessing input and the `Cortex` SDK API for the Unity game engine. The input API makes it possible to build your game and without needing to rebuild will automatically add future support for new controllers and devices while still correctly mapping for your game. The input API also adds new features like being able to consistently know which controller maps to a player number. And if a controller disconnects and reconnects it will maintain the same player number. The input API makes it possible to detect if a controller has been disconnected.
 
-This input API is targeted for `Cortex TV` and is not maintained as a cross-platform input system.
+This input API is targeted for `Cortex` and is not maintained as a cross-platform input system.
 
 # Updating #
 
@@ -78,9 +78,9 @@ Import the OuyaSDK-Core.unitypackage.
 
 `Ouya\SDK\Editor\OuyaPanel.cs` - Provides example switcher to auto change package name and icons
 
-`Ouya\SDK\Prefabs\OuyaGameObject.prefab` - Add the prefab to the initial scene for apps/games to enable the `Cortex TV` Plugin
+`Ouya\SDK\Prefabs\OuyaGameObject.prefab` - Add the prefab to the initial scene for apps/games to enable the `Cortex` Plugin
 
-`Ouya\SDK\Scripts\OuyaGameObject.cs` - Handles communication with the `Cortex TV` Plugin between C#, C++, and Java
+`Ouya\SDK\Scripts\OuyaGameObject.cs` - Handles communication with the `Cortex` Plugin between C#, C++, and Java
 
 ![image alt text](ouya-everywhere-unity/image_21.png)
 
@@ -90,17 +90,17 @@ Import the OuyaSDK-Core.unitypackage.
 
 `Plugins\Android\assets\key.der` - The signing key from the developer portal
 
-`Plugins\Android\libs\armeabi-v7a\lib-ouya-ndk.so` - Prebuilt native library for the `Cortex TV` Plugin
+`Plugins\Android\libs\armeabi-v7a\lib-ouya-ndk.so` - Prebuilt native library for the `Cortex` Plugin
 
-`Plugins\Android\libs\armeabi\lib-ouya-ndk.so` - Prebuilt native library for the `Cortex TV` Plugin
+`Plugins\Android\libs\armeabi\lib-ouya-ndk.so` - Prebuilt native library for the `Cortex` Plugin
 
-`Plugins\Android\libs\x86\lib-ouya-ndk.so` - Prebuilt native library for the `Cortex TV` Plugin
+`Plugins\Android\libs\x86\lib-ouya-ndk.so` - Prebuilt native library for the `Cortex` Plugin
 
-`Plugins\Android\libs\ouya-sdk.jar` - The `Cortex TV` SDK Java library
+`Plugins\Android\libs\ouya-sdk.jar` - The `Cortex` SDK Java library
 
-`Plugins\Android\OuyaUnityPlugin.jar` - Prebuilt `Cortex TV` Unity Plugin Java library
+`Plugins\Android\OuyaUnityPlugin.jar` - Prebuilt `Cortex` Unity Plugin Java library
 
-`Plugins\Android\res\raw\drawable-xhdpi\ouya_icon.png` - The 732x412 `Cortex TV` Store icon
+`Plugins\Android\res\raw\drawable-xhdpi\ouya_icon.png` - The 732x412 `Cortex` Store icon
 
 `Plugins\Android\res\raw\drawable\app_icon.png` - The 96x96 settings icon
 
@@ -114,9 +114,9 @@ Files within `Plugins` make scripts available to `C#` and `JavaScript` developer
 
 `Plugins\JSONObject.cs` - JNI hooks for using Android JSON Object parsing
 
-`Plugins\OuyaController.cs` - JNI hooks for interacting with the `Cortex TV` Controllers
+`Plugins\OuyaController.cs` - JNI hooks for interacting with the `Cortex` Controllers
 
-`Plugins\OuyaSDK.cs` - The `Cortex TV` Plugin SDK methods for input and in-app-purchases
+`Plugins\OuyaSDK.cs` - The `Cortex` Plugin SDK methods for input and in-app-purchases
 
 ![image alt text](ouya-everywhere-unity/image_23.png)
 
@@ -262,15 +262,15 @@ In the Android `Player Settings` and within the `Other Settings` subgroup, here 
 
 # Dependencies #
 
-The `Cortex TV` Plugin has dependencies on the Android SDK for packaging and deploying Android applications.
+The `Cortex` Plugin has dependencies on the Android SDK for packaging and deploying Android applications.
 
-The `Cortex TV` Plugin includes prebuilt Java and Native plugins, recompiling the Java and Native plugin is no longer required.
+The `Cortex` Plugin includes prebuilt Java and Native plugins, recompiling the Java and Native plugin is no longer required.
 
 Android SDK - [http://developer.android.com/sdk/index.html?hl=sk](http://developer.android.com/sdk/index.html?hl=sk)
 
-# Cortex TV SDK API #
+# Cortex SDK API #
 
-Be sure to be on the `Android` platform before invoking the `Cortex TV` SDK API.
+Be sure to be on the `Android` platform before invoking the `Cortex` SDK API.
 
 ```
 #if UNITY_ANDROID && !UNITY_EDITOR
@@ -1721,13 +1721,13 @@ If you are on Windows if you install the [[Tegra Android Developer Pack]](https:
 
 # Legacy (old files no longer needed) #
 
-If you used previous versions of the `Cortex TV` Unity Plugin many of the old files are no longer needed and can be considered legacy.
+If you used previous versions of the `Cortex` Unity Plugin many of the old files are no longer needed and can be considered legacy.
 
 Some legacy files are not required to be imported or can be removed.
 
 ## Legacy InputManager.asset (Removed) ##
 
-The InputManager Mappings file is no longer used by the plugin. So you may choose to keep your existing mapping file which is used for `non-Cortex TV` platforms.
+The InputManager Mappings file is no longer used by the plugin. So you may choose to keep your existing mapping file which is used for `non-Cortex` platforms.
 
 ```
 ProjectSettings/InputManager.asset
