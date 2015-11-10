@@ -14,7 +14,7 @@ This document will help you put your game on `Razer Cortex` (the storefront for 
 
 [Notes](forge_tv.md#user-content-notes)
 
-[Engines That Support C TV](forge_tv.md#user-content-engines-that-support-forge-tv)
+[Engines That Support Forge TV](forge_tv.md#user-content-engines-that-support-forge-tv)
 
 [Step 1. Upgrade the OUYA-Everywhere Plugin](forge_tv.md#user-content-step-1-upgrade-the-ouya-everywhere-plugin)
 
