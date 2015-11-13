@@ -167,6 +167,14 @@ Rebranching releases are handled for you, and the following documents the proces
 
 * Build and test the example apps.
 
+**Commit:**
+
+* Add to `.gitignore` so that `ouya-sdk.jar` can be committed.
+
+```
+!/Engine/Build/Android/Java/libs/ouya-sdk.jar
+```
+
 ## Build UE4
 
 * Download the [4.9-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) to get the `Cortex fork` of the `Unreal Engine`
