@@ -31,6 +31,8 @@
 
 * After linking your Github account, you should have access to the `Cortex` Branches
 
+* [4.10-Cortex branch](https://github.com/tgraupmann/UnrealEngine/tree/4.10-Cortex) for the `Cortex` Fork of UE4
+
 * [4.9-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.9-OUYA) for the `Cortex` Fork of UE4
 
 * [4.8-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.8-OUYA) for the `Cortex` Fork of UE4
@@ -118,12 +120,59 @@ A specific version of TADP needs to be installed which is found in the `Engine\E
 
 * [BLUI](https://forums.unrealengine.com/showthread.php?58192-PLUGIN-BLUI-Open-Source-HTML5-JS-CSS-HUD-UI-Release-1-0!) - BLUI is an open-source HTML renderer to make fancy UIs by embedding a browser into UE4    
 
+### Branch Upgrade Guide
+
+As `UnrealEngine` releases occur, the branch is forked and then merged into a corresponding 4.X-Cortex branch.
+Rebranching releases are handled for you, and the following documents the process.
+
+**Remote:**
+
+* Add a GIT `remote` to the fork of `EpicGames\UnrealEngine` and copy the latest 4.X branch into a new local 4.X branch.
+
+* Remove the GIT remote to `EpicGames\UnrealEngine` and push the new branch.
+
+* Create a new branch from the `4.X` branch to `4.X-Cortex`.
+
+**Native Plugin Changes:**
+
+* Merge `Engine\Build\Android\Java\jni\Application.mk` to ensure that Android API Level 16 or better can use the `Cortex SDK`.
+
+* Copy `ouya-sdk.jar` to the Android libs folder `Engine\Build\Android\Java\libs`.
+
+**Java Engine Changes:**
+
+* Manually merge Android Java source changes `Engine\Build\Android\Java\src`.
+
+**C++ Launcher Changes:**
+
+* Manually merge JNI and Launch changes `Engine\Source\Runtime\Launch\Private\Android`.
+
+**C++ Engine Blueprints:**
+
+* Manually merge Engine header blueprints `Engine\Source\Runtime\Engine\Classes\OuyaSDK`.
+
+* Manually merge Engine source blueprints `Engine\Source\Runtime\Engine\Private\OuyaSDK`.
+
+**Build:**
+
+* Rerun `GenerateProjectFiles.bat` to generate `UE4.sln`.
+
+* Open `UE4.sln` in `Visual Studio 2015`.
+
+* Build `Development Editor` for `Win64`.
+
+* Build `Development` for `Android`.
+
+* Launch `Development Editor` for `Win64`.
+
+* Build and test the example apps.
+
 ## Build UE4
 
-* Download the [4.6-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) to get the `Cortex fork` of the `Unreal Engine`
+* Download the [4.9-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) to get the `Cortex fork` of the `Unreal Engine`
 
 ```
-git clone -b 4.6-OUYA https://github.com/tgraupmann/UnrealEngine
+git clone -b 4.9-OUYA https://github.com/tgraupmann/UnrealEngine
 Cloning into 'UnrealEngine'...
 remote: Counting objects: 243979, done.
 remote: Compressing objects: 100% (53/53), done.
