@@ -461,6 +461,8 @@ The `IAP` example exposes the request purchase dialog.
 
 ![Screenshot](unreal/image_70.png)
 
+* Note: When opening the IAP sample app, set the project settings -> Android -> Android Package Name to `tv.ouya.examples.unreal.inapppurchases`.
+
 The `OuyaSDK` provides methods to access In-App-Purchases:
 
 * AddInitOuyaPluginValues - Use to set the `Developer Id`
