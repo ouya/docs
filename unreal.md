@@ -177,10 +177,10 @@ Rebranching releases are handled for you, and the following documents the proces
 
 ## Build UE4
 
-* Download the [4.9-OUYA branch](https://github.com/tgraupmann/UnrealEngine/tree/4.6-OUYA) to get the `Cortex fork` of the `Unreal Engine`
+* Download the [4.10-Cortex branch](https://github.com/tgraupmann/UnrealEngine/tree/4.10-Cortex) to get the `Cortex fork` of the `Unreal Engine`
 
 ```
-git clone -b 4.9-OUYA https://github.com/tgraupmann/UnrealEngine
+git clone -b 4.10-Cortex https://github.com/tgraupmann/UnrealEngine
 Cloning into 'UnrealEngine'...
 remote: Counting objects: 243979, done.
 remote: Compressing objects: 100% (53/53), done.
