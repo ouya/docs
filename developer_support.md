@@ -1803,12 +1803,6 @@ Q: How do we contact you again? (I have completely forgotten???) ([57:32](http:/
 
 - jared@ouya.tv
 
-- kellee@ouya.tv
-
-- tadhg@ouya.tv
-
-- alex@ouya.tv
-
 - tgraupmann@ouya.tv
 
 
