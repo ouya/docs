@@ -309,6 +309,10 @@ The `AndroidManifest.xml` application logo defines the name of the `leanback ico
     android:logo="@drawable/icon"
 ```
 
+The `320x180` `leanback icon` displays in the `Android TV` default launcher in a `Games` row when installed.
+
+![Games Row](content-review-guidelines/image_1.png)
+
 ## Video
 
 * In the developer portal after you've created the game entry, an edit link will appear. You can use this edit link to alter the description, add screenshots, submit new builds, and add video for your title. Your list of games can be found <a target=_blank href="https://gamers.ouya.tv/developers/games">[here]</a>.
