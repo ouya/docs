@@ -277,6 +277,8 @@ For any questions or clarifications, please contact us at `devsupport@ouya.tv`.
 
 ##Icons
 
+### Store Icon
+
 * The `store icon` that is shown in the `Cortex` launcher is embedded inside of the `APK` itself. The expected file is in `res/drawable-xhdpi/ouya_icon.png` and the image size must be `732x412`.
 
 The `732x412` `store icon` displays in the `Play` section of the `Cortex` Launcher.
@@ -286,6 +288,8 @@ The `732x412` `store icon` displays in the `Play` section of the `Cortex` Launch
 The `732x412` `store icon` displays in the `Discover` section of the `Cortex` Launcher.
 
 <img src="https://s3.amazonaws.com/ouya-docs/images/Discover_732x412.png"/>
+
+### Default Icon
  
 * The `default icon` that is shown in the app settings is embedded inside of the `APK` itself. The expected file is in `res/drawable/app_icon.png` and the image size must be `96x96`.
 
@@ -300,7 +304,9 @@ The `96x96` `default icon` displays on some legacy Android settings pages.
 
 <img src="https://s3.amazonaws.com/ouya-docs/images/Settings_96x96.png"/>
 
-* The [leanback icon](https://developer.nvidia.com/android-tv-developer-guide#leanback_banner) is shown in the `Android TV` launcher when the game is installed. The expected file is in `/res/drawable/icon.png` and the image size must be `320x180`.
+### Leanback Icon
+
+* The [leanback icon](https://developer.nvidia.com/android-tv-developer-guide#leanback_banner) is shown in the `Android TV` default launcher when the game is installed. The expected file is in `/res/drawable/icon.png` and the image size must be `320x180`.
 
 The `AndroidManifest.xml` application logo defines the name of the `leanback icon`.
 
