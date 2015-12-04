@@ -277,21 +277,37 @@ For any questions or clarifications, please contact us at `devsupport@ouya.tv`.
 
 ##Icons
 
-* The application image that is shown in the launcher is embedded inside of the APK itself. The expected file is in `res/drawable-xhdpi/ouya_icon.png` and the image size must be `732x412`.
- 
-* The icon that is shown in the app settings is embedded inside of the APK itself. The expected file is in `res/drawable/app_icon.png` and the image size must be `96x96`.
+* The `store icon` that is shown in the `Cortex` launcher is embedded inside of the `APK` itself. The expected file is in `res/drawable-xhdpi/ouya_icon.png` and the image size must be `732x412`.
 
-The `732x412` icon displays in the Play section of the `Cortex` Launcher.
+The `732x412` `store icon` displays in the `Play` section of the `Cortex` Launcher.
 
 <img src="https://s3.amazonaws.com/ouya-docs/images/PlayStore_732x412.png"/>
 
-The `732x412` icon displays in the Discover section of the OUYA Launcher.
+The `732x412` `store icon` displays in the `Discover` section of the `Cortex` Launcher.
 
 <img src="https://s3.amazonaws.com/ouya-docs/images/Discover_732x412.png"/>
+ 
+* The `default icon` that is shown in the app settings is embedded inside of the `APK` itself. The expected file is in `res/drawable/app_icon.png` and the image size must be `96x96`.
 
-The `96x96` icon displays on some legacy Android settings pages.
+The `AndroidManifest.xml` application icon defines the name of the `default icon`.
+
+```
+<application
+    android:icon="@drawable/app_icon"
+```
+
+The `96x96` `default icon` displays on some legacy Android settings pages.
 
 <img src="https://s3.amazonaws.com/ouya-docs/images/Settings_96x96.png"/>
+
+* The [leanback icon](https://developer.nvidia.com/android-tv-developer-guide#leanback_banner) is shown in the `Android TV` launcher when the game is installed. The expected file is in `/res/drawable/icon.png` and the image size must be `320x180`.
+
+The `AndroidManifest.xml` application logo defines the name of the `leanback icon`.
+
+```
+<application
+    android:logo="@drawable/icon"
+```
 
 ## Video
 
