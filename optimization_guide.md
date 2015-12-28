@@ -7,7 +7,7 @@ This document serves to give the reader ideas on where to start on the optimizat
 ## NVIDIA PerfHUD ES ##
 
 [PerfHUD ES](https://developer.nvidia.com/nvidia-perfhud-es) is a profiler that lets you inspect individual draw calls to find bottlenecks and performance leaks.
-Get started fast with the [quick-start guide](http://docs.nvidia.com/gameworks/index.html#developertools/mobile/perfhud_quickstart_guide.htm). 
+Get started fast with the [quick-start guide](http://docs.nvidia.com/gameworks/index.html#developertools/mobile/perfhud_es/perfhud_quickstart_guide.htm). 
 Follow the [general overview](http://error454.com/2013/11/14/profiling-ouya-tegra-3-games-using-nvidia-perfhud-es/) for profiling `Cortex` games.
 
 ## Steps ##
@@ -37,6 +37,13 @@ Follow the [general overview](http://error454.com/2013/11/14/profiling-ouya-tegr
 6 - Run the `NVPerfHUD` profiler to measure draw calls and inspect performance.
 
 * Note: Be sure that the `android.permission.INTERNET` permission is enabled in the `AndroidManifest.xml` to ensure the profiler can be used.
+
+* Note: Enable the `NVPerfHUD` profiler on the `Cortex` device.
+
+```
+adb shell setprop debug.perfhudes 1
+```
+
 
 ## Share ##
 
