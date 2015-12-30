@@ -284,6 +284,13 @@ Be sure to be on the `Android` platform before invoking the `Cortex` SDK API.
 #endif
 ```
 
+## Intellisense ##
+
+To enable intellisense for `UNITY_ANDROID` and not `UNITY_EDITOR`, be sure to edit the project settings and remove the `UNITY_EDITOR` from the debug symbols.
+If Unity regenerates the solution/project, the debug symbols will be readded which will need to be removed again to get intellisense back.
+
+![image_32.png](ouya-everywhere-unity/image_32.png)
+
 ## Initialization ##
 
 Initialization is handled by the `OuyaGameObject` being placed in your initial scene.
