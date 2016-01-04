@@ -583,3 +583,7 @@ Implement the listeners to pass to the `OuyaFacade` IAP methods.
 			}
 		};
 ```
+
+## More
+
+* Be sure to check out the [in-app-purchasing](https://github.com/ouya/docs/blob/master/purchasing.md#in-app-purchasing) document for additional `IAP` details.
