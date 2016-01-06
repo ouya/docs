@@ -573,6 +573,16 @@ Unity 4.6 introduced `Unity GUI`. You will need to connect `OE-Input` with the `
 
 * Be sure to update to the latest `InControl` package to ensure `Forge TV` compatibility.
 
+<table border=1>
+ <tr>
+ <td>Setup InControl (3:55)<br/>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=xlG1ulSghNw" target="_blank">
+<img src="http://img.youtube.com/vi/xlG1ulSghNw/0.jpg" alt="Unity - Setup InControl for Razer Forge TV " width="240" height="180" border="10" /></a>
+ </td>
+ <td></td>
+ </tr>
+</table>
+
 # Pause #
 
 The Pause event fires when the game is paused which could mean that the purchase dialog is opening or that the game is exiting. This event gives you a chance to pause the game or to exit cleanly.
