@@ -6,7 +6,7 @@ This document serves to give the reader ideas on where to start on the optimizat
 
 ## Snapdragon Profiler ##
 
-The Qualcomm developer portal has the [Snapdragon Profiler](https://developer.qualcomm.com/software/snapdragon-profiler) for finding performance bottlenecks and troubleshooting issues on Snapdragon devices like the `Forge TV`. The profiler runs on Linux, Mac, and Windows and connects to `ADB` devices.
+The Qualcomm developer portal has the [Snapdragon Profiler](https://developer.qualcomm.com/software/snapdragon-profiler) for finding performance bottlenecks and troubleshooting issues on Snapdragon devices like the `Forge TV`. The profiler runs on Linux, Mac, and Windows and connects to `ADB` devices. Online discussion of the profiler is available at the [Snapdragon profiler forums](https://developer.qualcomm.com/forums/software/snapdragon-profiler).
 
 ## NVIDIA PerfHUD ES ##
 
