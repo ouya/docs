@@ -61,6 +61,34 @@ GameMaker extension methods only use `String` and `double` for parameters and re
 
 The signing key from the [developer portal](http://devs.ouya.tv) should be placed in the `extensions/OuyaSDK/key.der` project subfolder.
 
+### Icons
+
+* Be sure to prepare `default`, `store`, and `leanback` icons for your game. Check out the [content review guidelines](content-review-guidelines.md#user-content-icons) for details.
+
+#### Store Icon
+
+* Edit the game icons in the `Global Game Settings`. In the `Project View`, `right-click` on `Global Game Settings` and choose `Properties`.
+
+![image_7](game-maker/image_7.png)
+
+* On the settings `Android` tab be sure to `Enable` the option for `Enable OUYA packaging` to be able to set the `store` icon in the `GUI`. And click `OK` to accept the changes.
+
+![image_8](game-maker/image_8.png)
+
+#### Leanback Icon
+
+* To enable the `leanback` icon, use the menu item `Help->Open GameMaker in Explorer` to manually edit the icon setting in the manifest.
+
+![image_9](game-maker/image_9.png)
+
+* Navigate to the `GameMaker-Studio\Android\runner\AndroidManifest.xml` folder and open in a text editor. And the `android:logo="@drawable/banner"` to the application element and save the changes.
+
+```
+<application android:name="${YYAndroidPackageName}.RunnerApplication" android:label="@string/app_name" android:icon="@drawable/icon" android:logo="@drawable/banner">
+```
+
+* Place the game `leanback` icon in the `extensions\OuyaSDK\AndroidSource\res\drawable\banner.png` project location. The `leanback` icon should be `320x180`.
+
 ### OUYA Everywhere
 
 The `OuyaSDK extension` uses `OUYA-Everywhere Input` which gets the input remapping for supported and future devices.
