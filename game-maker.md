@@ -90,7 +90,7 @@ The signing key from the [developer portal](http://devs.ouya.tv) should be place
 	android:logo="@drawable/banner">
 ```
 
-* Place the game `leanback` icon in the `extensions\OuyaSDK\AndroidSource\res\drawable\banner.png` project location. The `leanback` icon should be `320x180`.
+* Place the game `leanback` icon in the `extensions\OuyaSDK\AndroidSource\res\drawable\banner.png` project location. The folder will need to be created if it does not exist within the project. The `leanback` icon should be `320x180`.
 
 ### OUYA Everywhere
 
