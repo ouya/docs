@@ -84,7 +84,10 @@ The signing key from the [developer portal](http://devs.ouya.tv) should be place
 * Navigate to the `GameMaker-Studio\Android\runner\AndroidManifest.xml` folder and open in a text editor. And the `android:logo="@drawable/banner"` to the application element and save the changes.
 
 ```
-<application android:name="${YYAndroidPackageName}.RunnerApplication" android:label="@string/app_name" android:icon="@drawable/icon" android:logo="@drawable/banner">
+<application android:name="${YYAndroidPackageName}.RunnerApplication"
+	android:label="@string/app_name"
+	android:icon="@drawable/icon"
+	android:logo="@drawable/banner">
 ```
 
 * Place the game `leanback` icon in the `extensions\OuyaSDK\AndroidSource\res\drawable\banner.png` project location. The `leanback` icon should be `320x180`.
