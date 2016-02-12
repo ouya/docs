@@ -24,7 +24,7 @@ This document will help you put your game on `Razer Cortex` (the storefront for 
 
 [Step 4. Signing](forge_tv.md#user-content-step-4-signing)
 
-[Disable Screen Saver](forge_tv.md#user-content-disable-screen-saver)
+[Disable Screensaver](forge_tv.md#user-content-disable-screensaver)
 
 [Icons](forge_tv.md#user-content-icons)
 
