@@ -152,6 +152,10 @@ Add the OuyaGameObject to your initial loading scene. It uses DontDestroyOnLoad 
 
 ![image alt text](ouya-everywhere-unity/image_20.png)
 
+## Disable Forge Screensaver
+
+Updating to the latest Core plugin in [releases](#releases) will disable the `Forge` screensaver while the Unity app/game is running. 
+
 ## Xiaomi Libraries
 
 [Back to general info](enable_xiaomi_support.md#user-content-xiaomi-libraries)

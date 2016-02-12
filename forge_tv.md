@@ -24,6 +24,8 @@ This document will help you put your game on `Razer Cortex` (the storefront for 
 
 [Step 4. Signing](forge_tv.md#user-content-step-4-signing)
 
+[Disable Screen Saver](forge_tv.md#user-content-disable-screen-saver)
+
 [Icons](forge_tv.md#user-content-icons)
 
 [Controller Image](forge_tv.md#user-content-controller-image)
@@ -107,6 +109,14 @@ Before submitting your game to the [developer portal](http://devs.ouya.tv), be s
 Be sure to indicate that the game is compatible on `Forge` before submitting.
 
 ![Compatibility](forge_tv/image_4.png)
+
+## Disable Screensaver
+
+* The `screensaver` should be disabled while your game is running.
+
+Engine specific details:
+
+* [Unity](unity.md#user-content-disable-forge-screensaver)
 
 ## Icons
 
