@@ -154,7 +154,7 @@ Add the OuyaGameObject to your initial loading scene. It uses DontDestroyOnLoad 
 
 ## Disable Forge Screensaver
 
-Updating to the latest Core plugin in [releases](#releases) will disable the `Forge` screensaver while the Unity app/game is running. 
+Updating to the latest Core plugin in [releases](#user-content-releases) will disable the `Forge` screensaver while the Unity app/game is running. 
 
 ## Xiaomi Libraries
 
@@ -166,7 +166,7 @@ Place the `Xiaomi` libraries in the following destinations:
 
 * `Assets/Plugins/Android/libs/SDK_MIBOX_2.0.1.jar`
 
-The [releases section](#releases) has a link to the `Unity-OuyaSDK-Xiaomi.unitypackage` which contains the files at the intended locations.
+The [releases section](#user-content-releases) has a link to the `Unity-OuyaSDK-Xiaomi.unitypackage` which contains the files at the intended locations.
 
 ## Xiaomi Required Permissions
 
@@ -179,7 +179,7 @@ Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 ```
 
-The [releases section](#releases) has a link to the `Unity-OuyaSDK-Xiaomi.unitypackage` which contains the `AndroidManifest.xml` with the added permissions at the intended location.
+The [releases section](#user-content-releases) has a link to the `Unity-OuyaSDK-Xiaomi.unitypackage` which contains the `AndroidManifest.xml` with the added permissions at the intended location.
 
 * `Assets/Plugins/Android/AndroidManifest.xml`
 
@@ -205,13 +205,13 @@ Using the inspector, browse the `OuyaGameObject`. Here you can add strings to ma
 
 * `SDK_MIBOX_2.0.1.jar` should be placed in `Assets\Plugins\Android\libs`
 
-* See the [Releases Section](#releases) to get the package for publishing to Xiaomi
+* See the [Releases Section](#user-content-releases) to get the package for publishing to Xiaomi
 
 ## Disable Xiaomi Screensaver
 
 [Back to general info](enable_xiaomi_support.md#user-content-disable-xiaomi-screensaver)
 
-Updating to the latest Core plugin in [releases](#releases) will disable the Xiaomi screensaver while the unity app/game is running. 
+Updating to the latest Core plugin in [releases](#user-content-releases) will disable the `Xiaomi` screensaver while the unity app/game is running. 
 
 ## Create a Xiaomi-specific icon
 
