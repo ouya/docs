@@ -43,7 +43,7 @@ Razer Hangout July 15th (1:00:00)<br/>
 
 <b><a target=_blank href="https://github.com/ouya/ouya-sdk-examples/tree/master/MonoGame/SetResolutions">SetResolutions</a></b> - Set Resolutions Example
 
-[VirtualController](https://github.com/ouya/ouya-sdk-examples/tree/master/MonoGame/InputView) - Virtual Controllers Example Using `OE-Input`
+[VirtualController](https://github.com/ouya/ouya-sdk-examples/tree/master/MonoGame/InputView) - Virtual Controllers Example Using `OUYA-Everywhere Input`
 
 ## Setup
 
@@ -134,7 +134,7 @@ In order to use `MonoGame` 3.4, the API level has to be set to `17`.
 
 # OUYA Console
 
-Since OUYA uses API level `16`, you'll have to use a `MonoGame` version prior to `3.4`.
+Since OUYA uses API level `16`, you'll have to use a `MonoGame` version prior to `3.4` to avoid runtime issues with `OpenAL`. Or you can use `MonoGame 3.4` on OUYA but you will need to customize the source to disable `OpenAL`.
 
 ## Examples
 
@@ -152,7 +152,25 @@ The [In-App-Purchase](https://github.com/ouya/ouya-sdk-examples/tree/master/Mono
 
 ## OuyaInput
 
-`OE-Input` remaps controllers as if they are an `OuyaController`.
+`OUYA-Everywhere Input` remaps controllers as if they are an `OuyaController`.
+
+### Disable Forge Screensaver
+
+[Back to general info](forge_tv.md#user-content-disable-screensaver)
+
+The screensaver will be disabled in the Activity `OnCreate` event by adding the `OuyaInputView` which also provides `OUYA-Everywhere Input`.
+
+```
+#if MONOGAME_3_4
+		SetContentView((View)_game.Services.GetService(typeof(View)));
+#endif
+
+		// Add OUYA-Everywhere Input and disable screensaver
+		using (var ignore = new TV.Ouya.Sdk.OuyaInputView(this))
+		{
+			// do nothing
+		}
+```
 
 ### ClearButtonStates
 
@@ -700,7 +718,7 @@ public class Activity1 : Microsoft.Xna.Framework.AndroidGameActivity
         var g = new Game1();
         SetContentView(g.Window);
 
-		// Add OE-Input
+		// Add OUYA-Everywhere Input
 		using (var ignore = new TV.Ouya.Sdk.OuyaInputView(this))
 		{
 			// do nothing

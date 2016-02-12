@@ -116,6 +116,7 @@ Be sure to indicate that the game is compatible on `Forge` before submitting.
 
 Engine specific details:
 
+* [MonoGame](mono-game.md#user-content-disable-forge-screensaver)
 * [Unity](unity.md#user-content-disable-forge-screensaver)
 
 ## Icons
