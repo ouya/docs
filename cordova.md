@@ -74,7 +74,7 @@ cordova plugin add https://github.com/ouya/cordova-plugin-ouya-sdk.git#master
 cordova run android
 ```
 
-5) Manually copy `plugins\cordova-plugin-ouya-sdk\src\android\MainActivity.java` to `platforms\android\src\tv\ouya\examples\cordova\virtualcontroller\MainActivity.java` and edit the package name to be `tv.ouya.examples.cordova.virtualcontroller`. `Cordova` auto-configs cannot replace `XML` nodes making this manual one-off [necessary](https://cordova.apache.org/docs/en/4.0.0/plugin_ref/spec.html#config-file-element).
+5) Manually copy `plugins\cordova-plugin-ouya-sdk\src\android\MainActivity.java` to `platforms\android\src\tv\ouya\examples\cordova\virtualcontroller\MainActivity.java` and edit the package name to be `tv.ouya.examples.cordova.virtualcontroller`. `Cordova` auto-configs cannot replace `XML` nodes making this manual one-off [necessary](https://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#config-file-element).
 
 ```
 package tv.ouya.examples.cordova.virtualcontroller;
@@ -121,7 +121,7 @@ cordova plugin add https://github.com/ouya/cordova-plugin-ouya-sdk.git#master
 cordova run android
 ```
 
-5) Manually copy `plugins\cordova-plugin-ouya-sdk\src\android\MainActivity.java` to `platforms\android\src\tv\ouya\examples\cordova\inapppurchases\MainActivity.java` and edit the package name to be `tv.ouya.examples.cordova.inapppurchases`. `Cordova` auto-configs cannot replace `XML` nodes making this manual one-off [necessary](https://cordova.apache.org/docs/en/4.0.0/plugin_ref/spec.html#config-file-element).
+5) Manually copy `plugins\cordova-plugin-ouya-sdk\src\android\MainActivity.java` to `platforms\android\src\tv\ouya\examples\cordova\inapppurchases\MainActivity.java` and edit the package name to be `tv.ouya.examples.cordova.inapppurchases`. `Cordova` auto-configs cannot replace `XML` nodes making this manual one-off [necessary](https://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#config-file-element).
 
 ```
 package tv.ouya.examples.cordova.inapppurchases;
