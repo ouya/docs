@@ -42,7 +42,7 @@
 
 # FlashDevelop/Flex/AdobeAirSDK
 
-When compiling `FlashDevelop`, `Flex`, and the `AdobeAirSDK` you'll want to increase your Java Virtual Machine memory size. Normally the default is `384MB` but you can increase to `1GB` or higher ```java.args=-Xmx1024m```.
+When compiling `FlashDevelop`, `Flex`, and the `[AdobeAirSDK](http://www.adobe.com/devnet/air/air-sdk-download.html)` you'll want to increase your Java Virtual Machine memory size. Normally the default is `384MB` but you can increase to `1GB` or higher ```java.args=-Xmx1024m```.
 
 There are several locations where the `jvm.config` is configured.
 
@@ -70,7 +70,7 @@ gradlew clean build copyJar copyNativeArmeabi copyNativeArmeabiV7a copyNativeArm
 
 The `AirOuyaPlugin.jar` will output to the [jar](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir/OuyaNativeExtension/jar) extension folder.
 
-The `jar` folder also contains `FlashRuntimeExtensions.jar` (from the AdobeAirSDK) and `ouya-sdk.jar` (from the ODK).
+The `jar` folder also contains `FlashRuntimeExtensions.jar` (from the `[AdobeAirSDK](http://www.adobe.com/devnet/air/air-sdk-download.html)`) and `ouya-sdk.jar` (from the ODK).
 
 ## ANE Extension Interface
 
@@ -94,7 +94,7 @@ After the builder project has imported, `Adobe Builder` will auto compile the `S
 
 ## Build ANE
 
-[build_ane.cmd](https://github.com/ouya/ouya-sdk-examples/blob/master/AdobeAir/OuyaNativeExtension/build_ane.cmd) will package the `OuyaNativeExtension.ane` on Windows. Be sure to customize the paths for `JDK` and `AIR_SDK` pointing at the `AdobeAirSDK` in the build script.
+[build_ane.cmd](https://github.com/ouya/ouya-sdk-examples/blob/master/AdobeAir/OuyaNativeExtension/build_ane.cmd) will package the `OuyaNativeExtension.ane` on Windows. Be sure to customize the paths for `JDK` and `AIR_SDK` pointing at the `[AdobeAirSDK](http://www.adobe.com/devnet/air/air-sdk-download.html)` in the build script.
 
 ## Using ANE
 
