@@ -24,6 +24,10 @@
 
 * [GameMaker-OuyaSDK-Extension](https://github.com/ouya/ouya-sdk-examples/releases/tag/GameMaker-OuyaSDK-Extension) - Enable `OUYA` Everywhere Input and In-App-Purchases in GameMaker Studio.
 
+* The GameMaker Extension is compatible with the last (pre-gradle release) GMS 1.4.1657 which can be downloaded from the [release notes](https://www.yoyogames.com/downloads/gm-studio/release-notes-studio.html) page.
+
+* You may need to downgrade to this version if the auto-upgrader patched to a newer version.
+
 ## Guide
 
 * In your project's `Global Game Settings`, on the `Android` tab enter your `Package name` matching the [developer portal](http://devs.ouya.tv) and check `Enable OUYA packaging`.
