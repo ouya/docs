@@ -123,6 +123,23 @@ Engine specific details:
 
 Be sure to prepare `default`, `store`, and `leanback` icons for your game. Check out the [content review guidelines](content-review-guidelines.md#user-content-icons) for details.
 
+On Forge TV, the [leanback intent-filter](http://developer.android.com/training/tv/start/start.html) is automatically added to show on the `Android TV` launcher.
+
+```
+    <intent-filter>
+      <action android:name="android.intent.action.MAIN" />
+      <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+    </intent-filter>
+```
+
+By default, the application will appear in the `Apps` category. To appear in the `Games` category, [edit](http://developer.android.com/training/tv/games/index.html) the `AndroidManifest.xml` and assign the `isGame` attribute on the `Application` element.
+
+```
+android:isGame="true"
+```
+
+API target level 21 or better is [needed](http://developer.android.com/guide/topics/manifest/application-element.html#isGame) to assign the `inGame` attribute on the application element.
+
 ## Controller Image
 
 The `RazerVirtualController` example includes controller images for the `Razer Serval Controller`. The `RazerVirtualController` image resources can be found within the [ouya-sdk-examples](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/RazerVirtualController).
