@@ -48,7 +48,7 @@
 
 * Game Maker Wiki - http://wiki.yoyogames.com/index.php
 
-* Game Maker Studio Setup for Android - http://wiki.yoyogames.com/index.php/GameMaker:Studio_Settings_for_Android
+* Game Maker Studio Setup for Android - http://help.yoyogames.com/hc/en-us/articles/216753418-GameMaker-Studio-Global-Game-Settings-for-Android
 
 * Create a [Native Extension](http://help.yoyogames.com/entries/30690273) For Android
 

@@ -159,13 +159,17 @@ Before continuing, make sure your OUYA is powered and **not connected to your co
 
     Install the following packages:
 
-    *Note: Some of these packages may be pre-installed with the Android SDK and tools bundle.*  
-    **Tools**: Android SDK and Android SDK Platform tools  
+    *Note: Some of these packages may be pre-installed with the Android SDK and tools bundle.*
+	
+    **Tools**: Android SDK and Android SDK Platform tools
+	
 	**API 16: Android 4.1 (Jelly Bean)**: SDK Platform (without Google APIs)
+	
 	**API 21: Android 5.0 (Lollipop)**: SDK Platform (without Google APIs)
-    **Extras**: Android Support Library  
+	
+    **Extras**: Android Support Library
 
-    Install the Java runtime if prompted.  
+    Install the Java runtime if prompted.
 
 4. **Important**: There should be no carriage return after the hex value. Any blank lines in this file will result in an error.
 Add the following line to `~/.android/adb_usb.ini` (create it if it doesn't exist) for your OUYA console to be recognized:
@@ -212,13 +216,17 @@ Add the following line to `~/.android/adb_usb.ini` (create it if it doesn't exis
 
     Install the following packages:
 
-    *Note: Some of these packages may be pre-installed with the Android SDK and tools bundle.*  
-    **Tools**: Android SDK and Android SDK Platform tools  
+    *Note: Some of these packages may be pre-installed with the Android SDK and tools bundle.*
+	
+    **Tools**: Android SDK and Android SDK Platform tools
+	
     **API 16: Android 4.1 (Jelly Bean)**: SDK Platform (without Google APIs)
+	
 	**API 21: Android 5.0 (Lollipop)**: SDK Platform (without Google APIs)
-    **Extras**: Android Support Library  
+	
+    **Extras**: Android Support Library
 
-    Install the Java runtime if prompted.  
+    Install the Java runtime if prompted.
     
 3. You will need to add some paths to PATH. Assuming you put the ADT bundle at `C:/Development/adt-bundle-windows-x86_64`,
 
