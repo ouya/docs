@@ -105,7 +105,7 @@ The `Android SDK` includes useful tools and platform-tools. The Android debugger
 
 `SDK Manager` handles installation and updating the `Android SDK` build tools, packages and platforms.
 
-* Install the `Tools\*` and `Android 4.1.2 (API 16)\SDK Platform`.
+* Install the `Build Tools` with the SDK platforms for **API 16: Android 4.1 (Jelly Bean)** and **API 21: Android 5.0 (Lollipop)**.
 
 ![SDK Extras](setup/image_6.png)
 
@@ -161,7 +161,8 @@ Before continuing, make sure your OUYA is powered and **not connected to your co
 
     *Note: Some of these packages may be pre-installed with the Android SDK and tools bundle.*  
     **Tools**: Android SDK and Android SDK Platform tools  
-    **Android 4.1.2 (API 16)**: SDK Platform (without Google APIs)  
+	**API 16: Android 4.1 (Jelly Bean)**: SDK Platform (without Google APIs)
+	**API 21: Android 5.0 (Lollipop)**: SDK Platform (without Google APIs)
     **Extras**: Android Support Library  
 
     Install the Java runtime if prompted.  
@@ -213,7 +214,8 @@ Add the following line to `~/.android/adb_usb.ini` (create it if it doesn't exis
 
     *Note: Some of these packages may be pre-installed with the Android SDK and tools bundle.*  
     **Tools**: Android SDK and Android SDK Platform tools  
-    **Android 4.1.2 (API 16)**: SDK Platform (without Google APIs)  
+    **API 16: Android 4.1 (Jelly Bean)**: SDK Platform (without Google APIs)
+	**API 21: Android 5.0 (Lollipop)**: SDK Platform (without Google APIs)
     **Extras**: Android Support Library  
 
     Install the Java runtime if prompted.  
@@ -296,7 +298,7 @@ This will create a working Eclipse project. If your OUYA console is connected, y
 
 ##### Developing with the ODK
 
-Use the Android API Level 16 (Android 4.1 "Jelly Bean") when developing for the OUYA Console.
+Use the min platform with **API 16: Android 4.1 (Jelly Bean)** and the target platform with **API 21: Android 5.0 (Lollipop)** when developing for the Forge TV Console.
 
 In order to use the OUYA API you will need to include `ouya-sdk.jar` in your project libraries.  This can be found in the `libs` directory.
 

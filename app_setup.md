@@ -2,12 +2,14 @@
 
 ## Requirements
 
-For your Android application to be compatible with the `Forge TV`, it must target platform **16** (Android 4.1.2) or later.
+For your Android application to be compatible with the `Forge TV`, it must set the min platform to **API 16: Android 4.1 (Jelly Bean)** and the target platform to **API 21: Android 5.0 (Lollipop)**.
 
 **Example:**
 
 ```xml
-<uses-sdk android:minSdkVersion="16" />
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
 ```
 
 ## Step 1: Add OUYA SDK jar to build path

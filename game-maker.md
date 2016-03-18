@@ -94,6 +94,14 @@ The signing key from the [developer portal](http://devs.ouya.tv) should be place
 	android:logo="@drawable/banner">
 ```
 
+Enable support for the `leanback` icon by setting the min platform to **API 16: Android 4.1 (Jelly Bean)** and the target platform to **API 21: Android 5.0 (Lollipop)**.
+
+```xml
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+```
+
 * Place the game `leanback` icon in the `extensions\OuyaSDK\AndroidSource\res\drawable\banner.png` project location. The folder will need to be created if it does not exist within the project. The `leanback` icon should be `320x180`.
 
 ### OUYA Everywhere
@@ -411,7 +419,7 @@ Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in
 <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 ```
 
-Make sure that the Android `android:targetSdkVersion` is set to `16`.
+For the Xiaomi build, make sure that the Android `android:targetSdkVersion` is set to `16`.
 
 ```java
 <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="16"/>
