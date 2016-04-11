@@ -14,6 +14,8 @@ This document will help you put your game on `Razer Cortex` (the storefront for 
 
 [Notes](forge_tv.md#user-content-notes)
 
+[OUYA-Everywhere](forge_tv.md#user-content-ouya-everywhere)
+
 [Engines That Support Forge TV](forge_tv.md#user-content-engines-that-support-forge-tv)
 
 [Step 1. Upgrade the OUYA-Everywhere Plugin](forge_tv.md#user-content-step-1-upgrade-the-ouya-everywhere-plugin)
@@ -54,13 +56,15 @@ The OUYA Controller is supported by [`OUYA-Everywhere`](ouya-everywhere.md) on `
 
 ## Notes
 
-* An upcoming `Forge TV` OTA update will include new support for many controllers.
+* `Cortex` supports [`OUYA-Everywhere`](ouya-everywhere.md) on `Forge TV` which includes support for many controllers.
 
-* An upcoming `Forge TV` OTA update will also include the `OUYA Framework` and `store launcher` which makes [`OUYA-Everywhere`](ouya-everywhere.md) possible.
-
-* The `review team` can now test [`OUYA-Everywhere`](ouya-everywhere.md) on `Forge TV` given a download link to the game build.
+* The `review team` tests [`OUYA-Everywhere`](ouya-everywhere.md) enabled builds on `Forge TV` after receiving game builds that were submitted through the [developer portal](https://devs.ouya.tv).
 
 * Be sure to update 3rd party libraries related to input to ensure `Forge TV` compatibility. (i.e. `InControl`*)
+
+## OUYA-Everywhere
+
+[`OUYA-Everywhere`](ouya-everywhere.md) allows game builds to use the same API for `gamepad-input` and `in-app-purchases` in order to work on `Forge TV` and `OUYA` consoles.
 
 ## Engines That Support Forge TV
 
