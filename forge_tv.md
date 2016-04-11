@@ -30,6 +30,8 @@ This document will help you put your game on `Razer Cortex` (the storefront for 
 
 [Controller Image](forge_tv.md#user-content-controller-image)
 
+[Versioning](forge_tv.md#user-content-versioning)
+
 [ADB Debugging](forge_tv.md#user-content-adb-debugging)
 
 [Pairing Serval](forge_tv.md#user-content-pairing-serval)
@@ -145,6 +147,17 @@ API target level 21 or better is [needed](http://developer.android.com/guide/top
 The `RazerVirtualController` example includes controller images for the `Razer Serval Controller`. The `RazerVirtualController` image resources can be found within the [ouya-sdk-examples](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/RazerVirtualController).
 
 ![Serval Image](ouya-everywhere-android-java/image_3.png)
+
+## Versioning
+
+Versioning is critical for every application so that reviewers and users are playing on the right build of your app or game.
+Every time a build is submitted for review, the version identifier in the manifest should be changed to a number that is higher than the previous version.
+See the `Android` documentation for more details about [Versioning Your Applications](http://developer.android.com/tools/publishing/versioning.html).
+It will be necessary to increment the `android:versionCode` and `android:versionName="1.1"` attributes within the `manifest` element for each build.
+
+```xml
+<manifest android:versionCode="1" android:versionName="1.1">
+```
 
 ## ADB Debugging
 
