@@ -155,10 +155,20 @@ Every time a build is submitted for review, the version identifier in the manife
 See the `Android` documentation for more details about [Versioning Your Applications](http://developer.android.com/tools/publishing/versioning.html).
 It will be necessary to increment the `android:versionCode` and `android:versionName` attributes within the `manifest` element for each build.
 
+For example, the first time a build is submitted, the `versionCode` and `versionName` might look like this.
+
 ```xml
 <manifest
 	...
 	android:versionCode="1" android:versionName="1.1">
+```
+
+The next time the build is submitted, the `versionCode` and `versionName` should be set higher than the previous version in order to submit an update.
+
+```xml
+<manifest
+	...
+	android:versionCode="2" android:versionName="1.2">
 ```
 
 ## ADB Debugging
