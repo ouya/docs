@@ -153,10 +153,12 @@ The `RazerVirtualController` example includes controller images for the `Razer S
 Versioning is critical for every application so that reviewers and users are playing on the right build of your app or game.
 Every time a build is submitted for review, the version identifier in the manifest should be changed to a number that is higher than the previous version.
 See the `Android` documentation for more details about [Versioning Your Applications](http://developer.android.com/tools/publishing/versioning.html).
-It will be necessary to increment the `android:versionCode` and `android:versionName="1.1"` attributes within the `manifest` element for each build.
+It will be necessary to increment the `android:versionCode` and `android:versionName` attributes within the `manifest` element for each build.
 
 ```xml
-<manifest android:versionCode="1" android:versionName="1.1">
+<manifest
+	...
+	android:versionCode="1" android:versionName="1.1">
 ```
 
 ## ADB Debugging
