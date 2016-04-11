@@ -210,3 +210,71 @@ For developers who choose to use a single apk across multiple storefronts (`Cort
 ```
 Note that if you install your development builds via `adb install mygame.apk` then PackageManager.getInstallerPackageName will return null.
 The `Cortex` installer package name has a few different possibilities based, which is why suggest using the `OuyaFacade.isRunningOnOUYASupportedHardware` method.
+
+
+## Versioning
+
+Versioning is critical for every application so that reviewers and users are playing on the right build of your app or game.
+Every time a build is submitted for review, the version identifier in the manifest should be changed to a number that is higher than the previous version.
+See the `Android` documentation for more details about [Versioning Your Applications](http://developer.android.com/tools/publishing/versioning.html).
+It will be necessary to increment the `android:versionCode` and `android:versionName` attributes within the `manifest` element for each build.
+
+For example, the first time a build is submitted, the `versionCode` and `versionName` might look like this.
+
+```xml
+<manifest
+	...
+	android:versionCode="1" android:versionName="1.1">
+```
+
+The next time the build is submitted, the `versionCode` and `versionName` should be set higher than the previous version in order to submit an update.
+
+```xml
+<manifest
+	...
+	android:versionCode="2" android:versionName="1.2">
+```
+
+
+## Supported Devices
+
+After submitting submitting an `APK` to a store you may find that your game is automatically supported on thousands of devices.
+Manipulating the `AndroidManifest.xml` is a way to automatically filter the list of supported devices down to a managable level.
+
+Increase the `android:minSdkVersion` and `android:targetSdkVersion` to `Cortex` levels will filter out a large set of legacy devices.
+
+```xml
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="21" />
+```
+
+On the `Google Play Store`, specify that your game requires a `gamepad-controller` by setting `android:required` to `false`. This will cause the `controller required` label to appear in the listing.
+
+```xml
+	<uses-feature
+		android:name="android.hardware.gamepad"
+		android:required="false"/>
+```
+
+On the `Amazon Store`, specify that your game requires a `gamepad-controller` by setting `android:required` to `true`. (This is the opposite of Google Play Store.) This will cause the `controller required` label to appear in the listing.
+
+```xml
+	<uses-feature
+		android:name="android.hardware.gamepad"
+		android:required="true"/>
+```
+
+On `Android TV` devices, specify `leanback` is required. This will reduce the supported-devices down to `Android TV` devices.
+
+```xml
+	<uses-feature
+		android:name="android.software.leanback"
+		android:required="true" />
+```
+
+Set `touchscreen` required to `false` which will skip automated tests on your game that check if touch input is supported.
+
+```xml
+  <uses-feature
+      android:name="android.hardware.touchscreen"
+      android:required="false" />
+```
