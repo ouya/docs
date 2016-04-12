@@ -278,3 +278,29 @@ Set `touchscreen` required to `false` which will skip automated tests on your ga
       android:name="android.hardware.touchscreen"
       android:required="false" />
 ```
+
+## Getting APK Details
+
+After an APK has been built, the `AAPT` tool can be used to get the `package name` and `versionCode` from the `APK`. The `AAPT` tool can be found within your `Android SDK` folder in the latest `build tools` subfolder.
+[NVIDIA CodeWorks for Android](https://developer.nvidia.com/codeworks-android) installs `AAPT` in the `c:\NVPACK\android-sdk-windows\build-tools\23.0.2\aapt.exe` folder by default.
+
+The following will output the APK details from the command-line.
+
+```
+"c:\NVPACK\android-sdk-windows\build-tools\23.0.2\aapt" dump badging game.apk
+```
+
+The above command  will print something similar to the following.
+
+```
+package: name='com.company.gamename' versionCode='1' versionName='1.1' platformBuildVersionName='6.0-2438415'
+install-location:'auto'
+sdkVersion:'21'
+targetSdkVersion:'21'
+application-label:'GameName'
+application-icon-160:'res/drawable/app_icon.png'
+application-icon-320:'res/drawable-xhdpi-v4/app_icon.png'
+application: label='GameName' icon='res/drawable/app_icon.png' banner='res/drawable-xhdpi-v4/app_banner.png'
+application-isGame
+...
+```
