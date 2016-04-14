@@ -47,7 +47,7 @@ Razer Hangout July 15th (1:00:00)<br/>
 
 ## Setup
 
-1) Download the latest [MonoGame](https://github.com/mono/MonoGame/releases/tag/v3.4) release.
+1) Download the latest [MonoGame](https://github.com/mono/MonoGame/releases/tag/v3.5.1) release.
 
 2) Download the [MonoGame Dependencies](https://github.com/Mono-Game/MonoGame.Dependencies) and unpack into the `ThirdParty\Dependencies` folder.
 
@@ -121,20 +121,20 @@ Binding JARs - http://docs.xamarin.com/guides/android/advanced_topics/java_integ
 
 # Forge TV
 
-In order to use `MonoGame` 3.4, the API level has to be set to `17`.
-`MonoGame` 3.4 adds proper pause/resume support which allows textures and other content to reload when the game is reopened from the launcher.
+In order to use `MonoGame` 3.5, the min API level has to be set to `16`, target API level `21`, and compile API level `21`.
+`MonoGame` 3.4 added proper pause/resume support which allows textures and other content to reload when the game is reopened from the launcher.
 
 1) In Visual Studio, right-click the `MonoGame` project and select properties.
 
-![image_1](mono-game/image_1.png)
+A target API of `16` or below will crash on launch with the unhandled exception `System.MissingMethodException: Method 'AudioManager.GetProperty' not found`. 
 
-2) Under the `Application` tab select API level `17`. Any lesser API version will crash on launch with the unhandled exception `System.MissingMethodException: Method 'AudioManager.GetProperty' not found`. 
+The target API of `21` is necessary starting with `ODK 2.1.0` or better for `Android TV` support on `Forge TV`.
 
-![image_2](mono-game/image_2.png) 
+![image_3](mono-game/image_3.png)
 
 # OUYA Console
 
-Since OUYA uses API level `16`, you'll have to use a `MonoGame` version prior to `3.4` to avoid runtime issues with `OpenAL`. Or you can use `MonoGame 3.4` on OUYA but you will need to customize the source to disable `OpenAL`.
+Since OUYA uses API level `16`, you'll have to use a `MonoGame` version prior to `3.4` to avoid runtime issues with `OpenAL`.
 
 ## Examples
 
