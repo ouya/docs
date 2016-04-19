@@ -50,7 +50,7 @@ The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/C
 
 ![image_1.png](cordova/image_1.png)
 
-1) The initial `Cordova` project was created with the command-line from the `Construct2` folder.
+1) The initial `VirtualController` project was created with the command-line from the `Cordova` folder.
 
 ```
 cordova create VirtualController tv.ouya.examples.cordova.virtualcontroller VirtualController
@@ -78,9 +78,49 @@ cordova run android
 
 ```
 package tv.ouya.examples.cordova.virtualcontroller;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.util.SparseArray;
+import android.view.InputDevice;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
+import java.util.HashMap;
+import org.apache.cordova.*;
+import tv.ouya.console.api.OuyaController;
+import tv.ouya.sdk.CordovaOuyaPlugin;
+import tv.ouya.sdk.OuyaInputView;
+
+public class MainActivity extends CordovaActivity
+{
+...
+}
 ```
 
-6) The example [`HTML5` contents](https://github.com/ouya/ouya-sdk-examples/blob/master/Cordova/VirtualController/www/index.html) are placed within the `Cordova\VirtualController\www` folder so that the above command will copy the files to the `Android` platform.
+6) Replace the `Cordova\VirtualController\www` content folder with the [Virtual Controller example HTML5](https://github.com/ouya/ouya-sdk-examples/tree/master/Cordova/VirtualController/www) so that the `cordova run android` command will embed the files into the `Android` platform.
+
+```
+a.png
+controller.png
+dpad_down.png
+dpad_left.png
+dpad_right.png
+dpad_up.png
+index.html
+lb.png
+lt.png
+l_stick.png
+menu.png
+o.png
+rb.png
+rt.png
+r_stick.png
+thumbl.png
+thumbr.png
+u.png
+y.png
+```
 
 7) `Cordova` projects can import into Android Studio as a `Gradle` project.
 
@@ -90,6 +130,12 @@ package tv.ouya.examples.cordova.virtualcontroller;
 
 ![Import IAP](cordova/image_8.png)
 
+9) Customize the `AndroidManifest.xml` to include the [leanback-icon](forge_tv.md#user-content-icons). Cordova requires a target version of `22`.
+
+```
+<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="22" />
+```
+
 ### In-App-Purchases
 
 The [In-App-Purchases](https://github.com/ouya/ouya-sdk-examples/tree/master/Cordova/InAppPurchases) example shows making purchases, checking receipts, adjusting the safe area, and exiting the app.
@@ -97,7 +143,7 @@ The [In-App-Purchases](https://github.com/ouya/ouya-sdk-examples/tree/master/Cor
 ![image_1.png](cordova/image_2.png)
 
 
-1) The initial `Cordova` project was created with the command-line from the `Cordova` folder.
+1) The initial `InAppPurchases` project was created with the command-line from the `Cordova` folder.
 
 ```
 cordova create InAppPurchases tv.ouya.examples.cordova.inapppurchases InAppPurchases
