@@ -74,6 +74,8 @@ A specific version of TADP needs to be installed which is found in the `Engine\E
 
 * [Unreal Forum Post](https://forums.unrealengine.com/showthread.php?51910-Getting-Started-Android-Development-References-Documentation-Feedback) - Unreal - Tracking `Cortex` Plugin process and requests for info
 
+* [UE4 Video Tutorials](http://docs.unrealengine.com/latest/INT/Videos/) - Unreal - Unreal 4 Documentation
+
 * [UE4 Video Playlist](https://wiki.unrealengine.com/Category:Epic_Video_Playlists) - Unreal - Epic Video Playlists
 
 * [UE4 Programming Playlist](https://wiki.unrealengine.com/Introduction_to_UE4_Programming_Playlist) - Unreal - Introduction to UE4 Programming Playlist
