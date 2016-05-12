@@ -1,18 +1,418 @@
-Version 1.2, November 5th, 2015
+# Cortex Store Technical Requirements
+Version 2.0
+May 12 2016
 
-##Introduction
 
-Welcome, `Cortex` Devs! We’re thrilled you’ve decided to develop for `Forge TV`.
+We are very excited that you are interested in developing an App or Game for the Cortex Store. We will do everything we can to help support you in this endeavor and look forward to working with you. Our intention with these guidelines is to inform our developers of our testing procedures and make sure that customers are getting the best experience on the Cortex Store.
 
-We want to provide a great experience for both gamers and developers, which is why we will review all Games and Apps (read “Games”) you submit to `Cortex`. Below are the guidelines we’ll use. Of course, we are open to any developer -- but we want all the games on `Cortex` to come together to make `Cortex` great.
+If you have feedback or questions about any of these requirements, please feel free to email us at [officehours@ouya.tv](mailto:officehours@ouya.tv), and we will promptly reply.
 
-By following the guidelines below, young grasshopper, you’ll be live on `Cortex` before you know it (Yeah!). We will try to keep this document as stable as possible, and communicate if we need to make changes.
 
-##Speed of Reply
 
-We understand your need to get feedback quickly and we are committed to making this happen as it benefits you, our developers, as well as `Cortex’s` gamers.
 
-Last week, it took us three days to review an average Game.  We’ll update this weekly for you.
+## 0.1 [REQUIRED] Game/App (henceforth referred to as “game”) and Developer are in compliance with Marketplace Agreement
+
+When signing up to become a developer, you must agree to our Marketplace Agreement. The developer is responsible for complying with the terms of the Marketplace Agreement. Noncompliance with agreed-upon terms within the Marketplace Agreement may result in your game being pulled from the Cortex Store.
+
+## 1.0 [REQUIRED] If GAME is not completely free, GAME is built with the latest ODK
+
+If you want to charge money for your game, you’ll need to us our ODK. In order to make sure things function properly, make sure your game has the latest ODK.
+
+The latest ODK can always be found here: https://devs.ouya.tv/developers/odk
+
+There are many benefits to using the ODK, and it supports all the major game engines. Benefits include, IAP support, multiple controller compatibility, multiple device compatibility, dynamic button images, and much more.
+
+Be sure to check out the engine specific documentation for details on how to integrate the ODK for your game.
+
+It’s also easy to implement, usually only a quick recompile.
+
+Upon review QA will test for the latest ODK in the developers APK.
+
+## 1.1 [REQUIRED] Game supports the leanback launcher
+
+Games downloaded from the Cortex store may appear outside of the Cortex environment. To that end, we require that all games and apps launch from outside the Cortex environment, and that the game icon appears correctly.
+
+Learn more about the leanback_launcher activity here:
+[http://developer.android.com/training/tv/start/start.html](http://developer.android.com/training/tv/start/start.html)
+
+## 1.2 [REQUIRED] Submitted games have the appropriate intent filter set in the manifest (App or Game)
+
+Like above, games or apps may appear outside the Cortex environment. We require that the game icon  appears in the proper row. If a game appears in the app row it will fail review, likewise if an app appears in the game row.
+
+## 1.3 [REQUIRED] Games must increment their version numbers for each submission
+
+When a developer submits and update, we ask that they use an appropriately higher version number. Games that do not have an appropriate version number will fail the review process.
+
+## 1.4 [RECOMMENDED] Updated Game submissions should include a short changelog
+
+We would like developers to send a short changelog when they update their game on the Cortex Store. This helps our Review team know what to focus on during their testing and will help bring any critical bugs to the developers attention. We provide an area for this during the games submission.
+
+## 1.5 [RECOMMENDED] Game should use ODK controller APIs for maximum compatibility 
+
+By using the controller APIs in the ODK, developers gain the ability to receive new controller mappings via OTA, keeping your game up to date at all times with no other actions required by the developer. We highly recommend developers use it.
+
+## 1.6 [RECOMMENDED] Games released on multiple stores (Google Play, etc. ) should use a single APK file
+
+We would prefer developers use a single APK solution if they have submitted their title to multiple stores. It makes things easier to keep track of, and we want to make sure that Cortex users are getting the latest versions of your title.
+
+## 2.0 [REQUIRED] Game icon displays properly
+
+Your Titles icon can appear in a few different places. Our reviewers make sure they appear correctly in all instances. See below for the details of each kind of icon that the Cortex Store supports. If our reviewers check a titles icons and they appear incorrect the title will fail its review.
+
+## 2.0.1 [REQUIRED] Game icon displays properly inside the Cortex Store
+
+This is the first place our reviewers will see your titles icon, The store icon that is shown in the Cortex launcher is embedded inside of the APK itself. The expected file is in res/drawable-xhdpi/ouya_icon.png and the image size must be 732x412.
+
+Consult the developer documentation page, and your engine’s support page for specific icon location and naming conventions.
+
+## 2.0.2 [REQUIRED] Game icon displays properly on the Games or Apps Row of the leanback launcher 
+
+The next place our reviewers check is outside the Cortex environment, in the Games or Apps row. The leanback icon is shown in the Android TV default launcher when the game is installed. The expected file is in res/drawable/icon.png and the image size must be 320x180.
+
+This is also specific to the engine. Consult the developer documentation page.
+
+## 2.0.3 [REQUIRED] Game icon displays properly inside Settings > Apps
+
+The last place our reviewers look for your titles icon is in the Settings > Apps section. The default icon that is shown in the app settings is embedded inside of the APK itself. The expected file is in res/drawable/app_icon.png and the image size must be 96x96.
+
+You can find out more about icons and more here.
+
+## 2.0.4 [REQUIRED] Game icon displays the correct pricing information (price, price*, FREE or FREE*)
+
+This requirement is only valid inside the Cortex Store. This requirement can be met by properly filling out the product and game submission forms. Our reviewers will play through a large portion of your title in order to hit paywalls or discover in app purchases. 
+
+Note in your submission build notes where the paywalls occur, if applicable.
+
+Setup products for your game here.
+
+## 2.1 [REQUIRED] Game details display properly in Cortex Store 
+
+All metadata (screenshots, videos and text) must appear correctly inside the game details screen. 
+
+## 2.1.1 [REQUIRED] Videos, screenshots and text displays no mature content
+
+While we don’t censor submitted content, we don’t allow mature profanity or nudity within the Game Details Page of a tile. A title that violates this requirement will fail the review process.
+
+## 2.1.2 [REQUIRED] The age rating is appropriate for the content
+
+We want to make the Cortex Store a safe space for gamers of all ages. To that end we require developers to be honest about the content in their title. Developers must give their title an appropriate rating. Reviewers will keep that rating in mind when looking at the title. If it seems that the content is inappropriate for the rating, the title will fail the review process.
+
+## 2.1.3 [REQUIRED] Game details screen displays no licensed material
+
+Anything appearing in your game details page, you must own. A media app can’t show a movie poster or music cover if it doesn’t belong to the developer. An emulator can’t show licensed games as a demonstration. If the text, video or screen shots appearing in the game details page violate this requirement your title will fail the review process
+
+## 2.1.4 [REQUIRED] Game details display video properly (*Required for Premium titles)
+
+Developers have the option to include a free-to-try mode with their title, or make their title premium. Because premium titles don’t have a demo, we require that developers include a video that shows a good representation of the title. We also require that their video be free of unintentional defects and must play properly. 
+
+## 2.1.5 [REQUIRED] Developer must inform Cortex Store Team if they make changes to their linked video
+
+We require that if you decide to change the video attached to your title, that you inform the Cortex Store Team immediately. Like anything appearing on the store we must first verify its content. Failure to inform the Cortex Team, will result in the developer's title being removed from the store.
+
+## 2.1.6 [REQUIRED] Title’s genre tags are representative of the content
+
+The developers select the genres for their title in the game submission process. A reviewer will flag an inappropriate genre in the review process. If a mistake is made, it can be corrected by contacting the Cortex Store team
+
+
+## 2.2 [REQUIRED] Title’s description is legible and easily understandable
+
+The developer has complete control of their titles description, but we must insist that the developers use proper english, clearly convey their message and it must not contain any spelling errors. Most issues involving this requirement can be corrected by reviewers, but the worst offenders may fail their review.
+
+## 2.3 [REQUIRED] Title meets Android technical requirements in such as they are able to be downloaded and installed properly
+
+Reviewers will download and install your title from the store.
+
+
+## 2.4 [REQUIRED] Title can be started from all supported areas
+
+Reviewers will test a title in three places. Within the Cortex Store, outside the Cortex Store, in the Game or App row, and finally within Setting > Apps. A title will fail if it fails to launch or crashes when launched.
+
+## 2.5 [REQUIRED] Game text is legible at 10'
+
+All Cortex Store games must be optimized for a TV experience. If the UI or text appears too small to be read from 10 feet away, the title may fail the review process.
+
+
+## 2.6 [REQUIRED] Launching the title while holding multiple buttons does not cause problems or crash the Game
+
+The reviewer will attempt to launch the title while holding several different combinations of buttons, the title must not have any trouble launching under this scenario.
+
+## 2.7 [RECOMMENDED] The download size of the Application cannot exceed 1.25GB when downloading from the Cortex Store. 
+
+We recommend keeping a titles APK size small, and would prefer it less that 1.25 GB. If your APK must exceed that size, you must contact the Cortex Store Team before attempting to upload your title. 
+
+The preferable option would be to download extra content, like a high rez texture pack, optional in order to keep sizes down. Extra content of any size can be downloaded by the application after launching.
+
+A friendly message must appear when the Cortex supported device has full memory. The user must be able to download the item after the memory issue has been cleared up.
+
+## 2.8 [REQUIRED] Title has an exit or quit option
+
+We require developers to have an exit or quit option in their title. Reviewers will test the exit option and make sure that the title closes properly.
+
+# Game Content / Display
+
+## 3.0 [REQUIRED] Game displays properly on 720p
+
+For compatibility we require that all titles support 720dpi resolution.
+Reviewers will test the title on 720p TVs, any graphical corruption will fail the review process.
+
+## 3.1 [REQUIRED] Game displays properly on 1080p
+
+This is the Cortex Store’s prefered resolution, all titles must display in 1080p.
+
+## 3.2 [REQUIRED] All critical UI and text is within the safe zone
+
+If one thing causes titles to fail the most, it is the above requirement. Most TVs have different amounts of overscan, and because of this all titles must be within what we call ‘the safe zone.’
+
+All this means is that all critical UI elements mustn’t be within the outer 10%  of the screen. We consider important UI elements to be health bars, score counters, power meters, and things of that nature. A way most developers can get around this requirement is to add an option to resize the TV screen for optimal viewing.
+
+## 3.3.1 [RECOMMENDED] Game makes use of the full screen, has no large black areas on either side, and is sized correctly. 
+
+Shoot-em-ups and break-out style games often use a narrow portion of the screen. We urge developers not to leave large black areas on either side of the game play, by using a background wallpaper.
+
+## 3.3.2 [REQUIRED] The screen must not rotate when the game is loading.
+
+We often encounter violators of this requirement with mobile ports. If the screen rotates during launch, the title will fail the review process.
+
+## 3.4 [RECOMMENDED] Title should contain a simple tutorial to teach player how use the different modes of the game and show it during initial startup
+
+We encourage developers to either make controls intuitive or give the gamers a helping hand by including a tutorial, a controller layout screen, or gameplay tips, at start of game.
+
+## 3.5 [REQUIRED] Title must NOT mention vibration controls, telephone, tilt, accelerometer, or tablet sleeping
+
+The Razer Serval does not have vibration, and the Razer Forge TV, and all supported Cortex Store devices do not support telephone, tilt, accelerometer, or tablet sleeping. No title can mention mobile functionality.
+
+## 3.6 [RECOMMENDED] All menu features function properly *(COMING SOON areas not applicable)
+
+Reviewers will check all menus and all options during the review process. Any menu that fails to do what is expected may cause a title to fail the review process.
+
+## 3.7 [RECOMMENDED] Title must be fully functional using a Razer Serval controller
+
+All titles on the Cortex Store must support the Razer Serval controller. The easiest way to do this is use the controller APIs in the Razer ODK.
+
+## 3.7.2 [RECOMMENDED] OUYA controllers and 3rd-party-controller support
+
+Developers have the option of supporting 3rd party controllers on their own. The easy way of supporting many popular 3rd party controllers is by using the controller APIs in the Razer ODK.
+
+## 3.7.4 [REQUIRED] For multiplayer titles, the maximum number of supported players must be able to connect and play without issues. 
+
+Reviewers will test titles with the declared maximum number of players allowed. This must not cause any issues with framerate or stuttering sound, etc.
+
+## 3.7.5 [RECOMMENDED] The Developer is responsible for extensive multiplayer testing.
+
+Reviewers will test the multiplayer portions of a submitted title, as time allows, but developers are responsible for testing their own titles extensively. 
+
+## 3.7.6 [REQUIRED] Title has no other representation of controllers other than Razer Serval
+
+Titles must not contain the graphical representation of any licensed controller other than a Razer Serval. An artistic interpretation of/or a generic controller with the correct layout and button callouts may be permitted in certain circumstances.
+
+## 3.7.7 [RECOMMENDED] Use ODK controller image API for device appropriate controller images
+
+We recommend that developers use the Controller Image API in the ODK if they don’t have their own custom controller images.
+
+
+## 3.8 [RECOMMENDED] B button is used for back
+
+## 3.9 [RECOMMENDED] A button is used for select
+
+## 3.10 [RECOMMENDED] The start button is used to pause the game, and/or open option menus.
+
+## 3.11 [RECOMMENDED] Both Dpad and Left Analog are functional for menu use
+
+We prefer the developers use both the Dpad and the Left Analog stick for menu use. This cuts down on initial gamer confusion.
+
+## 3.12 [REQUIRED] Title must support the System Menu being opened and dismissed
+
+Reviewers will test the title with the System Menu opening and closing. The game shouldn’t have any issues handling these events occurring. If the game crashes, has audio that plays, or graphical corruption occurs, the title will fail the review process.
+
+
+## 3.13 [REQUIRED] The Title does not use "Long-Press of the Razer Serval Home+Back Button" for anything
+
+This combination of buttons cause the Razer Serval to enter pairing mode. No title should use this button combination at all.
+
+## 3.14 [REQUIRED] Title handles loss of Network connection and offline gameplay  gracefully
+
+The Cortex Store does not require the console to be online to launch a title. Reviewers will disable their network connection within a title in various ways. The title must not crash, hang or behave poorly in any way upon network loss.
+
+## 3.15 [REQUIRED] Multiplayer titles must have distinct player controls for the maximum supported local players
+
+Reviewers will test a title with multiple controllers paired. If the controller of player 2 can control the character that player 1 is controlling, this may cause the title to fail the review process. Not applicable in menus and apps.
+
+## 3.16 [REQUIRED] It is clear to the user how to begin using the app / playing the game
+
+## 3.17 [RECOMMENDED] Navigation of the title's user interface and text entry fields is intuitive
+
+Reviewers will navigate the titles UI extensively. They will flag any difficult sections to navigate or places where text entry is not easy to accomplish. 
+
+## 3.18 [RECOMMENDED] Audio is stereo output, without sound-quality issues
+
+Reviewers will check for unintentional sound quality issues and will flag them in their review. Severe bugs in music or SFX will cause a title to fail the review process.
+
+
+## 3.19 [REQUIRED] Game performs with no excessive lag or sluggishness
+
+Reviewers will observe the game’s performance over the normal course of gameplay. If excessive lag or sluggishness is noticed it will cause the title to fail the review process.
+
+3.20 [RECOMMENDED] Title should remain stable for an extended amount of game time
+
+The reviewer will test the title for an extended amount of time, the title should remain stable and not crash or begin to slow down during the normal course of extended gameplay.
+
+## 3.21 [RECOMMENDED] The title implements Game Saves
+
+We recommend that developers give the gamers the ability to save their game if it seems appropriate.
+
+## 3.21.1 [RECOMMENDED] If the title supports Game Saves, the title saves/loads correctly
+
+If the developers implement a save system it will be tested by the reviewer to confirm it’s functionality.
+
+## 3.21.2 [REQUIRED] If the title supports an in-game store, the store functions properly
+
+If the developers implement an in-game store, reviewers will make test purchases of all entitlements, subscriptions and consumables and verify that they function and unlock without issue.
+
+## 3.22 [RECOMMENDED] Game allows for pause and resume without loss of user data
+
+The title should implement a pause function if there is a potential loss of user data in the event of losing focus.
+
+## 3.23 [RECOMMENDED] Game functions on current publicly available system firmware
+
+All titles will be tested against the current live firmware of supported devices. Reviewers will be looking for crashes or other critical bugs, if any occur the title will fail the review process.
+
+## 3.24 [RECOMMENDED] Ensure the game closes as the user expects
+
+This requirement is to make sure that a game doesn’t continue running in the background when the gamer attempts to quit, or presses the Home Button. If a gamer exits via quit button, the title should terminate. 
+
+If a gamer hit the home button in game, the game should, at minimum, enter a suspend mode until re-opened. A reviewer will be listening to audio that doesn’t stop when the game is closed or suspended by quitting in game, or pressing the home button.
+
+## 3.25 [RECOMMENDED] Issues do not occur when the Forge TV loses power or is rebooted while the title is running
+
+Reviewers may pull the power from supported Cortex Store devices while a title is running. Upon restoring power the reviewer should observe no severe issues.
+
+# In Game Store and IAP
+
+## 4.0 [REQUIRED] Correct description for store items
+
+All item descriptions must accurately reflect each item. Reviewers will check each item for accuracy.
+
+## 4.1 [REQUIRED] All item descriptions are legible
+
+Reviewers will be checking the spelling and grammar of each item. Minor errors will be flagged and corrected, major errors may cause a title to fail the review process.
+
+## 4.2 [REQUIRED] Purchasing correctly unlocks store items
+
+Reviewers will check that each item unlocks correctly.
+
+## 4.2.1 [REQUIRED] It is clear to the gamer what they are purchasing
+
+Reviewers will check each item’s description, and compare to what is actually unlocked via purchase. Items that seem inconsistent will be flagged.
+
+## 4.3 [REQUIRED] Store items function properly when unlocked
+
+Reviewers will verify that all items that are purchased, unlock and function as the developer intends and the user expects. All entitlements should remain unlocked if the game is uninstalled and reinstalled.
+
+## 4.4 [REQUIRED] Titles handle purchases in the manner they are setup within the developer portal 
+
+Developers set this up in the products section of Cortex developers portal. Reviewers make sure each product available on a title behaves as it should. (Consumable, Entitlement, Subscription)
+
+## 4.5 [RECOMMENDED] Receipts are validated correctly if a user uninstalls and re-installs an apk. There is no second request to purchase the title
+
+Upon re-install the title should not ask the gamer to repurchase the entitlement in order to gain full access.
+
+## 4.6 [RECOMMENDED] Purchase unlocks are recognized immediately without the need for a Restore Purchase option
+
+A title that is unlocked via purchase should be unlocked without delay.
+
+## 4.7 [REQUIRED] The title respects the IAP guidelines of Razer for soliciting donations and purchases. All purchases and sales must go through Cortex Store IAP
+
+No title may circumvent the Cortex Store in it’s IAP. No developer may solicit gamers for money outside of the Cortex Store IAP. No title may use deceptive actions upon purchase, for instance spawning multiple purchase windows.
+
+# Social
+
+## 5.0 [REQUIRED] Proper functionality of Facebook/Twitter integrations
+
+If your game implements it, reviewers will check all social links on any title. Links must be valid and appear correctly on Cortex Store supported devices.
+
+## 5.1 [RECOMMENDED] Developers should have a support email available to users for prompt responding
+
+Gamers should have a direct link to developers. If a gamer runs into a problem they should have an easy way of contacting developers. We ask that developers include contact info in their game, where a gamer with a problem can easily find it.
+
+# Content
+
+## 6.0 [REQUIRED] No hate speech
+
+No hate speech will be tolerated on any title.
+
+## 6.1 [REQUIRED] No real-world violence
+
+We will not tolerate titles that encourage violence in the real world.
+
+## 6.2 [REQUIRED] No sexually explicit content
+
+No pornographic material will be allowed on the Cortex Store.
+
+## 6.3 [RECOMMENDED] Does not infringe on other IPs 
+Your title and promotional material cannot contain any material to which you do not have rights to distribute. For example, titles such as emulators must not come packaged with ROMs, and Media Apps must not include movies or music that they do not have a licence to play. This includes screenshots and videos on the game details page.
+
+## 6.4 [REQUIRED] Does not promote real world gambling
+
+Casino types of games are ok. But games that let you gamble with real money will not be allowed on the Cortex Store.
+
+# Interface / Naming
+
+## 7.0 [RECOMMENDED] References to Razer Serval use proper terminology
+
+View appendix for proper terminology for the Razer Serval Controller.
+
+# Pricing
+
+## 8.0 [RECOMMENDED] The game has some level of IAP implemented
+
+We recommend that developers have some sort of in app purchase for their title. It could be a full game unlock, additional characters, a flaming sword, or new levels, the choice is yours.
+
+## 8.1 [RECOMMENDED] There's a clear option to buy in main menu (if applicable)
+
+If a title has IAP implemented, there should be a clear option to buy from the main menu, such as a store menu, or button directly to purchase.
+
+Premium Titles
+
+## 9.0 [RECOMMENDED] A Premium title should implement a receipt check before the user enters gated gameplay
+
+We leave any DRM decisions up to the developer. However, given the simplicity of copying games these days, we recommend premium titles check that the gamer is cleared to use the title before gameplay begins. 
+
+## 9.1 [RECOMMENDED] If the game is changing from Free to Try to Premium, purchases from the Free to Try version should be respected in the newest version
+
+If a developer included a demo mode in a previous version of the game, all purchases from the demo version must be respected in the now demo free version. Developers must notify the Cortex Store team their intention, and we can help with the transition.
+
+## 9.2 [REQUIRED] Buying Premium content successfully unlocks Premium content
+
+Reviewers will verify that all items that are purchased, unlock and function as the developer intends and the user expects
+
+## 9.3 [REQUIRED] Previously purchased entitlements on Premium games should remain unlocked after an uninstall/reinstall without re-purchasing
+
+Reviewers will uninstall and reinstall the game. They will verify that they do not need to repurchase the entitlement to unlock the premium title.
+
+
+# OUYA and OUYA Everywhere Support
+
+## 10.0 [RECOMMENDED] OUYA and OUYA Everywhere support
+
+Developers may choose to support the OUYA, or other OUYA Everywhere supported devices, such as the Madcatz MOJO. Please refer to their documentation for the requirements specific to that device.
+
+## Interface / Naming Appendix
+
+7.0 A Button
+7.1 B Button
+7.2 X Button
+7.3 Y Button
+7.4 D-Pad
+7.5 LS (Left joystick movement)
+7.6 LB (Left bumper
+7.7 LT (Left trigger)
+7.8 L3 (pressing left joystick down)
+7.9 RS
+7.10 RB
+7.11 RT
+7.12 R3
+
+All titles that use controller face buttons may only use Razer Serval style buttons as a reference. Buttons from other controllers may not be used. 
 
 ## Technical Guidelines
 
@@ -78,202 +478,6 @@ Here is TimG with a video tip on handling the safe area.
 </tr>
 
 </table>
-
-##Game Details 
-
-* **Age Rating**: The review team will verify the game details age rating corresponds with the in-game content.
-
-* **Cost**: The review team will verify the cost displays correctly on the games details page. Costs can be `FREE` (free game without in-app-purchases), `FREE*` (free game with in-app-purchases), `PRICE` (premium game without in-app-purchases, and `PRICE*` (premium game with in-app-purchases). 
-
-* **Description**: The review team will critique the game description to be optimal. (Changes to the description are recommended and not required).
-
-* **Downloadable**: The review team will verify the game can be downloaded from the games details page.
-
-* **Full Screen**: The review team will verify the game runs full screen and does not use an incorrect resolution creating large black areas. This is recommended and not required.
-
-* **Genre**: A request to the review team is needed if the game title fails to appear in the expected genres.
-
-* **Installable**: The review team will verify the game can be installed from the games details page. 
-
-* **Launchable**: The review team will verify the game can be launched from the games details page.
-
-* **Video**: Premium titles are required to have a preview video.
-
-##App Review
-
-* **APK Size**: The maximum APK size for games under review is 1.25GB. Extra content can be downloaded by the application after launching.
-
-* **Button Mashing**: The review team checks that mashing controller buttons at the start of the game will not crash the app. Commonly when content is loading, button mashing can crash apps under review.
-
-* **Clear**: The review team recommends that it is clear how to begin playing the game. If the game game uses text fields, the navigation between fields should be easy and not cumbersome.
-
-* **Coming Soon**: The review team recommends that the main menu functions properly unless any features are explicitly labeled as `coming soon`.
-
-* **Controller**: The review team will reject any game where the controller input handling does not function properly. The review team recommends games use `OUYA-Everywhere` input. The review team requires that only controller images that represent `Cortex` devices are used in the game. The review team recommends that the controller input handling follow [interface-guidelines](interface-guidelines.md#user-content-interface-guidelines). The review team recommends that games that use `OUYA-Everywhere` input should use the same axis/button layout on `Cortex` devices. The review team recommends that games that use `OUYA-Everywhere` should show button images using the `OUYA-Everywhere` API for `Cortex` devices.
-
-* **Corruption**: The review team recommends that the game state shouldn't be corrupted by powering off the `Cortex` device in the middle of the game.
-
-* **Devices**: The review team requires that if a user purchases an entitlement on one `Cortex` device, the same content should be unlocked on another `Cortex` devices. If the entitlement was purchased on `Cortex`, the same purchase should also be unlocked in the `OUYA` store, and vice-versa.
-
-* **Endurance**: The review team will recommend fixes when issues are discovered by playing the game for an extended period of time. Issues like memory leaks could crash the game after playing for long periods.
-
-* **Exit**: The review team requires that exiting the game via the game menu works as expected. The game exit functionality should not just pause the game.
-
-* **Legend**: The review team recommends that the game displays a legend which could be displayed in the loading screen. The legend displays a controller layout which shows how sticks and buttons map to in-game actions.
-
-* **Menu**: The review team requires that the `DPAD` and `LEFT_STICK` are capable of navigating the in-game menus.
-
-* **Mobile**: The review team requires that no mobile elements or images should appear in menus or gameplay.
-
-* **Multiplayer**: The review team checks that the maximum number of players are supported in multiplayer games without issues. The review team recommends that the game developer is responsible for extensive multiplayer testing. The review team requires that only a single controller map to each player for multiplayer games.
-
-* **Network**: The review team requires that the game handle the loss of a network connection gracefully. If a network connection is required, the game should notify the user that a network connection is needed to continue or give the option to exit the game.
-
-* **Orientation**: The review team checks that the game uses the `landscape-left` orientation and does not `auto-rotate` during loading or gameplay.
-
-* **Out of Space**: For games that download content in game, the review team checks for download errors that can occur when the system is out of disk space. (Messaging space issues to the user is recommended but not required.)
-
-* **OUYA-Everywhere**: The review team requires games that use the `OUYA-Everywhere` API should launch properly.
-
-* **OUYA Store**: The review team requires that game submissions match their `OUYA Store` counterparts versus just submitting a generic `Android` version.
-
-* **Pause**: The review team recommends that in-game pausing when exiting to `Cortex` functions properly. When returning to the game, the game should resume without losing user data.
-
-* **Performance**: The review team checks for in-game lag and will recommend fixes for any performance issues that are discovered. 
-
-* **Phone Features**: The review team recommends that the game does not mention phone features like `accelerometer`, `tilt`, or `vibration`.
-
-* **Readable**: The review team checks that important game text is readable from 10 feet back from the TV.
-
-* **Runnable**: The review team will verify the game can be started without immediately crashing.
-
-* **Save**: The review team recommends that games use a feature for saving in-game progress where applicable. If game saving is implemented, the review team will verify that saving functions correctly.
-
-* **Social**: The review team requires that social features (Facebook/Twitter) work as expected if implemented. The game should support switching from social widgets back to the game.
-
-* **Store**: The review team recommends the game uses an in-game store. The review team requires that the in-game store functions properly.
-
-* **Sound**: The review team recommends the game uses stereo sound. Music and sound is required to stop playing if the game is paused when switching back to the `Cortex` launcher.
-
-* **Touchpad**: The review team requires `Cortex` games should not have any references to touchpad interaction. There should be no touchpad elements in menus or in game. 
-
-* **Tutorial**: The review team recommends that the game initially starts with a tutorial about the different game modes in the game.
-
-* **Updates**: The review team requires that games continue to function after `OTA` updates. The review team will let developers know when game breaking issues are discovered when testing `OTA` updates.
-
-##Content No-No’s
-
-We want you to build imaginative, inventive games. To make sure `Cortex` has a great environment for gamers, there are a few things we don’t want to see on `Cortex`. First, make sure to rate your game according to `Cortex’s` Content Rating Guidelines below (be honest).  Then ensure your submitted screen-shots and Game Details text contains no explicit content. And finally, let’s avoid these:
-
-* **Hate Speech**: Do not promote hatred toward an individual or group of people based on their race or ethnic origin, religion, disability, gender, age, veteran status, or sexual orientation/gender identity in your game.  If you do, we’ll reject it.
-
-* **Violence**: Do not encourage real world violence, in any way.
-
-* **Sexually Explicit Content**: Don’t go overboard on nudity or obscene references… you know what we mean. There should be no explicit content in the game details page or video.
-
-* **Misrepresentation** (of your Game or Yourself): Be who you say you are. Don’t confuse gamers by being "like" other games.
-
-* **Intellectual Property**: Do not infringe on the intellectual property rights of others including patent, trademark, trade secret, copyright, and all other proprietary rights. The game details page should only include intellectual property that you own. Emulators must not include any `ROM` files from infringing games.
-
-* **Dangerous Products**: Do not transmit viruses, worms, malware, or any other items that may harm gamers or the `Cortex` platform.
-
-* **Illegal Activities**: Use good judgment and do not break the law.
-
-* **`Cortex` Trademark**: You can use the `Cortex` name, logo, and trademark, but you have to respect that these are `Razer’s` intellectual property, so we want you to use them in a way that accurately portrays that your game is on `Cortex`.
-
-* **Gambling**: Do not use or promote any real world gambling.
-
-* **`OUYA` Trademark**: You can use the `OUYA` name, logo, and trademark, but you have to respect that these are `Razer’s` intellectual property, so we want you to use them in a way that accurately portrays that your game is on `OUYA`.
-
-* **Copyright**: The review team requires that all copyright dates on the details page and in game are correct.
-
-##In-App Purchasing & Technical Info
-
-You have to use `Cortex’s` In-App Payment API to take any payment. The In-App Payment API can be found in our `Cortex` Development Kit (ODK) at devs.ouya.tv. It supports micro-transactions and full game downloads as well as any content you want to unlock.
-
-You shouldn’t mislead users about any in-app services, goods, content or functionality.
-
-You should lead users through a simple tutorial to ensure as many people as possible are able to enjoy your app.
-
-No nasty bugs please! We typically reject content that regularly crashes, has awful bugs, or does not perform as described.
-
-Your game should continue to work even if a network connection goes down (excluding any online functionality, of course).
-
-All games must function on a retail `Forge TV` device, without modifications to hardware or software.
-
-The size of the initial Game’s download (the .apk file) should be 1.2 GB or less. If a Game requires additional files or assets, they should be delivered via your own servers.
-
-Games should run in full-screen mode and be playable in 720p and 1080p (it is TV ya know).
-
-Games should follow the `Cortex` [Interface Guidelines](https://devs.ouya.tv/developers/docs/interface-guidelines), including the names of the controller buttons and related UI standards.
-
-* **IAP**: The review team requires that `IAP` functions properly in the `Cortex` store and in game. All purchasing for `Cortex` games must use the `Cortex` API for purchases.
-
-* **Descriptions**: The review team requires `product` descriptions for store items are correct.
-
-* **Readable**: The review team requires that store descriptions are readable.
-
-* **Products**: The review team requires that `entitlements` and `consumables` are purchasable in game and unlock content as expected.
-
-* **Price**: The review team requires that the store, in-game, and purchase prompts display the price correctly.
-
-* **Unlocked Content**: The review team requires that purchased unlocked content functions properly.
-
-* **Out of Memory**: The review team requires that purchases still work properly when the system is out of memory.
-
-* **Purchase Type**: The review team requires that store items are properly labeled as `entitlement`, `consumable`, or `subscription`.
-
-* **Check Receipts**: The review team recommends that the game checks receipts on start. Reinstalling the game should not prompt to purchase unlockable content again.
-
-* **Vouchers**: The review team requires that vouchers unlock entitlements properly for premium games that use a promoted product.
-
-* **Reactive**: - The review team recommends that games unlock content immediately after using vouchers. The user shouldn't be prompted to purchase entitlements after using vouchers.
-
-* **Donations**: The review team requires that the store and game respect the guidelines for soliciting donations and purchases.
-
-* **Buy Button**: The review team recommends including a `BUY` button on the main menu in the game.
-
-* **Premium Titles**: The review team recommends that premium games check for receipts at the start of the game before the user enters into gameplay. Premium games should be purchased before the game can be played. If the receipt check fails to find a receipt, the main menu should show a `BUY` button before gameplay can be entered.
-
-* **Purchase Changes**: The review team recommends honoring old purchases when a game changes purchase types. For example, if a game changes from `free to try` to a `premium` game, purchases from the old purchase type should still work.
-
-* **Premium Content**: The review team requires that premium content purchased in premium games should function properly. 
-
-* **Premium Receipt Checking**: The review team requires that `entitlement` purchases and unlocked content should remain unlocked after the game is reinstalled.
-
-##Cortex Content Ratings
-
-To help expedite your game’s review, we ask that you assign a content rating to your game that reflects the appropriateness of its content for different audiences. The rating scale is as follows:
-
-**Everyone**: Play on. This games for everyone.  Nothing in this category has objectionable material.
-
-**9+**: Mild and infrequent as they may be, these games can contain occurrences of cartoon, fantasy, or realistic violence, as well as mature, suggestive, or horror-themed content. But your 9 year olds already watch the Local News, so odds are they're ready.
-
-**12+**: In 4 years, they'll be driving. Today, they're ready for infrequent mild language, simulated gambling, and mature and suggestive themes, as well as more frequent and intense cartoon, fantasy, or realistic violence.
-
-**17+**: This is the oldest rating, so you guessed it: It's got the most "stuff." And by "stuff," we mean frequent and intense offensive language, all forms of violence (cartoon, fantasy or realistic) and themes (mature, horror and suggestive), as well as sexual content, alcohol, tobacco, and drugs.
-
-##Content Guidelines
-
-Please see the [content submission checklist](https://s3.amazonaws.com/ouya-docs/OUYA_Dev_ReviewChecklist.pdf) for the full list. Here are some important points to keep in mind:
-
-* Alcohol, Tobacco and Drugs: Illegal content is illegal on `Cortex`. That said, games that reference drugs, alcohol, or tobacco products are always rated 12+. Games that focus on drugs, alcohol, or tobacco are 17+. 
-* Gambling: This ain't Vegas, so games or apps that facilitate real gambling aren't allowed in `Cortex`. Gambling themes and simulated gambling will always be rated 12+ or 17+.
-* Hate: We at `Razer` hate on hate. Please keep your speech clean and respect your fellow gamer.
-* Profanity and Crude Humor: We can't control how hard you laugh, but we can promise that any crude or profane humor will always be labeled 12+ or 17+.
-* Sexual and Suggestive Content: We know `Cortex` is one sleek, sexy console, but no: Pornography is never allowed. If games or apps suggest or make sexual references, they'll be rated 12+ or 17+. Focusing on these elements will result in a 17+ rating.
-* User Generated Content and User to User Communication: To protect the community, games or apps rated "everyone" cannot host user generated content or enable communication between users. And should `Cortex` players want to find and communicate with one another, those games will be rated 12+ or 17+.
-* Violence: We play violence safe. Games or apps that contain mild cartoon or fantasy violence are 9+, realistic or intense fantasy violence is 12+ or 17+, and graphic violence is always rated high maturity.
-* The `OUYA` name must be fully capitalized both in-game and on the game details page.
-* The content review team strongly recommends including a change list with submission updates as a polite heads up.
-
-##Communication
-
-In the event we reject your Game -- including for reasons that may not be captured within this document -- we will let you know by email, along with a brief description of why. You will have the opportunity to resubmit your Game and/or let us know if you disagree with our decision.
-
-So go make some great games...
-
-For any questions or clarifications, please contact us at `devsupport@ouya.tv`.
 
 ##Icons
 
