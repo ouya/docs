@@ -1,6 +1,10 @@
 # Cortex Store Technical Requirements
+
 Version 2.0
+
 May 12 2016
+
+[[Link to New Review Checklist 2.0]](https://www.dropbox.com/s/nj31nkiqmjfqete/Forge%20TV%20Cortex%20Store%20Content%20Review%20Checklist.pdf?dl=1)
 
 
 We are very excited that you are interested in developing an App or Game for the Cortex Store. We will do everything we can to help support you in this endeavor and look forward to working with you. Our intention with these guidelines is to inform our developers of our testing procedures and make sure that customers are getting the best experience on the Cortex Store.
