@@ -4,8 +4,6 @@
 
 * [Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
-* [Unreal on OUYA Forums](http://forums.ouya.tv/categories/unreal-on-ouya)
-
 * [UnrealEngine Forums](https://forums.unrealengine.com/forum.php)
 
 ## Getting Started #

@@ -687,8 +687,6 @@ View the entire [Razer Dev Office Hours Playlist](https://www.youtube.com/playli
 
 * [Android Reference Guide](https://docs.unrealengine.com/latest/INT/Platforms/Android/Reference/index.html) - Unreal - Environment variable setup for Android publishing
 
-* [Shoutout to @MegaNuke](http://forums.ouya.tv/discussion/3827/steps-to-make-your-unreal-game-work-on-ouya-tested#latest) - Unreal - Excellent primer to getting started with Unreal
-
 * [Blueprints](https://docs.unrealengine.com/latest/INT/Engine/Blueprints/UserGuide/Types/ClassBlueprint/index.html) - Unreal - Visual Scripting
 
 * [Introduction to Paper2D](https://docs.unrealengine.com/latest/INT/Videos/Player/index.html?series=PLZlv_N0_O1gauJh60307mE_67jqK42twB&video=w5I3ljBJKa0) - Unreal - Intro to 2D sprites
@@ -844,8 +842,6 @@ View the entire [Razer Dev Office Hours Playlist](https://www.youtube.com/playli
 * Event: <a target=_blank href="http://community.thefoundry.co.uk/discussion/topic.aspx?f=3&t=92541">[The Foundary Halloween Contest]</a> - Oct 31st, 2014.
 
 * [HTML5](https://github.com/ouya/docs/blob/master/html5.md) - OUYA-Everywhere and In-App-Purchase support for publishing HTML5 Games
-
-* [Construct 2](http://forums.ouya.tv/discussion/4013/sticky-getting-input-working-with-construct-2) - OE-Input support for Construct 2, expanding from HTML5
 
 * Intro to creating [Construct 2 Plugins](https://www.scirra.com/tutorials/352/plugins-roll-your-own-with-the-javascript-sdk)
 

@@ -8,8 +8,6 @@
 
 [Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
-[Marmalade on OUYA Forums](http://forums.ouya.tv/categories/marmalade-on-ouya)
-
 [Marmalade on MadeWithMarmalade Forums](https://developer.madewithmarmalade.com/develop/announce-and-discuss)
 
 # Getting Started #

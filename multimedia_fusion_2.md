@@ -4,8 +4,6 @@
 
 [Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
-[Clickteam Fusion on OUYA Forums](https://forums.ouya.tv/categories/clickteam-fusion-2-on-ouya)
-
 ## Guide
 
 * Note: `MMF2` has been rebranded to `ClickTeam Fusion 2.5`

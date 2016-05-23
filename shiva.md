@@ -4,8 +4,6 @@
 
 [Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
-[ShiVa on OUYA Forums](http://forums.ouya.tv/categories/shiva-on-ouya)
-
 ## About
 
 ShiVa is an easy to learn commercial 3D game engine. There is a free version of the software that allows you to freely evaluate it. Android exports made from the free version will bare a watermark but there aren't any time limits etc.

@@ -4,8 +4,6 @@
 
 [Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
-[ZGameEditor on OUYA Forums](http://forums.ouya.tv/categories/zgameeditor-on-ouya)
-
 [ZGameEditor on Emix8 Forums](http://www.emix8.org/forum/)
 
 [ZGameEditor topics related to Cortex support](http://www.emix8.org/forum/viewtopic.php?t=1097)

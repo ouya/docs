@@ -4,8 +4,6 @@
 
 [Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
-[Unity on OUYA Forums](http://forums.ouya.tv/categories/unity-on-ouya)
-
 # Getting Started #
 
 <table border=1>

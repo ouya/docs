@@ -8,8 +8,6 @@
 
 [Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
-[Html5 on OUYA Forums](http://forums.ouya.tv/categories/html5-on-ouya)
-
 ## Dependencies ##
 
 [JDK7](setup.md) for [apktool](https://code.google.com/p/android-apktool/)

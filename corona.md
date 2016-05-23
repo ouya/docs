@@ -8,8 +8,6 @@
 
 [Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
-[Corona on OUYA Forums](http://forums.ouya.tv/categories/corona-on-ouya)
-
 [Corona on CoronaLabs Forums](http://forums.coronalabs.com/forum/627-ouya/)
 
 ### Developer Support Hangouts

@@ -8,8 +8,6 @@
 
 [Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
-[MonoGame on OUYA Forums](http://forums.ouya.tv/categories/monogame-on-ouya)
-
 [MonoGame Forums](http://community.monogame.net/category/ouya)
 
 [Xamarin Forums](http://forums.xamarin.com)

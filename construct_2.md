@@ -8,8 +8,6 @@
 
 [Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
-[Construct 2 on OUYA Forums](http://forums.ouya.tv/categories/construct2-on-ouya)
-
 [Construct 2 on Scirra Forums](https://www.scirra.com/forum/)
 
 ## Getting Started

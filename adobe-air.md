@@ -8,8 +8,6 @@
 
 [Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
-[Adobe Air on OUYA Forums](http://forums.ouya.tv/categories/adobe-air-on-ouya)
-
 ## Guide
 
 ### Videos

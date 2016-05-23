@@ -8,8 +8,6 @@
 
 [Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
-[Game Maker on OUYA Forums](http://forums.ouya.tv/categories/gamemaker-on-ouya)
-
 ### Developer Support Hangouts
 
 2013:
