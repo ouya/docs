@@ -2,7 +2,7 @@
 
 The Cortex Software Development Kit, formerly known as OUYA Development Kit (ODK), is the software used to create games and applications for the Forge TV and OUYA consoles.
 
-For help and support, visit the [developer forums](http://forums.ouya.tv) or email devsupport@ouya.tv.
+For help and support, visit the [developer forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/) or email devsupport@ouya.tv.
 
 Contribute to the ODK documentation at https://github.com/ouya/docs
 
