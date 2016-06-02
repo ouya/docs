@@ -14,9 +14,6 @@ Configure `MMF2` for `Cortex` publishing - http://forums.ouya.tv/discussion/2879
 
 Add controller support - http://community.clickteam.com/threads/83074-OUYA-controller-Buttons?p=608743#post608743
 
-Setting up In-App-Purchases - http://forums.ouya.tv/discussion/2867/sticky-in-app-purchase-tutorial
-
-
 ### Resources
 
 Multimedia Fusion 2 - http://www.clickteam.com/
