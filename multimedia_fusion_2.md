@@ -10,8 +10,6 @@
 
 ### Examples
 
-Configure `MMF2` for `Cortex` publishing - http://forums.ouya.tv/discussion/2879/sticky-how-to-setup-mmf2-for-ouya-export-complete-guide?new=1
-
 Add controller support - http://community.clickteam.com/threads/83074-OUYA-controller-Buttons?p=608743#post608743
 
 ### Resources
@@ -42,8 +40,6 @@ http://indiegamecreator.com/
 
 ### Forums
 
-http://forums.ouya.tv/categories/multimedia-fusion-2-on-ouya 
-
 http://community.clickteam.com/forum.php
 
 https://www.facebook.com/clickteam 
@@ -53,8 +49,6 @@ http://www.create-games.com/home.asp
 ### Resources
 
 #### In-app purchase examples
-
-http://forums.ouya.tv/discussion/2867/in-app-purchase-tutorial#latest 
 
 http://www.clickteam.com/educators 
 
