@@ -8,6 +8,8 @@
 
 [Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
+[YoYo Games Forums](https://forum.yoyogames.com/index.php)
+
 ### Developer Support Hangouts
 
 2013:
