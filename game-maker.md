@@ -108,6 +108,20 @@ Enable support for the `leanback` icon by setting the min platform to **API 16: 
 
 The `OuyaSDK extension` uses `OUYA-Everywhere Input` which gets the input remapping for supported and future devices.
 
+GameMaker automatically adds an extension entry in `AndroidManifest.xml` when the `OuyaSDK` extension is added. Without the entry, the extension methods will not be invoked.
+
+```xml
+<manifest>
+    <application>
+        <!-- The number of GMS Android Extensions in use -->
+        <meta-data android:name="YYNumExtensionClasses" android:value="3"/>
+        
+        <!-- Registers the GMS Extension so that the Android source events can be invoked -->
+        <meta-data android:name="YYExtensionClass2" android:value="OuyaSDK"/>
+    </application>
+</manifest>
+```
+
 ### OuyaSDK_IsInitialized
 
 `OuyaSDK_IsInitialized` returns true if the `OuyaSDK` extension has been initialized.
