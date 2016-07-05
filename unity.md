@@ -124,13 +124,13 @@ The following files should be present only for Unity versions 4.X or below. In l
 
 Files within `Plugins` make scripts available to `C#` and `JavaScript` developers.
 
-`Plugins\Controller.cs` - JNI hooks for interacting with `Cortex` Controllers
+`Plugins\RazerSDK\Controller.cs` - JNI hooks for interacting with `Cortex` Controllers
 
-`Plugins\JSONArray.cs` - JNI hooks for using Android JSON Array parsing
+`Plugins\RazerSDK\JSONArray.cs` - JNI hooks for using Android JSON Array parsing
 
-`Plugins\JSONObject.cs` - JNI hooks for using Android JSON Object parsing
+`Plugins\RazerSDK\JSONObject.cs` - JNI hooks for using Android JSON Object parsing
 
-`Plugins\RazerSDK.cs` - The `Cortex` Plugin SDK methods for input and in-app-purchases
+`Plugins\RazerSDK\RazerSDK.cs` - The `Cortex` Plugin SDK methods for input and in-app-purchases
 
 ## Icons ##
 
