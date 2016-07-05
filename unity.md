@@ -20,23 +20,19 @@
 
 Several Unity packages are available from the [ouya-sdk-examples releases](https://github.com/ouya/ouya-sdk-examples/releases/):
 
-* [Unity OuyaSDK-Core.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Core) - The Core package adds `OUYA-Everywhere` controller and `In-App-Purchase` support for OUYA, MOJO, and Razer Forge TV consoles
+* [Unity-RazerSDK-Core.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-RazerSDK-Core) - The Core package adds `OUYA-Everywhere` controller and `In-App-Purchase` support for OUYA, MOJO, and Razer Forge TV consoles
 
-* [Unity OuyaSDK-Examples.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Examples) - Package includes Virtual Controller, InAppPurchase, Safe Area, and Community Content examples 
+* [Unity-RazerSDK-Examples.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-RazerSDK-Examples) - Package includes Billing, Virtual Controller, and Community Content examples 
 
-* [Unity OuyaSDK-StarterKit.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-StarterKit) - Starter Kit for jumping into `Cortex` programming
-
-* [Unity-OuyaSDK-Xiaomi.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Xiaomi) - Files and Android.manifest changes for publishing to Xiaomi
+* (Legacy) [Unity-OuyaSDK-Xiaomi.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Xiaomi) - Files and Android.manifest changes for publishing to Xiaomi
 
 ```
-Note: Before importing ALWAYS make a backup of your game!
+Note: Before importing packages ALWAYS make a backup of your game first!
 ``` 
 
-**Note:** Make a backup of your `AndroidManifest.xml` in `Assets/Plugins/Android/AndroidManifest.xml` before importing the `OuyaSDK-Core.unitypackage`, `Unity-OuyaSDK-Forge.unitypackage`, and `Unity-OuyaSDK-Xiaomi.unitypackage`.
+**Note:** Make a backup of your `AndroidManifest.xml` in `Assets/Plugins/Android/AndroidManifest.xml` before importing packages.
 
-**Note:** Make a backup of your `signing key` in `Assets/Plugins/Android/assets/key.der` before importing the `OuyaSDK-Core.unitypackage`.
-
-**Note:** Make a backup of your `icons` in `Assets/Plugins/Android/res/drawable/app_icon.png` and `Assets/Plugins/Android/res/drawable-xhdpi/ouya_icon.png` before importing the `OuyaSDK-Core.unitypackage`.
+**Note:** Make a backup of your `icons` in `Assets/Plugins/Android/res/drawable/app_icon.png`, `Assets/Plugins/Android/res/drawable/icon.png`, and `Assets/Plugins/Android/res/drawable-xhdpi/ouya_icon.png` before importing packages.
 
 # Source #
 
@@ -48,13 +44,29 @@ This document covers importing the core package, installing dependencies, buildi
 
 # Intro #
 
-The ouya-core.unitypackage contains a static access class for accessing input and the `Cortex` SDK API for the Unity game engine. The input API makes it possible to build your game and without needing to rebuild will automatically add future support for new controllers and devices while still correctly mapping for your game. The input API also adds new features like being able to consistently know which controller maps to a player number. And if a controller disconnects and reconnects it will maintain the same player number. The input API makes it possible to detect if a controller has been disconnected.
+The core package contains a static access class for accessing input and the `Cortex` SDK API for the Unity game engine. The input API makes it possible to build your game and without needing to rebuild will automatically add future support for new controllers and devices while still correctly mapping for your game. The input API also adds new features like being able to consistently know which controller maps to a player number. And if a controller disconnects and reconnects it will maintain the same player number. The input API makes it possible to detect if a controller has been disconnected.
 
 This input API is targeted for `Cortex` and is not maintained as a cross-platform input system.
 
 # Updating #
 
-Download `OuyaSDK-Core.unitypackage` from [Releases](https://github.com/ouya/ouya-sdk-examples/releases). Import the `OuyaSDK-Core.unitypackage` to update the plugin. In the import dialog uncheck the `AndroidManifest.xml`, `signing key` and `icons` if you don't want to replace your customizations. The imported plugin will be ready to `Build and Run` as recompiling the `Java` and `Native` plugins are no longer required now that the package includes the prebuilt libraries.
+Download the core package from [Releases](https://github.com/ouya/ouya-sdk-examples/releases). Import the core package to update the plugin. In the import dialog uncheck the `AndroidManifest.xml` and `icons` if you don't want to replace your customizations. The imported plugin will be ready to `Build and Run` as recompiling the `Java` and `Native` plugins are no longer required now that the package includes the prebuilt libraries.
+
+## Unity 4.X/5.X Compatibility ##
+
+Importing the core package creates a `Razer` menu. The `Razer Panel` can be opened from the `Razer/Open Razer Panel` menu item. The `Razer Panel` requires that the `JDK` path needs to be set on the `Java` tab.
+
+![image_34](ouya-everywhere-unity/image_34.png)
+
+** Unity 4.X **
+
+If your game still uses Unity 4.X or below, click the `Unity 4.X Unpack AARs` button on the `Razer` tab which will extract files to make the plugin compatible for lesser Unity versions. After unpacking the files, the `Build and Run` can be used to deploy and execute the game.
+
+** Unity 5.X **
+
+Unity 5.X added support for Android `AAR` packages. Clicking `Unity 5.X Clean AARs` will remove the unpacked files making it possible to build with Unity 5.X. After cleaning the unpacked files, the `Build and Run` can be used to deploy and execute the game.
+
+![image_33](ouya-everywhere-unity/image_33.png)
 
 # Setup #
 
@@ -62,61 +74,63 @@ Open your game or a new project.
 
 Note: Make sure that your project path does not contain spaces in order to be compatible with the NDK compiler.
 
-![image alt text](ouya-everywhere-unity/image_0.png)
+![image_0](ouya-everywhere-unity/image_0.png)
 
 Import the Core package. From the menu item Assets->Import Package->Custom Package.
 
-![image alt text](ouya-everywhere-unity/image_1.png)
+![image_1](ouya-everywhere-unity/image_1.png)
 
-## `OuyaSDK-Core.unitypackage` ##
+## `Unity-RazerSDK-Core.unitypackage` ##
 
-Import the OuyaSDK-Core.unitypackage.
+Import the core package.
 
-`Ouya\SDK\Editor\OuyaMenuAdmin.cs` - Adds OUYA menu items for exporting packages for release
+`Razer\SDK\Editor\RazerMenuAdmin.cs` - Adds Razer menu items for exporting packages for release
 
-`Ouya\SDK\Editor\OuyaPanel.cs` - Provides example switcher to auto change package name and icons
+`Razer\SDK\Editor\RazerPanel.cs` - Provides example switcher to auto change package name and icons
 
-`Ouya\SDK\Prefabs\OuyaGameObject.prefab` - Add the prefab to the initial scene for apps/games to enable the `Cortex` Plugin
+`Razer\SDK\Prefabs\RazerGameObject.prefab` - Add the prefab to the initial scene for apps/games to enable the `Cortex` Plugin
 
-`Ouya\SDK\Scripts\OuyaGameObject.cs` - Handles communication with the `Cortex` Plugin between C#, C++, and Java
+`Razer\SDK\Scripts\RazerGameObject.cs` - Handles communication with the `Cortex` Plugin between C#, C++, and Java
 
-![image alt text](ouya-everywhere-unity/image_21.png)
+![image_21](ouya-everywhere-unity/image_21.png)
 
 ### Android Customization ###
 
 `Plugins\Android\AndroidManifest.xml` - Defines the package identifier and start activity.
 
-`Plugins\Android\assets\key.der` - The signing key from the developer portal
-
-`Plugins\Android\libs\armeabi-v7a\lib-ouya-ndk.so` - Prebuilt native library for the `Cortex` Plugin
-
-`Plugins\Android\libs\armeabi\lib-ouya-ndk.so` - Prebuilt native library for the `Cortex` Plugin
-
-`Plugins\Android\libs\x86\lib-ouya-ndk.so` - Prebuilt native library for the `Cortex` Plugin
-
-`Plugins\Android\libs\ouya-sdk.jar` - The `Cortex` SDK Java library
-
-`Plugins\Android\OuyaUnityPlugin.jar` - Prebuilt `Cortex` Unity Plugin Java library
-
 `Plugins\Android\res\raw\drawable-xhdpi\ouya_icon.png` - The 732x412 `Cortex` Store icon
 
 `Plugins\Android\res\raw\drawable\app_icon.png` - The 96x96 settings icon
 
-![image alt text](ouya-everywhere-unity/image_22.png)
+`Plugins\Android\res\raw\drawable\icon.png` - The 320x180 leanback icon
+
+** Unity 5.X **
+
+`store-sdk-standard-release.aar` - The `Razer` SDK Java library
+
+`UnityPluginStoreSDK.aar` - The `Razer` Unity Plugin Java library
+
+** Unity 4.X **
+
+The following files should be present only for Unity versions 4.X or below. In later versions, these files should be removed.
+
+`store-sdk-standard-release.jar` - (Extracted) `Razer` SDK Java library
+
+`UnityPluginStoreSDK.jar` - (Extracted) `Razer` Unity Plugin Java library
+
+`Plugins\Android\libs\armeabi-v7a\lib-ndk-unity-store-sdk.so` - (Extracted) native library for the `Cortex`
 
 ### Plugin Scripts ###
 
 Files within `Plugins` make scripts available to `C#` and `JavaScript` developers.
 
+`Plugins\Controller.cs` - JNI hooks for interacting with `Cortex` Controllers
+
 `Plugins\JSONArray.cs` - JNI hooks for using Android JSON Array parsing
 
 `Plugins\JSONObject.cs` - JNI hooks for using Android JSON Object parsing
 
-`Plugins\OuyaController.cs` - JNI hooks for interacting with the `Cortex` Controllers
-
-`Plugins\OuyaSDK.cs` - The `Cortex` Plugin SDK methods for input and in-app-purchases
-
-![image alt text](ouya-everywhere-unity/image_23.png)
+`Plugins\RazerSDK.cs` - The `Cortex` Plugin SDK methods for input and in-app-purchases
 
 ## Icons ##
 
@@ -124,41 +138,42 @@ On the first import you'll get the sample icons.
 ```
 Assets/Plugins/Android/res/drawable-xhdpi/ouya_icon.png (732x412).
 Assets/Plugins/Android/res/drawable/app_icon.png (96x96).
+Assets/Plugins/Android/res/drawable/icon.png (320x180).
 ```
 
 If the icons have already been customized, there's no need to import the icons and replace with the sample icons.
 
-## Signing key ##
+Be sure to edit the player settings for `Android` to disable the `Android Banner` checkbox which will default back to the provided leanback icon.
 
-Importing the signing key is a placeholder for where to place the signing key downloaded from the developer portal. The signing key is used in in-app-purchase encryption and decryption. The in-app-purchase API will not work until you [create a game in the developer portal](https://devs.ouya.tv/developers/games) to download the game's signing key. Be cautious when importing updates to not replace this file.
+![image_35](ouya-everywhere-unity/image_35.png)
 
-Note (ODK 1.0.14.1): The signing key was moved to be compatible with 3rd party plugins.
+## Secret API Key ##
 
-```
-Assets/Plugins/Android/assets/key.der
-```
+The `Secret API Key` can be copied from the [developer portal](https://devs.ouya.tv). Each game has it's own `Secret API Key` that should be set on the `RazerGameObject`.
+
+![image_36](ouya-everywhere-unity/image_36.png)
 
 ## Orientation ##
 
-Within the Player Settings, Android Tab, set the default orientation to Landscape Left.
+On `Android TV` within the Player Settings, Android Tab, set the default orientation to Landscape Left.
 
-![image alt text](ouya-everywhere-unity/image_19.png)
+![image_19](ouya-everywhere-unity/image_19.png)
 
-## OuyaGameObject.cs ##
+## RazerGameObject.cs ##
 
-Add the OuyaGameObject to your initial loading scene. It uses DontDestroyOnLoad so you only want one instance of the OuyaGameObject. It handles communication between Java to C#. Select the `OuyaGameObject` in the `SceneView` and in the inspector, the `OUYA Plugin Init Values` field will be visible. Add an entry for `tv.ouya.developer_id` that corresponds to your developer uuid in the [developer portal](http://devs.ouya.tv).
+Add the RazerGameObject to your initial loading scene. It uses DontDestroyOnLoad so you only want one instance of the RazerGameObject. The script handles communication between Java to C#. Select the `RazerGameObject` in the `SceneView` and in the inspector, add your `Secret API Key` that corresponds with the game entry from the [developer portal](http://devs.ouya.tv).
 
-![image alt text](ouya-everywhere-unity/image_20.png)
+![image_36](ouya-everywhere-unity/image_36.png)
 
 ## Disable Forge Screensaver
 
-[Back to general info](forge_tv.md#user-content-disable-screensaver)
+[Back to Forge general info](forge_tv.md#user-content-disable-screensaver)
 
 Updating to the latest Core plugin in [releases](#user-content-releases) will disable the `Forge` screensaver while the Unity app/game is running. 
 
 ## Xiaomi Libraries
 
-[Back to general info](enable_xiaomi_support.md#user-content-xiaomi-libraries)
+[Back to Xiaomi general info](enable_xiaomi_support.md#user-content-xiaomi-libraries)
 
 Place the `Xiaomi` libraries in the following destinations:
 
@@ -170,7 +185,7 @@ The [releases section](#user-content-releases) has a link to the `Unity-OuyaSDK-
 
 ## Xiaomi Required Permissions
 
-[Back to general info](enable_xiaomi_support.md#user-content-xiaomi-required-permissions)
+[Back to Xiaomi general info](enable_xiaomi_support.md#user-content-xiaomi-required-permissions)
 
 Xiaomi's SDK requires several additional permissions in `AndroidManifest.xml` in order to work.
 ```java
@@ -185,19 +200,7 @@ The [releases section](#user-content-releases) has a link to the `Unity-OuyaSDK-
 
 ## Xiaomi Initialization
 
-[Back to general info](enable_xiaomi_support.md#user-content-xiaomi-initialization)
-
-Using the inspector, browse the `OuyaGameObject`. Here you can add strings to make the game compatible with OUYA Everywhere devices.
-
-* `tv.ouya.developer_id` - The developer UUID can be found in the [developer portal](http://devs.ouya.tv) after logging in.
-
-* `com.xiaomi.app_id` - The Xiaomi App Id is provided by the content team, email `officehours@ouya.tv` to obtain your key.
-
-* `com.xiaomi.app_key` - The Xiaomi App Key is provided by the content team, email `officehours@ouya.tv` to obtain your key.
-
-* `tv.ouya.product_id_list` - The product id list is a comma separated list of product ids that can be purchased in the game.
-
-![image alt text](ouya-everywhere-unity/image_31.png)
+[Back to Xiaomi general info](enable_xiaomi_support.md#user-content-xiaomi-initialization)
 
 * `MiGameCenterSDKService.apk` should be placed in `Assets\Plugins\Android\assets`
 
@@ -209,19 +212,19 @@ Using the inspector, browse the `OuyaGameObject`. Here you can add strings to ma
 
 ## Disable Xiaomi Screensaver
 
-[Back to general info](enable_xiaomi_support.md#user-content-disable-xiaomi-screensaver)
+[Back to Xiaomi general info](enable_xiaomi_support.md#user-content-disable-xiaomi-screensaver)
 
 Updating to the latest Core plugin in [releases](#user-content-releases) will disable the `Xiaomi` screensaver while the unity app/game is running. 
 
 ## Create a Xiaomi-specific icon
 
-[Back to general info](enable_xiaomi_support.md#user-content-create-a-xiaomi-specific-icon)
+[Back to Xiaomi general info](enable_xiaomi_support.md#user-content-create-a-xiaomi-specific-icon)
 
 The `ouya_xiaomi_icon.png` 284x160 icon should be placed in `Assets/plugins/Android/res/drawable-xhdpi/ouya_xiaomi_icon.png`.
 
 ## Localization Resources
 
-[Back to general info](enable_xiaomi_support.md#user-content-localization-resources)
+[Back to Xiaomi general info](enable_xiaomi_support.md#user-content-localization-resources)
 
 Use [Android localization](http://developer.android.com/guide/topics/resources/localization.html) to include string resources for the languages supported by your game.
 
@@ -240,7 +243,7 @@ Use [Android localization](http://developer.android.com/guide/topics/resources/l
 * `Assets/Plugins/Android/res/values-zh-rCN/strings.xml` (Simplified Chinese)
 
 Resource files contain `key/value` pairs for looking up localized strings given the `key` value.
-Using the `OuyaSDK` API, invoke `OuyaSDK.getStringResource("app_name")` to return the localized string for the key `app_name` which in this example would return `安卓 出口` when the language is detected as `Simplified Chinese`, i.e. on the `Xiaomi` box.
+Using the `RazerSDK` API, invoke `RazerSDK.getStringResource("app_name")` to return the localized string for the key `app_name` which in this example would return `安卓 出口` when the language is detected as `Simplified Chinese`, i.e. on the `Xiaomi` box.
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -252,17 +255,17 @@ Using the `OuyaSDK` API, invoke `OuyaSDK.getStringResource("app_name")` to retur
 
 ## Fonts
 
-[Back to general info](enable_xiaomi_support.md#user-content-fonts)
+[Back to Xiaomi general info](enable_xiaomi_support.md#user-content-fonts)
 
 Unity has a variety of GUI plugins which each handle fonts differently.
 
 * For the [2D Toolkit](http://www.2dtoolkit.com) plugin, `TTF` fonts need to be converted to `Bitmap` fonts and then [import to a sprite collection](http://www.unikronsoftware.com/2dtoolkit/docs/latest/tutorial/importing_a_font_into_a_sprite_collection.html).
 
-## Other Player Settings ##
+## Xiaomi Other Player Settings ##
 
 In the Android `Player Settings` and within the `Other Settings` subgroup, here you can enter your package identifier from the [developer portal](http://devs.ouya.tv) into the `bundle id` field. Make sure the `minimum API level` field to 16.
 
-![image alt text](ouya-everywhere-unity/image_28.png)
+![image_28](ouya-everywhere-unity/image_28.png)
 
 # Dependencies #
 
@@ -291,26 +294,31 @@ Be sure to be on the `Android` platform before invoking the `Cortex` SDK API.
 ## Intellisense ##
 
 To enable intellisense for `UNITY_ANDROID` and not `UNITY_EDITOR`, be sure to edit the project settings and remove the `UNITY_EDITOR` from the debug symbols.
-If Unity regenerates the solution/project, the debug symbols will be readded which will need to be removed again to get intellisense back.
+
+If Unity regenerates the solution/project, the debug symbols will added back which will need to be removed to get intellisense again.
 
 ![image_32.png](ouya-everywhere-unity/image_32.png)
 
+You can also use the `Razer/Unset Symbol (UNITY_EDITOR)` menu to automate this process. 
+
+![image_37.png](ouya-everywhere-unity/image_37.png)
+
 ## Initialization ##
 
-Initialization is handled by the `OuyaGameObject` being placed in your initial scene.
+Initialization is handled by the `RazerGameObject` being placed in your initial scene.
 
-Make sure that before invoking other OuyaSDK methods than isIAPInitComplete returns true. This gives time for the Java to initialize before accessing the controller, button names, button images, products, purchase, receipts, and toggling cursor visibility.
+Make sure that before invoking other RazerSDK methods than isIAPInitComplete returns true. This gives time for the Java to initialize before accessing the controller, button names, button images, products, purchase, receipts, and toggling cursor visibility.
 
 ```
 // returns true when the Java in-app-purchase system has initialized.
 // return false when in-app-purchase calls should not be invoked 
-// bool OuyaSDK.isIAPInitComplete();
+// bool RazerSDK.isIAPInitComplete();
 
 #if UNITY_ANDROID && !UNITY_EDITOR
 
 IEnumerator Start()
 {
-	while (!OuyaSDK.isIAPInitComplete())
+	while (!RazerSDK.isIAPInitComplete())
 	{
 		yield return null;
 	}
@@ -319,9 +327,9 @@ IEnumerator Start()
 #endif
 ```
 
-# Accessing OuyaController #
+# Accessing Controller #
 
-The namespace has to be added to find the OuyaController.
+The namespace has to be added to find the Controller.
 
 C#
 ```
@@ -332,18 +340,18 @@ using tv.ouya.console.api;
 
 ## Button Data ##
 
-Before accessing ButtonData, make sure that `OuyaSDK.isIAPInitComplete()` returns true.
+Before accessing ButtonData, make sure that `RazerSDK.isIAPInitComplete()` returns true.
 
 ## Accessing ButtonData / Button Names ##
 
-OuyaController has a static method to retrieve button names. A null button name means the button was not found.  
+Controller has a static method to retrieve button names. A null button name means the button was not found.  
 
 C#
 ```
 #if UNITY_ANDROID && !UNITY_EDITOR
 
-OuyaController.ButtonData buttonData;
-buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
+Controller.ButtonData buttonData;
+buttonData = Controller.getButtonData(Controller.BUTTON_O);
 if (null == buttonData)
 {
 	return;
@@ -359,15 +367,15 @@ string buttonName = buttonData.buttonName;
 
 ## Accessing ButtonData / Button Images ##
 
-`OuyaController` has a static method to retrieve button images as Texture2D images. A null Texture2D image means the button was not found.
+`Controller` has a static method to retrieve button images as Texture2D images. A null Texture2D image means the button was not found.
 
 C#
 ```
 #if UNITY_ANDROID && !UNITY_EDITOR
 
 Texture2D buttonTexture = null;
-OuyaController.ButtonData buttonData;
-buttonData = OuyaController.getButtonData(OuyaController.BUTTON_O);
+Controller.ButtonData buttonData;
+buttonData = Controller.getButtonData(Controller.BUTTON_O);
 if (null == buttonData)
 {
 	return;
@@ -402,42 +410,42 @@ stream.close();
 
 C#
 ```
-// PlayerNm is zero based and must be less than OuyaController.MAX_CONTROLLERS.
+// PlayerNm is zero based and must be less than Controller.MAX_CONTROLLERS.
 // GetAxis, GetAxisRaw expects the following axis values:
-OuyaController.AXIS_LS_X
-OuyaController.AXIS_LS_Y
-OuyaController.AXIS_RS_X
-OuyaController.AXIS_RS_Y
-OuyaController.AXIS_L2
-OuyaController.AXIS_R2
+Controller.AXIS_LS_X
+Controller.AXIS_LS_Y
+Controller.AXIS_RS_X
+Controller.AXIS_RS_Y
+Controller.AXIS_L2
+Controller.AXIS_R2
 
 int playerNum = 0; //zero based
 
 // @result - Returns the value of the axis with smoothing
-float OuyaSDK.OuyaInput.GetAxis(int playerNum, int axis);
+float RazerSDK.ControllerInput.GetAxis(int playerNum, int axis);
 
 #if UNITY_ANDROID && !UNITY_EDITOR
 
-OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_LS_X)
-OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_LS_Y)
-OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_RS_X)
-OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_RS_Y)
-OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_L2)
-OuyaSDK.OuyaInput.GetAxis(playerNum, OuyaController.AXIS_R2)
+RazerSDK.ControllerInput.GetAxis(playerNum, Controller.AXIS_LS_X)
+RazerSDK.ControllerInput.GetAxis(playerNum, Controller.AXIS_LS_Y)
+RazerSDK.ControllerInput.GetAxis(playerNum, Controller.AXIS_RS_X)
+RazerSDK.ControllerInput.GetAxis(playerNum, Controller.AXIS_RS_Y)
+RazerSDK.ControllerInput.GetAxis(playerNum, Controller.AXIS_L2)
+RazerSDK.ControllerInput.GetAxis(playerNum, Controller.AXIS_R2)
 
 #endif
 
 // @result - Returns the value of the axis without smoothing
-float OuyaSDK.OuyaInput.GetAxisRaw(int playerNum, int axis);
+float RazerSDK.ControllerInput.GetAxisRaw(int playerNum, int axis);
 
 #if UNITY_ANDROID && !UNITY_EDITOR
 
-OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_LS_X)
-OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_LS_Y)
-OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_RS_X)
-OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_RS_Y)
-OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_L2)
-OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_R2)
+RazerSDK.ControllerInput.GetAxisRaw(playerNum, Controller.AXIS_LS_X)
+RazerSDK.ControllerInput.GetAxisRaw(playerNum, Controller.AXIS_LS_Y)
+RazerSDK.ControllerInput.GetAxisRaw(playerNum, Controller.AXIS_RS_X)
+RazerSDK.ControllerInput.GetAxisRaw(playerNum, Controller.AXIS_RS_Y)
+RazerSDK.ControllerInput.GetAxisRaw(playerNum, Controller.AXIS_L2)
+RazerSDK.ControllerInput.GetAxisRaw(playerNum, Controller.AXIS_R2)
 
 #endif
 ```
@@ -447,85 +455,85 @@ OuyaSDK.OuyaInput.GetAxisRaw(playerNum, OuyaController.AXIS_R2)
 C#
 ```
 // GetButton, GetButtonDown, GetButtonUp expect the following button values:
-OuyaController.BUTTON_O
-OuyaController.BUTTON_U
-OuyaController.BUTTON_Y
-OuyaController.BUTTON_A
-OuyaController.BUTTON_L1
-OuyaController.BUTTON_R1
-OuyaController.BUTTON_L3
-OuyaController.BUTTON_R3
-OuyaController.BUTTON_DPAD_UP
-OuyaController.BUTTON_DPAD_DOWN
-OuyaController.BUTTON_DPAD_RIGHT
-OuyaController.BUTTON_DPAD_LEFT
-OuyaController.BUTTON_MENU
+Controller.BUTTON_O
+Controller.BUTTON_U
+Controller.BUTTON_Y
+Controller.BUTTON_A
+Controller.BUTTON_L1
+Controller.BUTTON_R1
+Controller.BUTTON_L3
+Controller.BUTTON_R3
+Controller.BUTTON_DPAD_UP
+Controller.BUTTON_DPAD_DOWN
+Controller.BUTTON_DPAD_RIGHT
+Controller.BUTTON_DPAD_LEFT
+Controller.BUTTON_MENU
 
 // @result - true when the button is in the DOWN position
 // @result - false when the button is in the UP position
-bool OuyaSDK.OuyaInput.GetButton(int playerNum, int keyCode);
+bool RazerSDK.ControllerInput.GetButton(int playerNum, int keyCode);
 
 #if UNITY_ANDROID && !UNITY_EDITOR
 
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_O)
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_U)
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_Y)
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_A)
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_L1)
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_R1)
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_L3)
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_R3)
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_DPAD_UP)
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_DPAD_DOWN)
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_DPAD_RIGHT)
-OuyaSDK.OuyaInput.GetButton(playerNum, OuyaController.BUTTON_DPAD_LEFT)
+RazerSDK.ControllerInput.GetButton(playerNum, Controller.BUTTON_O)
+RazerSDK.ControllerInput.GetButton(playerNum, Controller.BUTTON_U)
+RazerSDK.ControllerInput.GetButton(playerNum, Controller.BUTTON_Y)
+RazerSDK.ControllerInput.GetButton(playerNum, Controller.BUTTON_A)
+RazerSDK.ControllerInput.GetButton(playerNum, Controller.BUTTON_L1)
+RazerSDK.ControllerInput.GetButton(playerNum, Controller.BUTTON_R1)
+RazerSDK.ControllerInput.GetButton(playerNum, Controller.BUTTON_L3)
+RazerSDK.ControllerInput.GetButton(playerNum, Controller.BUTTON_R3)
+RazerSDK.ControllerInput.GetButton(playerNum, Controller.BUTTON_DPAD_UP)
+RazerSDK.ControllerInput.GetButton(playerNum, Controller.BUTTON_DPAD_DOWN)
+RazerSDK.ControllerInput.GetButton(playerNum, Controller.BUTTON_DPAD_RIGHT)
+RazerSDK.ControllerInput.GetButton(playerNum, Controller.BUTTON_DPAD_LEFT)
 
 #endif
 
 // @result - true if the button was in the DOWN position in the last frame
-bool OuyaSDK.OuyaInput.GetButtonDown(int playerNum, int button);
+bool RazerSDK.ControllerInput.GetButtonDown(int playerNum, int button);
 
 #if UNITY_ANDROID && !UNITY_EDITOR
 
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_O)
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_U)
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_Y)
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_A)
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_L1)
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_R1)
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_L3)
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_R3)
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_UP)
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_DOWN)
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_RIGHT)
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_DPAD_LEFT)
-OuyaSDK.OuyaInput.GetButtonDown(playerNum, OuyaController.BUTTON_MENU)
+RazerSDK.ControllerInput.GetButtonDown(playerNum, Controller.BUTTON_O)
+RazerSDK.ControllerInput.GetButtonDown(playerNum, Controller.BUTTON_U)
+RazerSDK.ControllerInput.GetButtonDown(playerNum, Controller.BUTTON_Y)
+RazerSDK.ControllerInput.GetButtonDown(playerNum, Controller.BUTTON_A)
+RazerSDK.ControllerInput.GetButtonDown(playerNum, Controller.BUTTON_L1)
+RazerSDK.ControllerInput.GetButtonDown(playerNum, Controller.BUTTON_R1)
+RazerSDK.ControllerInput.GetButtonDown(playerNum, Controller.BUTTON_L3)
+RazerSDK.ControllerInput.GetButtonDown(playerNum, Controller.BUTTON_R3)
+RazerSDK.ControllerInput.GetButtonDown(playerNum, Controller.BUTTON_DPAD_UP)
+RazerSDK.ControllerInput.GetButtonDown(playerNum, Controller.BUTTON_DPAD_DOWN)
+RazerSDK.ControllerInput.GetButtonDown(playerNum, Controller.BUTTON_DPAD_RIGHT)
+RazerSDK.ControllerInput.GetButtonDown(playerNum, Controller.BUTTON_DPAD_LEFT)
+RazerSDK.ControllerInput.GetButtonDown(playerNum, Controller.BUTTON_MENU)
 
 #endif
 
 // @result - true if the button was in the UP position in the last frame
-bool OuyaSDK.OuyaInput.GetButtonUp(int playerNum, int button);
+bool RazerSDK.ControllerInput.GetButtonUp(int playerNum, int button);
 
 #if UNITY_ANDROID && !UNITY_EDITOR
 
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_O)
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_U)
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_Y)
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_A)
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_L1)
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_R1)
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_L3)
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_R3)
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_UP)
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_DOWN)
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_RIGHT)
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_DPAD_LEFT)
-OuyaSDK.OuyaInput.GetButtonUp(playerNum, OuyaController.BUTTON_MENU)
+RazerSDK.ControllerInput.GetButtonUp(playerNum, Controller.BUTTON_O)
+RazerSDK.ControllerInput.GetButtonUp(playerNum, Controller.BUTTON_U)
+RazerSDK.ControllerInput.GetButtonUp(playerNum, Controller.BUTTON_Y)
+RazerSDK.ControllerInput.GetButtonUp(playerNum, Controller.BUTTON_A)
+RazerSDK.ControllerInput.GetButtonUp(playerNum, Controller.BUTTON_L1)
+RazerSDK.ControllerInput.GetButtonUp(playerNum, Controller.BUTTON_R1)
+RazerSDK.ControllerInput.GetButtonUp(playerNum, Controller.BUTTON_L3)
+RazerSDK.ControllerInput.GetButtonUp(playerNum, Controller.BUTTON_R3)
+RazerSDK.ControllerInput.GetButtonUp(playerNum, Controller.BUTTON_DPAD_UP)
+RazerSDK.ControllerInput.GetButtonUp(playerNum, Controller.BUTTON_DPAD_DOWN)
+RazerSDK.ControllerInput.GetButtonUp(playerNum, Controller.BUTTON_DPAD_RIGHT)
+RazerSDK.ControllerInput.GetButtonUp(playerNum, Controller.BUTTON_DPAD_LEFT)
+RazerSDK.ControllerInput.GetButtonUp(playerNum, Controller.BUTTON_MENU)
 
 #endif
 ```
 
-## OuyaController.BUTTON_MENU ##
+## Controller.BUTTON_MENU ##
 
 Note: Be sure to check for button states with GetButtonDown and GetButtonUp. Just checking for the GetButton state will never catch the event in time because the down and up event fire within the same frame.
 
@@ -539,24 +547,24 @@ C#
 
 //@returns true if the player number is connected
 //@returns false if the player number is disconnected
-bool OuyaSDK.OuyaInput.IsControllerConnected(int playerNum);
+bool RazerSDK.ControllerInput.IsControllerConnected(int playerNum);
 
 #endif
 ```
 
 # Hide the mouse cursor #
 
-In some cases you may want to hide or show the mouse cursor. The showCursor static method on OuyaController toggles cursor visibility.
+In some cases you may want to hide or show the mouse cursor. The showCursor static method on Controller toggles cursor visibility.
 
 C#
 ```
 #if UNITY_ANDROID && !UNITY_EDITOR
 
 // Hide the mouse cursor
-OuyaController.showCursor(false);
+Controller.showCursor(false);
 
 // Show the mouse cursor
-OuyaController.showCursor(true);
+Controller.showCursor(true);
 
 #endif
 ```
@@ -596,7 +604,7 @@ Extend the `IPauseListener` interface to receive the callback for a pause event.
 C#
 ```
 public class MyScript : MonoBehaviour,
-    OuyaSDK.IPauseListener
+    RazerSDK.IPauseListener
 {
 }
 ```
@@ -604,7 +612,7 @@ public class MyScript : MonoBehaviour,
 JavaScript
 ```
 public class MyScript extends MonoBehaviour implements
-	OuyaSDK.IPauseListener
+	RazerSDK.IPauseListener
 {
 }
 ```
@@ -615,11 +623,11 @@ C#
 ```
     void Awake()
     {
-        OuyaSDK.registerPauseListener(this);
+        RazerSDK.registerPauseListener(this);
     }
     void OnDestroy()
     {
-        OuyaSDK.unregisterPauseListener(this);
+        RazerSDK.unregisterPauseListener(this);
     }
 ```
 
@@ -627,12 +635,12 @@ JavaScript
 ```
     function Awake()
     {
-        OuyaSDK.registerPauseListener(this);
+        RazerSDK.registerPauseListener(this);
     }
 
     function OnDestroy()
     {
-        OuyaSDK.unregisterPauseListener(this);
+        RazerSDK.unregisterPauseListener(this);
     }
 ```
 
@@ -663,7 +671,7 @@ Extend the `IResumeListener` interface to receive the callback for a pause event
 C#
 ```
 public class MyScript : MonoBehaviour,
-    OuyaSDK.IResumeListener
+    RazerSDK.IResumeListener
 {
 }
 ```
@@ -671,7 +679,7 @@ public class MyScript : MonoBehaviour,
 JavaScript
 ```
 public class MyScript extends MonoBehaviour implements
-	OuyaSDK.IResumeListener
+	RazerSDK.IResumeListener
 {
 }
 ```
@@ -682,11 +690,11 @@ C#
 ```
     void Awake()
     {
-        OuyaSDK.registerResumeListener(this);
+        RazerSDK.registerResumeListener(this);
     }
     void OnDestroy()
     {
-        OuyaSDK.unregisterResumeListener(this);
+        RazerSDK.unregisterResumeListener(this);
     }
 ```
 
@@ -694,12 +702,12 @@ JavaScript
 ```
     function Awake()
     {
-        OuyaSDK.registerResumeListener(this);
+        RazerSDK.registerResumeListener(this);
     }
 
     function OnDestroy()
     {
-        OuyaSDK.unregisterResumeListener(this);
+        RazerSDK.unregisterResumeListener(this);
     }
 ```
 
@@ -725,12 +733,12 @@ JavaScript
 
 Gamer Info provides access to the gamer username and uuid.
 
-Extend the `IRequestGamerInfoListener` interface to receive the callbacks for invoking `OuyaSDK.requestGamerInfo()`.
+Extend the `IRequestGamerInfoListener` interface to receive the callbacks for invoking `RazerSDK.requestGamerInfo()`.
 
 C#
 ```
 public class MyScript : MonoBehaviour,
-    OuyaSDK.IRequestGamerInfoListener
+    RazerSDK.IRequestGamerInfoListener
 {
 }
 ```
@@ -738,7 +746,7 @@ public class MyScript : MonoBehaviour,
 JavaScript
 ```
 public class MyScript extends MonoBehaviour implements
-	OuyaSDK.IRequestGamerInfoListener
+	RazerSDK.IRequestGamerInfoListener
 {
 }
 ```
@@ -749,11 +757,11 @@ C#
 ```
     void Awake()
     {
-        OuyaSDK.registerRequestGamerInfoListener(this);
+        RazerSDK.registerRequestGamerInfoListener(this);
     }
     void OnDestroy()
     {
-        OuyaSDK.unregisterRequestGamerInfoListener(this);
+        RazerSDK.unregisterRequestGamerInfoListener(this);
     }
 ```
 
@@ -761,12 +769,12 @@ JavaScript
 ```
     function Awake()
     {
-        OuyaSDK.registerRequestGamerInfoListener(this);
+        RazerSDK.registerRequestGamerInfoListener(this);
     }
 
     function OnDestroy()
     {
-        OuyaSDK.unregisterRequestGamerInfoListener(this);
+        RazerSDK.unregisterRequestGamerInfoListener(this);
     }
 ```
 
@@ -833,17 +841,17 @@ string[] productItems =
 	"YOUR_PRODUCT_ID_3",
 };
 
-List<OuyaSDK.Purchasable> purchasables =
-	new List<OuyaSDK.Purchasable>();
+List<RazerSDK.Purchasable> purchasables =
+	new List<RazerSDK.Purchasable>();
 	
 foreach (string productId in productItems)
 {
-	OuyaSDK.Purchasable purchasable = new OuyaSDK.Purchasable();
+	RazerSDK.Purchasable purchasable = new RazerSDK.Purchasable();
 	purchasable.productId = productId;
 	purchasables.Add(purchasable);
 }
 
-OuyaSDK.requestProducts(purchasables);
+RazerSDK.requestProducts(purchasables);
 ```
 
 JavaScript
@@ -855,25 +863,25 @@ var productItems : String[] =
 	"YOUR_PRODUCT_ID_3",
 };
 
-var purchasables : List<OuyaSDK.Purchasable> =
-	new List<OuyaSDK.Purchasable>();
+var purchasables : List<RazerSDK.Purchasable> =
+	new List<RazerSDK.Purchasable>();
 	
 foreach (var productId : String in productItems)
 {
-	var purchasable : OuyaSDK.Purchasable = new OuyaSDK.Purchasable();
+	var purchasable : RazerSDK.Purchasable = new RazerSDK.Purchasable();
 	purchasable.productId = productId;
 	purchasables.Add(purchasable);
 }
 
-OuyaSDK.requestProducts(purchasables);
+RazerSDK.requestProducts(purchasables);
 ```
 
-Extend the `IRequestProductsListener ` interface to receive the callbacks for invoking `OuyaSDK.requestProducts(purchasables)`.
+Extend the `IRequestProductsListener ` interface to receive the callbacks for invoking `RazerSDK.requestProducts(purchasables)`.
 
 C#
 ```
 public class MyScript : MonoBehaviour,
-    OuyaSDK.IRequestProductsListener
+    RazerSDK.IRequestProductsListener
 {
 }
 ```
@@ -881,7 +889,7 @@ public class MyScript : MonoBehaviour,
 JavaScript
 ```
 public class MyScript extends MonoBehaviour implements
-	OuyaSDK.IRequestProductsListener
+	RazerSDK.IRequestProductsListener
 {
 }
 ```
@@ -892,11 +900,11 @@ C#
 ```
     void Awake()
     {
-        OuyaSDK.registerRequestProductsListener(this);
+        RazerSDK.registerRequestProductsListener(this);
     }
     void OnDestroy()
     {
-        OuyaSDK.unregisterRequestProductsListener(this);
+        RazerSDK.unregisterRequestProductsListener(this);
     }
 ```
 
@@ -904,12 +912,12 @@ JavaScript
 ```
     function Awake()
     {
-        OuyaSDK.registerRequestProductsListener(this);
+        RazerSDK.registerRequestProductsListener(this);
     }
 
     function OnDestroy()
     {
-        OuyaSDK.unregisterRequestProductsListener(this);
+        RazerSDK.unregisterRequestProductsListener(this);
     }
 ```
 
@@ -917,14 +925,14 @@ The success event will receive a list of products.
 
 C#
 ```
-    public void RequestProductsOnSuccess(List<OuyaSDK.Product> products)
+    public void RequestProductsOnSuccess(List<RazerSDK.Product> products)
     {
     }
 ```
 
 JavaScript
 ```
-    public function RequestProductsOnSuccess(products : List.<OuyaSDK.Product>)
+    public function RequestProductsOnSuccess(products : List.<RazerSDK.Product>)
     {
     }
 ```
@@ -963,30 +971,30 @@ JavaScript
 
 # Request Purchase #
 
-A gamer can purchase an entitlement or consumable using `OuyaSDK.requestPurchase`.
+A gamer can purchase an entitlement or consumable using `RazerSDK.requestPurchase`.
 
 Prepare a `Purchasable` to initiate a purchase.
 
 C#
 ```
-OuyaSDK.Purchasable purchasable = new OuyaSDK.Purchasable();
+RazerSDK.Purchasable purchasable = new RazerSDK.Purchasable();
 purchasable.productId = "YOUR_PRODUCT_ID";
-OuyaSDK.requestPurchase(purchasable);
+RazerSDK.requestPurchase(purchasable);
 ```
 
 JavaScript
 ```
-var purchasable : OuyaSDK.Purchasable = new OuyaSDK.Purchasable();
+var purchasable : RazerSDK.Purchasable = new RazerSDK.Purchasable();
 purchasable.productId = "YOUR_PRODUCT_ID";
-OuyaSDK.requestPurchase(purchasable);
+RazerSDK.requestPurchase(purchasable);
 ```
 
-Extend the `IRequestPurchaseListener ` interface to receive the callbacks for invoking `OuyaSDK.requestPurchase(purchasable)`.
+Extend the `IRequestPurchaseListener ` interface to receive the callbacks for invoking `RazerSDK.requestPurchase(purchasable)`.
 
 C#
 ```
 public class MyScript : MonoBehaviour,
-    OuyaSDK.IRequestPurchaseListener
+    RazerSDK.IRequestPurchaseListener
 {
 }
 ```
@@ -994,7 +1002,7 @@ public class MyScript : MonoBehaviour,
 JavaScript
 ```
 public class MyScript extends MonoBehaviour implements
-	OuyaSDK.IRequestPurchaseListener
+	RazerSDK.IRequestPurchaseListener
 {
 }
 ```
@@ -1005,11 +1013,11 @@ C#
 ```
     void Awake()
     {
-        OuyaSDK.registerRequestPurchaseListener(this);
+        RazerSDK.registerRequestPurchaseListener(this);
     }
     void OnDestroy()
     {
-        OuyaSDK.unregisterRequestPurchaseListener(this);
+        RazerSDK.unregisterRequestPurchaseListener(this);
     }
 ```
 
@@ -1017,12 +1025,12 @@ JavaScript
 ```
     function Awake()
     {
-        OuyaSDK.registerRequestPurchaseListener(this);
+        RazerSDK.registerRequestPurchaseListener(this);
     }
 
     function OnDestroy()
     {
-        OuyaSDK.unregisterRequestPurchaseListener(this);
+        RazerSDK.unregisterRequestPurchaseListener(this);
     }
 ```
 
@@ -1030,14 +1038,14 @@ The success event will receive the purchased product.
 
 C#
 ```
-    public void RequestPurchaseOnSuccess(OuyaSDK.Product product)
+    public void RequestPurchaseOnSuccess(RazerSDK.Product product)
     {
     }
 ```
 
 JavaScript
 ```
-    public function RequestPurchaseOnSuccess(product : OuyaSDK.Product)
+    public function RequestPurchaseOnSuccess(product : RazerSDK.Product)
     {
     }
 ```
@@ -1078,12 +1086,12 @@ JavaScript
 
 Receipts return all the `entitlements` that the `gamer` has purchased from the `developer`.
 
-Extend the `IRequestReceiptsListener ` interface to receive the callbacks for invoking `OuyaSDK.OuyaSDK.requestReceipts()`.
+Extend the `IRequestReceiptsListener ` interface to receive the callbacks for invoking `RazerSDK.RazerSDK.requestReceipts()`.
 
 C#
 ```
 public class MyScript : MonoBehaviour,
-    OuyaSDK.IRequestReceiptsListener
+    RazerSDK.IRequestReceiptsListener
 {
 }
 ```
@@ -1091,7 +1099,7 @@ public class MyScript : MonoBehaviour,
 JavaScript
 ```
 public class MyScript extends MonoBehaviour implements
-	OuyaSDK.IRequestReceiptsListener
+	RazerSDK.IRequestReceiptsListener
 {
 }
 ```
@@ -1102,11 +1110,11 @@ C#
 ```
     void Awake()
     {
-        OuyaSDK.registerRequestReceiptsListener(this);
+        RazerSDK.registerRequestReceiptsListener(this);
     }
     void OnDestroy()
     {
-        OuyaSDK.unregisterRequestReceiptsListener(this);
+        RazerSDK.unregisterRequestReceiptsListener(this);
     }
 ```
 
@@ -1114,12 +1122,12 @@ JavaScript
 ```
     function Awake()
     {
-        OuyaSDK.registerRequestReceiptsListener(this);
+        RazerSDK.registerRequestReceiptsListener(this);
     }
 
     function OnDestroy()
     {
-        OuyaSDK.unregisterRequestReceiptsListener(this);
+        RazerSDK.unregisterRequestReceiptsListener(this);
     }
 ```
 
@@ -1127,14 +1135,14 @@ The success event will receive a list of receipts.
 
 C#
 ```
-    public void RequestReceiptsOnSuccess(List<OuyaSDK.Receipt> receipts)
+    public void RequestReceiptsOnSuccess(List<RazerSDK.Receipt> receipts)
     {
     }
 ```
 
 JavaScript
 ```
-    public function RequestReceiptsOnSuccess(receipts : List.<OuyaSDK.Receipt>)
+    public function RequestReceiptsOnSuccess(receipts : List.<RazerSDK.Receipt>)
     {
     }
 ```
@@ -1173,14 +1181,14 @@ JavaScript
 
 # Set Safe Area #
 
-Part of the content submission guideline rules is that all important information needs to be in the safe zone. The safe area can be adjusted by passing an amount when calling `OuyaSDK.setSafeArea(amount)`.
+Part of the content submission guideline rules is that all important information needs to be in the safe zone. The safe area can be adjusted by passing an amount when calling `RazerSDK.setSafeArea(amount)`.
 
 C#
 ```
 float amount;
 amount = 0f; //full border pdding
 amount = 1f; //no border padding
-OuyaSDK.setSafeArea(amount);
+RazerSDK.setSafeArea(amount);
 ```
 
 JavaScript
@@ -1188,7 +1196,7 @@ JavaScript
 var amount : float;
 amount = 0; //full border pdding
 amount = 1; //no border padding
-OuyaSDK.setSafeArea(amount);
+RazerSDK.setSafeArea(amount);
 ```
 
 # Community Content #
@@ -1212,23 +1220,23 @@ The general process for using the Community Content API is register listeners an
 
 One way to check if Community Content has been initialized is to implement the `IContentInitializedListener` interface.
 Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
-`ContentInitializedOnInitialized` is invoked when the  `OuyaContent` becomes accessible.
-`ContentInitializedOnDestroyed` is invoked when the `OuyaContent` has been destroyed.
+`ContentInitializedOnInitialized` is invoked when the  `GameModManager` becomes accessible.
+`ContentInitializedOnDestroyed` is invoked when the `GameModManager` has been destroyed.
 
 C#
 ```
 public class MyScript : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
     ,
-    OuyaSDK.IContentInitializedListener
+    RazerSDK.IContentInitializedListener
 {
     private void Awake()
     {
-        OuyaSDK.registerContentInitializedListener(this);
+        RazerSDK.registerContentInitializedListener(this);
     }
     private void OnDestroy()
     {
-        OuyaSDK.unregisterContentInitializedListener(this);
+        RazerSDK.unregisterContentInitializedListener(this);
     }
     public void ContentInitializedOnInitialized()
     {
@@ -1239,15 +1247,15 @@ public class MyScript : MonoBehaviour
 }
 ```
 
-## `OuyaContent` ##
+## `GameModManager` ##
 
-`OuyaContent` is the entry point for accessing the Community Content API.
-`OuyaUnityPlugin` provides a reference to the `OuyaContent` object.
-Make sure to wrap the `OuyaContent` accessor with `using` to ensure the JNI reference is disposed.
+`GameModManager` is the entry point for accessing the Community Content API.
+`Plugin` provides a reference to the `GameModManager` object.
+Make sure to wrap the `GameModManager` accessor with `using` to ensure the JNI reference is disposed.
 
 C#
 ```
-using (OuyaContent ouyaContent = OuyaUnityPlugin.getOuyaContent())
+using (GameModManager gameModManager = Plugin.getGameModManager())
 {
 }
 ```
@@ -1259,7 +1267,7 @@ The Community Content API won't be available if an `age gate` is active for the 
 
 C#
 ```
-bool isAvailable = ouyaContent.isAvailable();
+bool isAvailable = gameModManager.isAvailable();
 ```
 
 ## `isInitialized` ##
@@ -1268,111 +1276,111 @@ One way to check if Community Content has been initialized is to invoke `isIniti
 
 C#
 ```
-if (ouyaContent.isInitialized())
+if (gameModManager.isInitialized())
 {
 }
 ```
 
 ## `IContentDeleteListener` ##
 
-Implement the `IContentDeleteListener` interface to receive the callbacks from deleting an `OuyaMod` community content object.
+Implement the `IContentDeleteListener` interface to receive the callbacks from deleting an `GameMod` community content object.
 Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
-`ContentDeleteOnDeleted` is invoked when the  `OuyaMod` has been deleted.
-`ContentDeleteOnDeleteFailed` is invoked when the `OuyaMod` deletion has failed.
-The listener callbacks occur after `OuyaUnityPlugin.contentDelete` is invoked.
+`ContentDeleteOnDeleted` is invoked when the  `GameMod` has been deleted.
+`ContentDeleteOnDeleteFailed` is invoked when the `GameMod` deletion has failed.
+The listener callbacks occur after `Plugin.contentDelete` is invoked.
 
 C#
 ```
 public class MyScript : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
     ,
-    OuyaSDK.IContentDeleteListener
+    RazerSDK.IContentDeleteListener
 {
     private void Awake()
     {
-        OuyaSDK.registerContentDeleteListener(this);
+        RazerSDK.registerContentDeleteListener(this);
     }
     private void OnDestroy()
     {
-        OuyaSDK.unregisterContentDeleteListener(this);
+        RazerSDK.unregisterContentDeleteListener(this);
     }
-    public void ContentDeleteOnDeleted(OuyaMod ouyaMod)
+    public void ContentDeleteOnDeleted(GameMod gameMod)
     {
     }
-    public void ContentDeleteOnDeleteFailed(OuyaMod ouyaMod, int code, string reason)
+    public void ContentDeleteOnDeleteFailed(GameMod gameMod, int code, string reason)
     {
     }
-    void Delete(OuyaMod ouyaMod)
+    void Delete(GameMod gameMod)
     {
-        OuyaUnityPlugin.contentDelete(ouyaMod);
+        Plugin.contentDelete(gameMod);
     }
 }
 ```
 
 ## `IContentDownloadListener` ##
 
-Implement the `IContentDownloadListener` interface to receive the callbacks from downloading an `OuyaMod` community content object.
+Implement the `IContentDownloadListener` interface to receive the callbacks from downloading an `GameMod` community content object.
 Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
-`ContentDownloadOnComplete` is invoked when the `OuyaMod` has finished downloading.
-`ContentDownloadOnProgress` is invoked when the `OuyaMod` download is in progress.
-`ContentDownloadOnFailed` is invoked when the `OuyaMod` download has failed.
-The listener callbacks occur after `OuyaUnityPlugin.contentDownload` is invoked.
+`ContentDownloadOnComplete` is invoked when the `GameMod` has finished downloading.
+`ContentDownloadOnProgress` is invoked when the `GameMod` download is in progress.
+`ContentDownloadOnFailed` is invoked when the `GameMod` download has failed.
+The listener callbacks occur after `Plugin.contentDownload` is invoked.
 
 C#
 ```
 public class MyScript : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
     ,
-    OuyaSDK.IContentDownloadListener
+    RazerSDK.IContentDownloadListener
 {
     private void Awake()
     {
-        OuyaSDK.registerContentDownloadListener(this);
+        RazerSDK.registerContentDownloadListener(this);
     }
     private void OnDestroy()
     {
-        OuyaSDK.unregisterContentDownloadListener(this);
+        RazerSDK.unregisterContentDownloadListener(this);
     }
-    public void ContentDownloadOnComplete(OuyaMod ouyaMod)
+    public void ContentDownloadOnComplete(GameMod gameMod)
     {
     }
-    public void ContentDownloadOnProgress(OuyaMod ouyaMod, int progress)
+    public void ContentDownloadOnProgress(GameMod gameMod, int progress)
     {
     }
-    public void ContentDownloadOnFailed(OuyaMod ouyaMod)
+    public void ContentDownloadOnFailed(GameMod gameMod)
     {
     }
-    void Download(OuyaMod ouyaMod)
+    void Download(GameMod gameMod)
     {
-        OuyaUnityPlugin.contentDownload(ouyaMod);
+        Plugin.contentDownload(gameMod);
     }
 }
 ```
 
 ## `IContentInstalledSearchListener` ##
 
-Implement the `IContentInstalledSearchListener` interface to receive the callbacks from searching for installed `OuyaMod` community content object.
+Implement the `IContentInstalledSearchListener` interface to receive the callbacks from searching for installed `GameMod` community content object.
 Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
-`ContentInstalledSearchOnResults` is invoked when the search for `OuyaMod` installed content has finished.
-`ContentInstalledSearchOnError` is invoked when the `OuyaMod` search has failed.
-The listener callbacks occur after `OuyaUnityPlugin.getOuyaContentInstalled` is invoked.
+`ContentInstalledSearchOnResults` is invoked when the search for `GameMod` installed content has finished.
+`ContentInstalledSearchOnError` is invoked when the `GameMod` search has failed.
+The listener callbacks occur after `Plugin.getGameModManagerInstalled` is invoked.
 
 C#
 ```
 public class MyScript : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
     ,
-    OuyaSDK.IContentDownloadListener
+    RazerSDK.IContentDownloadListener
 {
     private void Awake()
     {
-        OuyaSDK.registerContentInstalledSearchListener(this);
+        RazerSDK.registerContentInstalledSearchListener(this);
     }
     private void OnDestroy()
     {
-        OuyaSDK.unregisterContentInstalledSearchListener(this);
+        RazerSDK.unregisterContentInstalledSearchListener(this);
     }
-    public void ContentInstalledSearchOnResults(List<OuyaMod> ouyaMods, int count)
+    public void ContentInstalledSearchOnResults(List<GameMod> gameMods, int count)
     {
     }
     public void ContentInstalledSearchOnError(int code, string reason)
@@ -1380,153 +1388,153 @@ public class MyScript : MonoBehaviour
     }
     void Search()
     {
-        OuyaUnityPlugin.getOuyaContentInstalled();
+        Plugin.getGameModManagerInstalled();
     }
 }
 ```
 
 ## `IContentPublishedSearchListener` ##
 
-Implement the `IContentPublishedSearchListener` interface to receive the callbacks from searching for published `OuyaMod` community content object.
+Implement the `IContentPublishedSearchListener` interface to receive the callbacks from searching for published `GameMod` community content object.
 Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
-`ContentPublishedSearchOnResults` is invoked when the search for `OuyaMod` published content has finished.
-`ContentPublishedSearchOnError` is invoked when the `OuyaMod` search has failed.
-The listener callbacks occur after `OuyaUnityPlugin.getOuyaContentPublished` is invoked.
+`ContentPublishedSearchOnResults` is invoked when the search for `GameMod` published content has finished.
+`ContentPublishedSearchOnError` is invoked when the `GameMod` search has failed.
+The listener callbacks occur after `Plugin.getGameModManagerPublished` is invoked.
 
 C#
 ```
 public class MyScript : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
     ,
-    OuyaSDK.IContentPublishedSearchListener
+    RazerSDK.IContentPublishedSearchListener
 {
     private void Awake()
     {
-        OuyaSDK.registerContentPublishedSearchListener(this);
+        RazerSDK.registerContentPublishedSearchListener(this);
     }
     private void OnDestroy()
     {
-        OuyaSDK.unregisterContentPublishedSearchListener(this);
+        RazerSDK.unregisterContentPublishedSearchListener(this);
     }
-    public void ContentPublishedSearchOnResults(List<OuyaMod> ouyaMods, int count)
+    public void ContentPublishedSearchOnResults(List<GameMod> gameMods, int count)
     {
     }
     public void ContentPublishedSearchOnError(int code, string reason)
     {
     }
-    void Search(OuyaContent.SortMethod sortMethod)
+    void Search(GameModManager.SortMethod sortMethod)
     {
-        OuyaUnityPlugin.getOuyaContentPublished(sortMethod);
+        Plugin.getGameModManagerPublished(sortMethod);
     }
 }
 ```
 
 ## `IContentPublishListener` ##
 
-Implement the `IContentPublishListener` interface to receive the callbacks from publishing an `OuyaMod` community content object.
+Implement the `IContentPublishListener` interface to receive the callbacks from publishing an `GameMod` community content object.
 Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
-`ContentPublishOnSuccess` is invoked when the `OuyaMod` has published successfully.
-`ContentPublishOnError` is invoked when the `OuyaMod` publish has failed.
-The listener callbacks occur after `OuyaUnityPlugin.contentPublish` is invoked.
+`ContentPublishOnSuccess` is invoked when the `GameMod` has published successfully.
+`ContentPublishOnError` is invoked when the `GameMod` publish has failed.
+The listener callbacks occur after `Plugin.contentPublish` is invoked.
 
 C#
 ```
 public class MyScript : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
     ,
-    OuyaSDK.IContentPublishListener
+    RazerSDK.IContentPublishListener
 {
     private void Awake()
     {
-        OuyaSDK.registerContentPublishListener(this);
+        RazerSDK.registerContentPublishListener(this);
     }
     private void OnDestroy()
     {
-        OuyaSDK.unregisterContentPublishListener(this);
+        RazerSDK.unregisterContentPublishListener(this);
     }
-    public void ContentPublishOnSuccess(OuyaMod ouyaMod)
+    public void ContentPublishOnSuccess(GameMod gameMod)
     {
     }
-    public void ContentPublishOnError(OuyaMod ouyaMod, int code, string reason)
+    public void ContentPublishOnError(GameMod gameMod, int code, string reason)
     {
     }
-    void Publish(OuyaMod ouyaMod)
+    void Publish(GameMod gameMod)
     {
-        OuyaUnityPlugin.contentPublish(ouyaMod);
+        Plugin.contentPublish(gameMod);
     }
 }
 ```
 
 ## `IContentSaveListener` ##
 
-Implement the `IContentSaveListener` interface to receive the callbacks from saving an `OuyaMod` community content object.
+Implement the `IContentSaveListener` interface to receive the callbacks from saving an `GameMod` community content object.
 Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
-`ContentSaveOnSuccess` is invoked when the `OuyaMod` has saved successfully.
-`ContentSaveOnError` is invoked when the `OuyaMod` save has failed.
-The listener callbacks occur after `OuyaUnityPlugin.saveOuyaMod` is invoked.
-Saved OuyaMod content will return in the installed Community Content searches.
-The saved OuyaMod content needs to be published to show in the published search results.
+`ContentSaveOnSuccess` is invoked when the `GameMod` has saved successfully.
+`ContentSaveOnError` is invoked when the `GameMod` save has failed.
+The listener callbacks occur after `Plugin.saveGameMod` is invoked.
+Saved GameMod content will return in the installed Community Content searches.
+The saved GameMod content needs to be published to show in the published search results.
 
 C#
 ```
 public class MyScript : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
     ,
-    OuyaSDK.IContentSaveListener
+    RazerSDK.IContentSaveListener
 {
     private void Awake()
     {
-        OuyaSDK.unregisterContentSaveListener(this);
+        RazerSDK.unregisterContentSaveListener(this);
     }
     private void OnDestroy()
     {
-        OuyaSDK.unregisterContentSaveListener(this);
+        RazerSDK.unregisterContentSaveListener(this);
     }
-    public void ContentSaveOnSuccess(OuyaMod ouyaMod)
+    public void ContentSaveOnSuccess(GameMod gameMod)
     {
     }
-    public void ContentSaveOnError(OuyaMod ouyaMod, int code, string reason)
+    public void ContentSaveOnError(GameMod gameMod, int code, string reason)
     {
     }
-    void Save(OuyaMod ouyaMod, OuyaMod.Editor editor)
+    void Save(GameMod gameMod, GameMod.Editor editor)
     {
-        OuyaUnityPlugin.saveOuyaMod(ouyaMod, editor);
+        Plugin.saveGameMod(gameMod, editor);
     }
 }
 ```
 
 ## `IContentUnpublishListener` ##
 
-Implement the `IContentUnpublishListener` interface to receive the callbacks from unpublishing an `OuyaMod` community content object.
+Implement the `IContentUnpublishListener` interface to receive the callbacks from unpublishing an `GameMod` community content object.
 Be sure to register/unregister the listener during the `Awake` and `OnDestroy` events.
-`ContentUnpublishOnSuccess` is invoked when the `OuyaMod` has unpublished successfully.
-`ContentUnpublishOnError` is invoked when the `OuyaMod` unpublish has failed.
-The listener callbacks occur after `OuyaUnityPlugin.contentUnpublish` is invoked.
+`ContentUnpublishOnSuccess` is invoked when the `GameMod` has unpublished successfully.
+`ContentUnpublishOnError` is invoked when the `GameMod` unpublish has failed.
+The listener callbacks occur after `Plugin.contentUnpublish` is invoked.
 
 C#
 ```
 public class MyScript : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
     ,
-    OuyaSDK.IContentUnpublishListener
+    RazerSDK.IContentUnpublishListener
 {
     private void Awake()
     {
-        OuyaSDK.registerContentUnpublishListener(this);
+        RazerSDK.registerContentUnpublishListener(this);
     }
     private void OnDestroy()
     {
-        OuyaSDK.unregisterContentUnpublishListener(this);
+        RazerSDK.unregisterContentUnpublishListener(this);
     }
-    public void ContentUnpublishOnSuccess(OuyaMod ouyaMod)
+    public void ContentUnpublishOnSuccess(GameMod gameMod)
     {
     }
-    public void ContentUnpublishOnError(OuyaMod ouyaMod, int code, string reason)
+    public void ContentUnpublishOnError(GameMod gameMod, int code, string reason)
     {
     }
-    void Unpublish(OuyaMod ouyaMod)
+    void Unpublish(GameMod gameMod)
     {
-        OuyaUnityPlugin.contentUnpublish(ouyaMod);
+        Plugin.contentUnpublish(gameMod);
     }
 }
 ```
@@ -1543,15 +1551,15 @@ C#
 public class MyScript : MonoBehaviour
 #if UNITY_ANDROID && !UNITY_EDITOR
     ,
-    OuyaSDK.IResumeListener
+    RazerSDK.IResumeListener
 {
     private void Awake()
     {
-        OuyaSDK.registerResumeListener(this);
+        RazerSDK.registerResumeListener(this);
     }
     private void OnDestroy()
     {
-        OuyaSDK.unregisterResumeListener(this);
+        RazerSDK.unregisterResumeListener(this);
     }
     public void OuyaOnResume()
     {
@@ -1561,17 +1569,17 @@ public class MyScript : MonoBehaviour
 
 ## `Create` ##
 
-The `OuyaContent` object is used to create content.
-The `OuyaMod` content must be saved before it will be returned by searching for installed content.
-The `OuyaMod` content must be published before it will be returned by searching for published content.
+The `GameModManager` object is used to create content.
+The `GameMod` content must be saved before it will be returned by searching for installed content.
+The `GameMod` content must be published before it will be returned by searching for published content.
 
 C#
 ```
-    using (OuyaContent ouyaContent = OuyaUnityPlugin.getOuyaContent())
+    using (GameModManager gameModManager = Plugin.getGameModManager())
     {
-        if (ouyaContent.isInitialized())
+        if (gameModManager.isInitialized())
         {
-            using (OuyaMod ouyaMod = ouyaContent.create())
+            using (GameMod gameMod = gameModManager.create())
             {
             }
         }
@@ -1579,17 +1587,17 @@ C#
 
 ```
 
-## `OuyaMod.Editor` ##
+## `GameMod.Editor` ##
 
-The `Editor` object is used to edit the `OuyaMod` fields.
+The `Editor` object is used to edit the `GameMod` fields.
 
 C#
 ```
-    using (OuyaContent ouyaContent = OuyaUnityPlugin.getOuyaContent())
+    using (GameModManager gameModManager = Plugin.getGameModManager())
     {
-	    using (OuyaMod ouyaMod = ouyaContent.create())
+	    using (GameMod gameMod = gameModManager.create())
 	    {
-	        using (OuyaMod.Editor editor = ouyaMod.edit())
+	        using (GameMod.Editor editor = gameMod.edit())
 	        {
 	        }
 	    }
@@ -1600,9 +1608,9 @@ Some fields are required.
 
 C#
 ```
-	void AddRequiredFields(OuyaMod ouyaMod)
+	void AddRequiredFields(GameMod gameMod)
 	{
-	    using (OuyaMod.Editor editor = ouyaMod.edit())
+	    using (GameMod.Editor editor = gameMod.edit())
 	    {
 			editor.setTitle("Custom Level");
 			editor.setCategory("level");
@@ -1611,13 +1619,13 @@ C#
 	}
 ```
 
-Files can be added to `OuyaMod` objects by passing a byte array.
+Files can be added to `GameMod` objects by passing a byte array.
 
 C#
 ```
-	void AddFile(OuyaMod ouyaMod, string filename, byte[] data)
+	void AddFile(GameMod gameMod, string filename, byte[] data)
 	{
-	    using (OuyaMod.Editor editor = ouyaMod.edit())
+	    using (GameMod.Editor editor = gameMod.edit())
 	    {
 	        using (OutputStream os = editor.newFile(filename))
 	        {
@@ -1628,12 +1636,12 @@ C#
 	}
 ```
 
-Screenshots can be added to `OuyaMod` objects by converting `Texture2D` to Android `Bitmap` objects.
+Screenshots can be added to `GameMod` objects by converting `Texture2D` to Android `Bitmap` objects.
 Be sure to make the Texture readable and RGBA32 before attempting to convert to a `Bitmap` object.
 
 C#
 ```
-	void AddScreenshot(OuyaMod.Editor editor, Texture2D texture)
+	void AddScreenshot(GameMod.Editor editor, Texture2D texture)
 	{
 		byte[] buffer = texture.EncodeToPNG();
 		if (null != buffer &&
@@ -1649,9 +1657,9 @@ The `Editor` object also sets optional fields.
 
 C#
 ```
-	void AddOptionalData(OuyaMod ouyaMod)
+	void AddOptionalData(GameMod gameMod)
 	{
-	    using (OuyaMod.Editor editor = ouyaMod.edit())
+	    using (GameMod.Editor editor = gameMod.edit())
 	    {
 			editor.addTag("space");
 			editor.addTag("king of the hill");
@@ -1665,66 +1673,66 @@ After editing fields be sure to save the changes.
 
 C#
 ```
-	void Save(OuyaMod ouyaMod)
+	void Save(GameMod gameMod)
 	{
-	    using (OuyaMod.Editor editor = ouyaMod.edit())
+	    using (GameMod.Editor editor = gameMod.edit())
 	    {
-			OuyaUnityPlugin.saveOuyaMod(ouyaMod, editor);
+			Plugin.saveGameMod(gameMod, editor);
 		}
 	}
 ```
 
 # Examples #
 
-Download the Examples package from github releases…
+Download the Examples package from github releases...
 
-Import the Examples package. From the menu item Assets->Import Package->Custom Package… and browse to the "ouya-examples.unitypackage".
+Import the Examples package. From the menu item Assets->Import Package->Custom Package... and browse to the "ouya-examples.unitypackage".
 
-![image alt text](ouya-everywhere-unity/image_17.png)
+![image_17](ouya-everywhere-unity/image_17.png)
 
 ## OUYA Panel ##
 
 Open the `OUYA Panel` from the `Window->Open OUYA Panel` menu item.
 
-![image alt text](ouya-everywhere-unity/image_7.png)
+![image_7](ouya-everywhere-unity/image_7.png)
 
 The `OUYA Panel` provides a quick way to switch between examples.
 
-![image alt text](ouya-everywhere-unity/image_27.png)
+![image_27](ouya-everywhere-unity/image_27.png)
 
 Use the drop down to select the example and then click the `Switch to Example` button which updates the icons and package name.
 
-# Virtual Controller Example #
+# Example Virtual Controller #
 
 The virtual controller example exercises the new OUYA-Everywhere input. The button names and images are now accessible from the API. And the virtual controller buttons highlight for multiple controllers for supported controllers. The right-hand JOY buttons toggle input for specific player numbers.
 
-![image alt text](ouya-everywhere-unity/image_18.png)
+![image_18](ouya-everywhere-unity/image_18.png)
 
 The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/VirtualController.cs) script displays a 2D controller with axis and buttons that highlight when the physical controller is used.
 
-## Input Test ##
+## Example Input Test ##
 
 The [Input Test](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/OuyaInputTest.cs) script displays all the axis, button up, and button down states to verify that input is correctly setup.
 
-![image alt text](ouya-everywhere-unity/image_26.png)
+![image_26](ouya-everywhere-unity/image_26.png)
 
-## In App Purchase Example ##
+## Example Billing ##
 
-The `ShowProducts` scene is an in-app-purchase example that uses the `OuyaSDK` to access gamer info, purchasing, and receipts.
+The `BillingExample` scene is an in-app-purchase example that uses the `OuyaSDK` to access gamer info, purchasing, and receipts.
 
-![image alt text](ouya-everywhere-unity/image_25.png)
+![image_25](ouya-everywhere-unity/image_25.png)
 
-## Safe Area Example ##
+## Example Safe Area ##
 
 The [Safe Area](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/OuyaSafeArea.cs) example uses the DPAD left and right to invoke `OuyaSDK.setSafeArea(float amount)`. Using 0.0 for the amount uses full border padding. Using 1.0 for the amount uses no border padding.
 
-![image alt text](ouya-everywhere-unity/image_24.png)
+![image_24](ouya-everywhere-unity/image_24.png)
 
-## Community Content Example ##
+## Example Community Content ##
 
 The [Community Content](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/OuyaCommunityContent.cs) example shows how to create, edit, publish, unpublish, download, and delete Community Content.
 
-![image alt text](ouya-everywhere-unity/image_29.png)
+![image_29](ouya-everywhere-unity/image_29.png)
 
 <hr>
 
@@ -1739,86 +1747,3 @@ Java6 (32-bit/64-bit) - [http://www.oracle.com/technetwork/java/javasebusiness/d
 If you are on Windows if you install the [[Tegra Android Developer Pack]](https://developer.nvidia.com/tegra-resources), it comes with all of the needed dependencies and is the easiest way to set things up. Be sure to register for "NVIDIA GameWorks™ Registered Developer Program" to get access to the Tegra Android Developer Pack downloads.[ [Tegra Registered Developer Program]](https://developer.nvidia.com/registered-developer-programs)
 
 <hr>
-
-# Legacy (old files no longer needed) #
-
-If you used previous versions of the `Cortex` Unity Plugin many of the old files are no longer needed and can be considered legacy.
-
-Some legacy files are not required to be imported or can be removed.
-
-## Legacy InputManager.asset (Removed) ##
-
-The InputManager Mappings file is no longer used by the plugin. So you may choose to keep your existing mapping file which is used for `non-Cortex` platforms.
-
-```
-ProjectSettings/InputManager.asset
-```
-
-## Legacy OuyaExampleCommon.cs (Removed) ##
-
-The legacy OuyaExampleCommon.cs script can been removed or replaced with another input system.
-
-```
-Assets/Plugins/OuyaExampleCommon.cs
-```
-
-There are a number of related legacy input C# scripts that should be removed.
-
-```
-Assets/Plugins/IOuyaController.cs
-Assets/Plugins/OuyaControllerCommon.cs
-Assets/Plugins/OuyaExampleCommon.cs
-Assets/Plugins/OuyaKeyCodes.cs
-Assets/Plugins/PS2Controller.cs
-Assets/Plugins/XBox360Controller.cs
-```
-
-## Legacy OuyaPostProcessor.cs (Removed) ##
-
-The OuyaPostProcessor would auto compile C++ and Java source after a detected change. However, changes to the plugin are infrequent enough making this feature not used and so it was removed. Typically you only need to compile NDK and the Java Plugin after importing an update of the plugin.
-
-```
-Assets/Ouya/SDK/Editor/OuyaPostProcessor.cs
-```
-
-## Legacy OuyaUnityApplication.jar (Removed) ##
-
-If you have the legacy OuyaUnityApplication.jar file make sure that it’s removed. If you forget this step, you’ll get an DEX error when building the game.
-
-```
-Assets\Plugins\Android\OuyaUnityApplication.jar
-```
-
-## Legacy OuyaUnityApplication.java (Removed) ##
-
-If you have the legacy OuyaUnityApplication.java file make sure that it’s removed. If you forget this step, you’ll get a Java compile error.
-
-```
-Assets\Plugins\Android\src\OuyaUnityApplication.java
-```
-
-## Legacy OuyaNativeActivity.java (Removed) ##
-
-If you have the legacy OuyaNativeActivity.java file make sure that it’s removed. If you forget this step, you’ll get a Java compile error.
-
-```
-Assets\Plugins\Android\src\OuyaNativeActivity.java
-```
-
-## Legacy R.java (Removed) ##
-
-The Core Unity Package may include example R.java files that should not be imported into your game. You may want to delete these extra files if they were imported.
-
-Note (ODK 1.0.14.1): R.java and resources were moved to be compatible with other 3rd party plugins that also supplied this generated file.  
-
-```
-Assets\Plugins\Android\src\tv\...\R.java
-```
-
-## Legacy Litjson (Removed) ##
-
-`Litjson` is a public domain 3rd party library for parsing JSON data. Android already has classes for handling JSONObject parsing and so the legacy Litjson was replaced.
-
-```
-Assets\Litjson
-```
