@@ -334,7 +334,8 @@ The namespace has to be added to find the Controller.
 C#
 ```
 #if UNITY_ANDROID && !UNITY_EDITOR
-using tv.ouya.console.api;
+using com.razerzone.store.sdk;
+using com.razerzone.store.sdk.engine.unity;
 #endif
 ```
 
