@@ -1779,13 +1779,13 @@ Import the Examples package. From the menu item Assets->Import Package->Custom P
 
 ![image_17](ouya-everywhere-unity/image_17.png)
 
-## OUYA Panel ##
+## Razer Panel ##
 
-Open the `OUYA Panel` from the `Window->Open OUYA Panel` menu item.
+Open the `Razer Panel` from the `Razer->Open Razer Panel` menu item.
 
-![image_7](ouya-everywhere-unity/image_7.png)
+![image_34](ouya-everywhere-unity/image_34.png)
 
-The `OUYA Panel` provides a quick way to switch between examples.
+The `Razer Panel` provides a quick way to switch between examples.
 
 ![image_27](ouya-everywhere-unity/image_27.png)
 
@@ -1827,7 +1827,7 @@ The [Community Content](https://github.com/ouya/ouya-sdk-examples/blob/master/Un
 
 # Customization #
 
-The OUYA Plugin remains customizable and if you want to extend the Java and Native plugins there are dependencies on the Android SDK, Android NDK, and Java JDK.
+The Razer Plugin remains customizable and if you want to extend the Java and Native plugins there are dependencies on the Android SDK, Android NDK, and Java JDK.
 
 Android NDK - [https://developer.android.com/tools/sdk/ndk/index.html](https://developer.android.com/tools/sdk/ndk/index.html)
 
