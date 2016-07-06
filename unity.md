@@ -18,11 +18,11 @@
 
 # Releases #
 
-Several Unity packages are available from the [ouya-sdk-examples releases](https://github.com/ouya/ouya-sdk-examples/releases/):
+Several Unity packages are available from the [unity-plugin-razer-sdk releases](https://github.com/razerofficial/unity-plugin-razer-sdk/releases):
 
-* [Unity-RazerSDK-Core.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-RazerSDK-Core) - The Core package adds `OUYA-Everywhere` controller and `In-App-Purchase` support for OUYA, MOJO, and Razer Forge TV consoles
+* [Unity-RazerSDK-Core.unitypackage](https://github.com/razerofficial/unity-plugin-razer-sdk/releases/tag/Unity-RazerSDK-Core) - The Core package adds `OUYA-Everywhere` controller and `In-App-Purchase` support for OUYA, MOJO, and Razer Forge TV consoles
 
-* [Unity-RazerSDK-Examples.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-RazerSDK-Examples) - Package includes Billing, Virtual Controller, and Community Content examples 
+* [Unity-RazerSDK-Examples.unitypackage](https://github.com/razerofficial/unity-plugin-razer-sdk/releases/tag/Unity-RazerSDK-Examples) - Package includes Billing, Virtual Controller, and Community Content examples 
 
 * (Legacy) [Unity-OuyaSDK-Xiaomi.unitypackage](https://github.com/ouya/ouya-sdk-examples/releases/tag/Unity-OuyaSDK-Xiaomi) - Files and Android.manifest changes for publishing to Xiaomi
 
@@ -50,7 +50,7 @@ This input API is targeted for `Cortex` and is not maintained as a cross-platfor
 
 # Updating #
 
-Download the core package from [Releases](https://github.com/ouya/ouya-sdk-examples/releases). Import the core package to update the plugin. In the import dialog uncheck the `AndroidManifest.xml` and `icons` if you don't want to replace your customizations. The imported plugin will be ready to `Build and Run` as recompiling the `Java` and `Native` plugins are no longer required now that the package includes the prebuilt libraries.
+Download the core package from [Releases](https://github.com/razerofficial/unity-plugin-razer-sdk/releases). Import the core package to update the plugin. In the import dialog uncheck the `AndroidManifest.xml` and `icons` if you don't want to replace your customizations. The imported plugin will be ready to `Build and Run` as recompiling the `Java` and `Native` plugins are no longer required now that the package includes the prebuilt libraries.
 
 ## Unity 4.X/5.X Compatibility ##
 
