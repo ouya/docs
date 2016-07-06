@@ -340,7 +340,7 @@ IEnumerator Start()
 
 The Shutdown event fires when the game can safely exit cleanly. Using the `shutdown` event is required and will be checked during review.
 
-Extend the `IShutdownListener` interface to receive the callback for a pause event.
+Extend the `IShutdownListener` interface to receive the callback for a shutdown event.
 
 C#
 ```
