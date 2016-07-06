@@ -36,7 +36,7 @@ Note: Before importing packages ALWAYS make a backup of your game first!
 
 # Source #
 
-The source code for OUYA-Everywhere with Unity can be found within the [ouya-sdk-examples for Unity](https://github.com/ouya/ouya-sdk-examples/tree/master/Unity/OuyaSDK).
+The source code for the Unity Plugin can be found at [unity-plugin-razer-sdk](https://github.com/razerofficial/unity-plugin-razer-sdk).
 
 # Overview #
 
@@ -1797,11 +1797,11 @@ The virtual controller example exercises the new OUYA-Everywhere input. The butt
 
 ![image_18](ouya-everywhere-unity/image_18.png)
 
-The [Virtual Controller](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/VirtualController.cs) script displays a 2D controller with axis and buttons that highlight when the physical controller is used.
+The [Example Virtual Controller](https://github.com/razerofficial/unity-plugin-razer-sdk/blob/master/Assets/Razer/Examples/Scripts/ExampleVirtualController.cs) script displays a 2D controller with axis and buttons that highlight when the physical controller is used.
 
 ## Example Input Test ##
 
-The [Input Test](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/OuyaInputTest.cs) script displays all the axis, button up, and button down states to verify that input is correctly setup.
+The [Example Input Test](https://github.com/razerofficial/unity-plugin-razer-sdk/blob/master/Assets/Razer/Examples/Scripts/ExampleInputTest.cs) script displays all the axis, button up, and button down states to verify that input is correctly setup.
 
 ![image_26](ouya-everywhere-unity/image_26.png)
 
@@ -1813,13 +1813,13 @@ The `BillingExample` scene is an in-app-purchase example that uses the `OuyaSDK`
 
 ## Example Safe Area ##
 
-The [Safe Area](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/OuyaSafeArea.cs) example uses the DPAD left and right to invoke `OuyaSDK.setSafeArea(float amount)`. Using 0.0 for the amount uses full border padding. Using 1.0 for the amount uses no border padding.
+The [Example Safe Area](https://github.com/razerofficial/unity-plugin-razer-sdk/blob/master/Assets/Razer/Examples/Scripts/ExampleSafeArea.cs) script uses the DPAD left and right to invoke `OuyaSDK.setSafeArea(float amount)`. Using 0.0 for the amount uses full border padding. Using 1.0 for the amount uses no border padding.
 
 ![image_24](ouya-everywhere-unity/image_24.png)
 
 ## Example Community Content ##
 
-The [Community Content](https://github.com/ouya/ouya-sdk-examples/blob/master/Unity/OuyaSDK/Assets/Ouya/Examples/Scripts/OuyaCommunityContent.cs) example shows how to create, edit, publish, unpublish, download, and delete Community Content.
+The [Example Community Content](https://github.com/razerofficial/unity-plugin-razer-sdk/blob/master/Assets/Razer/Examples/Scripts/ExampleCommunityContent.cs) script shows how to create, edit, publish, unpublish, download, and delete Community Content.
 
 ![image_29](ouya-everywhere-unity/image_29.png)
 
