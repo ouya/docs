@@ -322,9 +322,97 @@ IEnumerator Start()
 	{
 		yield return null;
 	}
+	
+	if (RazerSDK.isRunningOnSupportedHardware())
+	{
+		Debug.Log("Running on supported hardware!");
+	}
+	else
+	{
+		Debug.Log("Not running on supported hardware!");
+	}
 }
 
 #endif
+```
+
+## Shutdown
+
+The Shutdown event fires when the game can safely exit cleanly. Using the `shutdown` event is required and will be checked during review.
+
+Extend the `IShutdownListener` interface to receive the callback for a pause event.
+
+C#
+```
+public class MyScript : MonoBehaviour,
+    RazerSDK.IShutdownListener
+{
+}
+```
+
+JavaScript
+```
+public class MyScript extends MonoBehaviour implements
+	RazerSDK.IShutdownListener
+{
+}
+```
+
+Register the instance to receive the interface callback events.
+
+C#
+```
+    void Awake()
+    {
+        RazerSDK.registerShutdownListener(this);
+    }
+    void OnDestroy()
+    {
+        RazerSDK.unregisterShutdownListener(this);
+    }
+```
+
+JavaScript
+```
+    function Awake()
+    {
+        RazerSDK.registerShutdownListener(this);
+    }
+
+    function OnDestroy()
+    {
+        RazerSDK.unregisterShutdownListener(this);
+    }
+```
+
+The shutdown event will fire after `RazerSDK.shutdown()` has been invoked.
+
+C#
+```
+	public void OnSuccessShutdown()
+	{
+		Debug.Log("Shutdown Success!");
+		Application.Quit();
+	}
+
+	public void OnFailureShutdown()
+	{
+		Debug.LogError("Failed to shutdown!");
+	}
+```
+
+JavaScript
+```
+    public function OnSuccessShutdown()
+    {
+		Debug.Log("Shutdown Success!");
+		Application.Quit();
+    }
+	
+	public function OnFailureShutdown()
+	{
+		Debug.LogError("Failed to shutdown!");
+	}
 ```
 
 # Accessing Controller #
@@ -649,7 +737,7 @@ The pause event will fire when the application is paused.
 
 C#
 ```
-    public void OuyaOnPause()
+    public void OnPause()
     {
 		Debug.Log("The game is paused.");
     }
@@ -657,7 +745,7 @@ C#
 
 JavaScript
 ```
-    public function OuyaOnPause()
+    public function OnPause()
     {
 		Debug.Log("The game is paused.");
     }
