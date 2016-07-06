@@ -1807,13 +1807,13 @@ The [Example Input Test](https://github.com/razerofficial/unity-plugin-razer-sdk
 
 ## Example Billing ##
 
-The `BillingExample` scene is an in-app-purchase example that uses the `OuyaSDK` to access gamer info, purchasing, and receipts.
+The [Example Billing](https://github.com/razerofficial/unity-plugin-razer-sdk/blob/master/Assets/Razer/Examples/Scripts/ExampleBilling.cs) script is an in-app-purchase example that uses the `RazerSDK` to access gamer info, purchasing, and receipts.
 
 ![image_25](ouya-everywhere-unity/image_25.png)
 
 ## Example Safe Area ##
 
-The [Example Safe Area](https://github.com/razerofficial/unity-plugin-razer-sdk/blob/master/Assets/Razer/Examples/Scripts/ExampleSafeArea.cs) script uses the DPAD left and right to invoke `OuyaSDK.setSafeArea(float amount)`. Using 0.0 for the amount uses full border padding. Using 1.0 for the amount uses no border padding.
+The [Example Safe Area](https://github.com/razerofficial/unity-plugin-razer-sdk/blob/master/Assets/Razer/Examples/Scripts/ExampleSafeArea.cs) script uses the DPAD left and right to invoke `RazerSDK.setSafeArea(float amount)`. Using 0.0 for the amount uses full border padding. Using 1.0 for the amount uses no border padding.
 
 ![image_24](ouya-everywhere-unity/image_24.png)
 
