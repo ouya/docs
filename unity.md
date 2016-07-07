@@ -392,7 +392,8 @@ C#
 	public void OnSuccessShutdown()
 	{
 		Debug.Log("Shutdown Success!");
-		Application.Quit();
+		// quit the application
+		RazerSDK.quit();
 	}
 
 	public void OnFailureShutdown()
@@ -403,11 +404,12 @@ C#
 
 JavaScript
 ```
-    public function OnSuccessShutdown()
-    {
+	public function OnSuccessShutdown()
+	{
 		Debug.Log("Shutdown Success!");
-		Application.Quit();
-    }
+		// quit the application
+		RazerSDK.quit();
+	}
 	
 	public function OnFailureShutdown()
 	{
