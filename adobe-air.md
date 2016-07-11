@@ -60,19 +60,13 @@ C:\Program Files\Adobe\Adobe Flash Builder 4.7 (64 Bit)\sdks\4.6.0\bin\jvm.confi
 
 ANE Extensions wrap Java libraries so they can be invoked from Adobe Air ActionScript.
 
-## Build JAR
+## Build AirRazerSDKPPlugin JAR
 
-The Java JAR needs to be compiled first before it can be wrapped in an ANE Extension.
+The Java Plugin JAR needs to be compiled first before it can be wrapped in an ANE Extension.
 
-[Gradle](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir/OuyaNativeExtension/Build) will compile the Java Extension code into `AirOuyaPlugin.jar`.
+[AirRazerSDKPlugin](https://github.com/razerofficial/adobe-air-razer-sdk/tree/master/RazerSDKNativeExtension/AirRazerSDKPlugin) is an Android Studio library project that compiles into an AAR library.
 
-```
-gradlew clean build copyJar copyNativeArmeabi copyNativeArmeabiV7a copyNativeArmeabiX86
-```
-
-The `AirOuyaPlugin.jar` will output to the [jar](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir/OuyaNativeExtension/jar) extension folder.
-
-The `jar` folder also contains `FlashRuntimeExtensions.jar` (from the [AdobeAirSDK](http://www.adobe.com/devnet/air/air-sdk-download.html) download) and `ouya-sdk.jar` (from the ODK).
+The [build_all.cmd](https://github.com/razerofficial/adobe-air-razer-sdk/blob/master/RazerSDKNativeExtension/build_all.cmd) script will compile the `AirRazerSDKPlugin` combine the [dependencies](https://github.com/razerofficial/adobe-air-razer-sdk/tree/master/RazerSDKNativeExtension/AirRazerSDKPlugin/java/libs) into the `AirRazerSDKPPlugin.JAR` to build the `ANE`. The script automatically copies the built `ANE` to the example projects.
 
 ## ANE Extension Interface
 
@@ -104,48 +98,41 @@ In the Import Dialog select `Flash Builder Project`.
 
 4) Building the `ANE` from script will embed the `SWC` file.
 
-5) The `Project->Clean...` will also rebuild the `ANE`.
+5) The `Project->Clean...` menu item will also rebuild the `ANE`.
 
 ## Build ANE
 
-[build_ane.cmd](https://github.com/ouya/ouya-sdk-examples/blob/master/AdobeAir/OuyaNativeExtension/build_ane.cmd) will package the `OuyaNativeExtension.ane` on Windows. Be sure to customize the paths for `JDK` and `AIR_SDK` pointing at the [AdobeAirSDK](http://www.adobe.com/devnet/air/air-sdk-download.html) in the build script.
+[build_ane.cmd](https://github.com/razerofficial/adobe-air-razer-sdk/blob/master/RazerSDKNativeExtension/build_ane.cmd) will package the `RazerSDKNativeExtension.ane` on Windows. Be sure to customize the paths for `JDK` and `AIR_SDK` pointing at the [AdobeAirSDK](http://www.adobe.com/devnet/air/air-sdk-download.html) in the build script.
 
 ## Using ANE
 
-The [OuyaNativeExtension.ane](https://github.com/ouya/ouya-sdk-examples/blob/master/AdobeAir/OuyaNativeExtension/OuyaNativeExtension.ane) should be used as a library after placing in the following folders in a FlashDevelop project.
+The [RazerSDKNativeExtension.ane](https://github.com/razerofficial/adobe-air-razer-sdk/blob/master/RazerSDKNativeExtension/RazerSDKNativeExtension.ane) should be used as a library after placing in the following folders in a FlashDevelop project.
 
 ```
-lib\OuyaNativeExtension.ane
-extension\release\OuyaNativeExtension.ane
+lib\RazerSDKNativeExtension.ane
+extension\release\RazerSDKNativeExtension.ane
 ```
 
-For the debug extension folder, extract the contents of `OuyaNativeExtension.ane` into a subfolder named `OuyaNativeExtension.ane`.
+For the debug extension folder, extract the contents of `RazerSDKNativeExtension.ane` into a subfolder named `RazerSDKNativeExtension.ane`.
 
 ```
-extension\debug\OuyaNativeExtension.ane\catalog.xml
-extension\debug\OuyaNativeExtension.ane\library.swf
+extension\debug\RazerSDKNativeExtension.ane\catalog.xml
+extension\debug\RazerSDKNativeExtension.ane\library.swf
 ```
 
 ### Edit `application.xml`
 
-Add the `OuyaNativeExtension.ane` extension to your application's extensions.
+Add the `RazerSDKNativeExtension.ane` extension to your application's extensions.
 
 ```
   <extensions>
-	<extensionID>tv.ouya.sdk.ouyanativecontext</extensionID>
+	<extensionID>com.razerzone.store.sdk.engine.adobeair.razersdknativecontext</extensionID>
   </extensions>
 ```
 
-Add the ANE extension's `MainActivity` within the `application` section of the `application.xml`. This will be a second activity after the existing `Activity` block.
+# RazerSDK Native Extension
 
-```
-		<activity android:name="tv.ouya.sdk.MainActivity"
-			android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-``` 
-
-# OUYA Native Extension
-
-Import the packages to use the OUYA Native Extension.
+Import the packages to use the RazerSDK Native Extension.
 
 ```
 import tv.ouya.console.api.OuyaController;
