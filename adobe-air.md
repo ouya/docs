@@ -4,13 +4,13 @@
 
 The source code for the Adobe Air / Animate CC/ Flash Plugin can be found at [adobe-air-razer-sdk](https://github.com/razerofficial/adobe-air-razer-sdk).
 
-### Downloads
-
-[Example Source](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir)
-
 ### Forums
 
 [Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
+
+[AIR Forums](http://forums.adobe.com/community/air)
+
+[Flash Player Forums](http://forums.adobe.com/community/flashplayer)
 
 ## Guide
 
@@ -76,7 +76,9 @@ The `jar` folder also contains `FlashRuntimeExtensions.jar` (from the [AdobeAirS
 
 ## ANE Extension Interface
 
-The extension interface is the piece between Java and ActionScript and was created using a [FlashBuilder project](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir/OuyaNativeExtension/lib).
+The extension interface is the piece between Java and ActionScript and was created using a [FlashBuilder project](https://github.com/razerofficial/adobe-air-razer-sdk/tree/master/RazerSDKNativeExtension/lib). `FlashBuilder` is part of `Adobe Creative Cloud`.
+
+![adobe-air/image_24.png](adobe-air/image_24.png)
 
 After the builder project has imported, `Adobe Builder` will auto compile the `SWC` file which is needed any time ActionScript is changed in the `ANE`.
 
@@ -86,13 +88,23 @@ After the builder project has imported, `Adobe Builder` will auto compile the `S
 
 ![adobe-air/image_2.png](adobe-air/image_2.png)
 
-2) Choose `Project Folder`, browse to the `AdobeAir/OuyaNativeExtension/lib` folder, and click `OK`.
+Or `Right-Click` the `Project Explorer` and click `Import...`.
+
+![adobe-air/image_25.png](adobe-air/image_25.png)
+
+In the Import Dialog select `Flash Builder Project`.
+
+![adobe-air/image_26.png](adobe-air/image_26.png)
+
+2) Choose `Project Folder`, browse to the `RazerSDKNativeExtension/lib` folder, and click `Finish`.
 
 ![adobe-air/image_3.png](adobe-air/image_3.png)
 
 3) After making changes to `ActionScript` switch back to `Flash Builder` which will auto-generate a new `SWC` file.
 
 4) Building the `ANE` from script will embed the `SWC` file.
+
+5) The `Project->Clean...` will also rebuild the `ANE`.
 
 ## Build ANE
 
