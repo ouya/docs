@@ -830,29 +830,29 @@ package
 	// Import the MovieClip namespace
     import flash.display.MovieClip;
 
-	// The OuyaController keycodes are used by input events
-	import tv.ouya.console.api.OuyaController;
+	// The Controller keycodes are used by input events
+	import com.razerzone.store.sdk.Controller;	
 
 	// Import the namespace for the ANE
-	import tv.ouya.sdk.OuyaNativeInterface;
+	import com.razerzone.store.sdk.engine.adobeair.RazerSDKNativeInterface;	
 
 	// The Main document extends from MovieClip 
     public class Main extends MovieClip
     {
-		// The developer id displays when you log into the http://devs.ouya.tv developer portal
-		static var DEVLEOPER_ID:String = "310a8f51-4d6e-4ae5-bda0-b93878e5f5d0";
+		// Log into the http://devs.ouya.tv developer portal to get the game entry SECRET API KEY
+		static var SECRET_API_KEY:String = "eyJkZXZlbG9wZXJfaWQiOiIzMTBhOGY1MS00ZDZlLTRhZTUtYmRhMC1iOTM4NzhlNWY1ZDAiLCJkZXZlbG9wZXJfcHVibGljX2tleSI6Ik1JR2ZNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0R05BRENCaVFLQmdRRFYyd0RKRVdoRVNUdmtEcjBJWDNnUFc4N0pZMjgyT3ZqaGtsZWUwSUt6bFAzNVNtM1hlRGd4dU9SbkQzaUFta2YwRlo0L1VUWnBuTUhSVHhnNDBPTWZIYm4zSlVDUGdFdDJmTWZkL2ZVNU4vR2VqeTh2RE1nR092d2FlbUsvWU9NVHMyc2ZnTmduYVRJa3JFNVg5OFFKcGhaenlDY3cwUUZXaEdIczh1eCswUUlEQVFBQiJ9";
 
 		// save a reference to the ANE interface
-		var _mOuyaNativeInterface: OuyaNativeInterface;
+		var _mRazerSDKNativeInterface: RazerSDKNativeInterface;
 
 		// The main constructor
         public function Main()
         {
 			// create an instance of the ANE interface
-			_mOuyaNativeInterface = new OuyaNativeInterface();
+			_mRazerSDKNativeInterface = new RazerSDKNativeInterface();
 
-			// Initialize the ANE by passing your developer id
-			_mOuyaNativeInterface.OuyaInit(DEVLEOPER_ID);
+			// Initialize the ANE by passing the game's secret api key
+			_mRazerSDKNativeInterface.RazerSDKInit(SECRET_API_KEY);
 		}
 	}
 }
@@ -865,23 +865,23 @@ package
 		private function onStatusEvent( _event : StatusEvent ) : void 
 		{
 			// status events have a String code
-			_mOuyaNativeInterface.LogInfo("Code: " + _event.code );
+			_mRazerSDKNativeInterface.LogInfo("Code: " + _event.code );
 
 			// status events have a String level
-			_mOuyaNativeInterface.LogInfo("Level: " + _event.level );
+			_mRazerSDKNativeInterface.LogInfo("Level: " + _event.level );
 		}
 
 		// The main constructor
         public function Main()
         {
 			// create an instance of the ANE interface
-			_mOuyaNativeInterface = new OuyaNativeInterface();
+			_mRazerSDKNativeInterface = new RazerSDKNativeInterface();
 
-			// Initialize the ANE by passing your developer id
-			_mOuyaNativeInterface.OuyaInit(DEVLEOPER_ID);
+			// Initialize the ANE by passing the game's secret api key
+			_mRazerSDKNativeInterface.RazerSDKInit(SECRET_API_KEY);
 
 			// Add a status event listener on the ANE context
-			_mOuyaNativeInterface.GetExtensionContext().addEventListener( StatusEvent.STATUS, onStatusEvent );
+			_mRazerSDKNativeInterface.GetExtensionContext().addEventListener( StatusEvent.STATUS, onStatusEvent );
 		}
 }
 ```
@@ -905,16 +905,20 @@ package
 			// Display status events in the example label
 			LblStatus.text = "STATUS: "+_event.code;
 			
-			if (_event.code == "RequestGamerInfoOnSuccess") {
+			if (_event.code == "InitCompleteOnSuccess") {			
+				InitCompleteOnSuccess();
+			} else if (_event.code == "RequestGamerInfoOnSuccess") {
 				RequestGamerInfoOnSuccess(_event.level);
 			} else if (_event.code == "RequestGamerInfoError" ||
 				_event.code == "RequestProductsError" ||
 				_event.code == "RequestPurchaseError" ||
 				_event.code == "RequestReceiptsError" ||
+				_event.code == "InitCompleteOnFailure" ||
 				_event.code == "RequestGamerInfoOnFailure" ||
 				_event.code == "RequestProductsOnFailure" ||
 				_event.code == "RequestPurchaseOnFailure" ||
 				_event.code == "RequestReceiptsOnFailure" ||
+				_event.code == "ShutdownOnFailure"||
 				_event.code == "RequestGamerInfoOnCancel" ||
 				_event.code == "RequestProductsOnCancel" ||
 				_event.code == "RequestPurchaseOnCancel" ||
@@ -926,9 +930,11 @@ package
 				RequestPurchaseOnSuccess(_event.level);
 			} else if (_event.code == "RequestReceiptsOnSuccess") {
 				RequestReceiptsOnSuccess(_event.level);
+			} else if (_event.code == "ShutdownSuccess") {
+				ShutdownOnSuccess();
 			} else {
-				_mOuyaNativeInterface.LogInfo("Code: " + _event.code );
-				_mOuyaNativeInterface.LogInfo("Level: " + _event.level );
+				_mRazerSDKNativeInterface.LogInfo("Code: " + _event.code );
+				_mRazerSDKNativeInterface.LogInfo("Level: " + _event.level );
 			}
 		}
 ``` 
@@ -943,7 +949,7 @@ package
 
 ```
 var jsonData:String = "[\"long_sword\",\"sharp_axe\",\"__DECLINED__THIS_PURCHASE\"]";
-_mOuyaNativeInterface.RequestProducts(jsonData);
+_mRazerSDKNativeInterface.RequestProducts(jsonData);
 ```
 
 ### RequestPurchase
@@ -952,7 +958,7 @@ _mOuyaNativeInterface.RequestProducts(jsonData);
 
 ```
 var identifier:String = "long_sword";
-_mOuyaNativeInterface.RequestPurchase(identifier);
+_mRazerSDKNativeInterface.RequestPurchase(identifier);
 ```
 
 ### RequestReceipts
@@ -960,7 +966,7 @@ _mOuyaNativeInterface.RequestPurchase(identifier);
 `RequestReceipts` takes no arguments and the callback gets a list of receipts that the logged in gamer has purchased associated with the package.
 
 ```
-_mOuyaNativeInterface.RequestReceipts();
+_mRazerSDKNativeInterface.RequestReceipts();
 ```
 
 ### RequestGamerInfo
@@ -968,12 +974,12 @@ _mOuyaNativeInterface.RequestReceipts();
 `RequestGamerInfo` gets the `GamerInfo` for the logged in gamer. The `GamerInfo` holds the gamer `UUID` and `Username`.
 
 ```
-_mOuyaNativeInterface.RequestGamerInfo();
+_mRazerSDKNativeInterface.RequestGamerInfo();
 ```
 
 ### Shutdown
 
-`Shutdown` cleanly shuts down the `ANE` interface before exiting.
+`Shutdown` cleanly shuts down the `ANE` interface before exiting. Use the `ShutdownOnSuccess` callback to exit at the right time.
 
 Import the `NativeApplication` namespace to get access to the singleton and exit method.
 
@@ -984,8 +990,15 @@ import flash.desktop.NativeApplication;
 Shutdown the `ANE` interface before exiting the application.
 
 ```
-_mOuyaNativeInterface.Shutdown();
-NativeApplication.nativeApplication.exit();
+		private function StartShutdown():void
+		{
+			_mOuyaNativeInterface.Shutdown();
+		}
+
+		private function ShutdownOnSuccess():void
+		{
+			NativeApplication.nativeApplication.exit();
+		}
 ```
 
 ## Profiling
