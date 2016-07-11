@@ -60,11 +60,13 @@ C:\Program Files\Adobe\Adobe Flash Builder 4.7 (64 Bit)\sdks\4.6.0\bin\jvm.confi
 
 ANE Extensions wrap Java libraries so they can be invoked from Adobe Air ActionScript.
 
-## Build AirRazerSDKPPlugin JAR
+## Build AirRazerSDKPlugin JAR
 
 The Java Plugin JAR needs to be compiled first before it can be wrapped in an ANE Extension.
 
 [AirRazerSDKPlugin](https://github.com/razerofficial/adobe-air-razer-sdk/tree/master/RazerSDKNativeExtension/AirRazerSDKPlugin) is an Android Studio library project that compiles into an AAR library.
+
+The `AIR Compiler` does not have support for the [AAR format](http://tools.android.com/tech-docs/new-build-system/aar-format) yet. The build uses a script to create a JAR from the AAR library that the `AIR Compiler` can use it.
 
 The [build_all.cmd](https://github.com/razerofficial/adobe-air-razer-sdk/blob/master/RazerSDKNativeExtension/build_all.cmd) script will compile the `AirRazerSDKPlugin` combine the [dependencies](https://github.com/razerofficial/adobe-air-razer-sdk/tree/master/RazerSDKNativeExtension/AirRazerSDKPlugin/java/libs) into the `AirRazerSDKPPlugin.JAR` to build the `ANE`. The script automatically copies the built `ANE` to the example projects.
 
