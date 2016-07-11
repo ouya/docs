@@ -66,9 +66,9 @@ The Java Plugin JAR needs to be compiled first before it can be wrapped in an AN
 
 [AirRazerSDKPlugin](https://github.com/razerofficial/adobe-air-razer-sdk/tree/master/RazerSDKNativeExtension/AirRazerSDKPlugin) is an Android Studio library project that compiles into an AAR library.
 
-The `AIR Compiler` does not have support for the [AAR format](http://tools.android.com/tech-docs/new-build-system/aar-format) yet. The build uses a script to create a JAR from the AAR library that the `AIR Compiler` can use it.
+The `AIR Compiler` does not have support for the [AAR format](http://tools.android.com/tech-docs/new-build-system/aar-format) yet. The build uses a script to create a JAR from the AAR library that the `AIR Compiler` can use.
 
-The [build_all.cmd](https://github.com/razerofficial/adobe-air-razer-sdk/blob/master/RazerSDKNativeExtension/build_all.cmd) script will compile the `AirRazerSDKPlugin` combine the [dependencies](https://github.com/razerofficial/adobe-air-razer-sdk/tree/master/RazerSDKNativeExtension/AirRazerSDKPlugin/java/libs) into the `AirRazerSDKPPlugin.JAR` to build the `ANE`. The script automatically copies the built `ANE` to the example projects.
+The [build_all.cmd](https://github.com/razerofficial/adobe-air-razer-sdk/blob/master/RazerSDKNativeExtension/build_all.cmd) script will compile the `AirRazerSDKPlugin` and combine the [dependencies](https://github.com/razerofficial/adobe-air-razer-sdk/tree/master/RazerSDKNativeExtension/AirRazerSDKPlugin/java/libs) into the `AirRazerSDKPPlugin.JAR` to build the `ANE`. The script automatically copies the built `ANE` to the example projects.
 
 ## ANE Extension Interface
 
@@ -141,14 +141,14 @@ import tv.ouya.console.api.OuyaController;
 import tv.ouya.sdk.OuyaNativeInterface;
 ```
 
-## OuyaInit
+## RazerSDKInit
 
-Initialize the `OuyaNativeInterface` to use OUYA-Everywhere Input. The `OuyaNativeExtension.ane` extension must be added to your project. 
+Initialize the `RazerSDKNativeInterface` to use OUYA-Everywhere Input. The `RazerSDKNativeExtension.ane` extension must be added to your project. 
 
 ```
-trace( "Initialize OUYA Extension..." );
-var ouyaNativeInterface:OuyaNativeInterface = new OuyaNativeInterface();
-ouyaNativeInterface.OuyaInit();
+trace( "Initialize RazerSDK Extension..." );
+var ouyaNativeInterface:RazerSDKNativeInterface = new RazerSDKNativeInterface();
+ouyaNativeInterface.RazerSDKInit();
 ```
 
 ## IsAnyConnected
@@ -156,7 +156,7 @@ ouyaNativeInterface.OuyaInit();
 `IsAnyConnected` will return `true` if any controllers are connected, otherwise `false`.
 
 ```
-var anyConnected:Boolean = ouyaNativeInterface.IsAnyConnected();
+var anyConnected:Boolean = RazerSDKNativeInterface.IsAnyConnected();
 ```
 
 ## IsConnected
@@ -165,7 +165,7 @@ var anyConnected:Boolean = ouyaNativeInterface.IsAnyConnected();
 
 ```
 var playerNum:int = 0;
-var isConnected:Boolean = ouyaNativeInterface.IsConnected(playerNum);
+var isConnected:Boolean = RazerSDKNativeInterface.IsConnected(playerNum);
 ```
 
 ## GetAxis
@@ -174,19 +174,19 @@ var isConnected:Boolean = ouyaNativeInterface.IsConnected(playerNum);
 
 ```
 var playerNum:int = 0;
-var axis:int = OuyaController.AXIS_LS_X;
-var val:Number = ouyaNativeInterface.GetAxis(playerNum, axis);
+var axis:int = Controller.AXIS_LS_X;
+var val:Number = razerSDKNativeInterface.GetAxis(playerNum, axis);
 ```
 
 The supported `axis` values are below.
 
 ```
-OuyaController.AXIS_LS_X
-OuyaController.AXIS_LS_Y
-OuyaController.AXIS_RS_X
-OuyaController.AXIS_RS_Y
-OuyaController.AXIS_L2
-OuyaController.AXIS_R2
+Controller.AXIS_LS_X
+Controller.AXIS_LS_Y
+Controller.AXIS_RS_X
+Controller.AXIS_RS_Y
+Controller.AXIS_L2
+Controller.AXIS_R2
 ```
 
 ## GetAnyButton
@@ -194,26 +194,26 @@ OuyaController.AXIS_R2
 `GetAnyButton` will return `true` if any controller is pressing the `button`.
 
 ```
-var button:int = OuyaController.BUTTON_O;
-var pressed:Boolean = ouyaNativeInterface.GetAnyButton(button);
+var button:int = Controller.BUTTON_O;
+var pressed:Boolean = razerSDKNativeInterface.GetAnyButton(button);
 ```
 
 The supported `button` values are below.
 
 ```
-OuyaController.BUTTON_O
-OuyaController.BUTTON_U
-OuyaController.BUTTON_Y
-OuyaController.BUTTON_A
-OuyaController.BUTTON_L1
-OuyaController.BUTTON_R1
-OuyaController.BUTTON_L3
-OuyaController.BUTTON_R3
-OuyaController.BUTTON_DPAD_UP
-OuyaController.BUTTON_DPAD_DOWN
-OuyaController.BUTTON_DPAD_RIGHT
-OuyaController.BUTTON_DPAD_LEFT
-OuyaController.BUTTON_MENU
+Controller.BUTTON_O
+Controller.BUTTON_U
+Controller.BUTTON_Y
+Controller.BUTTON_A
+Controller.BUTTON_L1
+Controller.BUTTON_R1
+Controller.BUTTON_L3
+Controller.BUTTON_R3
+Controller.BUTTON_DPAD_UP
+Controller.BUTTON_DPAD_DOWN
+Controller.BUTTON_DPAD_RIGHT
+Controller.BUTTON_DPAD_LEFT
+Controller.BUTTON_MENU
 ```
 
 `BUTTON_MENU` should only be used with `ButtonDown` and `ButtonUp` events.
@@ -223,8 +223,8 @@ OuyaController.BUTTON_MENU
 `GetAnyButtonDown` will return `true` if any controller detected a pressed event on the last frame for the `button`.
 
 ```
-var button:int = OuyaController.BUTTON_O;
-var pressed:Boolean = ouyaNativeInterface.GetAnyButtonDown(button);
+var button:int = Controller.BUTTON_O;
+var pressed:Boolean = razerSDKNativeInterface.GetAnyButtonDown(button);
 ```
 
 ## GetAnyButtonUp 
@@ -232,8 +232,8 @@ var pressed:Boolean = ouyaNativeInterface.GetAnyButtonDown(button);
 `GetAnyButtonUp` will return `true` if any controller detected a released event on the last frame for the `button`.
 
 ```
-var button:int = OuyaController.BUTTON_O;
-var released:Boolean = ouyaNativeInterface.GetAnyButtonUp(button);
+var button:int = Controller.BUTTON_O;
+var released:Boolean = razerSDKNativeInterface.GetAnyButtonUp(button);
 ```
 
 ## GetButton
@@ -242,8 +242,8 @@ var released:Boolean = ouyaNativeInterface.GetAnyButtonUp(button);
 
 ```
 var playerNum:int = 0;
-var button:int = OuyaController.BUTTON_O;
-var pressed:Boolean = ouyaNativeInterface.GetButton(playerNum, button);
+var button:int = Controller.BUTTON_O;
+var pressed:Boolean = razerSDKNativeInterface.GetButton(playerNum, button);
 ```
 
 ## GetButtonDown
@@ -252,8 +252,8 @@ var pressed:Boolean = ouyaNativeInterface.GetButton(playerNum, button);
 
 ```
 var playerNum:int = 0;
-var button:int = OuyaController.BUTTON_O;
-var pressed:Boolean = ouyaNativeInterface.GetButtonDown(playerNum, button);
+var button:int = Controller.BUTTON_O;
+var pressed:Boolean = razerSDKNativeInterface.GetButtonDown(playerNum, button);
 ```
 
 ## GetButtonUp
@@ -262,8 +262,8 @@ var pressed:Boolean = ouyaNativeInterface.GetButtonDown(playerNum, button);
 
 ```
 var playerNum:int = 0;
-var button:int = OuyaController.BUTTON_O;
-var released:Boolean = ouyaNativeInterface.GetButtonUp(playerNum, button);
+var button:int = Controller.BUTTON_O;
+var released:Boolean = razerSDKNativeInterface.GetButtonUp(playerNum, button);
 ```
 
 ## ClearButtonStatesPressedReleased
@@ -271,14 +271,14 @@ var released:Boolean = ouyaNativeInterface.GetButtonUp(playerNum, button);
 `ClearButtonStatesPressedReleased` will clear the detected pressed and released states to allow detection for the next update frame.
 
 ```
-ouyaNativeInterface.ClearButtonStatesPressedReleased();
+razerSDKNativeInterface.ClearButtonStatesPressedReleased();
 ```
 
 ## Examples
 
 ### Flash
 
-The following steps setup the `Main.as` ActionScript file to load at start-up to initialize the `OUYA` native extension.
+The following steps setup the `Main.as` ActionScript file to load at start-up to initialize the `RazerSDK` native extension.
 
 1) Switch to the `selection tool` and `left-click` on the stage to select the document.
 
@@ -306,7 +306,7 @@ package
 }
 ```
 
-6) Add code to load the `OUYA` native extension and save a reference to the native interface.
+6) Add code to load the `RazerSDK` native extension and save a reference to the native interface.
 
 ```
 package
@@ -317,15 +317,15 @@ package
     public class Main extends MovieClip
     {
 		// reference to the native interface
-		var _mOuyaNativeInterface: OuyaNativeInterface;
+		var _mRazerSDKNativeInterface: RazerSDKNativeInterface;
 
         public function Main()
         {
-			// create the native interface and initialize the OUYA native extension
-			_mOuyaNativeInterface = new OuyaNativeInterface();
+			// create the native interface and initialize the RazerSDK native extension
+			_mRazerSDKNativeInterface = new RazerSDKNativeInterface();
 
-			// initialize the OUYA plugin
-			_mOuyaNativeInterface.OuyaInit();
+			// initialize the RazerSDK plugin
+			_mRazerSDKNativeInterface.RazerSDKInit();
 		}
 	}
 }
@@ -345,13 +345,13 @@ package
 
 ![image_7.png](adobe-air/image_7.png)
 
-10) Select the `ARM` processor and click the `+` button to browse to the `OuyaNativeExtension.ane` copied to your project folder and click `OK`.
+10) Select the `ARM` processor and click the `+` button to browse to the `RazerSDKNativeExtension.ane` copied to your project folder and click `OK`.
 
 11) When publishing, the `extensions` section will automatically appear in your project's `ApplicationName-app.xml` file and that section cannot be edited manually.
 
 ```
   <extensions>
-    <extensionID>tv.ouya.sdk.ouyanativecontext</extensionID>
+    <extensionID>com.razerzone.store.sdk.engine.adobeair.razersdknativecontext</extensionID>
   </extensions>
 ```
 
@@ -369,15 +369,10 @@ package
 							<intent-filter>
 								<action android:name="android.intent.action.MAIN"/>
 								<category android:name="android.intent.category.LAUNCHER"/>
-								<category android:name="tv.ouya.intent.category.GAME"/>
+								<category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+								<category android:name="com.razerzone.store.category.GAME" />
 							</intent-filter>
 						</activity>
-						<activity android:name="tv.ouya.sdk.MainActivity"
-							android:theme="@android:style/Theme.Translucent.NoTitleBar">
-							<intent-filter>
-								<category android:name="android.intent.category.DEFAULT" />
-							</intent-filter>
-						</activity>					
 					</application>
 				</manifest>
 			]]>
@@ -389,17 +384,17 @@ package
 
 ![image_12.png](adobe-air/image_12.png)
 
-13) On the `Library Path` tab, click the `Browse to Native Extension` button to select the `OuyaNativeExtension.ane` file in the project folder.
+13) On the `Library Path` tab, click the `Browse to Native Extension` button to select the `RazerSDKNativeExtension.ane` file in the project folder.
 
 ![image_14.png](adobe-air/image_14.png)
 
-14) With the `OuyaNativeExtension.ane` added to the library path, click `OK`. This setting uses an absolute path and if the path is different then the path will need to be reset in order to publish. 
+14) With the `RazerSDKNativeExtension.ane` added to the library path, click `OK`. This setting uses an absolute path and if the path is different then the path will need to be reset in order to publish. 
 
 ![image_13.png](adobe-air/image_13.png)
 
 ### Flash Virtual Controller
 
-The [Flash Virtual Controller](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir/FlashVirtualController) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated.
+The [Flash Virtual Controller](https://github.com/razerofficial/adobe-air-razer-sdk/tree/master/FlashVirtualController) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated.
 
 ![image_4.png](adobe-air/image_4.png)
 
@@ -809,7 +804,7 @@ package
 
 ### In-App-Purchases
 
-The [In-App-Purchases](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir/FlashInAppPurchases) example uses the ODK to access gamer info, purchasing, and receipts.
+The [In-App-Purchases](https://github.com/razerofficial/adobe-air-razer-sdk/tree/master/FlashInAppPurchases) example uses the ODK to access gamer info, purchasing, and receipts.
 
 ![image_17.png](adobe-air/image_17.png)
 
