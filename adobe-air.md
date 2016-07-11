@@ -1,5 +1,9 @@
 ## Adobe Air Engine
 
+# Source #
+
+The source code for the Adobe Air / Animate CC/ Flash Plugin can be found at [adobe-air-razer-sdk](https://github.com/razerofficial/adobe-air-razer-sdk).
+
 ### Downloads
 
 [Example Source](https://github.com/ouya/ouya-sdk-examples/tree/master/AdobeAir)
