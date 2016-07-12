@@ -808,17 +808,17 @@ The [In-App-Purchases](https://github.com/razerofficial/adobe-air-razer-sdk/tree
 
 ![image_17.png](adobe-air/image_17.png)
 
-1) Log into the [`developer portal`](http://devs.ouya.tv) to record your `developer UUID` to configure in-app-purchases.
+1) Log into the [`developer portal`](http://devs.ouya.tv), and switch to the `Games` section.
 
 ![image_18.png](adobe-air/image_18.png)
 
-2) In the `Games` section of the `developer portal` create an entry matching your `package name` matching the `air` prefix. Download the `signing key` for the game entry into your `Flash` project folder.
+2) In the `Games` section of the `developer portal` create an entry matching your `package name` matching the `air` prefix. Record the `Secret API Key` for the corresponding game entry to configure in-app-purchases.
 
-3) Use the `File->AIR Android Settings..` menu item to add the signing key. 
+3) Use the `File->AIR Android Settings..` menu item to open the `AIR for Android Settings` dialog.  
 
 ![image_6.png](adobe-air/image_6.png)
 
-4) On the `General` tab click the `+` button to add the `key.der` to the included files to reference the `signing key`. And then click `OK`.
+4) On the `General` tab, verify the `App ID:` matches the package identifier in the game entry.
 
 ![image_19.png](adobe-air/image_19.png)
 
