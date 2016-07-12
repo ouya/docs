@@ -58,7 +58,7 @@ C:\Program Files\Adobe\Adobe Flash Builder 4.7 (64 Bit)\sdks\4.6.0\bin\jvm.confi
 
 # Building ANE
 
-ANE Extensions wrap Java libraries so they can be invoked from Adobe Air ActionScript.
+`ANE` Extensions wrap Java libraries so they can be invoked from Adobe Air ActionScript. You will not need to build the `ANE`, unless making changes to the JAVA/ActionScript communication.
 
 ## Build AirRazerSDKPlugin JAR
 
