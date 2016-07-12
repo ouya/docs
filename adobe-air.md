@@ -992,7 +992,7 @@ Shutdown the `ANE` interface before exiting the application.
 ```
 		private function StartShutdown():void
 		{
-			_mOuyaNativeInterface.Shutdown();
+			_mRazerSDKNativeInterface.Shutdown();
 		}
 
 		private function ShutdownOnSuccess():void
@@ -1043,13 +1043,13 @@ Using the profiler, it turns out that using the `ANE` interface to check axis an
         public function Main()
         {
 			// create an instance of the ANE interface
-			_mOuyaNativeInterface = new OuyaNativeInterface();
+			_mRazerSDKNativeInterface = new RazerSDKNativeInterface();
 
 			// initialize the ANE
-			_mOuyaNativeInterface.OuyaInit(DEVLEOPER_ID);
+			_mRazerSDKNativeInterface.RazerSDKInit(SECRET_API_KEY);
 
 			// Add the status event
-			_mOuyaNativeInterface.GetExtensionContext().addEventListener( StatusEvent.STATUS, onStatusEvent );
+			_mRazerSDKNativeInterface.GetExtensionContext().addEventListener( StatusEvent.STATUS, onStatusEvent );
         }
 ```
 
@@ -1082,14 +1082,14 @@ Using the profiler, it turns out that using the `ANE` interface to check axis an
 			var val:Number = json.value;
 
 			// logs the input event, comment out this logging in your actual game
-			_mOuyaNativeInterface.LogInfo("Axis: playerNum:"+playerNum+" axis:"+axis+" value:"+val);
+			_mRazerSDKNativeInterface.LogInfo("Axis: playerNum:"+playerNum+" axis:"+axis+" value:"+val);
 
-			if (axis == OuyaController.AXIS_LS_X) {
-			} else if (axis == OuyaController.AXIS_LS_Y) {
-			} else if (axis == OuyaController.AXIS_RS_X) {
-			} else if (axis == OuyaController.AXIS_RS_Y) {
-			} else if (axis == OuyaController.AXIS_L2) {
-			} else if (axis == OuyaController.AXIS_R2) {
+			if (axis == Controller.AXIS_LS_X) {
+			} else if (axis == Controller.AXIS_LS_Y) {
+			} else if (axis == Controller.AXIS_RS_X) {
+			} else if (axis == Controller.AXIS_RS_Y) {
+			} else if (axis == Controller.AXIS_L2) {
+			} else if (axis == Controller.AXIS_R2) {
 			}
 		}
 		
@@ -1100,21 +1100,21 @@ Using the profiler, it turns out that using the `ANE` interface to check axis an
 			var button:int = json.button;
 
 			// logs the input event, comment out this logging in your actual game
-			_mOuyaNativeInterface.LogInfo("ButtonDown: playerNum:"+playerNum+" button:"+button);
+			_mRazerSDKNativeInterface.LogInfo("ButtonDown: playerNum:"+playerNum+" button:"+button);
 
-			if (button == OuyaController.BUTTON_O) {
-			} else if (button == OuyaController.BUTTON_U) {
-			} else if (button == OuyaController.BUTTON_Y) {
-			} else if (button == OuyaController.BUTTON_A) {
-			} else if (button == OuyaController.BUTTON_L1) {
-			} else if (button == OuyaController.BUTTON_L3) {
-			} else if (button == OuyaController.BUTTON_R1) {
-			} else if (button == OuyaController.BUTTON_R3) {
-			} else if (button == OuyaController.BUTTON_DPAD_DOWN) {
-			} else if (button == OuyaController.BUTTON_DPAD_LEFT) {
-			} else if (button == OuyaController.BUTTON_DPAD_RIGHT) {
-			} else if (button == OuyaController.BUTTON_DPAD_UP) {
-			} else if (button == OuyaController.BUTTON_MENU) {
+			if (button == Controller.BUTTON_O) {
+			} else if (button == Controller.BUTTON_U) {
+			} else if (button == Controller.BUTTON_Y) {
+			} else if (button == Controller.BUTTON_A) {
+			} else if (button == Controller.BUTTON_L1) {
+			} else if (button == Controller.BUTTON_L3) {
+			} else if (button == Controller.BUTTON_R1) {
+			} else if (button == Controller.BUTTON_R3) {
+			} else if (button == Controller.BUTTON_DPAD_DOWN) {
+			} else if (button == Controller.BUTTON_DPAD_LEFT) {
+			} else if (button == Controller.BUTTON_DPAD_RIGHT) {
+			} else if (button == Controller.BUTTON_DPAD_UP) {
+			} else if (button == Controller.BUTTON_MENU) {
 			}
 		}
 		
@@ -1125,21 +1125,21 @@ Using the profiler, it turns out that using the `ANE` interface to check axis an
 			var button:int = json.button;
 
 			// logs the input event, comment out this logging in your actual game
-			_mOuyaNativeInterface.LogInfo("ButtonUp: playerNum:"+playerNum+" button:"+button);
+			_mRazerSDKNativeInterface.LogInfo("ButtonUp: playerNum:"+playerNum+" button:"+button);
 
-			if (button == OuyaController.BUTTON_O) {
-			} else if (button == OuyaController.BUTTON_U) {
-			} else if (button == OuyaController.BUTTON_Y) {
-			} else if (button == OuyaController.BUTTON_A) {
-			} else if (button == OuyaController.BUTTON_L1) {
-			} else if (button == OuyaController.BUTTON_L3) {
-			} else if (button == OuyaController.BUTTON_R1) {
-			} else if (button == OuyaController.BUTTON_R3) {
-			} else if (button == OuyaController.BUTTON_DPAD_DOWN) {
-			} else if (button == OuyaController.BUTTON_DPAD_LEFT) {
-			} else if (button == OuyaController.BUTTON_DPAD_RIGHT) {
-			} else if (button == OuyaController.BUTTON_DPAD_UP) {
-			} else if (button == OuyaController.BUTTON_MENU) {
+			if (button == Controller.BUTTON_O) {
+			} else if (button == Controller.BUTTON_U) {
+			} else if (button == Controller.BUTTON_Y) {
+			} else if (button == Controller.BUTTON_A) {
+			} else if (button == Controller.BUTTON_L1) {
+			} else if (button == Controller.BUTTON_L3) {
+			} else if (button == Controller.BUTTON_R1) {
+			} else if (button == Controller.BUTTON_R3) {
+			} else if (button == Controller.BUTTON_DPAD_DOWN) {
+			} else if (button == Controller.BUTTON_DPAD_LEFT) {
+			} else if (button == Controller.BUTTON_DPAD_RIGHT) {
+			} else if (button == Controller.BUTTON_DPAD_UP) {
+			} else if (button == Controller.BUTTON_MENU) {
 			}
 		}
 ``` 
