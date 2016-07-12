@@ -137,8 +137,8 @@ Add the `RazerSDKNativeExtension.ane` extension to your application's extensions
 Import the packages to use the RazerSDK Native Extension.
 
 ```
-import tv.ouya.console.api.OuyaController;
-import tv.ouya.sdk.OuyaNativeInterface;
+import com.razerzone.store.sdk.Controller;	
+import com.razerzone.store.sdk.engine.adobeair.RazerSDKNativeInterface;	
 ```
 
 ## RazerSDKInit
@@ -146,9 +146,17 @@ import tv.ouya.sdk.OuyaNativeInterface;
 Initialize the `RazerSDKNativeInterface` to use OUYA-Everywhere Input. The `RazerSDKNativeExtension.ane` extension must be added to your project. 
 
 ```
-trace( "Initialize RazerSDK Extension..." );
-var ouyaNativeInterface:RazerSDKNativeInterface = new RazerSDKNativeInterface();
-ouyaNativeInterface.RazerSDKInit();
+    public class Main extends MovieClip
+    {
+		var _mRazerSDKNativeInterface: RazerSDKNativeInterface;
+
+        public function Main()
+        {
+			trace( "Initialize RazerSDK Extension..." );
+			_mRazerSDKNativeInterface = new RazerSDKNativeInterface();
+			_mRazerSDKNativeInterface.RazerSDKInit(SECRET_API_KEY);
+        }
+    }
 ```
 
 ## IsAnyConnected
@@ -312,7 +320,7 @@ package
 package
 {
     import flash.display.MovieClip;
-	import tv.ouya.sdk.OuyaNativeInterface;
+	import com.razerzone.store.sdk.engine.adobeair.RazerSDKNativeInterface;	
 
     public class Main extends MovieClip
     {
@@ -325,7 +333,7 @@ package
 			_mRazerSDKNativeInterface = new RazerSDKNativeInterface();
 
 			// initialize the RazerSDK plugin
-			_mRazerSDKNativeInterface.RazerSDKInit();
+			_mRazerSDKNativeInterface.RazerSDKInit(SECRET_API_KEY);
 		}
 	}
 }
@@ -394,7 +402,7 @@ package
 
 ### Flash Virtual Controller
 
-The [Flash Virtual Controller](https://github.com/razerofficial/adobe-air-razer-sdk/tree/master/FlashVirtualController) example shows 4 images of the OUYA Controller which moves axises and highlights buttons when the physical controller is manipulated.
+The [Flash Virtual Controller](https://github.com/razerofficial/adobe-air-razer-sdk/tree/master/FlashVirtualController) example shows 4 images of the Controller which moves axises and highlights buttons when the physical controller is manipulated.
 
 ![image_4.png](adobe-air/image_4.png)
 
@@ -403,14 +411,14 @@ The [Flash Virtual Controller](https://github.com/razerofficial/adobe-air-razer-
 ```
 package
 {
+	import com.razerzone.store.sdk.engine.adobeair.RazerSDKNativeInterface;	
     import flash.display.MovieClip;
 	import flash.events.Event;
-	import tv.ouya.sdk.OuyaNativeInterface;
 
     public class Main extends MovieClip
     {
 		// reference to the native interface
-		var _mOuyaNativeInterface: OuyaNativeInterface;
+		var _mRazerSDKNativeInterface: RazerSDKNativeInterface;
 
 		// frame event listener
 		private function fl_EnterFrameHandler_1(event:Event):void
@@ -419,11 +427,11 @@ package
 
         public function Main()
         {
-			// create the native interface and initialize the OUYA native extension
-			_mOuyaNativeInterface = new OuyaNativeInterface();
+			// create the native interface and initialize the RazerSDK native extension
+			_mRazerSDKNativeInterface = new RazerSDKNativeInterface();
 
-			// initialize the OUYA plugin
-			_mOuyaNativeInterface.OuyaInit();
+			// initialize the RazerSDK plugin
+			_mRazerSDKNativeInterface.RazerSDKInit(SECRET_API_KEY);
 
 			// add an event listener for each frame
 			addEventListener(Event.ENTER_FRAME, fl_EnterFrameHandler_1);
@@ -437,29 +445,29 @@ package
 ```
 package
 {
+	import com.razerzone.store.sdk.engine.adobeair.RazerSDKNativeInterface;	
     import flash.display.MovieClip;
 	import flash.events.Event;
-	import tv.ouya.sdk.OuyaNativeInterface;
 
     public class Main extends MovieClip
     {
 		// reference to the native interface
-		var _mOuyaNativeInterface: OuyaNativeInterface;
+		var _mRazerSDKNativeInterface: RazerSDKNativeInterface;
 
 		// frame event listener
 		private function fl_EnterFrameHandler_1(event:Event):void
 		{
 			// clear the button pressed and released states each frame
-			_mOuyaNativeInterface.ClearButtonStatesPressedReleased();
+			_mRazerSDKNativeInterface.ClearButtonStatesPressedReleased();
 		}
 
         public function Main()
         {
-			// create the native interface and initialize the OUYA native extension
-			_mOuyaNativeInterface = new OuyaNativeInterface();
+			// create the native interface and initialize the RazerSDK native extension
+			_mRazerSDKNativeInterface = new RazerSDKNativeInterface();
 
-			// initialize the OUYA plugin
-			_mOuyaNativeInterface.OuyaInit();
+			// initialize the RazerSDK plugin
+			_mRazerSDKNativeInterface.RazerSDKInit(SECRET_API_KEY);
 
 			// add an event listener for each frame
 			addEventListener(Event.ENTER_FRAME, fl_EnterFrameHandler_1);
@@ -473,9 +481,9 @@ package
 ```
 package
 {
+	import com.razerzone.store.sdk.engine.adobeair.RazerSDKNativeInterface;	
     import flash.display.MovieClip;
 	import flash.events.Event;
-	import tv.ouya.sdk.OuyaNativeInterface;
 
     public class Main extends MovieClip
     {
@@ -483,7 +491,7 @@ package
 		var INTERVAL_MS_INPUT:Number = 10;
 
 		// reference to the native interface
-		var _mOuyaNativeInterface: OuyaNativeInterface;
+		var _mRazerSDKNativeInterface: RazerSDKNativeInterface;
 
 		// a timer to throttle checking input
 		var _mInputTimer:Number = 0;
@@ -501,17 +509,17 @@ package
 				_mInputTimer = date.getTime() + INTERVAL_MS_INPUT;
 
 				// clear the button pressed and released states each frame
-				_mOuyaNativeInterface.ClearButtonStatesPressedReleased();
+				_mRazerSDKNativeInterface.ClearButtonStatesPressedReleased();
 			}
 		}
 
         public function Main()
         {
-			// create the native interface and initialize the OUYA native extension
-			_mOuyaNativeInterface = new OuyaNativeInterface();
+			// create the native interface and initialize the RazerSDK native extension
+			_mRazerSDKNativeInterface = new RazerSDKNativeInterface();
 
-			// initialize the OUYA plugin
-			_mOuyaNativeInterface.OuyaInit();
+			// initialize the RazerSDK plugin
+			_mRazerSDKNativeInterface.RazerSDKInit(SECRET_API_KEY);
 
 			// add an event listener for each frame
 			addEventListener(Event.ENTER_FRAME, fl_EnterFrameHandler_1);
@@ -525,9 +533,9 @@ package
 ```
 package
 {
+	import com.razerzone.store.sdk.engine.adobeair.RazerSDKNativeInterface;	
     import flash.display.MovieClip;
 	import flash.events.Event;
-	import tv.ouya.sdk.OuyaNativeInterface;
 
     public class Main extends MovieClip
     {
@@ -535,7 +543,7 @@ package
 		var INTERVAL_MS_INPUT:Number = 10;
 
 		// reference to the native interface
-		var _mOuyaNativeInterface: OuyaNativeInterface;
+		var _mRazerSDKNativeInterface: RazerSDKNativeInterface;
 
 		// a timer to throttle checking input
 		var _mInputTimer:Number = 0;
@@ -565,23 +573,23 @@ package
 				_mVirtualController4.Update();
 
 				// clear the button pressed and released states each frame
-				_mOuyaNativeInterface.ClearButtonStatesPressedReleased();
+				_mRazerSDKNativeInterface.ClearButtonStatesPressedReleased();
 			}
 		}
 
         public function Main()
         {
-			// create the native interface and initialize the OUYA native extension
-			_mOuyaNativeInterface = new OuyaNativeInterface();
+			// create the native interface and initialize the RazerSDK native extension
+			_mRazerSDKNativeInterface = new RazerSDKNativeInterface();
 
-			// initialize the OUYA plugin
-			_mOuyaNativeInterface.OuyaInit();
+			// initialize the RazerSDK plugin
+			_mRazerSDKNativeInterface.RazerSDKInit(SECRET_API_KEY);
 
 			// create the virtual controller sprites on start and specify the playerNum along with where to place on screen
-			_mVirtualController1 = new VirtualController(this, _mOuyaNativeInterface, 0, 15.65, -75.1);
-			_mVirtualController2 = new VirtualController(this, _mOuyaNativeInterface, 1, 1232.55, -75.1);
-			_mVirtualController3 = new VirtualController(this, _mOuyaNativeInterface, 2, 15.65, 495.75);
-			_mVirtualController4 = new VirtualController(this, _mOuyaNativeInterface, 3, 1232.55, 495.75);
+			_mVirtualController1 = new VirtualController(this, _mRazerSDKNativeInterface, 0, 15.65, -75.1);
+			_mVirtualController2 = new VirtualController(this, _mRazerSDKNativeInterface, 1, 1232.55, -75.1);
+			_mVirtualController3 = new VirtualController(this, _mRazerSDKNativeInterface, 2, 15.65, 495.75);
+			_mVirtualController4 = new VirtualController(this, _mRazerSDKNativeInterface, 3, 1232.55, 495.75);
 
 			// add an event listener for each frame
 			addEventListener(Event.ENTER_FRAME, fl_EnterFrameHandler_1);
@@ -595,39 +603,39 @@ package
 ```
 		public function Update():void
 		{
-			UpdateVisibility(_mButtonO, _mOuyaNativeInterface.GetButton(_mPlayerNum, OuyaController.BUTTON_O));
-			UpdateVisibility(_mButtonU, _mOuyaNativeInterface.GetButton(_mPlayerNum, OuyaController.BUTTON_U));
-			UpdateVisibility(_mButtonY, _mOuyaNativeInterface.GetButton(_mPlayerNum, OuyaController.BUTTON_Y));
-			UpdateVisibility(_mButtonA, _mOuyaNativeInterface.GetButton(_mPlayerNum, OuyaController.BUTTON_A));
+			UpdateVisibility(_mButtonO, _mRazerSDKNativeInterface.GetButton(_mPlayerNum, Controller.BUTTON_O));
+			UpdateVisibility(_mButtonU, _mRazerSDKNativeInterface.GetButton(_mPlayerNum, Controller.BUTTON_U));
+			UpdateVisibility(_mButtonY, _mRazerSDKNativeInterface.GetButton(_mPlayerNum, Controller.BUTTON_Y));
+			UpdateVisibility(_mButtonA, _mRazerSDKNativeInterface.GetButton(_mPlayerNum, Controller.BUTTON_A));
 			
-			UpdateVisibility(_mButtonL1, _mOuyaNativeInterface.GetButton(_mPlayerNum, OuyaController.BUTTON_L1));
+			UpdateVisibility(_mButtonL1, _mRazerSDKNativeInterface.GetButton(_mPlayerNum, Controller.BUTTON_L1));
 			
-			UpdateVisibility(_mButtonL3, _mOuyaNativeInterface.GetButton(_mPlayerNum, OuyaController.BUTTON_L3));
-			UpdateVisibility(_mButtonLS, !_mOuyaNativeInterface.GetButton(_mPlayerNum, OuyaController.BUTTON_L3));
+			UpdateVisibility(_mButtonL3, _mRazerSDKNativeInterface.GetButton(_mPlayerNum, Controller.BUTTON_L3));
+			UpdateVisibility(_mButtonLS, !_mRazerSDKNativeInterface.GetButton(_mPlayerNum, Controller.BUTTON_L3));
 			
-			UpdateVisibility(_mButtonR1, _mOuyaNativeInterface.GetButton(_mPlayerNum, OuyaController.BUTTON_R1));			
+			UpdateVisibility(_mButtonR1, _mRazerSDKNativeInterface.GetButton(_mPlayerNum, Controller.BUTTON_R1));			
 			
-			UpdateVisibility(_mButtonR3, _mOuyaNativeInterface.GetButton(_mPlayerNum, OuyaController.BUTTON_R3));
-			UpdateVisibility(_mButtonRS, !_mOuyaNativeInterface.GetButton(_mPlayerNum, OuyaController.BUTTON_R3));
+			UpdateVisibility(_mButtonR3, _mRazerSDKNativeInterface.GetButton(_mPlayerNum, Controller.BUTTON_R3));
+			UpdateVisibility(_mButtonRS, !_mRazerSDKNativeInterface.GetButton(_mPlayerNum, Controller.BUTTON_R3));
 			
-			UpdateVisibility(_mButtonDpadDown, _mOuyaNativeInterface.GetButton(_mPlayerNum, OuyaController.BUTTON_DPAD_DOWN));
-			UpdateVisibility(_mButtonDpadLeft, _mOuyaNativeInterface.GetButton(_mPlayerNum, OuyaController.BUTTON_DPAD_LEFT));
-			UpdateVisibility(_mButtonDpadRight, _mOuyaNativeInterface.GetButton(_mPlayerNum, OuyaController.BUTTON_DPAD_RIGHT));
-			UpdateVisibility(_mButtonDpadUp, _mOuyaNativeInterface.GetButton(_mPlayerNum, OuyaController.BUTTON_DPAD_UP));
+			UpdateVisibility(_mButtonDpadDown, _mRazerSDKNativeInterface.GetButton(_mPlayerNum, Controller.BUTTON_DPAD_DOWN));
+			UpdateVisibility(_mButtonDpadLeft, _mRazerSDKNativeInterface.GetButton(_mPlayerNum, Controller.BUTTON_DPAD_LEFT));
+			UpdateVisibility(_mButtonDpadRight, _mRazerSDKNativeInterface.GetButton(_mPlayerNum, Controller.BUTTON_DPAD_RIGHT));
+			UpdateVisibility(_mButtonDpadUp, _mRazerSDKNativeInterface.GetButton(_mPlayerNum, Controller.BUTTON_DPAD_UP));
 			
 			var date:Date = new Date();
-			if (_mOuyaNativeInterface.GetButtonUp(_mPlayerNum, OuyaController.BUTTON_MENU))
+			if (_mRazerSDKNativeInterface.GetButtonUp(_mPlayerNum, Controller.BUTTON_MENU))
 			{
 				_mMenuTimer = date.getTime() + 1000;
 			}
 			UpdateVisibility(_mButtonMenu, date.getTime() < _mMenuTimer);
 			
-			var lsX = _mOuyaNativeInterface.GetAxis(_mPlayerNum, OuyaController.AXIS_LS_X);
-			var lsY = _mOuyaNativeInterface.GetAxis(_mPlayerNum, OuyaController.AXIS_LS_Y);
-			var rsX = _mOuyaNativeInterface.GetAxis(_mPlayerNum, OuyaController.AXIS_RS_X);
-			var rsY = _mOuyaNativeInterface.GetAxis(_mPlayerNum, OuyaController.AXIS_RS_Y);
-			var l2 = _mOuyaNativeInterface.GetAxis(_mPlayerNum, OuyaController.AXIS_L2);
-			var r2 = _mOuyaNativeInterface.GetAxis(_mPlayerNum, OuyaController.AXIS_R2);
+			var lsX = _mRazerSDKNativeInterface.GetAxis(_mPlayerNum, Controller.AXIS_LS_X);
+			var lsY = _mRazerSDKNativeInterface.GetAxis(_mPlayerNum, Controller.AXIS_LS_Y);
+			var rsX = _mRazerSDKNativeInterface.GetAxis(_mPlayerNum, Controller.AXIS_RS_X);
+			var rsY = _mRazerSDKNativeInterface.GetAxis(_mPlayerNum, Controller.AXIS_RS_Y);
+			var l2 = _mRazerSDKNativeInterface.GetAxis(_mPlayerNum, Controller.AXIS_L2);
+			var r2 = _mRazerSDKNativeInterface.GetAxis(_mPlayerNum, Controller.AXIS_R2);
 			
 			UpdateVisibility(_mButtonL2, l2 > DEADZONE);
 			UpdateVisibility(_mButtonR2, r2 > DEADZONE);
@@ -659,18 +667,18 @@ package
 
 ![image_11.png](adobe-air/image_11.png)
 
-9) The `VirtualController` constructor keeps a reference to the `Main` object and the `OuyaNativeInterface` object. The `Main` object is needed to dynamically add children to the stage document. The `PlayerNum` argument corresponds to the `OUYA` controller number. The `x` and `y` parameter indicates where to instantiate the `Bitmap` objects on the stage.
+9) The `VirtualController` constructor keeps a reference to the `Main` object and the `RazerSDKNativeInterface` object. The `Main` object is needed to dynamically add children to the stage document. The `PlayerNum` argument corresponds to the controller number. The `x` and `y` parameter indicates where to instantiate the `Bitmap` objects on the stage.
 
 ```
 package
 {
+	import com.razerzone.store.sdk.Controller;	
+	import com.razerzone.store.sdk.engine.adobeair.RazerSDKNativeInterface;	
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
     import flash.display.MovieClip;
 	import flash.display.PixelSnapping;
 	import flash.geom.Matrix;
-	import tv.ouya.console.api.OuyaController;
-	import tv.ouya.sdk.OuyaNativeInterface;
 
     public class VirtualController extends MovieClip
     {
@@ -678,7 +686,7 @@ package
 		var _mMain: Main;
 
 		// reference to the native interface
-		var _mOuyaNativeInterface: OuyaNativeInterface;
+		var _mRazerSDKNativeInterface: RazerSDKNativeInterface;
 		
 		// player number for the virtual controller sprite collection
 		var _mPlayerNum:int = 0;
@@ -690,10 +698,10 @@ package
 		var _mY:Number = 0;
 
 		// constructor for the Virtual Controller
-		public function VirtualController(main:Main, ane:OuyaNativeInterface, playerNum:int, x:Number, y:Number)
+		public function VirtualController(main:Main, ane:RazerSDKNativeInterface, playerNum:int, x:Number, y:Number)
         {
 			_mMain = main;
-			_mOuyaNativeInterface = ane;
+			_mRazerSDKNativeInterface = ane;
 			_mPlayerNum = playerNum;
 			_mX = x;
 			_mY = y;
@@ -747,10 +755,10 @@ package
 		var _mButtonDpadUp:Bitmap;
 		var _mButtonMenu:Bitmap;
 
-		public function VirtualController(main:Main, ane:OuyaNativeInterface, playerNum:int, x:Number, y:Number)
+		public function VirtualController(main:Main, ane:RazerSDKNativeInterface, playerNum:int, x:Number, y:Number)
         {
 			_mMain = main;
-			_mOuyaNativeInterface = ane;
+			_mRazerSDKNativeInterface = ane;
 			_mPlayerNum = playerNum;
 			_mX = x;
 			_mY = y;
