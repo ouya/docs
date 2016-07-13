@@ -4,6 +4,10 @@
 
 [Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
+# Source #
+
+The source code for the RazerSDK Java samples can be found at [java-razer-sdk](https://github.com/razerofficial/java-razer-sdk).
+
 # Audience #
 
 This document is for developers that uses Java to make apps for Android. The docs target developers using Android Studio, Eclipse, or IntelliJ.
