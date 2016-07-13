@@ -4,11 +4,11 @@
 
 [Forge TV on Razer Forums](https://insider.razerzone.com/index.php?forums/razer-forge-tv.126/)
 
-# Source #
+# Source
 
 The source code for the RazerSDK Java samples can be found at [java-razer-sdk](https://github.com/razerofficial/java-razer-sdk).
 
-# Audience #
+# Audience
 
 This document is for developers that uses Java to make apps for Android. The docs target developers using Android Studio, Eclipse, or IntelliJ. However, most engines also have a Java hook that will be able to reuse the samples.
 
@@ -16,9 +16,9 @@ This document is for developers that uses Java to make apps for Android. The doc
 
 Java apps/games use the `store-sdk-standard-release.aar` library included in the `RazerSDK` downloadable from the [Cortex developer portal](http://devs.ouya.tv).
 
-# Java Samples #
+# Java Samples
 
-## Virtual Controller Sample ##
+## Virtual Controller Sample
 
 The virtual controller sample uses OUYA-Everywhere input. The button names and images are accessible from the API. And the virtual controller buttons highlight with multiple controllers for supported controllers. TextViews display the incoming keycode values and the remapped keycodes after the `InputMapper` has remapped the input.
 
@@ -30,11 +30,11 @@ The `VirtualController` example uses the `Controller.getButtonData` API to displ
 
 ![image_2](ouya-everywhere-android-java/image_2.png)
 
-## Android Virtual Controller Project ## 
+## Android Virtual Controller Project 
 
 The project has a small number of key files that makes the example work.
 
-### AndroidManifest.xml ###
+### AndroidManifest.xml
 
 The intent-filter specifies categories for the `leanback launcher` and `Razer` store. Apps use the category `com.razerzone.store.category.APP`. Games use the category `com.razerzone.store.category.GAME`.
 
@@ -47,29 +47,29 @@ The intent-filter specifies categories for the `leanback launcher` and `Razer` s
             </intent-filter>
 ```
 
-### MainActivity.java ###
+### MainActivity.java
 
 The starting and only activity in the project responsible for the logic to display text, buttons, and toggle image visibility based on input.
 
-### DebugInput.java ###
+### DebugInput.java
 
 A debug class for displaying keycode and axis value input in human-readable format in the logcat.
 
-### store-sdk-standard-release.aar ###
+### store-sdk-standard-release.aar
 
 The `store-sdk-standard-release.aar` Java library released through the developer portal which provides access to the `RazerSDK`.
 
-### activity_main.xml ###
+### activity_main.xml
 
 The Android layout that specifies the position and content that displays text and images.
 
-### drawables ###
+### drawables
 
 The drawable resources hold the icons and controller images used in the example.
 
-### Example Code ###
+### Example Code
 
-#### MainActivity ####
+#### MainActivity
 
 The MainActivity extends the `BaseActivity` from the `store-sdk-standard-release.aar` for the easiest way to add OUYA-Everywhere input.
 
@@ -77,7 +77,7 @@ The MainActivity extends the `BaseActivity` from the `store-sdk-standard-release
 public class MainActivity extends BaseActivity {
 ```
 
-#### setDrawable ####
+#### setDrawable
 
 Accepts the ImageView that will display the button image and the keyCode id for the corresponding button image.
 
@@ -90,7 +90,7 @@ Accepts the ImageView that will display the button image and the keyCode id for 
 	}
 ```
 
-#### bitmap ####
+#### bitmap
 
 The `ButtonData` image can also be converted to a `Bitmap` which can be used in other cases. 
 
@@ -111,7 +111,7 @@ The `ButtonData` image can also be converted to a `Bitmap` which can be used in 
     }
 ```
 
-#### onCreate ####
+#### onCreate
 
 Loads the layout and gets the references to the ImageView controls that will handle toggling button visibility when toggled.
 
@@ -197,7 +197,7 @@ Input can be event based, or spawn a thread to set visibility on an interval. Th
 ```
  
 
-#### onStart ####
+#### onStart
 
 Initialization displays build information and sets the drawable button images from the new api.
 
@@ -225,7 +225,7 @@ Initialization displays build information and sets the drawable button images fr
 	}
 ```
 
-#### onGenericMotionEvent ####
+#### onGenericMotionEvent
 
 The axis events arrive with onGenericMotionEvent after the OUYA-Everywhere has remapped the input.
 
@@ -240,7 +240,7 @@ The axis events arrive with onGenericMotionEvent after the OUYA-Everywhere has r
 	    float r2 = motionEvent.getAxisValue(Controller.AXIS_R2);
 ```
 
-#### onKeyDown ####
+#### onKeyDown
 
 When a button is pressed the corresponding image is highlighted. When the system button is detected, the image is highlighted for an interval.
 
@@ -296,7 +296,7 @@ When a button is pressed the corresponding image is highlighted. When the system
 	}
 ```
 
-#### onKeyUp ####
+#### onKeyUp
 
 When the button is no longer pressed the ImageView for the highlighted button is hidden.
 
@@ -351,17 +351,17 @@ When the button is no longer pressed the ImageView for the highlighted button is
 	}
 ```
 
-## Serval Virtual Controller Sample ##
+## Serval Virtual Controller Sample
 
 The `ServalVirtualController` sample includes virtual controller images and mappings for the Razer Serval Controller. The [serval-virtual-controller](https://github.com/razerofficial/java-razer-sdk/tree/master/Samples/serval-virtual-controller) sample is an `Android Studio` project.
 
 ![image_3](ouya-everywhere-android-java/image_3.png)
 
-## In-App-Purchases Sample ##
+## In-App-Purchases Sample
 
 The [In-App-Purchase](https://github.com/razerofficial/java-razer-sdk/tree/master/Samples/iap-sample-app) sample is an `Android Studio` project.
 
-## StoreFacade ##
+## StoreFacade
 
 The `StoreFacade` has several listeners for `in-app-purchase` callbacks.
 
