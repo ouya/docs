@@ -16,19 +16,19 @@ This document is for developers that uses Java to make apps for Android. The doc
 
 Java apps/games use the `store-sdk-standard-release.aar` library included in the `RazerSDK` downloadable from the [Cortex developer portal](http://devs.ouya.tv).
 
-# Java Examples #
+# Java Samples #
 
-## Virtual Controller Example ##
+## Virtual Controller Sample ##
 
-The virtual controller example exercises the new OUYA-Everywhere input. The button names and images are accessible from the API. And the virtual controller buttons highlight with multiple controllers for supported controllers. TextViews display the incoming keycode values and the remapped keycodes after the `InputMapper` has remapped the input.
+The virtual controller sample uses OUYA-Everywhere input. The button names and images are accessible from the API. And the virtual controller buttons highlight with multiple controllers for supported controllers. TextViews display the incoming keycode values and the remapped keycodes after the `InputMapper` has remapped the input.
 
 The [VirtualController](https://github.com/razerofficial/java-razer-sdk/tree/master/Samples/virtual-controller) sample is an `Android Studio` project.
 
-![image alt text](ouya-everywhere-android-java/image_0.png)
+![image_0](ouya-everywhere-android-java/image_0.png)
 
 The `VirtualController` example uses the `Controller.getButtonData` API to display device specific controller images.
 
-![image alt text](ouya-everywhere-android-java/image_2.png)
+![image_2](ouya-everywhere-android-java/image_2.png)
 
 ## Android Virtual Controller Project ## 
 
@@ -351,11 +351,11 @@ When the button is no longer pressed the ImageView for the highlighted button is
 	}
 ```
 
-## Razer Virtual Controller Example ##
+## Serval Virtual Controller Sample ##
 
-The `RazerVirtualController` example includes virtual controller images and mappings for the Razer Serval Controller. The `RazerVirtualController` source code can be found within the [ouya-sdk-examples](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/RazerVirtualController).
+The `ServalVirtualController` sample includes virtual controller images and mappings for the Razer Serval Controller. The [serval-virtual-controller](https://github.com/razerofficial/java-razer-sdk/tree/master/Samples/serval-virtual-controller) sample is an `Android Studio` project.
 
-![image alt text](ouya-everywhere-android-java/image_3.png)
+![image_3](ouya-everywhere-android-java/image_3.png)
 
 ## In-App-Purchases Sample ##
 
