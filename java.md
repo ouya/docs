@@ -399,12 +399,25 @@ public class CustomActivity extends Activity
 
 ### Secret API Key
 
-Each game entry in the [developer portal](https://devs.ouya.tv) has a `Secret API Key` used for store encryption/decryption. The `StoreFacade` can use the `Secret API Key` and create the `Bundle` used for initialization.
+Each game entry in the [developer portal](https://devs.ouya.tv) has a `Secret API Key` used for store encryption/decryption. The `Secret API Key` for each game can be found in the `Games` section of the developer portal.
+
+```
+	private static final String SECRET_API_KEY =
+	  "eyJkZXZlbG9wZXJfaWQiOiIzMTBhOGY1MS00ZDZlLTRhZTUtYmRhMC1iOTM4" +
+	  "NzhlNWY1ZDAiLCJkZXZlbG9wZXJfcHVibGljX2tleSI6Ik1JR2ZNQTBHQ1Nx" +
+	  "R1NJYjNEUUVCQVFVQUE0R05BRENCaVFLQmdRQy9wTTE2MHBWekw4ZG1yNVRq" +
+	  "aGZCVS95NjluQVl3TytJTXI3c2tCNFNJSXc1emFpWTNKWE5YMmpESXlRdzVK" +
+	  "U0VBYnBaa1JYa0d6YTVGTFArU2MyUktISUVJdVF1bnQ3R1MrU3FPcU5mQXRY" +
+	  "d2c3N3lSWU5rTXBvdFpFU0x4d05HVnFjN1g1SHdLdzRKcHJ2aXhZbGFkd0hW" +
+	  "dTUwUTc1WHlNQlBWVlF0SFpOd0lEQVFBQiJ9"; 
+```
+
+The `StoreFacade` can use the `Secret API Key` and create the `Bundle` used for initialization.
 
 ```
 		Bundle developerInfo = null;
 		try {
-			developerInfo = StoreFacade.createInitBundle(secretApiKey);
+			developerInfo = StoreFacade.createInitBundle(SECRET_API_KEY);
 		} catch (InvalidParameterException e) {
 			Log.e(TAG, e.getMessage());
 			abort();
