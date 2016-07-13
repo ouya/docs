@@ -369,29 +369,78 @@ The `StoreFacade` has several listeners for `in-app-purchase` callbacks.
 public class CustomActivity extends Activity
 {
 	// The tag for log messages
-	private static final String TAG = ActivityCommon.class.getSimpleName(); 
+	private static final String TAG = ActivityCommon.class.getSimpleName();
 
-	// Your game talks to the OuyaFacade, which hides all the mechanics of doing an in-app purchase.
-	private OuyaFacade mOuyaFacade = null;
+	// Toggle debug logging
+	private static final boolean sEnableLogging = false; 
+
+	// Your game talks to the StoreFacade, which hides all the mechanics of doing an in-app purchase.
+	private StoreFacade mStoreFacade = null;
 	
+	// listener for init complete
+	private ResponseListener<Bundle> mInitCompleteListener = null;
+
 	// listener for fetching gamer info
-	private CancelIgnoringOuyaResponseListener<GamerInfo> mRequestGamerInfoListener = null;
+	private ResponseListener<GamerInfo> mRequestGamerInfoListener = null;
 
 	// listener for getting products
-	private CancelIgnoringOuyaResponseListener<List<Product>> mRequestProductsListener = null;
-	
+	private ResponseListener<List<Product>> mRequestProductsListener = null;
+
 	// listener for requesting purchase
-	private OuyaResponseListener<PurchaseResult> mRequestPurchaseListener = null;
-	
+	private ResponseListener<PurchaseResult> mRequestPurchaseListener = null;
+
 	// listener for getting receipts
-	private OuyaResponseListener<Collection<Receipt>> mRequestReceiptsListener = null;
+	private ResponseListener<Collection<Receipt>> mRequestReceiptsListener = null;
+
+    // listener for shutdown
+    private CancelIgnoringResponseListener mShutdownListener = null;
 }
 ```
 
-Implement the listeners to pass to the `OuyaFacade` IAP methods.
+### Secret API Key
+
+Each game entry in the [developer portal](https://devs.ouya.tv) has a `Secret API Key` used for store encryption/decryption. The `StoreFacade` can use the `Secret API Key` and create the `Bundle` used for initialization.
 
 ```
-		mRequestGamerInfoListener = new CancelIgnoringOuyaResponseListener<GamerInfo>() {
+		Bundle developerInfo = null;
+		try {
+			developerInfo = StoreFacade.createInitBundle(secretApiKey);
+		} catch (InvalidParameterException e) {
+			Log.e(TAG, e.getMessage());
+			abort();
+			return;
+		}
+
+		if (sEnableLogging) {
+			Log.d(TAG, "developer_id=" + developerInfo.getString(StoreFacade.DEVELOPER_ID));
+		}
+
+		if (sEnableLogging) {
+			Log.d(TAG, "developer_public_key length=" + developerInfo.getByteArray(StoreFacade.DEVELOPER_PUBLIC_KEY).length);
+		}
+```
+
+Implement the listeners to pass to the `StoreFacade` IAP methods.
+
+```
+		mInitCompleteListener = new ResponseListener<Bundle>() {
+			@Override
+			public void onSuccess(Bundle bundle) {
+				Log.d(TAG, "InitCompleteListener onSuccess");
+			}
+
+			@Override
+			public void onFailure(int i, String s, Bundle bundle) {
+				Log.e(TAG, "InitCompleteListener onFailure");
+			}
+
+			@Override
+			public void onCancel() {
+				Log.e(TAG, "InitCompleteListener onCancel");
+			}
+		};
+
+		mRequestGamerInfoListener = new ResponseListener<GamerInfo>() {
             @Override
             public void onSuccess(GamerInfo info) {
             	Log.d(TAG, "RequestGamerInfoListener: onSuccess");
@@ -401,9 +450,14 @@ Implement the listeners to pass to the `OuyaFacade` IAP methods.
             public void onFailure(int errorCode, String errorMessage, Bundle optionalData) {
             	Log.d(TAG, "RequestGamerInfoListener: onFailure errorCode="+errorCode+" errorMessage="+errorMessage);
             }
+
+			@Override
+			public void onCancel() {
+				Log.e(TAG, "RequestGamerInfoListener onCancel");
+			}
         };
         
-		mRequestProductsListener = new CancelIgnoringOuyaResponseListener<List<Product>>() {
+		mRequestProductsListener = new ResponseListener<List<Product>>() {
 			@Override
 			public void onSuccess(final List<Product> products) {
 				Log.d(TAG, "RequestProductsListener: onSuccess received "+products.size()+" products");
@@ -415,7 +469,7 @@ Implement the listeners to pass to the `OuyaFacade` IAP methods.
 			}
 		};
 
-		mRequestPurchaseListener = new OuyaResponseListener<PurchaseResult>() {
+		mRequestPurchaseListener = new ResponseListener<PurchaseResult>() {
 
 			@Override
 			public void onSuccess(PurchaseResult result) {
@@ -433,7 +487,7 @@ Implement the listeners to pass to the `OuyaFacade` IAP methods.
 			}
 		};
 		
-		mRequestReceiptsListener = new OuyaResponseListener<Collection<Receipt>>() {
+		mRequestReceiptsListener = new ResponseListener<Collection<Receipt>>() {
 
 			@Override
 			public void onSuccess(Collection<Receipt> receipts) {
@@ -450,6 +504,21 @@ Implement the listeners to pass to the `OuyaFacade` IAP methods.
 				Log.d(TAG, "RequestReceiptsListener: onCancel");
 			}
 		};
+
+        mShutdownListener = new CancelIgnoringResponseListener() {
+            @Override
+            public void onSuccess(Object o) {
+                Log.d(TAG, "ShutdownListener onSuccess");
+
+				// Wait for the shutdown success event before closing the application
+				finish();
+            }
+
+            @Override
+            public void onFailure(int errorCode, String message, Bundle bundle) {
+                Log.e(TAG, "ShutdownListener onFailure failed to shutdown! errorCode="+errorCode+" message="+message);
+            }
+        };
 ```
 
 ## More
