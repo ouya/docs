@@ -10,11 +10,451 @@ The source code for the RazerSDK Java samples can be found at [java-razer-sdk](h
 
 # Audience #
 
-This document is for developers that uses Java to make apps for Android. The docs target developers using Android Studio, Eclipse, or IntelliJ.
+This document is for developers that uses Java to make apps for Android. The docs target developers using Android Studio, Eclipse, or IntelliJ. However, most engines also have a Java hook that will be able to reuse the samples.
 
 ## Releases
 
-Java apps/games use the `ouya-sdk.jar` library included in the `ODK` downloadable from the [Cortex developer portal](http://devs.ouya.tv).
+Java apps/games use the `store-sdk-standard-release.aar` library included in the `RazerSDK` downloadable from the [Cortex developer portal](http://devs.ouya.tv).
+
+# Java Examples #
+
+## Virtual Controller Example ##
+
+The virtual controller example exercises the new OUYA-Everywhere input. The button names and images are accessible from the API. And the virtual controller buttons highlight with multiple controllers for supported controllers. TextViews display the incoming keycode values and the remapped keycodes after the `InputMapper` has remapped the input.
+
+The [VirtualController](https://github.com/razerofficial/java-razer-sdk/tree/master/Samples/virtual-controller) sample is an `Android Studio` project.
+
+![image alt text](ouya-everywhere-android-java/image_0.png)
+
+The `VirtualController` example uses the `Controller.getButtonData` API to display device specific controller images.
+
+![image alt text](ouya-everywhere-android-java/image_2.png)
+
+## Android Virtual Controller Project ## 
+
+The project has a small number of key files that makes the example work.
+
+### AndroidManifest.xml ###
+
+The intent-filter specifies categories for the `leanback launcher` and `Razer` store. Apps use the category `com.razerzone.store.category.APP`. Games use the category `com.razerzone.store.category.GAME`.
+
+```
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+                <category android:name="com.razerzone.store.category.APP" />
+            </intent-filter>
+```
+
+### MainActivity.java ###
+
+The starting and only activity in the project responsible for the logic to display text, buttons, and toggle image visibility based on input.
+
+### DebugInput.java ###
+
+A debug class for displaying keycode and axis value input in human-readable format in the logcat.
+
+### store-sdk-standard-release.aar ###
+
+The `store-sdk-standard-release.aar` Java library released through the developer portal which provides access to the `RazerSDK`.
+
+### activity_main.xml ###
+
+The Android layout that specifies the position and content that displays text and images.
+
+### drawables ###
+
+The drawable resources hold the icons and controller images used in the example.
+
+### Example Code ###
+
+#### MainActivity ####
+
+The MainActivity extends the `BaseActivity` from the `store-sdk-standard-release.aar` for the easiest way to add OUYA-Everywhere input.
+
+```
+public class MainActivity extends BaseActivity {
+```
+
+#### setDrawable ####
+
+Accepts the ImageView that will display the button image and the keyCode id for the corresponding button image.
+
+```
+	private void setDrawable(ImageView imageView, int keyCode) {
+		ButtonData data = Controller.getButtonData(keyCode);
+		if (null != data) {
+			imageView.setImageDrawable(data.buttonDrawable);
+		}
+	}
+```
+
+#### bitmap ####
+
+The `ButtonData` image can also be converted to a `Bitmap` which can be used in other cases. 
+
+```
+    private Bitmap getButtonDataBitmap(int button) {
+    	Controller.ButtonData buttonData = Controller.getButtonData(button);
+        if (null == buttonData)
+        {
+            return null;
+        }
+        BitmapDrawable drawable = (BitmapDrawable)buttonData.buttonDrawable;
+        if (null == drawable)
+        {
+            return null;
+        }
+        Bitmap bitmap = drawable.getBitmap();
+        return bitmap;
+    }
+```
+
+#### onCreate ####
+
+Loads the layout and gets the references to the ImageView controls that will handle toggling button visibility when toggled.
+
+```
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		
+		setContentView(R.layout.activity_main);
+		super.onCreate(savedInstanceState);
+		
+		mTxtSystem = (TextView)findViewById(R.id.txtSystem);
+		mTxtController = (TextView)findViewById(R.id.txtController);
+		mImgButtonMenu = (ImageView)findViewById(R.id.imgButtonMenu);
+		mTxtKeyCode = (TextView)findViewById(R.id.txtKeyCode);
+		mImgControllerO = (ImageView)findViewById(R.id.imgControllerO);
+		mImgControllerU = (ImageView)findViewById(R.id.imgControllerU);
+		mImgControllerY = (ImageView)findViewById(R.id.imgControllerY);
+		mImgControllerA = (ImageView)findViewById(R.id.imgControllerA);
+		mImgControllerL1 = (ImageView)findViewById(R.id.imgControllerL1);
+		mImgControllerL2 = (ImageView)findViewById(R.id.imgControllerL2);
+		mImgControllerL3 = (ImageView)findViewById(R.id.imgControllerl3);
+		mImgControllerR1 = (ImageView)findViewById(R.id.imgControllerR1);
+		mImgControllerR2 = (ImageView)findViewById(R.id.imgControllerR2);
+		mImgControllerR3 = (ImageView)findViewById(R.id.imgControllerR3);
+		mImgControllerDpadDown = (ImageView)findViewById(R.id.imgControllerDpadDown);
+		mImgControllerDpadLeft = (ImageView)findViewById(R.id.imgControllerDpadLeft);
+		mImgControllerDpadRight = (ImageView)findViewById(R.id.imgControllerDpadRight);
+		mImgControllerDpadUp = (ImageView)findViewById(R.id.imgControllerDpadUp);
+		mImgControllerMenu = (ImageView)findViewById(R.id.imgControllerMenu);
+		mImgButtonA = (ImageView)findViewById(R.id.imgButtonA);
+		mImgDpadDown = (ImageView)findViewById(R.id.imgDpadDown);
+		mImgDpadLeft = (ImageView)findViewById(R.id.imgDpadLeft);
+		mImgDpadRight = (ImageView)findViewById(R.id.imgDpadRight);
+		mImgDpadUp = (ImageView)findViewById(R.id.imgDpadUp);
+		mImgLeftStick = (ImageView)findViewById(R.id.imgLeftStick);
+		mImgLeftBumper = (ImageView)findViewById(R.id.imgLeftBumper);
+		mImgLeftTrigger = (ImageView)findViewById(R.id.imgLeftTrigger);
+		mImgButtonO = (ImageView)findViewById(R.id.imgButtonO);
+		mImgRightStick = (ImageView)findViewById(R.id.imgRightStick);
+		mImgRightBumper = (ImageView)findViewById(R.id.imgRightBumper);
+		mImgRightTrigger = (ImageView)findViewById(R.id.imgRightTrigger);
+		mImgLeftThumb = (ImageView)findViewById(R.id.imgLeftThumb);
+		mImgRightThumb = (ImageView)findViewById(R.id.imgRightThumb);
+		mImgButtonU = (ImageView)findViewById(R.id.imgButtonU);
+		mImgButtonY = (ImageView)findViewById(R.id.imgButtonY);
+```
+
+Input can be event based, or spawn a thread to set visibility on an interval. The menu button is pressed and the visibility needs to be cleared after an interval rather than waiting for an event to clear it.
+
+```
+    	// spawn thread to toggle menu button
+        Thread timer = new Thread()
+        {
+	        public void run()
+	        {
+	        	while (mWaitToExit)
+	        	{
+	        		if (mMenuDetected != 0 &&
+	        			mMenuDetected < System.nanoTime())
+	        		{
+	        			mMenuDetected = 0;
+	        			Runnable runnable = new Runnable()
+	        			{
+		        			public void run()
+		        			{
+		        				mImgButtonMenu.setVisibility(View.INVISIBLE);
+		        			}
+	        			};
+	        			runOnUiThread(runnable);
+	        			
+	        		}
+	        		try
+	        		{
+	        			Thread.sleep(50);
+	        		}
+	        		catch (InterruptedException e)
+	        		{
+	        		}
+		        }
+			}
+        };
+		timer.start();
+```
+ 
+
+#### onStart ####
+
+Initialization displays build information and sets the drawable button images from the new api.
+
+```
+	@Override
+	protected void onStart() {
+		super.onStart();
+		txtSystem.setText("Brand=" + android.os.Build.BRAND + " Model=" + android.os.Build.MODEL + " Version=" + android.os.Build.VERSION.SDK_INT);
+		
+		setDrawable(mImgControllerO, Controller.BUTTON_O);
+		setDrawable(mImgControllerU, Controller.BUTTON_U);
+		setDrawable(mImgControllerY, Controller.BUTTON_Y);
+		setDrawable(mImgControllerA, Controller.BUTTON_A);
+		setDrawable(mImgControllerL1, Controller.BUTTON_L1);
+		setDrawable(mImgControllerL2, Controller.BUTTON_L2);
+		setDrawable(mImgControllerL3, Controller.BUTTON_L3);
+		setDrawable(mImgControllerR1, Controller.BUTTON_R1);
+		setDrawable(mImgControllerR2, Controller.BUTTON_R2);
+		setDrawable(mImgControllerR3, Controller.BUTTON_R3);
+		setDrawable(mImgControllerDpadDown, Controller.BUTTON_DPAD_DOWN);
+		setDrawable(mImgControllerDpadLeft, Controller.BUTTON_DPAD_LEFT);
+		setDrawable(mImgControllerDpadRight, Controller.BUTTON_DPAD_RIGHT);
+		setDrawable(mImgControllerDpadUp, Controller.BUTTON_DPAD_UP);
+		setDrawable(mImgControllerMenu, Controller.BUTTON_MENU);
+	}
+```
+
+#### onGenericMotionEvent ####
+
+The axis events arrive with onGenericMotionEvent after the OUYA-Everywhere has remapped the input.
+
+```
+	@Override
+	public boolean onGenericMotionEvent(MotionEvent motionEvent) {
+		float lsX = motionEvent.getAxisValue(Controller.AXIS_LS_X);
+	    float lsY = motionEvent.getAxisValue(Controller.AXIS_LS_Y);
+	    float rsX = motionEvent.getAxisValue(Controller.AXIS_RS_X);
+	    float rsY = motionEvent.getAxisValue(Controller.AXIS_RS_Y);
+	    float l2 = motionEvent.getAxisValue(Controller.AXIS_L2);
+	    float r2 = motionEvent.getAxisValue(Controller.AXIS_R2);
+```
+
+#### onKeyDown ####
+
+When a button is pressed the corresponding image is highlighted. When the system button is detected, the image is highlighted for an interval.
+
+```
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent keyEvent) {
+		switch (keyCode)
+		{
+		case Controller.BUTTON_L1:
+			imgLeftBumper.setVisibility(View.VISIBLE);
+			return true;
+		case Controller.BUTTON_L3:
+			imgLeftStick.setVisibility(View.INVISIBLE);
+			imgLeftThumb.setVisibility(View.VISIBLE);
+			return true;
+		case Controller.BUTTON_R1:
+			imgRightBumper.setVisibility(View.VISIBLE);
+			return true;
+		case Controller.BUTTON_R3:
+			imgRightStick.setVisibility(View.INVISIBLE);
+			imgRightThumb.setVisibility(View.VISIBLE);
+			return true;
+		case Controller.BUTTON_O:
+			imgButtonO.setVisibility(View.VISIBLE);
+			return true;
+		case Controller.BUTTON_U:
+			imgButtonU.setVisibility(View.VISIBLE);
+			return true;
+		case Controller.BUTTON_Y:
+			imgButtonY.setVisibility(View.VISIBLE);
+			return true;
+		case Controller.BUTTON_A:
+			imgButtonA.setVisibility(View.VISIBLE);
+			return true;
+		case Controller.BUTTON_DPAD_DOWN:
+			imgDpadDown.setVisibility(View.VISIBLE);
+			return true;
+		case Controller.BUTTON_DPAD_LEFT:
+			imgDpadLeft.setVisibility(View.VISIBLE);
+			return true;
+		case Controller.BUTTON_DPAD_RIGHT:
+			imgDpadRight.setVisibility(View.VISIBLE);
+			return true;
+		case Controller.BUTTON_DPAD_UP:
+			imgDpadUp.setVisibility(View.VISIBLE);
+			return true;
+		case Controller.BUTTON_MENU:
+			imgButtonMenu.setVisibility(View.VISIBLE);
+			mMenuDetected = System.nanoTime() + 1000000000;
+			return true;
+		}
+		return true;
+	}
+```
+
+#### onKeyUp ####
+
+When the button is no longer pressed the ImageView for the highlighted button is hidden.
+
+```
+	@Override
+	public boolean onKeyUp(int keyCode, KeyEvent keyEvent) {
+		switch (keyCode)
+		{
+		case Controller.BUTTON_L1:
+			imgLeftBumper.setVisibility(View.INVISIBLE);
+			return true;
+		case Controller.BUTTON_L3:
+			imgLeftStick.setVisibility(View.VISIBLE);
+			imgLeftThumb.setVisibility(View.INVISIBLE);
+			return true;
+		case Controller.BUTTON_R1:
+			imgRightBumper.setVisibility(View.INVISIBLE);
+			return true;
+		case Controller.BUTTON_R3:
+			imgRightStick.setVisibility(View.VISIBLE);
+			imgRightThumb.setVisibility(View.INVISIBLE);
+			return true;
+		case Controller.BUTTON_O:
+			imgButtonO.setVisibility(View.INVISIBLE);
+			return true;
+		case Controller.BUTTON_U:
+			imgButtonU.setVisibility(View.INVISIBLE);
+			return true;
+		case Controller.BUTTON_Y:
+			imgButtonY.setVisibility(View.INVISIBLE);
+			return true;
+		case Controller.BUTTON_A:
+			imgButtonA.setVisibility(View.INVISIBLE);
+			return true;
+		case Controller.BUTTON_DPAD_DOWN:
+			imgDpadDown.setVisibility(View.INVISIBLE);
+			return true;
+		case Controller.BUTTON_DPAD_LEFT:
+			imgDpadLeft.setVisibility(View.INVISIBLE);
+			return true;
+		case Controller.BUTTON_DPAD_RIGHT:
+			imgDpadRight.setVisibility(View.INVISIBLE);
+			return true;
+		case Controller.BUTTON_DPAD_UP:
+			imgDpadUp.setVisibility(View.INVISIBLE);
+			return true;
+		case Controller.BUTTON_MENU:
+			//wait 1 second
+			return true;
+		}
+		return true;
+	}
+```
+
+## Razer Virtual Controller Example ##
+
+The `RazerVirtualController` example includes virtual controller images and mappings for the Razer Serval Controller. The `RazerVirtualController` source code can be found within the [ouya-sdk-examples](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/RazerVirtualController).
+
+![image alt text](ouya-everywhere-android-java/image_3.png)
+
+## In-App-Purchases Sample ##
+
+The [In-App-Purchase](https://github.com/razerofficial/java-razer-sdk/tree/master/Samples/iap-sample-app) sample is an `Android Studio` project.
+
+## StoreFacade ##
+
+The `StoreFacade` has several listeners for `in-app-purchase` callbacks.
+
+```
+public class CustomActivity extends Activity
+{
+	// The tag for log messages
+	private static final String TAG = ActivityCommon.class.getSimpleName(); 
+
+	// Your game talks to the OuyaFacade, which hides all the mechanics of doing an in-app purchase.
+	private OuyaFacade mOuyaFacade = null;
+	
+	// listener for fetching gamer info
+	private CancelIgnoringOuyaResponseListener<GamerInfo> mRequestGamerInfoListener = null;
+
+	// listener for getting products
+	private CancelIgnoringOuyaResponseListener<List<Product>> mRequestProductsListener = null;
+	
+	// listener for requesting purchase
+	private OuyaResponseListener<PurchaseResult> mRequestPurchaseListener = null;
+	
+	// listener for getting receipts
+	private OuyaResponseListener<Collection<Receipt>> mRequestReceiptsListener = null;
+}
+```
+
+Implement the listeners to pass to the `OuyaFacade` IAP methods.
+
+```
+		mRequestGamerInfoListener = new CancelIgnoringOuyaResponseListener<GamerInfo>() {
+            @Override
+            public void onSuccess(GamerInfo info) {
+            	Log.d(TAG, "RequestGamerInfoListener: onSuccess");
+            }
+
+            @Override
+            public void onFailure(int errorCode, String errorMessage, Bundle optionalData) {
+            	Log.d(TAG, "RequestGamerInfoListener: onFailure errorCode="+errorCode+" errorMessage="+errorMessage);
+            }
+        };
+        
+		mRequestProductsListener = new CancelIgnoringOuyaResponseListener<List<Product>>() {
+			@Override
+			public void onSuccess(final List<Product> products) {
+				Log.d(TAG, "RequestProductsListener: onSuccess received "+products.size()+" products");
+			}
+
+			@Override
+			public void onFailure(int errorCode, String errorMessage, Bundle optionalData) {
+				Log.d(TAG, "sRequestProductsListener: onFailure errorCode="+errorCode+" errorMessage="+errorMessage);
+			}
+		};
+
+		mRequestPurchaseListener = new OuyaResponseListener<PurchaseResult>() {
+
+			@Override
+			public void onSuccess(PurchaseResult result) {
+				Log.d(TAG, "RequestPurchaseListener: onSuccess");
+			}
+
+			@Override
+			public void onFailure(int errorCode, String errorMessage, Bundle optionalData) {
+				Log.d(TAG, "RequestPurchaseListener: onFailure errorCode="+errorCode+" errorMessage="+errorMessage);
+			}
+
+			@Override
+			public void onCancel() {
+				Log.d(TAG, "RequestPurchaseListener: onCancel");
+			}
+		};
+		
+		mRequestReceiptsListener = new OuyaResponseListener<Collection<Receipt>>() {
+
+			@Override
+			public void onSuccess(Collection<Receipt> receipts) {
+				Log.d(TAG, "RequestReceiptsListener: onSuccess received "+receipts.size() + " receipts");
+			}
+
+			@Override
+			public void onFailure(int errorCode, String errorMessage, Bundle optionalData) {
+				Log.d(TAG, "RequestReceiptsListener: onFailure: errorCode="+errorCode+" errorMessage="+errorMessage);
+			}
+
+			@Override
+			public void onCancel() {
+				Log.d(TAG, "RequestReceiptsListener: onCancel");
+			}
+		};
+```
+
+## More
+
+* Be sure to check out the [in-app-purchasing](https://github.com/ouya/docs/blob/master/purchasing.md#in-app-purchasing) document for additional `IAP` details.
 
 ## Xiaomi Libraries
 
@@ -158,436 +598,3 @@ Strings can be placed in designated folders which are automatically selected usi
 * `res/values-zh-rCN/strings.xml` (Simplified Chinese)
 
 [Localization Example](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/AndroidExit)
-
-# Java Examples #
-
-## Virtual Controller Example ##
-
-The virtual controller example exercises the new OUYA-Everywhere input. The button names and images are now accessible from the API. And the virtual controller buttons highlight with multiple controllers for supported controllers. TextViews display the incoming keycode values and the remapped keycodes after the OuyaInputMapper has remapped the input.
-
-The `AndroidVirtualController` source code can be found within the [ouya-sdk-examples](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/AndroidVirtualController).
-
-![image alt text](ouya-everywhere-android-java/image_0.png)
-
-The `AndroidVirtualController` example uses the `OuyaController.getButtonData` API to display device specific controller images.
-
-![image alt text](ouya-everywhere-android-java/image_2.png)
-
-## Android Virtual Controller Project ## 
-
-The project has a small number of key files that makes the example work.
-
-![image alt text](ouya-everywhere-android-java/image_1.png)
-
-### AndroidManifest.xml ###
-
-Specifies the target Android API level of 16 and the starting activity.
-
-### MainActivity.java ###
-
-The starting and only activity in the project responsible for the logic to display text, buttons, and toggle image visibility based on input.
-
-### DebugInput.java ###
-
-A debug class for displaying keycode and axis value input in human-readable format in the logcat.
-
-### ouya-sdk.jar ###
-
-The Java library released through the ODK in the developer portal which provides access to the OUYA SDK.
-
-### activity_main.xml ###
-
-The Android layout that specifies the position and content that displays text and images.
-
-### drawables ###
-
-The drawable resources hold the icons and controller images used in the example.
-
-### Example Code ###
-
-#### MainActivity ####
-
-The MainActivity extends the OuyaActivity from the ouya-sdk.jar for the easiest way to add OUYA-Everywhere input.
-
-```
-public class MainActivity extends OuyaActivity {
-```
-
-#### setDrawable ####
-
-Accepts the ImageView that will display the button image and the keyCode id for the corresponding button image.
-
-```
-	private void setDrawable(ImageView imageView, int keyCode) {
-		ButtonData data = OuyaController.getButtonData(keyCode);
-		if (null != data) {
-			imageView.setImageDrawable(data.buttonDrawable);
-		}
-	}
-```
-
-#### bitmap ####
-
-The `ButtonData` image can also be converted to a `Bitmap` which can be used in other cases. 
-
-```
-    private Bitmap getButtonDataBitmap(int button) {
-    	OuyaController.ButtonData buttonData = OuyaController.getButtonData(button);
-        if (null == buttonData)
-        {
-            return null;
-        }
-        BitmapDrawable drawable = (BitmapDrawable)buttonData.buttonDrawable;
-        if (null == drawable)
-        {
-            return null;
-        }
-        Bitmap bitmap = drawable.getBitmap();
-        return bitmap;
-    }
-```
-
-#### onCreate ####
-
-Loads the layout and gets the references to the ImageView controls that will handle toggling button visibility when toggled.
-
-```
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		
-		setContentView(R.layout.activity_main);
-		super.onCreate(savedInstanceState);
-		
-		txtSystem = (TextView)findViewById(R.id.txtSystem);
-		txtController = (TextView)findViewById(R.id.txtController);
-		imgButtonMenu = (ImageView)findViewById(R.id.imgButtonMenu);
-		txtKeyCode = (TextView)findViewById(R.id.txtKeyCode);
-		imgControllerO = (ImageView)findViewById(R.id.imgControllerO);
-		imgControllerU = (ImageView)findViewById(R.id.imgControllerU);
-		imgControllerY = (ImageView)findViewById(R.id.imgControllerY);
-		imgControllerA = (ImageView)findViewById(R.id.imgControllerA);
-		imgControllerL1 = (ImageView)findViewById(R.id.imgControllerL1);
-		imgControllerL2 = (ImageView)findViewById(R.id.imgControllerL2);
-		imgControllerL3 = (ImageView)findViewById(R.id.imgControllerl3);
-		imgControllerR1 = (ImageView)findViewById(R.id.imgControllerR1);
-		imgControllerR2 = (ImageView)findViewById(R.id.imgControllerR2);
-		imgControllerR3 = (ImageView)findViewById(R.id.imgControllerR3);
-		imgControllerDpadDown = (ImageView)findViewById(R.id.imgControllerDpadDown);
-		imgControllerDpadLeft = (ImageView)findViewById(R.id.imgControllerDpadLeft);
-		imgControllerDpadRight = (ImageView)findViewById(R.id.imgControllerDpadRight);
-		imgControllerDpadUp = (ImageView)findViewById(R.id.imgControllerDpadUp);
-		imgControllerMenu = (ImageView)findViewById(R.id.imgControllerMenu);
-		imgButtonA = (ImageView)findViewById(R.id.imgButtonA);
-		imgDpadDown = (ImageView)findViewById(R.id.imgDpadDown);
-		imgDpadLeft = (ImageView)findViewById(R.id.imgDpadLeft);
-		imgDpadRight = (ImageView)findViewById(R.id.imgDpadRight);
-		imgDpadUp = (ImageView)findViewById(R.id.imgDpadUp);
-		imgLeftStick = (ImageView)findViewById(R.id.imgLeftStick);
-		imgLeftBumper = (ImageView)findViewById(R.id.imgLeftBumper);
-		imgLeftTrigger = (ImageView)findViewById(R.id.imgLeftTrigger);
-		imgButtonO = (ImageView)findViewById(R.id.imgButtonO);
-		imgRightStick = (ImageView)findViewById(R.id.imgRightStick);
-		imgRightBumper = (ImageView)findViewById(R.id.imgRightBumper);
-		imgRightTrigger = (ImageView)findViewById(R.id.imgRightTrigger);
-		imgLeftThumb = (ImageView)findViewById(R.id.imgLeftThumb);
-		imgRightThumb = (ImageView)findViewById(R.id.imgRightThumb);
-		imgButtonU = (ImageView)findViewById(R.id.imgButtonU);
-		imgButtonY = (ImageView)findViewById(R.id.imgButtonY);
-```
-
-Input can be event based, or spawn a thread to set visibility on an interval. The menu button is pressed and the visibility needs to be cleared after an interval rather than waiting for an event to clear it.
-
-```
-    	// spawn thread to toggle menu button
-        Thread timer = new Thread()
-        {
-	        public void run()
-	        {
-	        	while (mWaitToExit)
-	        	{
-	        		if (mMenuDetected != 0 &&
-	        			mMenuDetected < System.nanoTime())
-	        		{
-	        			mMenuDetected = 0;
-	        			Runnable runnable = new Runnable()
-	        			{
-		        			public void run()
-		        			{
-		        				imgButtonMenu.setVisibility(View.INVISIBLE);
-		        			}
-	        			};
-	        			runOnUiThread(runnable);
-	        			
-	        		}
-	        		try
-	        		{
-	        			Thread.sleep(50);
-	        		}
-	        		catch (InterruptedException e)
-	        		{
-	        		}
-		        }
-			}
-        };
-		timer.start();
-```
- 
-
-#### onStart ####
-
-Initialization displays build information and sets the drawable button images from the new api.
-
-```
-	@Override
-	protected void onStart() {
-		super.onStart();
-		txtSystem.setText("Brand=" + android.os.Build.BRAND + " Model=" + android.os.Build.MODEL + " Version=" + android.os.Build.VERSION.SDK_INT);
-		
-		setDrawable(imgControllerO, OuyaController.BUTTON_O);
-		setDrawable(imgControllerU, OuyaController.BUTTON_U);
-		setDrawable(imgControllerY, OuyaController.BUTTON_Y);
-		setDrawable(imgControllerA, OuyaController.BUTTON_A);
-		setDrawable(imgControllerL1, OuyaController.BUTTON_L1);
-		setDrawable(imgControllerL2, OuyaController.BUTTON_L2);
-		setDrawable(imgControllerL3, OuyaController.BUTTON_L3);
-		setDrawable(imgControllerR1, OuyaController.BUTTON_R1);
-		setDrawable(imgControllerR2, OuyaController.BUTTON_R2);
-		setDrawable(imgControllerR3, OuyaController.BUTTON_R3);
-		setDrawable(imgControllerDpadDown, OuyaController.BUTTON_DPAD_DOWN);
-		setDrawable(imgControllerDpadLeft, OuyaController.BUTTON_DPAD_LEFT);
-		setDrawable(imgControllerDpadRight, OuyaController.BUTTON_DPAD_RIGHT);
-		setDrawable(imgControllerDpadUp, OuyaController.BUTTON_DPAD_UP);
-		setDrawable(imgControllerMenu, OuyaController.BUTTON_MENU);
-	}
-```
-
-#### onGenericMotionEvent ####
-
-The axis events arrive with onGenericMotionEvent after the OUYA-Everywhere has remapped the input.
-
-```
-	@Override
-	public boolean onGenericMotionEvent(MotionEvent motionEvent) {
-		float lsX = motionEvent.getAxisValue(OuyaController.AXIS_LS_X);
-	    float lsY = motionEvent.getAxisValue(OuyaController.AXIS_LS_Y);
-	    float rsX = motionEvent.getAxisValue(OuyaController.AXIS_RS_X);
-	    float rsY = motionEvent.getAxisValue(OuyaController.AXIS_RS_Y);
-	    float l2 = motionEvent.getAxisValue(OuyaController.AXIS_L2);
-	    float r2 = motionEvent.getAxisValue(OuyaController.AXIS_R2);
-```
-
-#### onKeyDown ####
-
-When a button is pressed the corresponding image is highlighted. When the system button is detected, the image is highlighted for an interval.
-
-```
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent keyEvent) {
-		switch (keyCode)
-		{
-		case OuyaController.BUTTON_L1:
-			imgLeftBumper.setVisibility(View.VISIBLE);
-			return true;
-		case OuyaController.BUTTON_L3:
-			imgLeftStick.setVisibility(View.INVISIBLE);
-			imgLeftThumb.setVisibility(View.VISIBLE);
-			return true;
-		case OuyaController.BUTTON_R1:
-			imgRightBumper.setVisibility(View.VISIBLE);
-			return true;
-		case OuyaController.BUTTON_R3:
-			imgRightStick.setVisibility(View.INVISIBLE);
-			imgRightThumb.setVisibility(View.VISIBLE);
-			return true;
-		case OuyaController.BUTTON_O:
-			imgButtonO.setVisibility(View.VISIBLE);
-			return true;
-		case OuyaController.BUTTON_U:
-			imgButtonU.setVisibility(View.VISIBLE);
-			return true;
-		case OuyaController.BUTTON_Y:
-			imgButtonY.setVisibility(View.VISIBLE);
-			return true;
-		case OuyaController.BUTTON_A:
-			imgButtonA.setVisibility(View.VISIBLE);
-			return true;
-		case OuyaController.BUTTON_DPAD_DOWN:
-			imgDpadDown.setVisibility(View.VISIBLE);
-			return true;
-		case OuyaController.BUTTON_DPAD_LEFT:
-			imgDpadLeft.setVisibility(View.VISIBLE);
-			return true;
-		case OuyaController.BUTTON_DPAD_RIGHT:
-			imgDpadRight.setVisibility(View.VISIBLE);
-			return true;
-		case OuyaController.BUTTON_DPAD_UP:
-			imgDpadUp.setVisibility(View.VISIBLE);
-			return true;
-		case OuyaController.BUTTON_MENU:
-			imgButtonMenu.setVisibility(View.VISIBLE);
-			mMenuDetected = System.nanoTime() + 1000000000;
-			return true;
-		}
-		return true;
-	}
-```
-
-#### onKeyUp ####
-
-When the button is no longer pressed the ImageView for the highlighted button is hidden.
-
-```
-	@Override
-	public boolean onKeyUp(int keyCode, KeyEvent keyEvent) {
-		switch (keyCode)
-		{
-		case OuyaController.BUTTON_L1:
-			imgLeftBumper.setVisibility(View.INVISIBLE);
-			return true;
-		case OuyaController.BUTTON_L3:
-			imgLeftStick.setVisibility(View.VISIBLE);
-			imgLeftThumb.setVisibility(View.INVISIBLE);
-			return true;
-		case OuyaController.BUTTON_R1:
-			imgRightBumper.setVisibility(View.INVISIBLE);
-			return true;
-		case OuyaController.BUTTON_R3:
-			imgRightStick.setVisibility(View.VISIBLE);
-			imgRightThumb.setVisibility(View.INVISIBLE);
-			return true;
-		case OuyaController.BUTTON_O:
-			imgButtonO.setVisibility(View.INVISIBLE);
-			return true;
-		case OuyaController.BUTTON_U:
-			imgButtonU.setVisibility(View.INVISIBLE);
-			return true;
-		case OuyaController.BUTTON_Y:
-			imgButtonY.setVisibility(View.INVISIBLE);
-			return true;
-		case OuyaController.BUTTON_A:
-			imgButtonA.setVisibility(View.INVISIBLE);
-			return true;
-		case OuyaController.BUTTON_DPAD_DOWN:
-			imgDpadDown.setVisibility(View.INVISIBLE);
-			return true;
-		case OuyaController.BUTTON_DPAD_LEFT:
-			imgDpadLeft.setVisibility(View.INVISIBLE);
-			return true;
-		case OuyaController.BUTTON_DPAD_RIGHT:
-			imgDpadRight.setVisibility(View.INVISIBLE);
-			return true;
-		case OuyaController.BUTTON_DPAD_UP:
-			imgDpadUp.setVisibility(View.INVISIBLE);
-			return true;
-		case OuyaController.BUTTON_MENU:
-			//wait 1 second
-			return true;
-		}
-		return true;
-	}
-```
-
-## Razer Virtual Controller Example ##
-
-The `RazerVirtualController` example includes virtual controller images and mappings for the Razer Serval Controller. The `RazerVirtualController` source code can be found within the [ouya-sdk-examples](https://github.com/ouya/ouya-sdk-examples/tree/master/Android/RazerVirtualController).
-
-![image alt text](ouya-everywhere-android-java/image_3.png)
-
-## In-App-Purchases Example ##
-
-The `ODK` download in the [developer portal](http://devs.ouya.tv) includes an in-app-purchase sample application.
-
-## OuyaFacade ##
-
-The `OuyaFacade` has several listeners for `in-app-purchase` callbacks.
-
-```
-public class CustomActivity extends Activity
-{
-	// The tag for log messages
-	private static final String TAG = ActivityCommon.class.getSimpleName(); 
-
-	// Your game talks to the OuyaFacade, which hides all the mechanics of doing an in-app purchase.
-	private OuyaFacade mOuyaFacade = null;
-	
-	// listener for fetching gamer info
-	private CancelIgnoringOuyaResponseListener<GamerInfo> mRequestGamerInfoListener = null;
-
-	// listener for getting products
-	private CancelIgnoringOuyaResponseListener<List<Product>> mRequestProductsListener = null;
-	
-	// listener for requesting purchase
-	private OuyaResponseListener<PurchaseResult> mRequestPurchaseListener = null;
-	
-	// listener for getting receipts
-	private OuyaResponseListener<Collection<Receipt>> mRequestReceiptsListener = null;
-}
-```
-
-Implement the listeners to pass to the `OuyaFacade` IAP methods.
-
-```
-		mRequestGamerInfoListener = new CancelIgnoringOuyaResponseListener<GamerInfo>() {
-            @Override
-            public void onSuccess(GamerInfo info) {
-            	Log.d(TAG, "RequestGamerInfoListener: onSuccess");
-            }
-
-            @Override
-            public void onFailure(int errorCode, String errorMessage, Bundle optionalData) {
-            	Log.d(TAG, "RequestGamerInfoListener: onFailure errorCode="+errorCode+" errorMessage="+errorMessage);
-            }
-        };
-        
-		mRequestProductsListener = new CancelIgnoringOuyaResponseListener<List<Product>>() {
-			@Override
-			public void onSuccess(final List<Product> products) {
-				Log.d(TAG, "RequestProductsListener: onSuccess received "+products.size()+" products");
-			}
-
-			@Override
-			public void onFailure(int errorCode, String errorMessage, Bundle optionalData) {
-				Log.d(TAG, "sRequestProductsListener: onFailure errorCode="+errorCode+" errorMessage="+errorMessage);
-			}
-		};
-
-		mRequestPurchaseListener = new OuyaResponseListener<PurchaseResult>() {
-
-			@Override
-			public void onSuccess(PurchaseResult result) {
-				Log.d(TAG, "RequestPurchaseListener: onSuccess");
-			}
-
-			@Override
-			public void onFailure(int errorCode, String errorMessage, Bundle optionalData) {
-				Log.d(TAG, "RequestPurchaseListener: onFailure errorCode="+errorCode+" errorMessage="+errorMessage);
-			}
-
-			@Override
-			public void onCancel() {
-				Log.d(TAG, "RequestPurchaseListener: onCancel");
-			}
-		};
-		
-		mRequestReceiptsListener = new OuyaResponseListener<Collection<Receipt>>() {
-
-			@Override
-			public void onSuccess(Collection<Receipt> receipts) {
-				Log.d(TAG, "RequestReceiptsListener: onSuccess received "+receipts.size() + " receipts");
-			}
-
-			@Override
-			public void onFailure(int errorCode, String errorMessage, Bundle optionalData) {
-				Log.d(TAG, "RequestReceiptsListener: onFailure: errorCode="+errorCode+" errorMessage="+errorMessage);
-			}
-
-			@Override
-			public void onCancel() {
-				Log.d(TAG, "RequestReceiptsListener: onCancel");
-			}
-		};
-```
-
-## More
-
-* Be sure to check out the [in-app-purchasing](https://github.com/ouya/docs/blob/master/purchasing.md#in-app-purchasing) document for additional `IAP` details.
