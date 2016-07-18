@@ -4,35 +4,35 @@ The `Razer SDK` provides an `API` to integrate controller input, access gamer in
 
 ## Create an account
 
-![image_1](razer-sdk/image_1)
+![image_1](razer-sdk/image_1.png)
 
 ## Developer Email
 
-![image_2](razer-sdk/image_2)
+![image_2](razer-sdk/image_2.png)
 
 ## Create Username
 
-![image_3](razer-sdk/image_3)
+![image_3](razer-sdk/image_3.png)
 
 ## Sign In
 
-![image_4](razer-sdk/image_4)
+![image_4](razer-sdk/image_4.png)
 
 ## Razer Account
 
-![image_5](razer-sdk/image_5)
+![image_5](razer-sdk/image_5.png)
 
 ## Add a New Game
 
-![image_6](razer-sdk/image_6)
+![image_6](razer-sdk/image_6.png)
 
 ## Game Entry
 
-![image_7](razer-sdk/image_7)
+![image_7](razer-sdk/image_7.png)
 
 ## View Secret Key
 
-![image_8](razer-sdk/image_8)
+![image_8](razer-sdk/image_8.png)
 
 ## Engines
 
